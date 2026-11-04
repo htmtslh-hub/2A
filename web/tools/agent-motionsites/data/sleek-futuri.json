@@ -1,0 +1,33 @@
+{
+  "pinId": "local-d6e5604bd067",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1096837684257541315_Mục_này_có_hình_ảnh_của_Joann_-_AI_A.png",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-04\\pin_1096837684257541315_Mục_này_có_hình_ảnh_của_Joann_-_AI_A.png",
+  "title": "Joann Luminescent Town",
+  "slug": "sleek-futuri",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-parallax-magnetic",
+    "name": "Parallax Depth + 3D Pop-Out + Magnetic CTA",
+    "focus": [
+      "parallax-layers",
+      "magnetic-buttons",
+      "floating-3d-cutout"
+    ],
+    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng."
+  },
+  "localImagePath": "E:/DONG_PHU/2A/web/tools/agent-pinterest/downloads/2026-11-04/sleek-futuri.png",
+  "imageBytes": 2085974,
+  "imageSha256": "d6e5604bd06700da55a4ff8811900dcb2fc60d77e5db7c59518da48b87667450",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 98,
+    "passedCriteriaCount": 9,
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.33
+  },
+  "fetchedAt": "2026-11-03T23:53:43.230Z",
+  "category": "portfolio",
+  "prompt_text": "Charcoal-obsidian & neon-rose AI art showcase by Joann (@joooo.ann) featuring bubbly LUMINESCENT Town typography, 3D translucent pink glass tower out-of-bounds cutout, 5-swatch rose palette, and cyberpunk night kiosk gallery."
+}

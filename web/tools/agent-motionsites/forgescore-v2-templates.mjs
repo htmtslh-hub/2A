@@ -7555,5 +7555,931 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </html>`;
   }
 
+  // ============================================================================
+  // 25. TRAVEL JOURNAL (travel-journal — Free Tier)
+  // iPhone Dynamic Island Mobile Travel App Mockup (Tokyo, Seoul, Bali, Rome)
+  // ============================================================================
+  if (slug === 'travel-journal') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Travel Journal — Liquid-Glass iOS Travel Moments (Tokyo, Seoul, Bali, Rome)</title>
+  <meta name="description" content="Interactive mobile travel journal displayed inside a realistic iPhone Dynamic Island frame featuring liquid-glass destination cards for Tokyo (23 moments), Seoul (18 moments), Bali (29 moments), and Rome (15 moments).">
+  <meta property="og:title" content="Travel Journal — iOS Liquid-Glass Trip Moments">
+  <meta property="og:description" content="Explore curated travel moments across Tokyo, Seoul, Bali, and Rome with staggered entrance motion and liquid-glass UI.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F8FAFC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --border: rgba(15, 23, 42, 0.1);
+      --accent: #0f172a;
+      --on-accent: #ffffff;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    ::selection { background: #0f172a; color: #ffffff; }
+    html, body {
+      background: radial-gradient(circle at 50% 20%, #ffffff 0%, #f1f5f9 100%);
+      color: var(--fg); overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); }
+    button:focus-visible, a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+    button { transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out); }
+    button:active { transform: scale(0.97); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid rgba(15, 23, 42, 0.35); margin: -16px 0 0 -16px; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #0f172a; margin: -3px 0 0 -3px; }
+
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.08);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .${p}-top-bar {
+      max-width: 1240px; margin: 0 auto; padding: 18px clamp(18px, 3.5vw, 40px);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .${p}-stage {
+      max-width: 1240px; margin: 0 auto; padding: 10px clamp(18px, 3.5vw, 40px) 48px;
+      display: grid; grid-template-columns: 1fr 375px 1fr; gap: 36px; align-items: center;
+    }
+    .${p}-side-note {
+      background: #ffffff; border: 1px solid var(--border); border-radius: 24px; padding: 24px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+    }
+
+    .${p}-phone-frame {
+      width: 375px; height: 780px; margin: 0 auto;
+      background: #0a0a0c; border-radius: 52px; overflow: hidden;
+      position: relative;
+      box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(0, 0, 0, 0.6),
+        0 0 0 10px #1a1a1e,
+        0 0 0 11px rgba(255, 255, 255, 0.06),
+        0 24px 60px rgba(0, 0, 0, 0.42);
+    }
+    .${p}-notch {
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 120px; height: 28px; background: #000000;
+      border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; z-index: 50;
+    }
+    .${p}-phone-header {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 30;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background-color: rgba(10, 10, 12, 0.75);
+      padding: 52px 24px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-region-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 0; color: #ffffff; font-size: 18px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-cal-btn {
+      background: transparent; border: 0; color: rgba(255, 255, 255, 0.72); cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+
+    .${p}-phone-scroll {
+      height: 100%; overflow-y: auto; padding: 108px 24px 96px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .${p}-dest-card {
+      width: 100%; height: 200px; min-height: 200px; border-radius: 16px; overflow: hidden;
+      position: relative; cursor: pointer;
+      transition: transform 0.5s var(--ease-out), opacity 0.5s var(--ease-out);
+    }
+    .${p}-dest-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.55s var(--ease-out);
+    }
+    .${p}-dest-card:hover img { transform: scale(1.05); }
+    .${p}-dest-grad {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent);
+    }
+    .${p}-dest-top {
+      position: relative; z-index: 2; padding: 12px 14px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-moments-pill {
+      padding: 4px 12px; border-radius: 999px; color: rgba(255, 255, 255, 0.92);
+      font-size: 12px; font-weight: 400;
+    }
+    .${p}-more-circle {
+      width: 32px; height: 32px; border-radius: 50%; color: rgba(255, 255, 255, 0.85);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .${p}-dest-name-clip {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 80px; overflow: hidden;
+      display: flex; align-items: flex-start; justify-content: center; z-index: 2;
+    }
+    .${p}-dest-name {
+      font-size: 92px; font-weight: 800; color: rgba(255, 255, 255, 0.55);
+      letter-spacing: -0.04em; line-height: 1; margin-top: 2px; user-select: none;
+    }
+
+    .${p}-bottom-nav {
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 30;
+      border-radius: 999px; display: flex; align-items: center; gap: 24px; padding: 8px 24px;
+      background: rgba(15, 15, 20, 0.58);
+    }
+    .${p}-nav-item {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      background: transparent; border: 0; color: rgba(255, 255, 255, 0.5); cursor: pointer;
+      font-size: 10px; font-weight: 500;
+    }
+    .${p}-nav-item.is-active { color: #ffffff; }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(15, 23, 42, 0.62); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: var(--fg);
+    }
+
+    @media (max-width: 1080px) {
+      .${p}-stage { grid-template-columns: 1fr; justify-items: center; }
+      .${p}-side-note { max-width: 460px; width: 100%; }
+    }
+    @media (max-width: 420px) {
+      .${p}-phone-frame { width: 100%; border-radius: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-top-bar">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:10px;height:10px;border-radius:50%;background:#0f172a;"></span>
+      <strong style="font-size:15px;letter-spacing:-0.02em;">Travel Journal iOS</strong>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:#ffffff;color:var(--fg);font-size:12px;font-weight:600;cursor:pointer;">
+        Motion: ON
+      </button>
+      <button type="button" id="exploreMagneticBtn" style="padding:9px 18px;border-radius:999px;border:0;background:#0f172a;color:#ffffff;font-size:12.5px;font-weight:600;cursor:pointer;">
+        New Trip Log +
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="${p}-stage">
+    <aside class="${p}-side-note" aria-label="Travel Journal Overview">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748b;margin-bottom:8px;">LIQUID-GLASS MOBILE UI</div>
+      <h1 style="font-size:28px;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px;">
+        Asia &amp; Europe Moment Archive
+      </h1>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Captured inside an authentic 375×780 iPhone Dynamic Island frame with specular liquid-glass pills, clipped 92px destination typography, and 85 curated photo moments.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+        <div style="padding:14px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-size:24px;font-weight:800;" data-counter-target="85" data-counter-suffix=" Moments">85 Moments</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Tokyo • Seoul • Bali • Rome</div>
+        </div>
+        <div style="padding:14px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-size:24px;font-weight:800;" id="activeDestinationStat">Tokyo (23)</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Selected Journal</div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="${p}-phone-frame" aria-label="iPhone Travel Journal Mockup">
+      <div class="${p}-notch" aria-hidden="true"></div>
+
+      <div class="${p}-phone-header">
+        <button type="button" class="${p}-region-btn" data-next-preview="true" id="regionCycleBtn">
+          <span id="regionLabel">Asia</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <button type="button" class="${p}-cal-btn" data-seamless-trigger="Travel Journal Calendar Timeline" aria-label="Open Calendar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+        </button>
+      </div>
+
+      <div class="${p}-phone-scroll scrollbar-hide" id="phoneCardsList">
+        <article class="${p}-dest-card" data-city="Tokyo (23)" data-seamless-trigger="Tokyo Journal — 23 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101902_e8f0f37b-18b7-4c14-bb5c-99f0724d2646.png&w=1280&q=85" alt="Tokyo Travel Moments">
+          <div class="${p}-dest-grad"></div>
+          <div class="${p}-dest-top">
+            <span class="liquid-glass ${p}-moments-pill tabular-nums">23 moments</span>
+            <span class="liquid-glass ${p}-more-circle">•••</span>
+          </div>
+          <div class="${p}-dest-name-clip">
+            <span class="${p}-dest-name">Tokyo</span>
+          </div>
+        </article>
+
+        <article class="${p}-dest-card" data-city="Seoul (18)" data-seamless-trigger="Seoul Journal — 18 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101935_4b17f250-8ddb-4ff2-b63d-dfd3497d4428.png&w=1280&q=85" alt="Seoul Travel Moments">
+          <div class="${p}-dest-grad"></div>
+          <div class="${p}-dest-top">
+            <span class="liquid-glass ${p}-moments-pill tabular-nums">18 moments</span>
+            <span class="liquid-glass ${p}-more-circle">•••</span>
+          </div>
+          <div class="${p}-dest-name-clip">
+            <span class="${p}-dest-name">Seoul</span>
+          </div>
+        </article>
+
+        <article class="${p}-dest-card" data-city="Bali (29)" data-seamless-trigger="Bali Journal — 29 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101958_7116d6bf-fd6f-496f-b3cf-007688cd5123.png&w=1280&q=85" alt="Bali Travel Moments">
+          <div class="${p}-dest-grad"></div>
+          <div class="${p}-dest-top">
+            <span class="liquid-glass ${p}-moments-pill tabular-nums">29 moments</span>
+            <span class="liquid-glass ${p}-more-circle">•••</span>
+          </div>
+          <div class="${p}-dest-name-clip">
+            <span class="${p}-dest-name">Bali</span>
+          </div>
+        </article>
+
+        <article class="${p}-dest-card" data-city="Rome (15)" data-seamless-trigger="Rome Journal — 15 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_143008_72ee7299-04a8-474c-ae73-220d45b24a20.png&w=1280&q=85" alt="Rome Travel Moments">
+          <div class="${p}-dest-grad"></div>
+          <div class="${p}-dest-top">
+            <span class="liquid-glass ${p}-moments-pill tabular-nums">15 moments</span>
+            <span class="liquid-glass ${p}-more-circle">•••</span>
+          </div>
+          <div class="${p}-dest-name-clip">
+            <span class="${p}-dest-name">Rome</span>
+          </div>
+        </article>
+      </div>
+
+      <nav class="liquid-glass ${p}-bottom-nav" aria-label="App Navigation">
+        <button type="button" class="${p}-nav-item" data-tab-nav="Feed">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span>Feed</span>
+        </button>
+        <button type="button" class="${p}-nav-item" data-tab-nav="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          <span>Account</span>
+        </button>
+        <button type="button" class="${p}-nav-item is-active" data-tab-nav="Trips">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+          <span>Trips</span>
+        </button>
+      </nav>
+    </section>
+
+    <aside class="${p}-side-note" aria-label="Destination Telemetry">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748b;margin-bottom:8px;">ACTIVE ITINERARY</div>
+      <h2 style="font-size:20px;font-weight:700;margin-bottom:10px;">4 Curated Chapters</h2>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:var(--muted);">
+        <li style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border);"><span>01. Tokyo Shibuya Crossing</span><strong class="tabular-nums" style="color:var(--fg);">23 moments</strong></li>
+        <li style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border);"><span>02. Seoul Bukchon Hanok</span><strong class="tabular-nums" style="color:var(--fg);">18 moments</strong></li>
+        <li style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border);"><span>03. Bali Uluwatu Cliffs</span><strong class="tabular-nums" style="color:var(--fg);">29 moments</strong></li>
+        <li style="display:flex;justify-content:space-between;"><span>04. Rome Trastevere Dusk</span><strong class="tabular-nums" style="color:var(--fg);">15 moments</strong></li>
+      </ul>
+    </aside>
+  </main>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#64748b;">TRAVEL JOURNAL LOG</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Tokyo — 23 Moments</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Sync your RAW camera roll, GPS pins, and voice notes into a shareable liquid-glass story reel.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" style="width:100%;padding:12px;border-radius:999px;border:0;background:#0f172a;color:#ffffff;font-weight:700;cursor:pointer;">
+        Open Story Reel →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var regions = ['Asia', 'Asia & Europe', 'Favorites'];
+      var rIdx = 0;
+      var regionBtn = document.getElementById('regionCycleBtn');
+      var regionLabel = document.getElementById('regionLabel');
+      var statEl = document.getElementById('activeDestinationStat');
+      var scrollBox = document.getElementById('phoneCardsList');
+      if (regionBtn) {
+        regionBtn.addEventListener('click', function () {
+          rIdx = (rIdx + 1) % regions.length;
+          if (regionLabel) regionLabel.textContent = regions[rIdx];
+          if (statEl) statEl.textContent = rIdx === 1 ? 'Bali (29)' : rIdx === 2 ? 'Seoul (18)' : 'Tokyo (23)';
+          if (scrollBox) scrollBox.scrollTo({ top: rIdx * 110, behavior: 'smooth' });
+        });
+      }
+      document.querySelectorAll('[data-tab-nav]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('[data-tab-nav]').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 26. CELESTIAL RENEWAL — SERENE (celestial-renewal — Premium Tier)
+  // Luxury Holistic Beauty & Wellness Video Hero + Parallax Rainbow & Cloud Quote
+  // ============================================================================
+  if (slug === 'celestial-renewal') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Serene — Gentle Touch. Radiant Presence. | Holistic Beauty &amp; Wellness</title>
+  <meta name="description" content="Expert beauty and holistic wellness, delivered with warmth and intention. Founded by Dr. Mia Callahan.">
+  <meta property="og:title" content="Serene — Gentle Touch. Radiant Presence.">
+  <meta property="og:description" content="Serene was founded on a belief in beauty that honors your nature. Refined outcomes, considered approaches, and lasting vitality.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0608">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0608;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.76);
+      --border: rgba(255, 255, 255, 0.18);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: #ffffff; color: #0a0608; }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif;
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: #ffffff; color: #0a0608;
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid #38bdf8; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+    button { transition: transform 0.25s var(--ease-out), background-color 0.25s var(--ease-out); }
+    button:active { transform: scale(0.97); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid rgba(255, 255, 255, 0.45); margin: -17px 0 0 -17px; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #ffffff; margin: -3px 0 0 -3px; }
+
+    .text-glow {
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 80px rgba(255, 255, 255, 0.2), 0 0 120px rgba(255, 255, 255, 0.1);
+    }
+    .button-glow {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+    }
+
+    .${p}-navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 150;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px clamp(24px, 4.5vw, 48px);
+      background: linear-gradient(180deg, rgba(10, 6, 8, 0.65) 0%, transparent 100%);
+      backdrop-filter: blur(8px);
+    }
+    .${p}-logo {
+      font-family: 'Dancing Script', cursive; font-size: clamp(26px, 3vw, 32px);
+      font-weight: 600; color: #ffffff; text-decoration: none;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 44px; list-style: none; }
+    .${p}-nav-links a {
+      color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 14px; letter-spacing: 0.02em;
+    }
+    .${p}-nav-links a:hover { color: #ffffff; }
+    .${p}-btn-pill {
+      background: #ffffff; color: #000000; padding: 13px 30px; border-radius: 999px; border: 0;
+      font-weight: 500; font-size: 14px; letter-spacing: 0.02em; cursor: pointer;
+    }
+
+    .${p}-hero {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(circle at 50% 45%, #3b1c2e 0%, #0a0608 75%);
+    }
+    .${p}-hero video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
+    }
+    .${p}-hero-overlay {
+      position: absolute; inset: 0; background: rgba(0, 0, 0, 0.22); z-index: 1;
+    }
+    .${p}-hero-center {
+      position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding: 0 24px; margin-top: -40px;
+    }
+    .${p}-hero-h1 {
+      font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+      font-size: clamp(3rem, 7.6vw, 6.8rem); line-height: 0.92; letter-spacing: -0.02em;
+      color: #ffffff; max-width: 980px;
+    }
+    .${p}-hero-sub {
+      color: rgba(255, 255, 255, 0.76); font-size: clamp(14px, 1.3vw, 16.5px);
+      line-height: 1.6; max-width: 540px; margin: 24px 0 32px;
+    }
+    .${p}-sound-badge {
+      position: absolute; bottom: 32px; left: 32px; z-index: 10;
+      display: flex; align-items: center; gap: 12px; background: transparent; border: 0; color: rgba(255, 255, 255, 0.68); cursor: pointer;
+      text-align: left; font-size: 12px; line-height: 1.35;
+    }
+    .${p}-sound-circle {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.25);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .${p}-quote-sec {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      background: linear-gradient(180deg, #010a17 0%, #0a4267 30%, #20658e 60%, #6badc4 100%);
+      display: flex; align-items: center; justify-content: center; padding: 80px 24px;
+    }
+    .${p}-rainbow-arc {
+      position: absolute; inset: 0 0 auto 0; height: 340px; z-index: 5; pointer-events: none;
+      background: radial-gradient(ellipse at 50% 0%, rgba(251, 146, 60, 0.22) 0%, rgba(168, 85, 247, 0.2) 32%, rgba(56, 189, 248, 0.22) 58%, transparent 78%);
+      will-change: transform;
+    }
+    .${p}-cloud-left, .${p}-cloud-right {
+      position: absolute; bottom: 10%; width: 520px; height: 220px; border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.24) 0%, rgba(186, 230, 253, 0.08) 55%, transparent 75%);
+      filter: blur(18px); z-index: 6; pointer-events: none; will-change: transform;
+    }
+    .${p}-cloud-left { left: -120px; }
+    .${p}-cloud-right { right: -120px; bottom: 15%; }
+    .${p}-quote-box {
+      position: relative; z-index: 20; max-width: 900px; text-align: center;
+    }
+    .${p}-quote-text {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: clamp(1.65rem, 3.4vw, 2.65rem); line-height: 1.46; color: #ffffff;
+    }
+    .${p}-quote-author {
+      margin-top: 28px; color: rgba(255, 255, 255, 0.82); font-size: 15px; letter-spacing: 0.03em;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(10, 6, 8, 0.72); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(12px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #121824; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 860px) {
+      .${p}-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-navbar">
+    <a href="#top" class="${p}-logo">Serene</a>
+    <nav aria-label="Primary">
+      <ul class="${p}-nav-links">
+        <li><a href="#quote">About</a></li>
+        <li><a href="#quote">Services</a></li>
+        <li><a href="#quote">Journal</a></li>
+        <li><a href="#quote">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:9px 16px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,0.08);color:#fff;font-size:12px;cursor:pointer;">
+        Motion: ON
+      </button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-pill button-glow">
+        Book a consultation
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="${p}-hero" aria-label="Serene Celestial Renewal Hero">
+      <video autoplay muted loop playsinline poster="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260715_015443_a695a5b2-dfbf-461e-acc6-a3f5e5d87e86.png&w=1280&q=85">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260613_180732_a54afbf6-b30d-470e-861f-669871f09f67.mp4" type="video/mp4">
+      </video>
+      <div class="${p}-hero-overlay" aria-hidden="true"></div>
+
+      <div class="${p}-hero-center">
+        <h1 class="${p}-hero-h1 text-glow" id="sereneHeroHeading">Gentle touch. Radiant presence.</h1>
+        <p class="${p}-hero-sub" id="sereneHeroSub">
+          Expert beauty and holistic wellness, delivered with warmth and intention.
+        </p>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <button type="button" class="${p}-btn-pill button-glow" data-seamless-trigger="Begin Your Serene Holistic Renewal">
+            Begin your renewal
+          </button>
+          <button type="button" data-next-preview="true" id="sereneRitualSwitchBtn" style="padding:13px 24px;border-radius:999px;border:1px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.1);color:#fff;font-size:13.5px;cursor:pointer;">
+            Ritual: <span id="sereneRitualLabel">Celestial Facial</span>
+          </button>
+        </div>
+      </div>
+
+      <button type="button" class="${p}-sound-badge" id="soundToggleIndicator">
+        <span class="${p}-sound-circle"><span style="width:14px;height:1.5px;background:#ffffff;display:block;"></span></span>
+        <span>Experience<br><span id="soundStateLabel">with sound</span></span>
+      </button>
+    </section>
+
+    <section id="quote" class="${p}-quote-sec" aria-label="Founder Philosophy">
+      <div class="${p}-rainbow-arc" id="parallaxRainbow" aria-hidden="true"></div>
+      <div class="${p}-cloud-left" id="parallaxCloudL" aria-hidden="true"></div>
+      <div class="${p}-cloud-right" id="parallaxCloudR" aria-hidden="true"></div>
+
+      <div class="${p}-quote-box">
+        <blockquote class="${p}-quote-text">
+          “Serene was founded on a belief in beauty that honors your nature. We pursue refined outcomes, considered approaches, and lasting vitality. We spend time learning what matters to you before deciding what serves you best. No rushing, no excess — just support that lets you feel radiant.”
+        </blockquote>
+        <div class="${p}-quote-author">Dr. Mia Callahan — Founder</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-size:12px;letter-spacing:0.12em;color:rgba(255,255,255,0.7);">SERENE ATELIER</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:10px;">Private Wellness Consultation</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Schedule a bespoke skin and holistic longevity assessment with Dr. Mia Callahan's clinical sanctuary team.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-pill button-glow" style="width:100%;">
+        Confirm Sanctuary Appointment →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var rituals = [
+        { name: 'Celestial Facial', head: 'Gentle touch. Radiant presence.' },
+        { name: 'Lymphatic Sculpt', head: 'Restored balance. Luminous calm.' },
+        { name: 'Botanical Longevity', head: 'Considered care. Lasting vitality.' }
+      ];
+      var rIdx = 0;
+      var switchBtn = document.getElementById('sereneRitualSwitchBtn');
+      var rLabel = document.getElementById('sereneRitualLabel');
+      var hEl = document.getElementById('sereneHeroHeading');
+      if (switchBtn) {
+        switchBtn.addEventListener('click', function () {
+          rIdx = (rIdx + 1) % rituals.length;
+          if (rLabel) rLabel.textContent = rituals[rIdx].name;
+          if (hEl) hEl.textContent = rituals[rIdx].head;
+        });
+      }
+
+      var quoteSec = document.getElementById('quote');
+      var rainbow = document.getElementById('parallaxRainbow');
+      var cloudL = document.getElementById('parallaxCloudL');
+      var cloudR = document.getElementById('parallaxCloudR');
+      window.addEventListener('scroll', function () {
+        if (!quoteSec) return;
+        var rect = quoteSec.getBoundingClientRect();
+        var vh = window.innerHeight || 900;
+        var prog = Math.max(0, Math.min(1, (vh - rect.top) / (vh + rect.height)));
+        if (rainbow) rainbow.style.transform = 'translate3d(0,' + Math.round(120 - prog * 240) + 'px,0)';
+        if (cloudL) cloudL.style.transform = 'translate3d(' + Math.round(prog * 140) + 'px,' + Math.round(-prog * 45) + 'px,0)';
+        if (cloudR) cloudR.style.transform = 'translate3d(' + Math.round(-prog * 140) + 'px,' + Math.round(-prog * 45) + 'px,0)';
+      }, { passive: true });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 27. AI WORKFLOW AGENTS — AXON (ai-workflow-agents — Premium Tier)
+  // Y Combinator Digital Workers for Mundane Workflows Hero & Agent Workbench
+  // ============================================================================
+  if (slug === 'ai-workflow-agents') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Axon — Digital Workers for Mundane Workflows</title>
+  <meta name="description" content="Eliminate your tedious browser work and 10x your team's capacity. Put intelligent agents on every routine process so you grow faster and deliver more for clients — effortlessly.">
+  <meta property="og:title" content="Axon — Deploy Digital Workers for Mundane Workflows">
+  <meta property="og:description" content="Funded by Y Combinator — Autonomous browser agents for enterprise operations.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F3EEFF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3eeff;
+      --fg: #1b133c;
+      --muted: rgba(27, 19, 60, 0.72);
+      --border: rgba(27, 19, 60, 0.12);
+      --accent: #f97316;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: #1b133c; color: #ffffff; }
+    html, body {
+      font-family: 'Inter', sans-serif; color: var(--fg);
+      background: linear-gradient(180deg, #ede9fe 0%, #ddd6fe 50%, #f5f3ff 100%);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--fg); color: #ffffff;
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+    button { transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out); }
+    button:active { transform: scale(0.97); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid rgba(27, 19, 60, 0.35); margin: -16px 0 0 -16px; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--fg); margin: -3px 0 0 -3px; }
+
+    .${p}-hero {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 24px 20px 64px;
+    }
+    .${p}-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 130%; object-fit: cover; object-position: top; z-index: 0;
+    }
+    .${p}-bg-scrim {
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 24%, rgba(255, 255, 255, 0.68) 0%, rgba(237, 233, 254, 0.38) 60%, rgba(27, 19, 60, 0.14) 100%);
+      z-index: 1;
+    }
+
+    .${p}-nav-pill {
+      position: relative; z-index: 10;
+      background: rgba(255, 255, 255, 0.76); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 12px 24px; display: flex; align-items: center; gap: 32px;
+      box-shadow: 0 4px 18px rgba(27, 19, 60, 0.06);
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .${p}-nav-links a {
+      font-size: 14px; font-weight: 500; color: rgba(27, 19, 60, 0.8); text-decoration: none;
+    }
+    .${p}-nav-links a:hover { color: var(--fg); }
+
+    .${p}-hero-content {
+      position: relative; z-index: 10; margin-top: clamp(36px, 6vh, 64px);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      max-width: 920px;
+    }
+    .${p}-yc-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 16px; border-radius: 12px;
+      border: 1px solid rgba(27, 19, 60, 0.1);
+      background: rgba(255, 255, 255, 0.78); backdrop-filter: blur(8px);
+      font-size: 13.5px; font-weight: 500; color: var(--fg); margin-bottom: 24px;
+    }
+    .${p}-yc-square {
+      width: 20px; height: 20px; border-radius: 4px; background: #f97316;
+      color: #ffffff; font-weight: 700; font-size: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .${p}-heading {
+      font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+      font-size: clamp(2.8rem, 6.8vw, 5.8rem); line-height: 0.95; letter-spacing: -0.02em;
+      color: var(--fg);
+    }
+    .${p}-subtitle {
+      margin-top: 22px; max-width: 680px;
+      font-size: clamp(13.5px, 1.2vw, 16px); line-height: 1.62; color: var(--muted);
+    }
+    .${p}-cta-row {
+      margin-top: 30px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;
+    }
+    .${p}-btn-early {
+      padding: 14px 32px; border-radius: 12px; border: 0;
+      background: #fefefe; color: var(--fg); font-size: 14px; font-weight: 600; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .${p}-btn-early:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22); }
+
+    .${p}-agent-dock {
+      position: relative; z-index: 10; margin-top: 44px; width: 100%; max-width: 960px;
+      background: rgba(255, 255, 255, 0.84); backdrop-filter: blur(16px);
+      border: 1px solid var(--border); border-radius: 22px; padding: 22px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+      box-shadow: 0 20px 50px rgba(27, 19, 60, 0.12);
+    }
+    .${p}-agent-card {
+      background: rgba(255, 255, 255, 0.9); border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px; text-align: left; cursor: pointer;
+    }
+    .${p}-agent-card.is-active {
+      border-color: var(--fg); box-shadow: 0 10px 24px rgba(27, 19, 60, 0.08);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(27, 19, 60, 0.56); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 22px; padding: 28px; color: var(--fg);
+    }
+
+    @media (max-width: 860px) {
+      .${p}-agent-dock { grid-template-columns: 1fr; }
+      .${p}-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <main id="main-content">
+    <section class="${p}-hero" aria-label="Axon Digital Workers Hero">
+      <video class="${p}-bg-video" autoplay muted loop playsinline poster="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260715_014544_2e2e15ee-0037-456c-b0d1-1c174ef0bc27.png&w=1280&q=85">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260714_113715_c7e0daa0-8bdd-4486-a2da-040901f8f0ea.mp4" type="video/mp4">
+      </video>
+      <div class="${p}-bg-scrim" aria-hidden="true"></div>
+
+      <header class="${p}-nav-pill">
+        <a href="#main-content" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-weight:700;font-size:15px;">
+          <svg width="24" height="24" viewBox="0 0 256 256" fill="#1B133C" aria-hidden="true">
+            <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z"/>
+            <path d="M 256 128 L 128 128 L 0 0 L 128 0 Z"/>
+          </svg>
+          <span>Axon</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="${p}-nav-links">
+            <li><a href="#agents">Features</a></li>
+            <li><a href="#agents">Plans</a></li>
+            <li><a href="#agents">Security</a></li>
+            <li><a href="#agents">About</a></li>
+          </ul>
+        </nav>
+        <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:#ffffff;color:var(--fg);font-size:11.5px;font-weight:600;cursor:pointer;">
+          Motion: ON
+        </button>
+      </header>
+
+      <div class="${p}-hero-content">
+        <div class="${p}-yc-badge">
+          <span class="${p}-yc-square">Y</span>
+          <span>Funded by Y Combinator</span>
+        </div>
+
+        <h1 class="${p}-heading">
+          Deploy digital workers<br>for mundane workflows
+        </h1>
+
+        <p class="${p}-subtitle" id="axonActiveSubtitle">
+          Eliminate your tedious browser work and 10x your team's capacity. Put intelligent agents on every routine process so you grow faster and deliver more for clients — effortlessly.
+        </p>
+
+        <div class="${p}-cta-row">
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-early">
+            Get Early Access
+          </button>
+          <button type="button" data-next-preview="true" id="cycleWorkerBtn" style="padding:14px 22px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.82);color:var(--fg);font-size:13.5px;font-weight:600;cursor:pointer;">
+            Active Worker: <span id="activeWorkerName">CRM Sync Agent</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="agents" class="${p}-agent-dock" role="region" aria-label="Digital Worker Fleet">
+        <article class="${p}-agent-card is-active" data-worker="CRM Sync Agent" data-desc="Autonomous Salesforce &amp; HubSpot browser worker reconciling 1,400+ daily lead records with zero human clicks.">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#f97316;font-weight:600;">WORKER 01 • LIVE</div>
+          <h2 style="font-size:16px;font-weight:700;margin:6px 0;">CRM &amp; Billing Reconciliation</h2>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.5;">Extracts invoices, validates PO line items, and updates ERP portals 24/7.</p>
+        </article>
+
+        <article class="${p}-agent-card" data-worker="Claims Triage Agent" data-desc="Processes multi-portal insurance &amp; healthcare prior authorizations with full audit video replay.">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#1b133c;font-weight:600;">WORKER 02 • 10X SPEED</div>
+          <h2 style="font-size:16px;font-weight:700;margin:6px 0;">Portal Claims &amp; Onboarding</h2>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.5;">Navigates legacy web forms, MFA prompts, and PDF attachments autonomously.</p>
+        </article>
+
+        <article class="${p}-agent-card" data-worker="Compliance QA Agent" data-desc="SOC2 Type II isolated browser fleet verifying vendor KYC documents and sanctions lists in real time.">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#1b133c;font-weight:600;">WORKER 03 • SOC2</div>
+          <h2 style="font-size:16px;font-weight:700;margin:6px 0;">KYC &amp; Vendor Verification</h2>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.5;">Deterministic browser checkpoints with human-in-the-loop Slack approvals.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span class="${p}-yc-badge" style="margin:0;padding:4px 10px;font-size:11.5px;"><span class="${p}-yc-square">Y</span> AXON EARLY ACCESS</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:10px;">Deploy Your First Digital Worker</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Connect Axon to your routine browser workflows in under 10 minutes. SOC2-compliant cloud sessions with full step-by-step telemetry.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" style="width:100%;padding:13px;border-radius:12px;border:0;background:var(--fg);color:#ffffff;font-weight:600;cursor:pointer;">
+        Request Workspace Invite →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.${p}-agent-card'));
+      var nameEl = document.getElementById('activeWorkerName');
+      var subEl = document.getElementById('axonActiveSubtitle');
+      var idx = 0;
+      function selectCard(c) {
+        cards.forEach(function (el) { el.classList.remove('is-active'); });
+        c.classList.add('is-active');
+        if (nameEl) nameEl.textContent = c.getAttribute('data-worker') || '';
+        if (subEl) subEl.textContent = c.getAttribute('data-desc') || '';
+      }
+      cards.forEach(function (c, i) {
+        c.addEventListener('click', function () {
+          idx = i;
+          selectCard(c);
+        });
+      });
+      var cycleBtn = document.getElementById('cycleWorkerBtn');
+      if (cycleBtn) {
+        cycleBtn.addEventListener('click', function () {
+          idx = (idx + 1) % cards.length;
+          selectCard(cards[idx]);
+        });
+      }
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   return null;
 }

@@ -183,6 +183,36 @@ export const PINTEREST_V2_META = {
     brandTitle: 'Looo AI Magic Studio',
     category: 'commerce',
     headlineSub: 'Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.'
+  },
+  'sleek-futuri': {
+    id: 'luminescent-town-pink-ai-folio',
+    brandTitle: 'Joann Luminescent Town',
+    category: 'portfolio',
+    headlineSub: 'Charcoal-obsidian & neon-rose AI art showcase by Joann (@joooo.ann) featuring bubbly LUMINESCENT Town typography, 3D translucent pink glass tower out-of-bounds cutout, 5-swatch rose palette, and cyberpunk night kiosk gallery.'
+  },
+  'this-canvas': {
+    id: 'burnt-amber-3d-puffer-atelier',
+    brandTitle: 'JM Jacket Masters',
+    category: 'commerce',
+    headlineSub: 'Burnt-amber & espresso 3D winter outerwear showcase featuring glossy orange and matte obsidian quilted down puffer jacket cutouts, $149/$199 live pricing, 36/38/40 size selector, and instant colorway switcher.'
+  },
+  'professional-graphic': {
+    id: 'amber-halo-brand-identity-folio',
+    brandTitle: 'Hawra Graphics Studio',
+    category: 'portfolio',
+    headlineSub: 'Obsidian-espresso & warm terracotta rim-lit brand identity portfolio for freelance graphic designer Hawra featuring studio armchair portrait, Available for Projects status badge, and filterable visual identity case studies.'
+  },
+  'nugraha-jati': {
+    id: 'neobrutalist-storyseeker-book-hub',
+    brandTitle: 'StorySeeker Audio & Book Hub',
+    category: 'commerce',
+    headlineSub: 'Warm cream, mustard-gold & burnt-orange neo-brutalist digital library and audiobook player by Nugraha Jati featuring 6 classic illustrated editions (Gatsby, Catcher, Fahrenheit 451), live preview reader, and sticky 2x audio scrubber.'
+  },
+  'websi-atelier': {
+    id: 'carbon-orange-mtb-flagship-store',
+    brandTitle: 'Ridez Carbon Bike Atelier',
+    category: 'commerce',
+    headlineSub: 'Obsidian & racing-orange mountain bike flagship store featuring Norco Vanquish Comp Carbon ($1,195.00) 3D studio cutout, Singletrack/Trail/Road category triptych, 3-pillar workshop facilities, and 01–04 tune-up service bay.'
   }
 };
 
@@ -11472,6 +11502,2034 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
           if (input) input.value = pill.getAttribute('data-theme-pill') || '';
         });
       });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 31. JOANN LUMINESCENT TOWN (sleek-futuri — Free Tier)
+  // Charcoal-Obsidian & Neon-Rose AI Architecture Art Showcase (@joooo.ann)
+  // ============================================================================
+  if (slug === 'sleek-futuri') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JOANN — LUMINESCENT Town | AI Art &amp; Architectural Prompts</title>
+  <meta name="description" content="A captivating fusion of light and imagination by Joann (@joooo.ann) — Luminescent Town AI architectural showcase with 3D pink glass tower pop-out and neon night gallery.">
+  <meta property="og:title" content="JOANN — LUMINESCENT Town AI Art Portfolio">
+  <meta property="og:description" content="Original AI Artwork, Prompts &amp; Luminescent Town series by Designer Joann (Mei 2023).">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1A1A1D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #18181b;
+      --surface: #202024;
+      --surface-elevated: #29292f;
+      --glass: rgba(32, 32, 36, 0.84);
+      --fg: #ffffff;
+      --muted: #b8b8c2;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #f472b6;
+      --accent-text: #f9a8d4;
+      --accent-strong: #ec4899;
+      --on-accent: #18181b;
+      --font-display: 'Rubik Bubbles', 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 32% 38%, rgba(244, 114, 182, 0.14) 0%, #18181b 55%, #121215 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .${p}-top-shell {
+      margin-top: 18px;
+      display: grid; grid-template-columns: 160px 1fr; align-items: center;
+      background: #18181b; border: 1px solid var(--border); border-radius: 22px; overflow: hidden;
+    }
+    .${p}-brand-box {
+      padding: 16px 22px; font-family: var(--font-display); font-size: 20px;
+      letter-spacing: 0.04em; color: #ffffff; text-decoration: none;
+    }
+    .${p}-white-nav {
+      background: #ffffff; color: #18181b; border-radius: 20px 0 0 20px;
+      padding: 13px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .${p}-nav-links a {
+      color: #18181b; text-decoration: none; font-size: 12.5px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .${p}-nav-links a:hover { color: #db2777; }
+
+    .${p}-meta-strip {
+      display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 16px;
+      padding: 22px 0 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .${p}-meta-label { font-weight: 800; color: #ffffff; margin-bottom: 4px; }
+    .${p}-meta-val { color: var(--muted); display: flex; gap: 18px; flex-wrap: wrap; }
+
+    .${p}-title-stage { position: relative; padding: 14px 0 12px; text-align: center; }
+    .${p}-bubble-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 8.8vw, 7.6rem);
+      font-weight: 400; line-height: 0.94; letter-spacing: 0.01em;
+      color: #ffffff; text-transform: uppercase; user-select: none;
+    }
+    .${p}-script-town {
+      font-family: var(--font-script);
+      font-size: clamp(2.6rem, 6.2vw, 5.4rem);
+      color: #f472b6; font-weight: 700;
+      position: absolute; left: 50%; bottom: -16px; transform: translateX(-42%) rotate(-6deg);
+      text-shadow: 0 8px 24px rgba(236, 72, 153, 0.45);
+      pointer-events: none;
+    }
+
+    .${p}-sub-bar {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      padding: 12px 0 18px;
+    }
+    .${p}-swatches { display: inline-flex; align-items: center; gap: 6px; }
+    .${p}-swatch {
+      width: 34px; height: 34px; border-radius: 6px; border: 2px solid transparent; cursor: pointer;
+    }
+    .${p}-swatch.is-active { border-color: #ffffff; transform: scale(1.08); }
+
+    .${p}-bento-stage {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: stretch;
+      padding-bottom: 48px;
+    }
+    .${p}-tower-card {
+      position: relative; border-radius: 26px; overflow: hidden;
+      background: linear-gradient(180deg, #d8d4e8 0%, #9e8fb2 100%);
+      border: 1px solid rgba(244, 114, 182, 0.35);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      min-height: 490px; display: flex; align-items: flex-end; justify-content: center;
+    }
+    .${p}-tower-card img {
+      width: 100%; height: 100%; min-height: 490px; object-fit: cover; display: block;
+      transition: filter 0.35s var(--ease-out), transform 0.45s var(--ease-out);
+    }
+    .${p}-tower-card:hover img { transform: scale(1.02); }
+
+    .${p}-right-col { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
+    .${p}-about-box {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border);
+      border-radius: 24px; padding: 24px 26px;
+    }
+    .${p}-see-more-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 20px;
+    }
+    .${p}-btn-outline {
+      flex: 1; max-width: 320px; padding: 13px 28px; border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.65); background: transparent;
+      color: #ffffff; font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer;
+    }
+    .${p}-btn-outline:hover { background: var(--accent); border-color: var(--accent); color: #18181b; }
+
+    .${p}-kiosk-grid {
+      display: grid; grid-template-columns: 1.45fr 0.85fr; gap: 14px;
+    }
+    .${p}-kiosk-card {
+      border-radius: 22px; overflow: hidden; border: 1px solid rgba(244, 114, 182, 0.32);
+      position: relative; min-height: 240px; background: #12101b;
+    }
+    .${p}-kiosk-card img {
+      width: 100%; height: 240px; object-fit: cover; display: block;
+    }
+
+    .${p}-section { padding: 48px 0; border-top: 1px solid var(--border); }
+    .${p}-prompt-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .${p}-prompt-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(18, 18, 21, 0.72); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #202024; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-meta-strip { grid-template-columns: repeat(2, 1fr); }
+      .${p}-bento-stage, .${p}-prompt-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-top-shell { grid-template-columns: 1fr; }
+      .${p}-nav-links { display: none; }
+      .${p}-kiosk-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-wrap">
+    <div class="${p}-top-shell">
+      <a href="#top" class="${p}-brand-box">JOANN</a>
+      <div class="${p}-white-nav">
+        <nav aria-label="Primary">
+          <ul class="${p}-nav-links">
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#artworks">ARTWORKS</a></li>
+            <li><a href="#prompts">TALK TO ME?</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:7px 14px;border-radius:999px;border:1px solid #18181b;background:#ffffff;color:#18181b;font-size:11.5px;font-weight:700;cursor:pointer;">
+            Motion: ON
+          </button>
+          <button type="button" id="exploreMagneticBtn" style="width:36px;height:36px;border-radius:8px;border:0;background:#18181b;color:#ffffff;font-weight:700;cursor:pointer;" aria-label="Open Artwork Dossier">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="${p}-wrap">
+    <div class="${p}-meta-strip" aria-label="Artwork credentials">
+      <div>
+        <div class="${p}-meta-label">CREDENTIAL -</div>
+        <div class="${p}-meta-val">
+          <span>ORIGINAL ARTWORK</span>
+          <span>CREATING AI ART</span>
+          <span>PROMPTS</span>
+        </div>
+      </div>
+      <div>
+        <div class="${p}-meta-label">DATE -</div>
+        <div class="${p}-meta-val tabular-nums">MEI 2023</div>
+      </div>
+      <div>
+        <div class="${p}-meta-label">DESIGNER -</div>
+        <div class="${p}-meta-val">JOANN</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="${p}-meta-label">INSTAGRAM-</div>
+        <div class="${p}-meta-val" style="justify-content:flex-end;">@JOOOO.ANN</div>
+      </div>
+    </div>
+
+    <section id="top" aria-label="Luminescent Town Hero">
+      <div class="${p}-title-stage">
+        <h1 class="${p}-bubble-h1">LUMINESCENT</h1>
+        <span class="${p}-script-town">Town</span>
+      </div>
+
+      <div class="${p}-sub-bar">
+        <div style="display:flex;align-items:center;gap:18px;">
+          <svg width="58" height="28" viewBox="0 0 58 28" fill="none" aria-hidden="true">
+            <ellipse cx="29" cy="14" rx="27" ry="12" stroke="#ffffff" stroke-width="1.2"/>
+            <ellipse cx="29" cy="14" rx="18" ry="12" stroke="#ffffff" stroke-width="1.2"/>
+            <circle cx="29" cy="14" r="9" stroke="#ffffff" stroke-width="1.2"/>
+          </svg>
+          <span style="letter-spacing:0.4em;color:var(--muted);">• •</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;letter-spacing:0.14em;">傷つく</div>
+            <div style="font-size:9.5px;letter-spacing:0.36em;color:var(--muted);">H U R T</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:14px;">
+          <button type="button" data-next-preview="true" id="cycleRoseFilterBtn" style="padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:#ffffff;font-size:11.5px;font-weight:700;cursor:pointer;">
+            »» Cycle Chroma (<span id="activeSwatchLabel">#F472B6</span>)
+          </button>
+          <div class="${p}-swatches" role="group" aria-label="Luminescent Rose Color Swatches">
+            <button type="button" class="${p}-swatch" style="background:#fbcfe8;" data-hue="0deg" data-hex="#FBCFE8" aria-label="Pastel Rose #FBCFE8"></button>
+            <button type="button" class="${p}-swatch is-active" style="background:#f9a8d4;" data-hue="8deg" data-hex="#F9A8D4" aria-label="Soft Pink #F9A8D4"></button>
+            <button type="button" class="${p}-swatch" style="background:#f472b6;" data-hue="-12deg" data-hex="#F472B6" aria-label="Neon Rose #F472B6"></button>
+            <button type="button" class="${p}-swatch" style="background:#ec4899;" data-hue="22deg" data-hex="#EC4899" aria-label="Magenta Glow #EC4899"></button>
+            <button type="button" class="${p}-swatch" style="background:#db2777;" data-hue="-28deg" data-hex="#DB2777" aria-label="Deep Crimson Pink #DB2777"></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="artworks" class="${p}-bento-stage">
+        <div class="${p}-tower-card">
+          <img id="luminescentTowerImg" src="assets/pink-glass-tower.webp" alt="Luminescent Town 3D Translucent Pink Architectural Tower in Misty Dusk">
+        </div>
+
+        <div id="about" class="${p}-right-col">
+          <div class="${p}-about-box">
+            <div style="font-size:12px;font-weight:800;letter-spacing:0.08em;margin-bottom:10px;">ABOUT</div>
+            <p style="font-size:12.5px;line-height:1.75;color:#e4e4eb;letter-spacing:0.03em;text-transform:uppercase;">
+              A CAPTIVATING FUSION OF LIGHT AND IMAGINATION. A MESMERIZING ARTWORK THAT TRANSPORTS YOU TO A WORLD OF ETHEREAL BEAUTY AND ENCHANTMENT. CREATED THROUGH THE INGENIOUS COLLABORATION OF HUMAN CREATIVITY AND ARTIFICIAL INTELLIGENCE ALGORITHMS. "LUMINESCENT TOWN" IS A TESTAMENT TO THE LIMITLESS POSSIBILITIES OF AI-GENERATED ART.
+            </p>
+            <div class="${p}-see-more-row">
+              <button type="button" class="${p}-btn-outline" data-seamless-trigger="Luminescent Town — Full AI Prompt &amp; Seed Archive">
+                SEE MORE
+              </button>
+              <div style="display:flex;align-items:center;gap:10px;text-align:right;font-size:10.5px;letter-spacing:0.08em;color:var(--muted);">
+                <span>CONTROL YOUR<br>SCROLL</span>
+                <span style="color:var(--accent);font-size:18px;line-height:1;">❖</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="${p}-kiosk-grid">
+            <article class="${p}-kiosk-card">
+              <img src="assets/neon-noodle-stall.webp" alt="Luminescent Town Neon Pink Street Stall in Rain">
+            </article>
+            <article class="${p}-kiosk-card">
+              <img src="assets/neon-alley-watcher.webp" alt="Luminescent Town Silhouette Watcher at Pink Pavilion">
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prompts" class="${p}-section ${p}-reveal" aria-label="AI Prompt Architecture">
+      <div class="${p}-prompt-grid">
+        <article class="${p}-prompt-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">PROMPT LAYER 01</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">Translucent Acrylic Brutalism</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Cantilevered pink frosted polycarbonate facades illuminated from within by warm 2700K tungsten bulbs against cold lavender mist.
+          </p>
+        </article>
+        <article class="${p}-prompt-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">PROMPT LAYER 02</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">Subsurface Atmospheric Fog</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Volumetric magenta halation and wet asphalt reflections calibrated with Midjourney v5.1 photoreal architectural weights.
+          </p>
+        </article>
+        <article class="${p}-prompt-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">PROMPT LAYER 03</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">Exhibition Print Editions</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Signed archival pigment prints and 8K wallpaper tokens curated by Joann (@joooo.ann) for collectors worldwide.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:24px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12px;">
+    <span>JOANN — LUMINESCENT TOWN (MEI 2023)</span>
+    <span>@JOOOO.ANN • ORIGINAL AI ARTWORK</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">@JOOOO.ANN ARCHIVE</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Luminescent Town Prompt Sheet</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Access the complete Midjourney architectural prompt parameters, lighting seed values, and high-res lossless plates from the Mei 2023 series.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-outline" style="max-width:none;width:100%;background:var(--accent);color:#18181b;border-color:var(--accent);">
+        Unlock Prompt Dossier →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var towerImg = document.getElementById('luminescentTowerImg');
+      var labelEl = document.getElementById('activeSwatchLabel');
+      var swatches = Array.prototype.slice.call(document.querySelectorAll('.${p}-swatch'));
+      var idx = 1;
+      function activateSwatch(s) {
+        swatches.forEach(function (el) { el.classList.remove('is-active'); });
+        s.classList.add('is-active');
+        var hue = s.getAttribute('data-hue') || '0deg';
+        var hex = s.getAttribute('data-hex') || '#F472B6';
+        if (towerImg) towerImg.style.filter = 'hue-rotate(' + hue + ')';
+        if (labelEl) labelEl.textContent = hex;
+      }
+      swatches.forEach(function (s, i) {
+        s.addEventListener('click', function () {
+          idx = i;
+          activateSwatch(s);
+        });
+      });
+      var cycleBtn = document.getElementById('cycleRoseFilterBtn');
+      if (cycleBtn) {
+        cycleBtn.addEventListener('click', function () {
+          idx = (idx + 1) % swatches.length;
+          activateSwatch(swatches[idx]);
+        });
+      }
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 32. JM JACKET MASTERS (this-canvas — Free Tier)
+  // Burnt-Amber & Espresso 3D Quilted Down Puffer Jacket Showcase
+  // ============================================================================
+  if (slug === 'this-canvas') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JM JACKET MASTERS — Stand Out Without Trying | 3D Puffer Atelier</title>
+  <meta name="description" content="Confidence, wrapped in warmth. Discover JM Jacket Masters lightweight 800-fill down puffer jackets in Burnt Orange and Obsidian Black ($149).">
+  <meta property="og:title" content="JM JACKET MASTERS — Stand Out Without Trying">
+  <meta property="og:description" content="Designed to elevate even the simplest outfit, this jacket wraps you in lightweight warmth.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#9A4206">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #9a4206;
+      --surface: #783104;
+      --surface-elevated: #b85309;
+      --glass: rgba(88, 34, 4, 0.48);
+      --fg: #fffbeb;
+      --muted: rgba(255, 251, 235, 0.78);
+      --border: rgba(255, 251, 235, 0.18);
+      --accent: #ffffff;
+      --accent-text: #fde68a;
+      --accent-strong: #fb923c;
+      --on-accent: #431407;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-serif: 'Cinzel', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 28px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 50% 42%, #d96b14 0%, #9a4206 54%, #5c2402 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid #ffffff; margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: #ffffff; margin: -3px 0 0 -3px; }
+    @keyframes floatPuffer {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(-0.6deg); }
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.8vw, 48px); }
+    .${p}-header { padding: 22px 0 12px; position: relative; z-index: 120; }
+    .${p}-nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #ffffff; text-decoration: none; font-family: var(--font-serif); font-size: 14px; font-weight: 700; letter-spacing: 0.08em;
+    }
+    .${p}-brand-badge {
+      width: 26px; height: 26px; border-radius: 5px; background: #ffffff; color: #783104;
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; font-family: var(--font-sans);
+    }
+    .${p}-nav-pill {
+      background: rgba(88, 34, 4, 0.45); border: 1px solid var(--border);
+      border-radius: 999px; padding: 6px 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      backdrop-filter: blur(12px);
+    }
+    .${p}-nav-pill a {
+      padding: 8px 18px; border-radius: 999px; color: var(--fg); text-decoration: none;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .${p}-nav-pill a.is-active { background: #ffffff; color: #5c2402; }
+    .${p}-icon-btn {
+      width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border);
+      background: rgba(88, 34, 4, 0.45); color: #ffffff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+
+    .${p}-hero {
+      display: grid; grid-template-columns: 1.05fr 1.1fr 0.75fr; gap: 24px; align-items: center;
+      padding: 20px 0 42px; min-height: 620px; position: relative;
+    }
+    .${p}-arrow-row { display: inline-flex; gap: 8px; margin-bottom: 18px; }
+    .${p}-hero h1 {
+      font-size: clamp(2.4rem, 4.4vw, 3.85rem); font-weight: 700;
+      line-height: 1.06; letter-spacing: -0.025em; margin-bottom: 16px;
+    }
+    .${p}-hero p {
+      font-size: 13.5px; line-height: 1.68; color: var(--muted); max-width: 390px; margin-bottom: 26px;
+    }
+    .${p}-btn-white {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 26px; border-radius: 999px; border: 0;
+      background: #ffffff; color: #431407; font-size: 13px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 14px 32px rgba(67, 20, 7, 0.32);
+    }
+
+    .${p}-center-stage {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      position: relative;
+    }
+    .${p}-puffer-wrap {
+      position: relative; width: 100%; max-width: 430px; height: 420px;
+      display: flex; align-items: center; justify-content: center;
+      animation: floatPuffer 5.5s ease-in-out infinite;
+    }
+    .${p}-puffer-wrap img {
+      max-width: 100%; max-height: 410px; object-fit: contain; display: block;
+      filter: drop-shadow(0 28px 34px rgba(45, 14, 2, 0.55));
+      transition: transform 0.35s var(--ease-out), opacity 0.25s var(--ease-out);
+    }
+    .${p}-floor-shadow {
+      width: 260px; height: 18px; border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(40, 12, 2, 0.68) 0%, transparent 75%);
+      margin: 4px auto 18px;
+    }
+
+    .${p}-right-stage {
+      display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 22px;
+    }
+    .${p}-price-now {
+      font-size: clamp(2.4rem, 3.8vw, 3.3rem); font-weight: 700; line-height: 1;
+    }
+    .${p}-price-old {
+      font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 500; color: rgba(255, 251, 235, 0.62);
+      text-decoration: line-through; margin-top: 6px;
+    }
+    .${p}-sizes { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px; }
+    .${p}-size-btn {
+      width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--border);
+      background: rgba(88, 34, 4, 0.52); color: #ffffff; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .${p}-size-btn.is-active { background: #ffffff; color: #431407; border-color: #ffffff; }
+
+    .${p}-variant-thumb {
+      margin-top: 24px; padding: 12px 16px; border-radius: 22px;
+      background: rgba(67, 20, 7, 0.42); border: 1px solid var(--border);
+      display: inline-flex; align-items: center; gap: 12px; cursor: pointer;
+    }
+    .${p}-variant-thumb img { width: 72px; height: 78px; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45)); }
+
+    .${p}-section { padding: 48px 0; border-top: 1px solid var(--border); }
+    .${p}-spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .${p}-spec-card {
+      background: rgba(88, 34, 4, 0.42); border: 1px solid var(--border); border-radius: 22px; padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(45, 14, 2, 0.72); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #692903; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero, .${p}-spec-grid { grid-template-columns: 1fr; text-align: left; }
+      .${p}-right-stage { align-items: flex-start; text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-pill { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#top" class="${p}-brand">
+        <span class="${p}-brand-badge">JM</span>
+        <span>JACKET MASTERS</span>
+      </a>
+      <nav class="${p}-nav-pill" aria-label="Primary">
+        <a href="#top" class="is-active">PUFFER JACKET</a>
+        <a href="#specs">ALL PRODUCTS</a>
+        <a href="#specs">ABOUT US</a>
+        <a href="#specs">CONTACT</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(88,34,4,0.45);color:#fff;font-size:11.5px;font-weight:700;cursor:pointer;">
+          Motion: ON
+        </button>
+        <button type="button" class="${p}-icon-btn" data-seamless-trigger="JM Jacket Masters Shopping Bag" aria-label="Shopping Cart">🛒</button>
+        <button type="button" class="${p}-icon-btn" data-seamless-trigger="Saved Winter Lookbook" aria-label="Wishlist">♡</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="${p}-wrap">
+    <section id="top" class="${p}-hero" aria-label="JM Jacket Masters Puffer Showcase">
+      <div>
+        <div class="${p}-arrow-row">
+          <button type="button" class="${p}-icon-btn" id="prevJacketBtn" aria-label="Previous jacket colorway">‹</button>
+          <button type="button" class="${p}-icon-btn" id="nextJacketBtn" data-next-preview="true" aria-label="Next jacket colorway">›</button>
+        </div>
+        <h1 id="jacketTitle">Stand out<br>Without trying</h1>
+        <p id="jacketDesc">
+          It's not just about staying warm. It's about stepping outside and instantly feeling confident, comfortable, and completely yourself. Designed to elevate even the simplest outfit, this jacket wraps you in lightweight warmth.
+        </p>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-white">
+          <span>Get the look</span>
+          <span>›</span>
+        </button>
+
+        <div style="display:flex;align-items:center;gap:18px;margin-top:44px;font-size:13px;font-weight:700;color:var(--muted);">
+          <span>◎ Instagram</span>
+          <span>f Facebook</span>
+          <span>⊗ Dribbble</span>
+          <span>Bē Behance</span>
+        </div>
+      </div>
+
+      <div class="${p}-center-stage">
+        <div class="${p}-puffer-wrap">
+          <img id="heroPufferImg" src="assets/puffer-orange-hero.webp" alt="JM Jacket Masters 3D Glossy Burnt-Orange Quilted Down Puffer Jacket">
+        </div>
+        <div class="${p}-floor-shadow" aria-hidden="true"></div>
+        <div style="font-size:15px;font-weight:600;line-height:1.35;">
+          Confidence,<br>wrapped in warmth
+        </div>
+      </div>
+
+      <div class="${p}-right-stage">
+        <div>
+          <div class="${p}-price-now tabular-nums" id="jacketPriceNow">$149</div>
+          <div class="${p}-price-old tabular-nums" id="jacketPriceOld">$199</div>
+        </div>
+
+        <div>
+          <div style="font-size:12.5px;color:var(--muted);">Choose your size:</div>
+          <div class="${p}-sizes" role="group" aria-label="Select jacket size">
+            <button type="button" class="${p}-size-btn is-active" data-size="36">36</button>
+            <button type="button" class="${p}-size-btn" data-size="38">38</button>
+            <button type="button" class="${p}-size-btn" data-size="40">40</button>
+          </div>
+        </div>
+
+        <button type="button" class="${p}-variant-thumb" id="swapBlackJacketBtn" aria-label="Switch between Obsidian Black and Burnt Orange Puffer">
+          <img id="thumbPufferImg" src="assets/puffer-black-thumb.webp" alt="Obsidian Black Down Puffer Variant">
+          <div style="text-align:left;">
+            <div style="font-size:11px;font-family:var(--font-mono);color:var(--accent-text);" id="thumbPufferTag">NEXT COLORWAY</div>
+            <div style="font-size:13.5px;font-weight:700;color:#ffffff;" id="thumbPufferName">Obsidian Stealth</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section id="specs" class="${p}-section ${p}-reveal" aria-label="Technical Thermal Architecture">
+      <div class="${p}-spec-grid">
+        <article class="${p}-spec-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">800-FILL GOOSE DOWN</div>
+          <h2 style="font-size:19px;font-weight:700;margin-bottom:8px;">Ultra-Loft Thermal Baffles</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            High-volume horizontal chamber construction locks in body heat down to -18°C while weighing under 640 grams.
+          </p>
+        </article>
+        <article class="${p}-spec-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">RIPSTOP GLOSS SHELL</div>
+          <h2 style="font-size:19px;font-weight:700;margin-bottom:8px;">Hydro-Shield DWR Finish</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Japanese micro-ripstop nylon treated with PFC-free water-repellent glaze that sheds sleet and alpine snow on contact.
+          </p>
+        </article>
+        <article class="${p}-spec-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">TAILORED SILHOUETTE</div>
+          <h2 style="font-size:19px;font-weight:700;margin-bottom:8px;">Cropped Storm Collar Fit</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Insulated stand-up funnel neck, recessed rib-knit storm cuffs, and internal drawcord hem engineered for sizes 36, 38, and 40.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:24px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>JM JACKET MASTERS — Confidence, Wrapped in Warmth</span>
+    <span class="tabular-nums">Sizes 36 • 38 • 40 | $149 USD</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">JM ATELIER CHECKOUT</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-icon-btn" style="width:30px;height:30px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Reserve JM Down Puffer ($149)</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Your selected size and colorway are in stock for express dispatch with complimentary garment bag and 30-day fit assurance.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-white" style="width:100%;justify-content:center;">
+        Complete Order ($149) →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var isBlack = false;
+      var heroImg = document.getElementById('heroPufferImg');
+      var thumbImg = document.getElementById('thumbPufferImg');
+      var thumbName = document.getElementById('thumbPufferName');
+      var priceNow = document.getElementById('jacketPriceNow');
+
+      function toggleColorway() {
+        isBlack = !isBlack;
+        if (heroImg && thumbImg) {
+          heroImg.src = isBlack ? 'assets/puffer-black-thumb.webp' : 'assets/puffer-orange-hero.webp';
+          thumbImg.src = isBlack ? 'assets/puffer-orange-hero.webp' : 'assets/puffer-black-thumb.webp';
+        }
+        if (thumbName) thumbName.textContent = isBlack ? 'Solar Burnt-Orange' : 'Obsidian Stealth';
+        if (priceNow) priceNow.textContent = isBlack ? '$159' : '$149';
+      }
+
+      var prevBtn = document.getElementById('prevJacketBtn');
+      var nextBtn = document.getElementById('nextJacketBtn');
+      var swapBtn = document.getElementById('swapBlackJacketBtn');
+      if (prevBtn) prevBtn.addEventListener('click', toggleColorway);
+      if (nextBtn) nextBtn.addEventListener('click', toggleColorway);
+      if (swapBtn) swapBtn.addEventListener('click', toggleColorway);
+
+      document.querySelectorAll('.${p}-size-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-size-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 33. HAWRA GRAPHICS STUDIO (professional-graphic — Premium Tier)
+  // Obsidian-Espresso & Terracotta Rim-Lit Brand Identity Designer Portfolio
+  // ============================================================================
+  if (slug === 'professional-graphic') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Hawra Graphics — Freelancer Graphics Designer &amp; Brand Identity</title>
+  <meta name="description" content="Hi, I'm Hawra. I craft premium visual identities for ambitious brands — clean, considered and unforgettable.">
+  <meta property="og:title" content="Hawra Graphics — Brand Identity &amp; Visual Direction">
+  <meta property="og:description" content="Freelancer Graphics Designer &amp; Brand Identity Studio — Available for Projects.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0F0906">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0806;
+      --surface: #170e0a;
+      --surface-elevated: #24150e;
+      --glass: rgba(23, 14, 10, 0.78);
+      --fg: #faf5f0;
+      --muted: #b5a397;
+      --border: rgba(249, 115, 22, 0.2);
+      --accent: #f97316;
+      --accent-text: #fb923c;
+      --accent-strong: #ea580c;
+      --on-accent: #0d0806;
+      --font-display: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 26px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background:
+        radial-gradient(circle at 26% 42%, rgba(234, 88, 12, 0.34) 0%, rgba(124, 45, 18, 0.22) 34%, #0c0705 72%),
+        #0c0705;
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .${p}-studio-frame {
+      margin: 24px auto; border-radius: 28px;
+      background:
+        radial-gradient(circle at 26% 52%, rgba(217, 91, 22, 0.42) 0%, rgba(78, 28, 9, 0.28) 38%, rgba(12, 8, 6, 0.96) 72%),
+        #0d0806;
+      border: 1px solid rgba(251, 146, 60, 0.22);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65);
+      overflow: hidden; padding: 24px clamp(20px, 3.5vw, 42px) 36px;
+    }
+    .${p}-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--fg); text-decoration: none; font-family: var(--font-display); font-size: 18px; font-weight: 700;
+    }
+    .${p}-pen-icon {
+      width: 28px; height: 28px; border-radius: 50%; background: rgba(249, 115, 22, 0.18);
+      border: 1px solid var(--accent); color: var(--accent);
+      display: inline-flex; align-items: center; justify-content: center; font-size: 13px;
+    }
+    .${p}-nav-pill {
+      padding: 8px 22px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03); display: flex; align-items: center; gap: 24px; list-style: none;
+    }
+    .${p}-nav-pill a { color: var(--muted); text-decoration: none; font-size: 12.5px; font-weight: 500; }
+    .${p}-nav-pill a:hover { color: #ffffff; }
+    .${p}-btn-orange {
+      padding: 10px 22px; border-radius: 999px; border: 0;
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      color: #ffffff; font-size: 12.5px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
+    }
+    .${p}-btn-dark {
+      padding: 10px 22px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.04); color: #ffffff; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero-grid {
+      display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 36px; align-items: center;
+      padding-top: 22px;
+    }
+    .${p}-portrait-box {
+      position: relative; border-radius: 24px; overflow: hidden;
+      display: flex; align-items: flex-end; justify-content: center;
+    }
+    .${p}-portrait-box img {
+      width: 100%; max-width: 440px; height: auto; object-fit: cover; display: block;
+      border-radius: 20px;
+    }
+
+    .${p}-right-copy {
+      display: flex; flex-direction: column; align-items: flex-end; text-align: right;
+    }
+    .${p}-avail-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.03); font-size: 10.5px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
+    }
+    .${p}-avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+    .${p}-hero-h1 {
+      font-family: var(--font-display); font-size: clamp(2.8rem, 5.6vw, 4.9rem);
+      font-weight: 600; line-height: 1.04; margin-bottom: 12px;
+    }
+    .${p}-hero-h1 em { color: var(--accent); font-style: italic; }
+    .${p}-role-sub {
+      font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .${p}-bio {
+      font-size: 14.5px; line-height: 1.68; color: #d6c7bc; max-width: 430px; margin-bottom: 28px;
+    }
+
+    .${p}-section { padding: 42px 0; }
+    .${p}-filter-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
+    .${p}-case-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .${p}-case-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px;
+      transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+    }
+    .${p}-case-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(13, 8, 6, 0.76); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #1c110c; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: var(--fg);
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero-grid, .${p}-case-grid { grid-template-columns: 1fr; }
+      .${p}-right-copy { align-items: flex-start; text-align: left; }
+    }
+    @media (max-width: 680px) {
+      .${p}-nav-pill { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <main id="main-content" class="${p}-wrap">
+    <div class="${p}-studio-frame">
+      <header class="${p}-nav">
+        <a href="#top" class="${p}-brand">
+          <span class="${p}-pen-icon">✒</span>
+          <span>Hawra Graphics</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="${p}-nav-pill">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#portfolio">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-btn-dark" style="padding:8px 14px;font-size:11.5px;">
+            Motion: ON
+          </button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-orange">Let's Talk</button>
+        </div>
+      </header>
+
+      <section id="top" class="${p}-hero-grid" aria-label="Hawra Graphics Hero">
+        <div class="${p}-portrait-box">
+          <img src="assets/hawra-portrait.webp" alt="Hawra — Freelancer Graphics Designer &amp; Brand Identity Specialist">
+        </div>
+
+        <div class="${p}-right-copy">
+          <div class="${p}-avail-pill">
+            <span class="${p}-avail-dot"></span>
+            <span>AVAILABLE FOR PROJECTS</span>
+          </div>
+
+          <h1 class="${p}-hero-h1">Hi, I'm <em>Hawra.</em></h1>
+          <div class="${p}-role-sub">FREELANCER GRAPHICS DESIGNER &amp; BRAND IDENTITY</div>
+
+          <p class="${p}-bio">
+            I craft premium visual identities for ambitious brands — clean, considered and unforgettable.
+          </p>
+
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <a href="#portfolio" class="${p}-btn-orange" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+              <span>View Portfolio</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="${p}-btn-dark" data-seamless-trigger="Commission Hawra Graphics — Brand Identity Inquiry">
+              ✉ Contact Me
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="portfolio" class="${p}-section ${p}-reveal" aria-label="Selected Brand Identity Works">
+      <div class="${p}-filter-row">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">SELECTED ARCHIVE • 2024—2026</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:4px;">Considered Visual Identities</h2>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-orange" data-next-preview="true" data-folio-cat="ALL">All Systems (12)</button>
+          <button type="button" class="${p}-btn-dark" data-folio-cat="LUXURY">Luxury Monograms</button>
+          <button type="button" class="${p}-btn-dark" data-folio-cat="PACKAGING">Tactile Packaging</button>
+        </div>
+      </div>
+
+      <div class="${p}-case-grid">
+        <article class="${p}-case-card" data-card-cat="LUXURY">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);margin-bottom:8px;">01 • MAISON AL-NOOR</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;">Oud &amp; Botanical Perfumery</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+            Foil-stamped bilingual Arabic/Latin logotype, embossed flacon labels, and rigid terracotta presentation boxes.
+          </p>
+          <span style="font-size:12px;font-weight:700;color:var(--accent-text);">Identity + Packaging →</span>
+        </article>
+
+        <article class="${p}-case-card" data-card-cat="PACKAGING">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);margin-bottom:8px;">02 • KAHWA ROASTERY</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;">Specialty Coffee Atelier</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+            Warm copper typography system, origin elevation badges, and matte-black valve bags for single-estate micro-lots.
+          </p>
+          <span style="font-size:12px;font-weight:700;color:var(--accent-text);">Brand System →</span>
+        </article>
+
+        <article class="${p}-case-card" data-card-cat="LUXURY">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);margin-bottom:8px;">03 • VELA ARCHITECTURE</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;">Minimalist Spatial Monograph</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+            Editorial grid architecture, custom serif ligatures, and digital portfolio direction for Dubai &amp; Doha studios.
+          </p>
+          <span style="font-size:12px;font-weight:700;color:var(--accent-text);">Editorial + Web UI →</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="${p}-wrap" style="padding:24px 0 44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13px;">
+    <span>Hawra.d.ui@gmail.com</span>
+    <span>Hawra Graphics — Freelancer Brand Identity Studio</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">HAWRA GRAPHICS STUDIO</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-dark" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Book a Brand Identity Sprint</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Direct inquiries: <strong>Hawra.d.ui@gmail.com</strong>. Complete visual identity deliverables include primary mark, typography guidelines, packaging dielines, and social launch kit.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-orange" style="width:100%;">
+        Send Project Brief →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var filterBtns = document.querySelectorAll('[data-folio-cat]');
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var cat = btn.getAttribute('data-folio-cat') || 'ALL';
+          document.querySelectorAll('[data-card-cat]').forEach(function (card) {
+            var match = cat === 'ALL' || card.getAttribute('data-card-cat') === cat;
+            card.style.opacity = match ? '1' : '0.42';
+          });
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 34. STORYSEEKER AUDIO & BOOK HUB (nugraha-jati — Premium Tier)
+  // Warm Cream, Mustard-Gold & Burnt-Orange Neo-Brutalist Library Dashboard
+  // ============================================================================
+  if (slug === 'nugraha-jati') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>StorySeeker — Neo-Brutalist Book Library &amp; Audiobook Player</title>
+  <meta name="description" content="Explore classic literature and audiobooks in StorySeeker — featuring The Great Gatsby, The Catcher in the Rye, Of Mice and Men, Fahrenheit 451, The Giver, and Harry Potter 2x audio player.">
+  <meta property="og:title" content="StorySeeker — Digital Library &amp; Audiobook Workbench">
+  <meta property="og:description" content="Read previews, track pages left, and listen to narrated editions with interactive speed controls.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#E8DAC3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #e8dac3;
+      --surface: #fbf3e4;
+      --surface-elevated: #f5d547;
+      --glass: rgba(251, 243, 228, 0.94);
+      --fg: #1c1917;
+      --muted: #57534e;
+      --border: #1c1917;
+      --accent: #eb6a2a;
+      --accent-text: #c2410c;
+      --accent-strong: #d95616;
+      --on-accent: #1c1917;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #ffffff; }
+    html, body {
+      background: var(--bg);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 6px; background: var(--accent); color: #ffffff;
+      font-weight: 700; text-decoration: none; border: 1.5px solid var(--border);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    button, [role="button"] {
+      transition: transform 0.18s var(--ease-out), background-color 0.18s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: translate(1px, 1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 28px; height: 28px; border: 1.5px solid var(--fg); margin: -14px 0 0 -14px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 14px, 0); transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-outer { max-width: 1280px; margin: 22px auto 38px; padding: 0 clamp(14px, 2.8vw, 32px); }
+    .${p}-app-shell {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      display: grid; grid-template-columns: 78px 1fr;
+      box-shadow: 8px 8px 0 rgba(28, 25, 23, 0.16);
+    }
+    .${p}-sidebar {
+      border-right: 1.5px solid var(--border);
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      padding: 18px 6px; background: var(--surface);
+    }
+    .${p}-flame-logo {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 24px; text-decoration: none;
+    }
+    .${p}-side-nav {
+      display: flex; flex-direction: column; gap: 16px; align-items: center; width: 100%; margin: 18px 0;
+    }
+    .${p}-side-item {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      font-size: 10px; font-weight: 600; color: var(--fg); text-decoration: none; cursor: pointer;
+      background: transparent; border: 0; width: 100%; padding: 4px 0;
+    }
+    .${p}-side-item.is-active { color: var(--accent); font-weight: 800; }
+
+    .${p}-topbar {
+      display: grid; grid-template-columns: 1fr 270px 64px;
+      border-bottom: 1.5px solid var(--border);
+      background: var(--surface-elevated);
+    }
+    .${p}-top-search-wrap {
+      padding: 12px 22px; display: flex; align-items: center; gap: 14px;
+    }
+    .${p}-search-box {
+      max-width: 340px; width: 100%; background: var(--surface);
+      border: 1.5px solid var(--border); padding: 9px 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .${p}-search-box input {
+      border: 0; background: transparent; width: 100%; font-family: var(--font-mono);
+      font-size: 12px; color: var(--fg); outline: none;
+    }
+    .${p}-profile-cell {
+      background: var(--surface); border-left: 1.5px solid var(--border);
+      padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .${p}-bell-cell {
+      background: var(--surface); border-left: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer;
+    }
+
+    .${p}-body-pad { padding: 18px 24px 24px; }
+    .${p}-toolbar {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .${p}-tabs { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .${p}-tab-btn {
+      padding: 6px 14px; border: 1.5px solid var(--border);
+      background: var(--surface); color: var(--fg); font-family: var(--font-mono);
+      font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-tab-btn.is-active { background: var(--accent); color: var(--fg); font-weight: 700; }
+
+    .${p}-books-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .${p}-book-card {
+      padding-bottom: 16px; border-bottom: 1.5px solid var(--border);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
+    }
+    .${p}-book-top {
+      display: grid; grid-template-columns: 78px 1fr; gap: 14px; align-items: start;
+    }
+    .${p}-cover-frame {
+      border: 1.5px solid var(--border); background: #ffffff; padding: 3px;
+    }
+    .${p}-cover-frame img {
+      width: 100%; height: 96px; object-fit: cover; display: block;
+    }
+    .${p}-pages-left {
+      font-family: var(--font-mono); font-size: 10.5px; color: var(--fg); margin-top: 6px; line-height: 1.3;
+    }
+    .${p}-book-title-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;
+    }
+    .${p}-book-title { font-size: 15px; font-weight: 800; line-height: 1.25; }
+    .${p}-book-author {
+      font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin: 2px 0 8px;
+    }
+    .${p}-book-author span { text-decoration: underline; }
+    .${p}-book-synopsis {
+      font-family: var(--font-mono); font-size: 10.5px; line-height: 1.48; color: var(--fg);
+    }
+    .${p}-btn-preview {
+      width: 100%; padding: 10px 14px; border: 1.5px solid var(--border);
+      background: var(--accent); color: var(--fg); font-weight: 700; font-size: 13px; cursor: pointer;
+    }
+    .${p}-btn-preview:hover { background: #f57b3d; }
+    .${p}-card-actions {
+      display: flex; align-items: center; justify-content: space-around; gap: 10px;
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    }
+    .${p}-action-link {
+      background: transparent; border: 0; color: var(--fg); font-family: inherit;
+      font-size: 11px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    .${p}-audio-bar {
+      margin-top: 20px; background: var(--accent); border: 1.5px solid var(--border);
+      padding: 10px 16px; display: grid; grid-template-columns: 1.1fr 1.2fr 0.9fr; align-items: center; gap: 16px;
+    }
+    .${p}-audio-track { display: flex; align-items: center; gap: 12px; }
+    .${p}-audio-track img {
+      width: 46px; height: 46px; object-fit: cover; border: 1.5px solid var(--border); background: #fff;
+    }
+    .${p}-audio-controls { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .${p}-ctrl-btns { display: flex; align-items: center; gap: 16px; }
+    .${p}-round-ctrl {
+      width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--border);
+      background: transparent; color: var(--fg); font-family: var(--font-mono); font-size: 10px; font-weight: 700; cursor: pointer;
+    }
+    .${p}-pause-btn {
+      width: 36px; height: 36px; border-radius: 50%; border: 0;
+      background: #fcd34d; color: var(--fg); font-weight: 800; font-size: 13px; cursor: pointer;
+    }
+    .${p}-scrubber {
+      width: 100%; max-width: 260px; height: 3px; background: var(--border); position: relative;
+    }
+    .${p}-scrubber-dot {
+      width: 10px; height: 10px; border-radius: 50%; background: var(--border);
+      position: absolute; top: -3.5px; left: 58%;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(28, 25, 23, 0.65); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; background: var(--surface); border: 2px solid var(--border);
+      padding: 26px; box-shadow: 8px 8px 0 var(--border);
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-books-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .${p}-audio-bar { grid-template-columns: 1fr; }
+      .${p}-topbar { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .${p}-app-shell { grid-template-columns: 1fr; }
+      .${p}-sidebar { display: none; }
+      .${p}-books-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <div class="${p}-outer">
+    <div class="${p}-app-shell">
+      <aside class="${p}-sidebar" aria-label="Library Navigation">
+        <a href="#top" class="${p}-flame-logo" aria-label="StorySeeker Home">🔥</a>
+        <div class="${p}-side-nav">
+          <button type="button" class="${p}-side-item"><span>⌂</span><span>Home</span></button>
+          <button type="button" class="${p}-side-item"><span>⊞</span><span>Category</span></button>
+          <button type="button" class="${p}-side-item"><span>📖</span><span>Library</span></button>
+          <button type="button" class="${p}-side-item"><span>↓</span><span>Download</span></button>
+          <button type="button" class="${p}-side-item is-active"><span>🔖</span><span>Saved</span></button>
+        </div>
+        <div class="${p}-side-nav" style="margin:0;">
+          <button type="button" class="${p}-side-item"><span>⚙</span><span>Settings</span></button>
+          <button type="button" class="${p}-side-item"><span>💬</span><span>Support</span></button>
+          <button type="button" class="${p}-side-item"><span>↪</span><span>Logout</span></button>
+        </div>
+      </aside>
+
+      <main id="main-content">
+        <header id="top" class="${p}-topbar">
+          <div class="${p}-top-search-wrap">
+            <div class="${p}-search-box">
+              <span>🔍</span>
+              <input type="text" id="globalBookSearch" placeholder="Title, author, host, or topic" aria-label="Title, author, host, or topic">
+            </div>
+            <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-tab-btn">Motion: ON</button>
+          </div>
+
+          <div class="${p}-profile-cell">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <img src="assets/avatar-bruce.webp" alt="Bruce Wayne — Story Seeker" style="width:42px;height:42px;object-fit:cover;border:1.5px solid var(--border);">
+              <div>
+                <div style="font-size:13.5px;font-weight:800;">Bruce Wayne</div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--muted);">Story Seeker</div>
+              </div>
+            </div>
+            <span>▼</span>
+          </div>
+
+          <button type="button" id="exploreMagneticBtn" class="${p}-bell-cell" aria-label="Notifications &amp; Reading Queue">
+            🔔
+          </button>
+        </header>
+
+        <div class="${p}-body-pad">
+          <div class="${p}-toolbar">
+            <div class="${p}-tabs" role="tablist" aria-label="Saved Library Sections">
+              <button type="button" class="${p}-tab-btn is-active" data-next-preview="true" data-lib-tab="Titles">Titles</button>
+              <button type="button" class="${p}-tab-btn" data-lib-tab="Following">Following</button>
+              <button type="button" class="${p}-tab-btn" data-lib-tab="Lists">Lists</button>
+              <button type="button" class="${p}-tab-btn" data-lib-tab="Notebook">Notebook</button>
+              <button type="button" class="${p}-tab-btn" data-lib-tab="History">History</button>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="${p}-search-box" style="width:240px;">
+                <span>🔍</span>
+                <input type="text" placeholder="Search in Titles" aria-label="Search in Titles">
+              </div>
+              <button type="button" class="${p}-tab-btn" aria-label="Filter options">⊶</button>
+            </div>
+          </div>
+
+          <section aria-label="Saved Classic Titles">
+            <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">StorySeeker Saved Classic Literature &amp; Audiobook Library</h1>
+            <div class="${p}-books-grid">
+              <article class="${p}-book-card">
+                <div class="${p}-book-top">
+                  <div>
+                    <div class="${p}-cover-frame">
+                      <img src="assets/cover-gatsby.webp" alt="The Great Gatsby by F. Scott Fitzgerald">
+                    </div>
+                    <div class="${p}-pages-left tabular-nums">168<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="${p}-book-title-row">
+                      <h2 class="${p}-book-title">The Great Gatsby</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="${p}-book-author">By <span>F. Scott Fitzgerald</span></div>
+                    <p class="${p}-book-synopsis">
+                      <u>Nick Carraway</u>, a young man from Minnesota, moves to New York in the summer of 1922 to learn about the bond business. He rents a house in the West Egg district of Long Island, a wealthy but unfashionable area populated by the new rich, a group who ...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="${p}-btn-preview" data-seamless-trigger="Read Preview — The Great Gatsby (Chapter I)">Read Preview</button>
+                <div class="${p}-card-actions">
+                  <button type="button" class="${p}-action-link">☁ Download</button>
+                  <button type="button" class="${p}-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="${p}-book-card">
+                <div class="${p}-book-top">
+                  <div>
+                    <div class="${p}-cover-frame">
+                      <img src="assets/cover-catcher.webp" alt="The Catcher in the Rye by J. D. Salinger">
+                    </div>
+                    <div class="${p}-pages-left tabular-nums">184<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="${p}-book-title-row">
+                      <h2 class="${p}-book-title">The Catcher in the Rye</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="${p}-book-author">By <span>J. D. Salinger</span></div>
+                    <p class="${p}-book-synopsis">
+                      Fleeing the crooks at Pencey Prep, he pinballs around New York City seeking solace in fleeting encounters—shooting the bull with strangers in dive hotels, wandering alone round Central Park, getting beaten up by pimps and cut down by erstwhile girlfriends. The city ...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="${p}-btn-preview" data-seamless-trigger="Read Preview — The Catcher in the Rye">Read Preview</button>
+                <div class="${p}-card-actions">
+                  <button type="button" class="${p}-action-link">☁ Download</button>
+                  <button type="button" class="${p}-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="${p}-book-card">
+                <div class="${p}-book-top">
+                  <div>
+                    <div class="${p}-cover-frame">
+                      <img src="assets/cover-mice.webp" alt="Of Mice and Men by John E. Steinbeck">
+                    </div>
+                    <div class="${p}-pages-left tabular-nums">156<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="${p}-book-title-row">
+                      <h2 class="${p}-book-title">Of Mice and Men</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="${p}-book-author">By <span>John E. Steinbeck</span></div>
+                    <p class="${p}-book-synopsis">
+                      They are an unlikely pair: George is "small and quick and dark of face"; Lennie, a man of tremendous size, has the mind of a young child. Yet they have formed a "family," clinging together in the face of loneliness and alienation...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="${p}-btn-preview" data-seamless-trigger="Read Preview — Of Mice and Men">Read Preview</button>
+                <div class="${p}-card-actions">
+                  <button type="button" class="${p}-action-link">☁ Download</button>
+                  <button type="button" class="${p}-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="${p}-book-card">
+                <div class="${p}-book-top">
+                  <div>
+                    <div class="${p}-cover-frame">
+                      <img src="assets/cover-fahrenheit.webp" alt="Fahrenheit 451 by Ray D. Bradbury">
+                    </div>
+                    <div class="${p}-pages-left tabular-nums">136<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="${p}-book-title-row">
+                      <h2 class="${p}-book-title">Fahrenheit 451</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="${p}-book-author">By <span>Ray D. Bradbury</span></div>
+                    <p class="${p}-book-synopsis">
+                      <u>Guy Montag</u> is a fireman. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden. Montag never questions the destruction and ruin his actions produce, returning each day to his bland life and wife ...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="${p}-btn-preview" data-seamless-trigger="Read Preview — Fahrenheit 451">Read Preview</button>
+                <div class="${p}-card-actions">
+                  <button type="button" class="${p}-action-link">☁ Download</button>
+                  <button type="button" class="${p}-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="${p}-book-card">
+                <div class="${p}-book-top">
+                  <div>
+                    <div class="${p}-cover-frame">
+                      <img src="assets/cover-giver.webp" alt="The Giver by Lois Lowry">
+                    </div>
+                    <div class="${p}-pages-left tabular-nums">68<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="${p}-book-title-row">
+                      <h2 class="${p}-book-title">The Giver</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="${p}-book-author">By <span>Lois Lowry</span></div>
+                    <p class="${p}-book-synopsis">
+                      At the age of twelve, Jonas, a young boy from a seemingly utopian, futuristic world, is singled out to receive special training from The Giver, who alone holds the memories of the true joys and pain of life.
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="${p}-btn-preview" data-seamless-trigger="Read Preview — The Giver">Read Preview</button>
+                <div class="${p}-card-actions">
+                  <button type="button" class="${p}-action-link">☁ Download</button>
+                  <button type="button" class="${p}-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="${p}-book-card">
+                <div class="${p}-book-top">
+                  <div>
+                    <div class="${p}-cover-frame">
+                      <img src="assets/cover-hunger.webp" alt="The Hunger Games by Suzanne Collins">
+                    </div>
+                    <div class="${p}-pages-left tabular-nums">120<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="${p}-book-title-row">
+                      <h2 class="${p}-book-title">The Hunger Games</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="${p}-book-author">By <span>Suzanne Collins</span></div>
+                    <p class="${p}-book-synopsis">
+                      In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="${p}-btn-preview" data-seamless-trigger="Read Preview — The Hunger Games">Read Preview</button>
+                <div class="${p}-card-actions">
+                  <button type="button" class="${p}-action-link">☁ Download</button>
+                  <button type="button" class="${p}-action-link">☷ Add to List</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <footer class="${p}-audio-bar" aria-label="Now Playing Audiobook">
+            <div class="${p}-audio-track">
+              <img src="assets/cover-potter.webp" alt="Harry Potter and the Sorcerer's Stone Audiobook Cover">
+              <div>
+                <div style="font-family:var(--font-mono);font-size:13px;font-weight:700;">Harry Potter and the Sorcere...</div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;">By: <u>J.K. Rowling</u> | Narrator: <u>Jim Dale</u></div>
+              </div>
+            </div>
+
+            <div class="${p}-audio-controls">
+              <div class="${p}-ctrl-btns">
+                <button type="button" id="speedToggleBtn" style="background:transparent;border:0;font-family:var(--font-mono);font-size:12.5px;font-weight:700;cursor:pointer;">2x</button>
+                <button type="button" class="${p}-round-ctrl" aria-label="Rewind 15 seconds">15</button>
+                <button type="button" id="playPauseAudioBtn" class="${p}-pause-btn" aria-label="Pause or Play Audiobook">❚❚</button>
+                <button type="button" class="${p}-round-ctrl" aria-label="Forward 15 seconds">15</button>
+                <button type="button" style="background:transparent;border:0;font-size:14px;cursor:pointer;" aria-label="Next Chapter">⏭</button>
+              </div>
+              <div class="${p}-scrubber" aria-hidden="true">
+                <div class="${p}-scrubber-dot"></div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;">
+              <span>▶</span>
+              <span>▤</span>
+              <span>🔊</span>
+              <div style="width:74px;height:3px;background:var(--border);position:relative;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--border);position:absolute;top:-2.5px;right:14px;"></div>
+              </div>
+              <span>❐</span>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;font-weight:700;">STORYSEEKER READER</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-tab-btn" style="padding:2px 8px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:21px;font-weight:800;margin-bottom:10px;">Chapter I — Interactive Book Preview</h2>
+      <p style="font-family:var(--font-mono);font-size:12.5px;line-height:1.65;color:var(--fg);margin-bottom:20px;">
+        "In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since..." Sync your reading progress across ePub, Kindle, and Jim Dale narrated audio chapters.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-preview">
+        Continue Reading Full Edition →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[data-lib-tab]');
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          tabs.forEach(function (el) { el.classList.remove('is-active'); });
+          t.classList.add('is-active');
+        });
+      });
+      var playBtn = document.getElementById('playPauseAudioBtn');
+      var paused = false;
+      if (playBtn) {
+        playBtn.addEventListener('click', function () {
+          paused = !paused;
+          playBtn.textContent = paused ? '▶' : '❚❚';
+        });
+      }
+      var speedBtn = document.getElementById('speedToggleBtn');
+      var speeds = ['1x', '1.5x', '2x'];
+      var sIdx = 2;
+      if (speedBtn) {
+        speedBtn.addEventListener('click', function () {
+          sIdx = (sIdx + 1) % speeds.length;
+          speedBtn.textContent = speeds[sIdx];
+        });
+      }
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 35. RIDEZ CARBON BIKE ATELIER (websi-atelier — Premium Tier)
+  // Obsidian & Racing-Orange Mountain Bike Flagship Store (Vanquish Comp Carbon)
+  // ============================================================================
+  if (slug === 'websi-atelier') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>RIDEZ — Vanquish Comp Carbon ($1,195.00) | Mountain &amp; Trail Bike Atelier</title>
+  <meta name="description" content="High-modulus carbon frame mountain bikes — explore Norco Vanquish Comp Carbon ($1,195.00), Singletrack Speed, Trail Power, Road Bikes, and custom workshop overhaul.">
+  <meta property="og:title" content="RIDEZ — Vanquish Comp Carbon MTB Flagship">
+  <meta property="og:description" content="Road Range 2026: Vanquish Comp Carbon, custom parts &amp; accessories, and 4-point bike service bay.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0A0C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --surface: #141418;
+      --surface-elevated: #1e1e24;
+      --glass: rgba(20, 20, 24, 0.86);
+      --fg: #ffffff;
+      --muted: #a1a1aa;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #ff5e14;
+      --accent-text: #ff7838;
+      --accent-strong: #e04800;
+      --on-accent: #ffffff;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 4px; background: var(--accent); color: #ffffff;
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid #ffffff; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .${p}-header {
+      position: sticky; top: 0; z-index: 160;
+      background: rgba(14, 14, 18, 0.92); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 22px; list-style: none; }
+    .${p}-nav-links a {
+      color: var(--fg); text-decoration: none; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .${p}-nav-links a.is-active, .${p}-nav-links a:hover { color: var(--accent); }
+    .${p}-logo {
+      font-family: 'Teko', Impact, sans-serif; font-size: 32px; font-weight: 700;
+      font-style: italic; letter-spacing: 0.06em; color: #ffffff; text-decoration: none; line-height: 1;
+    }
+    .${p}-logo span { color: var(--accent); }
+
+    .${p}-hero {
+      position: relative; overflow: hidden;
+      background:
+        linear-gradient(90deg, #0a0a0c 0%, #0a0a0c 53%, #ff5e14 53%, #ff5e14 82%, #0a0a0c 82%, #0a0a0c 100%);
+      padding: 54px 0 64px;
+    }
+    .${p}-hero-grid {
+      display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 28px; align-items: center;
+    }
+    .${p}-eyebrow {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--muted);
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .${p}-hero h1 {
+      font-size: clamp(2.4rem, 4.6vw, 3.85rem); font-weight: 800;
+      line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 14px;
+    }
+    .${p}-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .${p}-old-price { font-size: 13px; color: var(--muted); text-decoration: line-through; }
+    .${p}-new-price { font-size: 24px; font-weight: 800; color: var(--accent); }
+    .${p}-hero-desc {
+      font-size: 13px; line-height: 1.65; color: var(--muted); max-width: 390px; margin-bottom: 24px;
+    }
+    .${p}-btn-orange {
+      padding: 12px 24px; border: 1.5px solid var(--accent); background: var(--accent);
+      color: #ffffff; font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    }
+    .${p}-btn-outline {
+      padding: 12px 24px; border: 1.5px solid rgba(255, 255, 255, 0.72); background: transparent;
+      color: #ffffff; font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    }
+    .${p}-bike-stage {
+      position: relative; display: flex; align-items: center; justify-content: center;
+    }
+    .${p}-bike-stage img {
+      width: 100%; max-width: 650px; height: auto; object-fit: contain; display: block;
+      filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.68));
+      transition: transform 0.35s var(--ease-out);
+    }
+
+    .${p}-triptych {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .${p}-cat-banner {
+      position: relative; min-height: 240px; overflow: hidden; border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; justify-content: space-between; padding: 26px;
+      background: #121216;
+    }
+    .${p}-cat-banner img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; opacity: 0.9; z-index: 0;
+    }
+    .${p}-cat-banner::after {
+      content: ''; position: absolute; inset: 0; z-index: 0;
+      background: linear-gradient(95deg, #101014 0%, #101014 52%, rgba(16, 16, 20, 0.35) 76%, rgba(16, 16, 20, 0.08) 100%);
+    }
+    .${p}-cat-banner > * { position: relative; z-index: 1; }
+
+    .${p}-light-sec {
+      background: #ffffff; color: #111115; padding: 56px 0;
+    }
+    .${p}-fac-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 32px;
+    }
+    .${p}-fac-card {
+      text-align: center; padding: 24px 20px; border-right: 1px solid #e4e4e7;
+    }
+    .${p}-fac-card:last-child { border-right: 0; }
+    .${p}-fac-icon {
+      width: 68px; height: 68px; margin: 0 auto 16px; border: 1px dashed #fdba74;
+      display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 26px;
+    }
+
+    .${p}-split-promo {
+      background: #f4f4f5; color: #111115;
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #e4e4e7;
+    }
+    .${p}-promo-box {
+      padding: 36px clamp(20px, 4vw, 48px); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 16px;
+      border-right: 1px solid #e4e4e7;
+    }
+    .${p}-promo-box img { width: 100%; max-height: 210px; object-fit: contain; display: block; }
+
+    .${p}-repair-sec {
+      background: #111115; color: #ffffff; padding: 56px 0;
+    }
+    .${p}-repair-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+    }
+    .${p}-steps-2x2 {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin: 24px 0 28px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(10, 10, 12, 0.78); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #18181d; border: 1px solid var(--border);
+      padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero { background: linear-gradient(135deg, #0a0a0c 0%, #1c1917 65%, #ff5e14 100%); }
+      .${p}-hero-grid, .${p}-triptych, .${p}-fac-grid, .${p}-split-promo, .${p}-repair-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .${p}-nav-links { display: none; }
+      .${p}-promo-box { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#top" class="is-active">HOME</a></li>
+          <li><a href="#categories">SHOP</a></li>
+          <li><a href="#facilities">PAGES</a></li>
+          <li><a href="#repair">BLOG</a></li>
+          <li><a href="#repair">CONTACT</a></li>
+        </ul>
+      </nav>
+      <a href="#top" class="${p}-logo">RIDE<span>Z</span></a>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-btn-outline" style="padding:6px 12px;font-size:11px;">
+          Motion: ON
+        </button>
+        <button type="button" data-next-preview="true" id="frameSpecSwitchBtn" class="${p}-btn-orange" style="padding:7px 14px;font-size:11px;">
+          Frame: <span id="activeFrameSize">29" Carbon L</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="${p}-hero" aria-label="Vanquish Comp Carbon Hero">
+      <div class="${p}-wrap ${p}-hero-grid">
+        <div>
+          <div class="${p}-eyebrow">ROAD RANGE 2026</div>
+          <h1>Vanquish Comp<br>Carbon</h1>
+          <div class="${p}-price-row tabular-nums">
+            <span class="${p}-old-price">$2,299.00</span>
+            <span class="${p}-new-price" id="bikeHeroPrice">$1195.00</span>
+          </div>
+          <p class="${p}-hero-desc">
+            High-modulus carbon frame produces aerodynamic efficiency and stiffness through the use of kammtail shaped tubes and RockShox ZEB Ultimate 160mm travel.
+          </p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <button type="button" id="exploreMagneticBtn" class="${p}-btn-orange">SHOP NOW</button>
+            <a href="#categories" class="${p}-btn-outline" style="text-decoration:none;">EXPLORE PRODUCTS</a>
+          </div>
+        </div>
+
+        <div class="${p}-bike-stage">
+          <img id="vanquishHeroBike" src="assets/vanquish-carbon-hero.webp" alt="Norco Vanquish Comp Carbon 3D Mountain Bike with Orange Suspension Fork">
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="${p}-triptych" aria-label="Bike Categories">
+      <article class="${p}-cat-banner">
+        <img src="assets/trail-singletrack.webp" alt="Singletrack Speed Mountain Bike">
+        <div>
+          <h2 style="font-size:20px;font-weight:800;">Singletrack Speed</h2>
+          <p style="font-size:11px;color:var(--accent-text);font-weight:700;margin-top:4px;">THE ALL-NEW TRANCE ADVANCED PRO 29 SERIES</p>
+        </div>
+        <div>
+          <button type="button" class="${p}-btn-orange" data-seamless-trigger="Singletrack Speed — Trance Advanced Pro 29">LEARN MORE</button>
+        </div>
+      </article>
+
+      <article class="${p}-cat-banner">
+        <img src="assets/trail-power.webp" alt="Trail Power Carbon Cockpit">
+        <div>
+          <h2 style="font-size:20px;font-weight:800;">Trail Power</h2>
+          <p style="font-size:11px;color:var(--accent-text);font-weight:700;margin-top:4px;">25% OFF TRANCE X ADVANCED E+</p>
+        </div>
+        <div>
+          <button type="button" class="${p}-btn-outline" style="background:#ffffff;color:#111115;" data-seamless-trigger="Trail Power — Trance X Advanced E+">DISCOVER MORE</button>
+        </div>
+      </article>
+
+      <article class="${p}-cat-banner">
+        <img src="assets/trail-road.webp" alt="Road Bikes Endurance Series">
+        <div>
+          <h2 style="font-size:20px;font-weight:800;">Road Bikes</h2>
+          <p style="font-size:11px;color:var(--accent-text);font-weight:700;margin-top:4px;">NEW STYLES JUST GOT IN</p>
+        </div>
+        <div>
+          <button type="button" class="${p}-btn-orange" data-seamless-trigger="Road Bikes — Aero Carbon Collection">SHOP NOW</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="facilities" class="${p}-light-sec ${p}-reveal" aria-label="Our Facilities and Features">
+      <div class="${p}-wrap">
+        <div style="text-align:center;">
+          <div style="font-size:10.5px;letter-spacing:0.2em;color:var(--accent);font-weight:800;text-transform:uppercase;">YOUR RIDE START HERE</div>
+          <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;margin-top:6px;">Our Facilities &amp; Features</h2>
+        </div>
+
+        <div class="${p}-fac-grid">
+          <article class="${p}-fac-card">
+            <div class="${p}-fac-icon">⚙</div>
+            <h3 style="font-size:16px;font-weight:800;margin-bottom:8px;">Complete Overhaul</h3>
+            <p style="font-size:13px;color:#52525b;line-height:1.6;">
+              Ultrasonic drivetrain degreasing, hydraulic brake bleed, and suspension damper rebuilds by certified mechanics.
+            </p>
+          </article>
+          <article class="${p}-fac-card">
+            <div class="${p}-fac-icon">⛑</div>
+            <h3 style="font-size:16px;font-weight:800;margin-bottom:8px;">Custom Parts &amp; Accessories</h3>
+            <p style="font-size:13px;color:#52525b;line-height:1.6;">
+              Carbon wheelsets, SRAM Eagle AXS wireless groupsets, and CNC-machined clipless pedals tuned to your riding style.
+            </p>
+          </article>
+          <article class="${p}-fac-card">
+            <div class="${p}-fac-icon">🚲</div>
+            <h3 style="font-size:16px;font-weight:800;margin-bottom:8px;">Bike Fitting &amp; Delivery</h3>
+            <p style="font-size:13px;color:#52525b;line-height:1.6;">
+              3D motion-capture biometric saddle and stem calibration with white-glove ready-to-ride home delivery.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="${p}-split-promo ${p}-reveal" aria-label="Kids Bikes and Accessories">
+      <article class="${p}-promo-box">
+        <div>
+          <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;">KIDS BIKES</h2>
+          <p style="font-size:12.5px;color:#52525b;margin-bottom:16px;">Close-out pricing on dozens of products</p>
+          <button type="button" class="${p}-btn-outline" style="border-color:var(--accent);color:#111115;" data-seamless-trigger="Kids Bikes Close-Out Catalog">SHOP NOW</button>
+        </div>
+        <img src="assets/kids-bike.webp" alt="White Commuter &amp; Youth Bike">
+      </article>
+
+      <article class="${p}-promo-box" style="border-right:0;">
+        <div>
+          <h2 style="font-size:22px;font-weight:800;margin-bottom:6px;">ACCESSORIES</h2>
+          <p style="font-size:12.5px;color:#52525b;margin-bottom:16px;">Close-out pricing on dozens of products</p>
+          <button type="button" class="${p}-btn-outline" style="border-color:var(--accent);color:#111115;" data-seamless-trigger="Pro Cycling Helmets &amp; Optics">SHOP NOW</button>
+        </div>
+        <img src="assets/aero-helmet.webp" alt="Pro Aero Cycling Helmet &amp; Visor">
+      </article>
+    </section>
+
+    <section id="repair" class="${p}-repair-sec ${p}-reveal" aria-label="Bike Services and Repair">
+      <div class="${p}-wrap ${p}-repair-grid">
+        <div>
+          <div style="font-size:10.5px;letter-spacing:0.2em;color:var(--accent);font-weight:800;">WHY RIDE WITH US</div>
+          <h2 style="font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:800;line-height:1.12;margin-top:6px;">
+            Bike Services<br>&amp; Repair
+          </h2>
+          <div class="${p}-steps-2x2">
+            <div>
+              <h3 style="font-size:14px;font-weight:800;color:var(--accent-text);margin-bottom:6px;">01. Tunner - Up &amp; Builds</h3>
+              <p style="font-size:12.5px;color:var(--muted);line-height:1.55;">Precision spoke tensioning, derailleur indexing, and custom frame-up builds.</p>
+            </div>
+            <div>
+              <h3 style="font-size:14px;font-weight:800;color:var(--accent-text);margin-bottom:6px;">02. Adjust And Install</h3>
+              <p style="font-size:12.5px;color:var(--muted);line-height:1.55;">Tubeless sealant conversion, dropper post routing, and rotor truing.</p>
+            </div>
+            <div>
+              <h3 style="font-size:14px;font-weight:800;color:var(--accent-text);margin-bottom:6px;">03. Personal Bike Fit</h3>
+              <p style="font-size:12.5px;color:var(--muted);line-height:1.55;">Laser knee-angle alignment and suspension sag setup for trail riders.</p>
+            </div>
+            <div>
+              <h3 style="font-size:14px;font-weight:800;color:var(--accent-text);margin-bottom:6px;">04. Free Delivery</h3>
+              <p style="font-size:12.5px;color:var(--muted);line-height:1.55;">Complimentary insured courier pickup and return on all full-suspension overhauls.</p>
+            </div>
+          </div>
+          <button type="button" class="${p}-btn-orange" data-seamless-trigger="BookRIDEZ Workshop Tune-Up">EXPLORE PRODUCTS</button>
+        </div>
+
+        <div>
+          <img src="assets/crimson-service-bike.webp" alt="Crimson Full-Suspension Carbon Trail Bike in Workshop" style="width:100%;border-radius:12px;display:block;">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:24px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12px;">
+    <span>RIDEZ — High-Modulus Carbon Mountain &amp; Road Bikes</span>
+    <span class="tabular-nums">Vanquish Comp Carbon • $1,195.00</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">RIDEZ PRO SHOP</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-outline" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Reserve Vanquish Comp Carbon</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Includes complimentary 03. Personal Bike Fit and 04. Free Delivery fully assembled to your door ($1,195.00).
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-orange" style="width:100%;">
+        Configure Build &amp; Checkout →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var frames = [
+        { label: '29" Carbon L', price: '$1195.00', scale: 'scale(1)' },
+        { label: '27.5" Mullet M', price: '$1145.00', scale: 'scale(0.97) rotate(-1deg)' },
+        { label: '29" Factory XL', price: '$1295.00', scale: 'scale(1.03) rotate(1deg)' }
+      ];
+      var fIdx = 0;
+      var switchBtn = document.getElementById('frameSpecSwitchBtn');
+      var sizeSpan = document.getElementById('activeFrameSize');
+      var priceSpan = document.getElementById('bikeHeroPrice');
+      var bikeImg = document.getElementById('vanquishHeroBike');
+      if (switchBtn) {
+        switchBtn.addEventListener('click', function () {
+          fIdx = (fIdx + 1) % frames.length;
+          if (sizeSpan) sizeSpan.textContent = frames[fIdx].label;
+          if (priceSpan) priceSpan.textContent = frames[fIdx].price;
+          if (bikeImg) bikeImg.style.transform = frames[fIdx].scale;
+        });
+      }
     })();
   </script>
   ${renderV2Runtime(p)}

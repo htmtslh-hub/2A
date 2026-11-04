@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-03",
+  "lastRunDate": "2026-11-04",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -49,7 +49,13 @@
     "local-f628ef5f4557",
     "local-1b2c93ed0a59",
     "local-c6e51538d538",
-    "local-2c0b60dbf2ce"
+    "local-2c0b60dbf2ce",
+    "local-f7ddafa48487",
+    "local-06db6293660d",
+    "local-3df0bcf73489",
+    "local-9a302d1d5803",
+    "local-889f9af56c00",
+    "local-d6e5604bd067"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -96,7 +102,13 @@
     "f628ef5f455748a02f1ec573b0bdbe18dd7e0732448cb26153b1010daff2a885",
     "1b2c93ed0a5915844475c24bf40e5b11fc23a398e1311d177956be2f37276704",
     "c6e51538d53840ead333026dcf7e11a6391d1108133dad706161b1a591ddcbbc",
-    "2c0b60dbf2ce8f54078e93b05a5303284e0530b235a88dc5fee30c182afbd31e"
+    "2c0b60dbf2ce8f54078e93b05a5303284e0530b235a88dc5fee30c182afbd31e",
+    "f7ddafa4848718a6147f619aaedbc4b7d0d9565d69b12e491db8f89fb1d09484",
+    "06db6293660d060fc9e0f17dccd69bc05cfda578fa90de817a92e2e287bd2f24",
+    "3df0bcf73489dd9511c7b4a46f167f4010c80446810891729be7640803832eb2",
+    "9a302d1d5803243bc3bcd8441334506b322975f41ef40de6d320be53f1b33c43",
+    "889f9af56c003c3d03efb3374f957615ffb80c57252dcc67e9de42e23b3a335c",
+    "d6e5604bd06700da55a4ff8811900dcb2fc60d77e5db7c59518da48b87667450"
   ],
   "processedSlugs": [
     "_design",
@@ -213,8 +225,10 @@
     "motora",
     "murmur",
     "music-app",
+    "network-hero",
     "neuralkinetics",
     "neuralyn",
+    "nexacore-results",
     "nexlayer",
     "nexora-automation",
     "nextsus-gamerlix",
@@ -222,16 +236,22 @@
     "nourish-bowl",
     "nova-glass",
     "novatrend",
+    "nugraha-jati",
     "nuvem-canvas",
     "oceanpulse",
+    "orbis-hello",
     "orbis-nft",
     "orbit-academy",
+    "organic-odyssey",
     "pinehaven",
+    "place-saver",
+    "portal",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
     "prisma-creative-studio",
     "prmpt",
+    "professional-graphic",
     "prosthetics-hero",
     "puro-amor",
     "rayhan-aditya",
@@ -249,6 +269,7 @@
     "shirtline",
     "shopluxe",
     "skyelite-private-jets",
+    "sleek-futuri",
     "solaris-gate",
     "solenne",
     "sonicore",
@@ -262,6 +283,7 @@
     "synapsex",
     "targo",
     "taskly",
+    "this-canvas",
     "tidal",
     "tools",
     "toonhub",
@@ -284,6 +306,7 @@
     "wander-far",
     "wanderful-hero",
     "watchroom",
+    "websi-atelier",
     "wellbeing-os",
     "wellness-companion",
     "yellow-beast"
@@ -428,14 +451,45 @@
         "metaverse-cyber-webinar": "premium",
         "looo-ai-magic": "premium"
       }
+    },
+    {
+      "date": "2026-11-04",
+      "built": [
+        "sleek-futuri",
+        "this-canvas",
+        "professional-graphic",
+        "nugraha-jati",
+        "websi-atelier"
+      ],
+      "catalogIds": [
+        "t222",
+        "t223",
+        "t224",
+        "t225",
+        "t226"
+      ],
+      "pinIds": [
+        "local-d6e5604bd067",
+        "local-06db6293660d",
+        "local-3df0bcf73489",
+        "local-9a302d1d5803",
+        "local-889f9af56c00"
+      ],
+      "tiers": {
+        "sleek-futuri": "free",
+        "this-canvas": "free",
+        "professional-graphic": "premium",
+        "nugraha-jati": "premium",
+        "websi-atelier": "premium"
+      }
     }
   ],
   "todayCreatedCount": 5,
   "todayBuilt": [
-    "helios-investments",
-    "rayhan-aditya",
-    "razer-mamba-pro",
-    "metaverse-cyber-webinar",
-    "looo-ai-magic"
+    "sleek-futuri",
+    "this-canvas",
+    "professional-graphic",
+    "nugraha-jati",
+    "websi-atelier"
   ]
 }

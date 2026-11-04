@@ -46,6 +46,196 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t229: {
+    slug: 'ai-workflow-agents',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "AI Workflow Agents",
+        desc: "Giao diện web AI Workflow Agents với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "AI Workflow Agents",
+        desc: "Bespoke AI Workflow Agents web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "AI Workflow Agents",
+        desc: "单文件自包含 AI Workflow Agents 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t228: {
+    slug: 'celestial-renewal',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Celestial Renewal",
+        desc: "Giao diện web Celestial Renewal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Celestial Renewal",
+        desc: "Bespoke Celestial Renewal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Celestial Renewal",
+        desc: "单文件自包含 Celestial Renewal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t227: {
+    slug: 'travel-journal',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Travel Journal",
+        desc: "Giao diện web Travel Journal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Travel Journal",
+        desc: "Bespoke Travel Journal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Travel Journal",
+        desc: "单文件自包含 Travel Journal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t226: {
+    slug: 'websi-atelier',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Ridez Carbon Bike Atelier",
+        desc: "Ridez Carbon Bike Atelier (carbon-orange-mtb-flagship-store) — Obsidian & racing-orange mountain bike flagship store featuring Norco Vanquish Comp Carbon ($1,195.00) 3D studio cutout, Singletrack/Trail/Road category triptych, 3-pillar workshop facilities, and 01–04 tune-up service bay.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Ridez Carbon Bike Atelier",
+        desc: "Ridez Carbon Bike Atelier (carbon-orange-mtb-flagship-store) — Obsidian & racing-orange mountain bike flagship store featuring Norco Vanquish Comp Carbon ($1,195.00) 3D studio cutout, Singletrack/Trail/Road category triptych, 3-pillar workshop facilities, and 01–04 tune-up service bay.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Ridez Carbon Bike Atelier",
+        desc: "Ridez Carbon Bike Atelier (carbon-orange-mtb-flagship-store) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t225: {
+    slug: 'nugraha-jati',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "StorySeeker Audio & Book Hub",
+        desc: "StorySeeker Audio & Book Hub (neobrutalist-storyseeker-book-hub) — Warm cream, mustard-gold & burnt-orange neo-brutalist digital library and audiobook player by Nugraha Jati featuring 6 classic illustrated editions (Gatsby, Catcher, Fahrenheit 451), live preview reader, and sticky 2x audio scrubber.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "StorySeeker Audio & Book Hub",
+        desc: "StorySeeker Audio & Book Hub (neobrutalist-storyseeker-book-hub) — Warm cream, mustard-gold & burnt-orange neo-brutalist digital library and audiobook player by Nugraha Jati featuring 6 classic illustrated editions (Gatsby, Catcher, Fahrenheit 451), live preview reader, and sticky 2x audio scrubber.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "StorySeeker Audio & Book Hub",
+        desc: "StorySeeker Audio & Book Hub (neobrutalist-storyseeker-book-hub) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t224: {
+    slug: 'professional-graphic',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Hawra Graphics Studio",
+        desc: "Hawra Graphics Studio (amber-halo-brand-identity-folio) — Obsidian-espresso & warm terracotta rim-lit brand identity portfolio for freelance graphic designer Hawra featuring studio armchair portrait, Available for Projects status badge, and filterable visual identity case studies.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Hawra Graphics Studio",
+        desc: "Hawra Graphics Studio (amber-halo-brand-identity-folio) — Obsidian-espresso & warm terracotta rim-lit brand identity portfolio for freelance graphic designer Hawra featuring studio armchair portrait, Available for Projects status badge, and filterable visual identity case studies.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Hawra Graphics Studio",
+        desc: "Hawra Graphics Studio (amber-halo-brand-identity-folio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t223: {
+    slug: 'this-canvas',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "JM Jacket Masters",
+        desc: "JM Jacket Masters (burnt-amber-3d-puffer-atelier) — Burnt-amber & espresso 3D winter outerwear showcase featuring glossy orange and matte obsidian quilted down puffer jacket cutouts, $149/$199 live pricing, 36/38/40 size selector, and instant colorway switcher.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "JM Jacket Masters",
+        desc: "JM Jacket Masters (burnt-amber-3d-puffer-atelier) — Burnt-amber & espresso 3D winter outerwear showcase featuring glossy orange and matte obsidian quilted down puffer jacket cutouts, $149/$199 live pricing, 36/38/40 size selector, and instant colorway switcher.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "JM Jacket Masters",
+        desc: "JM Jacket Masters (burnt-amber-3d-puffer-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t222: {
+    slug: 'sleek-futuri',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Joann Luminescent Town",
+        desc: "Joann Luminescent Town (luminescent-town-pink-ai-folio) — Charcoal-obsidian & neon-rose AI art showcase by Joann (@joooo.ann) featuring bubbly LUMINESCENT Town typography, 3D translucent pink glass tower out-of-bounds cutout, 5-swatch rose palette, and cyberpunk night kiosk gallery.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Joann Luminescent Town",
+        desc: "Joann Luminescent Town (luminescent-town-pink-ai-folio) — Charcoal-obsidian & neon-rose AI art showcase by Joann (@joooo.ann) featuring bubbly LUMINESCENT Town typography, 3D translucent pink glass tower out-of-bounds cutout, 5-swatch rose palette, and cyberpunk night kiosk gallery.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Joann Luminescent Town",
+        desc: "Joann Luminescent Town (luminescent-town-pink-ai-folio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t221: {
     slug: 'looo-ai-magic',
     cat: 'commerce',

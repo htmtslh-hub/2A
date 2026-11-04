@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t232: {
+    slug: 'cyberpunk-reveal',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Cyberpunk Reveal",
+        desc: "Giao diện web Cyberpunk Reveal với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Cyberpunk Reveal",
+        desc: "Bespoke Cyberpunk Reveal web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Cyberpunk Reveal",
+        desc: "单文件自包含 Cyberpunk Reveal 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t231: {
+    slug: 'ai-workflow-hero',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "AI Workflow Hero",
+        desc: "Giao diện web AI Workflow Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "AI Workflow Hero",
+        desc: "Bespoke AI Workflow Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "AI Workflow Hero",
+        desc: "单文件自包含 AI Workflow Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t230: {
+    slug: 'f1-racing-hub',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "F1 Racing Hub",
+        desc: "Giao diện web F1 Racing Hub với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Statistics App", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "F1 Racing Hub",
+        desc: "Bespoke F1 Racing Hub web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Statistics App", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "F1 Racing Hub",
+        desc: "单文件自包含 F1 Racing Hub 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t229: {
     slug: 'ai-workflow-agents',
     cat: 'commerce',

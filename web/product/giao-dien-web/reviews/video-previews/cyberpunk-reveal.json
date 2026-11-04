@@ -1,0 +1,44 @@
+{
+  "id": "t232",
+  "slug": "cyberpunk-reveal",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T13:39:11.365Z",
+  "demo": "/demos/cyberpunk-reveal/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "39d62000f52c",
+  "sha256": "39d62000f52cad1076605a7e1d03449b5086d5c811b7beec81bb379fba980218",
+  "demoHtmlSha256": "c96450c3de3ce62b5c1084f5ee99f43e0562ea482aef897127b876a8bf747350",
+  "demoSha256": "856d8f1feb2bebc6113c28952eb8947e57ae9f1ed87ac83e2a05e7079e953b64",
+  "bytes": 535426,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.472,
+      "action": "click",
+      "selector": "#scanPulseBtn"
+    },
+    {
+      "seconds": 4.862,
+      "action": "click",
+      "selector": "#scanPulseBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 620
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyberpunk-reveal-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyberpunk-reveal-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyberpunk-reveal-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyberpunk-reveal-return.jpg"
+  ]
+}

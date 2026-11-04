@@ -1,0 +1,44 @@
+{
+  "id": "t230",
+  "slug": "f1-racing-hub",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T13:41:23.839Z",
+  "demo": "/demos/f1-racing-hub/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9589ca2e9607",
+  "sha256": "9589ca2e96077d475a9219446215ba5f1304111d02f78164ccefff2172eeb8a7",
+  "demoHtmlSha256": "79dafb720032ae9e82ca0f24406ab3ddc4b2c2e423a1f5ff3614f855f8a0476d",
+  "demoSha256": "55c2648e051ece20d582a7dd3c8305986b9976e86a4507680340d8c2d374526d",
+  "bytes": 355080,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.461,
+      "action": "click",
+      "selector": "#recountStatsBtn"
+    },
+    {
+      "seconds": 4.842,
+      "action": "click",
+      "selector": "#recountStatsBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 590
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\f1-racing-hub-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\f1-racing-hub-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\f1-racing-hub-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\f1-racing-hub-return.jpg"
+  ]
+}

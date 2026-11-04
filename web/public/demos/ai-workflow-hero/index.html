@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LinkFlow™ — Close the Rift Linking Signals and Action</title>
+  <meta name="description" content="Shape scattered signals into meaningful outcomes via AI-driven workflows with LinkFlow and FluxEngine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef3ec;
+      --surface: #e3ece0;
+      --surface-elevated: #ffffff;
+      --fg: #1f2a1d;
+      --muted: #3d5039;
+      --border: rgba(31, 42, 29, 0.16);
+      --accent: #1f2a1d;
+      --accent-text: #274d33;
+      --accent-soft: #85ab8b;
+      --on-accent: #ffffff;
+      --font-display: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 28px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .aiw48-hero {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 24px clamp(20px, 4vw, 44px) 36px;
+    }
+    .aiw48-video-wrap {
+      position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    }
+    .aiw48-video-wrap video, .aiw48-video-wrap canvas {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    .aiw48-nav {
+      position: relative; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .aiw48-brand {
+      font-family: var(--font-display); font-size: clamp(18px, 2vw, 24px);
+      font-weight: 600; letter-spacing: -0.03em; color: #2d3a2a; text-decoration: none;
+    }
+    .aiw48-brand sup { font-size: 11px; font-weight: 500; margin-left: 2px; }
+
+    .aiw48-pill-nav {
+      display: flex; align-items: center; gap: 4px;
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 999px;
+      padding: 4px 4px 4px 20px;
+      box-shadow: 0 4px 20px rgba(31, 42, 29, 0.06);
+      list-style: none;
+    }
+    .aiw48-pill-nav a {
+      text-decoration: none; font-size: 14px; font-weight: 500;
+      color: #4b5b47; padding: 8px 12px; border-radius: 999px;
+    }
+    .aiw48-pill-nav a.is-active, .aiw48-pill-nav a:hover {
+      color: #1f2a1d; font-weight: 600;
+    }
+    .aiw48-btn-dark {
+      background: #1f2a1d; color: #ffffff; border: 0; border-radius: 999px;
+      padding: 10px 20px; font-size: 13.5px; font-weight: 500; cursor: pointer;
+      margin-left: 8px;
+    }
+    .aiw48-btn-dark:hover { background: #2a3827; }
+
+    .aiw48-auth-links {
+      display: flex; align-items: center; gap: 20px; color: #2d3a2a;
+    }
+    .aiw48-auth-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      color: #2d3a2a; text-decoration: none; font-size: 14px; font-weight: 500;
+      background: none; border: 0; cursor: pointer;
+    }
+
+    .aiw48-hero-copy {
+      position: relative; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      padding-top: clamp(36px, 6vh, 72px); margin-bottom: auto;
+    }
+    .aiw48-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.4vw, 5.25rem);
+      font-weight: 400; line-height: 0.95; letter-spacing: -0.035em;
+      color: #336443; max-width: 980px;
+    }
+    .aiw48-h1-accent { color: #85AB8B; }
+    .aiw48-subtitle {
+      margin-top: 26px; color: #4b5b47;
+      font-size: clamp(15px, 1.25vw, 18px); line-height: 1.6;
+      max-width: 440px;
+    }
+
+    .aiw48-hero-bottom {
+      position: relative; z-index: 10;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+      flex-wrap: wrap; margin-top: 48px;
+    }
+    .aiw48-flux-card {
+      max-width: 360px;
+      background: rgba(31, 42, 29, 0.42);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 22px; padding: 20px 22px; color: #ffffff;
+    }
+    .aiw48-flux-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 10px;
+    }
+    .aiw48-flux-desc {
+      font-size: 12.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 18px;
+    }
+    .aiw48-flux-actions { display: flex; align-items: center; gap: 16px; }
+    .aiw48-btn-white {
+      background: #ffffff; color: #1f2a1d; border: 0; border-radius: 999px;
+      padding: 11px 22px; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    }
+    .aiw48-btn-text {
+      background: none; border: 0; color: #ffffff;
+      font-size: 13.5px; font-weight: 500; cursor: pointer;
+    }
+
+    .aiw48-how-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(31, 42, 29, 0.48);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px; padding: 8px 16px 8px 10px;
+      color: #ffffff; font-size: 13.5px; cursor: pointer;
+    }
+    .aiw48-play-circle {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.24);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+
+    .aiw48-section {
+      max-width: 1220px; margin: 0 auto; padding: 80px clamp(20px, 4vw, 44px);
+    }
+    .aiw48-sim-box {
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      border-radius: 28px; padding: clamp(24px, 3.5vw, 42px);
+      box-shadow: 0 20px 50px rgba(31, 42, 29, 0.06);
+    }
+    .aiw48-signal-pills { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 28px; }
+    .aiw48-sig-btn {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--bg); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .aiw48-sig-btn.is-active {
+      background: var(--fg); color: var(--on-accent); border-color: var(--fg);
+    }
+    .aiw48-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .aiw48-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 24px;
+    }
+    .aiw48-footer {
+      border-top: 1px solid var(--border); padding: 36px clamp(20px, 4vw, 44px);
+      max-width: 1220px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      color: var(--muted); font-size: 13.5px;
+    }
+
+    .aiw48-modal {
+      position: fixed; inset: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(31, 42, 29, 0.55); padding: 20px;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s var(--ease-out);
+    }
+    .aiw48-modal.is-open { opacity: 1; pointer-events: auto; }
+    .aiw48-modal-box {
+      width: 100%; max-width: 440px; background: #ffffff;
+      border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .aiw48-grid-3 { grid-template-columns: 1fr; }
+      .aiw48-pill-nav { display: none; }
+    }
+    @media (max-width: 600px) {
+      .aiw48-auth-links .aiw48-hide-sm { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="aiw48-hero" aria-label="LinkFlow AI Workflow Hero">
+      <div class="aiw48-video-wrap" aria-hidden="true">
+        <video id="boomerangVideo" autoplay muted loop playsinline crossorigin="anonymous" poster="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260721_114043_a70b6aa4-73d7-4b38-9595-baa6a5bad2d3.png&w=1280&q=85">
+          <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_131941_d136af49-e243-493a-be14-6ff3f24e09e6.mp4" type="video/mp4">
+        </video>
+        <canvas id="boomerangCanvas" style="display:none;"></canvas>
+      </div>
+
+      <header class="aiw48-nav">
+        <a href="#main-content" class="aiw48-brand">LinkFlow<sup>TM</sup></a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="aiw48-pill-nav">
+            <li><a href="#mission" class="is-active">Purpose</a></li>
+            <li><a href="#how">The Process</a></li>
+            <li><a href="#pricing">Tariffs</a></li>
+            <li>
+              <button type="button" id="exploreMagneticBtn" class="aiw48-btn-dark">Try it Live</button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="aiw48-auth-links">
+          <button type="button" class="aiw48-auth-link aiw48-hide-sm" data-seamless-trigger="LinkFlow Workspace Sign Up">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+            <span>Sign Me Up!</span>
+          </button>
+          <button type="button" class="aiw48-auth-link aiw48-hide-sm" data-seamless-trigger="Enter LinkFlow Console">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>
+            </svg>
+            <span>Enter</span>
+          </button>
+          <button type="button" id="motionToggleBtn" aria-pressed="false" class="aiw48-auth-link" style="padding:7px 14px;border-radius:999px;background:rgba(255,255,255,0.75);border:1px solid var(--border);font-size:12px;font-weight:600;">
+            Motion: ON
+          </button>
+        </div>
+      </header>
+
+      <div class="aiw48-hero-copy">
+        <h1 class="aiw48-h1">
+          Close the rift
+          <span class="aiw48-h1-accent">linking<br>signals and action</span>
+        </h1>
+        <p class="aiw48-subtitle">
+          Shape scattered signals into meaningful outcomes via AI-driven workflows.
+        </p>
+      </div>
+
+      <div class="aiw48-hero-bottom">
+        <div class="aiw48-flux-card">
+          <div class="aiw48-flux-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/>
+            </svg>
+            <span>FluxEngine<sup style="font-size:10px;">TM</sup></span>
+          </div>
+          <p class="aiw48-flux-desc">
+            LinkFlow smoothly unites your company systems, streamlining data paths between services without having to write custom scripts.
+          </p>
+          <div class="aiw48-flux-actions">
+            <button type="button" class="aiw48-btn-white" data-seamless-trigger="Launch FluxEngine Live Sandbox">Try it Live</button>
+            <button type="button" class="aiw48-btn-text" data-next-preview="true" id="cycleSignalBtn">Know More.</button>
+          </div>
+        </div>
+
+        <button type="button" class="aiw48-how-pill" data-seamless-trigger="How We Build LinkFlow (1:35 Architecture Film)">
+          <span class="aiw48-play-circle" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+              <polygon points="6 4 20 12 6 20 6 4"/>
+            </svg>
+          </span>
+          <span style="font-weight:500;">How we build?</span>
+          <span class="tabular-nums" style="opacity:0.72;">1:35</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="mission" class="aiw48-section" aria-label="FluxEngine Signal-to-Action Pipeline Simulator">
+      <div class="aiw48-sim-box">
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.12em;text-transform:uppercase;">PURPOSE &amp; THE PROCESS • FLUXENGINE™</div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.6rem);font-weight:600;letter-spacing:-0.03em;margin-top:8px;">
+          Interactive Signal-to-Action Routing Bench
+        </h2>
+
+        <div class="aiw48-signal-pills" role="tablist" aria-label="Signal Sources">
+          <button type="button" class="aiw48-sig-btn is-active" data-sig-title="CRM Lead Intent Spike" data-sig-route="HubSpot Webhook → FluxEngine Classifier → Slack Deal Desk + Automated Outbound" data-sig-lat="42 ms" data-sig-saved="18.5 hrs/wk">01 • CRM Intent Signal</button>
+          <button type="button" class="aiw48-sig-btn" data-sig-title="Billing Anomaly &amp; Churn Risk" data-sig-route="Stripe Metering → FluxEngine Risk Scorer → CS Playbook + Account Credit Trigger" data-sig-lat="38 ms" data-sig-saved="24.0 hrs/wk">02 • Stripe Telemetry</button>
+          <button type="button" class="aiw48-sig-btn" data-sig-title="Production Incident Triage" data-sig-route="Sentry Alert → FluxEngine Root-Cause Graph → Linear Issue + On-Call Patch Draft" data-sig-lat="51 ms" data-sig-saved="31.2 hrs/wk">03 • Incident Signal</button>
+        </div>
+
+        <div id="how" class="aiw48-grid-3">
+          <article class="aiw48-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Active Signal Stream</div>
+            <h3 id="sigTitleOut" style="font-size:20px;font-weight:700;margin-top:8px;">CRM Lead Intent Spike</h3>
+            <p id="sigRouteOut" style="font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:8px;">
+              HubSpot Webhook → FluxEngine Classifier → Slack Deal Desk + Automated Outbound
+            </p>
+          </article>
+          <article class="aiw48-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Dispatch Latency</div>
+            <div id="sigLatOut" class="tabular-nums" style="font-size:32px;font-weight:700;color:var(--accent-text);margin-top:8px;">42 ms</div>
+            <p style="font-size:13px;color:var(--muted);margin-top:6px;">Zero custom glue scripts required</p>
+          </article>
+          <article id="pricing" class="aiw48-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Engineering Time Saved</div>
+            <div id="sigSavedOut" class="tabular-nums" style="font-size:32px;font-weight:700;margin-top:8px;">18.5 hrs/wk</div>
+            <p style="font-size:13px;color:var(--accent-text);margin-top:6px;">Tariffs: Starter $49 • Growth $149 • Enterprise</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="aiw48-footer">
+    <span>LinkFlow™ &amp; FluxEngine™ — AI-Driven Workflow Orchestration</span>
+    <span class="tabular-nums">Purpose • The Process • Tariffs</span>
+  </footer>
+
+  <div class="aiw48-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="aiw48-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:600;">LINKFLOW™ WORKSPACE</span>
+        <button type="button" id="closeSeamlessBtn" style="background:var(--bg);border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:10px;">Try FluxEngine™ Live</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Unite your company systems and streamline data paths between services without writing custom scripts.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="aiw48-btn-dark" style="width:100%;margin:0;padding:13px;">Create Free LinkFlow Account →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btns = Array.prototype.slice.call(document.querySelectorAll('[data-sig-title]'));
+      var titleOut = document.getElementById('sigTitleOut');
+      var routeOut = document.getElementById('sigRouteOut');
+      var latOut = document.getElementById('sigLatOut');
+      var savedOut = document.getElementById('sigSavedOut');
+      var idx = 0;
+
+      function activateSig(btn) {
+        btns.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        if (titleOut) titleOut.textContent = btn.getAttribute('data-sig-title') || '';
+        if (routeOut) routeOut.textContent = btn.getAttribute('data-sig-route') || '';
+        if (latOut) latOut.textContent = btn.getAttribute('data-sig-lat') || '';
+        if (savedOut) savedOut.textContent = btn.getAttribute('data-sig-saved') || '';
+      }
+      btns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          idx = i;
+          activateSig(btn);
+        });
+      });
+      var cycleBtn = document.getElementById('cycleSignalBtn');
+      if (cycleBtn && btns.length) {
+        cycleBtn.addEventListener('click', function () {
+          idx = (idx + 1) % btns.length;
+          activateSig(btns[idx]);
+        });
+      }
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.aiw48-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

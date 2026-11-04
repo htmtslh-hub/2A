@@ -1,6 +1,6 @@
 {
   "lastRunDate": "2026-11-04",
-  "todayCopiedCount": 3,
+  "todayCopiedCount": 6,
   "processedSlugs": [
     "_design",
     "adoratorio-summer",
@@ -10,6 +10,7 @@
     "aethera",
     "aetheris-voyage",
     "ai-workflow-agents",
+    "ai-workflow-hero",
     "airmax-plus",
     "ais-folio",
     "alex-carter-ui",
@@ -42,6 +43,7 @@
     "crimson-folio",
     "cross-border",
     "cyber-ronin",
+    "cyberpunk-reveal",
     "datacore-booking",
     "design",
     "designer-portfolio",
@@ -58,6 +60,7 @@
     "ecommerce-omorfia",
     "email-marketing",
     "ember-arcade",
+    "f1-racing-hub",
     "fennec",
     "film-studio",
     "firepower",
@@ -130,6 +133,7 @@
     "nourish-bowl",
     "nova-glass",
     "novatrend",
+    "nugraha-jati",
     "nuvem-canvas",
     "oceanpulse",
     "orbis-hello",
@@ -144,6 +148,7 @@
     "price-calculator",
     "prisma-creative-studio",
     "prmpt",
+    "professional-graphic",
     "prosthetics-hero",
     "puro-amor",
     "rayhan-aditya",
@@ -161,6 +166,7 @@
     "shirtline",
     "shopluxe",
     "skyelite-private-jets",
+    "sleek-futuri",
     "solaris-gate",
     "solenne",
     "sonicore",
@@ -174,6 +180,7 @@
     "synapsex",
     "targo",
     "taskly",
+    "this-canvas",
     "tidal",
     "tools",
     "toonhub",
@@ -197,6 +204,7 @@
     "wander-far",
     "wanderful-hero",
     "watchroom",
+    "websi-atelier",
     "wellbeing-os",
     "wellness-companion",
     "yellow-beast"
@@ -304,7 +312,10 @@
     "place-saver",
     "travel-journal",
     "celestial-renewal",
-    "ai-workflow-agents"
+    "ai-workflow-agents",
+    "f1-racing-hub",
+    "ai-workflow",
+    "cyberpunk-reveal"
   ],
   "history": [
     {
@@ -566,10 +577,28 @@
         "celestial-renewal": "premium",
         "ai-workflow-agents": "premium"
       }
+    },
+    {
+      "date": "2026-11-04",
+      "built": [
+        "f1-racing-hub",
+        "ai-workflow-hero",
+        "cyberpunk-reveal"
+      ],
+      "catalogIds": [
+        "t230",
+        "t231",
+        "t232"
+      ],
+      "tiers": {
+        "f1-racing-hub": "free",
+        "ai-workflow-hero": "premium",
+        "cyberpunk-reveal": "premium"
+      }
     }
   ],
-  "todayFreeCount": 1,
-  "todayPremiumCount": 2,
+  "todayFreeCount": 2,
+  "todayPremiumCount": 4,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -621,12 +650,18 @@
     "c3346cc6b31363ea49f423313a6829d0f1a0ffb5ea96f2ba0154122138cdbd03",
     "01075eaea7b5b8bdc28ba157b588d4f60797cbd0c00e55fe0ce0b32039b10f88",
     "6ee7a251064e1c8bbd3dd8436a81fe4c358c545c31247a2dce7146b2567efebb",
-    "05ca5c8d3d49c544bfdf12a301863b23e800bc1780031b01daf8c9bf299c29e3"
+    "05ca5c8d3d49c544bfdf12a301863b23e800bc1780031b01daf8c9bf299c29e3",
+    "64a0f460aababfc6d45fa727fd82f69c16febbfaa9e84d449f85aac0966c5460",
+    "e42fd7caf02036199ffc1ba10228e93524afa28a617321229b3a00aaffee51c1",
+    "2ef94ff0248588d46eb2f21e03a26f446a66fa831570e3a7f889c9b6b1a19922"
   ],
-  "todayCreatedCount": 3,
+  "todayCreatedCount": 6,
   "todayBuilt": [
     "travel-journal",
     "celestial-renewal",
-    "ai-workflow-agents"
+    "ai-workflow-agents",
+    "f1-racing-hub",
+    "ai-workflow-hero",
+    "cyberpunk-reveal"
   ]
 }

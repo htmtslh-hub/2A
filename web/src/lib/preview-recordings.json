@@ -2462,5 +2462,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "f1-racing-hub": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "9589ca2e9607",
+    "sha256": "9589ca2e96077d475a9219446215ba5f1304111d02f78164ccefff2172eeb8a7",
+    "demoHtmlSha256": "79dafb720032ae9e82ca0f24406ab3ddc4b2c2e423a1f5ff3614f855f8a0476d",
+    "demoSha256": "55c2648e051ece20d582a7dd3c8305986b9976e86a4507680340d8c2d374526d",
+    "bytes": 355080,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "ai-workflow-hero": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "2ca3d032045a",
+    "sha256": "2ca3d032045a01660f3361b1504b16930c3b3b9a0a656e3c75fdb6610e7a3fb0",
+    "demoHtmlSha256": "7373cefbb498554ea33a97e072e4f2416199935eb5b5a75a99fe488e31c91bee",
+    "demoSha256": "5da53ad169077b5835e1d07433973aa1f8f3ebe789dcef9249fa7e868b44e5bb",
+    "bytes": 1280239,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "cyberpunk-reveal": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "39d62000f52c",
+    "sha256": "39d62000f52cad1076605a7e1d03449b5086d5c811b7beec81bb379fba980218",
+    "demoHtmlSha256": "c96450c3de3ce62b5c1084f5ee99f43e0562ea482aef897127b876a8bf747350",
+    "demoSha256": "856d8f1feb2bebc6113c28952eb8947e57ae9f1ed87ac83e2a05e7079e953b64",
+    "bytes": 535426,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

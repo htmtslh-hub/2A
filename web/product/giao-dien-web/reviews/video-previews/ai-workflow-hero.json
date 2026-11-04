@@ -1,0 +1,44 @@
+{
+  "id": "t231",
+  "slug": "ai-workflow-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T13:38:40.544Z",
+  "demo": "/demos/ai-workflow-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2ca3d032045a",
+  "sha256": "2ca3d032045a01660f3361b1504b16930c3b3b9a0a656e3c75fdb6610e7a3fb0",
+  "demoHtmlSha256": "7373cefbb498554ea33a97e072e4f2416199935eb5b5a75a99fe488e31c91bee",
+  "demoSha256": "5da53ad169077b5835e1d07433973aa1f8f3ebe789dcef9249fa7e868b44e5bb",
+  "bytes": 1280239,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.464,
+      "action": "click",
+      "selector": "#cycleSignalBtn"
+    },
+    {
+      "seconds": 4.842,
+      "action": "click",
+      "selector": "#cycleSignalBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 646
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-hero-return.jpg"
+  ]
+}

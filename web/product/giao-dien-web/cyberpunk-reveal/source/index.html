@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cyberpunk Reveal — Gateway to Your Augmented Self</title>
+  <meta name="description" content="A future where carbon fiber, titanium, and human instinct align. Interactive dual-layer biotech augmentation reveal and concentric telemetry arcs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0709;
+      --surface: #170d11;
+      --surface-elevated: #231319;
+      --fg: #ffffff;
+      --muted: #e2c7ce;
+      --border: rgba(255, 255, 255, 0.18);
+      --accent: #ffffff;
+      --accent-text: #ff8a9e;
+      --accent-crimson: #e11d48;
+      --on-accent: #111827;
+      --font-display: 'JetBrains Mono', monospace;
+      --font-sans: 'JetBrains Mono', monospace;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --reveal-x: 54%;
+      --reveal-y: 44%;
+      --reveal-r: 250px;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box; margin: 0; padding: 0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      letter-spacing: -0.02em;
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 12px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.96) translateY(1px);
+    }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.12); }
+      to { transform: scale(1); }
+    }
+    @keyframes heroRise {
+      from { opacity: 0; transform: translateY(26px); filter: blur(8px); }
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    @keyframes navDrop {
+      from { opacity: 0; transform: translateY(-18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseRing {
+      0%, 100% { transform: scale(1); opacity: 0.38; }
+      50% { transform: scale(1.42); opacity: 0.08; }
+    }
+
+    .cyb75-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px 20px;
+      animation: navDrop 0.8s var(--ease-out) 0.1s both;
+    }
+    .cyb75-nav-pill {
+      background: rgba(0, 0, 0, 0.62);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 8px 8px 8px 14px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .cyb75-nav-links {
+      display: flex; align-items: center; gap: 4px; list-style: none;
+    }
+    .cyb75-nav-links a {
+      color: #d1d5db; text-decoration: none; font-size: 13px; font-weight: 500;
+      padding: 6px 12px; border-radius: 999px;
+    }
+    .cyb75-nav-links a.is-active, .cyb75-nav-links a:hover {
+      color: #ffffff; background: rgba(255, 255, 255, 0.1);
+    }
+    .cyb75-btn-connect {
+      background: #ffffff; color: #111827; border: 0; border-radius: 999px;
+      padding: 7px 18px; font-size: 13px; font-weight: 600; cursor: pointer; margin-left: 4px;
+    }
+    .cyb75-btn-motion {
+      background: rgba(255, 255, 255, 0.1); color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px;
+      padding: 6px 12px; font-size: 11.5px; font-weight: 600; cursor: pointer; margin-left: 4px;
+    }
+
+    .cyb75-hero {
+      position: relative; width: 100%; height: 100dvh; min-height: 680px; overflow: hidden;
+      background: #1a080c;
+    }
+    .cyb75-grid-svg {
+      position: absolute; inset: 0; width: 100%; height: 100%; z-index: 5;
+      opacity: 0.12; pointer-events: none;
+    }
+    .cyb75-base-img {
+      position: absolute; inset: 0; z-index: 10;
+      background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_125121_afb71ce9-9c64-4c54-90b5-c89c0764c052.png&w=1920&q=85');
+      background-size: cover; background-position: center;
+      animation: kenBurns 2.4s var(--ease-out) forwards;
+    }
+    .cyb75-reveal-img {
+      position: absolute; inset: 0; z-index: 25;
+      background-image: url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_135737_0da59642-725b-451a-997b-b0283d95a42a.png&w=1280&q=85');
+      background-size: cover; background-position: center;
+      mask-image: radial-gradient(circle var(--reveal-r) at var(--reveal-x) var(--reveal-y), rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle var(--reveal-r) at var(--reveal-x) var(--reveal-y), rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0) 100%);
+    }
+    .cyb75-scrim {
+      position: absolute; inset: 0; z-index: 30;
+      background: linear-gradient(90deg, rgba(12, 7, 9, 0.72) 0%, rgba(12, 7, 9, 0.18) 52%, rgba(12, 7, 9, 0.64) 100%);
+      pointer-events: none;
+    }
+
+    .cyb75-arcs-wrap {
+      position: absolute; top: 0; bottom: 0; right: 0; z-index: 45;
+      pointer-events: none; display: flex; align-items: center;
+    }
+    .cyb75-arcs-svg {
+      height: 100%; width: auto; max-height: 760px;
+    }
+    .cyb75-arc-ring {
+      transform-box: fill-box; transform-origin: center;
+      animation: pulseRing 2.8s ease-in-out infinite;
+    }
+
+    .cyb75-hero-copy {
+      position: absolute; left: clamp(20px, 4vw, 48px); bottom: clamp(44px, 8vh, 88px);
+      z-index: 50; max-width: 470px;
+    }
+    .cyb75-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.92); margin-bottom: 14px;
+      animation: heroRise 0.95s var(--ease-out) 0.15s both;
+    }
+    .cyb75-h1 {
+      font-size: clamp(2.3rem, 4.4vw, 3.75rem);
+      font-weight: 700; line-height: 1.05; letter-spacing: -0.07em;
+      color: #ffffff; margin-bottom: 18px;
+      animation: heroRise 0.95s var(--ease-out) 0.3s both;
+    }
+    .cyb75-desc {
+      font-size: clamp(13.5px, 1.05vw, 15.5px); line-height: 1.65;
+      color: rgba(255, 255, 255, 0.9); margin-bottom: 26px;
+      animation: heroRise 0.95s var(--ease-out) 0.5s both;
+    }
+    .cyb75-cta-row {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      animation: heroRise 0.95s var(--ease-out) 0.7s both;
+    }
+    .cyb75-btn-reserve {
+      position: relative; overflow: hidden;
+      background: #ffffff; color: #111827; border: 0; border-radius: 999px;
+      padding: 13px 30px; font-size: 13.5px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+    .cyb75-btn-scan {
+      background: rgba(0, 0, 0, 0.6); color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 999px;
+      padding: 12px 20px; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+
+    .cyb75-section {
+      max-width: 1220px; margin: 0 auto; padding: 76px clamp(20px, 4vw, 48px);
+    }
+    .cyb75-workbench {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 26px; padding: clamp(24px, 3.5vw, 40px);
+    }
+    .cyb75-module-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 26px; }
+    .cyb75-mod-btn {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--surface-elevated); color: var(--fg);
+      font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+    .cyb75-mod-btn.is-active {
+      background: #ffffff; color: #111827; border-color: #ffffff;
+    }
+    .cyb75-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .cyb75-card {
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px;
+    }
+    .cyb75-footer {
+      border-top: 1px solid var(--border); padding: 34px clamp(20px, 4vw, 48px);
+      max-width: 1220px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+      color: var(--muted); font-size: 12.5px;
+    }
+
+    .cyb75-modal {
+      position: fixed; inset: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(12, 7, 9, 0.78); padding: 20px;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s var(--ease-out);
+    }
+    .cyb75-modal.is-open { opacity: 1; pointer-events: auto; }
+    .cyb75-modal-box {
+      width: 100%; max-width: 440px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 22px; padding: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .cyb75-grid-3 { grid-template-columns: 1fr; }
+      .cyb75-nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .cyb75-arcs-wrap { opacity: 0.35; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="cyb75-header">
+    <nav class="cyb75-nav-pill" aria-label="Primary Biotech Navigation">
+      <a href="#main-content" aria-label="Cyberpunk Reveal Home" style="display:inline-flex;align-items:center;padding-right:8px;">
+        <svg width="22" height="22" viewBox="0 0 256 256" fill="#ffffff" aria-hidden="true">
+          <path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z"/>
+        </svg>
+      </a>
+      <ul class="cyb75-nav-links">
+        <li><a href="#module" class="is-active">Module</a></li>
+        <li><a href="#records">Case Records</a></li>
+        <li><a href="#biotech">Biotech</a></li>
+        <li><a href="#tiers">Tiers</a></li>
+        <li><a href="#module">Live Demo</a></li>
+      </ul>
+      <button type="button" class="cyb75-btn-connect" data-seamless-trigger="Connect Neural Interface">Connect</button>
+      <button type="button" id="motionToggleBtn" aria-pressed="false" class="cyb75-btn-motion">Motion: ON</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="cyb75-hero" id="heroStage" aria-label="Augmented Self Cyberpunk Reveal Hero">
+      <svg class="cyb75-grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="cyberGridPattern" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#64748b" stroke-width="0.6"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="900" fill="url(#cyberGridPattern)"/>
+      </svg>
+
+      <div class="cyb75-base-img" role="img" aria-label="Base crimson cyberpunk subject portrait"></div>
+      <div class="cyb75-reveal-img" id="revealLayer" role="img" aria-label="Augmented titanium endoskeleton reveal layer"></div>
+      <div class="cyb75-scrim" aria-hidden="true"></div>
+
+      <!-- Concentric Fading Circular Arcs with Stats -->
+      <div class="cyb75-arcs-wrap" aria-hidden="true">
+        <svg class="cyb75-arcs-svg" viewBox="0 0 380 700" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="arcGrad1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+              <stop offset="25%" stop-color="#ffffff" stop-opacity="0.55"/>
+              <stop offset="70%" stop-color="#ffffff" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Arc 1: r=330 -->
+          <path d="M 119 62 A 330 330 0 0 1 207 391" fill="none" stroke="url(#arcGrad1)" stroke-width="1.2"/>
+          <circle cx="119" cy="62" r="3.5" fill="#ffffff"/>
+          <circle class="cyb75-arc-ring" cx="119" cy="62" r="7.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+          <text x="136" y="66" fill="#ffffff" font-size="30" font-weight="700" class="tabular-nums">10<tspan dy="-10" font-size="18">+</tspan></text>
+          <text x="138" y="84" fill="rgba(255,255,255,0.82)" font-size="8.5" font-weight="600" letter-spacing="2">YEARS REAL</text>
+
+          <!-- Arc 2: r=395 -->
+          <path d="M 111 10 A 395 395 0 0 1 285 314" fill="none" stroke="url(#arcGrad1)" stroke-width="1.2"/>
+          <circle cx="284" cy="314" r="3.5" fill="#ffffff"/>
+          <circle class="cyb75-arc-ring" cx="284" cy="314" r="7.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+          <text x="300" y="318" fill="#ffffff" font-size="30" font-weight="700" class="tabular-nums">40<tspan dy="-10" font-size="18">+</tspan></text>
+          <text x="302" y="336" fill="rgba(255,255,255,0.82)" font-size="8.5" font-weight="600" letter-spacing="2">USE FORMS</text>
+
+          <!-- Arc 3: r=460 -->
+          <path d="M 236 189 A 460 460 0 0 1 228 612" fill="none" stroke="url(#arcGrad1)" stroke-width="1.2"/>
+          <circle cx="221" cy="620" r="3.5" fill="#ffffff"/>
+          <circle class="cyb75-arc-ring" cx="221" cy="620" r="7.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+          <text x="238" y="624" fill="#ffffff" font-size="30" font-weight="700" class="tabular-nums">95<tspan dy="-10" font-size="18">%</tspan></text>
+          <text x="240" y="642" fill="rgba(255,255,255,0.82)" font-size="8.5" font-weight="600" letter-spacing="2">REPEAT MEMBERS</text>
+        </svg>
+      </div>
+
+      <div class="cyb75-hero-copy">
+        <div class="cyb75-eyebrow">Gateway to your <em>augmented self</em></div>
+        <h1 class="cyb75-h1">
+          A window<br>of coming<br>enhancements
+        </h1>
+        <p class="cyb75-desc">
+          A future where carbon fiber, titanium, and human instinct align. Not machine. Not human. Something wonderfully poised between.
+        </p>
+        <div class="cyb75-cta-row">
+          <button type="button" id="exploreMagneticBtn" class="cyb75-btn-reserve">Reserve Now</button>
+          <button type="button" data-next-preview="true" id="scanPulseBtn" class="cyb75-btn-scan">
+            Scan Layer: <span id="scanLayerName">Optical X-Ray</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="module" class="cyb75-section" aria-label="Biotech Augmentation Calibration Workbench">
+      <div class="cyb75-workbench">
+        <div style="font-size:11.5px;color:var(--accent-text);letter-spacing:0.14em;text-transform:uppercase;">BIOTECH &amp; CASE RECORDS • AUGMENTATION SPEC</div>
+        <h2 style="font-size:clamp(1.6rem,2.8vw,2.35rem);font-weight:700;letter-spacing:-0.05em;margin-top:8px;">
+          Interactive Sub-Dermal Reveal &amp; Module Selector
+        </h2>
+
+        <div class="cyb75-module-tabs" role="tablist" aria-label="Augmentation Modules">
+          <button type="button" class="cyb75-mod-btn is-active" data-mod-name="Optical X-Ray" data-mod-x="54%" data-mod-y="38%" data-mod-r="260px" data-mod-spec="Carbon-Titanium Cranial Weave • 0.14 ms Synaptic Bridge">Module 01 • Cranial Weave</button>
+          <button type="button" class="cyb75-mod-btn" data-mod-name="Ocular Telemetry" data-mod-x="48%" data-mod-y="30%" data-mod-r="310px" data-mod-spec="Multi-Spectrum Retinal HUD • 120 Hz Low-Light Array">Module 02 • Ocular HUD</button>
+          <button type="button" class="cyb75-mod-btn" data-mod-name="Full Exoskeleton" data-mod-x="50%" data-mod-y="50%" data-mod-r="480px" data-mod-spec="Sub-Dermal Myomer Mesh • 95% Repeat Member Biocompatibility">Module 03 • Full Reveal</button>
+        </div>
+
+        <div id="records" class="cyb75-grid-3">
+          <article class="cyb75-card" id="biotech">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">ACTIVE MODULE</div>
+            <h3 id="modTitleOut" style="font-size:19px;font-weight:700;margin-top:8px;">Optical X-Ray</h3>
+            <p id="modSpecOut" style="font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;">
+              Carbon-Titanium Cranial Weave • 0.14 ms Synaptic Bridge
+            </p>
+          </article>
+          <article class="cyb75-card">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">APERTURE RADIUS</div>
+            <div id="modRadiusOut" class="tabular-nums" style="font-size:28px;font-weight:700;color:var(--accent-text);margin-top:8px;">260px</div>
+            <p style="font-size:12.5px;color:var(--muted);margin-top:6px;">10+ Years Real • 40+ Use Forms</p>
+          </article>
+          <article class="cyb75-card" id="tiers">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">BIOCOMPATIBILITY TIER</div>
+            <div class="tabular-nums" style="font-size:28px;font-weight:700;margin-top:8px;">95%</div>
+            <p style="font-size:12.5px;color:var(--accent-text);margin-top:6px;">Repeat Members • Grade-V Titanium</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cyb75-footer">
+    <span>Cyberpunk Reveal — Carbon Fiber, Titanium &amp; Human Instinct</span>
+    <span class="tabular-nums">10+ Years Real • 40+ Use Forms • 95% Repeat Members</span>
+  </footer>
+
+  <div class="cyb75-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="cyb75-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-size:11.5px;color:var(--accent-text);font-weight:600;">AUGMENTATION RESERVATION</span>
+        <button type="button" id="closeSeamlessBtn" class="cyb75-btn-motion">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:700;margin-bottom:10px;">Reserve Your Enhancement Slot</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Schedule a biometric scan for our next-generation carbon fiber and titanium neural modules.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="cyb75-btn-connect" style="width:100%;margin:0;padding:13px;">Confirm Biometric Booking →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var modBtns = Array.prototype.slice.call(document.querySelectorAll('[data-mod-name]'));
+      var scanName = document.getElementById('scanLayerName');
+      var modTitle = document.getElementById('modTitleOut');
+      var modSpec = document.getElementById('modSpecOut');
+      var modRad = document.getElementById('modRadiusOut');
+      var idx = 0;
+
+      function applyMod(btn) {
+        modBtns.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var name = btn.getAttribute('data-mod-name') || 'Optical X-Ray';
+        var rx = btn.getAttribute('data-mod-x') || '54%';
+        var ry = btn.getAttribute('data-mod-y') || '38%';
+        var rr = btn.getAttribute('data-mod-r') || '260px';
+        var spec = btn.getAttribute('data-mod-spec') || '';
+        root.style.setProperty('--reveal-x', rx);
+        root.style.setProperty('--reveal-y', ry);
+        root.style.setProperty('--reveal-r', rr);
+        if (scanName) scanName.textContent = name;
+        if (modTitle) modTitle.textContent = name;
+        if (modSpec) modSpec.textContent = spec;
+        if (modRad) modRad.textContent = rr;
+      }
+
+      modBtns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          idx = i;
+          applyMod(btn);
+        });
+      });
+
+      var scanBtn = document.getElementById('scanPulseBtn');
+      if (scanBtn && modBtns.length) {
+        scanBtn.addEventListener('click', function () {
+          idx = (idx + 1) % modBtns.length;
+          applyMod(modBtns[idx]);
+        });
+      }
+
+      // Autonomous gentle spotlight scan during hero entry (finite 8s loop)
+      var start = performance.now();
+      function autoScan(now) {
+        var elapsed = (now - start) / 1000;
+        if (elapsed > 8) return;
+        if (document.documentElement.getAttribute('data-motion') !== 'paused') {
+          var x = 50 + Math.sin(elapsed * 1.4) * 14;
+          var y = 42 + Math.cos(elapsed * 1.1) * 10;
+          root.style.setProperty('--reveal-x', x.toFixed(1) + '%');
+          root.style.setProperty('--reveal-y', y.toFixed(1) + '%');
+        }
+        requestAnimationFrame(autoScan);
+      }
+      requestAnimationFrame(autoScan);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.cyb75-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

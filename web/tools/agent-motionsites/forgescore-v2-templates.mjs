@@ -8437,5 +8437,1613 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </html>`;
   }
 
+  // ============================================================================
+  // 26. F1 RACING HUB (f1-racing-hub — Free Tier)
+  // Lewis Hamilton / Silverstone F1 Hero + Scuderia Ferrari SF-26 Triple-Phone Hub
+  // ============================================================================
+  if (slug === 'f1-racing-hub') {
+    const pageBg = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260709_152331_bd312d1a-1f20-46b9-9b68-12bcdcf6d53e.png&w=1280&q=85';
+    const f1Logo = 'https://framerusercontent.com/images/NZPITJ6zDBvxVT7rc1NH2sOU.png';
+    const profileIcon = 'https://framerusercontent.com/images/JIl4japgQlMAQRvh1gDHszRvkUY.png?width=92&height=92';
+    const ukFlag = 'https://framerusercontent.com/images/pqUTggaeyOivtzDImRzkBRdww.png';
+    const hamiltonPhoto = 'https://framerusercontent.com/images/m5IyHuJeOQ5P0GOvWx1xv0IR9Y.png';
+    const driverStrip = 'https://framerusercontent.com/images/dAAdqktZVxBDjPKk97YCjZjsE.png';
+    const circuitImg = 'https://framerusercontent.com/images/raKAG2bJP9xeqi118VMniPLvbAA.png';
+    const medalIcon = 'https://framerusercontent.com/images/pIXUcwyAF0xzCIaKjtNLahHpasQ.png';
+    const ferrariIcon = 'https://framerusercontent.com/images/sUDhzMuxKIOvqjSH5U1fn0QSXqI.png';
+    const chassisIcon = 'https://framerusercontent.com/images/zIA1tYDOAdZo3k6IXX9gBC5FGbY.png';
+    const ferrariCar = 'https://framerusercontent.com/images/MzKCSYB4uVt9psQq4jRwQNRDjc.png';
+    const leclercStats = 'https://framerusercontent.com/images/MJfqhcmEoIBnfimJNhKqoZpq0.png';
+    const hamiltonStats = 'https://framerusercontent.com/images/3EwXxC1QutaGnlNDZMlAN66ZmTU.png';
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>F1 Racing Hub — Lewis Hamilton Silverstone &amp; Scuderia Ferrari SF-26</title>
+  <meta name="description" content="Interactive Formula 1 mobile telemetry hub featuring Lewis Hamilton at Silverstone, live season points count-up, and Scuderia Ferrari SF-26 driver lineup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e1c;
+      --surface: #12172a;
+      --surface-elevated: #192038;
+      --fg: #ffffff;
+      --muted: #b4bfd6;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #edb40b;
+      --accent-text: #f6c93e;
+      --accent-strong: #e10600;
+      --on-accent: #0a0e1c;
+      --f1-red: #e10600;
+      --f1-dark: #292929;
+      --font-display: 'Albert Sans', sans-serif;
+      --font-sans: 'Albert Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 42px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid #ffffff; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeSlideLeft {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes speedReveal {
+      0% { opacity: 0; transform: translateX(-100%) skewX(-8deg); filter: blur(8px); }
+      60% { opacity: 1; transform: translateX(4%) skewX(-2deg); filter: blur(0); }
+      100% { opacity: 1; transform: translateX(0) skewX(0); filter: blur(0); }
+    }
+
+    .${p}-top-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 120;
+      padding: 14px clamp(16px, 4vw, 48px);
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(180deg, rgba(10, 14, 28, 0.9) 0%, rgba(10, 14, 28, 0) 100%);
+    }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 12px;
+      color: var(--fg); text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: -0.02em;
+    }
+    .${p}-logo-img {
+      width: 68px; height: 24px;
+      background-image: url('${f1Logo}');
+      background-size: contain; background-repeat: no-repeat; background-position: left center;
+    }
+    .${p}-nav-links {
+      display: flex; align-items: center; gap: 24px; list-style: none;
+    }
+    .${p}-nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600;
+    }
+    .${p}-nav-links a:hover { color: var(--accent-text); }
+    .${p}-top-actions { display: flex; align-items: center; gap: 10px; }
+    .${p}-btn-pill {
+      padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.08); color: var(--fg);
+      font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-btn-gold {
+      padding: 9px 18px; border-radius: 999px; border: 0;
+      background: var(--accent); color: var(--on-accent);
+      font-size: 12.5px; font-weight: 700; cursor: pointer;
+    }
+
+    .${p}-hero {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      padding: 62px clamp(16px, 3vw, 40px) 18px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .${p}-hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('${pageBg}');
+      background-size: cover; background-position: center;
+    }
+    .${p}-hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .${p}-phones-stage {
+      position: relative; z-index: 2; width: 100%; max-width: 1120px;
+      display: flex; align-items: flex-end; justify-content: center; gap: clamp(16px, 2vw, 28px);
+    }
+    .${p}-phone-wrap {
+      display: flex; flex-direction: column; align-items: center;
+      animation: fadeSlideUp 0.9s var(--ease-out) both;
+    }
+    .${p}-phone-wrap.is-center { margin-bottom: -14px; animation-delay: 0.2s; }
+    .${p}-phone-wrap.is-right { animation-delay: 0.35s; }
+
+    .${p}-phone-frame {
+      position: relative;
+      width: clamp(240px, 22.5vw, 304px);
+      aspect-ratio: 390 / 800;
+      border-radius: 42px;
+      background: #000000;
+      padding: 9px;
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.72), inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+    }
+    .${p}-island {
+      position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+      width: 28%; height: 24px; background: #000000; border-radius: 999px; z-index: 40;
+    }
+    .${p}-screen {
+      position: relative; width: 100%; height: 100%;
+      border-radius: 37px; overflow: hidden; background: var(--bg);
+      display: flex; flex-direction: column;
+    }
+    .${p}-screen-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('${pageBg}');
+      background-size: cover; background-position: center;
+    }
+    .${p}-screen-dim {
+      position: absolute; inset: 0; z-index: 1;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .${p}-phone-nav {
+      position: relative; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 26px 18px 0; height: 68px;
+    }
+    .${p}-phone-logo {
+      width: 64px; height: 22px;
+      background-image: url('${f1Logo}');
+      background-size: contain; background-repeat: no-repeat; background-position: left center;
+    }
+    .${p}-phone-nav-btns { display: flex; align-items: center; }
+    .${p}-sq-white {
+      width: 42px; height: 42px; background: #ffffff; border: 0; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .${p}-sq-white-icon {
+      width: 18px; height: 18px;
+      background-image: url('${profileIcon}');
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+    }
+    .${p}-sq-glass {
+      width: 42px; height: 42px; border: 0; cursor: pointer;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      display: flex; flex-direction: column; align-items: flex-end; justify-content: center;
+      padding-right: 11px; gap: 5px;
+    }
+    .${p}-bar-long { width: 20px; height: 2px; background: #ffffff; border-radius: 99px; }
+    .${p}-bar-short { width: 11px; height: 2px; background: #ffffff; border-radius: 99px; }
+
+    .${p}-menu-overlay {
+      position: absolute; inset: 0; z-index: 45;
+      background: linear-gradient(160deg, #1a0000 0%, #8B0000 40%, #E10600 100%);
+      padding: 88px 24px 28px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s var(--ease-out);
+    }
+    .${p}-menu-overlay.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-menu-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .${p}-menu-list button {
+      background: none; border: 0; color: #ffffff;
+      font-size: 28px; font-weight: 700; letter-spacing: -0.03em; cursor: pointer; text-align: left;
+    }
+    .${p}-menu-list button:hover { color: var(--accent); }
+
+    .${p}-loc-block {
+      position: relative; z-index: 10; padding: 14px 18px 0;
+    }
+    .${p}-loc-sub {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255, 255, 255, 0.68); font-size: 13.5px; margin-bottom: 4px;
+    }
+    .${p}-flag {
+      width: 20px; height: 20px;
+      background-image: url('${ukFlag}');
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+    }
+    .${p}-loc-title {
+      font-size: clamp(32px, 3.1vw, 42px); font-weight: 400; line-height: 0.94; letter-spacing: -0.05em;
+    }
+
+    .${p}-driver-photo-wrap {
+      position: absolute; inset: 0; z-index: 5;
+      display: flex; align-items: flex-end; justify-content: center; pointer-events: none;
+    }
+    .${p}-driver-photo {
+      width: 132%; height: 74%;
+      background-image: url('${hamiltonPhoto}');
+      background-size: contain; background-repeat: no-repeat; background-position: bottom center;
+      animation: scaleIn 1s var(--ease-out) 0.3s both;
+    }
+    .${p}-driver-blur {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 46%; z-index: 6;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 52%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 52%);
+      pointer-events: none;
+    }
+    .${p}-s1-bottom {
+      position: relative; z-index: 12; margin-top: auto; padding: 0 18px 20px;
+    }
+    .${p}-avatar-strip {
+      width: 138px; height: 40px; margin-bottom: 10px;
+      background-image: url('${driverStrip}');
+      background-size: contain; background-repeat: no-repeat; background-position: left center;
+    }
+    .${p}-driver-name {
+      font-size: clamp(44px, 4.2vw, 56px); font-weight: 600; line-height: 0.84; letter-spacing: -0.05em;
+      animation: speedReveal 0.85s var(--ease-out) 0.45s both;
+    }
+
+    .${p}-circuit-box {
+      position: relative; z-index: 10; flex: 1; margin: 6px 10px;
+      background-image: url('${circuitImg}');
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+      min-height: 150px;
+    }
+    .${p}-stats-stack {
+      position: relative; z-index: 10; padding: 0 18px 22px;
+    }
+    .${p}-points-head {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; color: rgba(255, 255, 255, 0.72); margin-bottom: 8px;
+    }
+    .${p}-medal {
+      width: 20px; height: 20px;
+      background-image: url('${medalIcon}');
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+    }
+    .${p}-stat-giant {
+      font-size: clamp(54px, 4.8vw, 68px); font-weight: 600; line-height: 0.76; letter-spacing: -0.06em;
+    }
+    .${p}-stat-fade {
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.42) 55%, rgba(255, 255, 255, 0.08) 95%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .${p}-stat-gold { color: var(--accent); }
+
+    .${p}-chassis-block {
+      position: relative; z-index: 10; padding: 10px 18px 0;
+    }
+    .${p}-chassis-num {
+      font-size: clamp(56px, 5vw, 72px); font-weight: 600; line-height: 0.8; letter-spacing: -0.08em;
+      color: var(--accent); margin-top: 4px;
+    }
+    .${p}-car-stage {
+      position: relative; z-index: 10; width: calc(100% - 16px); height: 122px; margin: 4px auto;
+      background-image: url('${ferrariCar}');
+      background-size: contain; background-repeat: no-repeat; background-position: center;
+      animation: fadeSlideLeft 0.9s var(--ease-out) 0.4s both;
+    }
+    .${p}-driver-pair {
+      position: relative; z-index: 10; margin-top: auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 8px;
+    }
+    .${p}-driver-card {
+      background: rgba(20, 20, 30, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 0; border-radius: 16px 16px 0 0;
+      padding: 10px 10px 12px;
+      backdrop-filter: blur(16px);
+      cursor: pointer;
+    }
+    .${p}-driver-card.is-selected {
+      border-color: var(--accent);
+      background: rgba(40, 30, 18, 0.86);
+    }
+    .${p}-driver-card-top {
+      font-size: 11px; color: rgba(255, 255, 255, 0.72); margin-bottom: 4px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-mini-bars {
+      width: 58px; height: 14px; margin-bottom: 6px;
+      background-size: contain; background-repeat: no-repeat; background-position: left center;
+    }
+    .${p}-car-num {
+      font-size: clamp(48px, 4.4vw, 62px); font-weight: 600; line-height: 0.8; letter-spacing: -0.08em;
+    }
+
+    .${p}-section {
+      max-width: 1240px; margin: 0 auto; padding: 72px clamp(20px, 4vw, 48px);
+    }
+    .${p}-workbench {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 28px;
+      padding: clamp(24px, 3.5vw, 40px);
+    }
+    .${p}-wb-head {
+      display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+      margin-bottom: 28px;
+    }
+    .${p}-tire-tabs { display: flex; gap: 10px; flex-wrap: wrap; }
+    .${p}-tire-btn {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--surface-elevated); color: var(--fg);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-tire-btn.is-active {
+      background: var(--accent); color: var(--on-accent); border-color: var(--accent);
+    }
+    .${p}-telemetry-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .${p}-stat-card {
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      border-radius: 20px; padding: 22px;
+    }
+    .${p}-footer {
+      border-top: 1px solid var(--border); padding: 36px clamp(20px, 4vw, 48px);
+      max-width: 1240px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      color: var(--muted); font-size: 13px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(10, 14, 28, 0.76); padding: 20px;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s var(--ease-out);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 440px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 980px) {
+      .${p}-phones-stage { flex-direction: column; align-items: center; gap: 36px; }
+      .${p}-phone-wrap.is-center { margin-bottom: 0; }
+      .${p}-telemetry-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+      .${p}-phone-frame { width: min(88vw, 340px); }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="${p}-top-bar">
+    <a href="#main-content" class="${p}-brand">
+      <span class="${p}-logo-img" role="img" aria-label="F1 Logo"></span>
+      <span>F1 Racing Hub • Silverstone GP</span>
+    </a>
+    <nav aria-label="Primary Telemetry Navigation">
+      <ul class="${p}-nav-links">
+        <li><a href="#screens">Mobile Hub</a></li>
+        <li><a href="#telemetry">SF-26 Telemetry</a></li>
+        <li><a href="#standings">Season Points</a></li>
+      </ul>
+    </nav>
+    <div class="${p}-top-actions">
+      <button type="button" id="motionToggleBtn" class="${p}-btn-pill" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-gold" style="display:inline-flex;align-items:center;gap:6px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+        </svg>
+        <span>Paddock Pass</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="screens" class="${p}-hero" aria-label="Lewis Hamilton Silverstone F1 Triple-Screen Hub">
+      <div class="${p}-hero-bg" role="img" aria-label="Silverstone Grand Prix circuit atmosphere"></div>
+      <div class="${p}-hero-overlay" aria-hidden="true"></div>
+
+      <div class="${p}-phones-stage">
+        <!-- SCREEN 1: LEWIS HAMILTON HERO -->
+        <article class="${p}-phone-wrap" aria-label="Screen 1: Lewis Hamilton Silverstone">
+          <div class="${p}-phone-frame">
+            <div class="${p}-island" aria-hidden="true"></div>
+            <div class="${p}-screen">
+              <div class="${p}-screen-bg" aria-hidden="true"></div>
+              <div class="${p}-screen-dim" aria-hidden="true"></div>
+
+              <div class="${p}-phone-nav">
+                <div class="${p}-phone-logo" role="img" aria-label="Formula 1"></div>
+                <div class="${p}-phone-nav-btns">
+                  <button type="button" class="${p}-sq-white" data-seamless-trigger="Driver Profile: Lewis Hamilton #44" aria-label="Driver Profile">
+                    <span class="${p}-sq-white-icon" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="${p}-sq-glass" data-phone-menu="menu1" aria-label="Toggle F1 Menu">
+                    <span class="${p}-bar-long"></span>
+                    <span class="${p}-bar-short"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="menu1" class="${p}-menu-overlay" aria-hidden="true">
+                <ul class="${p}-menu-list">
+                  <li><button type="button" data-menu-close="menu1">Biography</button></li>
+                  <li><button type="button" data-menu-close="menu1">Statistics</button></li>
+                  <li><button type="button" data-menu-close="menu1">Career</button></li>
+                </ul>
+                <button type="button" class="${p}-btn-gold" style="background:#ffffff;color:#0a0e1c;width:100%;padding:12px;" data-seamless-trigger="F1 Paddock Sign In">Sign in</button>
+              </div>
+
+              <div class="${p}-loc-block">
+                <div class="${p}-loc-sub">
+                  <span>United Kingdom</span>
+                  <span class="${p}-flag" role="img" aria-label="UK Flag"></span>
+                </div>
+                <h1 class="${p}-loc-title">Silverstone<br>England</h1>
+              </div>
+
+              <div class="${p}-driver-photo-wrap">
+                <div class="${p}-driver-photo" role="img" aria-label="Lewis Hamilton Portrait"></div>
+                <div class="${p}-driver-blur" aria-hidden="true"></div>
+              </div>
+
+              <div class="${p}-s1-bottom">
+                <div class="${p}-avatar-strip" role="img" aria-label="Driver Selector Strip"></div>
+                <div class="${p}-driver-name" id="heroDriverDisplay" style="font-size:clamp(38px,3.6vw,48px);">Lewis<br>Hamilton</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SCREEN 2: SILVERSTONE CIRCUIT + SEASON POINTS -->
+        <article class="${p}-phone-wrap is-center" aria-label="Screen 2: Silverstone Circuit and Season Points">
+          <div class="${p}-phone-frame">
+            <div class="${p}-island" aria-hidden="true"></div>
+            <div class="${p}-screen">
+              <div class="${p}-screen-bg" aria-hidden="true"></div>
+              <div class="${p}-screen-dim" aria-hidden="true"></div>
+
+              <div class="${p}-phone-nav">
+                <div class="${p}-phone-logo" role="img" aria-label="Formula 1"></div>
+                <div class="${p}-phone-nav-btns">
+                  <button type="button" class="${p}-sq-white" data-next-preview="true" id="recountStatsBtn" aria-label="Replay Season Points Count-Up">
+                    <span class="${p}-sq-white-icon" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="${p}-sq-glass" data-phone-menu="menu2" aria-label="Toggle Circuit Menu">
+                    <span class="${p}-bar-long"></span>
+                    <span class="${p}-bar-short"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="menu2" class="${p}-menu-overlay" aria-hidden="true">
+                <ul class="${p}-menu-list">
+                  <li><button type="button" data-menu-close="menu2">Biography</button></li>
+                  <li><button type="button" data-menu-close="menu2">Statistics</button></li>
+                  <li><button type="button" data-menu-close="menu2">Career</button></li>
+                </ul>
+                <button type="button" class="${p}-btn-gold" style="background:#ffffff;color:#0a0e1c;width:100%;padding:12px;" data-seamless-trigger="F1 Telemetry Sign In">Sign in</button>
+              </div>
+
+              <div class="${p}-loc-block">
+                <div class="${p}-loc-sub">
+                  <span>United Kingdom</span>
+                  <span class="${p}-flag" role="img" aria-label="UK Flag"></span>
+                </div>
+                <div class="${p}-loc-title">Silverstone<br>England</div>
+              </div>
+
+              <div class="${p}-circuit-box" role="img" aria-label="Silverstone Grand Prix Circuit Layout"></div>
+
+              <div id="standings" class="${p}-stats-stack">
+                <div class="${p}-points-head">
+                  <span>Season Points</span>
+                  <span class="${p}-medal" role="img" aria-label="Points Medal"></span>
+                </div>
+                <div class="${p}-stat-giant ${p}-stat-fade tabular-nums" data-f1-count="227">227</div>
+                <div class="${p}-stat-giant ${p}-stat-fade tabular-nums" data-f1-count="374">374</div>
+                <div class="${p}-stat-giant ${p}-stat-gold tabular-nums" data-f1-count="4987">4987</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SCREEN 3: SCUDERIA FERRARI SF-26 TEAM -->
+        <article class="${p}-phone-wrap is-right" aria-label="Screen 3: Scuderia Ferrari SF-26">
+          <div class="${p}-phone-frame">
+            <div class="${p}-island" aria-hidden="true"></div>
+            <div class="${p}-screen">
+              <div class="${p}-screen-bg" aria-hidden="true"></div>
+              <div class="${p}-screen-dim" aria-hidden="true"></div>
+
+              <div class="${p}-phone-nav">
+                <div class="${p}-phone-logo" role="img" aria-label="Formula 1"></div>
+                <div class="${p}-phone-nav-btns">
+                  <button type="button" class="${p}-sq-white" data-seamless-trigger="Scuderia Ferrari Constructor Telemetry" aria-label="Scuderia Ferrari Profile">
+                    <span class="${p}-sq-white-icon" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="${p}-sq-glass" data-phone-menu="menu3" aria-label="Toggle Team Menu">
+                    <span class="${p}-bar-long"></span>
+                    <span class="${p}-bar-short"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="menu3" class="${p}-menu-overlay" aria-hidden="true">
+                <ul class="${p}-menu-list">
+                  <li><button type="button" data-menu-close="menu3">Biography</button></li>
+                  <li><button type="button" data-menu-close="menu3">Statistics</button></li>
+                  <li><button type="button" data-menu-close="menu3">Career</button></li>
+                </ul>
+                <button type="button" class="${p}-btn-gold" style="background:#ffffff;color:#0a0e1c;width:100%;padding:12px;" data-seamless-trigger="Scuderia Ferrari Pass">Sign in</button>
+              </div>
+
+              <div class="${p}-loc-block">
+                <div class="${p}-loc-sub">
+                  <span>Team Name</span>
+                  <span style="width:18px;height:18px;background-image:url('${ferrariIcon}');background-size:contain;background-repeat:no-repeat;display:inline-block;" role="img" aria-label="Scuderia Ferrari Shield"></span>
+                </div>
+                <div class="${p}-loc-title" style="letter-spacing:-0.07em;">Scuderia<br>Ferrari</div>
+              </div>
+
+              <div class="${p}-chassis-block">
+                <div class="${p}-loc-sub">
+                  <span style="width:18px;height:18px;background-image:url('${chassisIcon}');background-size:contain;background-repeat:no-repeat;display:inline-block;" aria-hidden="true"></span>
+                  <span>Chassis</span>
+                </div>
+                <div class="${p}-chassis-num tabular-nums">SF-26</div>
+              </div>
+
+              <div class="${p}-car-stage" role="img" aria-label="Scuderia Ferrari SF-26 Formula 1 Car"></div>
+
+              <div class="${p}-driver-pair">
+                <div class="${p}-driver-card" data-driver-pick="Charles Leclerc" data-driver-num="16" data-lap="1:25.814">
+                  <div class="${p}-driver-card-top">
+                    <span>Charles Leclerc</span>
+                  </div>
+                  <div class="${p}-mini-bars" style="background-image:url('${leclercStats}');" aria-hidden="true"></div>
+                  <div class="${p}-car-num tabular-nums">16</div>
+                </div>
+                <div class="${p}-driver-card is-selected" data-driver-pick="Lewis Hamilton" data-driver-num="44" data-lap="1:25.492">
+                  <div class="${p}-driver-card-top">
+                    <span>Lewis Hamilton</span>
+                  </div>
+                  <div class="${p}-mini-bars" style="background-image:url('${hamiltonStats}');" aria-hidden="true"></div>
+                  <div class="${p}-car-num tabular-nums">44</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="telemetry" class="${p}-section" aria-label="SF-26 Live Telemetry Workbench">
+      <div class="${p}-workbench">
+        <div class="${p}-wb-head">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;text-transform:uppercase;">SILVERSTONE PIT WALL • SF-26 TELEMETRY</div>
+            <h2 style="font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:700;letter-spacing:-0.04em;margin-top:6px;">
+              Tire Compound &amp; Sector Delta Simulator
+            </h2>
+          </div>
+          <div class="${p}-tire-tabs" role="tablist" aria-label="Pirelli Tire Compounds">
+            <button type="button" class="${p}-tire-btn is-active" data-compound="Soft C5" data-pace="1:25.492" data-top="342 km/h" data-deg="+0.08s / lap">Soft C5 (Quali)</button>
+            <button type="button" class="${p}-tire-btn" data-compound="Medium C4" data-pace="1:26.110" data-top="339 km/h" data-deg="+0.04s / lap">Medium C4 (Stint 1)</button>
+            <button type="button" class="${p}-tire-btn" data-compound="Hard C3" data-pace="1:26.680" data-top="337 km/h" data-deg="+0.02s / lap">Hard C3 (Endurance)</button>
+          </div>
+        </div>
+
+        <div class="${p}-telemetry-grid">
+          <article class="${p}-stat-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Selected Driver &amp; Chassis</div>
+            <div id="wbDriverLabel" style="font-size:26px;font-weight:700;margin-top:8px;">#44 Lewis Hamilton</div>
+            <div style="font-size:13px;color:var(--accent-text);margin-top:6px;">Scuderia Ferrari SF-26 • Silverstone GP</div>
+          </article>
+          <article class="${p}-stat-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Projected Qualifying Lap</div>
+            <div id="wbPaceVal" class="tabular-nums" style="font-size:28px;font-weight:700;color:var(--accent);margin-top:8px;">1:25.492</div>
+            <div id="wbCompoundLabel" style="font-size:13px;color:var(--muted);margin-top:6px;">Compound: Soft C5 • Peak Grip</div>
+          </article>
+          <article class="${p}-stat-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;"> Wellington Straight Trap / Deg</div>
+            <div id="wbTopSpeed" class="tabular-nums" style="font-size:28px;font-weight:700;margin-top:8px;">342 km/h</div>
+            <div id="wbDegVal" class="tabular-nums" style="font-size:13px;color:var(--accent-text);margin-top:6px;">Thermal Degradation: +0.08s / lap</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-footer">
+    <span>F1 Racing Hub — Silverstone Circuit &amp; Scuderia Ferrari SF-26</span>
+    <span class="tabular-nums">Season Points: 227 • 374 • 4987 Career</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:600;">F1 PADDOCK TELEMETRY</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-pill">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;font-weight:700;margin-bottom:10px;">Unlock Live Pit Wall Feed</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Stream live Silverstone sector splits, onboard SF-26 ERS deployment, and career telemetry for #44 Lewis Hamilton and #16 Charles Leclerc.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-gold" style="width:100%;padding:13px;">Activate F1 Hub Access →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function animateCounters() {
+        var els = document.querySelectorAll('[data-f1-count]');
+        els.forEach(function (el, idx) {
+          var target = parseInt(el.getAttribute('data-f1-count') || '0', 10);
+          var start = performance.now() + idx * 160;
+          var dur = 1600;
+          function tick(now) {
+            if (now < start) {
+              requestAnimationFrame(tick);
+              return;
+            }
+            var t = Math.min(1, (now - start) / dur);
+            var eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = String(Math.round(target * eased));
+            if (t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        });
+      }
+      animateCounters();
+
+      var recountBtn = document.getElementById('recountStatsBtn');
+      if (recountBtn) recountBtn.addEventListener('click', animateCounters);
+
+      document.querySelectorAll('[data-phone-menu]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-phone-menu');
+          var menu = id ? document.getElementById(id) : null;
+          if (menu) menu.classList.toggle('is-open');
+        });
+      });
+      document.querySelectorAll('[data-menu-close]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-menu-close');
+          var menu = id ? document.getElementById(id) : null;
+          if (menu) menu.classList.remove('is-open');
+        });
+      });
+
+      var driverCards = document.querySelectorAll('[data-driver-pick]');
+      var wbDriver = document.getElementById('wbDriverLabel');
+      var wbPace = document.getElementById('wbPaceVal');
+      driverCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          driverCards.forEach(function (c) { c.classList.remove('is-selected'); });
+          card.classList.add('is-selected');
+          var name = card.getAttribute('data-driver-pick') || 'Lewis Hamilton';
+          var num = card.getAttribute('data-driver-num') || '44';
+          var lap = card.getAttribute('data-lap') || '1:25.492';
+          if (wbDriver) wbDriver.textContent = '#' + num + ' ' + name;
+          if (wbPace) wbPace.textContent = lap;
+        });
+      });
+
+      var tireBtns = document.querySelectorAll('[data-compound]');
+      var wbCompound = document.getElementById('wbCompoundLabel');
+      var wbTop = document.getElementById('wbTopSpeed');
+      var wbDeg = document.getElementById('wbDegVal');
+      tireBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          tireBtns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (wbPace) wbPace.textContent = btn.getAttribute('data-pace') || '1:25.492';
+          if (wbCompound) wbCompound.textContent = 'Compound: ' + (btn.getAttribute('data-compound') || 'Soft C5');
+          if (wbTop) wbTop.textContent = btn.getAttribute('data-top') || '342 km/h';
+          if (wbDeg) wbDeg.textContent = 'Thermal Degradation: ' + (btn.getAttribute('data-deg') || '+0.08s / lap');
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 27. AI WORKFLOW HERO (ai-workflow-hero — Premium Tier)
+  // LinkFlow™ & FluxEngine™ — "Close the rift linking signals and action"
+  // CloudFront Boomerang Video + Sage/Forest Green Editorial Palette
+  // ============================================================================
+  if (slug === 'ai-workflow-hero') {
+    const bgVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_131941_d136af49-e243-493a-be14-6ff3f24e09e6.mp4';
+    const posterImg = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260721_114043_a70b6aa4-73d7-4b38-9595-baa6a5bad2d3.png&w=1280&q=85';
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LinkFlow™ — Close the Rift Linking Signals and Action</title>
+  <meta name="description" content="Shape scattered signals into meaningful outcomes via AI-driven workflows with LinkFlow and FluxEngine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef3ec;
+      --surface: #e3ece0;
+      --surface-elevated: #ffffff;
+      --fg: #1f2a1d;
+      --muted: #3d5039;
+      --border: rgba(31, 42, 29, 0.16);
+      --accent: #1f2a1d;
+      --accent-text: #274d33;
+      --accent-soft: #85ab8b;
+      --on-accent: #ffffff;
+      --font-display: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 28px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .${p}-hero {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 24px clamp(20px, 4vw, 44px) 36px;
+    }
+    .${p}-video-wrap {
+      position: absolute; inset: 0; z-index: 0; overflow: hidden;
+    }
+    .${p}-video-wrap video, .${p}-video-wrap canvas {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    .${p}-nav {
+      position: relative; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-size: clamp(18px, 2vw, 24px);
+      font-weight: 600; letter-spacing: -0.03em; color: #2d3a2a; text-decoration: none;
+    }
+    .${p}-brand sup { font-size: 11px; font-weight: 500; margin-left: 2px; }
+
+    .${p}-pill-nav {
+      display: flex; align-items: center; gap: 4px;
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 999px;
+      padding: 4px 4px 4px 20px;
+      box-shadow: 0 4px 20px rgba(31, 42, 29, 0.06);
+      list-style: none;
+    }
+    .${p}-pill-nav a {
+      text-decoration: none; font-size: 14px; font-weight: 500;
+      color: #4b5b47; padding: 8px 12px; border-radius: 999px;
+    }
+    .${p}-pill-nav a.is-active, .${p}-pill-nav a:hover {
+      color: #1f2a1d; font-weight: 600;
+    }
+    .${p}-btn-dark {
+      background: #1f2a1d; color: #ffffff; border: 0; border-radius: 999px;
+      padding: 10px 20px; font-size: 13.5px; font-weight: 500; cursor: pointer;
+      margin-left: 8px;
+    }
+    .${p}-btn-dark:hover { background: #2a3827; }
+
+    .${p}-auth-links {
+      display: flex; align-items: center; gap: 20px; color: #2d3a2a;
+    }
+    .${p}-auth-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      color: #2d3a2a; text-decoration: none; font-size: 14px; font-weight: 500;
+      background: none; border: 0; cursor: pointer;
+    }
+
+    .${p}-hero-copy {
+      position: relative; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      padding-top: clamp(36px, 6vh, 72px); margin-bottom: auto;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.4vw, 5.25rem);
+      font-weight: 400; line-height: 0.95; letter-spacing: -0.035em;
+      color: #336443; max-width: 980px;
+    }
+    .${p}-h1-accent { color: #85AB8B; }
+    .${p}-subtitle {
+      margin-top: 26px; color: #4b5b47;
+      font-size: clamp(15px, 1.25vw, 18px); line-height: 1.6;
+      max-width: 440px;
+    }
+
+    .${p}-hero-bottom {
+      position: relative; z-index: 10;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+      flex-wrap: wrap; margin-top: 48px;
+    }
+    .${p}-flux-card {
+      max-width: 360px;
+      background: rgba(31, 42, 29, 0.42);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 22px; padding: 20px 22px; color: #ffffff;
+    }
+    .${p}-flux-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 600; color: #ffffff; margin-bottom: 10px;
+    }
+    .${p}-flux-desc {
+      font-size: 12.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 18px;
+    }
+    .${p}-flux-actions { display: flex; align-items: center; gap: 16px; }
+    .${p}-btn-white {
+      background: #ffffff; color: #1f2a1d; border: 0; border-radius: 999px;
+      padding: 11px 22px; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-btn-text {
+      background: none; border: 0; color: #ffffff;
+      font-size: 13.5px; font-weight: 500; cursor: pointer;
+    }
+
+    .${p}-how-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(31, 42, 29, 0.48);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px; padding: 8px 16px 8px 10px;
+      color: #ffffff; font-size: 13.5px; cursor: pointer;
+    }
+    .${p}-play-circle {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.24);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+
+    .${p}-section {
+      max-width: 1220px; margin: 0 auto; padding: 80px clamp(20px, 4vw, 44px);
+    }
+    .${p}-sim-box {
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      border-radius: 28px; padding: clamp(24px, 3.5vw, 42px);
+      box-shadow: 0 20px 50px rgba(31, 42, 29, 0.06);
+    }
+    .${p}-signal-pills { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 28px; }
+    .${p}-sig-btn {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--bg); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-sig-btn.is-active {
+      background: var(--fg); color: var(--on-accent); border-color: var(--fg);
+    }
+    .${p}-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .${p}-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 20px; padding: 24px;
+    }
+    .${p}-footer {
+      border-top: 1px solid var(--border); padding: 36px clamp(20px, 4vw, 44px);
+      max-width: 1220px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      color: var(--muted); font-size: 13.5px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(31, 42, 29, 0.55); padding: 20px;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s var(--ease-out);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 440px; background: #ffffff;
+      border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .${p}-grid-3 { grid-template-columns: 1fr; }
+      .${p}-pill-nav { display: none; }
+    }
+    @media (max-width: 600px) {
+      .${p}-auth-links .${p}-hide-sm { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="${p}-hero" aria-label="LinkFlow AI Workflow Hero">
+      <div class="${p}-video-wrap" aria-hidden="true">
+        <video id="boomerangVideo" autoplay muted loop playsinline crossorigin="anonymous" poster="${posterImg}">
+          <source src="${bgVideo}" type="video/mp4">
+        </video>
+        <canvas id="boomerangCanvas" style="display:none;"></canvas>
+      </div>
+
+      <header class="${p}-nav">
+        <a href="#main-content" class="${p}-brand">LinkFlow<sup>TM</sup></a>
+
+        <nav aria-label="Primary Navigation">
+          <ul class="${p}-pill-nav">
+            <li><a href="#mission" class="is-active">Purpose</a></li>
+            <li><a href="#how">The Process</a></li>
+            <li><a href="#pricing">Tariffs</a></li>
+            <li>
+              <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark">Try it Live</button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="${p}-auth-links">
+          <button type="button" class="${p}-auth-link ${p}-hide-sm" data-seamless-trigger="LinkFlow Workspace Sign Up">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+            <span>Sign Me Up!</span>
+          </button>
+          <button type="button" class="${p}-auth-link ${p}-hide-sm" data-seamless-trigger="Enter LinkFlow Console">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>
+            </svg>
+            <span>Enter</span>
+          </button>
+          <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-auth-link" style="padding:7px 14px;border-radius:999px;background:rgba(255,255,255,0.75);border:1px solid var(--border);font-size:12px;font-weight:600;">
+            Motion: ON
+          </button>
+        </div>
+      </header>
+
+      <div class="${p}-hero-copy">
+        <h1 class="${p}-h1">
+          Close the rift
+          <span class="${p}-h1-accent">linking<br>signals and action</span>
+        </h1>
+        <p class="${p}-subtitle">
+          Shape scattered signals into meaningful outcomes via AI-driven workflows.
+        </p>
+      </div>
+
+      <div class="${p}-hero-bottom">
+        <div class="${p}-flux-card">
+          <div class="${p}-flux-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/>
+            </svg>
+            <span>FluxEngine<sup style="font-size:10px;">TM</sup></span>
+          </div>
+          <p class="${p}-flux-desc">
+            LinkFlow smoothly unites your company systems, streamlining data paths between services without having to write custom scripts.
+          </p>
+          <div class="${p}-flux-actions">
+            <button type="button" class="${p}-btn-white" data-seamless-trigger="Launch FluxEngine Live Sandbox">Try it Live</button>
+            <button type="button" class="${p}-btn-text" data-next-preview="true" id="cycleSignalBtn">Know More.</button>
+          </div>
+        </div>
+
+        <button type="button" class="${p}-how-pill" data-seamless-trigger="How We Build LinkFlow (1:35 Architecture Film)">
+          <span class="${p}-play-circle" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+              <polygon points="6 4 20 12 6 20 6 4"/>
+            </svg>
+          </span>
+          <span style="font-weight:500;">How we build?</span>
+          <span class="tabular-nums" style="opacity:0.72;">1:35</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="mission" class="${p}-section" aria-label="FluxEngine Signal-to-Action Pipeline Simulator">
+      <div class="${p}-sim-box">
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.12em;text-transform:uppercase;">PURPOSE &amp; THE PROCESS • FLUXENGINE™</div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.6rem);font-weight:600;letter-spacing:-0.03em;margin-top:8px;">
+          Interactive Signal-to-Action Routing Bench
+        </h2>
+
+        <div class="${p}-signal-pills" role="tablist" aria-label="Signal Sources">
+          <button type="button" class="${p}-sig-btn is-active" data-sig-title="CRM Lead Intent Spike" data-sig-route="HubSpot Webhook → FluxEngine Classifier → Slack Deal Desk + Automated Outbound" data-sig-lat="42 ms" data-sig-saved="18.5 hrs/wk">01 • CRM Intent Signal</button>
+          <button type="button" class="${p}-sig-btn" data-sig-title="Billing Anomaly &amp; Churn Risk" data-sig-route="Stripe Metering → FluxEngine Risk Scorer → CS Playbook + Account Credit Trigger" data-sig-lat="38 ms" data-sig-saved="24.0 hrs/wk">02 • Stripe Telemetry</button>
+          <button type="button" class="${p}-sig-btn" data-sig-title="Production Incident Triage" data-sig-route="Sentry Alert → FluxEngine Root-Cause Graph → Linear Issue + On-Call Patch Draft" data-sig-lat="51 ms" data-sig-saved="31.2 hrs/wk">03 • Incident Signal</button>
+        </div>
+
+        <div id="how" class="${p}-grid-3">
+          <article class="${p}-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Active Signal Stream</div>
+            <h3 id="sigTitleOut" style="font-size:20px;font-weight:700;margin-top:8px;">CRM Lead Intent Spike</h3>
+            <p id="sigRouteOut" style="font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:8px;">
+              HubSpot Webhook → FluxEngine Classifier → Slack Deal Desk + Automated Outbound
+            </p>
+          </article>
+          <article class="${p}-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Dispatch Latency</div>
+            <div id="sigLatOut" class="tabular-nums" style="font-size:32px;font-weight:700;color:var(--accent-text);margin-top:8px;">42 ms</div>
+            <p style="font-size:13px;color:var(--muted);margin-top:6px;">Zero custom glue scripts required</p>
+          </article>
+          <article id="pricing" class="${p}-card">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Engineering Time Saved</div>
+            <div id="sigSavedOut" class="tabular-nums" style="font-size:32px;font-weight:700;margin-top:8px;">18.5 hrs/wk</div>
+            <p style="font-size:13px;color:var(--accent-text);margin-top:6px;">Tariffs: Starter $49 • Growth $149 • Enterprise</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-footer">
+    <span>LinkFlow™ &amp; FluxEngine™ — AI-Driven Workflow Orchestration</span>
+    <span class="tabular-nums">Purpose • The Process • Tariffs</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:600;">LINKFLOW™ WORKSPACE</span>
+        <button type="button" id="closeSeamlessBtn" style="background:var(--bg);border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:10px;">Try FluxEngine™ Live</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Unite your company systems and streamline data paths between services without writing custom scripts.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-dark" style="width:100%;margin:0;padding:13px;">Create Free LinkFlow Account →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btns = Array.prototype.slice.call(document.querySelectorAll('[data-sig-title]'));
+      var titleOut = document.getElementById('sigTitleOut');
+      var routeOut = document.getElementById('sigRouteOut');
+      var latOut = document.getElementById('sigLatOut');
+      var savedOut = document.getElementById('sigSavedOut');
+      var idx = 0;
+
+      function activateSig(btn) {
+        btns.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        if (titleOut) titleOut.textContent = btn.getAttribute('data-sig-title') || '';
+        if (routeOut) routeOut.textContent = btn.getAttribute('data-sig-route') || '';
+        if (latOut) latOut.textContent = btn.getAttribute('data-sig-lat') || '';
+        if (savedOut) savedOut.textContent = btn.getAttribute('data-sig-saved') || '';
+      }
+      btns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          idx = i;
+          activateSig(btn);
+        });
+      });
+      var cycleBtn = document.getElementById('cycleSignalBtn');
+      if (cycleBtn && btns.length) {
+        cycleBtn.addEventListener('click', function () {
+          idx = (idx + 1) % btns.length;
+          activateSig(btns[idx]);
+        });
+      }
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 28. CYBERPUNK REVEAL (cyberpunk-reveal — Premium Tier)
+  // "Gateway to your augmented self — A window of coming enhancements"
+  // Dual-Layer Portrait Reveal + Concentric Fading Circular Arcs + JetBrains Mono
+  // ============================================================================
+  if (slug === 'cyberpunk-reveal') {
+    const bgImage1 = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_125121_afb71ce9-9c64-4c54-90b5-c89c0764c052.png&w=1920&q=85';
+    const bgImage2 = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260609_135737_0da59642-725b-451a-997b-b0283d95a42a.png&w=1280&q=85';
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cyberpunk Reveal — Gateway to Your Augmented Self</title>
+  <meta name="description" content="A future where carbon fiber, titanium, and human instinct align. Interactive dual-layer biotech augmentation reveal and concentric telemetry arcs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0709;
+      --surface: #170d11;
+      --surface-elevated: #231319;
+      --fg: #ffffff;
+      --muted: #e2c7ce;
+      --border: rgba(255, 255, 255, 0.18);
+      --accent: #ffffff;
+      --accent-text: #ff8a9e;
+      --accent-crimson: #e11d48;
+      --on-accent: #111827;
+      --font-display: 'JetBrains Mono', monospace;
+      --font-sans: 'JetBrains Mono', monospace;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --reveal-x: 54%;
+      --reveal-y: 44%;
+      --reveal-r: 250px;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box; margin: 0; padding: 0;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      letter-spacing: -0.02em;
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 12px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.96) translateY(1px);
+    }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    @keyframes kenBurns {
+      from { transform: scale(1.12); }
+      to { transform: scale(1); }
+    }
+    @keyframes heroRise {
+      from { opacity: 0; transform: translateY(26px); filter: blur(8px); }
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    @keyframes navDrop {
+      from { opacity: 0; transform: translateY(-18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseRing {
+      0%, 100% { transform: scale(1); opacity: 0.38; }
+      50% { transform: scale(1.42); opacity: 0.08; }
+    }
+
+    .${p}-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px 20px;
+      animation: navDrop 0.8s var(--ease-out) 0.1s both;
+    }
+    .${p}-nav-pill {
+      background: rgba(0, 0, 0, 0.62);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 8px 8px 8px 14px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .${p}-nav-links {
+      display: flex; align-items: center; gap: 4px; list-style: none;
+    }
+    .${p}-nav-links a {
+      color: #d1d5db; text-decoration: none; font-size: 13px; font-weight: 500;
+      padding: 6px 12px; border-radius: 999px;
+    }
+    .${p}-nav-links a.is-active, .${p}-nav-links a:hover {
+      color: #ffffff; background: rgba(255, 255, 255, 0.1);
+    }
+    .${p}-btn-connect {
+      background: #ffffff; color: #111827; border: 0; border-radius: 999px;
+      padding: 7px 18px; font-size: 13px; font-weight: 600; cursor: pointer; margin-left: 4px;
+    }
+    .${p}-btn-motion {
+      background: rgba(255, 255, 255, 0.1); color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px;
+      padding: 6px 12px; font-size: 11.5px; font-weight: 600; cursor: pointer; margin-left: 4px;
+    }
+
+    .${p}-hero {
+      position: relative; width: 100%; height: 100dvh; min-height: 680px; overflow: hidden;
+      background: #1a080c;
+    }
+    .${p}-grid-svg {
+      position: absolute; inset: 0; width: 100%; height: 100%; z-index: 5;
+      opacity: 0.12; pointer-events: none;
+    }
+    .${p}-base-img {
+      position: absolute; inset: 0; z-index: 10;
+      background-image: url('${bgImage1}');
+      background-size: cover; background-position: center;
+      animation: kenBurns 2.4s var(--ease-out) forwards;
+    }
+    .${p}-reveal-img {
+      position: absolute; inset: 0; z-index: 25;
+      background-image: url('${bgImage2}');
+      background-size: cover; background-position: center;
+      mask-image: radial-gradient(circle var(--reveal-r) at var(--reveal-x) var(--reveal-y), rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle var(--reveal-r) at var(--reveal-x) var(--reveal-y), rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0) 100%);
+    }
+    .${p}-scrim {
+      position: absolute; inset: 0; z-index: 30;
+      background: linear-gradient(90deg, rgba(12, 7, 9, 0.72) 0%, rgba(12, 7, 9, 0.18) 52%, rgba(12, 7, 9, 0.64) 100%);
+      pointer-events: none;
+    }
+
+    .${p}-arcs-wrap {
+      position: absolute; top: 0; bottom: 0; right: 0; z-index: 45;
+      pointer-events: none; display: flex; align-items: center;
+    }
+    .${p}-arcs-svg {
+      height: 100%; width: auto; max-height: 760px;
+    }
+    .${p}-arc-ring {
+      transform-box: fill-box; transform-origin: center;
+      animation: pulseRing 2.8s ease-in-out infinite;
+    }
+
+    .${p}-hero-copy {
+      position: absolute; left: clamp(20px, 4vw, 48px); bottom: clamp(44px, 8vh, 88px);
+      z-index: 50; max-width: 470px;
+    }
+    .${p}-eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.92); margin-bottom: 14px;
+      animation: heroRise 0.95s var(--ease-out) 0.15s both;
+    }
+    .${p}-h1 {
+      font-size: clamp(2.3rem, 4.4vw, 3.75rem);
+      font-weight: 700; line-height: 1.05; letter-spacing: -0.07em;
+      color: #ffffff; margin-bottom: 18px;
+      animation: heroRise 0.95s var(--ease-out) 0.3s both;
+    }
+    .${p}-desc {
+      font-size: clamp(13.5px, 1.05vw, 15.5px); line-height: 1.65;
+      color: rgba(255, 255, 255, 0.9); margin-bottom: 26px;
+      animation: heroRise 0.95s var(--ease-out) 0.5s both;
+    }
+    .${p}-cta-row {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      animation: heroRise 0.95s var(--ease-out) 0.7s both;
+    }
+    .${p}-btn-reserve {
+      position: relative; overflow: hidden;
+      background: #ffffff; color: #111827; border: 0; border-radius: 999px;
+      padding: 13px 30px; font-size: 13.5px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+    .${p}-btn-scan {
+      background: rgba(0, 0, 0, 0.6); color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 999px;
+      padding: 12px 20px; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-section {
+      max-width: 1220px; margin: 0 auto; padding: 76px clamp(20px, 4vw, 48px);
+    }
+    .${p}-workbench {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 26px; padding: clamp(24px, 3.5vw, 40px);
+    }
+    .${p}-module-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 26px; }
+    .${p}-mod-btn {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--surface-elevated); color: var(--fg);
+      font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-mod-btn.is-active {
+      background: #ffffff; color: #111827; border-color: #ffffff;
+    }
+    .${p}-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .${p}-card {
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px;
+    }
+    .${p}-footer {
+      border-top: 1px solid var(--border); padding: 34px clamp(20px, 4vw, 48px);
+      max-width: 1220px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+      color: var(--muted); font-size: 12.5px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 500;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(12, 7, 9, 0.78); padding: 20px;
+      opacity: 0; pointer-events: none; transition: opacity 0.25s var(--ease-out);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 440px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 22px; padding: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .${p}-grid-3 { grid-template-columns: 1fr; }
+      .${p}-nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .${p}-arcs-wrap { opacity: 0.35; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="${p}-header">
+    <nav class="${p}-nav-pill" aria-label="Primary Biotech Navigation">
+      <a href="#main-content" aria-label="Cyberpunk Reveal Home" style="display:inline-flex;align-items:center;padding-right:8px;">
+        <svg width="22" height="22" viewBox="0 0 256 256" fill="#ffffff" aria-hidden="true">
+          <path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z"/>
+        </svg>
+      </a>
+      <ul class="${p}-nav-links">
+        <li><a href="#module" class="is-active">Module</a></li>
+        <li><a href="#records">Case Records</a></li>
+        <li><a href="#biotech">Biotech</a></li>
+        <li><a href="#tiers">Tiers</a></li>
+        <li><a href="#module">Live Demo</a></li>
+      </ul>
+      <button type="button" class="${p}-btn-connect" data-seamless-trigger="Connect Neural Interface">Connect</button>
+      <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-btn-motion">Motion: ON</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="${p}-hero" id="heroStage" aria-label="Augmented Self Cyberpunk Reveal Hero">
+      <svg class="${p}-grid-svg" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="cyberGridPattern" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#64748b" stroke-width="0.6"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="900" fill="url(#cyberGridPattern)"/>
+      </svg>
+
+      <div class="${p}-base-img" role="img" aria-label="Base crimson cyberpunk subject portrait"></div>
+      <div class="${p}-reveal-img" id="revealLayer" role="img" aria-label="Augmented titanium endoskeleton reveal layer"></div>
+      <div class="${p}-scrim" aria-hidden="true"></div>
+
+      <!-- Concentric Fading Circular Arcs with Stats -->
+      <div class="${p}-arcs-wrap" aria-hidden="true">
+        <svg class="${p}-arcs-svg" viewBox="0 0 380 700" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="arcGrad1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+              <stop offset="25%" stop-color="#ffffff" stop-opacity="0.55"/>
+              <stop offset="70%" stop-color="#ffffff" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- Arc 1: r=330 -->
+          <path d="M 119 62 A 330 330 0 0 1 207 391" fill="none" stroke="url(#arcGrad1)" stroke-width="1.2"/>
+          <circle cx="119" cy="62" r="3.5" fill="#ffffff"/>
+          <circle class="${p}-arc-ring" cx="119" cy="62" r="7.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+          <text x="136" y="66" fill="#ffffff" font-size="30" font-weight="700" class="tabular-nums">10<tspan dy="-10" font-size="18">+</tspan></text>
+          <text x="138" y="84" fill="rgba(255,255,255,0.82)" font-size="8.5" font-weight="600" letter-spacing="2">YEARS REAL</text>
+
+          <!-- Arc 2: r=395 -->
+          <path d="M 111 10 A 395 395 0 0 1 285 314" fill="none" stroke="url(#arcGrad1)" stroke-width="1.2"/>
+          <circle cx="284" cy="314" r="3.5" fill="#ffffff"/>
+          <circle class="${p}-arc-ring" cx="284" cy="314" r="7.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+          <text x="300" y="318" fill="#ffffff" font-size="30" font-weight="700" class="tabular-nums">40<tspan dy="-10" font-size="18">+</tspan></text>
+          <text x="302" y="336" fill="rgba(255,255,255,0.82)" font-size="8.5" font-weight="600" letter-spacing="2">USE FORMS</text>
+
+          <!-- Arc 3: r=460 -->
+          <path d="M 236 189 A 460 460 0 0 1 228 612" fill="none" stroke="url(#arcGrad1)" stroke-width="1.2"/>
+          <circle cx="221" cy="620" r="3.5" fill="#ffffff"/>
+          <circle class="${p}-arc-ring" cx="221" cy="620" r="7.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+          <text x="238" y="624" fill="#ffffff" font-size="30" font-weight="700" class="tabular-nums">95<tspan dy="-10" font-size="18">%</tspan></text>
+          <text x="240" y="642" fill="rgba(255,255,255,0.82)" font-size="8.5" font-weight="600" letter-spacing="2">REPEAT MEMBERS</text>
+        </svg>
+      </div>
+
+      <div class="${p}-hero-copy">
+        <div class="${p}-eyebrow">Gateway to your <em>augmented self</em></div>
+        <h1 class="${p}-h1">
+          A window<br>of coming<br>enhancements
+        </h1>
+        <p class="${p}-desc">
+          A future where carbon fiber, titanium, and human instinct align. Not machine. Not human. Something wonderfully poised between.
+        </p>
+        <div class="${p}-cta-row">
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-reserve">Reserve Now</button>
+          <button type="button" data-next-preview="true" id="scanPulseBtn" class="${p}-btn-scan">
+            Scan Layer: <span id="scanLayerName">Optical X-Ray</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="module" class="${p}-section" aria-label="Biotech Augmentation Calibration Workbench">
+      <div class="${p}-workbench">
+        <div style="font-size:11.5px;color:var(--accent-text);letter-spacing:0.14em;text-transform:uppercase;">BIOTECH &amp; CASE RECORDS • AUGMENTATION SPEC</div>
+        <h2 style="font-size:clamp(1.6rem,2.8vw,2.35rem);font-weight:700;letter-spacing:-0.05em;margin-top:8px;">
+          Interactive Sub-Dermal Reveal &amp; Module Selector
+        </h2>
+
+        <div class="${p}-module-tabs" role="tablist" aria-label="Augmentation Modules">
+          <button type="button" class="${p}-mod-btn is-active" data-mod-name="Optical X-Ray" data-mod-x="54%" data-mod-y="38%" data-mod-r="260px" data-mod-spec="Carbon-Titanium Cranial Weave • 0.14 ms Synaptic Bridge">Module 01 • Cranial Weave</button>
+          <button type="button" class="${p}-mod-btn" data-mod-name="Ocular Telemetry" data-mod-x="48%" data-mod-y="30%" data-mod-r="310px" data-mod-spec="Multi-Spectrum Retinal HUD • 120 Hz Low-Light Array">Module 02 • Ocular HUD</button>
+          <button type="button" class="${p}-mod-btn" data-mod-name="Full Exoskeleton" data-mod-x="50%" data-mod-y="50%" data-mod-r="480px" data-mod-spec="Sub-Dermal Myomer Mesh • 95% Repeat Member Biocompatibility">Module 03 • Full Reveal</button>
+        </div>
+
+        <div id="records" class="${p}-grid-3">
+          <article class="${p}-card" id="biotech">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">ACTIVE MODULE</div>
+            <h3 id="modTitleOut" style="font-size:19px;font-weight:700;margin-top:8px;">Optical X-Ray</h3>
+            <p id="modSpecOut" style="font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;">
+              Carbon-Titanium Cranial Weave • 0.14 ms Synaptic Bridge
+            </p>
+          </article>
+          <article class="${p}-card">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">APERTURE RADIUS</div>
+            <div id="modRadiusOut" class="tabular-nums" style="font-size:28px;font-weight:700;color:var(--accent-text);margin-top:8px;">260px</div>
+            <p style="font-size:12.5px;color:var(--muted);margin-top:6px;">10+ Years Real • 40+ Use Forms</p>
+          </article>
+          <article class="${p}-card" id="tiers">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">BIOCOMPATIBILITY TIER</div>
+            <div class="tabular-nums" style="font-size:28px;font-weight:700;margin-top:8px;">95%</div>
+            <p style="font-size:12.5px;color:var(--accent-text);margin-top:6px;">Repeat Members • Grade-V Titanium</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-footer">
+    <span>Cyberpunk Reveal — Carbon Fiber, Titanium &amp; Human Instinct</span>
+    <span class="tabular-nums">10+ Years Real • 40+ Use Forms • 95% Repeat Members</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-size:11.5px;color:var(--accent-text);font-weight:600;">AUGMENTATION RESERVATION</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-motion">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:700;margin-bottom:10px;">Reserve Your Enhancement Slot</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Schedule a biometric scan for our next-generation carbon fiber and titanium neural modules.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-connect" style="width:100%;margin:0;padding:13px;">Confirm Biometric Booking →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var modBtns = Array.prototype.slice.call(document.querySelectorAll('[data-mod-name]'));
+      var scanName = document.getElementById('scanLayerName');
+      var modTitle = document.getElementById('modTitleOut');
+      var modSpec = document.getElementById('modSpecOut');
+      var modRad = document.getElementById('modRadiusOut');
+      var idx = 0;
+
+      function applyMod(btn) {
+        modBtns.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var name = btn.getAttribute('data-mod-name') || 'Optical X-Ray';
+        var rx = btn.getAttribute('data-mod-x') || '54%';
+        var ry = btn.getAttribute('data-mod-y') || '38%';
+        var rr = btn.getAttribute('data-mod-r') || '260px';
+        var spec = btn.getAttribute('data-mod-spec') || '';
+        root.style.setProperty('--reveal-x', rx);
+        root.style.setProperty('--reveal-y', ry);
+        root.style.setProperty('--reveal-r', rr);
+        if (scanName) scanName.textContent = name;
+        if (modTitle) modTitle.textContent = name;
+        if (modSpec) modSpec.textContent = spec;
+        if (modRad) modRad.textContent = rr;
+      }
+
+      modBtns.forEach(function (btn, i) {
+        btn.addEventListener('click', function () {
+          idx = i;
+          applyMod(btn);
+        });
+      });
+
+      var scanBtn = document.getElementById('scanPulseBtn');
+      if (scanBtn && modBtns.length) {
+        scanBtn.addEventListener('click', function () {
+          idx = (idx + 1) % modBtns.length;
+          applyMod(modBtns[idx]);
+        });
+      }
+
+      // Autonomous gentle spotlight scan during hero entry (finite 8s loop)
+      var start = performance.now();
+      function autoScan(now) {
+        var elapsed = (now - start) / 1000;
+        if (elapsed > 8) return;
+        if (document.documentElement.getAttribute('data-motion') !== 'paused') {
+          var x = 50 + Math.sin(elapsed * 1.4) * 14;
+          var y = 42 + Math.cos(elapsed * 1.1) * 10;
+          root.style.setProperty('--reveal-x', x.toFixed(1) + '%');
+          root.style.setProperty('--reveal-y', y.toFixed(1) + '%');
+        }
+        requestAnimationFrame(autoScan);
+      }
+      requestAnimationFrame(autoScan);
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   return null;
 }

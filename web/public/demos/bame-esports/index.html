@@ -99,7 +99,7 @@
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="bam59-poly-outline" style="padding:8px 16px;font-size:12px;" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="bam59-poly-btn" data-magnetic>JOIN TOURNAMENT ↗</button>
+      <button type="button" id="exploreMagneticBtn" class="bam59-poly-btn">JOIN TOURNAMENT ↗</button>
     </div>
   </header>
 
@@ -114,7 +114,7 @@
           Enter high-stakes global brackets with real-time anti-cheat telemetry, instant smart-contract prize payouts, and 240Hz cloud spectator arenas.
         </p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <button type="button" class="bam59-poly-btn" data-magnetic onclick="document.getElementById('bameModal').classList.add('is-open')">EXPLORE MORE ↗</button>
+          <button type="button" class="bam59-poly-btn" onclick="document.getElementById('bameModal').classList.add('is-open')">EXPLORE MORE ↗</button>
           <a href="#ourGames" class="bam59-poly-outline" style="text-decoration:none;">VIEW BRACKETS</a>
         </div>
       </div>
@@ -213,14 +213,6 @@
         paused = !paused;
         btn.textContent = paused ? 'Motion: PAUSED' : 'Motion: ON';
       });
-      document.querySelectorAll('[data-magnetic]').forEach(function(el){
-        el.addEventListener('mousemove', function(e){
-          if (paused) return;
-          var r = el.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.22;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.22;
-          el.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px,0)';
-        });
         el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
       });
       var expBtn = document.getElementById('exploreMagneticBtn');

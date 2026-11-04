@@ -1,4 +1,4 @@
-# Customisation Guide — Retro-Futurist (`retro-futurist`)
+# Customisation Guide — Mainframe® (`retro-futurist`)
 
 This guide covers every editable token, copy block, media asset, and interactive module in `index.html`, verified against the **ForgeScore v2.0** product standard.
 
@@ -6,19 +6,19 @@ This guide covers every editable token, copy block, media asset, and interactive
 
 | File | Literal String | Count | Purpose |
 | :--- | :--- | :---: | :--- |
-| `index.html` | `Hey there, meet A.R.I.A,` | 1 | Editable template copy / token |
-| `index.html` | `Glad you stopped in. Good taste tends to find us. Now, what are we building?` | 2 | Editable template copy / token |
+| `index.html` | `Mainframe®` | 4 | Primary brand name & title across header, hero, and footer |
 | `index.html` | `--bg:` | 1 | Primary canvas background token in :root |
 | `index.html` | `--accent:` | 1 | Primary interactive accent token in :root |
 | `index.html` | `--font-display:` | 1 | Display heading font family token in :root |
 | `index.html` | `id="motionToggleBtn"` | 1 | In-session motion pause/resume accessibility toggle |
+| `index.html` | `id="seamlessModal"` | 1 | Interactive specification modal / drawer dialog |
 
 ---
 
 ## 10-Step Customisation Walkthrough
 
 ### Step 1: Update Brand Name, Page Title & Meta Tags
-Open `index.html` and search for `Retro-Futurist` inside the `<title>`, `<meta name="description">`, `<header>` wordmark, and `<footer>` copyright notice to replace them with your brand identity.
+Open `index.html` and search for `Mainframe®` inside the `<title>`, `<meta name="description">`, `<header>` wordmark, and `<footer>` copyright notice to replace them with your brand identity.
 
 ### Step 2: Configure the 3-Layer CSS Design Tokens
 Locate the `:root` block inside `<style>` and adjust `--bg`, `--surface`, `--surface-elevated`, `--fg`, `--muted`, `--accent`, `--accent-text`, `--accent-strong`, and `--on-accent` to re-skin the entire interface in one place.
@@ -53,7 +53,7 @@ All animations run smoothly by default using hardware-accelerated `transform` an
 
 ### Prompt 1: Complete Brand & Palette Re-Skin
 ```text
-Update index.html for "Retro-Futurist" (retro-futurist) to rebrand it for [YOUR BRAND NAME]. Change the :root CSS tokens (--bg, --surface, --fg, --accent, --accent-text, --on-accent) to a [DARK/LIGHT] palette using [PRIMARY HEX] and [ACCENT HEX], while keeping WCAG AA contrast on all buttons and badges.
+Update index.html for "Mainframe®" (retro-futurist) to rebrand it for [YOUR BRAND NAME]. Change the :root CSS tokens (--bg, --surface, --fg, --accent, --accent-text, --on-accent) to a [DARK/LIGHT] palette using [PRIMARY HEX] and [ACCENT HEX], while keeping WCAG AA contrast on all buttons and badges.
 ```
 
 ### Prompt 2: Hero Headline & Subheadline Rewrite

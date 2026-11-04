@@ -93,7 +93,7 @@
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="min70-badge" style="cursor:pointer;" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="min70-btn-white" data-magnetic>Book A Call</button>
+      <button type="button" id="exploreMagneticBtn" class="min70-btn-white">Book A Call</button>
     </div>
   </header>
 
@@ -135,7 +135,7 @@
 
       <div class="min70-grid-3">
         <!-- Card 1: Bar Chart -->
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <div style="height:170px;display:flex;align-items:flex-end;justify-content:space-around;padding:20px 16px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;">
             <div style="text-align:center;width:24%;">
               <div style="height:110px;background:rgba(255,255,255,0.85);border-radius:6px 6px 0 0;"></div>
@@ -157,7 +157,7 @@
         </article>
 
         <!-- Card 2: AI Platform Nodes -->
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <div style="height:170px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;padding:16px;">
             <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
               <span class="min70-badge">ChatGPT</span><span class="min70-badge">Perplexity</span><span class="min70-badge">Claude</span><span class="min70-badge">Gemini</span>
@@ -172,7 +172,7 @@
         </article>
 
         <!-- Card 3: Channel Comparison -->
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <div style="height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;padding:18px;">
             <div>
               <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span>Email Newsletter</span><strong>42.0%</strong></div>
@@ -212,22 +212,22 @@
         </h2>
       </div>
       <div class="min70-grid-4">
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <span style="font-size:12px;color:var(--muted);">01 / EXTRACTION</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">Voice Capture Call</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">One 20-minute recorded interview per month extracts your contrarian stories, frameworks, and client wins.</p>
         </article>
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <span style="font-size:12px;color:var(--muted);">02 / SYNTHESIS</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">Voice-Matched Drafting</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Editorial strategists + custom style models craft 4 deep-dive issues calibrated to your exact cadence.</p>
         </article>
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <span style="font-size:12px;color:var(--muted);">03 / CITATION</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">AI Search Indexing</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Structured schema and cross-syndication ensure ChatGPT and Perplexity cite your domain first.</p>
         </article>
-        <article class="min70-card min70-reveal" data-tilt-card>
+        <article class="min70-card min70-reveal">
           <span style="font-size:12px;color:var(--muted);">04 / MONETIZATION</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">Pipeline Conversion</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Soft-CTA conversion loops route high-intent subscribers straight onto your calendar.</p>
@@ -358,41 +358,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('min70Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

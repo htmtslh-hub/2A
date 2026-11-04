@@ -7,8 +7,6 @@ This guide covers every editable token, copy block, media asset, and interactive
 | File | Literal String | Count | Purpose |
 | :--- | :--- | :---: | :--- |
 | `index.html` | `Network Hero` | 13 | Primary brand name & title across header, hero, and footer |
-| `index.html` | `Network Hero — Next-Gen Interactive System` | 4 | Editable template copy / token |
-| `index.html` | `Unlock Top Marketing Talent You Thought Was Out of Reach -- Now Just One Click Away!` | 5 | Editable template copy / token |
 | `index.html` | `--font-display:` | 1 | Display heading font family token in :root |
 | `index.html` | `id="motionToggleBtn"` | 1 | In-session motion pause/resume accessibility toggle |
 | `index.html` | `id="seamlessModal"` | 1 | Interactive specification modal / drawer dialog |

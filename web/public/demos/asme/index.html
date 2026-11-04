@@ -17,11 +17,6 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: #000; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .asm71-cursor-ring, .asm71-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .asm71-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .asm71-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
-    .asm71-cursor-dot { width: 6px; height: 6px; background: #f59e0b; margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .asm71-cursor-ring, .asm71-cursor-dot { display: none; } }
 
     /* Authentic Liquid Glass CSS from Asme Specification */
     .liquid-glass {
@@ -121,8 +116,6 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="asm71-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="asm71-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section id="heroStage" class="asm71-hero">
@@ -140,37 +133,37 @@
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
           <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-          <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;" data-magnetic data-next-preview>Login</button>
+          <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;" data-next-preview>Login</button>
         </div>
       </header>
 
       <div class="asm71-center" data-parallax="0.07">
         <h1 class="asm71-serif-h1" id="oversizedHeadline">Built for the curious</h1>
-        <div id="heroPopoutRig" class="asm71-cutout-wrap" data-tilt-card style="filter:url(#asm71LiquidFilter);">
+        <div id="heroPopoutRig" class="asm71-cutout-wrap" style="filter:url(#asm71LiquidFilter);">
           <img class="asm71-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/asme/assets/cutout.webp'" alt="Asme 3D Cutout" loading="eager" decoding="async" />
         </div>
         <form class="asm71-email-bar liquid-glass" onsubmit="event.preventDefault();">
           <input type="email" class="asm71-email-input" placeholder="Enter your email" aria-label="Enter your email" />
-          <button type="submit" class="asm71-email-submit" data-magnetic data-seamless-trigger="Subscribed to Asme Curiosity Dispatch" aria-label="Subscribe">→</button>
+          <button type="submit" class="asm71-email-submit" data-seamless-trigger="Subscribed to Asme Curiosity Dispatch" aria-label="Subscribe">→</button>
         </form>
         <p style="font-size:14px;color:var(--muted);line-height:1.6;max-width:480px;margin:0 auto 18px;">
           Stay updated with the latest news and insights. Subscribe to our newsletter today and never miss out on exciting updates.
         </p>
-        <button type="button" class="liquid-glass" style="color:#fff;padding:12px 32px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;" data-magnetic data-seamless-trigger="The Asme Curiosity Manifesto">
+        <button type="button" class="liquid-glass" style="color:#fff;padding:12px 32px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;" data-seamless-trigger="The Asme Curiosity Manifesto">
           Manifesto
         </button>
       </div>
 
       <div style="position:relative;z-index:10;display:flex;justify-content:center;gap:16px;padding-bottom:8px;">
-        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Instagram" data-magnetic>IG</button>
-        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Twitter" data-magnetic>𝕏</button>
-        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Globe" data-magnetic>🌐</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Instagram">IG</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Twitter">𝕏</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Globe">🌐</button>
       </div>
     </section>
 
     <section id="pinnedSpecs" class="asm71-section">
       <div class="asm71-pinned-grid">
-        <article class="asm71-card liquid-glass asm71-reveal" data-tilt-card data-spec-index="001">
+        <article class="asm71-card liquid-glass asm71-reveal" data-spec-index="001">
           <span style="font-size:11px;color:#f59e0b;font-weight:700;">001 / LIQUID GLASS OPTICS</span>
           <strong data-counter-target="120" data-counter-suffix="Hz" style="display:block;font-size:34px;margin:6px 0;">120Hz</strong>
           <p style="font-size:13px;color:var(--muted);">Luminosity blend-mode refraction with 1.4px mask-composite specular border.</p>
@@ -179,7 +172,7 @@
           <img class="asm71-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/asme/assets/cutout.webp'" alt="Asme 3D Cutout" loading="eager" decoding="async" />
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#f59e0b;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="asm71-card liquid-glass asm71-reveal" data-tilt-card data-spec-index="003">
+        <article class="asm71-card liquid-glass asm71-reveal" data-spec-index="003">
           <span style="font-size:11px;color:#f59e0b;font-weight:700;">002 / CURIOSITY NETWORK</span>
           <strong data-counter-target="50" data-counter-suffix="K+" style="display:block;font-size:34px;margin:6px 0;">50K+</strong>
           <p style="font-size:13px;color:var(--muted);">Researchers, engineers, and designers receiving weekly spatial dispatches.</p>
@@ -292,41 +285,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('asm71Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

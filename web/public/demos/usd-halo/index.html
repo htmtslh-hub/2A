@@ -108,7 +108,7 @@
       </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.12);font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="usd97-btn-black" data-magnetic>Open Wallet</button>
+        <button type="button" id="exploreMagneticBtn" class="usd97-btn-black">Open Wallet</button>
       </div>
     </header>
 
@@ -120,7 +120,7 @@
         <p style="font-size:17px;color:rgba(0,0,0,0.72);max-width:420px;line-height:1.6;margin-bottom:28px;">
           An automated, reward-powered digital dollar built for native passive earnings and effortless connection into DeFi.
         </p>
-        <button type="button" class="usd97-btn-join" data-seamless-trigger="Mint USD Halo — Native Yield Stablecoin" data-magnetic>
+        <button type="button" class="usd97-btn-join" data-seamless-trigger="Mint USD Halo — Native Yield Stablecoin">
           <span>Join us</span>
           <span class="usd97-arrow-circle">→</span>
         </button>
@@ -161,19 +161,19 @@
       </div>
 
       <div class="usd97-bento-4">
-        <article class="usd97-card-bloom" data-tilt-card>
+        <article class="usd97-card-bloom">
           <h3 style="font-size:26px;font-weight:600;letter-spacing:-0.02em;">Savings that bloom</h3>
           <p style="font-size:16px;color:rgba(0,0,0,0.72);max-width:340px;line-height:1.55;">
             Gain steady returns as your dollar tokens are routed into top-performing DeFi strategies.
           </p>
         </article>
-        <article class="usd97-card-plum" data-tilt-card>
+        <article class="usd97-card-plum">
           <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Always fluid,<br>always pegged.</h3>
           <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
             Keep fully dollar-anchored with on-demand access to funds — no lockups or waits.
           </p>
         </article>
-        <article class="usd97-card-plum" data-tilt-card>
+        <article class="usd97-card-plum">
           <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Fully<br>automated</h3>
           <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
             Skip the task of tuning positions yourself. USD Halo runs in the background for you.
@@ -192,7 +192,7 @@
             USD Halo powers a wide range of modes for builders, companies and treasuries wanting safe and rewarding stablecoin integrations plus more.
           </p>
         </div>
-        <div class="usd97-commerce-card" data-tilt-card>
+        <div class="usd97-commerce-card">
           <video class="usd97-hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_183428_ab5e672a-f608-4dcb-b319-f3e040f02e2d.mp4" autoplay muted loop playsinline preload="auto"></video>
           <h3 style="font-size:clamp(34px,3.8vw,48px);font-weight:600;letter-spacing:-0.03em;margin-bottom:16px;color:#000;">Commerce</h3>
           <p style="font-size:16px;color:rgba(0,0,0,0.74);max-width:420px;line-height:1.6;margin-bottom:28px;">
@@ -310,41 +310,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('usd97Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

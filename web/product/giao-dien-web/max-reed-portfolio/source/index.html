@@ -21,11 +21,6 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .max21-cursor-ring, .max21-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .max21-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .max21-cursor-ring.is-hovered { width: 56px; height: 56px; margin: -28px 0 0 -28px; background: #fff; }
-    .max21-cursor-dot { width: 6px; height: 6px; background: var(--green); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .max21-cursor-ring, .max21-cursor-dot { display: none; } }
 
     .max21-bento-stage {
       max-width: 1440px; width: 100%; margin: 0 auto; padding: 14px; min-height: 100vh;
@@ -97,14 +92,12 @@
   </style>
 </head>
 <body>
-  <div id="cursorRing" class="max21-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="max21-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section class="max21-bento-stage" aria-label="Max Reed Bento Portfolio">
       <!-- LEFT COLUMN (28%) -->
       <div class="max21-col">
-        <article class="max21-card-teal" style="flex: 0 0 42%;" data-tilt-card>
+        <article class="max21-card-teal" style="flex: 0 0 42%;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="max21-pill">✦ 12+ Design Awards</span>
             <button type="button" id="motionToggleBtn" class="max21-pill" aria-pressed="false">Motion: ON</button>
@@ -116,11 +109,11 @@
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid rgba(255,255,255,0.14);">
             <span style="font-size:13px;color:rgba(255,255,255,0.85);">max@studio.com</span>
-            <button type="button" class="max21-pill" data-seamless-trigger="Contact Max Reed — Direct Studio Inquiry" data-magnetic>Copy Email ↗</button>
+            <button type="button" class="max21-pill" data-seamless-trigger="Contact Max Reed — Direct Studio Inquiry">Copy Email ↗</button>
           </div>
         </article>
 
-        <article class="max21-card-dark" style="flex: 1;" data-tilt-card>
+        <article class="max21-card-dark" style="flex: 1;">
           <div>
             <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);">Interactive Craft &amp; Stack</span>
             <p style="font-size: 16px; font-weight: 500; line-height: 1.45; color: #ededed; margin-top: 10px;">
@@ -151,7 +144,7 @@
           </nav>
         </header>
 
-        <div class="max21-portrait-card" data-tilt-card>
+        <div class="max21-portrait-card">
           <video id="heroBgVideo" class="max21-portrait-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_150203_44a5bd32-516a-47ce-a077-8acbf9aa8991.mp4" autoplay loop muted playsinline preload="auto"></video>
           <div class="max21-portrait-grad"></div>
           <div style="position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;">
@@ -173,7 +166,7 @@
 
       <!-- RIGHT COLUMN (28%) -->
       <div class="max21-col">
-        <article class="max21-card-dark" style="flex: 1;" data-tilt-card>
+        <article class="max21-card-dark" style="flex: 1;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span style="font-size:16px;font-weight:600;">Work</span>
             <a href="#workShowcase" style="font-size:13px;color:var(--muted);text-decoration:none;">Show more ↗</a>
@@ -187,14 +180,14 @@
               <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:46px;letter-spacing:-0.02em;">Nola</span>
             </div>
             <div style="display:flex;justify-content:flex-end;">
-              <button type="button" id="exploreMagneticBtn" class="max21-pill" data-magnetic data-seamless-trigger="Nola — Interactive Web Design Case Study">
+              <button type="button" id="exploreMagneticBtn" class="max21-pill" data-seamless-trigger="Nola — Interactive Web Design Case Study">
                 View Project ↗
               </button>
             </div>
           </div>
         </article>
 
-        <article class="max21-card-teal" style="flex: 0 0 38%;" data-tilt-card>
+        <article class="max21-card-teal" style="flex: 0 0 38%;">
           <div>
             <strong style="font-size: clamp(40px, 3.8vw, 52px); font-weight: 700; line-height: 1; display: block;" data-counter-target="10" data-counter-suffix="M+">10M+</strong>
             <span style="font-size: 14px; color: rgba(255,255,255,0.8); margin-top: 6px; display: block;">Raised for startups</span>
@@ -225,17 +218,17 @@
         <span id="scrollScrubReadout" class="max21-pill">SCRUB 0% • 0.0°</span>
       </div>
       <div class="max21-case-grid">
-        <article class="max21-card-dark max21-reveal" data-tilt-card data-spec-index="001" data-seamless-trigger="01 / Nola Spatial Commerce">
+        <article class="max21-card-dark max21-reveal" data-spec-index="001" data-seamless-trigger="01 / Nola Spatial Commerce">
           <span style="font-size:12px;color:var(--green);">001 / SPATIAL COMMERCE</span>
           <h3 style="font-size:22px;margin:10px 0 6px;">Nola Interactive Flagship</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.55;">Led design systems and WebGL product storytelling, lifting checkout conversion by 41%.</p>
         </article>
-        <article class="max21-card-dark max21-reveal" data-tilt-card data-spec-index="002" data-seamless-trigger="02 / Kinetix AI OS">
+        <article class="max21-card-dark max21-reveal" data-spec-index="002" data-seamless-trigger="02 / Kinetix AI OS">
           <span style="font-size:12px;color:var(--green);">002 / SERIES A FINTECH</span>
           <h3 style="font-size:22px;margin:10px 0 6px;">Kinetix Treasury OS</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.55;">Zero-latency bento workspace that helped secure $6.4M seed-to-Series-A institutional backing.</p>
         </article>
-        <article class="max21-card-dark max21-reveal" data-tilt-card data-spec-index="003" data-seamless-trigger="03 / Vespera Audio Synth">
+        <article class="max21-card-dark max21-reveal" data-spec-index="003" data-seamless-trigger="03 / Vespera Audio Synth">
           <span style="font-size:12px;color:var(--green);">003 / HARDWARE INTERFACE</span>
           <h3 style="font-size:22px;margin:10px 0 6px;">Vespera Spatial Synth</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.55;">Tactile browser companion app recognized with FWA &amp; Awwwards Site of the Day.</p>
@@ -351,41 +344,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('max21Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

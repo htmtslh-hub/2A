@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-04T00:13:55.693Z",
+  "updatedAt": "2026-11-04T00:24:36.780Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -53,18 +53,18 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1U4VthBHKhd7M5Z2ofWzY0nlaXQsk58RF",
       "webViewUrl": "https://drive.google.com/file/d/1U4VthBHKhd7M5Z2ofWzY0nlaXQsk58RF/view",
-      "sizeBytes": 13554,
-      "sha256": "de3a891c39749bf2cf5f034f3dc734924ff9e3ac1299258cbb8c72cb8bf0fbdd",
-      "updatedAt": "2026-10-30T14:12:40.556Z"
+      "sizeBytes": 12957,
+      "sha256": "619acf269cb56f47ee2883dcd4a361da5a64edecbc7e574cafd0f615cf72b313",
+      "updatedAt": "2026-11-04T00:21:42.404Z"
     },
     "subscription-agency": {
       "fileId": "1cnJ9LX7-t0ez7yoyG6I_nrvbFFSYksfk",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1cnJ9LX7-t0ez7yoyG6I_nrvbFFSYksfk",
       "webViewUrl": "https://drive.google.com/file/d/1cnJ9LX7-t0ez7yoyG6I_nrvbFFSYksfk/view",
-      "sizeBytes": 12542,
-      "sha256": "cc75e007c41366649ba426ac7e6e0bdb1aef5e1fe7055b271f47fb40e118d687",
-      "updatedAt": "2026-10-30T14:12:40.566Z"
+      "sizeBytes": 11968,
+      "sha256": "36548203919c47ec635e909eb3e38935fe309b60156566b584df53cf3af49a4b",
+      "updatedAt": "2026-11-04T00:23:13.024Z"
     },
     "dotdna-cyber": {
       "fileId": "1yaEetdvf-rPiqz-aJa8eecSzprAjk5BO",
@@ -89,9 +89,9 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1Rf9kxF-MlaZK-LWkdOnjhfS6TJ9aM7Qj",
       "webViewUrl": "https://drive.google.com/file/d/1Rf9kxF-MlaZK-LWkdOnjhfS6TJ9aM7Qj/view",
-      "sizeBytes": 14878,
-      "sha256": "b5dfda388be9c36ea7b43f5f2f5cdfbe9de72b5bd70bc226426de3c122be5eae",
-      "updatedAt": "2026-10-30T14:12:42.439Z"
+      "sizeBytes": 14305,
+      "sha256": "3d0acc6513d4b7f735e4b4fb37f35b7a5249c150eac40b4cabb0d9cb8898c8fa",
+      "updatedAt": "2026-11-04T00:21:53.130Z"
     },
     "cybr-brutalism": {
       "fileId": "1DbLNGDfeXPkHu1lv2tP6_1qRP83dSyrO",
@@ -116,9 +116,9 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1RIdSomPhNVziJtg-bf3Euhen1nWsWUOO",
       "webViewUrl": "https://drive.google.com/file/d/1RIdSomPhNVziJtg-bf3Euhen1nWsWUOO/view",
-      "sizeBytes": 13812,
-      "sha256": "18fa90fd5dfa3dd2506f15eaea46f563c4be7218632b6e692c12de81fa85763c",
-      "updatedAt": "2026-10-30T14:12:42.459Z"
+      "sizeBytes": 13201,
+      "sha256": "561f7849b92220faf9dd6ae4022b4157c98a1eaf3d7f4bca3da3870a3c38daeb",
+      "updatedAt": "2026-11-04T00:21:55.112Z"
     },
     "hush-futurist-bags": {
       "fileId": "1_PspEtwLkKCxx2h0gbETb8nbWoeJq9cs",
@@ -143,9 +143,9 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1GJ-nsVeUa9ZCp37VkrRfJ6nwbhsLUtGp",
       "webViewUrl": "https://drive.google.com/file/d/1GJ-nsVeUa9ZCp37VkrRfJ6nwbhsLUtGp/view",
-      "sizeBytes": 14037,
-      "sha256": "3526ba86d6cb33efcefdf14adaff9e004363319bdfab75a5ad868d80355b055b",
-      "updatedAt": "2026-10-30T14:12:42.648Z"
+      "sizeBytes": 13436,
+      "sha256": "4cb952879b3cc17facac56a10ff21b42df716d0e7d7ab3da46db8250f4195549",
+      "updatedAt": "2026-11-04T00:21:50.998Z"
     },
     "swatch-luxury-chronograph": {
       "fileId": "1CT7XICD0GO1ijib9yUwuDXbgifudnCuH",
@@ -161,9 +161,9 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1ILBEon3Vat1d2Um41Wm3is8gdU4xmdAP",
       "webViewUrl": "https://drive.google.com/file/d/1ILBEon3Vat1d2Um41Wm3is8gdU4xmdAP/view",
-      "sizeBytes": 15288,
-      "sha256": "de1ad3e67618310190a848a3a64a3a63aaa5127367a33304cb3501bf91a83ffc",
-      "updatedAt": "2026-10-30T14:12:44.360Z"
+      "sizeBytes": 14641,
+      "sha256": "806a8cecea67f42e0073959c6cde74dc1cd9c695a0b87560102c97bb94de15fc",
+      "updatedAt": "2026-11-04T00:21:48.942Z"
     },
     "industrix-engineering": {
       "fileId": "1bgoXUS30QYBQIhhCrVf4cnYL-E_dkV0X",
@@ -179,9 +179,9 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1NsXm5iIt0TY0rvvby7wKFcD9MVQkK26K",
       "webViewUrl": "https://drive.google.com/file/d/1NsXm5iIt0TY0rvvby7wKFcD9MVQkK26K/view",
-      "sizeBytes": 8325,
-      "sha256": "6c83cee0bc0bb189e023e25b63db332fc20ca8551d2ca9c9cc522f4b9c23415b",
-      "updatedAt": "2026-10-30T14:12:44.516Z"
+      "sizeBytes": 10645,
+      "sha256": "424a02a28357362cbfbffea46b304d9d986c1b12dca56a8bd208195bf81f0572",
+      "updatedAt": "2026-11-04T00:23:04.424Z"
     },
     "flash-rocky-mountain": {
       "fileId": "109He60ebaM4NEnw1m21NemLZv3a6AIFK",
@@ -197,9 +197,9 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1FkFlVtfQl-M6BvLKWaORkSqOlC5faR_P",
       "webViewUrl": "https://drive.google.com/file/d/1FkFlVtfQl-M6BvLKWaORkSqOlC5faR_P/view",
-      "sizeBytes": 7375,
-      "sha256": "fde2fbaab283e6aaa87c8698094d9080604ffe98b8581e26539afd9271785b96",
-      "updatedAt": "2026-10-30T14:12:44.539Z"
+      "sizeBytes": 9729,
+      "sha256": "0a172249557ad51866e0d2472817558fec9d5686590449b8cc3e8f25070a04e3",
+      "updatedAt": "2026-11-04T00:22:26.669Z"
     },
     "steary-spatial-cinema": {
       "fileId": "1HdJVboTHkMJyFLBpeUp9NZiu9AwSP0of",
@@ -224,9 +224,9 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1C9hQAEuPvgpACnGokR5tm1Kys3FqrMm4",
       "webViewUrl": "https://drive.google.com/file/d/1C9hQAEuPvgpACnGokR5tm1Kys3FqrMm4/view",
-      "sizeBytes": 7001,
-      "sha256": "ca5a4c95e2386ce75911861bdd5e1a58f8b7bacbe282002d543090012a4c431c",
-      "updatedAt": "2026-10-30T14:12:46.239Z"
+      "sizeBytes": 9334,
+      "sha256": "fe8d14fff062aa5b6a699fb3ebc23a12b21b550f7d8f706c0be4cf091f0a602b",
+      "updatedAt": "2026-11-04T00:21:44.476Z"
     },
     "japan-sunrise-tour": {
       "fileId": "1gmwP0L2EJ-t9PXF4nFjDMDt41HYc_XNx",
@@ -242,9 +242,9 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1DtAyDjzDsH-I40URg4WM87FpzBHsDS5O",
       "webViewUrl": "https://drive.google.com/file/d/1DtAyDjzDsH-I40URg4WM87FpzBHsDS5O/view",
-      "sizeBytes": 7367,
-      "sha256": "4dff5716d8ec40cede567c98fd42d6859f120ccf1aa41c26398087758ce5d1d0",
-      "updatedAt": "2026-10-30T14:12:46.492Z"
+      "sizeBytes": 9709,
+      "sha256": "cec06f61031af6a0f649b3d1cfb59db75a5fbba2157297fe63700c9de0ad88fe",
+      "updatedAt": "2026-11-04T00:23:10.893Z"
     },
     "fischer-motorsport": {
       "fileId": "1CnTReYkBX484ERfgahqE10XdijAtleXS",
@@ -260,27 +260,27 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1pQquaRJcPpBXgGlVrXQVrdWLe9oMAFFk",
       "webViewUrl": "https://drive.google.com/file/d/1pQquaRJcPpBXgGlVrXQVrdWLe9oMAFFk/view",
-      "sizeBytes": 7224,
-      "sha256": "558e418344d54fa7a2dc27fb3ea44eaf2c029752eb45a705b6fb7d9522fff452",
-      "updatedAt": "2026-10-30T14:12:46.586Z"
+      "sizeBytes": 9564,
+      "sha256": "3a53e1a74bbe9c08fe46aec16a55a8c87e59e03d871053b4b2502e593455ca0e",
+      "updatedAt": "2026-11-04T00:23:15.090Z"
     },
     "tripg-ocean": {
       "fileId": "1l_AkULh3HIXTZRDx2rFaBQ1I0h6_yDhQ",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1l_AkULh3HIXTZRDx2rFaBQ1I0h6_yDhQ",
       "webViewUrl": "https://drive.google.com/file/d/1l_AkULh3HIXTZRDx2rFaBQ1I0h6_yDhQ/view",
-      "sizeBytes": 111748,
-      "sha256": "4a446831123645e2225601fa5f1a7ee52e2828a2a16cfc5269eb18c85041de62",
-      "updatedAt": "2026-10-30T14:12:46.819Z"
+      "sizeBytes": 114452,
+      "sha256": "0bd26389e0c3e0c10e5bc28a600a6efbd630439319152dfc5fc914796c707d94",
+      "updatedAt": "2026-11-04T00:23:23.532Z"
     },
     "apex-squad-light": {
       "fileId": "1frAbepdpnWNEPfjinble6iR70sKCtGuo",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1frAbepdpnWNEPfjinble6iR70sKCtGuo",
       "webViewUrl": "https://drive.google.com/file/d/1frAbepdpnWNEPfjinble6iR70sKCtGuo/view",
-      "sizeBytes": 192621,
-      "sha256": "974d1ddc5fea0b05d4e9ae8926ef7726505fbf15b44390c7cd4a32c4202ccfd8",
-      "updatedAt": "2026-10-30T14:12:46.875Z"
+      "sizeBytes": 195332,
+      "sha256": "9d0743833e755a7d87eba70fa17103de3b4133b84204ba78297b8382bb7883cf",
+      "updatedAt": "2026-11-04T00:21:22.785Z"
     },
     "litera-bookstore": {
       "fileId": "1Zl5LwbkHBuhfUz2yT-H8I5fZMgn23j5O",
@@ -296,45 +296,45 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1U66niUgJikd48yPuz5aoeqJWVllzIWgD",
       "webViewUrl": "https://drive.google.com/file/d/1U66niUgJikd48yPuz5aoeqJWVllzIWgD/view",
-      "sizeBytes": 7934,
-      "sha256": "33029b054867ea5f46e7e23f283dc11948030a7a1790598154170d0b0e6a3e0f",
-      "updatedAt": "2026-10-30T14:12:48.077Z"
+      "sizeBytes": 10278,
+      "sha256": "58f697b7e93100b4256078dd4bb99f7b3eeba1277d261205b4012a5482da61fb",
+      "updatedAt": "2026-11-04T00:23:26.132Z"
     },
     "transform-data": {
       "fileId": "119QY3cM1tnpzGwrOTvjv42qMB-q7HFSl",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=119QY3cM1tnpzGwrOTvjv42qMB-q7HFSl",
       "webViewUrl": "https://drive.google.com/file/d/119QY3cM1tnpzGwrOTvjv42qMB-q7HFSl/view",
-      "sizeBytes": 14118,
-      "sha256": "94a4b03875ed33c92b48aa8d851863a2b5b5077f344f2818165261f08d0f6ee1",
-      "updatedAt": "2026-10-30T14:12:48.180Z"
+      "sizeBytes": 13509,
+      "sha256": "62046623514e137465f37ad4a5d594af30a8dbf1f3128e6b676d16b8c131686c",
+      "updatedAt": "2026-11-04T00:23:19.461Z"
     },
     "power-ai": {
       "fileId": "1VO-WPVWMEfExVnBPQi_e5PAT0R9JsxL8",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1VO-WPVWMEfExVnBPQi_e5PAT0R9JsxL8",
       "webViewUrl": "https://drive.google.com/file/d/1VO-WPVWMEfExVnBPQi_e5PAT0R9JsxL8/view",
-      "sizeBytes": 7574,
-      "sha256": "1fb932df993e183c19c399e2d1deed8e03d4d148e1d80c32f14e99e3b02477b2",
-      "updatedAt": "2026-10-30T14:12:48.335Z"
+      "sizeBytes": 9917,
+      "sha256": "50171cda91aae72df1c23f3f886376b4f3edc03b75e3325848132a19f7d94a0a",
+      "updatedAt": "2026-11-04T00:22:51.030Z"
     },
     "luminex": {
       "fileId": "120vQ8XRayCtPpM8hA73mc28bWhRzVB77",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=120vQ8XRayCtPpM8hA73mc28bWhRzVB77",
       "webViewUrl": "https://drive.google.com/file/d/120vQ8XRayCtPpM8hA73mc28bWhRzVB77/view",
-      "sizeBytes": 7326,
-      "sha256": "0856d875277640b11f45129e81f5f79376579ba0aadb0e51e2c48bc331158c5d",
-      "updatedAt": "2026-10-30T14:12:48.397Z"
+      "sizeBytes": 9681,
+      "sha256": "a0e0be781e68583bcbe02f1ae2df31228f9530b99d2ab3aca4b4821d28194685",
+      "updatedAt": "2026-11-04T00:22:11.396Z"
     },
     "bloom-ai": {
       "fileId": "1pTur7Sb2-k_ItMIBArviTcb2-Y5jU9f8",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1pTur7Sb2-k_ItMIBArviTcb2-Y5jU9f8",
       "webViewUrl": "https://drive.google.com/file/d/1pTur7Sb2-k_ItMIBArviTcb2-Y5jU9f8/view",
-      "sizeBytes": 7119,
-      "sha256": "a6d8a8383a4c55f1ad254e89c442bf8c28b8fc59c2042a33f58354f215cc11c3",
-      "updatedAt": "2026-10-30T14:12:48.525Z"
+      "sizeBytes": 9454,
+      "sha256": "c747ead807cb6ad17c85c2f94e2c9663735815f9279520c854350fa34acf0bdb",
+      "updatedAt": "2026-11-04T00:21:31.869Z"
     },
     "alex-carter-ui": {
       "fileId": "1tDwir3BPUMaEIJeW6AoyzuxY_AdHgkbz",
@@ -350,9 +350,9 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1LllEeTh68sVZNXy_eQts7czdVA5nmmSi",
       "webViewUrl": "https://drive.google.com/file/d/1LllEeTh68sVZNXy_eQts7czdVA5nmmSi/view",
-      "sizeBytes": 84428,
-      "sha256": "a01d2396e00e34c395841de8ddee336e4f44072a3cd926500f1e7f45319af2c1",
-      "updatedAt": "2026-10-30T14:12:48.886Z"
+      "sizeBytes": 86953,
+      "sha256": "198d5000764b0fd3e40b9b3a0770e1a93a0692a750c3ec12aedca0bb8e9bfcbf",
+      "updatedAt": "2026-11-04T00:22:33.590Z"
     },
     "apex-upheaval": {
       "fileId": "1YM_QTmNlnCIh_bAG5G8g8-orQWKPet_e",
@@ -368,144 +368,144 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1gU3UPY-H0DE5PLB2qvWUggf-flkNc1pO",
       "webViewUrl": "https://drive.google.com/file/d/1gU3UPY-H0DE5PLB2qvWUggf-flkNc1pO/view",
-      "sizeBytes": 207162,
-      "sha256": "60f8d73c6d638ac16147dce23275af0ac4477de40706ef8c244488d6db24f5c1",
-      "updatedAt": "2026-10-30T14:12:49.966Z"
+      "sizeBytes": 209734,
+      "sha256": "f234a24b2178fb6855ab01f4d22393b9fe1e5e1bf409814b351b60433cfe81b9",
+      "updatedAt": "2026-11-04T00:21:27.477Z"
     },
     "codenest-coding-platform": {
       "fileId": "1KwQpCZajZXbNDN8oQyO6t_Zt58e7-APA",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1KwQpCZajZXbNDN8oQyO6t_Zt58e7-APA",
       "webViewUrl": "https://drive.google.com/file/d/1KwQpCZajZXbNDN8oQyO6t_Zt58e7-APA/view",
-      "sizeBytes": 7798,
-      "sha256": "590439d59f1819c217dd2753b2b13be7128e5f376eff08081bfaed9922c1b865",
-      "updatedAt": "2026-10-30T14:12:50.076Z"
+      "sizeBytes": 10144,
+      "sha256": "8d17934b9da3e06cd3bac12026b2bd034b391f28d2083f7fbebdc262e3a2a752",
+      "updatedAt": "2026-11-04T00:21:38.137Z"
     },
     "digital-kensei": {
       "fileId": "1nrFK_7WN3eOve6f0daOXK9WL5tW7mO8E",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1nrFK_7WN3eOve6f0daOXK9WL5tW7mO8E",
       "webViewUrl": "https://drive.google.com/file/d/1nrFK_7WN3eOve6f0daOXK9WL5tW7mO8E/view",
-      "sizeBytes": 199534,
-      "sha256": "c41d6fb7d909907cc459300c3b07f847054a441235fa30f9402c3029f2541594",
-      "updatedAt": "2026-10-30T14:12:50.258Z"
+      "sizeBytes": 202127,
+      "sha256": "d5b8d80adb408a5725f7fa33fd2addae4006b6b5d0de149fbb2099e8bf11abfa",
+      "updatedAt": "2026-11-04T00:21:46.715Z"
     },
     "mindloop-landing": {
       "fileId": "1KLt8jUTyBlHXav8-QX1Ci8yopvosWvBg",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1KLt8jUTyBlHXav8-QX1Ci8yopvosWvBg",
       "webViewUrl": "https://drive.google.com/file/d/1KLt8jUTyBlHXav8-QX1Ci8yopvosWvBg/view",
-      "sizeBytes": 8896,
-      "sha256": "d4377f7470f28e34da70cfefeec34f77e3726387d89a29b286c757874746fad7",
-      "updatedAt": "2026-10-30T14:12:50.332Z"
+      "sizeBytes": 11250,
+      "sha256": "7c8153ac0625d3abc68cd9cec15073e4a666482c82ae5b457d0aed3484b18e73",
+      "updatedAt": "2026-11-04T00:22:20.705Z"
     },
     "max-reed-portfolio": {
       "fileId": "1FxuU8gkptXStdbIsI5BNccpaoRAyMONA",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1FxuU8gkptXStdbIsI5BNccpaoRAyMONA",
       "webViewUrl": "https://drive.google.com/file/d/1FxuU8gkptXStdbIsI5BNccpaoRAyMONA/view",
-      "sizeBytes": 8781,
-      "sha256": "ce97be44e522a0bfb8c342ace6d65986a33447cdbe60ee167d9e648a69c20136",
-      "updatedAt": "2026-10-30T14:12:50.382Z"
+      "sizeBytes": 10888,
+      "sha256": "a8f27c94f675113293f90f280992413d5f13cc5921168b7d41d061f29dbf07ae",
+      "updatedAt": "2026-11-04T00:22:13.443Z"
     },
     "portfolio-cosmic": {
       "fileId": "1FswHtMVbOXFy6JZuaz8bpZ_MIz-8a1iM",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1FswHtMVbOXFy6JZuaz8bpZ_MIz-8a1iM",
       "webViewUrl": "https://drive.google.com/file/d/1FswHtMVbOXFy6JZuaz8bpZ_MIz-8a1iM/view",
-      "sizeBytes": 200301,
-      "sha256": "5a5c1b00c6b75185a97dc11e7ed26466aef6cf79f41ed46b2ed4d976536c1ef6",
-      "updatedAt": "2026-10-30T14:12:50.708Z"
+      "sizeBytes": 202456,
+      "sha256": "2d3aff90fd55e63ad4c03757d936d19a156d30a53d5cbe844177056ec47044d8",
+      "updatedAt": "2026-11-04T00:22:48.926Z"
     },
     "orbis-nft": {
       "fileId": "1PL_K9ZsjCIql1QNEni04d_-n7XlhUG12",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1PL_K9ZsjCIql1QNEni04d_-n7XlhUG12",
       "webViewUrl": "https://drive.google.com/file/d/1PL_K9ZsjCIql1QNEni04d_-n7XlhUG12/view",
-      "sizeBytes": 250326,
-      "sha256": "e3bcadc2e60ab7d3aee2ae10e9c5119c4188f5548c7f871bc53df66b22c7150a",
-      "updatedAt": "2026-10-30T14:12:50.876Z"
+      "sizeBytes": 252476,
+      "sha256": "92ff011180c8a202bb3c5a965c941dc068f3018017904427a80ca57013257166",
+      "updatedAt": "2026-11-04T00:22:40.547Z"
     },
     "innovation": {
       "fileId": "1D-B4eMr-ItuXMeQ2Re8n8uSOE7LXu_us",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1D-B4eMr-ItuXMeQ2Re8n8uSOE7LXu_us",
       "webViewUrl": "https://drive.google.com/file/d/1D-B4eMr-ItuXMeQ2Re8n8uSOE7LXu_us/view",
-      "sizeBytes": 78661,
-      "sha256": "661ad7abbf53b9542c90c64350d1d15568a6a90e8c6c41f62d9901a25f599ac6",
-      "updatedAt": "2026-10-30T14:12:51.121Z"
+      "sizeBytes": 80811,
+      "sha256": "0136cfffc8f634e9f0c9d97291d9e8023c61a57e0062cb74e4e72b717c7ac7ca",
+      "updatedAt": "2026-11-04T00:22:07.061Z"
     },
     "micai-aristide": {
       "fileId": "1qW01tj1dXhcDSUpnmm0fGZMk-YI5jEr0",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1qW01tj1dXhcDSUpnmm0fGZMk-YI5jEr0",
       "webViewUrl": "https://drive.google.com/file/d/1qW01tj1dXhcDSUpnmm0fGZMk-YI5jEr0/view",
-      "sizeBytes": 213135,
-      "sha256": "b0f0f9e60995e8c725f1f4c4cfc977ea38fd631f6312eb79acd6fd17d875a295",
-      "updatedAt": "2026-10-30T14:12:52.115Z"
+      "sizeBytes": 215419,
+      "sha256": "cd93e908cd667c513d6f7ad165101bbffe4fd2cf42c9e5b4b6c67ca4146b97ea",
+      "updatedAt": "2026-11-04T00:22:18.425Z"
     },
     "fishfinger-creative": {
       "fileId": "1NeTkqWhRAzDa_LPLIyj4wrjcWDnpkqnR",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1NeTkqWhRAzDa_LPLIyj4wrjcWDnpkqnR",
       "webViewUrl": "https://drive.google.com/file/d/1NeTkqWhRAzDa_LPLIyj4wrjcWDnpkqnR/view",
-      "sizeBytes": 150648,
-      "sha256": "d248dd0cdb9214e89c00db6d8bf54b1739c321a4b7125aa24fff9d306e210320",
-      "updatedAt": "2026-10-30T14:12:52.215Z"
+      "sizeBytes": 152925,
+      "sha256": "2f32325ee9d7cc6a8b44d4b9aef9fd5f39ceeec8b42897f0c3846a38b5b3bbad",
+      "updatedAt": "2026-11-04T00:21:57.543Z"
     },
     "adoratorio-summer": {
       "fileId": "1Atr1GyM8dzFoIYMJ6rdpxJzRWJshQ9TN",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1Atr1GyM8dzFoIYMJ6rdpxJzRWJshQ9TN",
       "webViewUrl": "https://drive.google.com/file/d/1Atr1GyM8dzFoIYMJ6rdpxJzRWJshQ9TN/view",
-      "sizeBytes": 121209,
-      "sha256": "f23b96814318bd3223b9821a82cccd358e7c297c5e10d672e0bc73300a76a70d",
-      "updatedAt": "2026-10-30T14:12:52.236Z"
+      "sizeBytes": 123489,
+      "sha256": "302e7131842923211724c2975a38c05dfcb0044ec3d4be4c6639f1c54ed5aa44",
+      "updatedAt": "2026-11-04T00:21:18.563Z"
     },
     "bishop-tentwenty": {
       "fileId": "18wCORwP97jmLQ0WBwF3eBYD1WTAB31yK",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=18wCORwP97jmLQ0WBwF3eBYD1WTAB31yK",
       "webViewUrl": "https://drive.google.com/file/d/18wCORwP97jmLQ0WBwF3eBYD1WTAB31yK/view",
-      "sizeBytes": 119150,
-      "sha256": "cb9e0122b7e931b4fc48d6ce316712680d36feb8ea622fadf228b4641b366ccf",
-      "updatedAt": "2026-10-30T14:12:52.441Z"
+      "sizeBytes": 121427,
+      "sha256": "1cfc62e1e19f5791a8862193b4ac3f0a207c4e092fa915b14f5865f75b846ab6",
+      "updatedAt": "2026-11-04T00:21:29.834Z"
     },
     "cinder-axis": {
       "fileId": "1lpiq_32lzjSQOVNQI4PJHFQpeAOwIy6E",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1lpiq_32lzjSQOVNQI4PJHFQpeAOwIy6E",
       "webViewUrl": "https://drive.google.com/file/d/1lpiq_32lzjSQOVNQI4PJHFQpeAOwIy6E/view",
-      "sizeBytes": 109202,
-      "sha256": "aa7bac31001effe130ae4a1f7e4e00642eadeabb3fa45e588597d89441fe9119",
-      "updatedAt": "2026-10-30T14:12:52.485Z"
+      "sizeBytes": 111482,
+      "sha256": "d9eea875d8e31ab2114e6fbed50189a2cf34cd446635af4a5095e86792cf78f7",
+      "updatedAt": "2026-11-04T00:21:36.136Z"
     },
     "modern-agency": {
       "fileId": "1jWnlUtAIHWvS_VNNsybhY4H9W2n2hATW",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1jWnlUtAIHWvS_VNNsybhY4H9W2n2hATW",
       "webViewUrl": "https://drive.google.com/file/d/1jWnlUtAIHWvS_VNNsybhY4H9W2n2hATW/view",
-      "sizeBytes": 8726,
-      "sha256": "81d53aad831b2ebf3bc84ae0c9e102491fc4ea9d3de6d33a3b707ba4bcf04fe3",
-      "updatedAt": "2026-10-30T14:12:52.800Z"
+      "sizeBytes": 10888,
+      "sha256": "373364d75ad2f11f50b48d255df21bd6ffc18d6d78d16a5e325b67bafb91d8a5",
+      "updatedAt": "2026-11-04T00:22:22.795Z"
     },
     "asme": {
       "fileId": "1QZBDT2dYrE44XYRM5tfPUXfR3B60ueyg",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1QZBDT2dYrE44XYRM5tfPUXfR3B60ueyg",
       "webViewUrl": "https://drive.google.com/file/d/1QZBDT2dYrE44XYRM5tfPUXfR3B60ueyg/view",
-      "sizeBytes": 221779,
-      "sha256": "43784d8466b56acd42fc5808f2551033a69573c4bc2b41068caa8d0ce2aa142a",
-      "updatedAt": "2026-10-30T14:12:52.868Z"
+      "sizeBytes": 223918,
+      "sha256": "2466d7dd74f1cc0ddd42cc20cbad92b0c28475257a40f318283b33aaac4b4d7f",
+      "updatedAt": "2026-11-04T00:21:25.346Z"
     },
     "skyelite-private-jets": {
       "fileId": "1A7NmPBIbtwWAJkaI7my1b7nBZZnENZqR",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1A7NmPBIbtwWAJkaI7my1b7nBZZnENZqR",
       "webViewUrl": "https://drive.google.com/file/d/1A7NmPBIbtwWAJkaI7my1b7nBZZnENZqR/view",
-      "sizeBytes": 39532,
-      "sha256": "9b3d5682a57b917bfdc7dbbb0203dad4e868638d21ff14671b3eac1201146fd1",
-      "updatedAt": "2026-10-30T14:12:53.035Z"
+      "sizeBytes": 41698,
+      "sha256": "63b6776e3814cb24549a91fd46744b9d3c8d6f2e38714148620d061a56393308",
+      "updatedAt": "2026-11-04T00:23:06.522Z"
     },
     "vex-ventures": {
       "fileId": "1_I-uzz8ANo2TaRnZAwcJLniRUSMfnzAk",
@@ -1466,27 +1466,27 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1325fgLeOpekax1hKlbNWSM3dRxaABF4y",
       "webViewUrl": "https://drive.google.com/file/d/1325fgLeOpekax1hKlbNWSM3dRxaABF4y/view",
-      "sizeBytes": 13961,
-      "sha256": "225a9ef5d4ac2df2eed16029d6628b77d2afc372e22a224d536e413dbc4f038e",
-      "updatedAt": "2026-10-31T00:20:57.676Z"
+      "sizeBytes": 13431,
+      "sha256": "a40ecb8308c823f950b5beeade3ca0e95b83af2fc77c4ba3028b269f3a15f450",
+      "updatedAt": "2026-11-04T00:23:32.734Z"
     },
     "prosthetics-hero": {
       "fileId": "1q90chIveGISmmYh3x3_saPHrRbdyikU5",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1q90chIveGISmmYh3x3_saPHrRbdyikU5",
       "webViewUrl": "https://drive.google.com/file/d/1q90chIveGISmmYh3x3_saPHrRbdyikU5/view",
-      "sizeBytes": 13363,
-      "sha256": "02ebd56a38a0cc864d33f1d92cc8d031a1e204cfd8f5107748652caa64d2cc6b",
-      "updatedAt": "2026-10-31T00:20:59.713Z"
+      "sizeBytes": 12861,
+      "sha256": "872beb0bdff462c3cff5f1a6ec6169149945f297a76b7f6d0eb014425a2d2811",
+      "updatedAt": "2026-11-04T00:22:55.158Z"
     },
     "retro-futurist": {
       "fileId": "1CQO8kcQ1r1HGRVrB_wQPtWoytPPYMiwU",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1CQO8kcQ1r1HGRVrB_wQPtWoytPPYMiwU",
       "webViewUrl": "https://drive.google.com/file/d/1CQO8kcQ1r1HGRVrB_wQPtWoytPPYMiwU/view",
-      "sizeBytes": 13254,
-      "sha256": "79df7cea3f6ddaf398d353378f74fa2c7750593af9ca0f43670d6aa1aa9e3a7a",
-      "updatedAt": "2026-10-31T00:21:01.896Z"
+      "sizeBytes": 12694,
+      "sha256": "c8d1703a43a6d03bddf3fd374da799a10d20098b16a3d6363a74b5558d3329c0",
+      "updatedAt": "2026-11-04T00:23:02.411Z"
     },
     "ozzies-pretzels": {
       "fileId": "1YnfpvHEpSgV5i8NP0nc_OOy3Grt7idiU",
@@ -1592,27 +1592,27 @@
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1-dAyQGxOKswoMXWkLx-FF5sOaXJH4ok3",
       "webViewUrl": "https://drive.google.com/file/d/1-dAyQGxOKswoMXWkLx-FF5sOaXJH4ok3/view",
-      "sizeBytes": 11939,
-      "sha256": "14858be46f836dd8f3a3fda7fbb1cfa41d8dad446c2d4f7a84147de6ef3c441f",
-      "updatedAt": "2026-11-01T08:16:09.259Z"
+      "sizeBytes": 11525,
+      "sha256": "7bf3af91fe5cb05910d4ebadd843ec38cab0d8ac9621dcb5e43601769b4b7c82",
+      "updatedAt": "2026-11-04T00:21:40.274Z"
     },
     "health-portal": {
       "fileId": "1MqXvwfdR5WORfhuJiwaulP8pb-NLEhDx",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1MqXvwfdR5WORfhuJiwaulP8pb-NLEhDx",
       "webViewUrl": "https://drive.google.com/file/d/1MqXvwfdR5WORfhuJiwaulP8pb-NLEhDx/view",
-      "sizeBytes": 12543,
-      "sha256": "ab75de877f14f5fe12a64475042b1626b954ad119f771b3dcff2fe8737a5639d",
-      "updatedAt": "2026-11-01T08:21:30.449Z"
+      "sizeBytes": 12112,
+      "sha256": "7beab9a4b37817e1cf4248d47f797906d5dfc4a955c90c04b05925b3ea89d1c2",
+      "updatedAt": "2026-11-04T00:21:59.609Z"
     },
     "impact-ventures": {
       "fileId": "1RYBv2UCFaYzxW2m-mSig2xAacnNr-3c6",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1RYBv2UCFaYzxW2m-mSig2xAacnNr-3c6",
       "webViewUrl": "https://drive.google.com/file/d/1RYBv2UCFaYzxW2m-mSig2xAacnNr-3c6/view",
-      "sizeBytes": 11493,
-      "sha256": "20ae08bb72864a1e75a625e5a5e0f9c1eab62b34f6eb164fcd02059c3fce8898",
-      "updatedAt": "2026-11-01T08:16:13.129Z"
+      "sizeBytes": 11014,
+      "sha256": "8b838abe16b0242b33018809792e6373e00b85dd08eb4fe8e2b5d72038a01c40",
+      "updatedAt": "2026-11-04T00:22:04.877Z"
     },
     "pumpit-grid": {
       "fileId": "1-43AMrqI-bCD_sPoHidFaY03u2SzLx1D",
@@ -1628,72 +1628,198 @@
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=13Me_GGTBChJvb5aPHn5q2Dzn-v5dPflr",
       "webViewUrl": "https://drive.google.com/file/d/13Me_GGTBChJvb5aPHn5q2Dzn-v5dPflr/view",
-      "sizeBytes": 14547,
-      "sha256": "1ff3de0d713f2fddd7ef0bfed501b7e7bc725e8a55f7634105e763c5f19752d3",
-      "updatedAt": "2026-11-02T00:13:27.259Z"
+      "sizeBytes": 14007,
+      "sha256": "84dc839210bf8660eb9de4dbccae8850ad16c6df5b507197502d6ddccc4b88d5",
+      "updatedAt": "2026-11-04T00:22:31.359Z"
     },
     "helios-investments": {
       "fileId": "1avZmDh3TQ0vzpUHc9W5VPRryX3CNftqF",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1avZmDh3TQ0vzpUHc9W5VPRryX3CNftqF",
       "webViewUrl": "https://drive.google.com/file/d/1avZmDh3TQ0vzpUHc9W5VPRryX3CNftqF/view",
-      "sizeBytes": 14737,
-      "sha256": "6c774f15f1c9e0bfb44aa88e6bee4f60e29a27a1c3d1bdbc60d5e2201654c7d5",
-      "updatedAt": "2026-11-02T22:39:00.459Z"
+      "sizeBytes": 493824,
+      "sha256": "7387b47bd3937732e1a0a2c2f158ff5fb27ddca28e3739619ea4714df4cc9653",
+      "updatedAt": "2026-11-04T00:24:17.105Z"
     },
     "organic-odyssey": {
       "fileId": "1FcEXixenmTSoGQRTR6N1FMXdzTrlprde",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1FcEXixenmTSoGQRTR6N1FMXdzTrlprde",
       "webViewUrl": "https://drive.google.com/file/d/1FcEXixenmTSoGQRTR6N1FMXdzTrlprde/view",
-      "sizeBytes": 12241,
-      "sha256": "09799794fdab943fb151b32fb3dc35bc45eec800d59c59c1acd024e9e5818a2e",
-      "updatedAt": "2026-11-02T22:43:44.065Z"
+      "sizeBytes": 11690,
+      "sha256": "796b89b4f74b2201bf730ee8a7b0855887626bdee1ea37bc8c21a602262b2132",
+      "updatedAt": "2026-11-04T00:22:42.718Z"
     },
     "rayhan-aditya": {
       "fileId": "1pPEtTrlRG5KC5dXkIgU0jhQvPYmggHTz",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1pPEtTrlRG5KC5dXkIgU0jhQvPYmggHTz",
       "webViewUrl": "https://drive.google.com/file/d/1pPEtTrlRG5KC5dXkIgU0jhQvPYmggHTz/view",
-      "sizeBytes": 407535,
-      "sha256": "07f9b7ea6f028ad6fa5ae09f9731abadaa2ce1cbd9b6d510d6def6eb6bc40b7d",
-      "updatedAt": "2026-11-02T23:59:07.490Z"
+      "sizeBytes": 407241,
+      "sha256": "791fb12bd49142bde178cf44e2aeb4a12abf14d85a086d4a69a1cf0d22c109f6",
+      "updatedAt": "2026-11-04T00:24:28.156Z"
     },
     "metaverse-cyber-webinar": {
       "fileId": "1LxifysmRwQNx1lZbS7NUgLuvqAAkkXSI",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1LxifysmRwQNx1lZbS7NUgLuvqAAkkXSI",
       "webViewUrl": "https://drive.google.com/file/d/1LxifysmRwQNx1lZbS7NUgLuvqAAkkXSI/view",
-      "sizeBytes": 430460,
-      "sha256": "11e88e7a62ace1905262aa4bf2b0dbd20fb881e7488b698d784c14f0e52ea4b0",
-      "updatedAt": "2026-11-02T23:59:42.143Z"
+      "sizeBytes": 430195,
+      "sha256": "df3f61349129a9201b54d89bc4ad58fe8bfd9f9a378ca98435c36897de6eb750",
+      "updatedAt": "2026-11-04T00:24:21.390Z"
     },
     "looo-ai-magic": {
       "fileId": "1siDyHChIo6HOkPKIU0nzma9HPK2pMtBp",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1siDyHChIo6HOkPKIU0nzma9HPK2pMtBp",
       "webViewUrl": "https://drive.google.com/file/d/1siDyHChIo6HOkPKIU0nzma9HPK2pMtBp/view",
-      "sizeBytes": 748626,
-      "sha256": "15e46294deee226326746b558b057f13f9548f8f33c3e96ca88085e84eccb8e7",
-      "updatedAt": "2026-11-03T00:00:16.354Z"
+      "sizeBytes": 748332,
+      "sha256": "d39244113dda0196fbc1ea5118f064d10787b7ba3b901e2045e5fdad5cd5cef5",
+      "updatedAt": "2026-11-04T00:24:19.288Z"
     },
     "sleek-futuri": {
       "fileId": "1kJjWyRKcGiXbP15u1r9nTj6XJfmdP9W9",
       "tier": "free",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1kJjWyRKcGiXbP15u1r9nTj6XJfmdP9W9",
       "webViewUrl": "https://drive.google.com/file/d/1kJjWyRKcGiXbP15u1r9nTj6XJfmdP9W9/view",
-      "sizeBytes": 178728,
-      "sha256": "a0cd5955213f32d056d655bed798a2c2861988c1caac7d170a5e69e7a1d75a9b",
-      "updatedAt": "2026-11-04T00:13:20.904Z"
+      "sizeBytes": 178440,
+      "sha256": "72fbbebf3b4c710754e21e9eeae520c6456bf0207827ba0dd02c6aaa3d002eb3",
+      "updatedAt": "2026-11-04T00:24:32.521Z"
     },
     "websi-atelier": {
       "fileId": "1pcBCZOh_YsylJLbLEnZmxgHgJrB0iKOa",
       "tier": "premium",
       "publicUrl": "https://drive.google.com/uc?export=download&id=1pcBCZOh_YsylJLbLEnZmxgHgJrB0iKOa",
       "webViewUrl": "https://drive.google.com/file/d/1pcBCZOh_YsylJLbLEnZmxgHgJrB0iKOa/view",
-      "sizeBytes": 143286,
-      "sha256": "7e2720ef9480a77894fa6ce5dd0a5197ed54b360c4953994a9bb9a9021b64995",
-      "updatedAt": "2026-11-04T00:13:55.693Z"
+      "sizeBytes": 143001,
+      "sha256": "0ab721600eb6ca91cf12aaefe775ade8976a89c9213a355e51c26149a1b6bf25",
+      "updatedAt": "2026-11-04T00:24:36.779Z"
+    },
+    "ai-workflow-agents": {
+      "fileId": "1g8ouW_slnuABjqzpGDv4tAbmPGKWiupQ",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1g8ouW_slnuABjqzpGDv4tAbmPGKWiupQ",
+      "webViewUrl": "https://drive.google.com/file/d/1g8ouW_slnuABjqzpGDv4tAbmPGKWiupQ/view",
+      "sizeBytes": 11488,
+      "sha256": "9944d02ea719a45760813e31c3a8e2e7f086b138993c504387f5ad7437bcd251",
+      "updatedAt": "2026-11-04T00:21:20.594Z"
+    },
+    "celestial-renewal": {
+      "fileId": "12ptEAPMdRkf2nzuDKnP5cPtOaQlAKoZl",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=12ptEAPMdRkf2nzuDKnP5cPtOaQlAKoZl",
+      "webViewUrl": "https://drive.google.com/file/d/12ptEAPMdRkf2nzuDKnP5cPtOaQlAKoZl/view",
+      "sizeBytes": 11395,
+      "sha256": "59cc9dbe0edd15efe353675d25d981338d21977d306c04fede4fcba5ee8375ad",
+      "updatedAt": "2026-11-04T00:21:33.811Z"
+    },
+    "network-hero": {
+      "fileId": "161E_-TEnM7Km5zDC1SV1e5In8_He7cVO",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=161E_-TEnM7Km5zDC1SV1e5In8_He7cVO",
+      "webViewUrl": "https://drive.google.com/file/d/161E_-TEnM7Km5zDC1SV1e5In8_He7cVO/view",
+      "sizeBytes": 11185,
+      "sha256": "0c6f259777560299e160f8ff97d72937d1b727582d888b5a344d8ecf114de7ef",
+      "updatedAt": "2026-11-04T00:22:24.688Z"
+    },
+    "nexacore-results": {
+      "fileId": "15vYlGrZINB-v5bbf9-kG5TgP4qZ7xGNt",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=15vYlGrZINB-v5bbf9-kG5TgP4qZ7xGNt",
+      "webViewUrl": "https://drive.google.com/file/d/15vYlGrZINB-v5bbf9-kG5TgP4qZ7xGNt/view",
+      "sizeBytes": 11874,
+      "sha256": "92519bedfe2257046a91c4395d8957b9edfe6ed4ffdb9c4c3f24033ec4f6089e",
+      "updatedAt": "2026-11-04T00:22:29.292Z"
+    },
+    "nugraha-jati": {
+      "fileId": "1jUYqtBCt5d7kq3OtDz0I3FHCgQGGm4S2",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1jUYqtBCt5d7kq3OtDz0I3FHCgQGGm4S2",
+      "webViewUrl": "https://drive.google.com/file/d/1jUYqtBCt5d7kq3OtDz0I3FHCgQGGm4S2/view",
+      "sizeBytes": 37101,
+      "sha256": "ac0454bd32c8d068be24d14eeb3fe4f23e29ee5440114b04568a7208b4733c1f",
+      "updatedAt": "2026-11-04T00:24:23.662Z"
+    },
+    "orbis-hello": {
+      "fileId": "1scYbIdt2xpb6wdpYKlu_b3FXD4aHEcWz",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1scYbIdt2xpb6wdpYKlu_b3FXD4aHEcWz",
+      "webViewUrl": "https://drive.google.com/file/d/1scYbIdt2xpb6wdpYKlu_b3FXD4aHEcWz/view",
+      "sizeBytes": 11709,
+      "sha256": "5250f400ee7362088527c81894ab478d7a010f3f880db27384f04224084305fa",
+      "updatedAt": "2026-11-04T00:22:38.387Z"
+    },
+    "place-saver": {
+      "fileId": "16tLzaBPAnmQ5fuTn3X_DeGUIA3Sy1feh",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=16tLzaBPAnmQ5fuTn3X_DeGUIA3Sy1feh",
+      "webViewUrl": "https://drive.google.com/file/d/16tLzaBPAnmQ5fuTn3X_DeGUIA3Sy1feh/view",
+      "sizeBytes": 11134,
+      "sha256": "087887aae958e78a56c6771ed6401eb3d3c7ede25804f301923794d0fbd4fb7b",
+      "updatedAt": "2026-11-04T00:22:44.744Z"
+    },
+    "portal": {
+      "fileId": "1PZrHlC7XXhRp8A3fvQpSuRd_JJAtPk32",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1PZrHlC7XXhRp8A3fvQpSuRd_JJAtPk32",
+      "webViewUrl": "https://drive.google.com/file/d/1PZrHlC7XXhRp8A3fvQpSuRd_JJAtPk32/view",
+      "sizeBytes": 11123,
+      "sha256": "b65ff98de7a5699a68f07a10594a49a78036ddde592fc4f85e38fb6f2c1bd24f",
+      "updatedAt": "2026-11-04T00:22:46.838Z"
+    },
+    "professional-graphic": {
+      "fileId": "1UetbhEIHPYqs0Zm5TxznNreuyvpd7r2S",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1UetbhEIHPYqs0Zm5TxznNreuyvpd7r2S",
+      "webViewUrl": "https://drive.google.com/file/d/1UetbhEIHPYqs0Zm5TxznNreuyvpd7r2S/view",
+      "sizeBytes": 32855,
+      "sha256": "ba27d1a1d8819988a8743144e2fdec1876deae4a641f107eb07ba7d10f4b89e8",
+      "updatedAt": "2026-11-04T00:24:25.832Z"
+    },
+    "razer-mamba-pro": {
+      "fileId": "10GFPb7W5ssDTpxtW5o0dzdBOA2BOu4Cv",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=10GFPb7W5ssDTpxtW5o0dzdBOA2BOu4Cv",
+      "webViewUrl": "https://drive.google.com/file/d/10GFPb7W5ssDTpxtW5o0dzdBOA2BOu4Cv/view",
+      "sizeBytes": 496752,
+      "sha256": "6774d05d6324bed8af6638bf31248374d328c4219a3a241e7598f79ac6e162a2",
+      "updatedAt": "2026-11-04T00:24:30.385Z"
+    },
+    "this-canvas": {
+      "fileId": "1_EOMwSK5nl_9-RZzeL4G055qwx_WerSN",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1_EOMwSK5nl_9-RZzeL4G055qwx_WerSN",
+      "webViewUrl": "https://drive.google.com/file/d/1_EOMwSK5nl_9-RZzeL4G055qwx_WerSN/view",
+      "sizeBytes": 180743,
+      "sha256": "55ab4252f479d3260c1b8d048b7f09109681a608601a8cfb3a22e22ef06a8c50",
+      "updatedAt": "2026-11-04T00:24:34.617Z"
+    },
+    "travel-journal": {
+      "fileId": "1rJVZ_wI2anfXxKIWs8Zh1WZh-ddAT7JR",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1rJVZ_wI2anfXxKIWs8Zh1WZh-ddAT7JR",
+      "webViewUrl": "https://drive.google.com/file/d/1rJVZ_wI2anfXxKIWs8Zh1WZh-ddAT7JR/view",
+      "sizeBytes": 12224,
+      "sha256": "235ca15f8949b85b0af3969241c1c13027493e43633fcd464f6326eab88156fd",
+      "updatedAt": "2026-11-04T00:23:21.408Z"
+    },
+    "wanderful-hero": {
+      "fileId": "14eg3W0r_s6nnUUd0CMVHdvcX1SyVmlot",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=14eg3W0r_s6nnUUd0CMVHdvcX1SyVmlot",
+      "webViewUrl": "https://drive.google.com/file/d/14eg3W0r_s6nnUUd0CMVHdvcX1SyVmlot/view",
+      "sizeBytes": 11875,
+      "sha256": "cd07ac06237536cf2ddb3e9c974636027d7e8c6b81c40278702f95a6f6bd3054",
+      "updatedAt": "2026-11-04T00:23:28.363Z"
+    },
+    "wellness-companion": {
+      "fileId": "1oGXuiDug7mRkH_yphQmNrfCF_oFzfk1X",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1oGXuiDug7mRkH_yphQmNrfCF_oFzfk1X",
+      "webViewUrl": "https://drive.google.com/file/d/1oGXuiDug7mRkH_yphQmNrfCF_oFzfk1X/view",
+      "sizeBytes": 12314,
+      "sha256": "64b28949bb597719f22e19335bc496f8a3190ed5a4fa80b6237e9961aad52768",
+      "updatedAt": "2026-11-04T00:23:34.745Z"
     }
   }
 }

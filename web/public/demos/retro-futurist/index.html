@@ -249,8 +249,6 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(253,230,138,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FDE68A;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="ret33-hero" id="heroScrubContainer">
     <video id="heroBgVideo" class="ret33-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260530_042513_df96a13b-6155-4f6e-8b93-c9dee66fba08.mp4" autoplay loop muted playsinline preload="auto"></video>
@@ -276,7 +274,7 @@
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
         <button type="button" id="motionToggleBtn" class="ret33-glass-pill" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="ret33-glass-pill" data-magnetic>Get in touch</button>
+        <button type="button" id="exploreMagneticBtn" class="ret33-glass-pill">Get in touch</button>
       </div>
     </header>
 
@@ -336,22 +334,22 @@
     <section id="studio-matrix" class="ret33-wrap tabular-nums" aria-labelledby="matrixHeading" style="padding-top:0;">
       <h2 id="matrixHeading" class="ret33-h2">Four Divisions Under One Mainframe®</h2>
       <div class="ret33-grid-4">
-        <article class="ret33-card ret33-reveal" data-tilt-card data-seamless-trigger="Mainframe Labs — Applied AI &amp; Spatial Prototypes">
+        <article class="ret33-card ret33-reveal" data-seamless-trigger="Mainframe Labs — Applied AI &amp; Spatial Prototypes">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // LABS</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Adaptive Interfaces</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Proprietary multimodal agents, tactile hardware controllers, and real-time WebGPU canvases.</p>
         </article>
-        <article class="ret33-card ret33-reveal" data-tilt-card data-seamless-trigger="Mainframe Studio — Brand &amp; Product Systems">
+        <article class="ret33-card ret33-reveal" data-seamless-trigger="Mainframe Studio — Brand &amp; Product Systems">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // STUDIO</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Flagship Launches</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Identity systems, industrial 3D motion films, and high-converting web architecture for category leaders.</p>
         </article>
-        <article class="ret33-card ret33-reveal" data-tilt-card data-seamless-trigger="Mainframe Openings — Join the Collective">
+        <article class="ret33-card ret33-reveal" data-seamless-trigger="Mainframe Openings — Join the Collective">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // OPENINGS</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Senior Craft Pods</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Autonomous engineering and design residencies in San Francisco, New York, and Tokyo.</p>
         </article>
-        <article class="ret33-card ret33-reveal" data-tilt-card data-seamless-trigger="Mainframe Shop — Physical Objects &amp; Editions">
+        <article class="ret33-card ret33-reveal" data-seamless-trigger="Mainframe Shop — Physical Objects &amp; Editions">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">04 // SHOP</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Hardware Editions</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Limited-run anodized aluminum desk instruments, keycap sets, and technical monographs.</p>
@@ -521,41 +519,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('ret33Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

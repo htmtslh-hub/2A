@@ -40,41 +40,7 @@
     }
 
     /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
-    .ado51-cursor-ring,
-    .ado51-cursor-dot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      border-radius: 50%;
-      transform: translate3d(-100px, -100px, 0);
-      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
-      mix-blend-mode: difference;
-    }
-    .ado51-cursor-ring {
-      width: 36px;
-      height: 36px;
-      border: 1.5px solid #ffffff;
-      margin-left: -18px;
-      margin-top: -18px;
-    }
-    .ado51-cursor-ring.is-hovered {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-      margin-top: -32px;
-      background: #ffffff;
-    }
-    .ado51-cursor-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      margin-left: -3.5px;
-      margin-top: -3.5px;
-    }
     @media (max-width: 900px) {
-      .ado51-cursor-ring, .ado51-cursor-dot { display: none; }
     }
 
     /* Criterion 6: Minimalist Edge Navigation */
@@ -738,8 +704,6 @@
     </defs>
   </svg>
 
-  <div id="cursorRing" class="ado51-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="ado51-cursor-dot" aria-hidden="true"></div>
 
   <header class="ado51-edge-top">
     <a href="#heroStage" class="ado51-brand">
@@ -753,7 +717,7 @@
     </ul>
     <div class="ado51-edge-controls">
       <button type="button" id="motionToggleBtn" class="ado51-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="ado51-cta-magnetic" data-magnetic data-next-preview>
+      <button type="button" id="exploreMagneticBtn" class="ado51-cta-magnetic" data-next-preview>
         Explore Spec
       </button>
     </div>
@@ -790,14 +754,14 @@
           </h1>
 
           <!-- Layer 2: 3D Glossy Cyan Athlete Pop-Out Overlapping the Giant Letters (Text Masking) -->
-          <div id="heroPopoutRig" class="ado51-poster-figure-popout" data-tilt-card style="filter: url(#ado51LiquidFilter);">
+          <div id="heroPopoutRig" class="ado51-poster-figure-popout" style="filter: url(#ado51LiquidFilter);">
             <img class="ado51-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/adoratorio-summer/assets/cutout.webp'" alt="Adoratorio Summer Club 3D Cutout Subject" loading="eager" decoding="async" />
           </div>
         </div>
 
         <div class="ado51-poster-bottom-bar">
           <!-- Bottom-Left Floating Replay Card -->
-          <article class="ado51-glass-card ado51-poster-replay-card" data-tilt-card data-seamless-trigger="Flamingo Poolside Synthwave">
+          <article class="ado51-glass-card ado51-poster-replay-card" data-seamless-trigger="Flamingo Poolside Synthwave">
             <span class="ado51-card-kicker">1998 FINALS • FADEAWAY KINEMATICS</span>
             <h3>Flamingo Poolside Synthwave</h3>
             <p>Release angle 54.2° • Apex hang-time 0.92s • Click for full 3D frame analysis.</p>
@@ -812,8 +776,8 @@
 
           <!-- Bottom-Right Circular Magnetic Action Buttons -->
           <div style="display:flex;gap:12px;">
-            <button type="button" class="ado51-circle-fab" data-magnetic data-seamless-trigger="360° Orbital Camera Replay" aria-label="Open 360 Replay">360°</button>
-            <a href="#pinnedSpecs" class="ado51-circle-fab" data-magnetic aria-label="Scroll to Biomechanics">↓</a>
+            <button type="button" class="ado51-circle-fab" data-seamless-trigger="360° Orbital Camera Replay" aria-label="Open 360 Replay">360°</button>
+            <a href="#pinnedSpecs" class="ado51-circle-fab" aria-label="Scroll to Biomechanics">↓</a>
           </div>
         </div>
       </div>
@@ -876,7 +840,7 @@
       </div>
       <div id="hScrollTrack" class="ado51-hscroll-track">
         
-        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Flamingo Poolside Synthwave">
+        <article class="ado51-project-card ado51-reveal" data-seamless-trigger="Flamingo Poolside Synthwave">
           <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #ec489933, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ec4899;">01 // Play Now ↗</span>
           </div>
@@ -884,7 +848,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Flamingo Poolside Synthwave</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Inflatable Gator Bassline">
+        <article class="ado51-project-card ado51-reveal" data-seamless-trigger="Inflatable Gator Bassline">
           <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #ff552233, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ff5522;">02 // 128 BPM Live</span>
           </div>
@@ -892,7 +856,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Inflatable Gator Bassline</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Frosted Donut Disco Dub">
+        <article class="ado51-project-card ado51-reveal" data-seamless-trigger="Frosted Donut Disco Dub">
           <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #f472b633, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f472b6;">03 // 360° Visuals</span>
           </div>
@@ -900,7 +864,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Frosted Donut Disco Dub</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Italo-Disco Midnight Oasis">
+        <article class="ado51-project-card ado51-reveal" data-seamless-trigger="Italo-Disco Midnight Oasis">
           <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #fb923c33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fb923c;">04 // VIP Pass</span>
           </div>
@@ -1005,45 +969,10 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
-        });
         card.addEventListener('mouseleave', function () { card.style.transform = ''; });
       });
 
-      var displacement = document.getElementById('ado51Displacement');
-      var heroRig = document.getElementById('heroPopoutRig');
-      if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+);
         heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
       }
 

@@ -254,8 +254,6 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(37,99,235,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#2563EB;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="pro89-hero-outer">
     <div class="pro89-hero-frame">
@@ -283,7 +281,7 @@
         </a>
         <h1 id="heroTitle" class="pro89-h1">Simple, smart prosthetics made for people who keep fighting.</h1>
         <p class="pro89-sub">Reclaim your movement now.</p>
-        <button type="button" id="exploreMagneticBtn" class="pro89-btn-blue" data-magnetic>
+        <button type="button" id="exploreMagneticBtn" class="pro89-btn-blue">
           <span>Try a free fitting</span>
           <span aria-hidden="true">→</span>
         </button>
@@ -348,17 +346,17 @@
       <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;">WHY WE BUILT KINETIX</span>
       <h2 id="storyHeading" class="pro89-h2">Bionic Mobility Without the $40,000 Hospital Markup</h2>
       <div class="pro89-grid-3">
-        <article class="pro89-card pro89-reveal" data-tilt-card>
+        <article class="pro89-card pro89-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">01 // DIRECT 3D OPTICAL FIT</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Fitted in 48 Hours, Not 6 Weeks</h3>
           <p style="font-size:14px;color:var(--muted);max-width:50ch;">Our mobile prosthetists scan your residual limb using sub-millimeter structured light and print custom breathable sockets locally.</p>
         </article>
-        <article class="pro89-card pro89-reveal" data-tilt-card>
+        <article class="pro89-card pro89-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">02 // NEURAL MUSCLE LEARNING</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Adapts to Your Signal, Not Vice Versa</h3>
           <p style="font-size:14px;color:var(--muted);max-width:50ch;">On-board edge AI calibrates to subtle surface EMG muscle twitches in 10 minutes—even through sweat or long workdays.</p>
         </article>
-        <article class="pro89-card pro89-reveal" data-tilt-card>
+        <article class="pro89-card pro89-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">03 // ZERO-DOWNTIME MODULARITY</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Swap Digits in 90 Seconds</h3>
           <p style="font-size:14px;color:var(--muted);max-width:50ch;">Every knuckle actuator uses a single hex key release, backed by a 3-year no-questions-asked warranty across 28 clinics.</p>
@@ -511,41 +509,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('pro89Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

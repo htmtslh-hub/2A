@@ -12,11 +12,6 @@
     :root { --bg: #0a0a0a; --fg: #f0f4f8; --muted: rgba(240,244,248,0.62); --steel: #89AACC; --blue: #4E85BF; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: #0a0a0a; color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .por90-cursor-ring, .por90-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .por90-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #89AACC; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .por90-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #89AACC; }
-    .por90-cursor-dot { width: 6px; height: 6px; background: #89AACC; margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .por90-cursor-ring, .por90-cursor-dot { display: none; } }
 
     .por90-hero {
       position: relative; min-height: 100vh; padding: 28px clamp(20px,5vw,64px) 96px;
@@ -89,14 +84,12 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="por90-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="por90-cursor-dot" aria-hidden="true"></div>
 
   <nav class="por90-bottom-nav" aria-label="Floating Cosmic Navigation">
     <a href="#heroStage">Home</a>
     <a href="#pinnedSpecs">Work</a>
     <a href="#pinnedSpecs">About</a>
-    <button type="button" id="exploreMagneticBtn" class="por90-cta-btn" style="padding:8px 18px;font-size:12px;" data-magnetic data-next-preview>Contact for work</button>
+    <button type="button" id="exploreMagneticBtn" class="por90-cta-btn" style="padding:8px 18px;font-size:12px;" data-next-preview>Contact for work</button>
   </nav>
 
   <main>
@@ -117,10 +110,10 @@
             Principal Web3 Product Designer architecting spatial interfaces, token ecosystems, and high-converting interactive Webflow systems.
           </p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <button type="button" class="por90-cta-btn" data-magnetic data-seamless-trigger="001 / Nova Relay Case Study">Explore Selected Works ↗</button>
+            <button type="button" class="por90-cta-btn" data-seamless-trigger="001 / Nova Relay Case Study">Explore Selected Works ↗</button>
           </div>
         </div>
-        <div id="heroPopoutRig" data-tilt-card style="filter:url(#por90LiquidFilter);">
+        <div id="heroPopoutRig" style="filter:url(#por90LiquidFilter);">
           <img class="por90-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/portfolio-cosmic/assets/cutout.webp'" alt="Portfolio Cosmic 3D Cutout" loading="eager" decoding="async" />
         </div>
       </div>
@@ -129,7 +122,7 @@
     <section id="pinnedSpecs" class="por90-section">
       <h2 style="font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);">Cosmic Bento Telemetry</h2>
       <div class="por90-bento-grid">
-        <article class="por90-bento-card por90-reveal" data-tilt-card data-spec-index="001" data-seamless-trigger="001 / Nova Relay Protocol">
+        <article class="por90-bento-card por90-reveal" data-spec-index="001" data-seamless-trigger="001 / Nova Relay Protocol">
           <span style="font-size:12px;color:#89AACC;">001 /CAPITAL ASSISTED</span>
           <strong class="por90-stat-big" data-counter-target="23" data-counter-suffix="M+">$23M+</strong>
           <p style="font-size:14px;color:var(--muted);margin-top:8px;">Seed &amp; Series A funding raised by Web3 protocols launched with bespoke interactive design systems.</p>
@@ -138,7 +131,7 @@
           <img class="por90-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/portfolio-cosmic/assets/cutout.webp'" alt="Portfolio Cosmic 3D Cutout" loading="eager" decoding="async" />
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#89AACC;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="por90-bento-card por90-reveal" data-tilt-card data-spec-index="003" data-seamless-trigger="002 / Pulse Board Analytics">
+        <article class="por90-bento-card por90-reveal" data-spec-index="003" data-seamless-trigger="002 / Pulse Board Analytics">
           <span style="font-size:12px;color:#89AACC;">002 / CLIENT SATISFACTION</span>
           <strong class="por90-stat-big" data-counter-target="97" data-counter-suffix="%">97%</strong>
           <p style="font-size:14px;color:var(--muted);margin-top:8px;">17+ international design awards across Webflow, Awwwards, and FWA showcases.</p>
@@ -251,41 +244,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('por90Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

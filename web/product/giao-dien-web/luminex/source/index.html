@@ -102,7 +102,7 @@
             Precision kinetic luminaires and real-time HLS projection fields engineered for landmark museums, aviation terminals, and flagship pavilions.
           </p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <button type="button" id="exploreMagneticBtn" class="lum12-btn-primary" data-magnetic>
+            <button type="button" id="exploreMagneticBtn" class="lum12-btn-primary">
               Explore Installations ↗
             </button>
             <button type="button" class="lum12-glass" style="padding:13px 24px;border-radius:999px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;" data-seamless-trigger="Luminex Spectral Showreel 2026">
@@ -112,7 +112,7 @@
         </div>
 
         <!-- Bottom-Right Glass Telemetry Card -->
-        <aside class="lum12-glass" style="padding:22px 26px;border-radius:22px;display:flex;gap:28px;" data-tilt-card>
+        <aside class="lum12-glass" style="padding:22px 26px;border-radius:22px;display:flex;gap:28px;">
           <div>
             <strong style="font-size:26px;display:block;" data-counter-target="99" data-counter-suffix=".4%">99.4%</strong>
             <span style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">CRI Spectral Fidelity</span>
@@ -133,17 +133,17 @@
         </div>
       </div>
       <div class="lum12-grid">
-        <article class="lum12-glass lum12-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="lum12-glass lum12-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">01 / ZURICH KUNSTHALLE</span>
           <h3 style="font-size:21px;margin:10px 0 8px;">Helios Refraction Canopy</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">4,800 motorizeddichroic prisms synchronized to solar telemetry and visitor movement.</p>
         </article>
-        <article class="lum12-glass lum12-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="lum12-glass lum12-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">02 / TOKYO GINZA ATRIUM</span>
           <h3 style="font-size:21px;margin:10px 0 8px;">Monolith Pulse Façade</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">12-story micro-LED acoustic membrane reacting in real time to urban wind harmonics.</p>
         </article>
-        <article class="lum12-glass lum12-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="lum12-glass lum12-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">03 / REYKJAVIK PAVILION</span>
           <h3 style="font-size:21px;margin:10px 0 8px;">Aurora Borealis Chamber</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Volumetric laser-phosphor mist projection recreating geomagnetic solar storms indoors.</p>
@@ -257,41 +257,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('lum12Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

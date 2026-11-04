@@ -40,41 +40,7 @@
     }
 
     /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
-    .cin90-cursor-ring,
-    .cin90-cursor-dot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      border-radius: 50%;
-      transform: translate3d(-100px, -100px, 0);
-      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
-      mix-blend-mode: difference;
-    }
-    .cin90-cursor-ring {
-      width: 36px;
-      height: 36px;
-      border: 1.5px solid #ffffff;
-      margin-left: -18px;
-      margin-top: -18px;
-    }
-    .cin90-cursor-ring.is-hovered {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-      margin-top: -32px;
-      background: #ffffff;
-    }
-    .cin90-cursor-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      margin-left: -3.5px;
-      margin-top: -3.5px;
-    }
     @media (max-width: 900px) {
-      .cin90-cursor-ring, .cin90-cursor-dot { display: none; }
     }
 
     /* Criterion 6: Minimalist Edge Navigation */
@@ -738,8 +704,6 @@
     </defs>
   </svg>
 
-  <div id="cursorRing" class="cin90-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="cin90-cursor-dot" aria-hidden="true"></div>
 
   <header class="cin90-edge-top">
     <a href="#heroStage" class="cin90-brand">
@@ -753,7 +717,7 @@
     </ul>
     <div class="cin90-edge-controls">
       <button type="button" id="motionToggleBtn" class="cin90-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="cin90-cta-magnetic" data-magnetic data-next-preview>
+      <button type="button" id="exploreMagneticBtn" class="cin90-cta-magnetic" data-next-preview>
         Explore Spec
       </button>
     </div>
@@ -793,17 +757,17 @@
         </div>
 
         <div class="cin90-bike-stage">
-          <div id="heroPopoutRig" class="cin90-popout-rig" data-tilt-card style="filter: url(#cin90LiquidFilter);">
+          <div id="heroPopoutRig" class="cin90-popout-rig" style="filter: url(#cin90LiquidFilter);">
             <span class="cin90-cutout-pill">AUTOCLAVE MONOCOQUE • VENETO</span>
             <div class="cin90-svg-popout"><img class="cin90-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/cinder-axis/assets/cutout.webp'" alt="Cinder Axis Studio 3D Cutout Subject" loading="eager" decoding="async" /></div>
           </div>
           <div class="cin90-floating-pair">
-            <article class="cin90-glass-card" data-tilt-card data-seamless-trigger="Harlem Morning Transit Study">
+            <article class="cin90-glass-card" data-seamless-trigger="Harlem Morning Transit Study">
               <span class="cin90-card-kicker">01 / AERODYNAMIC WAKE</span>
               <h3>Harlem Morning Transit Study</h3>
               <p>Click to expand wind-tunnel drag polar &amp; carbon layup dossier (65mm Raw).</p>
             </article>
-            <article class="cin90-glass-card" data-tilt-card data-seamless-trigger="Chicago Elevated Rail Acoustic">
+            <article class="cin90-glass-card" data-seamless-trigger="Chicago Elevated Rail Acoustic">
               <span class="cin90-card-kicker">02 / BESPOKE GEOMETRY</span>
               <h3>Chicago Elevated Rail Acoustic</h3>
               <p>Sub-millimeter custom tube mitering (120 FPS).</p>
@@ -870,7 +834,7 @@
       </div>
       <div id="hScrollTrack" class="cin90-hscroll-track">
         
-        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="Harlem Morning Transit Study">
+        <article class="cin90-project-card cin90-reveal" data-seamless-trigger="Harlem Morning Transit Study">
           <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #ea580c33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ea580c;">01 // 65mm Raw</span>
           </div>
@@ -878,7 +842,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Harlem Morning Transit Study</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="Chicago Elevated Rail Acoustic">
+        <article class="cin90-project-card cin90-reveal" data-seamless-trigger="Chicago Elevated Rail Acoustic">
           <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #f9731633, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f97316;">02 // 120 FPS</span>
           </div>
@@ -886,7 +850,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Chicago Elevated Rail Acoustic</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="London Brutalist Concrete Portrait">
+        <article class="cin90-project-card cin90-reveal" data-seamless-trigger="London Brutalist Concrete Portrait">
           <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #fb923c33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fb923c;">03 // 4:3 Split</span>
           </div>
@@ -894,7 +858,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">London Brutalist Concrete Portrait</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="Tokyo Midnight Neon Bokeh">
+        <article class="cin90-project-card cin90-reveal" data-seamless-trigger="Tokyo Midnight Neon Bokeh">
           <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #fdba7433, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fdba74;">04 // ISO 3200</span>
           </div>
@@ -999,45 +963,10 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
-        });
         card.addEventListener('mouseleave', function () { card.style.transform = ''; });
       });
 
-      var displacement = document.getElementById('cin90Displacement');
-      var heroRig = document.getElementById('heroPopoutRig');
-      if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+);
         heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
       }
 

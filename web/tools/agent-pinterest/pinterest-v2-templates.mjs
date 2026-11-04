@@ -493,8 +493,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main weather telemetry</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <a href="#mainContent" class="${p}-brand">
@@ -898,8 +896,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">[SKIP_TO_MAIN_TERMINAL]</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-topbar">
     <strong style="font-size:16px;color:var(--accent);">CYBR_ // SYS_V2.0</strong>
@@ -1191,8 +1187,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to BioCyber Atelier</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <strong style="font-family:var(--font-display);font-size:22px;letter-spacing:0.06em;color:var(--accent-text);">AURELIA BIOCYBER</strong>
@@ -1447,8 +1441,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to HUSH Bag Collection</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <strong style="font-size:20px;letter-spacing:0.14em;">HUSH</strong>
@@ -1726,8 +1718,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to Quiet Place Sanctuary</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <strong style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:19px;">
@@ -1967,8 +1957,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -2230,8 +2218,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -2498,8 +2484,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -2785,8 +2769,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -3065,8 +3047,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -3459,8 +3439,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(153,20,14,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#99140E;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-crimson-hero">
     <header class="${p}-nav">
@@ -3867,8 +3845,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(2,132,199,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#0284C7;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <header class="${p}-nav">
     <a href="#main-content" class="${p}-brand">
@@ -4333,8 +4309,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(245,158,11,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F59E0B;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-stage-shell">
     <div class="${p}-dark-wedge" aria-hidden="true"></div>
@@ -4681,8 +4655,6 @@ export function buildPinterestV2Template(data, p) {
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(37,99,235,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#2563EB;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-window">
     <header class="${p}-top-bar">
@@ -5065,8 +5037,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(245,242,238,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F5F2EE;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-glass-bar">
@@ -5373,8 +5343,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(255,82,82,0.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FF2E2E;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-nav">
@@ -5700,8 +5668,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(213,0,28,0.65);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#D5001C;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-topbar">
@@ -6000,8 +5966,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(255,115,36,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FF5500;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-banner">
     GPU AI/ML Apps today! Deploy on NVIDIA A100s &amp; H100s for <strong>€1.3/h</strong> across 180+ global edge nodes →
@@ -6277,8 +6241,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(6,182,212,0.65);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#06B6D4;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-nav">
@@ -6581,8 +6543,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(139,92,246,0.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#E06D64;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-nav">
@@ -7094,8 +7054,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1.5px solid #090A0F;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#090A0F;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-outer">
     <main id="main-content">
@@ -7579,8 +7537,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1px solid rgba(255,120,71,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FF7847;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-header">
@@ -8068,8 +8024,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1.5px solid #22A8FF;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#22A8FF;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-nav">
@@ -8555,8 +8509,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1px solid rgba(247,249,244,0.65);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F7F9F4;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-header">
@@ -8974,8 +8926,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1.5px solid #FFAE73;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FFAE73;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell">
     <header class="${p}-header">
@@ -9322,12 +9272,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
     @keyframes heliosPulse {
       0%, 100% { transform: scale(1); opacity: 0.85; }
       50% { transform: scale(1.06); opacity: 1; }
@@ -9551,8 +9495,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <div class="${p}-shell">
     <aside class="${p}-sidebar" aria-label="Helios workspace navigation">
@@ -9976,12 +9918,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
     @keyframes crimsonPulse {
       0%, 100% { opacity: 0.92; transform: scale(1); }
       50% { opacity: 1; transform: scale(1.015); }
@@ -10141,8 +10077,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-container ${p}-topbar">
@@ -10432,12 +10366,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
     @keyframes chromaGlow {
       0%, 100% { filter: drop-shadow(0 0 18px rgba(132, 204, 22, 0.45)); }
       50% { filter: drop-shadow(0 0 32px rgba(163, 230, 53, 0.78)); }
@@ -10571,8 +10499,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -10841,12 +10767,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
     @keyframes dialFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
@@ -10969,8 +10889,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -11184,12 +11102,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
     @keyframes ribbonWave {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-6px) rotate(2deg); }
@@ -11307,8 +11219,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -11546,12 +11456,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
     .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
     .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
 
@@ -11683,8 +11587,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-wrap">
     <div class="${p}-top-shell">
@@ -11941,12 +11843,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid #ffffff; margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: #ffffff; margin: -3px 0 0 -3px; }
     @keyframes floatPuffer {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-10px) rotate(-0.6deg); }
@@ -12072,8 +11968,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -12301,12 +12195,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
     .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
     .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
 
@@ -12414,8 +12302,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <main id="main-content" class="${p}-wrap">
     <div class="${p}-studio-frame">
@@ -12612,12 +12498,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: translate(1px, 1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 28px; height: 28px; border: 1.5px solid var(--fg); margin: -14px 0 0 -14px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
     .${p}-reveal { opacity: 0; transform: translate3d(0, 14px, 0); transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out); }
     .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
 
@@ -12781,8 +12661,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <div class="${p}-outer">
     <div class="${p}-app-shell">
@@ -13150,12 +13028,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
     .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
     .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
 
@@ -13294,8 +13166,6 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">

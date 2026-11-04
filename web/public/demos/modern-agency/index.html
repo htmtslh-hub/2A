@@ -18,11 +18,6 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .mod30-cursor-ring, .mod30-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .mod30-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .mod30-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
-    .mod30-cursor-dot { width: 6px; height: 6px; background: #F26522; margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .mod30-cursor-ring, .mod30-cursor-dot { display: none; } }
 
     /* Pill White Navbar */
     .mod30-nav-wrap { position: fixed; top: 12px; left: 0; right: 0; z-index: 220; max-width: 1440px; margin: 0 auto; padding: 0 16px; }
@@ -123,8 +118,6 @@
   </style>
 </head>
 <body>
-  <div id="cursorRing" class="mod30-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="mod30-cursor-dot" aria-hidden="true"></div>
 
   <div class="mod30-nav-wrap">
     <header class="mod30-navbar">
@@ -141,7 +134,7 @@
         <span class="mod30-meta-text">Taking on projects for Q1 2026</span>
         <span class="mod30-meta-text">🕒 <span id="londonClock">14:30 in London</span></span>
         <button type="button" id="motionToggleBtn" class="mod30-pill-label" style="background:#fff;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="mod30-roll-btn" data-magnetic data-next-preview>
+        <button type="button" id="exploreMagneticBtn" class="mod30-roll-btn" data-next-preview>
           <span class="mod30-roll-window"><span class="mod30-roll-track"><span>Book a strategy call</span><span>Book a strategy call</span></span></span>
           <span class="mod30-roll-arrow">↗</span>
         </button>
@@ -159,11 +152,11 @@
           We craft digital experiences for brands ready to dominate their category online.
         </h1>
         <div class="mod30-cta-row">
-          <button type="button" class="mod30-roll-btn orange" data-magnetic data-seamless-trigger="Start a Project with Axion Studio">
+          <button type="button" class="mod30-roll-btn orange" data-seamless-trigger="Start a Project with Axion Studio">
             <span class="mod30-roll-window"><span class="mod30-roll-track"><span>Start a project</span><span>Start a project</span></span></span>
             <span class="mod30-roll-arrow">→</span>
           </button>
-          <div class="mod30-partner-badge" data-tilt-card>
+          <div class="mod30-partner-badge">
             <span style="color:#E8704E;font-size:18px;">✦</span>
             <span>Certified Partner</span>
             <span style="background:#111827;color:#fff;font-size:11px;padding:2px 8px;border-radius:4px;">Featured</span>
@@ -183,7 +176,7 @@
           <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090123_74be96d4-9c1b-40cf-932a-96f4f4babed3.png&w=1280&q=85" alt="Axion Studio Craft" class="mod30-about-img" style="aspect-ratio:438/346;" loading="lazy" />
           <div style="padding:12px 0;">
             <p style="font-size:17px;line-height:1.65;font-weight:500;margin-bottom:24px;">Through research, creative thinking and iteration we help growing brands realize their digital full potential.</p>
-            <button type="button" class="mod30-roll-btn orange" data-magnetic data-seamless-trigger="About Axion Studio">
+            <button type="button" class="mod30-roll-btn orange" data-seamless-trigger="About Axion Studio">
               <span class="mod30-roll-window"><span class="mod30-roll-track"><span>About our studio</span><span>About our studio</span></span></span>
               <span class="mod30-roll-arrow">→</span>
             </button>
@@ -201,7 +194,7 @@
         </div>
         <h2 class="mod30-about-h2" style="margin-bottom:16px;">Our projects</h2>
         <div class="mod30-cases-grid">
-          <article class="mod30-reveal" data-tilt-card data-seamless-trigger="Narrativ — Site of the Month 2025">
+          <article class="mod30-reveal" data-seamless-trigger="Narrativ — Site of the Month 2025">
             <div class="mod30-case-media">
               <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260516_122702_390f5305-8719-41d5-ae80-d23ab3796c28.mp4" autoplay muted loop playsinline preload="metadata"></video>
               <span class="mod30-case-fab">🔗 Learn more</span>
@@ -209,7 +202,7 @@
             <p style="font-size:14px;color:#4b5563;margin-top:14px;">Winner of Site of the Month 2025 - an interactive 3D showcase driving record engagement</p>
             <h3 style="font-size:16px;font-weight:700;margin-top:4px;">Narrativ</h3>
           </article>
-          <article class="mod30-reveal" data-tilt-card data-seamless-trigger="Luminar — Brand Conversion Platform">
+          <article class="mod30-reveal" data-seamless-trigger="Luminar — Brand Conversion Platform">
             <div class="mod30-case-media">
               <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260516_123323_f909c2b8-ff6c-4edf-882b-8ebcdbe389b5.mp4" autoplay muted loop playsinline preload="metadata"></video>
               <span class="mod30-case-fab" style="background:#111827;color:#fff;">View case study →</span>
@@ -347,41 +340,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('mod30Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

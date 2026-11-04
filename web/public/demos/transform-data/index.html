@@ -51,13 +51,6 @@
     }
     .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
 
-    .tra18-cursor-ring, .tra18-cursor-dot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0); mix-blend-mode: difference;
-    }
-    .tra18-cursor-ring { width: 32px; height: 32px; border: 1.5px solid #ffffff; margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
-    .tra18-cursor-dot { width: 6px; height: 6px; background: var(--accent-strong); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .tra18-cursor-ring, .tra18-cursor-dot { display: none; } }
 
     .tra18-header {
       max-width: 1320px; margin: 0 auto; padding: 18px clamp(20px, 5vw, 80px);
@@ -199,8 +192,6 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="tra18-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="tra18-cursor-dot" aria-hidden="true"></div>
 
   <header class="tra18-header">
     <a href="#heroStage" class="tra18-logo">
@@ -217,7 +208,7 @@
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="tra18-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="tra18-btn-dark" data-magnetic data-next-preview>Log In</button>
+      <button type="button" id="exploreMagneticBtn" class="tra18-btn-dark" data-next-preview>Log In</button>
     </div>
   </header>
 
@@ -241,7 +232,7 @@
           Upload your information and get powerful insights right away. Work smarter and achieve goals effortlessly.
         </p>
 
-        <div id="heroPopoutRig" class="tra18-query-console" data-tilt-card style="filter:url(#tra18LiquidFilter);">
+        <div id="heroPopoutRig" class="tra18-query-console" style="filter:url(#tra18LiquidFilter);">
           <div class="tra18-console-top tabular-nums">
             <div>
               <span>60/450 credits</span>
@@ -287,17 +278,17 @@
       <span class="tra18-kicker">01 / INSTANT INSIGHT SYNTHESIS</span>
       <h2 id="liveInsightHeading" class="tra18-h2">Real-Time Cohort Telemetry</h2>
       <div class="tra18-grid-3">
-        <article class="tra18-card tra18-reveal" data-tilt-card>
+        <article class="tra18-card tra18-reveal">
           <span class="tra18-kicker">QUERY RESULT</span>
           <strong id="liveQueryTitle" style="font-size:20px;">Enterprise NRR: 118.4%</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Automated anomaly detection across 14.2M warehouse rows in 180 milliseconds.</p>
         </article>
-        <article class="tra18-card tra18-reveal" data-tilt-card>
+        <article class="tra18-card tra18-reveal">
           <span class="tra18-kicker">THROUGHPUT</span>
           <strong class="tabular-nums" data-counter-target="180" data-counter-suffix="ms" style="font-size:36px;color:var(--accent-text);">180ms</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Zero-copy DuckDB &amp; Parquet vector execution directly in the browser.</p>
         </article>
-        <article class="tra18-card tra18-reveal" data-tilt-card>
+        <article class="tra18-card tra18-reveal">
           <span class="tra18-kicker">ACCURACY</span>
           <strong class="tabular-nums" data-counter-target="99" data-counter-suffix=".8%" style="font-size:36px;color:var(--accent-text);">99.8%</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Verified SQL lineage attached to every generated chart and executive summary.</p>
@@ -310,7 +301,7 @@
       <span class="tra18-kicker">02 / ARCHITECTURE</span>
       <h2 id="specsHeading" class="tra18-h2">Built for Modern Data Teams</h2>
       <div class="tra18-grid-3">
-        <article class="tra18-card tra18-reveal" data-tilt-card data-spec-index="001">
+        <article class="tra18-card tra18-reveal" data-spec-index="001">
           <span class="tra18-kicker">001 / INGESTION</span>
           <h3 style="font-size:20px;">CSV, Parquet &amp; Snowflake</h3>
           <p style="color:var(--muted);font-size:14px;">Drop raw files or connect live warehouse credentials with zero schema migration.</p>
@@ -321,7 +312,7 @@
           </svg>
           <p id="scrubDialText" class="tabular-nums" style="margin-top:10px;font-size:12px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="tra18-card tra18-reveal" data-tilt-card data-spec-index="002">
+        <article class="tra18-card tra18-reveal" data-spec-index="002">
           <span class="tra18-kicker">002 / GOVERNANCE</span>
           <h3 style="font-size:20px;">SOC2 Type II &amp; Zero-Retention</h3>
           <p style="color:var(--muted);font-size:14px;">Your proprietary datasets never train public models and stay encrypted at rest.</p>
@@ -334,17 +325,17 @@
       <span class="tra18-kicker">03 / TEMPLATES</span>
       <h2 id="projHeading" class="tra18-h2">One-Click Executive Boards</h2>
       <div class="tra18-grid-3">
-        <article class="tra18-card tra18-reveal" data-tilt-card data-seamless-trigger="SaaS Net Retention Board">
+        <article class="tra18-card tra18-reveal" data-seamless-trigger="SaaS Net Retention Board">
           <span class="tra18-kicker">BOARD 01</span>
           <h3 style="font-size:20px;">SaaS Net Retention</h3>
           <p style="color:var(--muted);font-size:14px;">Cohort expansion, logo churn, and payback period decomposition.</p>
         </article>
-        <article class="tra18-card tra18-reveal" data-tilt-card data-seamless-trigger="Supply Chain Inventory Velocity">
+        <article class="tra18-card tra18-reveal" data-seamless-trigger="Supply Chain Inventory Velocity">
           <span class="tra18-kicker">BOARD 02</span>
           <h3 style="font-size:20px;">Inventory Velocity</h3>
           <p style="color:var(--muted);font-size:14px;">SKU lead-time forecasting and safety-stock threshold alerts.</p>
         </article>
-        <article class="tra18-card tra18-reveal" data-tilt-card data-seamless-trigger="Paid Acquisition Attribution">
+        <article class="tra18-card tra18-reveal" data-seamless-trigger="Paid Acquisition Attribution">
           <span class="tra18-kicker">BOARD 03</span>
           <h3 style="font-size:20px;">Multi-Touch Attribution</h3>
           <p style="color:var(--muted);font-size:14px;">Channel marginal ROAS and pipeline conversion velocity.</p>
@@ -357,17 +348,17 @@
       <span class="tra18-kicker">04 / CREDIT PLANS</span>
       <h2 id="priceHeading" class="tra18-h2">Predictable Usage Tiers</h2>
       <div class="tra18-grid-3">
-        <article class="tra18-card tra18-reveal" data-tilt-card>
+        <article class="tra18-card tra18-reveal">
           <span class="tra18-kicker">ANALYST</span>
           <strong class="tabular-nums" style="font-size:36px;">$0<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">450 monthly GPT-4o credits, CSV/Parquet uploads, and instant chart exports.</p>
         </article>
-        <article class="tra18-card tra18-reveal" data-tilt-card style="border-color:var(--accent);">
+        <article class="tra18-card tra18-reveal" style="border-color:var(--accent);">
           <span class="tra18-kicker">TEAM INTELLIGENCE</span>
           <strong class="tabular-nums" style="font-size:36px;">$39<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">5,000 monthly credits, live Snowflake/Postgres connectors, and shared boards.</p>
         </article>
-        <article class="tra18-card tra18-reveal" data-tilt-card>
+        <article class="tra18-card tra18-reveal">
           <span class="tra18-kicker">ENTERPRISE</span>
           <strong class="tabular-nums" style="font-size:36px;">$149<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Unlimited credits, VPC deployment, and custom semantic layer models.</p>
@@ -519,41 +510,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('tra18Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

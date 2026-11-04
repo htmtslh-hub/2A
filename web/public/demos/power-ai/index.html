@@ -113,7 +113,7 @@
         </p>
 
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <button type="button" id="exploreMagneticBtn" class="pow64-btn-indigo" style="padding:14px 28px;font-size:14px;" data-magnetic>
+          <button type="button" id="exploreMagneticBtn" class="pow64-btn-indigo" style="padding:14px 28px;font-size:14px;">
             Schedule a Consult →
           </button>
           <button type="button" class="pow64-liquid-glass" style="padding:14px 26px;border-radius:999px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;" data-seamless-trigger="Power AI Live Neural Sourcing Demo">
@@ -156,17 +156,17 @@
       </div>
 
       <div class="pow64-grid">
-        <article class="pow64-liquid-glass pow64-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="pow64-liquid-glass pow64-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:12px;color:#818cf8;font-weight:700;">01 / DEEP GRAPH SOURCING</span>
           <h3 style="font-size:20px;margin:12px 0 8px;">240M+ Verified Builder Profiles</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Evaluates open-source commits, architectural patents, and production impact beyond static resumes.</p>
         </article>
-        <article class="pow64-liquid-glass pow64-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="pow64-liquid-glass pow64-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:12px;color:#a855f7;font-weight:700;">02 / AUTONOMOUS OUTREACH</span>
           <h3 style="font-size:20px;margin:12px 0 8px;">Hyper-Contextual Calibration</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Crafts technical outreach referencing each candidate's actual repositories, achieving 64% reply rates.</p>
         </article>
-        <article class="pow64-liquid-glass pow64-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="pow64-liquid-glass pow64-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:12px;color:#fcd34d;font-weight:700;">03 / PREDICTIVE FIT</span>
           <h3 style="font-size:20px;margin:12px 0 8px;">Team Velocity Simulation</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Models how prospective hires complement your engineering org's existing skill topology.</p>
@@ -280,41 +280,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('pow64Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

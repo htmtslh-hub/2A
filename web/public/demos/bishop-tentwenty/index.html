@@ -40,41 +40,7 @@
     }
 
     /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
-    .bis63-cursor-ring,
-    .bis63-cursor-dot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      border-radius: 50%;
-      transform: translate3d(-100px, -100px, 0);
-      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
-      mix-blend-mode: difference;
-    }
-    .bis63-cursor-ring {
-      width: 36px;
-      height: 36px;
-      border: 1.5px solid #ffffff;
-      margin-left: -18px;
-      margin-top: -18px;
-    }
-    .bis63-cursor-ring.is-hovered {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-      margin-top: -32px;
-      background: #ffffff;
-    }
-    .bis63-cursor-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      margin-left: -3.5px;
-      margin-top: -3.5px;
-    }
     @media (max-width: 900px) {
-      .bis63-cursor-ring, .bis63-cursor-dot { display: none; }
     }
 
     /* Criterion 6: Minimalist Edge Navigation */
@@ -738,8 +704,6 @@
     </defs>
   </svg>
 
-  <div id="cursorRing" class="bis63-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="bis63-cursor-dot" aria-hidden="true"></div>
 
   <header class="bis63-edge-top">
     <a href="#heroStage" class="bis63-brand">
@@ -753,7 +717,7 @@
     </ul>
     <div class="bis63-edge-controls">
       <button type="button" id="motionToggleBtn" class="bis63-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="bis63-cta-magnetic" data-magnetic data-next-preview>
+      <button type="button" id="exploreMagneticBtn" class="bis63-cta-magnetic" data-next-preview>
         Explore Spec
       </button>
     </div>
@@ -786,7 +750,7 @@
           </h1>
           <p class="bis63-lead">Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.</p>
 
-          <div id="heroPopoutRig" class="bis63-villa-Elevation" data-tilt-card style="filter: url(#bis63LiquidFilter);">
+          <div id="heroPopoutRig" class="bis63-villa-Elevation" style="filter: url(#bis63LiquidFilter);">
             <img class="bis63-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/bishop-tentwenty/assets/cutout.webp'" alt="Bishop Design Rogue 3D Cutout Subject" loading="eager" decoding="async" />
           </div>
 
@@ -799,7 +763,7 @@
 
         <div class="bis63-villa-right-stack">
           
-          <article class="bis63-glass-card bis63-villa-cutout-card" data-tilt-card data-seamless-trigger="SLS Dubai Penthouse Atrium">
+          <article class="bis63-glass-card bis63-villa-cutout-card" data-seamless-trigger="SLS Dubai Penthouse Atrium">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
               <span class="bis63-card-kicker">RESIDENCE 01</span>
               <span class="bis63-cutout-tab-pill">4,800 m²</span>
@@ -807,7 +771,7 @@
             <h3>SLS Dubai Penthouse Atrium</h3>
             <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
           </article>
-          <article class="bis63-glass-card bis63-villa-cutout-card" data-tilt-card data-seamless-trigger="Torno Subito Monochrome Club">
+          <article class="bis63-glass-card bis63-villa-cutout-card" data-seamless-trigger="Torno Subito Monochrome Club">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
               <span class="bis63-card-kicker">RESIDENCE 02</span>
               <span class="bis63-cutout-tab-pill">Michelin Star</span>
@@ -815,7 +779,7 @@
             <h3>Torno Subito Monochrome Club</h3>
             <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
           </article>
-          <article class="bis63-glass-card bis63-villa-cutout-card" data-tilt-card data-seamless-trigger="Rogue Basalt Pavilion">
+          <article class="bis63-glass-card bis63-villa-cutout-card" data-seamless-trigger="Rogue Basalt Pavilion">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
               <span class="bis63-card-kicker">RESIDENCE 03</span>
               <span class="bis63-cutout-tab-pill">Milan Salone</span>
@@ -884,7 +848,7 @@
       </div>
       <div id="hScrollTrack" class="bis63-hscroll-track">
         
-        <article class="bis63-project-card bis63-reveal" data-tilt-card data-seamless-trigger="SLS Dubai Penthouse Atrium">
+        <article class="bis63-project-card bis63-reveal" data-seamless-trigger="SLS Dubai Penthouse Atrium">
           <div class="bis63-project-visual" style="background:radial-gradient(circle at 50% 50%, #e4e4e733, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#e4e4e7;">01 // 4,800 m²</span>
           </div>
@@ -892,7 +856,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">SLS Dubai Penthouse Atrium</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="bis63-project-card bis63-reveal" data-tilt-card data-seamless-trigger="Torno Subito Monochrome Club">
+        <article class="bis63-project-card bis63-reveal" data-seamless-trigger="Torno Subito Monochrome Club">
           <div class="bis63-project-visual" style="background:radial-gradient(circle at 50% 50%, #a1a1aa33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#a1a1aa;">02 // Michelin Star</span>
           </div>
@@ -900,7 +864,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Torno Subito Monochrome Club</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="bis63-project-card bis63-reveal" data-tilt-card data-seamless-trigger="Rogue Basalt Pavilion">
+        <article class="bis63-project-card bis63-reveal" data-seamless-trigger="Rogue Basalt Pavilion">
           <div class="bis63-project-visual" style="background:radial-gradient(circle at 50% 50%, #d4d4d833, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#d4d4d8;">03 // Milan Salone</span>
           </div>
@@ -908,7 +872,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Rogue Basalt Pavilion</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="bis63-project-card bis63-reveal" data-tilt-card data-seamless-trigger="TenTwenty Digital Flagship">
+        <article class="bis63-project-card bis63-reveal" data-seamless-trigger="TenTwenty Digital Flagship">
           <div class="bis63-project-visual" style="background:radial-gradient(circle at 50% 50%, #fafafa33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fafafa;">04 // WOTD Winner</span>
           </div>
@@ -1013,45 +977,10 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
-        });
         card.addEventListener('mouseleave', function () { card.style.transform = ''; });
       });
 
-      var displacement = document.getElementById('bis63Displacement');
-      var heroRig = document.getElementById('heroPopoutRig');
-      if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+);
         heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
       }
 

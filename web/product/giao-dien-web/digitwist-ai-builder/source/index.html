@@ -59,14 +59,6 @@
       font-variant-numeric: tabular-nums;
     }
 
-    .dig48-cursor-ring, .dig48-cursor-dot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0); mix-blend-mode: difference;
-    }
-    .dig48-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #ffffff; margin: -17px 0 0 -17px; transition: transform 0.18s var(--ease-out), background-color 0.22s var(--ease-out); }
-    .dig48-cursor-ring.is-hovered { background: #ffffff; }
-    .dig48-cursor-dot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .dig48-cursor-ring, .dig48-cursor-dot { display: none; } }
 
     .dig48-header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 220;
@@ -247,8 +239,6 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="dig48-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="dig48-cursor-dot" aria-hidden="true"></div>
 
   <header class="dig48-header">
     <div class="dig48-nav-container">
@@ -274,7 +264,7 @@
       <div class="dig48-nav-actions">
         <button type="button" id="motionToggleBtn" class="dig48-pill-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
         <button type="button" class="dig48-pill-ghost" data-seamless-trigger="Book a Live Architecture Demo">Book A Demo</button>
-        <button type="button" id="exploreMagneticBtn" class="dig48-btn-get-started" data-magnetic data-next-preview>Get Started</button>
+        <button type="button" id="exploreMagneticBtn" class="dig48-btn-get-started" data-next-preview>Get Started</button>
       </div>
     </div>
   </header>
@@ -293,7 +283,7 @@
           Create fully functional, SEO-optimized websites in seconds with our advanced AI engine.
         </p>
         <div class="dig48-cta-row">
-          <button type="button" class="dig48-primary-pill" data-magnetic data-seamless-trigger="Start Building Free — Instant AI Workspace">
+          <button type="button" class="dig48-primary-pill" data-seamless-trigger="Start Building Free — Instant AI Workspace">
             <span>Start Building Free</span>
             <span class="dig48-arrow-circle" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -343,7 +333,7 @@
             <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" id="sandboxStatusText">COMPILED: Fintech AI treasury platform</span>
             <span class="tabular-nums" style="font-size:12px;background:rgba(48,84,255,0.2);color:#b4c0ff;padding:4px 10px;border-radius:999px;" id="sandboxSeoBadge">SEO Score: 99/100</span>
           </div>
-          <div id="heroPopoutRig" data-tilt-card style="filter:url(#dig48LiquidFilter);padding:12px 0;">
+          <div id="heroPopoutRig" style="filter:url(#dig48LiquidFilter);padding:12px 0;">
             <svg viewBox="0 0 640 240" width="100%" height="200" fill="none" aria-hidden="true">
               <rect x="8" y="8" width="624" height="224" rx="16" fill="#0b101e" stroke="rgba(180,192,255,0.22)"/>
               <rect x="28" y="28" width="180" height="16" rx="8" fill="#3054ff"/>
@@ -371,7 +361,7 @@
         <h2 id="specsHeading" class="dig48-h2">Engineered for Zero-Bloat Speed</h2>
       </div>
       <div class="dig48-bento-grid">
-        <article class="dig48-card dig48-reveal" data-tilt-card data-spec-index="001">
+        <article class="dig48-card dig48-reveal" data-spec-index="001">
           <span class="dig48-kicker">001 / SEMANTIC AST</span>
           <h3 style="font-size:22px;">Clean HTML5 &amp; CSS Grid</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Digitwist compiles directly to semantic landmarks, fluid clamp() tokens, and accessible ARIA components with zero runtime bloat.</p>
@@ -382,7 +372,7 @@
           </svg>
           <p id="scrubDialText" class="tabular-nums" style="margin-top:12px;font-size:13px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="dig48-card dig48-reveal" data-tilt-card data-spec-index="002">
+        <article class="dig48-card dig48-reveal" data-spec-index="002">
           <span class="dig48-kicker">002 / EDGE STREAMING</span>
           <h3 style="font-size:22px;">Adaptive HLS &amp; WebP Pipeline</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Automatic responsive poster generation, hardware-accelerated motion curves, and instant global CDN deployment.</p>
@@ -397,17 +387,17 @@
         <h2 id="storiesHeading" class="dig48-h2">Customer Stories</h2>
       </div>
       <div class="dig48-stories-grid">
-        <article class="dig48-card dig48-reveal" data-tilt-card data-seamless-trigger="Kinetix Cloud — +240% Conversion Case Study">
+        <article class="dig48-card dig48-reveal" data-seamless-trigger="Kinetix Cloud — +240% Conversion Case Study">
           <span class="dig48-kicker">KINETIX CLOUD</span>
           <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">+240%</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Launched 18 localized product landing pages in a single afternoon with 100/100 Lighthouse SEO scores.</p>
         </article>
-        <article class="dig48-card dig48-reveal" data-tilt-card data-seamless-trigger="Vespera Studio — 3.8x Faster Client Delivery">
+        <article class="dig48-card dig48-reveal" data-seamless-trigger="Vespera Studio — 3.8x Faster Client Delivery">
           <span class="dig48-kicker">VESPERA STUDIO</span>
           <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">3.8x</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Cut agency prototyping cycles from three weeks to four hours using Digitwist live token synchronization.</p>
         </article>
-        <article class="dig48-card dig48-reveal" data-tilt-card data-seamless-trigger="Monolith AI — 0.38s Global LCP">
+        <article class="dig48-card dig48-reveal" data-seamless-trigger="Monolith AI — 0.38s Global LCP">
           <span class="dig48-kicker">MONOLITH AI</span>
           <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">0.38s</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Replaced heavy SPA bundles with clean Digitwist semantic HTML and doubled organic search traffic.</p>
@@ -422,19 +412,19 @@
         <h2 id="pricingHeading" class="dig48-h2">Scale at the Speed of Thought</h2>
       </div>
       <div class="dig48-pricing-grid">
-        <article class="dig48-card dig48-reveal" data-tilt-card>
+        <article class="dig48-card dig48-reveal">
           <span class="dig48-kicker">STARTER</span>
           <strong class="tabular-nums" style="font-size:38px;">$0<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">3 AI-generated sites, full HTML/CSS export, and standard SEO telemetry.</p>
           <button type="button" class="dig48-pill-ghost" data-seamless-trigger="Starter Tier — Instant Activation">Start Free</button>
         </article>
-        <article class="dig48-card dig48-reveal" data-tilt-card style="border-color:var(--accent);">
+        <article class="dig48-card dig48-reveal" style="border-color:var(--accent);">
           <span class="dig48-kicker">PRO STUDIO</span>
           <strong class="tabular-nums" style="font-size:38px;">$29<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Unlimited AI builds, custom domains, 3-layer token export, and priority edge streaming.</p>
           <button type="button" class="dig48-btn-get-started" data-seamless-trigger="Pro Studio Tier — Start 14-Day Trial">Deploy Pro Studio</button>
         </article>
-        <article class="dig48-card dig48-reveal" data-tilt-card>
+        <article class="dig48-card dig48-reveal">
           <span class="dig48-kicker">ENTERPRISE</span>
           <strong class="tabular-nums" style="font-size:38px;">$99<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Dedicated neural clusters, SSO governance, and bespoke design system locks.</p>
@@ -591,41 +581,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('dig48Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

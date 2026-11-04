@@ -8,13 +8,12 @@
   "assignedTier": "free",
   "motionRecipe": {
     "id": "recipe-parallax-magnetic",
-    "name": "Parallax Depth + 3D Pop-Out + Magnetic CTA",
+    "name": "Parallax Depth + 3D Pop-Out + Scroll Reveal",
     "focus": [
       "parallax-layers",
-      "magnetic-buttons",
       "floating-3d-cutout"
     ],
-    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng."
+    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và chuyển động cuộn mượt mà."
   },
   "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-31\\ozzies-pretzels.jpg",
   "imageBytes": 797600,

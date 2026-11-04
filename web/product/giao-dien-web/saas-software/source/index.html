@@ -110,7 +110,7 @@
         <p style="font-size:15px;color:#404040;margin-bottom:22px;">
           The All-In-One Software Powering the Future of PR Agencies
         </p>
-        <button type="button" id="exploreMagneticBtn" class="saa10-btn-dark" data-magnetic>
+        <button type="button" id="exploreMagneticBtn" class="saa10-btn-dark">
           <span>Get Started</span>
           <span style="width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.16);display:inline-flex;align-items:center;justify-content:center;">›</span>
         </button>
@@ -119,7 +119,7 @@
       <!-- 3-COLUMN DASHBOARD PREVIEW TRAY -->
       <div id="dashboardTray" class="saa10-tray">
         <!-- Card 1: Clicks + 92% Gauge -->
-        <article class="saa10-dcard" data-tilt-card>
+        <article class="saa10-dcard">
           <div>
             <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
               <span style="color:var(--orange);">Clicks</span>
@@ -143,7 +143,7 @@
         </article>
 
         <!-- Card 2: Target Configuration Form -->
-        <article class="saa10-dcard" data-tilt-card>
+        <article class="saa10-dcard">
           <div style="display:flex;flex-direction:column;gap:10px;">
             <div>
               <label style="font-size:11px;color:#52525b;display:block;margin-bottom:4px;">Show figures for</label>
@@ -170,7 +170,7 @@
         </article>
 
         <!-- Card 3: Video Starts + 68% Gauge -->
-        <article class="saa10-dcard" data-tilt-card>
+        <article class="saa10-dcard">
           <div>
             <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
               <span style="color:var(--orange);">Video Starts</span>
@@ -297,41 +297,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('saa10Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

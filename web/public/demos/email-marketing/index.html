@@ -51,13 +51,6 @@
     }
     .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
 
-    .ema23-cursor-ring, .ema23-cursor-dot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0); mix-blend-mode: difference;
-    }
-    .ema23-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; transition: transform 0.18s var(--ease-out); }
-    .ema23-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .ema23-cursor-ring, .ema23-cursor-dot { display: none; } }
 
     .ema23-header {
       position: sticky; top: 12px; z-index: 220; max-width: 920px; margin: 0 auto; padding: 0 16px;
@@ -184,8 +177,6 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="ema23-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="ema23-cursor-dot" aria-hidden="true"></div>
 
   <header class="ema23-header">
     <div class="ema23-nav-bar">
@@ -200,7 +191,7 @@
       </nav>
       <div style="display:flex;gap:8px;align-items:center;">
         <button type="button" id="motionToggleBtn" class="ema23-pill-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="ema23-btn-lime" data-magnetic data-next-preview style="padding:8px 18px;font-size:12px;">Enroll Now</button>
+        <button type="button" id="exploreMagneticBtn" class="ema23-btn-lime" data-next-preview style="padding:8px 18px;font-size:12px;">Enroll Now</button>
       </div>
     </div>
   </header>
@@ -220,7 +211,7 @@
       <div style="position:relative;z-index:10;margin-top:120px;" data-parallax="0.06">
         <span style="font-size:12px;letter-spacing:0.28em;font-weight:600;color:var(--accent);">NOW AVAILABLE</span>
         <h1 class="ema23-h1" id="oversizedHeadline">Learn to lead AI and unlock new value</h1>
-        <button type="button" class="ema23-btn-lime" data-magnetic data-seamless-trigger="Design Rocket Certificates — Cohort Enrollment">
+        <button type="button" class="ema23-btn-lime" data-seamless-trigger="Design Rocket Certificates — Cohort Enrollment">
           <span>Enroll Now</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
@@ -249,7 +240,7 @@
     <!-- SECTION 3: 4 NUMBERED LEADERSHIP STEPS -->
     <section id="curriculumSection" class="ema23-section" aria-labelledby="currHeading">
       <h2 id="currHeading" class="ema23-h2">Transform how you lead with AI</h2>
-      <div class="ema23-video-card" id="heroPopoutRig" data-tilt-card style="filter:url(#ema23LiquidFilter);">
+      <div class="ema23-video-card" id="heroPopoutRig" style="filter:url(#ema23LiquidFilter);">
         <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_065931_e3ca7b53-d32e-4ad5-81de-dc9d6fcfda6d.mp4" autoplay loop muted playsinline preload="metadata"></video>
       </div>
       <div style="max-width:520px;margin:0 auto 28px;">
@@ -306,7 +297,7 @@
       <div id="scrubCenterStage" style="text-align:center;margin-bottom:24px;">
         <p id="scrubDialText" class="tabular-nums" style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">SCROLL SCRUB ANGLE: 0.0°</p>
       </div>
-      <div class="ema23-lime-banner" data-tilt-card>
+      <div class="ema23-lime-banner">
         <h2 id="ctaBannerHeading" style="font-family:var(--font-display);font-size:clamp(38px,5vw,52px);line-height:1.02;color:#1E1E1E;margin-bottom:12px;">Ready to lead AI at work?</h2>
         <p style="font-size:17px;color:#1E1E1E;margin-bottom:24px;">Enroll now and be the leader your team has been waiting for.</p>
         <button type="button" class="ema23-btn-lime" style="background:#0A0A0A;color:#DCFF00;" data-seamless-trigger="Priority Seat Reservation — Design Rocket">
@@ -450,41 +441,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('ema23Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

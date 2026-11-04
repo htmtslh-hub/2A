@@ -7,11 +7,11 @@ This guide covers every editable token, copy block, media asset, and interactive
 | File | Literal String | Count | Purpose |
 | :--- | :--- | :---: | :--- |
 | `index.html` | `Transform Data` | 7 | Primary brand name & title across header, hero, and footer |
-| `index.html` | `Discover what's possible` | 2 | Editable template copy / token |
 | `index.html` | `--bg:` | 1 | Primary canvas background token in :root |
 | `index.html` | `--accent:` | 1 | Primary interactive accent token in :root |
 | `index.html` | `--font-display:` | 1 | Display heading font family token in :root |
 | `index.html` | `id="motionToggleBtn"` | 1 | In-session motion pause/resume accessibility toggle |
+| `index.html` | `id="seamlessModal"` | 1 | Interactive specification modal / drawer dialog |
 
 ---
 

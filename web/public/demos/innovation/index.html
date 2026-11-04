@@ -12,11 +12,6 @@
     :root { --bg: #000000; --fg: #ffffff; --muted: rgba(255,255,255,0.68); --accent: #38bdf8; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .inn67-cursor-ring, .inn67-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .inn67-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .inn67-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
-    .inn67-cursor-dot { width: 6px; height: 6px; background: #38bdf8; margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .inn67-cursor-ring, .inn67-cursor-dot { display: none; } }
 
     .liquid-glass {
       background: rgba(255, 255, 255, 0.015);
@@ -71,8 +66,6 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="inn67-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="inn67-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section id="heroStage" class="inn67-hero">
@@ -84,8 +77,8 @@
           <strong style="font-size:22px;letter-spacing:-0.04em;">INNOVATION</strong>
           <div style="display:flex;gap:10px;align-items:center;">
             <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>𝕏</button>
-            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>in</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;">𝕏</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;">in</button>
           </div>
         </div>
         <nav class="inn67-pill-bar liquid-glass" aria-label="Primary">
@@ -98,17 +91,17 @@
           </ul>
           <div style="display:flex;align-items:center;gap:14px;">
             <span style="font-size:13px;color:var(--muted);">1(800)234-23-34</span>
-            <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:8px 20px;border-radius:999px;font-size:13px;cursor:pointer;" data-magnetic data-next-preview>Call Me Back</button>
+            <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:8px 20px;border-radius:999px;font-size:13px;cursor:pointer;" data-next-preview>Call Me Back</button>
           </div>
         </nav>
       </header>
 
       <div class="inn67-center" data-parallax="0.07">
         <h1 class="inn67-h1" id="oversizedHeadline">Know it all.</h1>
-        <div id="heroPopoutRig" data-tilt-card style="filter:url(#inn67LiquidFilter);">
+        <div id="heroPopoutRig" style="filter:url(#inn67LiquidFilter);">
           <img class="inn67-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/innovation/assets/cutout.webp'" alt="Innovation 3D Cutout" loading="eager" decoding="async" />
         </div>
-        <button type="button" class="liquid-glass" style="color:#fff;padding:15px 44px;border-radius:999px;font-size:16px;cursor:pointer;margin-top:8px;" data-magnetic data-seamless-trigger="Innovation Optical Telemetry Dossier">
+        <button type="button" class="liquid-glass" style="color:#fff;padding:15px 44px;border-radius:999px;font-size:16px;cursor:pointer;margin-top:8px;" data-seamless-trigger="Innovation Optical Telemetry Dossier">
           Book a Free Call
         </button>
       </div>
@@ -123,7 +116,7 @@
 
     <section id="pinnedSpecs" class="inn67-section">
       <div class="inn67-pinned-grid">
-        <article class="inn67-card liquid-glass inn67-reveal" data-tilt-card data-spec-index="001">
+        <article class="inn67-card liquid-glass inn67-reveal" data-spec-index="001">
           <span style="font-size:11px;color:#38bdf8;font-weight:700;">001 / REFRACTIVE CORE</span>
           <strong data-counter-target="99" data-counter-suffix=".9%" style="display:block;font-size:34px;margin:6px 0;">99.9%</strong>
           <p style="font-size:13px;color:var(--muted);">Real-time optical synthesis and neural decision telemetry.</p>
@@ -132,7 +125,7 @@
           <img class="inn67-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/innovation/assets/cutout.webp'" alt="Innovation 3D Cutout" loading="eager" decoding="async" />
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#38bdf8;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="inn67-card liquid-glass inn67-reveal" data-tilt-card data-spec-index="003">
+        <article class="inn67-card liquid-glass inn67-reveal" data-spec-index="003">
           <span style="font-size:11px;color:#38bdf8;font-weight:700;">002 / GLOBAL ENTERPRISE</span>
           <strong data-counter-target="240" data-counter-suffix="+" style="display:block;font-size:34px;margin:6px 0;">240+</strong>
           <p style="font-size:13px;color:var(--muted);">Category-leading teams powered by Innovation spatial analytics.</p>
@@ -245,41 +238,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('inn67Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

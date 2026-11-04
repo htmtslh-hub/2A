@@ -54,17 +54,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "AI Workflow Agents",
-        desc: "Giao diện web AI Workflow Agents với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web AI Workflow Agents với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "AI Workflow Agents",
-        desc: "Bespoke AI Workflow Agents web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke AI Workflow Agents web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "AI Workflow Agents",
-        desc: "单文件自包含 AI Workflow Agents 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 AI Workflow Agents 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -78,17 +78,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Celestial Renewal",
-        desc: "Giao diện web Celestial Renewal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Celestial Renewal với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Celestial Renewal",
-        desc: "Bespoke Celestial Renewal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Celestial Renewal web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Celestial Renewal",
-        desc: "单文件自包含 Celestial Renewal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Celestial Renewal 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -103,17 +103,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Travel Journal",
-        desc: "Giao diện web Travel Journal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Travel Journal với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Travel Journal",
-        desc: "Bespoke Travel Journal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Travel Journal web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Travel Journal",
-        desc: "单文件自包含 Travel Journal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Travel Journal 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -128,12 +128,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Ridez Carbon Bike Atelier",
         desc: "Ridez Carbon Bike Atelier (carbon-orange-mtb-flagship-store) — Obsidian & racing-orange mountain bike flagship store featuring Norco Vanquish Comp Carbon ($1,195.00) 3D studio cutout, Singletrack/Trail/Road category triptych, 3-pillar workshop facilities, and 01–04 tune-up service bay.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Ridez Carbon Bike Atelier",
         desc: "Ridez Carbon Bike Atelier (carbon-orange-mtb-flagship-store) — Obsidian & racing-orange mountain bike flagship store featuring Norco Vanquish Comp Carbon ($1,195.00) 3D studio cutout, Singletrack/Trail/Road category triptych, 3-pillar workshop facilities, and 01–04 tune-up service bay.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Ridez Carbon Bike Atelier",
@@ -151,12 +151,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "StorySeeker Audio & Book Hub",
         desc: "StorySeeker Audio & Book Hub (neobrutalist-storyseeker-book-hub) — Warm cream, mustard-gold & burnt-orange neo-brutalist digital library and audiobook player by Nugraha Jati featuring 6 classic illustrated editions (Gatsby, Catcher, Fahrenheit 451), live preview reader, and sticky 2x audio scrubber.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "StorySeeker Audio & Book Hub",
         desc: "StorySeeker Audio & Book Hub (neobrutalist-storyseeker-book-hub) — Warm cream, mustard-gold & burnt-orange neo-brutalist digital library and audiobook player by Nugraha Jati featuring 6 classic illustrated editions (Gatsby, Catcher, Fahrenheit 451), live preview reader, and sticky 2x audio scrubber.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "StorySeeker Audio & Book Hub",
@@ -174,12 +174,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Hawra Graphics Studio",
         desc: "Hawra Graphics Studio (amber-halo-brand-identity-folio) — Obsidian-espresso & warm terracotta rim-lit brand identity portfolio for freelance graphic designer Hawra featuring studio armchair portrait, Available for Projects status badge, and filterable visual identity case studies.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Hawra Graphics Studio",
         desc: "Hawra Graphics Studio (amber-halo-brand-identity-folio) — Obsidian-espresso & warm terracotta rim-lit brand identity portfolio for freelance graphic designer Hawra featuring studio armchair portrait, Available for Projects status badge, and filterable visual identity case studies.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Hawra Graphics Studio",
@@ -198,12 +198,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "JM Jacket Masters",
         desc: "JM Jacket Masters (burnt-amber-3d-puffer-atelier) — Burnt-amber & espresso 3D winter outerwear showcase featuring glossy orange and matte obsidian quilted down puffer jacket cutouts, $149/$199 live pricing, 36/38/40 size selector, and instant colorway switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "JM Jacket Masters",
         desc: "JM Jacket Masters (burnt-amber-3d-puffer-atelier) — Burnt-amber & espresso 3D winter outerwear showcase featuring glossy orange and matte obsidian quilted down puffer jacket cutouts, $149/$199 live pricing, 36/38/40 size selector, and instant colorway switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "JM Jacket Masters",
@@ -222,12 +222,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Joann Luminescent Town",
         desc: "Joann Luminescent Town (luminescent-town-pink-ai-folio) — Charcoal-obsidian & neon-rose AI art showcase by Joann (@joooo.ann) featuring bubbly LUMINESCENT Town typography, 3D translucent pink glass tower out-of-bounds cutout, 5-swatch rose palette, and cyberpunk night kiosk gallery.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Joann Luminescent Town",
         desc: "Joann Luminescent Town (luminescent-town-pink-ai-folio) — Charcoal-obsidian & neon-rose AI art showcase by Joann (@joooo.ann) featuring bubbly LUMINESCENT Town typography, 3D translucent pink glass tower out-of-bounds cutout, 5-swatch rose palette, and cyberpunk night kiosk gallery.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Joann Luminescent Town",
@@ -245,12 +245,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Looo AI Magic Studio",
         desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Looo AI Magic Studio",
         desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Looo AI Magic Studio",
@@ -268,12 +268,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Metaverse Cyber Webinar",
         desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Metaverse Cyber Webinar",
         desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Metaverse Cyber Webinar",
@@ -291,12 +291,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Razer Mamba Pro",
         desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Razer Mamba Pro",
         desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Razer Mamba Pro",
@@ -315,12 +315,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Rayhan Aditya Portfolio",
         desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Rayhan Aditya Portfolio",
         desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Rayhan Aditya Portfolio",
@@ -339,12 +339,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Helios Investments",
         desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Helios Investments",
         desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Helios Investments",
@@ -361,17 +361,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Place Saver",
-        desc: "Giao diện web Place Saver với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Place Saver với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Place Saver",
-        desc: "Bespoke Place Saver web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Place Saver web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Place Saver",
-        desc: "单文件自包含 Place Saver 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Place Saver 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -385,17 +385,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Portal",
-        desc: "Giao diện web Portal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Portal với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Portal",
-        desc: "Bespoke Portal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Portal web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Portal",
-        desc: "单文件自包含 Portal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Portal 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -410,17 +410,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Network Hero",
-        desc: "Giao diện web Network Hero với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Network Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Network Hero",
-        desc: "Bespoke Network Hero web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Network Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Network Hero",
-        desc: "单文件自包含 Network Hero 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Network Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -434,17 +434,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "NexaCore Results",
-        desc: "Giao diện web NexaCore Results với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web NexaCore Results với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "NexaCore Results",
-        desc: "Bespoke NexaCore Results web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke NexaCore Results web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "NexaCore Results",
-        desc: "单文件自包含 NexaCore Results 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 NexaCore Results 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -458,17 +458,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Organic Odyssey",
-        desc: "Giao diện web Organic Odyssey với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Organic Odyssey với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Organic Odyssey",
-        desc: "Bespoke Organic Odyssey web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Organic Odyssey web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Organic Odyssey",
-        desc: "单文件自包含 Organic Odyssey 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Organic Odyssey 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -483,17 +483,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Orbis Hello",
-        desc: "Giao diện web Orbis Hello với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Orbis Hello với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Orbis Hello",
-        desc: "Bespoke Orbis Hello web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Orbis Hello web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Orbis Hello",
-        desc: "单文件自包含 Orbis Hello 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Orbis Hello 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -507,17 +507,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Nike Hover",
-        desc: "Giao diện web Nike Hover với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Nike Hover với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Nike Hover",
-        desc: "Bespoke Nike Hover web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Nike Hover web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Nike Hover",
-        desc: "单文件自包含 Nike Hover 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Nike Hover 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -531,17 +531,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Wellness Companion",
-        desc: "Giao diện web Wellness Companion với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Wellness Companion với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Wellness Companion",
-        desc: "Bespoke Wellness Companion web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Wellness Companion web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Wellness Companion",
-        desc: "单文件自包含 Wellness Companion 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Wellness Companion 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -556,17 +556,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Wanderful Hero",
-        desc: "Giao diện web Wanderful Hero với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Wanderful Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Wanderful Hero",
-        desc: "Bespoke Wanderful Hero web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Wanderful Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Wanderful Hero",
-        desc: "单文件自包含 Wanderful Hero 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Wanderful Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -580,17 +580,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Impact Ventures",
-        desc: "Giao diện web Impact Ventures với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Impact Ventures với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Impact Ventures",
-        desc: "Bespoke Impact Ventures web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Impact Ventures web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Impact Ventures",
-        desc: "单文件自包含 Impact Ventures 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Impact Ventures 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -604,17 +604,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Health Portal",
-        desc: "Giao diện web Health Portal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Health Portal với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Health Portal",
-        desc: "Bespoke Health Portal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Health Portal web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Health Portal",
-        desc: "单文件自包含 Health Portal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Health Portal 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -629,17 +629,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Contact Cybernetic",
-        desc: "Giao diện web Contact Cybernetic với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Contact Cybernetic với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Contact Cybernetic",
-        desc: "Bespoke Contact Cybernetic web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Contact Cybernetic web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Contact Cybernetic",
-        desc: "单文件自包含 Contact Cybernetic 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Contact Cybernetic 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -696,17 +696,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Retro-Futurist",
-        desc: "Giao diện web Retro-Futurist với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Retro-Futurist với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Retro-Futurist",
-        desc: "Bespoke Retro-Futurist web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Retro-Futurist web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Retro-Futurist",
-        desc: "单文件自包含 Retro-Futurist 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Retro-Futurist 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -720,17 +720,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Prosthetics Hero",
-        desc: "Giao diện web Prosthetics Hero với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Prosthetics Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Prosthetics Hero",
-        desc: "Bespoke Prosthetics Hero web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Prosthetics Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Prosthetics Hero",
-        desc: "单文件自包含 Prosthetics Hero 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Prosthetics Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -745,17 +745,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Wellbeing OS",
-        desc: "Giao diện web Wellbeing OS với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Wellbeing OS với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Wellbeing OS",
-        desc: "Bespoke Wellbeing OS web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Wellbeing OS web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Wellbeing OS",
-        desc: "单文件自包含 Wellbeing OS 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Wellbeing OS 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -769,17 +769,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Subscription Agency",
-        desc: "Giao diện web Subscription Agency với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Subscription Agency với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Subscription Agency",
-        desc: "Bespoke Subscription Agency web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Subscription Agency web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Subscription Agency",
-        desc: "单文件自包含 Subscription Agency 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Subscription Agency 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -793,17 +793,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Cross-Border",
-        desc: "Giao diện web Cross-Border với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Cross-Border với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Transportation", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Cross-Border",
-        desc: "Bespoke Cross-Border web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Cross-Border web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Transportation", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Cross-Border",
-        desc: "单文件自包含 Cross-Border 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Cross-Border 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -818,17 +818,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Duolingo Styleguide",
-        desc: "Giao diện web Duolingo Styleguide với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Duolingo Styleguide với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Duolingo Styleguide",
-        desc: "Bespoke Duolingo Styleguide web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Duolingo Styleguide web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Duolingo Styleguide",
-        desc: "单文件自包含 Duolingo Styleguide 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Duolingo Styleguide 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -842,17 +842,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Email Marketing",
-        desc: "Giao diện web Email Marketing với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Email Marketing với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Email Marketing", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Email Marketing",
-        desc: "Bespoke Email Marketing web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Email Marketing web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Email Marketing", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Email Marketing",
-        desc: "单文件自包含 Email Marketing 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Email Marketing 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -866,17 +866,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Dot",
-        desc: "Giao diện web Dot với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Dot với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Dot",
-        desc: "Bespoke Dot web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Dot web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Dot",
-        desc: "单文件自包含 Dot 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Dot 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -891,17 +891,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Digitwist AI Builder",
-        desc: "Giao diện web Digitwist AI Builder với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Digitwist AI Builder với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Digitwist AI Builder",
-        desc: "Bespoke Digitwist AI Builder web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Digitwist AI Builder web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Digitwist AI Builder",
-        desc: "单文件自包含 Digitwist AI Builder 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Digitwist AI Builder 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -916,12 +916,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "S'Watch Luxury Chronograph",
         desc: "S'Watch Luxury Chronograph (dual-circle-chronograph) — Dark slate and warm cognac-terracotta dual-circle geometry framing a 3D stitched leather smartwatch cutout (12:38 OLED dial), interactive 01–04 strikethrough slide rail, and vertical WATCH stencil.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "S'Watch Luxury Chronograph",
         desc: "S'Watch Luxury Chronograph (dual-circle-chronograph) — Dark slate and warm cognac-terracotta dual-circle geometry framing a 3D stitched leather smartwatch cutout (12:38 OLED dial), interactive 01–04 strikethrough slide rail, and vertical WATCH stencil.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "S'Watch Luxury Chronograph",
@@ -939,12 +939,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Steary Spatial Cinema",
         desc: "Steary Spatial Cinema (visionos-spatial-streaming) — Apple VisionOS spatial glassmorphic streaming app with floating steary.com address bar, vertical glass dock, New Trailer sidebar, 3D multiverse portal hero banner, and interactive 4-card movie row.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Steary Spatial Cinema",
         desc: "Steary Spatial Cinema (visionos-spatial-streaming) — Apple VisionOS spatial glassmorphic streaming app with floating steary.com address bar, vertical glass dock, New Trailer sidebar, 3D multiverse portal hero banner, and interactive 4-card movie row.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Steary Spatial Cinema",
@@ -962,12 +962,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Flash Rocky Mountain",
         desc: "Flash Rocky Mountain (alpine-glacier-expedition) — Moody alpine & turquoise glacial lake adventure portal with TIME TO TRAVEL cyan headline, 01–05 vertical slide rail, 3D Rocky Mountain diorama cutout, Popular Tours 4-card gallery, and staggered video grid.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Flash Rocky Mountain",
         desc: "Flash Rocky Mountain (alpine-glacier-expedition) — Moody alpine & turquoise glacial lake adventure portal with TIME TO TRAVEL cyan headline, 01–05 vertical slide rail, 3D Rocky Mountain diorama cutout, Popular Tours 4-card gallery, and staggered video grid.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Flash Rocky Mountain",
@@ -986,12 +986,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Industrix Engineering",
         desc: "Industrix Engineering (copper-ribbed-industrial) — Industrial automation & heavy engineering showcase with ribbed bronze-copper metallic columns, 3D brushed-copper arrow monument & turbine gear cutout, 4-stat telemetry, and 6-step commissioning grid.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Industrix Engineering",
         desc: "Industrix Engineering (copper-ribbed-industrial) — Industrial automation & heavy engineering showcase with ribbed bronze-copper metallic columns, 3D brushed-copper arrow monument & turbine gear cutout, 4-stat telemetry, and 6-step commissioning grid.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Industrix Engineering",
@@ -1008,17 +1008,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Neuralyn",
-        desc: "Giao diện web Neuralyn với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Neuralyn với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Neuralyn",
-        desc: "Bespoke Neuralyn web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Neuralyn web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Neuralyn",
-        desc: "单文件自包含 Neuralyn 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Neuralyn 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1032,17 +1032,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "SAAS Software",
-        desc: "Giao diện web SAAS Software với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web SAAS Software với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "SAAS Software",
-        desc: "Bespoke SAAS Software web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke SAAS Software web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "SAAS Software",
-        desc: "单文件自包含 SAAS Software 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 SAAS Software 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1057,17 +1057,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Datacore Booking",
-        desc: "Giao diện web Datacore Booking với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Datacore Booking với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Datacore Booking",
-        desc: "Bespoke Datacore Booking web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Datacore Booking web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Datacore Booking",
-        desc: "单文件自包含 Datacore Booking 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Datacore Booking 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1082,12 +1082,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Fischer KFZ-Meisterbetrieb",
         desc: "Fischer KFZ-Meisterbetrieb (diagonal-zigzag-atelier) — Carbon-black automotive master workshop with dramatic diagonal white & dark zig-zag geometric bands, 3D bronze executive coupe cutout, and 6-point TÜV inspection matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Fischer KFZ-Meisterbetrieb",
         desc: "Fischer KFZ-Meisterbetrieb (diagonal-zigzag-atelier) — Carbon-black automotive master workshop with dramatic diagonal white & dark zig-zag geometric bands, 3D bronze executive coupe cutout, and 6-point TÜV inspection matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Fischer KFZ-Meisterbetrieb",
@@ -1106,12 +1106,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Apex Legends Squad Hub",
         desc: "Apex Legends Squad Hub (tactical-triangle-arena) — Light tactical bone-stone arena with glowing crimson-orange triangular emblem, 3D squad duo cutout, parallelogram navigation tabs, and squad loadout selector.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Apex Legends Squad Hub",
         desc: "Apex Legends Squad Hub (tactical-triangle-arena) — Light tactical bone-stone arena with glowing crimson-orange triangular emblem, 3D squad duo cutout, parallelogram navigation tabs, and squad loadout selector.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Apex Legends Squad Hub",
@@ -1130,12 +1130,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "TripG Ocean Discovery",
         desc: "TripG Ocean Discovery (ocean-wave-curve) — Clean white and turquoise ocean wave curve hero with 3D hydrofoil yacht cutout, straddling circular GO button, and interactive Paris–London–Dubaï–Phuket timeline.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "TripG Ocean Discovery",
         desc: "TripG Ocean Discovery (ocean-wave-curve) — Clean white and turquoise ocean wave curve hero with 3D hydrofoil yacht cutout, straddling circular GO button, and interactive Paris–London–Dubaï–Phuket timeline.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "TripG Ocean Discovery",
@@ -1152,17 +1152,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Stellar AI",
-        desc: "Giao diện web Stellar AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Stellar AI với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Stellar AI",
-        desc: "Bespoke Stellar AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Stellar AI web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Stellar AI",
-        desc: "单文件自包含 Stellar AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Stellar AI 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1176,17 +1176,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Taskly",
-        desc: "Giao diện web Taskly với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Taskly với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Taskly",
-        desc: "Bespoke Taskly web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Taskly web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Taskly",
-        desc: "单文件自包含 Taskly 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Taskly 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1201,17 +1201,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "USD Halo",
-        desc: "Giao diện web USD Halo với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web USD Halo với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "USD Halo",
-        desc: "Bespoke USD Halo web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke USD Halo web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "USD Halo",
-        desc: "单文件自包含 USD Halo 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 USD Halo 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1225,17 +1225,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Transform Data",
-        desc: "Giao diện web Transform Data với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Transform Data với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Transform Data",
-        desc: "Bespoke Transform Data web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Transform Data web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Transform Data",
-        desc: "单文件自包含 Transform Data 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Transform Data 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1249,17 +1249,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Luminex",
-        desc: "Giao diện web Luminex với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Luminex với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Luminex",
-        desc: "Bespoke Luminex web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Luminex web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Luminex",
-        desc: "单文件自包含 Luminex 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Luminex 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1273,17 +1273,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Bloom AI",
-        desc: "Giao diện web Bloom AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Bloom AI với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Bloom AI",
-        desc: "Bespoke Bloom AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Bloom AI web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Bloom AI",
-        desc: "单文件自包含 Bloom AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Bloom AI 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1298,17 +1298,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Power AI",
-        desc: "Giao diện web Power AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Power AI với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Power AI",
-        desc: "Bespoke Power AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Power AI web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Power AI",
-        desc: "单文件自包含 Power AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Power AI 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1323,12 +1323,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Alex Carter UI/UX",
         desc: "Alex Carter UI/UX (neon-cyan-glass-dev) — Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Alex Carter UI/UX",
         desc: "Alex Carter UI/UX (neon-cyan-glass-dev) — Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Alex Carter UI/UX",
@@ -1346,12 +1346,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Nova Glass Studio",
         desc: "Nova Glass Studio (iridescent-crystal-portfolio) — High-key pearl-ice glassmorphism UI/UX portfolio with 3D crystal visor bust cutout, animated skill progress bars, 3x3 tech stack matrix, and liquid refraction.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Nova Glass Studio",
         desc: "Nova Glass Studio (iridescent-crystal-portfolio) — High-key pearl-ice glassmorphism UI/UX portfolio with 3D crystal visor bust cutout, animated skill progress bars, 3x3 tech stack matrix, and liquid refraction.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Nova Glass Studio",
@@ -1369,12 +1369,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Apex Upheaval Hub",
         desc: "Apex Upheaval Hub (tactical-legend-roster) — Futuristic battle-royale landing page with diagonal crimson slash hero, 6-platform bar, 4-column squad directives, and interactive skewed parallelogram Legend roster.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Apex Upheaval Hub",
         desc: "Apex Upheaval Hub (tactical-legend-roster) — Futuristic battle-royale landing page with diagonal crimson slash hero, 6-platform bar, 4-column squad directives, and interactive skewed parallelogram Legend roster.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Apex Upheaval Hub",
@@ -1393,12 +1393,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Bame eSports Arena",
         desc: "Bame eSports Arena (esports-polygon-arena) — Shaping the Future of eSports — neon-green polygon HUD, 3D Cyber-Wukong champion cutout, kinetic diagonal marquee, and inverted-corner tournament arena.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Bame eSports Arena",
         desc: "Bame eSports Arena (esports-polygon-arena) — Shaping the Future of eSports — neon-green polygon HUD, 3D Cyber-Wukong champion cutout, kinetic diagonal marquee, and inverted-corner tournament arena.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Bame eSports Arena",
@@ -1417,12 +1417,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Nexon Digital Kensei",
         desc: "Nexon Digital Kensei (cyber-samurai-nft) — Cyber-Samurai NFT showcase with crimson sun 3D warrior pop-out, overlapping rounded editorial card with inline pill imagery, and dark 4-card Bento legacy grid.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Nexon Digital Kensei",
         desc: "Nexon Digital Kensei (cyber-samurai-nft) — Cyber-Samurai NFT showcase with crimson sun 3D warrior pop-out, overlapping rounded editorial card with inline pill imagery, and dark 4-card Bento legacy grid.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Nexon Digital Kensei",
@@ -1439,17 +1439,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "CodeNest Coding Platform",
-        desc: "Giao diện web CodeNest Coding Platform với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web CodeNest Coding Platform với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "CodeNest Coding Platform",
-        desc: "Bespoke CodeNest Coding Platform web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke CodeNest Coding Platform web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "CodeNest Coding Platform",
-        desc: "单文件自包含 CodeNest Coding Platform 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 CodeNest Coding Platform 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1463,17 +1463,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Mindloop Landing",
-        desc: "Giao diện web Mindloop Landing với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Mindloop Landing với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Mindloop Landing",
-        desc: "Bespoke Mindloop Landing web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Mindloop Landing web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Mindloop Landing",
-        desc: "单文件自包含 Mindloop Landing 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Mindloop Landing 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1488,17 +1488,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Max Reed Portfolio",
-        desc: "Giao diện web Max Reed Portfolio với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Max Reed Portfolio với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Max Reed Portfolio",
-        desc: "Bespoke Max Reed Portfolio web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Max Reed Portfolio web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Max Reed Portfolio",
-        desc: "单文件自包含 Max Reed Portfolio 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Max Reed Portfolio 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1512,17 +1512,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Portfolio Cosmic",
-        desc: "Giao diện web Portfolio Cosmic với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Portfolio Cosmic với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Portfolio Cosmic",
-        desc: "Bespoke Portfolio Cosmic web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Portfolio Cosmic web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Portfolio Cosmic",
-        desc: "单文件自包含 Portfolio Cosmic 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Portfolio Cosmic 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1536,17 +1536,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Orbis NFT",
-        desc: "Giao diện web Orbis NFT với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Orbis NFT với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Orbis NFT",
-        desc: "Bespoke Orbis NFT web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Orbis NFT web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Orbis NFT",
-        desc: "单文件自包含 Orbis NFT 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Orbis NFT 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1561,17 +1561,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Innovation",
-        desc: "Giao diện web Innovation với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Innovation với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Innovation",
-        desc: "Bespoke Innovation web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Innovation web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Innovation",
-        desc: "单文件自包含 Innovation 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Innovation 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1586,12 +1586,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "MiCai Crypto Wealth",
         desc: "MiCai Crypto Wealth (crypto-wealth-hud) — MiCai is the world’s first private wealth management platform powered by AI and built on institutional quantum-resistant blockchain.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "MiCai Crypto Wealth",
         desc: "MiCai Crypto Wealth (crypto-wealth-hud) — MiCai is the world’s first private wealth management platform powered by AI and built on institutional quantum-resistant blockchain.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "MiCai Crypto Wealth",
@@ -1609,12 +1609,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Adoratorio Summer Club",
         desc: "Adoratorio Summer Club (retrofuture-club) — Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Adoratorio Summer Club",
         desc: "Adoratorio Summer Club (retrofuture-club) — Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Adoratorio Summer Club",
@@ -1632,12 +1632,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Fishfinger Creative",
         desc: "Fishfinger Creative (kraken-odyssey) — Award-winning interactive storytelling studio crafting 3D character worlds, WebGL ocean shaders, and cinematic brand campaigns.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Fishfinger Creative",
         desc: "Fishfinger Creative (kraken-odyssey) — Award-winning interactive storytelling studio crafting 3D character worlds, WebGL ocean shaders, and cinematic brand campaigns.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Fishfinger Creative",
@@ -1656,12 +1656,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Bishop Design Rogue",
         desc: "Bishop Design Rogue (monochrome-architect) — Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Bishop Design Rogue",
         desc: "Bishop Design Rogue (monochrome-architect) — Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Bishop Design Rogue",
@@ -1680,12 +1680,12 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: {
         name: "Cinder Axis Studio",
         desc: "Cinder Axis Studio (terracotta-collage) — Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: "Cinder Axis Studio",
         desc: "Cinder Axis Studio (terracotta-collage) — Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: "Cinder Axis Studio",
@@ -1702,17 +1702,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Asme",
-        desc: "Giao diện web Asme với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Asme với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Asme",
-        desc: "Bespoke Asme web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Asme web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Asme",
-        desc: "单文件自包含 Asme 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Asme 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1726,17 +1726,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Modern Agency",
-        desc: "Giao diện web Modern Agency với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web Modern Agency với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "Modern Agency",
-        desc: "Bespoke Modern Agency web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke Modern Agency web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "Modern Agency",
-        desc: "单文件自包含 Modern Agency 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 Modern Agency 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1751,17 +1751,17 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "SkyElite Private Jets",
-        desc: "Giao diện web SkyElite Private Jets với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        desc: "Giao diện web SkyElite Private Jets với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: "SkyElite Private Jets",
-        desc: "Bespoke SkyElite Private Jets web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        desc: "Bespoke SkyElite Private Jets web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
         tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: "SkyElite Private Jets",
-        desc: "单文件自包含 SkyElite Private Jets 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        desc: "单文件自包含 SkyElite Private Jets 网页模板，配备 3D 悬浮视觉与三组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }

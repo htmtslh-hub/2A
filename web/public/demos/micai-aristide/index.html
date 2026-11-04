@@ -40,41 +40,7 @@
     }
 
     /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
-    .mic78-cursor-ring,
-    .mic78-cursor-dot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      border-radius: 50%;
-      transform: translate3d(-100px, -100px, 0);
-      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
-      mix-blend-mode: difference;
-    }
-    .mic78-cursor-ring {
-      width: 36px;
-      height: 36px;
-      border: 1.5px solid #ffffff;
-      margin-left: -18px;
-      margin-top: -18px;
-    }
-    .mic78-cursor-ring.is-hovered {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-      margin-top: -32px;
-      background: #ffffff;
-    }
-    .mic78-cursor-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      margin-left: -3.5px;
-      margin-top: -3.5px;
-    }
     @media (max-width: 900px) {
-      .mic78-cursor-ring, .mic78-cursor-dot { display: none; }
     }
 
     /* Criterion 6: Minimalist Edge Navigation */
@@ -738,8 +704,6 @@
     </defs>
   </svg>
 
-  <div id="cursorRing" class="mic78-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="mic78-cursor-dot" aria-hidden="true"></div>
 
   <header class="mic78-edge-top">
     <a href="#heroStage" class="mic78-brand">
@@ -753,7 +717,7 @@
     </ul>
     <div class="mic78-edge-controls">
       <button type="button" id="motionToggleBtn" class="mic78-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="mic78-cta-magnetic" data-magnetic data-next-preview>
+      <button type="button" id="exploreMagneticBtn" class="mic78-cta-magnetic" data-next-preview>
         Explore Spec
       </button>
     </div>
@@ -787,17 +751,17 @@
       </div>
 
       <div class="mic78-hud-orbital-ring">
-        <article class="mic78-glass-card mic78-orbital-pod" data-tilt-card data-seamless-trigger="AI Robo-Advisory Alpha Fund">
+        <article class="mic78-glass-card mic78-orbital-pod" data-seamless-trigger="AI Robo-Advisory Alpha Fund">
           <span class="mic78-card-kicker">VAULT 01</span>
           <h3>AI Robo-Advisory Alpha Fund</h3>
           <p>Zero-gravity neutral buoyancy telemetry ($420M TVL).</p>
         </article>
 
-        <div id="heroPopoutRig" class="mic78-hud-planet-center" data-tilt-card style="filter: url(#mic78LiquidFilter);">
+        <div id="heroPopoutRig" class="mic78-hud-planet-center" style="filter: url(#mic78LiquidFilter);">
           <img class="mic78-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/micai-aristide/assets/cutout.webp'" alt="MiCai Crypto Wealth 3D Cutout Subject" loading="eager" decoding="async" />
         </div>
 
-        <article class="mic78-glass-card mic78-orbital-pod" data-tilt-card data-seamless-trigger="Zero-Knowledge Institutional Custody">
+        <article class="mic78-glass-card mic78-orbital-pod" data-seamless-trigger="Zero-Knowledge Institutional Custody">
           <span class="mic78-card-kicker">VAULT 02</span>
           <h3>Zero-Knowledge Institutional Custody</h3>
           <p>Sub-aquatic spectral photonics array (AAA Audited).</p>
@@ -869,7 +833,7 @@
       </div>
       <div id="hScrollTrack" class="mic78-hscroll-track">
         
-        <article class="mic78-project-card mic78-reveal" data-tilt-card data-seamless-trigger="AI Robo-Advisory Alpha Fund">
+        <article class="mic78-project-card mic78-reveal" data-seamless-trigger="AI Robo-Advisory Alpha Fund">
           <div class="mic78-project-visual" style="background:radial-gradient(circle at 50% 50%, #2563eb33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#2563eb;">01 // $420M TVL</span>
           </div>
@@ -877,7 +841,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">AI Robo-Advisory Alpha Fund</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="mic78-project-card mic78-reveal" data-tilt-card data-seamless-trigger="Zero-Knowledge Institutional Custody">
+        <article class="mic78-project-card mic78-reveal" data-seamless-trigger="Zero-Knowledge Institutional Custody">
           <div class="mic78-project-visual" style="background:radial-gradient(circle at 50% 50%, #38bdf833, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#38bdf8;">02 // AAA Audited</span>
           </div>
@@ -885,7 +849,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Zero-Knowledge Institutional Custody</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="mic78-project-card mic78-reveal" data-tilt-card data-seamless-trigger="Cross-Chain Treasury Yield Matrix">
+        <article class="mic78-project-card mic78-reveal" data-seamless-trigger="Cross-Chain Treasury Yield Matrix">
           <div class="mic78-project-visual" style="background:radial-gradient(circle at 50% 50%, #60a5fa33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#60a5fa;">03 // 0.02s Finality</span>
           </div>
@@ -893,7 +857,7 @@
           <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Cross-Chain Treasury Yield Matrix</h3>
           <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
         </article>
-        <article class="mic78-project-card mic78-reveal" data-tilt-card data-seamless-trigger="Private Family Office Token Desk">
+        <article class="mic78-project-card mic78-reveal" data-seamless-trigger="Private Family Office Token Desk">
           <div class="mic78-project-visual" style="background:radial-gradient(circle at 50% 50%, #93c5fd33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#93c5fd;">04 // 24/7 Concierge</span>
           </div>
@@ -998,45 +962,10 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
-        });
         card.addEventListener('mouseleave', function () { card.style.transform = ''; });
       });
 
-      var displacement = document.getElementById('mic78Displacement');
-      var heroRig = document.getElementById('heroPopoutRig');
-      if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+);
         heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
       }
 

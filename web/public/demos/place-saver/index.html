@@ -36,11 +36,6 @@
     .skip-link { position: fixed; top: -100px; left: 16px; z-index: 10000; padding: 10px 18px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; font-weight: 700; text-decoration: none; transition: transform 0.2s var(--ease-out-expo); }
     .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--text-primary); outline-offset: 3px; }
     :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; }
-    .pla37-cursor-ring, .pla37-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; will-change: transform; }
-    .pla37-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out-expo), opacity 0.22s var(--ease-out-expo); }
-    .pla37-cursor-ring.is-hovered { transform: translate3d(-100px,-100px,0) scale(1.65); background: #fff; }
-    .pla37-cursor-dot { width: 6px; height: 6px; background: var(--accent-primary); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .pla37-cursor-ring, .pla37-cursor-dot { display: none; } }
 
     .pla37-navbar {
       position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
@@ -93,14 +88,12 @@
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="pla37-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="pla37-cursor-dot" aria-hidden="true"></div>
 
   <header class="pla37-navbar">
     <strong style="font-size:17px;">✦ Place Saver</strong>
     <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="pla37-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="pla37-cta-btn" data-magnetic data-next-preview>Explore Place Saver ↗</button>
+      <button type="button" id="exploreMagneticBtn" class="pla37-cta-btn" data-next-preview>Explore Place Saver ↗</button>
     </nav>
   </header>
 
@@ -119,7 +112,7 @@
             <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;font-family:var(--font-mono);">99%</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Visual Fidelity</span></div>
           </div>
         </div>
-        <div id="heroPopoutRig" class="pla37-popout-wrap" data-tilt-card style="filter:url(#pla37LiquidFilter);">
+        <div id="heroPopoutRig" class="pla37-popout-wrap" style="filter:url(#pla37LiquidFilter);">
           <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F4F4F4" stop-opacity="0.75"/><stop offset="100%" stop-color="#F4F4F4" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#F4F4F4" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
         </div>
       </div>
@@ -127,7 +120,7 @@
 
     <section id="pinnedSpecs" class="pla37-section">
       <div class="pla37-pinned-grid">
-        <article class="pla37-card pla37-reveal" data-tilt-card data-spec-index="001">
+        <article class="pla37-card pla37-reveal" data-spec-index="001">
           <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">001 / PLACE SAVER</span>
           <h2 style="font-size:20px;margin:8px 0;">The place for all your places</h2>
           <p style="font-size:13px;color:var(--text-secondary);">Save, Organize and Share\nyour favorite places</p>
@@ -136,7 +129,7 @@
           <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F4F4F4" stop-opacity="0.75"/><stop offset="100%" stop-color="#F4F4F4" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#F4F4F4" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="pla37-card pla37-reveal" data-tilt-card data-spec-index="002">
+        <article class="pla37-card pla37-reveal" data-spec-index="002">
           <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">002 / TELEMETRY</span>
           <h2 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h2>
           <p style="font-size:13px;color:var(--text-secondary);">Interactive perspective cards and SVG displacement filters tuned for Place Saver.</p>
@@ -254,41 +247,6 @@
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('pla37Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
         card.addEventListener('mouseleave', function () {
           card.style.transform = '';
           if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');

@@ -52,12 +52,6 @@
     }
     button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
     .tabular-nums { font-variant-numeric: tabular-nums; }
-    #cursorRing, #cursorDot {
-      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
-      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
-    }
-    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
-    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
     .pro57-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
     .pro57-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
 
@@ -165,8 +159,6 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" aria-hidden="true"></div>
-  <div id="cursorDot" aria-hidden="true"></div>
 
   <main id="main-content" class="pro57-wrap">
     <div class="pro57-studio-frame">
@@ -316,24 +308,6 @@
         });
       }
 
-      var ring = document.getElementById('cursorRing');
-      var dot = document.getElementById('cursorDot');
-      var mx = -100, my = -100, rx = -100, ry = -100;
-      window.addEventListener('mousemove', function (e) {
-        mx = e.clientX;
-        my = e.clientY;
-        if (dot && !motionPaused) {
-          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
-        }
-      }, { passive: true });
-
-      function tickCursor() {
-        if (!motionPaused && ring) {
-          rx += (mx - rx) * 0.18;
-          ry += (my - ry) * 0.18;
-          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
-        }
-        window.requestAnimationFrame(tickCursor);
       }
       window.requestAnimationFrame(tickCursor);
 

@@ -142,7 +142,7 @@
 
       <div class="dig95-stage-right">
         <div class="dig95-crimson-sun" data-parallax="-0.05"></div>
-        <img src="assets/cutout.webp" alt="Digital Kensei 3D Cyber Samurai" class="dig95-samurai-cutout" data-tilt-card />
+        <img src="assets/cutout.webp" alt="Digital Kensei 3D Cyber Samurai" class="dig95-samurai-cutout" />
         <div class="dig95-nft-float-badge">
           <span style="font-size:11px;color:#fca5a5;display:block;">KENSEI #0089 • MYTHIC TIER</span>
           <strong style="font-size:16px;">Current Bid: 2.85 ETH</strong>
@@ -163,22 +163,22 @@
       </div>
 
       <div class="dig95-pillar-grid">
-        <article class="dig95-pillar-card" data-tilt-card>
+        <article class="dig95-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">01 / HONOR</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">On-Chain Lineage</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">Every katana trait and armor patina is deterministically stored on Ethereum L1.</p>
         </article>
-        <article class="dig95-pillar-card" data-tilt-card>
+        <article class="dig95-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">02 / PRECISION</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">4K GLTF Rigging</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">Holders unlock full 3D blender &amp; Unreal files ready for virtual production.</p>
         </article>
-        <article class="dig95-pillar-card" data-tilt-card>
+        <article class="dig95-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">03 / CLAN DAO</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">Shogunate Treasury</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">100% of secondary royalties fund anime shorts and physical resin statues.</p>
         </article>
-        <article class="dig95-pillar-card" data-tilt-card>
+        <article class="dig95-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">04 / ASCENSION</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">Soulbound Blades</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">Stake your Ronin to forge elemental plasma katanas every seasonal equinox.</p>
@@ -201,22 +201,22 @@
       <h2 class="font-display" style="font-size:clamp(34px,4.5vw,58px);margin-top:6px;">THE KENSEI LEGACY</h2>
 
       <div class="dig95-bento-grid">
-        <article class="dig95-bento-card crimson" data-tilt-card>
+        <article class="dig95-bento-card crimson">
           <span style="font-size:12px;font-weight:700;opacity:0.85;">PRIMARY + SECONDARY VOLUME</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="180" data-suffix="+ ETH">180+ ETH</strong>
           <p style="font-size:13px;opacity:0.9;">Zero-sweep organic collector volume across OpenSea and Blur.</p>
         </article>
-        <article class="dig95-bento-card" data-tilt-card>
+        <article class="dig95-bento-card">
           <span style="font-size:12px;color:var(--crimson);font-weight:700;">RARITY HIERARCHY</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="3" data-suffix=" TIERS">3 TIERS</strong>
           <p style="font-size:13px;color:var(--muted);">Ashigaru Vanguard, Cyber-Ronin, and 1-of-1 Celestial Shogun editions.</p>
         </article>
-        <article class="dig95-bento-card" data-tilt-card>
+        <article class="dig95-bento-card">
           <span style="font-size:12px;color:var(--crimson);font-weight:700;">CUSTOM TRAITS</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="500" data-suffix="+">500+</strong>
           <p style="font-size:13px;color:var(--muted);">Hand-sculpted mempo masks, neon visors, and braided kasa hats.</p>
         </article>
-        <article class="dig95-bento-card" data-tilt-card>
+        <article class="dig95-bento-card">
           <span style="font-size:12px;color:var(--crimson);font-weight:700;">DAO GUARDIANS</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="200" data-suffix="+">200+</strong>
           <p style="font-size:13px;color:var(--muted);">Genesis council members governing the Nexon Anime Incubator.</p>
@@ -253,14 +253,6 @@
           el.style.transform = 'translate3d(0,' + (y * s).toFixed(1) + 'px,0)';
         });
       }, { passive: true });
-      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
-        card.addEventListener('mousemove', function(e){
-          if (paused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 9).toFixed(2) + 'deg) rotateY(' + (nx * 11).toFixed(2) + 'deg)';
-        });
         card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
       });
       var modal = document.getElementById('kenseiModal');

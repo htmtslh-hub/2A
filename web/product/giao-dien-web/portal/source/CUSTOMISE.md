@@ -7,8 +7,6 @@ This guide covers every editable token, copy block, media asset, and interactive
 | File | Literal String | Count | Purpose |
 | :--- | :--- | :---: | :--- |
 | `index.html` | `Portal` | 14 | Primary brand name & title across header, hero, and footer |
-| `index.html` | `Helvetica Now Display Bold` | 4 | Editable template copy / token |
-| `index.html` | `Precision-engineered Portal web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.` | 5 | Editable template copy / token |
 | `index.html` | `--font-display:` | 1 | Display heading font family token in :root |
 | `index.html` | `id="motionToggleBtn"` | 1 | In-session motion pause/resume accessibility toggle |
 | `index.html` | `id="seamlessModal"` | 1 | Interactive specification modal / drawer dialog |

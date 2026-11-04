@@ -11,7 +11,6 @@
     "name": "Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal",
     "focus": [
       "horizontal-scroll",
-      "liquid-ripple-distortion",
       "seamless-modal-transition"
     ],
     "description": "Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà."

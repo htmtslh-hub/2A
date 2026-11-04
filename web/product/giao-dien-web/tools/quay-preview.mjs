@@ -857,7 +857,7 @@ try {
       }
     };
     await shot('hero');
-    await at(1); await page.mouse.move(380, 480, { steps: 12 }); actions.push({ seconds:1, action:'hover hero' });
+    await at(1);
     await at(2.4); await next();
     await at(4.2); await shot('interaction');
     await at(4.8); await next();

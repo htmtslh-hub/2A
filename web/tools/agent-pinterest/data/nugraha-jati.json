@@ -8,14 +8,12 @@
   "assignedTier": "premium",
   "motionRecipe": {
     "id": "recipe-tilt-splittext",
-    "name": "Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor",
+    "name": "Split-Text Staggered Reveal + Scroll Scrubbing",
     "focus": [
       "split-text-reveal",
-      "3d-card-tilt",
-      "image-zoom-mask",
-      "custom-blend-cursor"
+      "image-zoom-mask"
     ],
-    "description": "Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode."
+    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và chuyển động cuộn mượt mà."
   },
   "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-04\\nugraha-jati.png",
   "imageBytes": 449559,

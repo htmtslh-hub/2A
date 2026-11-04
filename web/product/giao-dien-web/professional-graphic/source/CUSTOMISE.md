@@ -1,4 +1,4 @@
-# Customisation Guide — Hawra Graphics Studio (`professional-graphic`)
+# Customisation Guide — Hawra Graphics (`professional-graphic`)
 
 This guide covers every editable token, copy block, media asset, and interactive module in `index.html`, verified against the **ForgeScore v2.0** product standard.
 
@@ -6,6 +6,7 @@ This guide covers every editable token, copy block, media asset, and interactive
 
 | File | Literal String | Count | Purpose |
 | :--- | :--- | :---: | :--- |
+| `index.html` | `Hawra Graphics` | 6 | Primary brand name & title across header, hero, and footer |
 | `index.html` | `--bg:` | 1 | Primary canvas background token in :root |
 | `index.html` | `--accent:` | 1 | Primary interactive accent token in :root |
 | `index.html` | `--font-display:` | 1 | Display heading font family token in :root |
@@ -17,7 +18,7 @@ This guide covers every editable token, copy block, media asset, and interactive
 ## 10-Step Customisation Walkthrough
 
 ### Step 1: Update Brand Name, Page Title & Meta Tags
-Open `index.html` and search for `Hawra Graphics Studio` inside the `<title>`, `<meta name="description">`, `<header>` wordmark, and `<footer>` copyright notice to replace them with your brand identity.
+Open `index.html` and search for `Hawra Graphics` inside the `<title>`, `<meta name="description">`, `<header>` wordmark, and `<footer>` copyright notice to replace them with your brand identity.
 
 ### Step 2: Configure the 3-Layer CSS Design Tokens
 Locate the `:root` block inside `<style>` and adjust `--bg`, `--surface`, `--surface-elevated`, `--fg`, `--muted`, `--accent`, `--accent-text`, `--accent-strong`, and `--on-accent` to re-skin the entire interface in one place.
@@ -52,7 +53,7 @@ All animations run smoothly by default using hardware-accelerated `transform` an
 
 ### Prompt 1: Complete Brand & Palette Re-Skin
 ```text
-Update index.html for "Hawra Graphics Studio" (professional-graphic) to rebrand it for [YOUR BRAND NAME]. Change the :root CSS tokens (--bg, --surface, --fg, --accent, --accent-text, --on-accent) to a [DARK/LIGHT] palette using [PRIMARY HEX] and [ACCENT HEX], while keeping WCAG AA contrast on all buttons and badges.
+Update index.html for "Hawra Graphics" (professional-graphic) to rebrand it for [YOUR BRAND NAME]. Change the :root CSS tokens (--bg, --surface, --fg, --accent, --accent-text, --on-accent) to a [DARK/LIGHT] palette using [PRIMARY HEX] and [ACCENT HEX], while keeping WCAG AA contrast on all buttons and badges.
 ```
 
 ### Prompt 2: Hero Headline & Subheadline Rewrite

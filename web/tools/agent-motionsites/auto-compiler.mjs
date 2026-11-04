@@ -366,8 +366,6 @@ export function buildSingleFileHtml(spec) {
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-navbar">
     <a href="#heroStage" class="${p}-brand">SkyElite</a>
@@ -380,7 +378,7 @@ export function buildSingleFileHtml(spec) {
     </ul>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="${p}-btn-discover" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-btn-book" data-magnetic data-next-preview>Book Now</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-book" data-next-preview>Book Now</button>
     </div>
   </header>
 
@@ -400,12 +398,12 @@ export function buildSingleFileHtml(spec) {
         </h1>
         <p class="${p}-subtitle">Your dedication deserves recognition.</p>
         <div style="display:flex;gap:12px;justify-content:center;margin-bottom:10px;">
-          <button type="button" class="${p}-btn-discover" data-magnetic data-seamless-trigger="Discover SkyElite Fleet">Discover</button>
-          <button type="button" class="${p}-btn-book" data-magnetic data-seamless-trigger="Instant Private Jet Charter Quote">Book Now</button>
+          <button type="button" class="${p}-btn-discover" data-seamless-trigger="Discover SkyElite Fleet">Discover</button>
+          <button type="button" class="${p}-btn-book" data-seamless-trigger="Instant Private Jet Charter Quote">Book Now</button>
         </div>
       </div>
 
-      <div id="heroPopoutRig" class="${p}-jet-popout" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+      <div id="heroPopoutRig" class="${p}-jet-popout" style="filter:url(#${p}LiquidFilter);">
         ${cutoutImg}
       </div>
 
@@ -451,22 +449,22 @@ export function buildSingleFileHtml(spec) {
     <section id="motionProjects" class="${p}-section">
       <h2 style="font-size:clamp(26px,3.5vw,38px);">Popular Private Corridors</h2>
       <div class="${p}-hscroll-track">
-        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="Geneva to Teterboro Corridor">
+        <article class="${p}-route-card ${p}-reveal" data-seamless-trigger="Geneva to Teterboro Corridor">
           <span class="${p}-kicker">CORRIDOR 01</span>
           <h3 style="margin:8px 0;">Geneva ✈ Teterboro</h3>
           <p style="font-size:13px;color:var(--muted);">7h 40m Nonstop • Gulfstream G800</p>
         </article>
-        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="London Farnborough to Dubai">
+        <article class="${p}-route-card ${p}-reveal" data-seamless-trigger="London Farnborough to Dubai">
           <span class="${p}-kicker">CORRIDOR 02</span>
           <h3 style="margin:8px 0;">London ✈ Dubai DWC</h3>
           <p style="font-size:13px;color:var(--muted);">6h 15m Nonstop • Global 7500</p>
         </article>
-        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="Tokyo Haneda to Singapore">
+        <article class="${p}-route-card ${p}-reveal" data-seamless-trigger="Tokyo Haneda to Singapore">
           <span class="${p}-kicker">CORRIDOR 03</span>
           <h3 style="margin:8px 0;">Tokyo ✈ Singapore</h3>
           <p style="font-size:13px;color:var(--muted);">6h 30m Nonstop • Praetor 600</p>
         </article>
-        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="Miami Opa-Locka to Aspen">
+        <article class="${p}-route-card ${p}-reveal" data-seamless-trigger="Miami Opa-Locka to Aspen">
           <span class="${p}-kicker">CORRIDOR 04</span>
           <h3 style="margin:8px 0;">Miami ✈ Aspen</h3>
           <p style="font-size:13px;color:var(--muted);">3h 55m Nonstop • Challenger 3500</p>
@@ -624,8 +622,6 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <div class="${p}-nav-wrap">
     <header class="${p}-navbar">
@@ -642,7 +638,7 @@ export function buildSingleFileHtml(spec) {
         <span class="${p}-meta-text">Taking on projects for Q1 2026</span>
         <span class="${p}-meta-text">🕒 <span id="londonClock">14:30 in London</span></span>
         <button type="button" id="motionToggleBtn" class="${p}-pill-label" style="background:#fff;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-roll-btn" data-magnetic data-next-preview>
+        <button type="button" id="exploreMagneticBtn" class="${p}-roll-btn" data-next-preview>
           <span class="${p}-roll-window"><span class="${p}-roll-track"><span>Book a strategy call</span><span>Book a strategy call</span></span></span>
           <span class="${p}-roll-arrow">↗</span>
         </button>
@@ -660,11 +656,11 @@ export function buildSingleFileHtml(spec) {
           We craft digital experiences for brands ready to dominate their category online.
         </h1>
         <div class="${p}-cta-row">
-          <button type="button" class="${p}-roll-btn orange" data-magnetic data-seamless-trigger="Start a Project with Axion Studio">
+          <button type="button" class="${p}-roll-btn orange" data-seamless-trigger="Start a Project with Axion Studio">
             <span class="${p}-roll-window"><span class="${p}-roll-track"><span>Start a project</span><span>Start a project</span></span></span>
             <span class="${p}-roll-arrow">→</span>
           </button>
-          <div class="${p}-partner-badge" data-tilt-card>
+          <div class="${p}-partner-badge">
             <span style="color:#E8704E;font-size:18px;">✦</span>
             <span>Certified Partner</span>
             <span style="background:#111827;color:#fff;font-size:11px;padding:2px 8px;border-radius:4px;">Featured</span>
@@ -684,7 +680,7 @@ export function buildSingleFileHtml(spec) {
           <img src="${imgSmall}" alt="Axion Studio Craft" class="${p}-about-img" style="aspect-ratio:438/346;" loading="lazy" />
           <div style="padding:12px 0;">
             <p style="font-size:17px;line-height:1.65;font-weight:500;margin-bottom:24px;">Through research, creative thinking and iteration we help growing brands realize their digital full potential.</p>
-            <button type="button" class="${p}-roll-btn orange" data-magnetic data-seamless-trigger="About Axion Studio">
+            <button type="button" class="${p}-roll-btn orange" data-seamless-trigger="About Axion Studio">
               <span class="${p}-roll-window"><span class="${p}-roll-track"><span>About our studio</span><span>About our studio</span></span></span>
               <span class="${p}-roll-arrow">→</span>
             </button>
@@ -702,7 +698,7 @@ export function buildSingleFileHtml(spec) {
         </div>
         <h2 class="${p}-about-h2" style="margin-bottom:16px;">Our projects</h2>
         <div class="${p}-cases-grid">
-          <article class="${p}-reveal" data-tilt-card data-seamless-trigger="Narrativ — Site of the Month 2025">
+          <article class="${p}-reveal" data-seamless-trigger="Narrativ — Site of the Month 2025">
             <div class="${p}-case-media">
               <video src="${vidNarrativ}" autoplay muted loop playsinline preload="metadata"></video>
               <span class="${p}-case-fab">🔗 Learn more</span>
@@ -710,7 +706,7 @@ export function buildSingleFileHtml(spec) {
             <p style="font-size:14px;color:#4b5563;margin-top:14px;">Winner of Site of the Month 2025 - an interactive 3D showcase driving record engagement</p>
             <h3 style="font-size:16px;font-weight:700;margin-top:4px;">Narrativ</h3>
           </article>
-          <article class="${p}-reveal" data-tilt-card data-seamless-trigger="Luminar — Brand Conversion Platform">
+          <article class="${p}-reveal" data-seamless-trigger="Luminar — Brand Conversion Platform">
             <div class="${p}-case-media">
               <video src="${vidLuminar}" autoplay muted loop playsinline preload="metadata"></video>
               <span class="${p}-case-fab" style="background:#111827;color:#fff;">View case study →</span>
@@ -887,8 +883,6 @@ export function buildSingleFileHtml(spec) {
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section id="heroStage" class="${p}-hero">
@@ -906,37 +900,37 @@ export function buildSingleFileHtml(spec) {
         </div>
         <div style="display:flex;align-items:center;gap:12px;">
           <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-          <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;" data-magnetic data-next-preview>Login</button>
+          <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;" data-next-preview>Login</button>
         </div>
       </header>
 
       <div class="${p}-center" data-parallax="0.07">
         <h1 class="${p}-serif-h1" id="oversizedHeadline">Built for the curious</h1>
-        <div id="heroPopoutRig" class="${p}-cutout-wrap" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" class="${p}-cutout-wrap" style="filter:url(#${p}LiquidFilter);">
           ${cutoutImg}
         </div>
         <form class="${p}-email-bar liquid-glass" onsubmit="event.preventDefault();">
           <input type="email" class="${p}-email-input" placeholder="Enter your email" aria-label="Enter your email" />
-          <button type="submit" class="${p}-email-submit" data-magnetic data-seamless-trigger="Subscribed to Asme Curiosity Dispatch" aria-label="Subscribe">→</button>
+          <button type="submit" class="${p}-email-submit" data-seamless-trigger="Subscribed to Asme Curiosity Dispatch" aria-label="Subscribe">→</button>
         </form>
         <p style="font-size:14px;color:var(--muted);line-height:1.6;max-width:480px;margin:0 auto 18px;">
           Stay updated with the latest news and insights. Subscribe to our newsletter today and never miss out on exciting updates.
         </p>
-        <button type="button" class="liquid-glass" style="color:#fff;padding:12px 32px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;" data-magnetic data-seamless-trigger="The Asme Curiosity Manifesto">
+        <button type="button" class="liquid-glass" style="color:#fff;padding:12px 32px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;" data-seamless-trigger="The Asme Curiosity Manifesto">
           Manifesto
         </button>
       </div>
 
       <div style="position:relative;z-index:10;display:flex;justify-content:center;gap:16px;padding-bottom:8px;">
-        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Instagram" data-magnetic>IG</button>
-        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Twitter" data-magnetic>𝕏</button>
-        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Globe" data-magnetic>🌐</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Instagram">IG</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Twitter">𝕏</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Globe">🌐</button>
       </div>
     </section>
 
     <section id="pinnedSpecs" class="${p}-section">
       <div class="${p}-pinned-grid">
-        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-card liquid-glass ${p}-reveal" data-spec-index="001">
           <span style="font-size:11px;color:#f59e0b;font-weight:700;">001 / LIQUID GLASS OPTICS</span>
           <strong data-counter-target="120" data-counter-suffix="Hz" style="display:block;font-size:34px;margin:6px 0;">120Hz</strong>
           <p style="font-size:13px;color:var(--muted);">Luminosity blend-mode refraction with 1.4px mask-composite specular border.</p>
@@ -945,7 +939,7 @@ export function buildSingleFileHtml(spec) {
           ${cutoutImg}
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#f59e0b;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="003">
+        <article class="${p}-card liquid-glass ${p}-reveal" data-spec-index="003">
           <span style="font-size:11px;color:#f59e0b;font-weight:700;">002 / CURIOSITY NETWORK</span>
           <strong data-counter-target="50" data-counter-suffix="K+" style="display:block;font-size:34px;margin:6px 0;">50K+</strong>
           <p style="font-size:13px;color:var(--muted);">Researchers, engineers, and designers receiving weekly spatial dispatches.</p>
@@ -1047,8 +1041,6 @@ export function buildSingleFileHtml(spec) {
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section id="heroStage" class="${p}-hero">
@@ -1060,8 +1052,8 @@ export function buildSingleFileHtml(spec) {
           <strong style="font-size:22px;letter-spacing:-0.04em;">INNOVATION</strong>
           <div style="display:flex;gap:10px;align-items:center;">
             <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>𝕏</button>
-            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>in</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;">𝕏</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;">in</button>
           </div>
         </div>
         <nav class="${p}-pill-bar liquid-glass" aria-label="Primary">
@@ -1074,17 +1066,17 @@ export function buildSingleFileHtml(spec) {
           </ul>
           <div style="display:flex;align-items:center;gap:14px;">
             <span style="font-size:13px;color:var(--muted);">1(800)234-23-34</span>
-            <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:8px 20px;border-radius:999px;font-size:13px;cursor:pointer;" data-magnetic data-next-preview>Call Me Back</button>
+            <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:8px 20px;border-radius:999px;font-size:13px;cursor:pointer;" data-next-preview>Call Me Back</button>
           </div>
         </nav>
       </header>
 
       <div class="${p}-center" data-parallax="0.07">
         <h1 class="${p}-h1" id="oversizedHeadline">Know it all.</h1>
-        <div id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" style="filter:url(#${p}LiquidFilter);">
           ${cutoutImg}
         </div>
-        <button type="button" class="liquid-glass" style="color:#fff;padding:15px 44px;border-radius:999px;font-size:16px;cursor:pointer;margin-top:8px;" data-magnetic data-seamless-trigger="Innovation Optical Telemetry Dossier">
+        <button type="button" class="liquid-glass" style="color:#fff;padding:15px 44px;border-radius:999px;font-size:16px;cursor:pointer;margin-top:8px;" data-seamless-trigger="Innovation Optical Telemetry Dossier">
           Book a Free Call
         </button>
       </div>
@@ -1099,7 +1091,7 @@ export function buildSingleFileHtml(spec) {
 
     <section id="pinnedSpecs" class="${p}-section">
       <div class="${p}-pinned-grid">
-        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-card liquid-glass ${p}-reveal" data-spec-index="001">
           <span style="font-size:11px;color:#38bdf8;font-weight:700;">001 / REFRACTIVE CORE</span>
           <strong data-counter-target="99" data-counter-suffix=".9%" style="display:block;font-size:34px;margin:6px 0;">99.9%</strong>
           <p style="font-size:13px;color:var(--muted);">Real-time optical synthesis and neural decision telemetry.</p>
@@ -1108,7 +1100,7 @@ export function buildSingleFileHtml(spec) {
           ${cutoutImg}
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#38bdf8;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="003">
+        <article class="${p}-card liquid-glass ${p}-reveal" data-spec-index="003">
           <span style="font-size:11px;color:#38bdf8;font-weight:700;">002 / GLOBAL ENTERPRISE</span>
           <strong data-counter-target="240" data-counter-suffix="+" style="display:block;font-size:34px;margin:6px 0;">240+</strong>
           <p style="font-size:13px;color:var(--muted);">Category-leading teams powered by Innovation spatial analytics.</p>
@@ -1223,8 +1215,6 @@ export function buildSingleFileHtml(spec) {
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section id="heroStage" class="${p}-hero">
@@ -1239,7 +1229,7 @@ export function buildSingleFileHtml(spec) {
         </ul>
         <div style="display:flex;gap:10px;align-items:center;">
           <button type="button" id="motionToggleBtn" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.25);padding:8px 14px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-          <button type="button" id="exploreMagneticBtn" class="${p}-neon-btn" data-magnetic data-next-preview>Sign Up</button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-neon-btn" data-next-preview>Sign Up</button>
         </div>
       </header>
 
@@ -1249,7 +1239,7 @@ export function buildSingleFileHtml(spec) {
       </div>
 
       <div class="${p}-showcase-grid">
-        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-seamless-trigger="NFT #2419 — Orbis Genesis Artifact">
+        <article class="${p}-nft-card ${p}-reveal" data-seamless-trigger="NFT #2419 — Orbis Genesis Artifact">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
             <strong>NFT #2419</strong>
             <span style="font-size:13px;color:#FF36AB;">♥ 206</span>
@@ -1263,14 +1253,14 @@ export function buildSingleFileHtml(spec) {
           </div>
         </article>
 
-        <div class="${p}-center-portal" id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div class="${p}-center-portal" id="heroPopoutRig" style="filter:url(#${p}LiquidFilter);">
           ${cutoutImg}
-          <button type="button" class="${p}-neon-btn" style="padding:13px 34px;font-size:15px;" data-magnetic data-seamless-trigger="Orbis Live Genesis Drop">
+          <button type="button" class="${p}-neon-btn" style="padding:13px 34px;font-size:15px;" data-seamless-trigger="Orbis Live Genesis Drop">
             Explore Now ↗
           </button>
         </div>
 
-        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-seamless-trigger="NFT #1079 — Cyber Chrome Helmet">
+        <article class="${p}-nft-card ${p}-reveal" data-seamless-trigger="NFT #1079 — Cyber Chrome Helmet">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
             <strong>NFT #1079</strong>
             <span style="font-size:13px;color:#08FDFD;">♥ 165</span>
@@ -1288,7 +1278,7 @@ export function buildSingleFileHtml(spec) {
 
     <section id="pinnedSpecs" class="${p}-section">
       <div class="${p}-pinned-grid">
-        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-nft-card ${p}-reveal" data-spec-index="001">
           <span style="font-size:11px;color:#6FFF00;font-weight:700;">001 / TOTAL VOLUME</span>
           <strong data-counter-target="42" data-counter-suffix="K ETH" style="display:block;font-size:34px;margin:6px 0;">42K ETH</strong>
           <p style="font-size:13px;color:rgba(255,255,255,0.72);">Zero-gas Layer-2 minting with instant royalty settlement.</p>
@@ -1297,7 +1287,7 @@ export function buildSingleFileHtml(spec) {
           ${cutoutImg}
           <p id="scrubDialText" style="margin-top:8px;font-size:12px;color:#6FFF00;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-spec-index="003">
+        <article class="${p}-nft-card ${p}-reveal" data-spec-index="003">
           <span style="font-size:11px;color:#08FDFD;font-weight:700;">002 / HOLDERS</span>
           <strong data-counter-target="12" data-counter-suffix=".4K" style="display:block;font-size:34px;margin:6px 0;">12.4K</strong>
           <p style="font-size:13px;color:rgba(255,255,255,0.72);">Verified collectors governing the Orbis Spatial DAO.</p>
@@ -1417,14 +1407,12 @@ export function buildSingleFileHtml(spec) {
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <nav class="${p}-bottom-nav" aria-label="Floating Cosmic Navigation">
     <a href="#heroStage">Home</a>
     <a href="#pinnedSpecs">Work</a>
     <a href="#pinnedSpecs">About</a>
-    <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" style="padding:8px 18px;font-size:12px;" data-magnetic data-next-preview>Contact for work</button>
+    <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" style="padding:8px 18px;font-size:12px;" data-next-preview>Contact for work</button>
   </nav>
 
   <main>
@@ -1445,10 +1433,10 @@ export function buildSingleFileHtml(spec) {
             Principal Web3 Product Designer architecting spatial interfaces, token ecosystems, and high-converting interactive Webflow systems.
           </p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <button type="button" class="${p}-cta-btn" data-magnetic data-seamless-trigger="001 / Nova Relay Case Study">Explore Selected Works ↗</button>
+            <button type="button" class="${p}-cta-btn" data-seamless-trigger="001 / Nova Relay Case Study">Explore Selected Works ↗</button>
           </div>
         </div>
-        <div id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" style="filter:url(#${p}LiquidFilter);">
           ${cutoutImg}
         </div>
       </div>
@@ -1457,7 +1445,7 @@ export function buildSingleFileHtml(spec) {
     <section id="pinnedSpecs" class="${p}-section">
       <h2 style="font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);">Cosmic Bento Telemetry</h2>
       <div class="${p}-bento-grid">
-        <article class="${p}-bento-card ${p}-reveal" data-tilt-card data-spec-index="001" data-seamless-trigger="001 / Nova Relay Protocol">
+        <article class="${p}-bento-card ${p}-reveal" data-spec-index="001" data-seamless-trigger="001 / Nova Relay Protocol">
           <span style="font-size:12px;color:#89AACC;">001 /CAPITAL ASSISTED</span>
           <strong class="${p}-stat-big" data-counter-target="23" data-counter-suffix="M+">$23M+</strong>
           <p style="font-size:14px;color:var(--muted);margin-top:8px;">Seed &amp; Series A funding raised by Web3 protocols launched with bespoke interactive design systems.</p>
@@ -1466,7 +1454,7 @@ export function buildSingleFileHtml(spec) {
           ${cutoutImg}
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#89AACC;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-bento-card ${p}-reveal" data-tilt-card data-spec-index="003" data-seamless-trigger="002 / Pulse Board Analytics">
+        <article class="${p}-bento-card ${p}-reveal" data-spec-index="003" data-seamless-trigger="002 / Pulse Board Analytics">
           <span style="font-size:12px;color:#89AACC;">002 / CLIENT SATISFACTION</span>
           <strong class="${p}-stat-big" data-counter-target="97" data-counter-suffix="%">97%</strong>
           <p style="font-size:14px;color:var(--muted);margin-top:8px;">17+ international design awards across Webflow, Awwwards, and FWA showcases.</p>
@@ -1593,14 +1581,12 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <main>
     <section class="${p}-bento-stage" aria-label="Max Reed Bento Portfolio">
       <!-- LEFT COLUMN (28%) -->
       <div class="${p}-col">
-        <article class="${p}-card-teal" style="flex: 0 0 42%;" data-tilt-card>
+        <article class="${p}-card-teal" style="flex: 0 0 42%;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="${p}-pill">✦ 12+ Design Awards</span>
             <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
@@ -1612,11 +1598,11 @@ export function buildSingleFileHtml(spec) {
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid rgba(255,255,255,0.14);">
             <span style="font-size:13px;color:rgba(255,255,255,0.85);">max@studio.com</span>
-            <button type="button" class="${p}-pill" data-seamless-trigger="Contact Max Reed — Direct Studio Inquiry" data-magnetic>Copy Email ↗</button>
+            <button type="button" class="${p}-pill" data-seamless-trigger="Contact Max Reed — Direct Studio Inquiry">Copy Email ↗</button>
           </div>
         </article>
 
-        <article class="${p}-card-dark" style="flex: 1;" data-tilt-card>
+        <article class="${p}-card-dark" style="flex: 1;">
           <div>
             <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);">Interactive Craft &amp; Stack</span>
             <p style="font-size: 16px; font-weight: 500; line-height: 1.45; color: #ededed; margin-top: 10px;">
@@ -1647,7 +1633,7 @@ export function buildSingleFileHtml(spec) {
           </nav>
         </header>
 
-        <div class="${p}-portrait-card" data-tilt-card>
+        <div class="${p}-portrait-card">
           <video id="heroBgVideo" class="${p}-portrait-video" src="${spec.heroVideo}" autoplay loop muted playsinline preload="auto"></video>
           <div class="${p}-portrait-grad"></div>
           <div style="position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;">
@@ -1669,7 +1655,7 @@ export function buildSingleFileHtml(spec) {
 
       <!-- RIGHT COLUMN (28%) -->
       <div class="${p}-col">
-        <article class="${p}-card-dark" style="flex: 1;" data-tilt-card>
+        <article class="${p}-card-dark" style="flex: 1;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span style="font-size:16px;font-weight:600;">Work</span>
             <a href="#workShowcase" style="font-size:13px;color:var(--muted);text-decoration:none;">Show more ↗</a>
@@ -1683,14 +1669,14 @@ export function buildSingleFileHtml(spec) {
               <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:46px;letter-spacing:-0.02em;">Nola</span>
             </div>
             <div style="display:flex;justify-content:flex-end;">
-              <button type="button" id="exploreMagneticBtn" class="${p}-pill" data-magnetic data-seamless-trigger="Nola — Interactive Web Design Case Study">
+              <button type="button" id="exploreMagneticBtn" class="${p}-pill" data-seamless-trigger="Nola — Interactive Web Design Case Study">
                 View Project ↗
               </button>
             </div>
           </div>
         </article>
 
-        <article class="${p}-card-teal" style="flex: 0 0 38%;" data-tilt-card>
+        <article class="${p}-card-teal" style="flex: 0 0 38%;">
           <div>
             <strong style="font-size: clamp(40px, 3.8vw, 52px); font-weight: 700; line-height: 1; display: block;" data-counter-target="10" data-counter-suffix="M+">10M+</strong>
             <span style="font-size: 14px; color: rgba(255,255,255,0.8); margin-top: 6px; display: block;">Raised for startups</span>
@@ -1721,17 +1707,17 @@ export function buildSingleFileHtml(spec) {
         <span id="scrollScrubReadout" class="${p}-pill">SCRUB 0% • 0.0°</span>
       </div>
       <div class="${p}-case-grid">
-        <article class="${p}-card-dark ${p}-reveal" data-tilt-card data-spec-index="001" data-seamless-trigger="01 / Nola Spatial Commerce">
+        <article class="${p}-card-dark ${p}-reveal" data-spec-index="001" data-seamless-trigger="01 / Nola Spatial Commerce">
           <span style="font-size:12px;color:var(--green);">001 / SPATIAL COMMERCE</span>
           <h3 style="font-size:22px;margin:10px 0 6px;">Nola Interactive Flagship</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.55;">Led design systems and WebGL product storytelling, lifting checkout conversion by 41%.</p>
         </article>
-        <article class="${p}-card-dark ${p}-reveal" data-tilt-card data-spec-index="002" data-seamless-trigger="02 / Kinetix AI OS">
+        <article class="${p}-card-dark ${p}-reveal" data-spec-index="002" data-seamless-trigger="02 / Kinetix AI OS">
           <span style="font-size:12px;color:var(--green);">002 / SERIES A FINTECH</span>
           <h3 style="font-size:22px;margin:10px 0 6px;">Kinetix Treasury OS</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.55;">Zero-latency bento workspace that helped secure $6.4M seed-to-Series-A institutional backing.</p>
         </article>
-        <article class="${p}-card-dark ${p}-reveal" data-tilt-card data-spec-index="003" data-seamless-trigger="03 / Vespera Audio Synth">
+        <article class="${p}-card-dark ${p}-reveal" data-spec-index="003" data-seamless-trigger="03 / Vespera Audio Synth">
           <span style="font-size:12px;color:var(--green);">003 / HARDWARE INTERFACE</span>
           <h3 style="font-size:22px;margin:10px 0 6px;">Vespera Spatial Synth</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.55;">Tactile browser companion app recognized with FWA &amp; Awwwards Site of the Day.</p>
@@ -1858,7 +1844,7 @@ export function buildSingleFileHtml(spec) {
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="${p}-badge" style="cursor:pointer;" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-btn-white" data-magnetic>Book A Call</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-white">Book A Call</button>
     </div>
   </header>
 
@@ -1900,7 +1886,7 @@ export function buildSingleFileHtml(spec) {
 
       <div class="${p}-grid-3">
         <!-- Card 1: Bar Chart -->
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <div style="height:170px;display:flex;align-items:flex-end;justify-content:space-around;padding:20px 16px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;">
             <div style="text-align:center;width:24%;">
               <div style="height:110px;background:rgba(255,255,255,0.85);border-radius:6px 6px 0 0;"></div>
@@ -1922,7 +1908,7 @@ export function buildSingleFileHtml(spec) {
         </article>
 
         <!-- Card 2: AI Platform Nodes -->
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <div style="height:170px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;padding:16px;">
             <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
               <span class="${p}-badge">ChatGPT</span><span class="${p}-badge">Perplexity</span><span class="${p}-badge">Claude</span><span class="${p}-badge">Gemini</span>
@@ -1937,7 +1923,7 @@ export function buildSingleFileHtml(spec) {
         </article>
 
         <!-- Card 3: Channel Comparison -->
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <div style="height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;padding:18px;">
             <div>
               <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span>Email Newsletter</span><strong>42.0%</strong></div>
@@ -1977,22 +1963,22 @@ export function buildSingleFileHtml(spec) {
         </h2>
       </div>
       <div class="${p}-grid-4">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-size:12px;color:var(--muted);">01 / EXTRACTION</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">Voice Capture Call</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">One 20-minute recorded interview per month extracts your contrarian stories, frameworks, and client wins.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-size:12px;color:var(--muted);">02 / SYNTHESIS</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">Voice-Matched Drafting</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Editorial strategists + custom style models craft 4 deep-dive issues calibrated to your exact cadence.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-size:12px;color:var(--muted);">03 / CITATION</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">AI Search Indexing</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Structured schema and cross-syndication ensure ChatGPT and Perplexity cite your domain first.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-size:12px;color:var(--muted);">04 / MONETIZATION</span>
           <h3 style="font-size:19px;margin:14px 0 8px;">Pipeline Conversion</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Soft-CTA conversion loops route high-intent subscribers straight onto your calendar.</p>
@@ -2170,7 +2156,7 @@ export function buildSingleFileHtml(spec) {
       </header>
 
       <!-- Floating 200x200px Liquid Glass Card at 75% Grid Line -->
-      <aside class="${p}-glass-square" data-tilt-card>
+      <aside class="${p}-glass-square">
         <span style="font-size:12px;color:rgba(255,255,255,0.65);font-family:monospace;">[ 2025 ]</span>
         <button type="button" class="${p}-play-circle" data-seamless-trigger="Watch Cohort Live Code Review Demo" aria-label="Play Demo Video">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#5ed29c"><polygon points="6,4 20,12 6,20"/></svg>
@@ -2187,7 +2173,7 @@ export function buildSingleFileHtml(spec) {
           <p style="font-size:15px;color:var(--muted);line-height:1.65;">
             Master modern software engineering through real-world projects, live code reviews, and direct mentorship from engineers at top tech companies.
           </p>
-          <button type="button" id="exploreMagneticBtn" class="${p}-cta-emerald" data-magnetic>
+          <button type="button" id="exploreMagneticBtn" class="${p}-cta-emerald">
             <span>Explore Courses</span>
             <span class="${p}-cta-circle">↗</span>
           </button>
@@ -2208,17 +2194,17 @@ export function buildSingleFileHtml(spec) {
       </div>
 
       <div class="${p}-track-grid">
-        <article class="${p}-track-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-track-card ${p}-reveal">
           <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ TRACK 01 • 16 WEEKS ]</span>
           <h3 style="font-size:22px;margin:12px 0 8px;">Distributed Cloud &amp; Go</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Build high-throughput Raft consensus clusters, eBPF observability agents, and multi-region Kubernetes engines.</p>
         </article>
-        <article class="${p}-track-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-track-card ${p}-reveal">
           <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ TRACK 02 • 14 WEEKS ]</span>
           <h3 style="font-size:22px;margin:12px 0 8px;">AI Systems &amp; CUDA Kernels</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Architect low-latency LLM inference servers, vector retrieval pipelines, and multi-agent production harnesses.</p>
         </article>
-        <article class="${p}-track-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-track-card ${p}-reveal">
           <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ TRACK 03 • 12 WEEKS ]</span>
           <h3 style="font-size:22px;margin:12px 0 8px;">Full-Stack TypeScript &amp; Edge</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Ship real-time collaborative canvases, WebGL interfaces, and zero-downtime Postgres replication.</p>
@@ -2365,7 +2351,7 @@ export function buildSingleFileHtml(spec) {
         </p>
 
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <button type="button" id="exploreMagneticBtn" class="${p}-btn-indigo" style="padding:14px 28px;font-size:14px;" data-magnetic>
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-indigo" style="padding:14px 28px;font-size:14px;">
             Schedule a Consult →
           </button>
           <button type="button" class="${p}-liquid-glass" style="padding:14px 26px;border-radius:999px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;" data-seamless-trigger="Power AI Live Neural Sourcing Demo">
@@ -2408,17 +2394,17 @@ export function buildSingleFileHtml(spec) {
       </div>
 
       <div class="${p}-grid">
-        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:12px;color:#818cf8;font-weight:700;">01 / DEEP GRAPH SOURCING</span>
           <h3 style="font-size:20px;margin:12px 0 8px;">240M+ Verified Builder Profiles</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Evaluates open-source commits, architectural patents, and production impact beyond static resumes.</p>
         </article>
-        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:12px;color:#a855f7;font-weight:700;">02 / AUTONOMOUS OUTREACH</span>
           <h3 style="font-size:20px;margin:12px 0 8px;">Hyper-Contextual Calibration</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Crafts technical outreach referencing each candidate's actual repositories, achieving 64% reply rates.</p>
         </article>
-        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:12px;color:#fcd34d;font-weight:700;">03 / PREDICTIVE FIT</span>
           <h3 style="font-size:20px;margin:12px 0 8px;">Team Velocity Simulation</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Models how prospective hires complement your engineering org's existing skill topology.</p>
@@ -2525,7 +2511,7 @@ export function buildSingleFileHtml(spec) {
       <div class="${p}-overlay"></div>
 
       <!-- LEFT PANEL (52%) -->
-      <div class="${p}-left-panel ${p}-liquid" data-tilt-card>
+      <div class="${p}-left-panel ${p}-liquid">
         <header style="display:flex;justify-content:space-between;align-items:center;">
           <div style="display:flex;align-items:center;gap:10px;">
             <span style="font-size:20px;">✿</span>
@@ -2533,7 +2519,7 @@ export function buildSingleFileHtml(spec) {
           </div>
           <div style="display:flex;gap:8px;align-items:center;">
             <button type="button" id="motionToggleBtn" class="${p}-pill ${p}-liquid" aria-pressed="false">Motion: ON</button>
-            <button type="button" id="exploreMagneticBtn" class="${p}-pill ${p}-liquid" data-magnetic>
+            <button type="button" id="exploreMagneticBtn" class="${p}-pill ${p}-liquid">
               <span>Get started</span>
               <span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.18);display:inline-flex;align-items:center;justify-content:center;">↗</span>
             </button>
@@ -2590,7 +2576,7 @@ export function buildSingleFileHtml(spec) {
         </div>
 
         <!-- Main Feature Card: Growth Archive / Advanced Plant Sculpting -->
-        <article class="${p}-liquid" style="border-radius:28px;padding:28px;flex:1;display:flex;flex-direction:column;justify-content:space-between;" data-tilt-card>
+        <article class="${p}-liquid" style="border-radius:28px;padding:28px;flex:1;display:flex;flex-direction:column;justify-content:space-between;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <span class="${p}-pill ${p}-liquid">✦ Growth Archive</span>
             <span style="font-size:12px;color:var(--muted);">VOL. 04</span>
@@ -2754,7 +2740,7 @@ export function buildSingleFileHtml(spec) {
             Precision kinetic luminaires and real-time HLS projection fields engineered for landmark museums, aviation terminals, and flagship pavilions.
           </p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <button type="button" id="exploreMagneticBtn" class="${p}-btn-primary" data-magnetic>
+            <button type="button" id="exploreMagneticBtn" class="${p}-btn-primary">
               Explore Installations ↗
             </button>
             <button type="button" class="${p}-glass" style="padding:13px 24px;border-radius:999px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;" data-seamless-trigger="Luminex Spectral Showreel 2026">
@@ -2764,7 +2750,7 @@ export function buildSingleFileHtml(spec) {
         </div>
 
         <!-- Bottom-Right Glass Telemetry Card -->
-        <aside class="${p}-glass" style="padding:22px 26px;border-radius:22px;display:flex;gap:28px;" data-tilt-card>
+        <aside class="${p}-glass" style="padding:22px 26px;border-radius:22px;display:flex;gap:28px;">
           <div>
             <strong style="font-size:26px;display:block;" data-counter-target="99" data-counter-suffix=".4%">99.4%</strong>
             <span style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">CRI Spectral Fidelity</span>
@@ -2785,17 +2771,17 @@ export function buildSingleFileHtml(spec) {
         </div>
       </div>
       <div class="${p}-grid">
-        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">01 / ZURICH KUNSTHALLE</span>
           <h3 style="font-size:21px;margin:10px 0 8px;">Helios Refraction Canopy</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">4,800 motorizeddichroic prisms synchronized to solar telemetry and visitor movement.</p>
         </article>
-        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">02 / TOKYO GINZA ATRIUM</span>
           <h3 style="font-size:21px;margin:10px 0 8px;">Monolith Pulse Façade</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">12-story micro-LED acoustic membrane reacting in real time to urban wind harmonics.</p>
         </article>
-        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;">
           <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">03 / REYKJAVIK PAVILION</span>
           <h3 style="font-size:21px;margin:10px 0 8px;">Aurora Borealis Chamber</h3>
           <p style="font-size:14px;color:var(--muted);line-height:1.6;">Volumetric laser-phosphor mist projection recreating geomagnetic solar storms indoors.</p>
@@ -2936,7 +2922,7 @@ export function buildSingleFileHtml(spec) {
       </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.12);font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-black" data-magnetic>Open Wallet</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-black">Open Wallet</button>
       </div>
     </header>
 
@@ -2948,7 +2934,7 @@ export function buildSingleFileHtml(spec) {
         <p style="font-size:17px;color:rgba(0,0,0,0.72);max-width:420px;line-height:1.6;margin-bottom:28px;">
           An automated, reward-powered digital dollar built for native passive earnings and effortless connection into DeFi.
         </p>
-        <button type="button" class="${p}-btn-join" data-seamless-trigger="Mint USD Halo — Native Yield Stablecoin" data-magnetic>
+        <button type="button" class="${p}-btn-join" data-seamless-trigger="Mint USD Halo — Native Yield Stablecoin">
           <span>Join us</span>
           <span class="${p}-arrow-circle">→</span>
         </button>
@@ -2989,19 +2975,19 @@ export function buildSingleFileHtml(spec) {
       </div>
 
       <div class="${p}-bento-4">
-        <article class="${p}-card-bloom" data-tilt-card>
+        <article class="${p}-card-bloom">
           <h3 style="font-size:26px;font-weight:600;letter-spacing:-0.02em;">Savings that bloom</h3>
           <p style="font-size:16px;color:rgba(0,0,0,0.72);max-width:340px;line-height:1.55;">
             Gain steady returns as your dollar tokens are routed into top-performing DeFi strategies.
           </p>
         </article>
-        <article class="${p}-card-plum" data-tilt-card>
+        <article class="${p}-card-plum">
           <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Always fluid,<br>always pegged.</h3>
           <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
             Keep fully dollar-anchored with on-demand access to funds — no lockups or waits.
           </p>
         </article>
-        <article class="${p}-card-plum" data-tilt-card>
+        <article class="${p}-card-plum">
           <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Fully<br>automated</h3>
           <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
             Skip the task of tuning positions yourself. USD Halo runs in the background for you.
@@ -3020,7 +3006,7 @@ export function buildSingleFileHtml(spec) {
             USD Halo powers a wide range of modes for builders, companies and treasuries wanting safe and rewarding stablecoin integrations plus more.
           </p>
         </div>
-        <div class="${p}-commerce-card" data-tilt-card>
+        <div class="${p}-commerce-card">
           <video class="${p}-hero-video" src="${haloVid2}" autoplay muted loop playsinline preload="auto"></video>
           <h3 style="font-size:clamp(34px,3.8vw,48px);font-weight:600;letter-spacing:-0.03em;margin-bottom:16px;color:#000;">Commerce</h3>
           <p style="font-size:16px;color:rgba(0,0,0,0.74);max-width:420px;line-height:1.6;margin-bottom:28px;">
@@ -3185,14 +3171,14 @@ export function buildSingleFileHtml(spec) {
           Effortlessly manage your projects, collaborate with your team, and achieve your goals with our intuitive task management tool.
         </p>
 
-        <button type="button" id="exploreMagneticBtn" class="${p}-cta-blue" data-magnetic>
+        <button type="button" id="exploreMagneticBtn" class="${p}-cta-blue">
           <span>Get Started Now</span>
           <span style="width:28px;height:28px;border-radius:50%;background:#fff;color:var(--blue);display:inline-flex;align-items:center;justify-content:center;font-weight:700;">→</span>
         </button>
       </div>
 
       <!-- ELECTRIC BLUE GLASSY ORB (HERO RIGHT) -->
-      <div class="${p}-orb-stage" data-tilt-card>
+      <div class="${p}-orb-stage">
         <video id="heroBgVideo" class="${p}-orb-video" src="${tasklyOrb}" autoplay loop muted playsinline preload="auto"></video>
         <div class="${p}-float-task" style="top:22px;left:22px;">
           <span style="font-size:11px;font-weight:700;color:var(--blue);display:block;">SPRINT VELOCITY</span>
@@ -3318,7 +3304,7 @@ export function buildSingleFileHtml(spec) {
     </nav>
     <div style="display:flex;gap:12px;align-items:center;">
       <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:#f4f4f5;border:none;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-btn-black" data-magnetic>Get started free</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-black">Get started free</button>
     </div>
   </header>
 
@@ -3355,7 +3341,7 @@ export function buildSingleFileHtml(spec) {
       <!-- VIDEO + CONDITIONAL OVERLAY STAGE -->
       <div id="stellarStage" class="${p}-video-stage">
         <video id="heroBgVideo" class="${p}-video-bg" src="${stellarVid}" autoplay loop muted playsinline preload="auto"></video>
-        <div class="${p}-overlay-card" data-tilt-card>
+        <div class="${p}-overlay-card">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
             <strong id="stellarCardTitle" style="font-size:19px;">Set Up Your AI Workspace</strong>
             <span id="stellarCardPct" style="font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:#f3e8ff;color:#7c3aed;">25%</span>
@@ -3524,7 +3510,7 @@ export function buildSingleFileHtml(spec) {
         </p>
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
-          <button type="button" id="exploreMagneticBtn" class="${p}-btn-purple" data-magnetic>Book a Free Demo</button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-purple">Book a Free Demo</button>
           <button type="button" class="${p}-btn-dark" data-seamless-trigger="Explore Instant Stays">Get Started Now</button>
         </div>
       </div>
@@ -3533,17 +3519,17 @@ export function buildSingleFileHtml(spec) {
     <section id="featuredStays" class="${p}-stays">
       <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(34px,4vw,52px);font-weight:400;">Handpicked Luxury Destinations</h2>
       <div class="${p}-stay-grid">
-        <article class="${p}-stay-card" data-tilt-card>
+        <article class="${p}-stay-card">
           <span style="font-size:12px;color:#c084fc;">AMALFI COAST • ITALY</span>
           <h3 style="font-size:20px;margin:8px 0;">Villa Miramare Cliffside</h3>
           <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Instant confirmation • Private infinity terrace • $480 / night.</p>
         </article>
-        <article class="${p}-stay-card" data-tilt-card>
+        <article class="${p}-stay-card">
           <span style="font-size:12px;color:#c084fc;">KYOTO • JAPAN</span>
           <h3 style="font-size:20px;margin:8px 0;">Arashiyama Cedar Ryokan</h3>
           <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Private thermal onsen • Kaiseki dining included • $620 / night.</p>
         </article>
-        <article class="${p}-stay-card" data-tilt-card>
+        <article class="${p}-stay-card">
           <span style="font-size:12px;color:#c084fc;">ZERMATT • SWITZERLAND</span>
           <h3 style="font-size:20px;margin:8px 0;">Matterhorn Glass Chalet</h3>
           <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Ski-in panoramic dome • 24/7 concierge • $790 / night.</p>
@@ -3697,7 +3683,7 @@ export function buildSingleFileHtml(spec) {
         <p style="font-size:15px;color:#404040;margin-bottom:22px;">
           The All-In-One Software Powering the Future of PR Agencies
         </p>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-magnetic>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark">
           <span>Get Started</span>
           <span style="width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.16);display:inline-flex;align-items:center;justify-content:center;">›</span>
         </button>
@@ -3706,7 +3692,7 @@ export function buildSingleFileHtml(spec) {
       <!-- 3-COLUMN DASHBOARD PREVIEW TRAY -->
       <div id="dashboardTray" class="${p}-tray">
         <!-- Card 1: Clicks + 92% Gauge -->
-        <article class="${p}-dcard" data-tilt-card>
+        <article class="${p}-dcard">
           <div>
             <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
               <span style="color:var(--orange);">Clicks</span>
@@ -3730,7 +3716,7 @@ export function buildSingleFileHtml(spec) {
         </article>
 
         <!-- Card 2: Target Configuration Form -->
-        <article class="${p}-dcard" data-tilt-card>
+        <article class="${p}-dcard">
           <div style="display:flex;flex-direction:column;gap:10px;">
             <div>
               <label style="font-size:11px;color:#52525b;display:block;margin-bottom:4px;">Show figures for</label>
@@ -3757,7 +3743,7 @@ export function buildSingleFileHtml(spec) {
         </article>
 
         <!-- Card 3: Video Starts + 68% Gauge -->
-        <article class="${p}-dcard" data-tilt-card>
+        <article class="${p}-dcard">
           <div>
             <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
               <span style="color:var(--orange);">Video Starts</span>
@@ -3910,14 +3896,14 @@ export function buildSingleFileHtml(spec) {
         Neuralyn helps teams track metrics, goals,<br>and progress with precision.
       </p>
 
-      <button type="button" id="exploreMagneticBtn" class="${p}-btn-white" data-magnetic>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-white">
         Get Started for Free
       </button>
 
       <!-- FULL-WIDTH VIDEO + LUMINOSITY DASHBOARD AREA -->
       <div id="dashArea" class="${p}-video-band">
         <video id="heroBgVideo" class="${p}-video-bg" src="${neuVid}" autoplay loop muted playsinline preload="auto"></video>
-        <div class="${p}-dash-mock" data-parallax="-0.08" data-tilt-card>
+        <div class="${p}-dash-mock" data-parallax="-0.08">
           <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.12);">
             <div>
               <span style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">COREWAVE V3.2 TELEMETRY</span>
@@ -4102,14 +4088,12 @@ export function buildSingleFileHtml(spec) {
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-navbar">
     <strong style="font-size:17px;">✦ ${spec.title}</strong>
     <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" data-magnetic data-next-preview>Explore ${spec.title} ↗</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" data-next-preview>Explore ${spec.title} ↗</button>
     </nav>
   </header>
 
@@ -4128,7 +4112,7 @@ export function buildSingleFileHtml(spec) {
             <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;font-family:var(--font-mono);">99%</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Visual Fidelity</span></div>
           </div>
         </div>
-        <div id="heroPopoutRig" class="${p}-popout-wrap" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" class="${p}-popout-wrap" style="filter:url(#${p}LiquidFilter);">
           ${cutoutImg}
         </div>
       </div>
@@ -4136,7 +4120,7 @@ export function buildSingleFileHtml(spec) {
 
     <section id="pinnedSpecs" class="${p}-section">
       <div class="${p}-pinned-grid">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-card ${p}-reveal" data-spec-index="001">
           <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">001 / ${spec.title.toUpperCase()}</span>
           <h2 style="font-size:20px;margin:8px 0;">${spec.headline}</h2>
           <p style="font-size:13px;color:var(--text-secondary);">${spec.subheadline}</p>
@@ -4145,7 +4129,7 @@ export function buildSingleFileHtml(spec) {
           ${cutoutImg}
           <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="002">
+        <article class="${p}-card ${p}-reveal" data-spec-index="002">
           <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">002 / TELEMETRY</span>
           <h2 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h2>
           <p style="font-size:13px;color:var(--text-secondary);">Interactive perspective cards and SVG displacement filters tuned for ${spec.title}.</p>

@@ -677,17 +677,17 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
         </div>
 
         <div class="${p}-bike-stage">
-          <div id="heroPopoutRig" class="${p}-popout-rig" data-tilt-card style="filter: url(#${p}LiquidFilter);">
+          <div id="heroPopoutRig" class="${p}-popout-rig" style="filter: url(#${p}LiquidFilter);">
             <span class="${p}-cutout-pill">AUTOCLAVE MONOCOQUE • VENETO</span>
             <div class="${p}-svg-popout">${svgMarkup}</div>
           </div>
           <div class="${p}-floating-pair">
-            <article class="${p}-glass-card" data-tilt-card data-seamless-trigger="${bp.projects[0].title}">
+            <article class="${p}-glass-card" data-seamless-trigger="${bp.projects[0].title}">
               <span class="${p}-card-kicker">01 / AERODYNAMIC WAKE</span>
               <h3>${bp.projects[0].title}</h3>
               <p>Click to expand wind-tunnel drag polar &amp; carbon layup dossier (${bp.projects[0].stat}).</p>
             </article>
-            <article class="${p}-glass-card" data-tilt-card data-seamless-trigger="${bp.projects[1].title}">
+            <article class="${p}-glass-card" data-seamless-trigger="${bp.projects[1].title}">
               <span class="${p}-card-kicker">02 / BESPOKE GEOMETRY</span>
               <h3>${bp.projects[1].title}</h3>
               <p>Sub-millimeter custom tube mitering (${bp.projects[1].stat}).</p>
@@ -709,13 +709,13 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
           </h1>
         </div>
 
-        <div id="heroPopoutRig" class="${p}-sky-plane-popout" data-tilt-card style="filter: url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" class="${p}-sky-plane-popout" style="filter: url(#${p}LiquidFilter);">
           ${svgMarkup}
         </div>
 
         <div class="${p}-sky-destinations">
           ${bp.projects.slice(0, 3).map((dest, idx) => `
-          <article class="${p}-glass-card ${p}-pill-card" data-tilt-card data-seamless-trigger="${dest.title}">
+          <article class="${p}-glass-card ${p}-pill-card" data-seamless-trigger="${dest.title}">
             <div class="${p}-pill-avatar" style="background:linear-gradient(135deg, ${dest.color}, var(--surface));">0${idx + 1}</div>
             <div>
               <span class="${p}-card-kicker">${dest.tag}</span>
@@ -749,14 +749,14 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
           </h1>
 
           <!-- Layer 2: 3D Glossy Cyan Athlete Pop-Out Overlapping the Giant Letters (Text Masking) -->
-          <div id="heroPopoutRig" class="${p}-poster-figure-popout" data-tilt-card style="filter: url(#${p}LiquidFilter);">
+          <div id="heroPopoutRig" class="${p}-poster-figure-popout" style="filter: url(#${p}LiquidFilter);">
             ${svgMarkup}
           </div>
         </div>
 
         <div class="${p}-poster-bottom-bar">
           <!-- Bottom-Left Floating Replay Card -->
-          <article class="${p}-glass-card ${p}-poster-replay-card" data-tilt-card data-seamless-trigger="${bp.projects[0].title}">
+          <article class="${p}-glass-card ${p}-poster-replay-card" data-seamless-trigger="${bp.projects[0].title}">
             <span class="${p}-card-kicker">1998 FINALS • FADEAWAY KINEMATICS</span>
             <h3>${bp.projects[0].title}</h3>
             <p>Release angle 54.2° • Apex hang-time 0.92s • Click for full 3D frame analysis.</p>
@@ -771,8 +771,8 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
 
           <!-- Bottom-Right Circular Magnetic Action Buttons -->
           <div style="display:flex;gap:12px;">
-            <button type="button" class="${p}-circle-fab" data-magnetic data-seamless-trigger="360° Orbital Camera Replay" aria-label="Open 360 Replay">360°</button>
-            <a href="#pinnedSpecs" class="${p}-circle-fab" data-magnetic aria-label="Scroll to Biomechanics">↓</a>
+            <button type="button" class="${p}-circle-fab" data-seamless-trigger="360° Orbital Camera Replay" aria-label="Open 360 Replay">360°</button>
+            <a href="#pinnedSpecs" class="${p}-circle-fab" aria-label="Scroll to Biomechanics">↓</a>
           </div>
         </div>
       </div>`;
@@ -790,7 +790,7 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
           </h1>
           <p class="${p}-lead">${bp.headlineSub}</p>
 
-          <div id="heroPopoutRig" class="${p}-villa-Elevation" data-tilt-card style="filter: url(#${p}LiquidFilter);">
+          <div id="heroPopoutRig" class="${p}-villa-Elevation" style="filter: url(#${p}LiquidFilter);">
             ${svgMarkup}
           </div>
 
@@ -803,7 +803,7 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
 
         <div class="${p}-villa-right-stack">
           ${bp.projects.slice(0, 3).map((v, i) => `
-          <article class="${p}-glass-card ${p}-villa-cutout-card" data-tilt-card data-seamless-trigger="${v.title}">
+          <article class="${p}-glass-card ${p}-villa-cutout-card" data-seamless-trigger="${v.title}">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
               <span class="${p}-card-kicker">${v.tag}</span>
               <span class="${p}-cutout-tab-pill">${v.stat}</span>
@@ -827,17 +827,17 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
       </div>
 
       <div class="${p}-hud-orbital-ring">
-        <article class="${p}-glass-card ${p}-orbital-pod" data-tilt-card data-seamless-trigger="${bp.projects[0].title}">
+        <article class="${p}-glass-card ${p}-orbital-pod" data-seamless-trigger="${bp.projects[0].title}">
           <span class="${p}-card-kicker">${bp.projects[0].tag}</span>
           <h3>${bp.projects[0].title}</h3>
           <p>Zero-gravity neutral buoyancy telemetry (${bp.projects[0].stat}).</p>
         </article>
 
-        <div id="heroPopoutRig" class="${p}-hud-planet-center" data-tilt-card style="filter: url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" class="${p}-hud-planet-center" style="filter: url(#${p}LiquidFilter);">
           ${svgMarkup}
         </div>
 
-        <article class="${p}-glass-card ${p}-orbital-pod" data-tilt-card data-seamless-trigger="${bp.projects[1].title}">
+        <article class="${p}-glass-card ${p}-orbital-pod" data-seamless-trigger="${bp.projects[1].title}">
           <span class="${p}-card-kicker">${bp.projects[1].tag}</span>
           <h3>${bp.projects[1].title}</h3>
           <p>Sub-aquatic spectral photonics array (${bp.projects[1].stat}).</p>
@@ -1013,7 +1013,7 @@ export function buildPinterestInspiredHtml(data, palette) {
 
       <div class="${p}-stage-right">
         <div class="${p}-crimson-sun" data-parallax="-0.05"></div>
-        <img src="assets/cutout.webp" alt="Digital Kensei 3D Cyber Samurai" class="${p}-samurai-cutout" data-tilt-card />
+        <img src="assets/cutout.webp" alt="Digital Kensei 3D Cyber Samurai" class="${p}-samurai-cutout" />
         <div class="${p}-nft-float-badge">
           <span style="font-size:11px;color:#fca5a5;display:block;">KENSEI #0089 • MYTHIC TIER</span>
           <strong style="font-size:16px;">Current Bid: 2.85 ETH</strong>
@@ -1034,22 +1034,22 @@ export function buildPinterestInspiredHtml(data, palette) {
       </div>
 
       <div class="${p}-pillar-grid">
-        <article class="${p}-pillar-card" data-tilt-card>
+        <article class="${p}-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">01 / HONOR</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">On-Chain Lineage</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">Every katana trait and armor patina is deterministically stored on Ethereum L1.</p>
         </article>
-        <article class="${p}-pillar-card" data-tilt-card>
+        <article class="${p}-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">02 / PRECISION</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">4K GLTF Rigging</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">Holders unlock full 3D blender &amp; Unreal files ready for virtual production.</p>
         </article>
-        <article class="${p}-pillar-card" data-tilt-card>
+        <article class="${p}-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">03 / CLAN DAO</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">Shogunate Treasury</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">100% of secondary royalties fund anime shorts and physical resin statues.</p>
         </article>
-        <article class="${p}-pillar-card" data-tilt-card>
+        <article class="${p}-pillar-card">
           <span style="font-size:12px;font-weight:800;color:var(--crimson);">04 / ASCENSION</span>
           <h3 style="font-size:18px;margin:8px 0 6px;">Soulbound Blades</h3>
           <p style="font-size:13px;color:#4b5563;line-height:1.55;">Stake your Ronin to forge elemental plasma katanas every seasonal equinox.</p>
@@ -1072,22 +1072,22 @@ export function buildPinterestInspiredHtml(data, palette) {
       <h2 class="font-display" style="font-size:clamp(34px,4.5vw,58px);margin-top:6px;">THE KENSEI LEGACY</h2>
 
       <div class="${p}-bento-grid">
-        <article class="${p}-bento-card crimson" data-tilt-card>
+        <article class="${p}-bento-card crimson">
           <span style="font-size:12px;font-weight:700;opacity:0.85;">PRIMARY + SECONDARY VOLUME</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="180" data-suffix="+ ETH">180+ ETH</strong>
           <p style="font-size:13px;opacity:0.9;">Zero-sweep organic collector volume across OpenSea and Blur.</p>
         </article>
-        <article class="${p}-bento-card" data-tilt-card>
+        <article class="${p}-bento-card">
           <span style="font-size:12px;color:var(--crimson);font-weight:700;">RARITY HIERARCHY</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="3" data-suffix=" TIERS">3 TIERS</strong>
           <p style="font-size:13px;color:var(--muted);">Ashigaru Vanguard, Cyber-Ronin, and 1-of-1 Celestial Shogun editions.</p>
         </article>
-        <article class="${p}-bento-card" data-tilt-card>
+        <article class="${p}-bento-card">
           <span style="font-size:12px;color:var(--crimson);font-weight:700;">CUSTOM TRAITS</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="500" data-suffix="+">500+</strong>
           <p style="font-size:13px;color:var(--muted);">Hand-sculpted mempo masks, neon visors, and braided kasa hats.</p>
         </article>
-        <article class="${p}-bento-card" data-tilt-card>
+        <article class="${p}-bento-card">
           <span style="font-size:12px;color:var(--crimson);font-weight:700;">DAO GUARDIANS</span>
           <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="200" data-suffix="+">200+</strong>
           <p style="font-size:13px;color:var(--muted);">Genesis council members governing the Nexon Anime Incubator.</p>
@@ -1124,16 +1124,6 @@ export function buildPinterestInspiredHtml(data, palette) {
           el.style.transform = 'translate3d(0,' + (y * s).toFixed(1) + 'px,0)';
         });
       }, { passive: true });
-      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
-        card.addEventListener('mousemove', function(e){
-          if (paused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 9).toFixed(2) + 'deg) rotateY(' + (nx * 11).toFixed(2) + 'deg)';
-        });
-        card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
-      });
       var modal = document.getElementById('kenseiModal');
       var openBtns = document.querySelectorAll('#exploreMagneticBtn, [data-modal-open]');
       openBtns.forEach(function(b){ b.addEventListener('click', function(){ if (modal) modal.classList.add('is-open'); }); });
@@ -1249,7 +1239,7 @@ export function buildPinterestInspiredHtml(data, palette) {
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="${p}-poly-outline" style="padding:8px 16px;font-size:12px;" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-poly-btn" data-magnetic>JOIN TOURNAMENT ↗</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-poly-btn">JOIN TOURNAMENT ↗</button>
     </div>
   </header>
 
@@ -1264,7 +1254,7 @@ export function buildPinterestInspiredHtml(data, palette) {
           Enter high-stakes global brackets with real-time anti-cheat telemetry, instant smart-contract prize payouts, and 240Hz cloud spectator arenas.
         </p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <button type="button" class="${p}-poly-btn" data-magnetic onclick="document.getElementById('bameModal').classList.add('is-open')">EXPLORE MORE ↗</button>
+          <button type="button" class="${p}-poly-btn" onclick="document.getElementById('bameModal').classList.add('is-open')">EXPLORE MORE ↗</button>
           <a href="#ourGames" class="${p}-poly-outline" style="text-decoration:none;">VIEW BRACKETS</a>
         </div>
       </div>
@@ -1362,16 +1352,6 @@ export function buildPinterestInspiredHtml(data, palette) {
       if (btn) btn.addEventListener('click', function(){
         paused = !paused;
         btn.textContent = paused ? 'Motion: PAUSED' : 'Motion: ON';
-      });
-      document.querySelectorAll('[data-magnetic]').forEach(function(el){
-        el.addEventListener('mousemove', function(e){
-          if (paused) return;
-          var r = el.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.22;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.22;
-          el.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px,0)';
-        });
-        el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
       });
       var expBtn = document.getElementById('exploreMagneticBtn');
       if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('bameModal').classList.add('is-open'); });
@@ -1720,25 +1700,25 @@ export function buildPinterestInspiredHtml(data, palette) {
         </div>
       </div>
       <div>
-        <img src="assets/cutout.webp" alt="Nova Glass 3D Crystal Visor Sculpture" class="${p}-bust-img" data-tilt-card />
+        <img src="assets/cutout.webp" alt="Nova Glass 3D Crystal Visor Sculpture" class="${p}-bust-img" />
       </div>
     </section>
 
     <!-- 4-COLUMN GLASS STATS BAR -->
     <div class="${p}-stats-row">
-      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;">
         <strong class="font-syne" style="font-size:32px;color:var(--blue);">5+</strong>
         <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Years Experience</span>
       </div>
-      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;">
         <strong class="font-syne" style="font-size:32px;color:var(--blue);">40+</strong>
         <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Shipped Products</span>
       </div>
-      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;">
         <strong class="font-syne" style="font-size:32px;color:var(--blue);">25+</strong>
         <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Global Clients</span>
       </div>
-      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;">
         <strong class="font-syne" style="font-size:32px;color:var(--blue);">18</strong>
         <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Design Awards</span>
       </div>
@@ -1748,17 +1728,17 @@ export function buildPinterestInspiredHtml(data, palette) {
     <section id="caseStudies" class="${p}-sec">
       <h2 class="font-syne" style="font-size:26px;">FEATURED CASE STUDIES</h2>
       <div class="${p}-case-grid">
-        <article class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+        <article class="${p}-frosted" style="padding:26px;border-radius:26px;">
           <span style="font-size:11px;font-weight:700;color:var(--blue);">01 // VISION OS INTERFACE</span>
           <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Aether Spatial Workspace</h3>
           <p style="font-size:13px;color:var(--muted);line-height:1.6;">Refractive eye-tracked windowing system and glassmorphic widget library.</p>
         </article>
-        <article class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+        <article class="${p}-frosted" style="padding:26px;border-radius:26px;">
           <span style="font-size:11px;font-weight:700;color:var(--blue);">02 // FINTECH SUPER-APP</span>
           <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Prism Private Banking</h3>
           <p style="font-size:13px;color:var(--muted);line-height:1.6;">Real-time 3D card configurator and biometric wealth analytics dashboard.</p>
         </article>
-        <article class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+        <article class="${p}-frosted" style="padding:26px;border-radius:26px;">
           <span style="font-size:11px;font-weight:700;color:var(--blue);">03 // AI WEARABLE COMPANION</span>
           <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Lumina Neural Optics</h3>
           <p style="font-size:13px;color:var(--muted);line-height:1.6;">HUD typography and micro-interaction system for AR smart glasses.</p>
@@ -1769,7 +1749,7 @@ export function buildPinterestInspiredHtml(data, palette) {
     <!-- 3-COLUMN SKILLS & EXPERTISE / TECH STACK / DESIGN PHILOSOPHY -->
     <section id="skillsMatrix" class="${p}-sec">
       <div class="${p}-bento-3">
-        <div class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+        <div class="${p}-frosted" style="padding:26px;border-radius:26px;">
           <h3 class="font-syne" style="font-size:18px;margin-bottom:16px;">SKILLS &amp; EXPERTISE</h3>
           <div style="margin-bottom:12px;">
             <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>Spatial UI/UX Design</span><span>96%</span></div>
@@ -1785,7 +1765,7 @@ export function buildPinterestInspiredHtml(data, palette) {
           </div>
         </div>
 
-        <div class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+        <div class="${p}-frosted" style="padding:26px;border-radius:26px;">
           <h3 class="font-syne" style="font-size:18px;">TECH STACK</h3>
           <div class="${p}-tech-grid">
             <span class="${p}-tech-chip">Figma</span><span class="${p}-tech-chip">Spline</span><span class="${p}-tech-chip">Blender</span>
@@ -1794,7 +1774,7 @@ export function buildPinterestInspiredHtml(data, palette) {
           </div>
         </div>
 
-        <div class="${p}-frosted" style="padding:26px;border-radius:26px;display:flex;flex-direction:column;justify-content:space-between;" data-tilt-card>
+        <div class="${p}-frosted" style="padding:26px;border-radius:26px;display:flex;flex-direction:column;justify-content:space-between;">
           <div>
             <h3 class="font-syne" style="font-size:18px;margin-bottom:10px;">DESIGN PHILOSOPHY</h3>
             <p style="font-size:13px;color:var(--muted);line-height:1.65;">
@@ -1819,15 +1799,6 @@ export function buildPinterestInspiredHtml(data, palette) {
 
   <script>
     (function(){
-      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
-        card.addEventListener('mousemove', function(e){
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 8).toFixed(2) + 'deg) rotateY(' + (nx * 10).toFixed(2) + 'deg)';
-        });
-        card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
-      });
       var expBtn = document.getElementById('exploreMagneticBtn');
       if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('novaModal').classList.add('is-open'); });
     })();
@@ -2172,7 +2143,7 @@ export function buildPinterestInspiredHtml(data, palette) {
 
       <div class="${p}-ocean-right">
         <button type="button" id="exploreMagneticBtn" class="${p}-go-btn" aria-label="Launch Charter">GO</button>
-        <img src="assets/cutout.webp" alt="3D Turquoise Hydrofoil Yacht" class="${p}-yacht-cutout" data-tilt-card />
+        <img src="assets/cutout.webp" alt="3D Turquoise Hydrofoil Yacht" class="${p}-yacht-cutout" />
       </div>
     </div>
   </main>
@@ -2302,7 +2273,7 @@ export function buildPinterestInspiredHtml(data, palette) {
 
         <div class="${p}-triangle-stage">
           <div class="${p}-apex-tri"></div>
-          <img src="assets/cutout.webp" alt="Apex Squad Duo" class="${p}-squad-img" data-tilt-card />
+          <img src="assets/cutout.webp" alt="Apex Squad Duo" class="${p}-squad-img" />
         </div>
       </section>
 
@@ -2786,7 +2757,7 @@ export function buildPinterestInspiredHtml(data, palette) {
         </div>
 
         <div style="text-align:center;">
-          <img src="assets/cutout.webp" alt="3D Chureito Pagoda &amp; Sakura" class="${p}-pagoda-img" data-tilt-card />
+          <img src="assets/cutout.webp" alt="3D Chureito Pagoda &amp; Sakura" class="${p}-pagoda-img" />
           <button type="button" onclick="document.getElementById('japanModal').classList.add('is-open')" style="margin-top:12px;width:100%;max-width:240px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.88);color:#111827;font-weight:700;border:none;cursor:pointer;">
             Book Expedition
           </button>
@@ -3045,13 +3016,6 @@ export function buildPinterestInspiredHtml(data, palette) {
     (function(){
       var btn = document.getElementById('exploreMagneticBtn');
       if (btn) btn.addEventListener('click', function(){ document.getElementById('indModal').classList.add('is-open'); });
-      var img = document.getElementById('indCutout');
-      window.addEventListener('mousemove', function(e){
-        if (!img) return;
-        var nx = (e.clientX / window.innerWidth - 0.5) * 14;
-        var ny = (e.clientY / window.innerHeight - 0.5) * 14;
-        img.style.transform = 'perspective(900px) rotateY(' + nx.toFixed(1) + 'deg) rotateX(' + (-ny).toFixed(1) + 'deg)';
-      }, { passive: true });
     })();
   </script>
 </body>
@@ -3190,7 +3154,7 @@ export function buildPinterestInspiredHtml(data, palette) {
 
       <div class="${p}-triptych">
         <!-- Card 1: SEA LIONS -->
-        <article class="${p}-marine-card" data-tilt-card>
+        <article class="${p}-marine-card">
           <div class="${p}-popout-wrap">
             <svg viewBox="0 0 280 290" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
@@ -3211,7 +3175,7 @@ export function buildPinterestInspiredHtml(data, palette) {
         </article>
 
         <!-- Card 2: JELLYFISH (Real 3D Cutout Breaking Top Border!) -->
-        <article class="${p}-marine-card" data-tilt-card>
+        <article class="${p}-marine-card">
           <div class="${p}-popout-wrap" style="top:-78px;">
             <img src="assets/cutout.webp" alt="3D Bioluminescent Jellyfish Cutout" />
           </div>
@@ -3221,7 +3185,7 @@ export function buildPinterestInspiredHtml(data, palette) {
         </article>
 
         <!-- Card 3: MANTA RAY -->
-        <article class="${p}-marine-card" data-tilt-card>
+        <article class="${p}-marine-card">
           <div class="${p}-popout-wrap">
             <svg viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
@@ -4780,8 +4744,6 @@ export function buildPinterestInspiredHtml(data, palette) {
     </defs>
   </svg>
 
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-edge-top">
     <a href="#heroStage" class="${p}-brand">
@@ -4795,7 +4757,7 @@ export function buildPinterestInspiredHtml(data, palette) {
     </ul>
     <div class="${p}-edge-controls">
       <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-cta-magnetic" data-magnetic data-next-preview>
+      <button type="button" id="exploreMagneticBtn" class="${p}-cta-magnetic" data-next-preview>
         Explore Spec
       </button>
     </div>
@@ -4878,7 +4840,7 @@ export function buildPinterestInspiredHtml(data, palette) {
       </div>
       <div id="hScrollTrack" class="${p}-hscroll-track">
         ${bp.projects.map((proj, idx) => `
-        <article class="${p}-project-card ${p}-reveal" data-tilt-card data-seamless-trigger="${proj.title}">
+        <article class="${p}-project-card ${p}-reveal" data-seamless-trigger="${proj.title}">
           <div class="${p}-project-visual" style="background:radial-gradient(circle at 50% 50%, ${proj.color}33, var(--bg));">
             <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:${proj.color};">0${idx + 1} // ${proj.stat}</span>
           </div>

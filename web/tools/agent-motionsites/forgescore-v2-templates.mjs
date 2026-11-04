@@ -263,8 +263,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav-container">
@@ -290,7 +288,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <div class="${p}-nav-actions">
         <button type="button" id="motionToggleBtn" class="${p}-pill-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
         <button type="button" class="${p}-pill-ghost" data-seamless-trigger="Book a Live Architecture Demo">Book A Demo</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-get-started" data-magnetic data-next-preview>Get Started</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-get-started" data-next-preview>Get Started</button>
       </div>
     </div>
   </header>
@@ -309,7 +307,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           Create fully functional, SEO-optimized websites in seconds with our advanced AI engine.
         </p>
         <div class="${p}-cta-row">
-          <button type="button" class="${p}-primary-pill" data-magnetic data-seamless-trigger="Start Building Free — Instant AI Workspace">
+          <button type="button" class="${p}-primary-pill" data-seamless-trigger="Start Building Free — Instant AI Workspace">
             <span>Start Building Free</span>
             <span class="${p}-arrow-circle" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -359,7 +357,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
             <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" id="sandboxStatusText">COMPILED: Fintech AI treasury platform</span>
             <span class="tabular-nums" style="font-size:12px;background:rgba(48,84,255,0.2);color:#b4c0ff;padding:4px 10px;border-radius:999px;" id="sandboxSeoBadge">SEO Score: 99/100</span>
           </div>
-          <div id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);padding:12px 0;">
+          <div id="heroPopoutRig" style="filter:url(#${p}LiquidFilter);padding:12px 0;">
             <svg viewBox="0 0 640 240" width="100%" height="200" fill="none" aria-hidden="true">
               <rect x="8" y="8" width="624" height="224" rx="16" fill="#0b101e" stroke="rgba(180,192,255,0.22)"/>
               <rect x="28" y="28" width="180" height="16" rx="8" fill="#3054ff"/>
@@ -387,7 +385,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
         <h2 id="specsHeading" class="${p}-h2">Engineered for Zero-Bloat Speed</h2>
       </div>
       <div class="${p}-bento-grid">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-card ${p}-reveal" data-spec-index="001">
           <span class="${p}-kicker">001 / SEMANTIC AST</span>
           <h3 style="font-size:22px;">Clean HTML5 &amp; CSS Grid</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Digitwist compiles directly to semantic landmarks, fluid clamp() tokens, and accessible ARIA components with zero runtime bloat.</p>
@@ -398,7 +396,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           </svg>
           <p id="scrubDialText" class="tabular-nums" style="margin-top:12px;font-size:13px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="002">
+        <article class="${p}-card ${p}-reveal" data-spec-index="002">
           <span class="${p}-kicker">002 / EDGE STREAMING</span>
           <h3 style="font-size:22px;">Adaptive HLS &amp; WebP Pipeline</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Automatic responsive poster generation, hardware-accelerated motion curves, and instant global CDN deployment.</p>
@@ -413,17 +411,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
         <h2 id="storiesHeading" class="${p}-h2">Customer Stories</h2>
       </div>
       <div class="${p}-stories-grid">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Kinetix Cloud — +240% Conversion Case Study">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Kinetix Cloud — +240% Conversion Case Study">
           <span class="${p}-kicker">KINETIX CLOUD</span>
           <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">+240%</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Launched 18 localized product landing pages in a single afternoon with 100/100 Lighthouse SEO scores.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Vespera Studio — 3.8x Faster Client Delivery">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Vespera Studio — 3.8x Faster Client Delivery">
           <span class="${p}-kicker">VESPERA STUDIO</span>
           <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">3.8x</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Cut agency prototyping cycles from three weeks to four hours using Digitwist live token synchronization.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Monolith AI — 0.38s Global LCP">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Monolith AI — 0.38s Global LCP">
           <span class="${p}-kicker">MONOLITH AI</span>
           <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">0.38s</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Replaced heavy SPA bundles with clean Digitwist semantic HTML and doubled organic search traffic.</p>
@@ -438,19 +436,19 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
         <h2 id="pricingHeading" class="${p}-h2">Scale at the Speed of Thought</h2>
       </div>
       <div class="${p}-pricing-grid">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">STARTER</span>
           <strong class="tabular-nums" style="font-size:38px;">$0<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">3 AI-generated sites, full HTML/CSS export, and standard SEO telemetry.</p>
           <button type="button" class="${p}-pill-ghost" data-seamless-trigger="Starter Tier — Instant Activation">Start Free</button>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card style="border-color:var(--accent);">
+        <article class="${p}-card ${p}-reveal" style="border-color:var(--accent);">
           <span class="${p}-kicker">PRO STUDIO</span>
           <strong class="tabular-nums" style="font-size:38px;">$29<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Unlimited AI builds, custom domains, 3-layer token export, and priority edge streaming.</p>
           <button type="button" class="${p}-btn-get-started" data-seamless-trigger="Pro Studio Tier — Start 14-Day Trial">Deploy Pro Studio</button>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">ENTERPRISE</span>
           <strong class="tabular-nums" style="font-size:38px;">$99<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Dedicated neural clusters, SSO governance, and bespoke design system locks.</p>
@@ -738,8 +736,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav-pill">
@@ -754,7 +750,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </nav>
       <div style="display:flex;align-items:center;gap:10px;">
         <button type="button" id="motionToggleBtn" class="${p}-pill-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-glint-btn" data-magnetic data-next-preview>
+        <button type="button" id="exploreMagneticBtn" class="${p}-glint-btn" data-next-preview>
           <span class="${p}-glint-bar" aria-hidden="true"></span>
           <span>Link up</span>
         </button>
@@ -774,7 +770,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           Linked with a single anonymous peer. One message every day. A quiet rhythm in the digital noise.
         </p>
 
-        <div id="heroPopoutRig" class="${p}-nokia-rig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" class="${p}-nokia-rig" style="filter:url(#${p}LiquidFilter);">
           <div class="${p}-nokia-lcd" aria-live="polite">
             <div style="display:flex;justify-content:space-between;font-size:10px;opacity:0.75;">
               <span>PEER_LINK // 1:1</span>
@@ -825,17 +821,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">02 / PHILOSOPHY</span>
       <h2 id="philHeading" class="${p}-h2">Built Against Infinite Scroll</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">NO METRICS</span>
           <h3 style="font-size:22px;">Zero Likes or Followers</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">No public profiles, no algorithmic amplification, and no performative status games.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">SYNCHRONOUS CALM</span>
           <h3 style="font-size:22px;">One Delivery Window</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Notes arrive once each morning at 08:00 local time, restoring anticipation and presence.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">EPHEMERAL INK</span>
           <h3 style="font-size:22px;">Monochrome Clarity</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Inspired by classic tactile hardware screens that respect your attention span.</p>
@@ -848,7 +844,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">03 / TRUST &amp; CRYPTOGRAPHY</span>
       <h2 id="trustHeading" class="${p}-h2">Anonymous by Architecture</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-card ${p}-reveal" data-spec-index="001">
           <span class="${p}-kicker">001 / ZERO IDENTITY</span>
           <h3 style="font-size:20px;">Blind Peer Pairing</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Matched solely by timezone and quiet reflection cadence without exposing phone numbers.</p>
@@ -859,7 +855,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           </svg>
           <p id="scrubDialText" class="tabular-nums" style="margin-top:10px;font-size:12px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="002">
+        <article class="${p}-card ${p}-reveal" data-spec-index="002">
           <span class="${p}-kicker">002 / HARDWARE KEYS</span>
           <h3 style="font-size:20px;">Ephemeral Ratchet</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Keys rotate after every daily exchange so historical notes cannot be decrypted.</p>
@@ -872,19 +868,19 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">04 / THE TRIBE</span>
       <h2 id="tribeHeading" class="${p}-h2">Join the Quiet Rhythm</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">SOLO LINK</span>
           <strong class="tabular-nums" style="font-size:36px;">Free</strong>
           <p style="color:var(--muted);font-size:14px;">1 daily peer link, morning delivery window, and full end-to-end encryption.</p>
           <button type="button" class="${p}-pill-ghost" data-seamless-trigger="Solo Link — Pair with a Peer">Request Peer Link</button>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card style="border-color:var(--accent);">
+        <article class="${p}-card ${p}-reveal" style="border-color:var(--accent);">
           <span class="${p}-kicker">PATRON EDITION</span>
           <strong class="tabular-nums" style="font-size:36px;">$4<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Support independent calm software, custom LCD palettes, and physical postcard exports.</p>
           <button type="button" class="${p}-glint-btn" data-seamless-trigger="Patron Edition — Link Up">Become a Patron</button>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">SANCTUARY GIFT</span>
           <strong class="tabular-nums" style="font-size:36px;">$36<span style="font-size:15px;color:var(--muted);">/yr</span></strong>
           <p style="color:var(--muted);font-size:14px;">Gift a full year of daily calm to a close friend or creative partner.</p>
@@ -1172,8 +1168,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav-bar">
@@ -1188,7 +1182,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </nav>
       <div style="display:flex;gap:8px;align-items:center;">
         <button type="button" id="motionToggleBtn" class="${p}-pill-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-lime" data-magnetic data-next-preview style="padding:8px 18px;font-size:12px;">Enroll Now</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-lime" data-next-preview style="padding:8px 18px;font-size:12px;">Enroll Now</button>
       </div>
     </div>
   </header>
@@ -1208,7 +1202,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <div style="position:relative;z-index:10;margin-top:120px;" data-parallax="0.06">
         <span style="font-size:12px;letter-spacing:0.28em;font-weight:600;color:var(--accent);">NOW AVAILABLE</span>
         <h1 class="${p}-h1" id="oversizedHeadline">Learn to lead AI and unlock new value</h1>
-        <button type="button" class="${p}-btn-lime" data-magnetic data-seamless-trigger="Design Rocket Certificates — Cohort Enrollment">
+        <button type="button" class="${p}-btn-lime" data-seamless-trigger="Design Rocket Certificates — Cohort Enrollment">
           <span>Enroll Now</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </button>
@@ -1237,7 +1231,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
     <!-- SECTION 3: 4 NUMBERED LEADERSHIP STEPS -->
     <section id="curriculumSection" class="${p}-section" aria-labelledby="currHeading">
       <h2 id="currHeading" class="${p}-h2">Transform how you lead with AI</h2>
-      <div class="${p}-video-card" id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+      <div class="${p}-video-card" id="heroPopoutRig" style="filter:url(#${p}LiquidFilter);">
         <video src="${sec3Video}" autoplay loop muted playsinline preload="metadata"></video>
       </div>
       <div style="max-width:520px;margin:0 auto 28px;">
@@ -1294,7 +1288,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <div id="scrubCenterStage" style="text-align:center;margin-bottom:24px;">
         <p id="scrubDialText" class="tabular-nums" style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">SCROLL SCRUB ANGLE: 0.0°</p>
       </div>
-      <div class="${p}-lime-banner" data-tilt-card>
+      <div class="${p}-lime-banner">
         <h2 id="ctaBannerHeading" style="font-family:var(--font-display);font-size:clamp(38px,5vw,52px);line-height:1.02;color:#1E1E1E;margin-bottom:12px;">Ready to lead AI at work?</h2>
         <p style="font-size:17px;color:#1E1E1E;margin-bottom:24px;">Enroll now and be the leader your team has been waiting for.</p>
         <button type="button" class="${p}-btn-lime" style="background:#0A0A0A;color:#DCFF00;" data-seamless-trigger="Priority Seat Reservation — Design Rocket">
@@ -1560,8 +1554,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </filter>
     </defs>
   </svg>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <a href="#heroStage" class="${p}-logo">
@@ -1578,7 +1570,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
     </nav>
     <div style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-magnetic data-next-preview>Log In</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-next-preview>Log In</button>
     </div>
   </header>
 
@@ -1602,7 +1594,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           Upload your information and get powerful insights right away. Work smarter and achieve goals effortlessly.
         </p>
 
-        <div id="heroPopoutRig" class="${p}-query-console" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        <div id="heroPopoutRig" class="${p}-query-console" style="filter:url(#${p}LiquidFilter);">
           <div class="${p}-console-top tabular-nums">
             <div>
               <span>60/450 credits</span>
@@ -1648,17 +1640,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">01 / INSTANT INSIGHT SYNTHESIS</span>
       <h2 id="liveInsightHeading" class="${p}-h2">Real-Time Cohort Telemetry</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">QUERY RESULT</span>
           <strong id="liveQueryTitle" style="font-size:20px;">Enterprise NRR: 118.4%</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Automated anomaly detection across 14.2M warehouse rows in 180 milliseconds.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">THROUGHPUT</span>
           <strong class="tabular-nums" data-counter-target="180" data-counter-suffix="ms" style="font-size:36px;color:var(--accent-text);">180ms</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Zero-copy DuckDB &amp; Parquet vector execution directly in the browser.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">ACCURACY</span>
           <strong class="tabular-nums" data-counter-target="99" data-counter-suffix=".8%" style="font-size:36px;color:var(--accent-text);">99.8%</strong>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;">Verified SQL lineage attached to every generated chart and executive summary.</p>
@@ -1671,7 +1663,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">02 / ARCHITECTURE</span>
       <h2 id="specsHeading" class="${p}-h2">Built for Modern Data Teams</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="001">
+        <article class="${p}-card ${p}-reveal" data-spec-index="001">
           <span class="${p}-kicker">001 / INGESTION</span>
           <h3 style="font-size:20px;">CSV, Parquet &amp; Snowflake</h3>
           <p style="color:var(--muted);font-size:14px;">Drop raw files or connect live warehouse credentials with zero schema migration.</p>
@@ -1682,7 +1674,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           </svg>
           <p id="scrubDialText" class="tabular-nums" style="margin-top:10px;font-size:12px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="002">
+        <article class="${p}-card ${p}-reveal" data-spec-index="002">
           <span class="${p}-kicker">002 / GOVERNANCE</span>
           <h3 style="font-size:20px;">SOC2 Type II &amp; Zero-Retention</h3>
           <p style="color:var(--muted);font-size:14px;">Your proprietary datasets never train public models and stay encrypted at rest.</p>
@@ -1695,17 +1687,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">03 / TEMPLATES</span>
       <h2 id="projHeading" class="${p}-h2">One-Click Executive Boards</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="SaaS Net Retention Board">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="SaaS Net Retention Board">
           <span class="${p}-kicker">BOARD 01</span>
           <h3 style="font-size:20px;">SaaS Net Retention</h3>
           <p style="color:var(--muted);font-size:14px;">Cohort expansion, logo churn, and payback period decomposition.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Supply Chain Inventory Velocity">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Supply Chain Inventory Velocity">
           <span class="${p}-kicker">BOARD 02</span>
           <h3 style="font-size:20px;">Inventory Velocity</h3>
           <p style="color:var(--muted);font-size:14px;">SKU lead-time forecasting and safety-stock threshold alerts.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Paid Acquisition Attribution">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Paid Acquisition Attribution">
           <span class="${p}-kicker">BOARD 03</span>
           <h3 style="font-size:20px;">Multi-Touch Attribution</h3>
           <p style="color:var(--muted);font-size:14px;">Channel marginal ROAS and pipeline conversion velocity.</p>
@@ -1718,17 +1710,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span class="${p}-kicker">04 / CREDIT PLANS</span>
       <h2 id="priceHeading" class="${p}-h2">Predictable Usage Tiers</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">ANALYST</span>
           <strong class="tabular-nums" style="font-size:36px;">$0<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">450 monthly GPT-4o credits, CSV/Parquet uploads, and instant chart exports.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card style="border-color:var(--accent);">
+        <article class="${p}-card ${p}-reveal" style="border-color:var(--accent);">
           <span class="${p}-kicker">TEAM INTELLIGENCE</span>
           <strong class="tabular-nums" style="font-size:36px;">$39<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">5,000 monthly credits, live Snowflake/Postgres connectors, and shared boards.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span class="${p}-kicker">ENTERPRISE</span>
           <strong class="tabular-nums" style="font-size:36px;">$149<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
           <p style="color:var(--muted);font-size:14px;">Unlimited credits, VPC deployment, and custom semantic layer models.</p>
@@ -2017,8 +2009,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav-inner">
@@ -2046,7 +2036,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-green" data-magnetic data-next-preview>Export Tokens</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-green" data-next-preview>Export Tokens</button>
       </div>
     </div>
   </header>
@@ -2505,8 +2495,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav">
@@ -2520,7 +2508,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-yellow" data-magnetic data-next-preview>Get in touch</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-yellow" data-next-preview>Get in touch</button>
       </div>
     </div>
   </header>
@@ -2548,7 +2536,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </div>
 
       <!-- Realistic iPhone 15 Pro Container Telemetry Mockup -->
-      <div class="${p}-phone-frame" data-tilt-card>
+      <div class="${p}-phone-frame">
         <div class="${p}-phone-screen tabular-nums">
           <div>
             <div class="${p}-dynamic-island" aria-hidden="true"></div>
@@ -2887,8 +2875,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#mainContent" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav">
@@ -2902,7 +2888,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </nav>
       <div style="display:flex;gap:10px;align-items:center;">
         <button type="button" id="motionToggleBtn" class="${p}-btn-pill" data-motion-toggle aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-magnetic data-next-preview>Menu</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-next-preview>Menu</button>
       </div>
     </div>
   </header>
@@ -3321,8 +3307,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(253,230,138,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FDE68A;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-hero">
     <video id="heroBgVideo" class="${p}-bg-video" src="${heroVideo}" autoplay loop muted playsinline preload="auto"></video>
@@ -3346,7 +3330,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
         <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-pill ${p}-liquid-glass" data-magnetic>Begin your journey</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-pill ${p}-liquid-glass">Begin your journey</button>
       </div>
     </header>
 
@@ -3419,17 +3403,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">COMPLETE WELLNESS BRIDGE</span>
       <h2 id="bentoHeading" class="${p}-h2">Three Layers of Calm, Zero Context Switching</h2>
       <div class="${p}-bento tabular-nums">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // CALENDAR SHIELD</span>
           <h3 style="font-family:var(--font-display);font-size:28px;font-weight:400;margin:10px 0;">Autonomous Focus Defragmentation</h3>
           <p style="font-size:14px;color:var(--muted);max-width:52ch;">Automatically clusters scattered 15-minute calls into cohesive blocks so your crew preserves uninterrupted deep-craft mornings.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // PULSE TELEMETRY</span>
           <h3 style="font-family:var(--font-display);font-size:28px;font-weight:400;margin:10px 0;">Privacy-First Energy Check-Ins</h3>
           <p style="font-size:14px;color:var(--muted);max-width:52ch;">Zero surveillance. Crew members log 1-tap energy states that dynamically rebalance sprint story points before burnout hits.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // RITUAL ENGINE</span>
           <h3 style="font-family:var(--font-display);font-size:28px;font-weight:400;margin:10px 0;">Guided Decompression Transitions</h3>
           <p style="font-size:14px;color:var(--muted);max-width:52ch;">End-of-day shutdown rituals close open browser loops, capture tomorrow's priorities, and mute work notifications until 09:00.</p>
@@ -3778,8 +3762,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(37,99,235,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#2563EB;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-hero-outer">
     <div class="${p}-hero-frame">
@@ -3807,7 +3789,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
         </a>
         <h1 id="heroTitle" class="${p}-h1">Simple, smart prosthetics made for people who keep fighting.</h1>
         <p class="${p}-sub">Reclaim your movement now.</p>
-        <button type="button" id="exploreMagneticBtn" class="${p}-btn-blue" data-magnetic>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-blue">
           <span>Try a free fitting</span>
           <span aria-hidden="true">→</span>
         </button>
@@ -3872,17 +3854,17 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;">WHY WE BUILT KINETIX</span>
       <h2 id="storyHeading" class="${p}-h2">Bionic Mobility Without the $40,000 Hospital Markup</h2>
       <div class="${p}-grid-3">
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">01 // DIRECT 3D OPTICAL FIT</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Fitted in 48 Hours, Not 6 Weeks</h3>
           <p style="font-size:14px;color:var(--muted);max-width:50ch;">Our mobile prosthetists scan your residual limb using sub-millimeter structured light and print custom breathable sockets locally.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">02 // NEURAL MUSCLE LEARNING</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Adapts to Your Signal, Not Vice Versa</h3>
           <p style="font-size:14px;color:var(--muted);max-width:50ch;">On-board edge AI calibrates to subtle surface EMG muscle twitches in 10 minutes—even through sweat or long workdays.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card>
+        <article class="${p}-card ${p}-reveal">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">03 // ZERO-DOWNTIME MODULARITY</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Swap Digits in 90 Seconds</h3>
           <p style="font-size:14px;color:var(--muted);max-width:50ch;">Every knuckle actuator uses a single hex key release, backed by a 3-year no-questions-asked warranty across 28 clinics.</p>
@@ -4204,8 +4186,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(253,230,138,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FDE68A;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-hero" id="heroScrubContainer">
     <video id="heroBgVideo" class="${p}-video" src="${heroVideo}" autoplay loop muted playsinline preload="auto"></video>
@@ -4231,7 +4211,7 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
         <button type="button" id="motionToggleBtn" class="${p}-glass-pill" aria-pressed="false">Motion: ON</button>
-        <button type="button" id="exploreMagneticBtn" class="${p}-glass-pill" data-magnetic>Get in touch</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-glass-pill">Get in touch</button>
       </div>
     </header>
 
@@ -4291,22 +4271,22 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
     <section id="studio-matrix" class="${p}-wrap tabular-nums" aria-labelledby="matrixHeading" style="padding-top:0;">
       <h2 id="matrixHeading" class="${p}-h2">Four Divisions Under One Mainframe®</h2>
       <div class="${p}-grid-4">
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Labs — Applied AI &amp; Spatial Prototypes">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Mainframe Labs — Applied AI &amp; Spatial Prototypes">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // LABS</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Adaptive Interfaces</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Proprietary multimodal agents, tactile hardware controllers, and real-time WebGPU canvases.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Studio — Brand &amp; Product Systems">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Mainframe Studio — Brand &amp; Product Systems">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // STUDIO</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Flagship Launches</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Identity systems, industrial 3D motion films, and high-converting web architecture for category leaders.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Openings — Join the Collective">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Mainframe Openings — Join the Collective">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // OPENINGS</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Senior Craft Pods</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Autonomous engineering and design residencies in San Francisco, New York, and Tokyo.</p>
         </article>
-        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Shop — Physical Objects &amp; Editions">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Mainframe Shop — Physical Objects &amp; Editions">
           <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">04 // SHOP</span>
           <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Hardware Editions</h3>
           <p style="font-size:14px;color:var(--muted);max-width:46ch;">Limited-run anodized aluminum desk instruments, keycap sets, and technical monographs.</p>
@@ -4537,8 +4517,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring"></div>
-  <div id="cursorDot" class="${p}-cursor-dot"></div>
 
   <main id="main-content">
     <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
@@ -4817,8 +4795,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring"></div>
-  <div id="cursorDot" class="${p}-cursor-dot"></div>
 
   <div class="${p}-shell">
     <header class="${p}-navbar">
@@ -5101,8 +5077,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" class="${p}-cursor-ring"></div>
-  <div id="cursorDot" class="${p}-cursor-dot"></div>
 
   <main id="main-content">
     <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
@@ -5484,8 +5458,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(255,255,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <main id="main-content" class="tabular-nums">
     <section class="${p}-hero" aria-labelledby="heroHeading">
@@ -5901,8 +5873,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1.5px solid #8A9AAA;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#1A1A1E;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <div class="${p}-shell tabular-nums">
     <header class="${p}-topbar">
@@ -6336,8 +6306,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div id="cursorRing" style="position:fixed;width:32px;height:32px;border:1.5px solid #DA3A16;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
-  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#DA3A16;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
   <main id="main-content" class="tabular-nums">
     <section id="nikeHeroStage" class="${p}-hero" aria-labelledby="heroHeading">
@@ -6746,8 +6714,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
-  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav">
@@ -7065,8 +7031,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
-  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-nav">
@@ -7408,8 +7372,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
-  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-header">
     <div class="${p}-wrap ${p}-nav">
@@ -7754,8 +7716,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
-  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-top-bar">
     <div style="display:flex;align-items:center;gap:10px;">
@@ -8087,8 +8047,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
-  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <header class="${p}-navbar">
     <a href="#top" class="${p}-logo">Serene</a>
@@ -8356,8 +8314,6 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
-  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <main id="main-content">
     <section class="${p}-hero" aria-label="Axon Digital Workers Hero">

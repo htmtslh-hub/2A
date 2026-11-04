@@ -4983,48 +4983,6 @@ export function buildPinterestInspiredHtml(data, palette) {
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
-        });
-        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
-      });
-
-      var displacement = document.getElementById('${p}Displacement');
-      var heroRig = document.getElementById('heroPopoutRig');
-      if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
-        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
-      }
-
       var modal = document.getElementById('seamlessModal');
       var modalTitle = document.getElementById('seamlessTitle');
       var openBtn = document.getElementById('exploreMagneticBtn');
@@ -5248,12 +5206,12 @@ ${accessLine}    version: '1.0.0',
       vi: {
         name: ${JSON.stringify(bp.brandTitle)},
         desc: ${JSON.stringify(`${bp.brandTitle} (${bp.id}) — ${bp.headlineSub}`)},
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       en: {
         name: ${JSON.stringify(bp.brandTitle)},
         desc: ${JSON.stringify(`${bp.brandTitle} (${bp.id}) — ${bp.headlineSub}`)},
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
       },
       zh: {
         name: ${JSON.stringify(bp.brandTitle)},

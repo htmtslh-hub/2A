@@ -39,13 +39,6 @@
       "Scroll Scrubbing (scroll percentage rotates/tilts/scales 3D showcase proportionally)",
       "Smooth Scrolling (inertia lerp momentum)"
     ],
-    "hoverAndCursor": [
-      "Magnetic Buttons (Explore & circular arrow buttons pull toward cursor)",
-      "3D Card Tilt / Perspective Hover (Glassmorphism cards tilt with specular border shine)",
-      "Image Zoom & Mask Reveal (smooth zoom inside super-rounded/pill masks)",
-      "Liquid / Ripple Distortion (interactive SVG feTurbulence + feDisplacementMap wave filter on hover)",
-      "Custom / Follower Cursor (glowing ring + dot with mix-blend-mode: difference over oversized text)"
-    ],
     "textAndTransitions": [
       "Split-Text / Staggered Reveal (character/word staggered entrance on oversized headlines)",
       "Number Counter (120+, 10K+, 1000+ animated count-up on viewport entry)",

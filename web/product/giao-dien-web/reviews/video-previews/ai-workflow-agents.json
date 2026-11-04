@@ -1,0 +1,48 @@
+{
+  "id": "t229",
+  "slug": "ai-workflow-agents",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:15:55.782Z",
+  "demo": "/demos/ai-workflow-agents/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0db3feeb20bb",
+  "sha256": "0db3feeb20bb29412e61f79a480cccc551c72d54a658c162ab17875fb2ff7b78",
+  "demoHtmlSha256": "5c0d5fc0660a34bb5bebd7b18cb385d89f5e0b65bd02eaaac27089704450cf87",
+  "demoSha256": "37a2bcdae083dc2abec427d5dfca9c4d2dd805ce5c4528f2a155f37dd945b990",
+  "bytes": 1548938,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.471,
+      "action": "click",
+      "selector": "#cycleWorkerBtn"
+    },
+    {
+      "seconds": 4.819,
+      "action": "click",
+      "selector": "#cycleWorkerBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-agents-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-agents-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-agents-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-workflow-agents-return.jpg"
+  ]
+}

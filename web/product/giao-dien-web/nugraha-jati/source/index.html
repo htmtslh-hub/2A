@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>StorySeeker — Neo-Brutalist Book Library &amp; Audiobook Player</title>
+  <meta name="description" content="Explore classic literature and audiobooks in StorySeeker — featuring The Great Gatsby, The Catcher in the Rye, Of Mice and Men, Fahrenheit 451, The Giver, and Harry Potter 2x audio player.">
+  <meta property="og:title" content="StorySeeker — Digital Library &amp; Audiobook Workbench">
+  <meta property="og:description" content="Read previews, track pages left, and listen to narrated editions with interactive speed controls.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#E8DAC3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #e8dac3;
+      --surface: #fbf3e4;
+      --surface-elevated: #f5d547;
+      --glass: rgba(251, 243, 228, 0.94);
+      --fg: #1c1917;
+      --muted: #57534e;
+      --border: #1c1917;
+      --accent: #eb6a2a;
+      --accent-text: #c2410c;
+      --accent-strong: #d95616;
+      --on-accent: #1c1917;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #ffffff; }
+    html, body {
+      background: var(--bg);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 6px; background: var(--accent); color: #ffffff;
+      font-weight: 700; text-decoration: none; border: 1.5px solid var(--border);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    button, [role="button"] {
+      transition: transform 0.18s var(--ease-out), background-color 0.18s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: translate(1px, 1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 28px; height: 28px; border: 1.5px solid var(--fg); margin: -14px 0 0 -14px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .nug86-reveal { opacity: 0; transform: translate3d(0, 14px, 0); transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out); }
+    .nug86-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .nug86-outer { max-width: 1280px; margin: 22px auto 38px; padding: 0 clamp(14px, 2.8vw, 32px); }
+    .nug86-app-shell {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      display: grid; grid-template-columns: 78px 1fr;
+      box-shadow: 8px 8px 0 rgba(28, 25, 23, 0.16);
+    }
+    .nug86-sidebar {
+      border-right: 1.5px solid var(--border);
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      padding: 18px 6px; background: var(--surface);
+    }
+    .nug86-flame-logo {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 24px; text-decoration: none;
+    }
+    .nug86-side-nav {
+      display: flex; flex-direction: column; gap: 16px; align-items: center; width: 100%; margin: 18px 0;
+    }
+    .nug86-side-item {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      font-size: 10px; font-weight: 600; color: var(--fg); text-decoration: none; cursor: pointer;
+      background: transparent; border: 0; width: 100%; padding: 4px 0;
+    }
+    .nug86-side-item.is-active { color: var(--accent); font-weight: 800; }
+
+    .nug86-topbar {
+      display: grid; grid-template-columns: 1fr 270px 64px;
+      border-bottom: 1.5px solid var(--border);
+      background: var(--surface-elevated);
+    }
+    .nug86-top-search-wrap {
+      padding: 12px 22px; display: flex; align-items: center; gap: 14px;
+    }
+    .nug86-search-box {
+      max-width: 340px; width: 100%; background: var(--surface);
+      border: 1.5px solid var(--border); padding: 9px 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nug86-search-box input {
+      border: 0; background: transparent; width: 100%; font-family: var(--font-mono);
+      font-size: 12px; color: var(--fg); outline: none;
+    }
+    .nug86-profile-cell {
+      background: var(--surface); border-left: 1.5px solid var(--border);
+      padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .nug86-bell-cell {
+      background: var(--surface); border-left: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer;
+    }
+
+    .nug86-body-pad { padding: 18px 24px 24px; }
+    .nug86-toolbar {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .nug86-tabs { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .nug86-tab-btn {
+      padding: 6px 14px; border: 1.5px solid var(--border);
+      background: var(--surface); color: var(--fg); font-family: var(--font-mono);
+      font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .nug86-tab-btn.is-active { background: var(--accent); color: var(--fg); font-weight: 700; }
+
+    .nug86-books-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .nug86-book-card {
+      padding-bottom: 16px; border-bottom: 1.5px solid var(--border);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 12px;
+    }
+    .nug86-book-top {
+      display: grid; grid-template-columns: 78px 1fr; gap: 14px; align-items: start;
+    }
+    .nug86-cover-frame {
+      border: 1.5px solid var(--border); background: #ffffff; padding: 3px;
+    }
+    .nug86-cover-frame img {
+      width: 100%; height: 96px; object-fit: cover; display: block;
+    }
+    .nug86-pages-left {
+      font-family: var(--font-mono); font-size: 10.5px; color: var(--fg); margin-top: 6px; line-height: 1.3;
+    }
+    .nug86-book-title-row {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;
+    }
+    .nug86-book-title { font-size: 15px; font-weight: 800; line-height: 1.25; }
+    .nug86-book-author {
+      font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin: 2px 0 8px;
+    }
+    .nug86-book-author span { text-decoration: underline; }
+    .nug86-book-synopsis {
+      font-family: var(--font-mono); font-size: 10.5px; line-height: 1.48; color: var(--fg);
+    }
+    .nug86-btn-preview {
+      width: 100%; padding: 10px 14px; border: 1.5px solid var(--border);
+      background: var(--accent); color: var(--fg); font-weight: 700; font-size: 13px; cursor: pointer;
+    }
+    .nug86-btn-preview:hover { background: #f57b3d; }
+    .nug86-card-actions {
+      display: flex; align-items: center; justify-content: space-around; gap: 10px;
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    }
+    .nug86-action-link {
+      background: transparent; border: 0; color: var(--fg); font-family: inherit;
+      font-size: 11px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    .nug86-audio-bar {
+      margin-top: 20px; background: var(--accent); border: 1.5px solid var(--border);
+      padding: 10px 16px; display: grid; grid-template-columns: 1.1fr 1.2fr 0.9fr; align-items: center; gap: 16px;
+    }
+    .nug86-audio-track { display: flex; align-items: center; gap: 12px; }
+    .nug86-audio-track img {
+      width: 46px; height: 46px; object-fit: cover; border: 1.5px solid var(--border); background: #fff;
+    }
+    .nug86-audio-controls { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .nug86-ctrl-btns { display: flex; align-items: center; gap: 16px; }
+    .nug86-round-ctrl {
+      width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--border);
+      background: transparent; color: var(--fg); font-family: var(--font-mono); font-size: 10px; font-weight: 700; cursor: pointer;
+    }
+    .nug86-pause-btn {
+      width: 36px; height: 36px; border-radius: 50%; border: 0;
+      background: #fcd34d; color: var(--fg); font-weight: 800; font-size: 13px; cursor: pointer;
+    }
+    .nug86-scrubber {
+      width: 100%; max-width: 260px; height: 3px; background: var(--border); position: relative;
+    }
+    .nug86-scrubber-dot {
+      width: 10px; height: 10px; border-radius: 50%; background: var(--border);
+      position: absolute; top: -3.5px; left: 58%;
+    }
+
+    .nug86-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(28, 25, 23, 0.65); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out);
+    }
+    .nug86-modal.is-open { opacity: 1; pointer-events: auto; }
+    .nug86-modal-box {
+      width: 100%; max-width: 480px; background: var(--surface); border: 2px solid var(--border);
+      padding: 26px; box-shadow: 8px 8px 0 var(--border);
+    }
+
+    @media (max-width: 1024px) {
+      .nug86-books-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nug86-audio-bar { grid-template-columns: 1fr; }
+      .nug86-topbar { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .nug86-app-shell { grid-template-columns: 1fr; }
+      .nug86-sidebar { display: none; }
+      .nug86-books-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <div class="nug86-outer">
+    <div class="nug86-app-shell">
+      <aside class="nug86-sidebar" aria-label="Library Navigation">
+        <a href="#top" class="nug86-flame-logo" aria-label="StorySeeker Home">🔥</a>
+        <div class="nug86-side-nav">
+          <button type="button" class="nug86-side-item"><span>⌂</span><span>Home</span></button>
+          <button type="button" class="nug86-side-item"><span>⊞</span><span>Category</span></button>
+          <button type="button" class="nug86-side-item"><span>📖</span><span>Library</span></button>
+          <button type="button" class="nug86-side-item"><span>↓</span><span>Download</span></button>
+          <button type="button" class="nug86-side-item is-active"><span>🔖</span><span>Saved</span></button>
+        </div>
+        <div class="nug86-side-nav" style="margin:0;">
+          <button type="button" class="nug86-side-item"><span>⚙</span><span>Settings</span></button>
+          <button type="button" class="nug86-side-item"><span>💬</span><span>Support</span></button>
+          <button type="button" class="nug86-side-item"><span>↪</span><span>Logout</span></button>
+        </div>
+      </aside>
+
+      <main id="main-content">
+        <header id="top" class="nug86-topbar">
+          <div class="nug86-top-search-wrap">
+            <div class="nug86-search-box">
+              <span>🔍</span>
+              <input type="text" id="globalBookSearch" placeholder="Title, author, host, or topic" aria-label="Title, author, host, or topic">
+            </div>
+            <button type="button" id="motionToggleBtn" aria-pressed="false" class="nug86-tab-btn">Motion: ON</button>
+          </div>
+
+          <div class="nug86-profile-cell">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <img src="assets/avatar-bruce.webp" alt="Bruce Wayne — Story Seeker" style="width:42px;height:42px;object-fit:cover;border:1.5px solid var(--border);">
+              <div>
+                <div style="font-size:13.5px;font-weight:800;">Bruce Wayne</div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--muted);">Story Seeker</div>
+              </div>
+            </div>
+            <span>▼</span>
+          </div>
+
+          <button type="button" id="exploreMagneticBtn" class="nug86-bell-cell" aria-label="Notifications &amp; Reading Queue">
+            🔔
+          </button>
+        </header>
+
+        <div class="nug86-body-pad">
+          <div class="nug86-toolbar">
+            <div class="nug86-tabs" role="tablist" aria-label="Saved Library Sections">
+              <button type="button" class="nug86-tab-btn is-active" data-next-preview="true" data-lib-tab="Titles">Titles</button>
+              <button type="button" class="nug86-tab-btn" data-lib-tab="Following">Following</button>
+              <button type="button" class="nug86-tab-btn" data-lib-tab="Lists">Lists</button>
+              <button type="button" class="nug86-tab-btn" data-lib-tab="Notebook">Notebook</button>
+              <button type="button" class="nug86-tab-btn" data-lib-tab="History">History</button>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="nug86-search-box" style="width:240px;">
+                <span>🔍</span>
+                <input type="text" placeholder="Search in Titles" aria-label="Search in Titles">
+              </div>
+              <button type="button" class="nug86-tab-btn" aria-label="Filter options">⊶</button>
+            </div>
+          </div>
+
+          <section aria-label="Saved Classic Titles">
+            <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">StorySeeker Saved Classic Literature &amp; Audiobook Library</h1>
+            <div class="nug86-books-grid">
+              <article class="nug86-book-card">
+                <div class="nug86-book-top">
+                  <div>
+                    <div class="nug86-cover-frame">
+                      <img src="assets/cover-gatsby.webp" alt="The Great Gatsby by F. Scott Fitzgerald">
+                    </div>
+                    <div class="nug86-pages-left tabular-nums">168<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="nug86-book-title-row">
+                      <h2 class="nug86-book-title">The Great Gatsby</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="nug86-book-author">By <span>F. Scott Fitzgerald</span></div>
+                    <p class="nug86-book-synopsis">
+                      <u>Nick Carraway</u>, a young man from Minnesota, moves to New York in the summer of 1922 to learn about the bond business. He rents a house in the West Egg district of Long Island, a wealthy but unfashionable area populated by the new rich, a group who ...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="nug86-btn-preview" data-seamless-trigger="Read Preview — The Great Gatsby (Chapter I)">Read Preview</button>
+                <div class="nug86-card-actions">
+                  <button type="button" class="nug86-action-link">☁ Download</button>
+                  <button type="button" class="nug86-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="nug86-book-card">
+                <div class="nug86-book-top">
+                  <div>
+                    <div class="nug86-cover-frame">
+                      <img src="assets/cover-catcher.webp" alt="The Catcher in the Rye by J. D. Salinger">
+                    </div>
+                    <div class="nug86-pages-left tabular-nums">184<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="nug86-book-title-row">
+                      <h2 class="nug86-book-title">The Catcher in the Rye</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="nug86-book-author">By <span>J. D. Salinger</span></div>
+                    <p class="nug86-book-synopsis">
+                      Fleeing the crooks at Pencey Prep, he pinballs around New York City seeking solace in fleeting encounters—shooting the bull with strangers in dive hotels, wandering alone round Central Park, getting beaten up by pimps and cut down by erstwhile girlfriends. The city ...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="nug86-btn-preview" data-seamless-trigger="Read Preview — The Catcher in the Rye">Read Preview</button>
+                <div class="nug86-card-actions">
+                  <button type="button" class="nug86-action-link">☁ Download</button>
+                  <button type="button" class="nug86-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="nug86-book-card">
+                <div class="nug86-book-top">
+                  <div>
+                    <div class="nug86-cover-frame">
+                      <img src="assets/cover-mice.webp" alt="Of Mice and Men by John E. Steinbeck">
+                    </div>
+                    <div class="nug86-pages-left tabular-nums">156<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="nug86-book-title-row">
+                      <h2 class="nug86-book-title">Of Mice and Men</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="nug86-book-author">By <span>John E. Steinbeck</span></div>
+                    <p class="nug86-book-synopsis">
+                      They are an unlikely pair: George is "small and quick and dark of face"; Lennie, a man of tremendous size, has the mind of a young child. Yet they have formed a "family," clinging together in the face of loneliness and alienation...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="nug86-btn-preview" data-seamless-trigger="Read Preview — Of Mice and Men">Read Preview</button>
+                <div class="nug86-card-actions">
+                  <button type="button" class="nug86-action-link">☁ Download</button>
+                  <button type="button" class="nug86-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="nug86-book-card">
+                <div class="nug86-book-top">
+                  <div>
+                    <div class="nug86-cover-frame">
+                      <img src="assets/cover-fahrenheit.webp" alt="Fahrenheit 451 by Ray D. Bradbury">
+                    </div>
+                    <div class="nug86-pages-left tabular-nums">136<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="nug86-book-title-row">
+                      <h2 class="nug86-book-title">Fahrenheit 451</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="nug86-book-author">By <span>Ray D. Bradbury</span></div>
+                    <p class="nug86-book-synopsis">
+                      <u>Guy Montag</u> is a fireman. His job is to destroy the most illegal of commodities, the printed book, along with the houses in which they are hidden. Montag never questions the destruction and ruin his actions produce, returning each day to his bland life and wife ...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="nug86-btn-preview" data-seamless-trigger="Read Preview — Fahrenheit 451">Read Preview</button>
+                <div class="nug86-card-actions">
+                  <button type="button" class="nug86-action-link">☁ Download</button>
+                  <button type="button" class="nug86-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="nug86-book-card">
+                <div class="nug86-book-top">
+                  <div>
+                    <div class="nug86-cover-frame">
+                      <img src="assets/cover-giver.webp" alt="The Giver by Lois Lowry">
+                    </div>
+                    <div class="nug86-pages-left tabular-nums">68<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="nug86-book-title-row">
+                      <h2 class="nug86-book-title">The Giver</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="nug86-book-author">By <span>Lois Lowry</span></div>
+                    <p class="nug86-book-synopsis">
+                      At the age of twelve, Jonas, a young boy from a seemingly utopian, futuristic world, is singled out to receive special training from The Giver, who alone holds the memories of the true joys and pain of life.
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="nug86-btn-preview" data-seamless-trigger="Read Preview — The Giver">Read Preview</button>
+                <div class="nug86-card-actions">
+                  <button type="button" class="nug86-action-link">☁ Download</button>
+                  <button type="button" class="nug86-action-link">☷ Add to List</button>
+                </div>
+              </article>
+
+              <article class="nug86-book-card">
+                <div class="nug86-book-top">
+                  <div>
+                    <div class="nug86-cover-frame">
+                      <img src="assets/cover-hunger.webp" alt="The Hunger Games by Suzanne Collins">
+                    </div>
+                    <div class="nug86-pages-left tabular-nums">120<br>pages left</div>
+                  </div>
+                  <div>
+                    <div class="nug86-book-title-row">
+                      <h2 class="nug86-book-title">The Hunger Games</h2>
+                      <span>🔖</span>
+                    </div>
+                    <div class="nug86-book-author">By <span>Suzanne Collins</span></div>
+                    <p class="nug86-book-synopsis">
+                      In the ruins of a place once known as North America lies the nation of Panem, a shining Capitol surrounded by twelve outlying districts. The Capitol is harsh and cruel and keeps the districts in line by forcing them all to send one boy and one girl between the ages of...
+                    </p>
+                  </div>
+                </div>
+                <button type="button" class="nug86-btn-preview" data-seamless-trigger="Read Preview — The Hunger Games">Read Preview</button>
+                <div class="nug86-card-actions">
+                  <button type="button" class="nug86-action-link">☁ Download</button>
+                  <button type="button" class="nug86-action-link">☷ Add to List</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <footer class="nug86-audio-bar" aria-label="Now Playing Audiobook">
+            <div class="nug86-audio-track">
+              <img src="assets/cover-potter.webp" alt="Harry Potter and the Sorcerer's Stone Audiobook Cover">
+              <div>
+                <div style="font-family:var(--font-mono);font-size:13px;font-weight:700;">Harry Potter and the Sorcere...</div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;">By: <u>J.K. Rowling</u> | Narrator: <u>Jim Dale</u></div>
+              </div>
+            </div>
+
+            <div class="nug86-audio-controls">
+              <div class="nug86-ctrl-btns">
+                <button type="button" id="speedToggleBtn" style="background:transparent;border:0;font-family:var(--font-mono);font-size:12.5px;font-weight:700;cursor:pointer;">2x</button>
+                <button type="button" class="nug86-round-ctrl" aria-label="Rewind 15 seconds">15</button>
+                <button type="button" id="playPauseAudioBtn" class="nug86-pause-btn" aria-label="Pause or Play Audiobook">❚❚</button>
+                <button type="button" class="nug86-round-ctrl" aria-label="Forward 15 seconds">15</button>
+                <button type="button" style="background:transparent;border:0;font-size:14px;cursor:pointer;" aria-label="Next Chapter">⏭</button>
+              </div>
+              <div class="nug86-scrubber" aria-hidden="true">
+                <div class="nug86-scrubber-dot"></div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:12px;">
+              <span>▶</span>
+              <span>▤</span>
+              <span>🔊</span>
+              <div style="width:74px;height:3px;background:var(--border);position:relative;">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--border);position:absolute;top:-2.5px;right:14px;"></div>
+              </div>
+              <span>❐</span>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="nug86-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="nug86-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;font-weight:700;">STORYSEEKER READER</span>
+        <button type="button" id="closeSeamlessBtn" class="nug86-tab-btn" style="padding:2px 8px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:21px;font-weight:800;margin-bottom:10px;">Chapter I — Interactive Book Preview</h2>
+      <p style="font-family:var(--font-mono);font-size:12.5px;line-height:1.65;color:var(--fg);margin-bottom:20px;">
+        "In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since..." Sync your reading progress across ePub, Kindle, and Jim Dale narrated audio chapters.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="nug86-btn-preview">
+        Continue Reading Full Edition →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[data-lib-tab]');
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          tabs.forEach(function (el) { el.classList.remove('is-active'); });
+          t.classList.add('is-active');
+        });
+      });
+      var playBtn = document.getElementById('playPauseAudioBtn');
+      var paused = false;
+      if (playBtn) {
+        playBtn.addEventListener('click', function () {
+          paused = !paused;
+          playBtn.textContent = paused ? '▶' : '❚❚';
+        });
+      }
+      var speedBtn = document.getElementById('speedToggleBtn');
+      var speeds = ['1x', '1.5x', '2x'];
+      var sIdx = 2;
+      if (speedBtn) {
+        speedBtn.addEventListener('click', function () {
+          sIdx = (sIdx + 1) % speeds.length;
+          speedBtn.textContent = speeds[sIdx];
+        });
+      }
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.nug86-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

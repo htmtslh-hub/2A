@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Hawra Graphics — Freelancer Graphics Designer &amp; Brand Identity</title>
+  <meta name="description" content="Hi, I'm Hawra. I craft premium visual identities for ambitious brands — clean, considered and unforgettable.">
+  <meta property="og:title" content="Hawra Graphics — Brand Identity &amp; Visual Direction">
+  <meta property="og:description" content="Freelancer Graphics Designer &amp; Brand Identity Studio — Available for Projects.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0F0906">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0806;
+      --surface: #170e0a;
+      --surface-elevated: #24150e;
+      --glass: rgba(23, 14, 10, 0.78);
+      --fg: #faf5f0;
+      --muted: #b5a397;
+      --border: rgba(249, 115, 22, 0.2);
+      --accent: #f97316;
+      --accent-text: #fb923c;
+      --accent-strong: #ea580c;
+      --on-accent: #0d0806;
+      --font-display: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 26px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background:
+        radial-gradient(circle at 26% 42%, rgba(234, 88, 12, 0.34) 0%, rgba(124, 45, 18, 0.22) 34%, #0c0705 72%),
+        #0c0705;
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .pro57-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .pro57-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .pro57-wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .pro57-studio-frame {
+      margin: 24px auto; border-radius: 28px;
+      background:
+        radial-gradient(circle at 26% 52%, rgba(217, 91, 22, 0.42) 0%, rgba(78, 28, 9, 0.28) 38%, rgba(12, 8, 6, 0.96) 72%),
+        #0d0806;
+      border: 1px solid rgba(251, 146, 60, 0.22);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65);
+      overflow: hidden; padding: 24px clamp(20px, 3.5vw, 42px) 36px;
+    }
+    .pro57-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .pro57-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--fg); text-decoration: none; font-family: var(--font-display); font-size: 18px; font-weight: 700;
+    }
+    .pro57-pen-icon {
+      width: 28px; height: 28px; border-radius: 50%; background: rgba(249, 115, 22, 0.18);
+      border: 1px solid var(--accent); color: var(--accent);
+      display: inline-flex; align-items: center; justify-content: center; font-size: 13px;
+    }
+    .pro57-nav-pill {
+      padding: 8px 22px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03); display: flex; align-items: center; gap: 24px; list-style: none;
+    }
+    .pro57-nav-pill a { color: var(--muted); text-decoration: none; font-size: 12.5px; font-weight: 500; }
+    .pro57-nav-pill a:hover { color: #ffffff; }
+    .pro57-btn-orange {
+      padding: 10px 22px; border-radius: 999px; border: 0;
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      color: #ffffff; font-size: 12.5px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
+    }
+    .pro57-btn-dark {
+      padding: 10px 22px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.04); color: #ffffff; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+
+    .pro57-hero-grid {
+      display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 36px; align-items: center;
+      padding-top: 22px;
+    }
+    .pro57-portrait-box {
+      position: relative; border-radius: 24px; overflow: hidden;
+      display: flex; align-items: flex-end; justify-content: center;
+    }
+    .pro57-portrait-box img {
+      width: 100%; max-width: 440px; height: auto; object-fit: cover; display: block;
+      border-radius: 20px;
+    }
+
+    .pro57-right-copy {
+      display: flex; flex-direction: column; align-items: flex-end; text-align: right;
+    }
+    .pro57-avail-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.03); font-size: 10.5px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
+    }
+    .pro57-avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+    .pro57-hero-h1 {
+      font-family: var(--font-display); font-size: clamp(2.8rem, 5.6vw, 4.9rem);
+      font-weight: 600; line-height: 1.04; margin-bottom: 12px;
+    }
+    .pro57-hero-h1 em { color: var(--accent); font-style: italic; }
+    .pro57-role-sub {
+      font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .pro57-bio {
+      font-size: 14.5px; line-height: 1.68; color: #d6c7bc; max-width: 430px; margin-bottom: 28px;
+    }
+
+    .pro57-section { padding: 42px 0; }
+    .pro57-filter-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
+    .pro57-case-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .pro57-case-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px;
+      transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+    }
+    .pro57-case-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+    .pro57-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(13, 8, 6, 0.76); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .pro57-modal.is-open { opacity: 1; pointer-events: auto; }
+    .pro57-modal-box {
+      width: 100%; max-width: 460px; background: #1c110c; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: var(--fg);
+    }
+
+    @media (max-width: 1024px) {
+      .pro57-hero-grid, .pro57-case-grid { grid-template-columns: 1fr; }
+      .pro57-right-copy { align-items: flex-start; text-align: left; }
+    }
+    @media (max-width: 680px) {
+      .pro57-nav-pill { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <main id="main-content" class="pro57-wrap">
+    <div class="pro57-studio-frame">
+      <header class="pro57-nav">
+        <a href="#top" class="pro57-brand">
+          <span class="pro57-pen-icon">✒</span>
+          <span>Hawra Graphics</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="pro57-nav-pill">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#portfolio">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" id="motionToggleBtn" aria-pressed="false" class="pro57-btn-dark" style="padding:8px 14px;font-size:11.5px;">
+            Motion: ON
+          </button>
+          <button type="button" id="exploreMagneticBtn" class="pro57-btn-orange">Let's Talk</button>
+        </div>
+      </header>
+
+      <section id="top" class="pro57-hero-grid" aria-label="Hawra Graphics Hero">
+        <div class="pro57-portrait-box">
+          <img src="assets/hawra-portrait.webp" alt="Hawra — Freelancer Graphics Designer &amp; Brand Identity Specialist">
+        </div>
+
+        <div class="pro57-right-copy">
+          <div class="pro57-avail-pill">
+            <span class="pro57-avail-dot"></span>
+            <span>AVAILABLE FOR PROJECTS</span>
+          </div>
+
+          <h1 class="pro57-hero-h1">Hi, I'm <em>Hawra.</em></h1>
+          <div class="pro57-role-sub">FREELANCER GRAPHICS DESIGNER &amp; BRAND IDENTITY</div>
+
+          <p class="pro57-bio">
+            I craft premium visual identities for ambitious brands — clean, considered and unforgettable.
+          </p>
+
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <a href="#portfolio" class="pro57-btn-orange" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+              <span>View Portfolio</span>
+              <span>→</span>
+            </a>
+            <button type="button" class="pro57-btn-dark" data-seamless-trigger="Commission Hawra Graphics — Brand Identity Inquiry">
+              ✉ Contact Me
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="portfolio" class="pro57-section pro57-reveal" aria-label="Selected Brand Identity Works">
+      <div class="pro57-filter-row">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">SELECTED ARCHIVE • 2024—2026</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:4px;">Considered Visual Identities</h2>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="pro57-btn-orange" data-next-preview="true" data-folio-cat="ALL">All Systems (12)</button>
+          <button type="button" class="pro57-btn-dark" data-folio-cat="LUXURY">Luxury Monograms</button>
+          <button type="button" class="pro57-btn-dark" data-folio-cat="PACKAGING">Tactile Packaging</button>
+        </div>
+      </div>
+
+      <div class="pro57-case-grid">
+        <article class="pro57-case-card" data-card-cat="LUXURY">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);margin-bottom:8px;">01 • MAISON AL-NOOR</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;">Oud &amp; Botanical Perfumery</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+            Foil-stamped bilingual Arabic/Latin logotype, embossed flacon labels, and rigid terracotta presentation boxes.
+          </p>
+          <span style="font-size:12px;font-weight:700;color:var(--accent-text);">Identity + Packaging →</span>
+        </article>
+
+        <article class="pro57-case-card" data-card-cat="PACKAGING">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);margin-bottom:8px;">02 • KAHWA ROASTERY</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;">Specialty Coffee Atelier</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+            Warm copper typography system, origin elevation badges, and matte-black valve bags for single-estate micro-lots.
+          </p>
+          <span style="font-size:12px;font-weight:700;color:var(--accent-text);">Brand System →</span>
+        </article>
+
+        <article class="pro57-case-card" data-card-cat="LUXURY">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);margin-bottom:8px;">03 • VELA ARCHITECTURE</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin-bottom:8px;">Minimalist Spatial Monograph</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px;">
+            Editorial grid architecture, custom serif ligatures, and digital portfolio direction for Dubai &amp; Doha studios.
+          </p>
+          <span style="font-size:12px;font-weight:700;color:var(--accent-text);">Editorial + Web UI →</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="pro57-wrap" style="padding:24px 0 44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13px;">
+    <span>Hawra.d.ui@gmail.com</span>
+    <span>Hawra Graphics — Freelancer Brand Identity Studio</span>
+  </footer>
+
+  <div class="pro57-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="pro57-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">HAWRA GRAPHICS STUDIO</span>
+        <button type="button" id="closeSeamlessBtn" class="pro57-btn-dark" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Book a Brand Identity Sprint</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Direct inquiries: <strong>Hawra.d.ui@gmail.com</strong>. Complete visual identity deliverables include primary mark, typography guidelines, packaging dielines, and social launch kit.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="pro57-btn-orange" style="width:100%;">
+        Send Project Brief →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var filterBtns = document.querySelectorAll('[data-folio-cat]');
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var cat = btn.getAttribute('data-folio-cat') || 'ALL';
+          document.querySelectorAll('[data-card-cat]').forEach(function (card) {
+            var match = cat === 'ALL' || card.getAttribute('data-card-cat') === cat;
+            card.style.opacity = match ? '1' : '0.42';
+          });
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.pro57-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

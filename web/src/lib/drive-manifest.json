@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-03T00:00:16.354Z",
+  "updatedAt": "2026-11-04T00:13:55.693Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1676,6 +1676,24 @@
       "sizeBytes": 748626,
       "sha256": "15e46294deee226326746b558b057f13f9548f8f33c3e96ca88085e84eccb8e7",
       "updatedAt": "2026-11-03T00:00:16.354Z"
+    },
+    "sleek-futuri": {
+      "fileId": "1kJjWyRKcGiXbP15u1r9nTj6XJfmdP9W9",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1kJjWyRKcGiXbP15u1r9nTj6XJfmdP9W9",
+      "webViewUrl": "https://drive.google.com/file/d/1kJjWyRKcGiXbP15u1r9nTj6XJfmdP9W9/view",
+      "sizeBytes": 178728,
+      "sha256": "a0cd5955213f32d056d655bed798a2c2861988c1caac7d170a5e69e7a1d75a9b",
+      "updatedAt": "2026-11-04T00:13:20.904Z"
+    },
+    "websi-atelier": {
+      "fileId": "1pcBCZOh_YsylJLbLEnZmxgHgJrB0iKOa",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1pcBCZOh_YsylJLbLEnZmxgHgJrB0iKOa",
+      "webViewUrl": "https://drive.google.com/file/d/1pcBCZOh_YsylJLbLEnZmxgHgJrB0iKOa/view",
+      "sizeBytes": 143286,
+      "sha256": "7e2720ef9480a77894fa6ce5dd0a5197ed54b360c4953994a9bb9a9021b64995",
+      "updatedAt": "2026-11-04T00:13:55.693Z"
     }
   }
 }

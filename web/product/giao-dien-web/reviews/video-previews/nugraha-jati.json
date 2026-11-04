@@ -1,0 +1,48 @@
+{
+  "id": "t225",
+  "slug": "nugraha-jati",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:11:14.405Z",
+  "demo": "/demos/nugraha-jati/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9418d4c7a1e6",
+  "sha256": "9418d4c7a1e63bf034259a48e1ee85f2f15abe6c7db7825657dc589c255babb2",
+  "demoHtmlSha256": "03aa50833d055ff8c8bdf2e36134d78cb4cf241e1a48ad46decc4eade0e6ed9f",
+  "demoSha256": "f61c0c7ba3290ee7cd361dc44d4e55711500fb13039c9ca1c933f0ef6b1fe356",
+  "bytes": 221538,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.468,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"nug86-tab-btn is-active\" data-next-preview=\"true\" data-lib-tab=\"Titles\">Titles</button>"
+    },
+    {
+      "seconds": 4.85,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"nug86-tab-btn is-active\" data-next-preview=\"true\" data-lib-tab=\"Titles\">Titles</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nugraha-jati-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nugraha-jati-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nugraha-jati-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nugraha-jati-return.jpg"
+  ]
+}

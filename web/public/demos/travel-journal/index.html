@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Travel Journal — Liquid-Glass iOS Travel Moments (Tokyo, Seoul, Bali, Rome)</title>
+  <meta name="description" content="Interactive mobile travel journal displayed inside a realistic iPhone Dynamic Island frame featuring liquid-glass destination cards for Tokyo (23 moments), Seoul (18 moments), Bali (29 moments), and Rome (15 moments).">
+  <meta property="og:title" content="Travel Journal — iOS Liquid-Glass Trip Moments">
+  <meta property="og:description" content="Explore curated travel moments across Tokyo, Seoul, Bali, and Rome with staggered entrance motion and liquid-glass UI.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F8FAFC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --border: rgba(15, 23, 42, 0.1);
+      --accent: #0f172a;
+      --on-accent: #ffffff;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    ::selection { background: #0f172a; color: #ffffff; }
+    html, body {
+      background: radial-gradient(circle at 50% 20%, #ffffff 0%, #f1f5f9 100%);
+      color: var(--fg); overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); }
+    button:focus-visible, a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+    button { transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out); }
+    button:active { transform: scale(0.97); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .tra51-cursor-ring, .tra51-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .tra51-cursor-ring { width: 32px; height: 32px; border: 1.5px solid rgba(15, 23, 42, 0.35); margin: -16px 0 0 -16px; }
+    .tra51-cursor-dot { width: 6px; height: 6px; background: #0f172a; margin: -3px 0 0 -3px; }
+
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.08);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .tra51-top-bar {
+      max-width: 1240px; margin: 0 auto; padding: 18px clamp(18px, 3.5vw, 40px);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .tra51-stage {
+      max-width: 1240px; margin: 0 auto; padding: 10px clamp(18px, 3.5vw, 40px) 48px;
+      display: grid; grid-template-columns: 1fr 375px 1fr; gap: 36px; align-items: center;
+    }
+    .tra51-side-note {
+      background: #ffffff; border: 1px solid var(--border); border-radius: 24px; padding: 24px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+    }
+
+    .tra51-phone-frame {
+      width: 375px; height: 780px; margin: 0 auto;
+      background: #0a0a0c; border-radius: 52px; overflow: hidden;
+      position: relative;
+      box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(0, 0, 0, 0.6),
+        0 0 0 10px #1a1a1e,
+        0 0 0 11px rgba(255, 255, 255, 0.06),
+        0 24px 60px rgba(0, 0, 0, 0.42);
+    }
+    .tra51-notch {
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 120px; height: 28px; background: #000000;
+      border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; z-index: 50;
+    }
+    .tra51-phone-header {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 30;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background-color: rgba(10, 10, 12, 0.75);
+      padding: 52px 24px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .tra51-region-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; border: 0; color: #ffffff; font-size: 18px; font-weight: 600; cursor: pointer;
+    }
+    .tra51-cal-btn {
+      background: transparent; border: 0; color: rgba(255, 255, 255, 0.72); cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+
+    .tra51-phone-scroll {
+      height: 100%; overflow-y: auto; padding: 108px 24px 96px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .tra51-dest-card {
+      width: 100%; height: 200px; min-height: 200px; border-radius: 16px; overflow: hidden;
+      position: relative; cursor: pointer;
+      transition: transform 0.5s var(--ease-out), opacity 0.5s var(--ease-out);
+    }
+    .tra51-dest-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.55s var(--ease-out);
+    }
+    .tra51-dest-card:hover img { transform: scale(1.05); }
+    .tra51-dest-grad {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent);
+    }
+    .tra51-dest-top {
+      position: relative; z-index: 2; padding: 12px 14px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .tra51-moments-pill {
+      padding: 4px 12px; border-radius: 999px; color: rgba(255, 255, 255, 0.92);
+      font-size: 12px; font-weight: 400;
+    }
+    .tra51-more-circle {
+      width: 32px; height: 32px; border-radius: 50%; color: rgba(255, 255, 255, 0.85);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .tra51-dest-name-clip {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 80px; overflow: hidden;
+      display: flex; align-items: flex-start; justify-content: center; z-index: 2;
+    }
+    .tra51-dest-name {
+      font-size: 92px; font-weight: 800; color: rgba(255, 255, 255, 0.55);
+      letter-spacing: -0.04em; line-height: 1; margin-top: 2px; user-select: none;
+    }
+
+    .tra51-bottom-nav {
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 30;
+      border-radius: 999px; display: flex; align-items: center; gap: 24px; padding: 8px 24px;
+      background: rgba(15, 15, 20, 0.58);
+    }
+    .tra51-nav-item {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      background: transparent; border: 0; color: rgba(255, 255, 255, 0.5); cursor: pointer;
+      font-size: 10px; font-weight: 500;
+    }
+    .tra51-nav-item.is-active { color: #ffffff; }
+
+    .tra51-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(15, 23, 42, 0.62); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .tra51-modal.is-open { opacity: 1; pointer-events: auto; }
+    .tra51-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: var(--fg);
+    }
+
+    @media (max-width: 1080px) {
+      .tra51-stage { grid-template-columns: 1fr; justify-items: center; }
+      .tra51-side-note { max-width: 460px; width: 100%; }
+    }
+    @media (max-width: 420px) {
+      .tra51-phone-frame { width: 100%; border-radius: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="tra51-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="tra51-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="tra51-top-bar">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:10px;height:10px;border-radius:50%;background:#0f172a;"></span>
+      <strong style="font-size:15px;letter-spacing:-0.02em;">Travel Journal iOS</strong>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:#ffffff;color:var(--fg);font-size:12px;font-weight:600;cursor:pointer;">
+        Motion: ON
+      </button>
+      <button type="button" id="exploreMagneticBtn" style="padding:9px 18px;border-radius:999px;border:0;background:#0f172a;color:#ffffff;font-size:12.5px;font-weight:600;cursor:pointer;">
+        New Trip Log +
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="tra51-stage">
+    <aside class="tra51-side-note" aria-label="Travel Journal Overview">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748b;margin-bottom:8px;">LIQUID-GLASS MOBILE UI</div>
+      <h1 style="font-size:28px;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px;">
+        Asia &amp; Europe Moment Archive
+      </h1>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Captured inside an authentic 375×780 iPhone Dynamic Island frame with specular liquid-glass pills, clipped 92px destination typography, and 85 curated photo moments.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+        <div style="padding:14px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-size:24px;font-weight:800;" data-counter-target="85" data-counter-suffix=" Moments">85 Moments</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Tokyo • Seoul • Bali • Rome</div>
+        </div>
+        <div style="padding:14px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-size:24px;font-weight:800;" id="activeDestinationStat">Tokyo (23)</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Selected Journal</div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="tra51-phone-frame" aria-label="iPhone Travel Journal Mockup">
+      <div class="tra51-notch" aria-hidden="true"></div>
+
+      <div class="tra51-phone-header">
+        <button type="button" class="tra51-region-btn" data-next-preview="true" id="regionCycleBtn">
+          <span id="regionLabel">Asia</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <button type="button" class="tra51-cal-btn" data-seamless-trigger="Travel Journal Calendar Timeline" aria-label="Open Calendar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+        </button>
+      </div>
+
+      <div class="tra51-phone-scroll scrollbar-hide" id="phoneCardsList">
+        <article class="tra51-dest-card" data-city="Tokyo (23)" data-seamless-trigger="Tokyo Journal — 23 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101902_e8f0f37b-18b7-4c14-bb5c-99f0724d2646.png&w=1280&q=85" alt="Tokyo Travel Moments">
+          <div class="tra51-dest-grad"></div>
+          <div class="tra51-dest-top">
+            <span class="liquid-glass tra51-moments-pill tabular-nums">23 moments</span>
+            <span class="liquid-glass tra51-more-circle">•••</span>
+          </div>
+          <div class="tra51-dest-name-clip">
+            <span class="tra51-dest-name">Tokyo</span>
+          </div>
+        </article>
+
+        <article class="tra51-dest-card" data-city="Seoul (18)" data-seamless-trigger="Seoul Journal — 18 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101935_4b17f250-8ddb-4ff2-b63d-dfd3497d4428.png&w=1280&q=85" alt="Seoul Travel Moments">
+          <div class="tra51-dest-grad"></div>
+          <div class="tra51-dest-top">
+            <span class="liquid-glass tra51-moments-pill tabular-nums">18 moments</span>
+            <span class="liquid-glass tra51-more-circle">•••</span>
+          </div>
+          <div class="tra51-dest-name-clip">
+            <span class="tra51-dest-name">Seoul</span>
+          </div>
+        </article>
+
+        <article class="tra51-dest-card" data-city="Bali (29)" data-seamless-trigger="Bali Journal — 29 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_101958_7116d6bf-fd6f-496f-b3cf-007688cd5123.png&w=1280&q=85" alt="Bali Travel Moments">
+          <div class="tra51-dest-grad"></div>
+          <div class="tra51-dest-top">
+            <span class="liquid-glass tra51-moments-pill tabular-nums">29 moments</span>
+            <span class="liquid-glass tra51-more-circle">•••</span>
+          </div>
+          <div class="tra51-dest-name-clip">
+            <span class="tra51-dest-name">Bali</span>
+          </div>
+        </article>
+
+        <article class="tra51-dest-card" data-city="Rome (15)" data-seamless-trigger="Rome Journal — 15 Captured Moments">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_143008_72ee7299-04a8-474c-ae73-220d45b24a20.png&w=1280&q=85" alt="Rome Travel Moments">
+          <div class="tra51-dest-grad"></div>
+          <div class="tra51-dest-top">
+            <span class="liquid-glass tra51-moments-pill tabular-nums">15 moments</span>
+            <span class="liquid-glass tra51-more-circle">•••</span>
+          </div>
+          <div class="tra51-dest-name-clip">
+            <span class="tra51-dest-name">Rome</span>
+          </div>
+        </article>
+      </div>
+
+      <nav class="liquid-glass tra51-bottom-nav" aria-label="App Navigation">
+        <button type="button" class="tra51-nav-item" data-tab-nav="Feed">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span>Feed</span>
+        </button>
+        <button type="button" class="tra51-nav-item" data-tab-nav="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+          <span>Account</span>
+        </button>
+        <button type="button" class="tra51-nav-item is-active" data-tab-nav="Trips">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>
+          <span>Trips</span>
+        </button>
+      </nav>
+    </section>
+
+    <aside class="tra51-side-note" aria-label="Destination Telemetry">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#64748b;margin-bottom:8px;">ACTIVE ITINERARY</div>
+      <h2 style="font-size:20px;font-weight:700;margin-bottom:10px;">4 Curated Chapters</h2>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:var(--muted);">
+        <li style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border);"><span>01. Tokyo Shibuya Crossing</span><strong class="tabular-nums" style="color:var(--fg);">23 moments</strong></li>
+        <li style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border);"><span>02. Seoul Bukchon Hanok</span><strong class="tabular-nums" style="color:var(--fg);">18 moments</strong></li>
+        <li style="display:flex;justify-content:space-between;padding-bottom:8px;border-bottom:1px solid var(--border);"><span>03. Bali Uluwatu Cliffs</span><strong class="tabular-nums" style="color:var(--fg);">29 moments</strong></li>
+        <li style="display:flex;justify-content:space-between;"><span>04. Rome Trastevere Dusk</span><strong class="tabular-nums" style="color:var(--fg);">15 moments</strong></li>
+      </ul>
+    </aside>
+  </main>
+
+  <div class="tra51-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="tra51-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#64748b;">TRAVEL JOURNAL LOG</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Tokyo — 23 Moments</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Sync your RAW camera roll, GPS pins, and voice notes into a shareable liquid-glass story reel.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" style="width:100%;padding:12px;border-radius:999px;border:0;background:#0f172a;color:#ffffff;font-weight:700;cursor:pointer;">
+        Open Story Reel →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var regions = ['Asia', 'Asia & Europe', 'Favorites'];
+      var rIdx = 0;
+      var regionBtn = document.getElementById('regionCycleBtn');
+      var regionLabel = document.getElementById('regionLabel');
+      var statEl = document.getElementById('activeDestinationStat');
+      var scrollBox = document.getElementById('phoneCardsList');
+      if (regionBtn) {
+        regionBtn.addEventListener('click', function () {
+          rIdx = (rIdx + 1) % regions.length;
+          if (regionLabel) regionLabel.textContent = regions[rIdx];
+          if (statEl) statEl.textContent = rIdx === 1 ? 'Bali (29)' : rIdx === 2 ? 'Seoul (18)' : 'Tokyo (23)';
+          if (scrollBox) scrollBox.scrollTo({ top: rIdx * 110, behavior: 'smooth' });
+        });
+      }
+      document.querySelectorAll('[data-tab-nav]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('[data-tab-nav]').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.tra51-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('tra51Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

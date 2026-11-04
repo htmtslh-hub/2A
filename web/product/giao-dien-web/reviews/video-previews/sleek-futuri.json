@@ -1,0 +1,48 @@
+{
+  "id": "t222",
+  "slug": "sleek-futuri",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:13:50.536Z",
+  "demo": "/demos/sleek-futuri/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6e79b66e0e9d",
+  "sha256": "6e79b66e0e9d1cf12a75059388d3d8e9be7b094626077c887099904d777e24aa",
+  "demoHtmlSha256": "1752a97b4b58760f510cd90ea122d67fb0930c7cc0b7bafcb4f1c5c9d1589712",
+  "demoSha256": "7f5e60272fc0822d50cf5833401bff07795e8b03b065d1eec67c514d53aabf10",
+  "bytes": 515040,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.479,
+      "action": "click",
+      "selector": "#cycleRoseFilterBtn"
+    },
+    {
+      "seconds": 4.844,
+      "action": "click",
+      "selector": "#cycleRoseFilterBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 396
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sleek-futuri-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sleek-futuri-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sleek-futuri-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sleek-futuri-return.jpg"
+  ]
+}

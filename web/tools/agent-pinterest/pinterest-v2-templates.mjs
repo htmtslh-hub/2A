@@ -231,27 +231,6 @@ function renderV2Runtime(p) {
         });
       }
 
-      var ring = document.getElementById('cursorRing');
-      var dot = document.getElementById('cursorDot');
-      var mx = -100, my = -100, rx = -100, ry = -100;
-      window.addEventListener('mousemove', function (e) {
-        mx = e.clientX;
-        my = e.clientY;
-        if (dot && !motionPaused) {
-          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
-        }
-      }, { passive: true });
-
-      function tickCursor() {
-        if (!motionPaused && ring) {
-          rx += (mx - rx) * 0.18;
-          ry += (my - ry) * 0.18;
-          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
-        }
-        window.requestAnimationFrame(tickCursor);
-      }
-      window.requestAnimationFrame(tickCursor);
-
       var reveals = document.querySelectorAll('.${p}-reveal');
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {

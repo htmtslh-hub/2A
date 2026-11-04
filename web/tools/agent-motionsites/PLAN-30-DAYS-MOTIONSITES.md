@@ -48,7 +48,7 @@
 | Bước công việc | Thời gian thực tế / 1 mẫu | Lý do kỹ thuật không thể cắt bớt |
 | :--- | :--- | :--- |
 | **1. Đọc Prompt + Phân tích Video/Poster + Tra cứu `uiverse-galaxy`** | `2.0 – 3.0 phút` | Phải đọc kỹ từng section trong `prompt_text`, lấy mã màu/font/video URL và chọn component phù hợp. |
-| **2. Dựng mã nguồn độc bản (`index.html`, `styles.css`, `script.js`, docs) + Sáng tạo 15–20%** | `3.5 – 5.0 phút` | Viết cấu trúc DOM riêng biệt theo prompt, thêm hiệu ứng scroll/hover/RAF hữu hạn, viết `README.md` & `CUSTOMISE.md`. |
+| **2. Dựng mã nguồn độc bản (`index.html`, `styles.css`, `script.js`, docs) + Sáng tạo 15–20%** | `3.5 – 5.0 phút` | Viết cấu trúc DOM riêng biệt theo prompt, thêm hiệu ứng scroll/RAF hữu hạn, viết `README.md` & `CUSTOMISE.md`. |
 | **3. Kiểm tra chống trùng DOM + QA 4 Viewport bằng Playwright** | `1.0 – 1.5 phút` | Mở trình duyệt thật kiểm tra `1440px`, `1024px`, `768px`, `375px`, kiểm tra console/pageerror/overflow. |
 | **4. Đóng gói `.zip` + Quay Video Preview `.mp4` 15 giây (FFmpeg 30fps)** | `1.5 – 2.0 phút` | Riêng việc quay thật 15 giây trên trình duyệt + encode H.264 `.mp4` + xuất `.webp` mất tối thiểu 60–90 giây/mẫu. |
 | **Tổng thời gian thực cho 01 mẫu chất lượng thật** | **`8.0 – 11.5 phút / mẫu`** | **1 Ca 3 mẫu mất khoảng `25 – 35 phút` (tính cả `next build` + `git push` + `vercel deploy`).** |
@@ -90,7 +90,7 @@
   4. `archetype-04-cinematic-inset-frame`: Khung video bo góc `rounded-[2rem]` lọt lòng + thanh nav treo đỉnh (`hanging pill`) + chữ kéo lên theo từng từ (`WordsPullUp`).
   5. `archetype-05-editorial-split-showcase`: Bố cục tạp chí 50/50 cố định cột trái (`sticky`), cuộn từng chương cột phải (`skill-morge` progress).
   6. `archetype-06-floating-saas-command`: Giao diện điều khiển SaaS với bảng phím tắt `Cmd+K` tương tác thật, chuyển tab live telemetry và biểu đồ SVG động.
-  7. `archetype-07-kinetic-swiss-grid`: Lưới Brutalist/Swiss có đường kẻ mảnh `1px`, bộ lọc danh mục tức thời và hiệu ứng nghiêng 3D khi rê chuột (`3D perspective tilt`).
+  7. `archetype-07-kinetic-swiss-grid`: Lưới Brutalist/Swiss có đường kẻ mảnh `1px`, bộ lọc danh mục tức thời và chuyển động cuộn đồng bộ.
   8. `archetype-08-horizontal-product-carousel`: Carousel chuyển sản phẩm 2 chiều wrap trực tiếp theo đúng `skill-morge` (`morge.js` / `requestAnimationFrame` hữu hạn).
   9. `archetype-09-webgl-canvas-particles`: Nền hạt tương tác chuột bằng HTML5 `<canvas>` 2D/3D nhẹ + thẻ kính mờ (`glassmorphism`) và viền `neon-orbit-border`.
   10. `archetype-10-minimal-portfolio-case-study`: Hồ sơ năng lực nghệ sĩ/studio với hiệu ứng rèm mở ảnh theo vị trí cuộn (`scroll-linked reveal`) và xem nhanh dự án.

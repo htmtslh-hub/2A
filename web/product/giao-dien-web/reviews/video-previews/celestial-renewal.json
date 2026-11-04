@@ -1,0 +1,48 @@
+{
+  "id": "t228",
+  "slug": "celestial-renewal",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:15:24.474Z",
+  "demo": "/demos/celestial-renewal/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1858106fed52",
+  "sha256": "1858106fed521aa9154424e3e4de7ab42ca2a73a61c27285b2a51e91c4019e8f",
+  "demoHtmlSha256": "5f98dcf49e353a3fdb1793c9b179647585cacf89a3ef6842a0d5ec5019d42d90",
+  "demoSha256": "07561b8b8057423b679b4d56fe97a37e9f0600257be928741dfd7bc6a5ba6125",
+  "bytes": 801404,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.461,
+      "action": "click",
+      "selector": "#sereneRitualSwitchBtn"
+    },
+    {
+      "seconds": 4.857,
+      "action": "click",
+      "selector": "#sereneRitualSwitchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 900
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\celestial-renewal-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\celestial-renewal-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\celestial-renewal-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\celestial-renewal-return.jpg"
+  ]
+}

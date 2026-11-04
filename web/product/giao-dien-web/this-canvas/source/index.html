@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JM JACKET MASTERS — Stand Out Without Trying | 3D Puffer Atelier</title>
+  <meta name="description" content="Confidence, wrapped in warmth. Discover JM Jacket Masters lightweight 800-fill down puffer jackets in Burnt Orange and Obsidian Black ($149).">
+  <meta property="og:title" content="JM JACKET MASTERS — Stand Out Without Trying">
+  <meta property="og:description" content="Designed to elevate even the simplest outfit, this jacket wraps you in lightweight warmth.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#9A4206">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #9a4206;
+      --surface: #783104;
+      --surface-elevated: #b85309;
+      --glass: rgba(88, 34, 4, 0.48);
+      --fg: #fffbeb;
+      --muted: rgba(255, 251, 235, 0.78);
+      --border: rgba(255, 251, 235, 0.18);
+      --accent: #ffffff;
+      --accent-text: #fde68a;
+      --accent-strong: #fb923c;
+      --on-accent: #431407;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-serif: 'Cinzel', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 28px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 50% 42%, #d96b14 0%, #9a4206 54%, #5c2402 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid #ffffff; margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: #ffffff; margin: -3px 0 0 -3px; }
+    @keyframes floatPuffer {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(-0.6deg); }
+    }
+    .thi44-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .thi44-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .thi44-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.8vw, 48px); }
+    .thi44-header { padding: 22px 0 12px; position: relative; z-index: 120; }
+    .thi44-nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .thi44-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #ffffff; text-decoration: none; font-family: var(--font-serif); font-size: 14px; font-weight: 700; letter-spacing: 0.08em;
+    }
+    .thi44-brand-badge {
+      width: 26px; height: 26px; border-radius: 5px; background: #ffffff; color: #783104;
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; font-family: var(--font-sans);
+    }
+    .thi44-nav-pill {
+      background: rgba(88, 34, 4, 0.45); border: 1px solid var(--border);
+      border-radius: 999px; padding: 6px 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      backdrop-filter: blur(12px);
+    }
+    .thi44-nav-pill a {
+      padding: 8px 18px; border-radius: 999px; color: var(--fg); text-decoration: none;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .thi44-nav-pill a.is-active { background: #ffffff; color: #5c2402; }
+    .thi44-icon-btn {
+      width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border);
+      background: rgba(88, 34, 4, 0.45); color: #ffffff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+
+    .thi44-hero {
+      display: grid; grid-template-columns: 1.05fr 1.1fr 0.75fr; gap: 24px; align-items: center;
+      padding: 20px 0 42px; min-height: 620px; position: relative;
+    }
+    .thi44-arrow-row { display: inline-flex; gap: 8px; margin-bottom: 18px; }
+    .thi44-hero h1 {
+      font-size: clamp(2.4rem, 4.4vw, 3.85rem); font-weight: 700;
+      line-height: 1.06; letter-spacing: -0.025em; margin-bottom: 16px;
+    }
+    .thi44-hero p {
+      font-size: 13.5px; line-height: 1.68; color: var(--muted); max-width: 390px; margin-bottom: 26px;
+    }
+    .thi44-btn-white {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 26px; border-radius: 999px; border: 0;
+      background: #ffffff; color: #431407; font-size: 13px; font-weight: 700; cursor: pointer;
+      box-shadow: 0 14px 32px rgba(67, 20, 7, 0.32);
+    }
+
+    .thi44-center-stage {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      position: relative;
+    }
+    .thi44-puffer-wrap {
+      position: relative; width: 100%; max-width: 430px; height: 420px;
+      display: flex; align-items: center; justify-content: center;
+      animation: floatPuffer 5.5s ease-in-out infinite;
+    }
+    .thi44-puffer-wrap img {
+      max-width: 100%; max-height: 410px; object-fit: contain; display: block;
+      filter: drop-shadow(0 28px 34px rgba(45, 14, 2, 0.55));
+      transition: transform 0.35s var(--ease-out), opacity 0.25s var(--ease-out);
+    }
+    .thi44-floor-shadow {
+      width: 260px; height: 18px; border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(40, 12, 2, 0.68) 0%, transparent 75%);
+      margin: 4px auto 18px;
+    }
+
+    .thi44-right-stage {
+      display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 22px;
+    }
+    .thi44-price-now {
+      font-size: clamp(2.4rem, 3.8vw, 3.3rem); font-weight: 700; line-height: 1;
+    }
+    .thi44-price-old {
+      font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 500; color: rgba(255, 251, 235, 0.62);
+      text-decoration: line-through; margin-top: 6px;
+    }
+    .thi44-sizes { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px; }
+    .thi44-size-btn {
+      width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--border);
+      background: rgba(88, 34, 4, 0.52); color: #ffffff; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .thi44-size-btn.is-active { background: #ffffff; color: #431407; border-color: #ffffff; }
+
+    .thi44-variant-thumb {
+      margin-top: 24px; padding: 12px 16px; border-radius: 22px;
+      background: rgba(67, 20, 7, 0.42); border: 1px solid var(--border);
+      display: inline-flex; align-items: center; gap: 12px; cursor: pointer;
+    }
+    .thi44-variant-thumb img { width: 72px; height: 78px; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45)); }
+
+    .thi44-section { padding: 48px 0; border-top: 1px solid var(--border); }
+    .thi44-spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .thi44-spec-card {
+      background: rgba(88, 34, 4, 0.42); border: 1px solid var(--border); border-radius: 22px; padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .thi44-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(45, 14, 2, 0.72); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .thi44-modal.is-open { opacity: 1; pointer-events: auto; }
+    .thi44-modal-box {
+      width: 100%; max-width: 460px; background: #692903; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .thi44-hero, .thi44-spec-grid { grid-template-columns: 1fr; text-align: left; }
+      .thi44-right-stage { align-items: flex-start; text-align: left; }
+    }
+    @media (max-width: 640px) {
+      .thi44-nav-pill { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="thi44-header">
+    <div class="thi44-wrap thi44-nav">
+      <a href="#top" class="thi44-brand">
+        <span class="thi44-brand-badge">JM</span>
+        <span>JACKET MASTERS</span>
+      </a>
+      <nav class="thi44-nav-pill" aria-label="Primary">
+        <a href="#top" class="is-active">PUFFER JACKET</a>
+        <a href="#specs">ALL PRODUCTS</a>
+        <a href="#specs">ABOUT US</a>
+        <a href="#specs">CONTACT</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(88,34,4,0.45);color:#fff;font-size:11.5px;font-weight:700;cursor:pointer;">
+          Motion: ON
+        </button>
+        <button type="button" class="thi44-icon-btn" data-seamless-trigger="JM Jacket Masters Shopping Bag" aria-label="Shopping Cart">🛒</button>
+        <button type="button" class="thi44-icon-btn" data-seamless-trigger="Saved Winter Lookbook" aria-label="Wishlist">♡</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="thi44-wrap">
+    <section id="top" class="thi44-hero" aria-label="JM Jacket Masters Puffer Showcase">
+      <div>
+        <div class="thi44-arrow-row">
+          <button type="button" class="thi44-icon-btn" id="prevJacketBtn" aria-label="Previous jacket colorway">‹</button>
+          <button type="button" class="thi44-icon-btn" id="nextJacketBtn" data-next-preview="true" aria-label="Next jacket colorway">›</button>
+        </div>
+        <h1 id="jacketTitle">Stand out<br>Without trying</h1>
+        <p id="jacketDesc">
+          It's not just about staying warm. It's about stepping outside and instantly feeling confident, comfortable, and completely yourself. Designed to elevate even the simplest outfit, this jacket wraps you in lightweight warmth.
+        </p>
+        <button type="button" id="exploreMagneticBtn" class="thi44-btn-white">
+          <span>Get the look</span>
+          <span>›</span>
+        </button>
+
+        <div style="display:flex;align-items:center;gap:18px;margin-top:44px;font-size:13px;font-weight:700;color:var(--muted);">
+          <span>◎ Instagram</span>
+          <span>f Facebook</span>
+          <span>⊗ Dribbble</span>
+          <span>Bē Behance</span>
+        </div>
+      </div>
+
+      <div class="thi44-center-stage">
+        <div class="thi44-puffer-wrap">
+          <img id="heroPufferImg" src="assets/puffer-orange-hero.webp" alt="JM Jacket Masters 3D Glossy Burnt-Orange Quilted Down Puffer Jacket">
+        </div>
+        <div class="thi44-floor-shadow" aria-hidden="true"></div>
+        <div style="font-size:15px;font-weight:600;line-height:1.35;">
+          Confidence,<br>wrapped in warmth
+        </div>
+      </div>
+
+      <div class="thi44-right-stage">
+        <div>
+          <div class="thi44-price-now tabular-nums" id="jacketPriceNow">$149</div>
+          <div class="thi44-price-old tabular-nums" id="jacketPriceOld">$199</div>
+        </div>
+
+        <div>
+          <div style="font-size:12.5px;color:var(--muted);">Choose your size:</div>
+          <div class="thi44-sizes" role="group" aria-label="Select jacket size">
+            <button type="button" class="thi44-size-btn is-active" data-size="36">36</button>
+            <button type="button" class="thi44-size-btn" data-size="38">38</button>
+            <button type="button" class="thi44-size-btn" data-size="40">40</button>
+          </div>
+        </div>
+
+        <button type="button" class="thi44-variant-thumb" id="swapBlackJacketBtn" aria-label="Switch between Obsidian Black and Burnt Orange Puffer">
+          <img id="thumbPufferImg" src="assets/puffer-black-thumb.webp" alt="Obsidian Black Down Puffer Variant">
+          <div style="text-align:left;">
+            <div style="font-size:11px;font-family:var(--font-mono);color:var(--accent-text);" id="thumbPufferTag">NEXT COLORWAY</div>
+            <div style="font-size:13.5px;font-weight:700;color:#ffffff;" id="thumbPufferName">Obsidian Stealth</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <section id="specs" class="thi44-section thi44-reveal" aria-label="Technical Thermal Architecture">
+      <div class="thi44-spec-grid">
+        <article class="thi44-spec-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">800-FILL GOOSE DOWN</div>
+          <h2 style="font-size:19px;font-weight:700;margin-bottom:8px;">Ultra-Loft Thermal Baffles</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            High-volume horizontal chamber construction locks in body heat down to -18°C while weighing under 640 grams.
+          </p>
+        </article>
+        <article class="thi44-spec-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">RIPSTOP GLOSS SHELL</div>
+          <h2 style="font-size:19px;font-weight:700;margin-bottom:8px;">Hydro-Shield DWR Finish</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Japanese micro-ripstop nylon treated with PFC-free water-repellent glaze that sheds sleet and alpine snow on contact.
+          </p>
+        </article>
+        <article class="thi44-spec-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">TAILORED SILHOUETTE</div>
+          <h2 style="font-size:19px;font-weight:700;margin-bottom:8px;">Cropped Storm Collar Fit</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Insulated stand-up funnel neck, recessed rib-knit storm cuffs, and internal drawcord hem engineered for sizes 36, 38, and 40.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="thi44-wrap" style="padding:24px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>JM JACKET MASTERS — Confidence, Wrapped in Warmth</span>
+    <span class="tabular-nums">Sizes 36 • 38 • 40 | $149 USD</span>
+  </footer>
+
+  <div class="thi44-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="thi44-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">JM ATELIER CHECKOUT</span>
+        <button type="button" id="closeSeamlessBtn" class="thi44-icon-btn" style="width:30px;height:30px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Reserve JM Down Puffer ($149)</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Your selected size and colorway are in stock for express dispatch with complimentary garment bag and 30-day fit assurance.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="thi44-btn-white" style="width:100%;justify-content:center;">
+        Complete Order ($149) →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var isBlack = false;
+      var heroImg = document.getElementById('heroPufferImg');
+      var thumbImg = document.getElementById('thumbPufferImg');
+      var thumbName = document.getElementById('thumbPufferName');
+      var priceNow = document.getElementById('jacketPriceNow');
+
+      function toggleColorway() {
+        isBlack = !isBlack;
+        if (heroImg && thumbImg) {
+          heroImg.src = isBlack ? 'assets/puffer-black-thumb.webp' : 'assets/puffer-orange-hero.webp';
+          thumbImg.src = isBlack ? 'assets/puffer-orange-hero.webp' : 'assets/puffer-black-thumb.webp';
+        }
+        if (thumbName) thumbName.textContent = isBlack ? 'Solar Burnt-Orange' : 'Obsidian Stealth';
+        if (priceNow) priceNow.textContent = isBlack ? '$159' : '$149';
+      }
+
+      var prevBtn = document.getElementById('prevJacketBtn');
+      var nextBtn = document.getElementById('nextJacketBtn');
+      var swapBtn = document.getElementById('swapBlackJacketBtn');
+      if (prevBtn) prevBtn.addEventListener('click', toggleColorway);
+      if (nextBtn) nextBtn.addEventListener('click', toggleColorway);
+      if (swapBtn) swapBtn.addEventListener('click', toggleColorway);
+
+      document.querySelectorAll('.thi44-size-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.thi44-size-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.thi44-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

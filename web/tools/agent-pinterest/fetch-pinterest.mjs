@@ -504,28 +504,28 @@ async function downloadAndVerifyPinImage(pinInfo, keyword, dateStr) {
 
 const CREATIVE_MOTION_RECIPES = [
   {
-    id: 'recipe-parallax-magnetic',
-    name: 'Parallax Depth + 3D Pop-Out + Magnetic CTA',
-    focus: ['parallax-layers', 'magnetic-buttons', 'floating-3d-cutout'],
-    description: 'Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng.'
+    id: 'recipe-parallax-popout',
+    name: 'Parallax Depth + 3D Pop-Out + Scroll Reveal',
+    focus: ['parallax-layers', 'scroll-reveal', 'floating-3d-cutout'],
+    description: 'Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và chuyển động cuộn mượt mà.'
   },
   {
-    id: 'recipe-tilt-splittext',
-    name: 'Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor',
-    focus: ['split-text-reveal', '3d-card-tilt', 'image-zoom-mask', 'custom-blend-cursor'],
-    description: 'Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode.'
+    id: 'recipe-splittext-reveal',
+    name: 'Split-Text Staggered Reveal + Scroll Scrubbing',
+    focus: ['split-text-reveal', 'scroll-scrub-stage', 'editorial-grid'],
+    description: 'Tập trung vào nghệ thuật chữ tách ký tự (Split-Text) và hoạt cảnh đồng bộ theo tiến độ cuộn trang.'
   },
   {
-    id: 'recipe-horizontal-liquid',
-    name: 'Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal',
-    focus: ['horizontal-scroll', 'liquid-ripple-distortion', 'seamless-modal-transition'],
-    description: 'Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà.'
+    id: 'recipe-horizontal-modal',
+    name: 'Horizontal Showcase Scroll + Seamless Modal',
+    focus: ['horizontal-scroll', 'seamless-modal-transition'],
+    description: 'Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll) và chuyển cảnh chi tiết mượt mà.'
   },
   {
     id: 'recipe-sticky-counters',
     name: 'Sticky Pinned Storytelling + Scroll Scrubbing + Number Counters',
     focus: ['sticky-pinned-stage', 'scroll-scrub-rotation', 'number-counters'],
-    description: 'Tập trung vào ghim cố định chủ thể ở giữa màn hình xoay theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động.'
+    description: 'Tập trung vào ghim cố định chủ thể ở giữa màn hình theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động.'
   },
   {
     id: 'recipe-ambient-marquee',

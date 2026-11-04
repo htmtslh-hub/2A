@@ -1,12 +1,11 @@
 /**
- * Autonomous MotionSites Prompt-to-Product Compiler & Catalog Integrator (v2.0 Hallmark + 4 Motion Groups + 3D Cutout)
+ * Autonomous MotionSites Prompt-to-Product Compiler & Catalog Integrator (v2.0 Hallmark + 3 Motion Groups + 3D Cutout)
  * Parses a MotionSites prompt JSON (from web/tools/agent-motionsites/data/<slug>.json),
  * builds a bespoke, prompt-faithful Single-File HTML5/CSS3/Vanilla JS template with:
  *   - 3D Studio Product/Subject Cutout (Out-of-bounds Pop-out & Text Masking when cutout-<slug>.webp is present)
  *   - Group 1 (Scroll): Parallax layers, Scroll-Triggered Reveal, Sticky 001-003 Pinned Telemetry + Scroll Scrubbing, Horizontal Scroll Track
- *   - Group 2 (Hover & Cursor): Magnetic Buttons, 3D Card Tilt with Specular Glare, Liquid Ripple SVG Filter, Custom Blend-Mode Follower Cursor
- *   - Group 3 (Text & Transitions): Split-Text Staggered Reveal, Animated Number Counters, Seamless Fullscreen Modal, Infinite Marquee
- *   - Group 4 (Ambient): Zero-gravity Floating + Canvas Particle/Smoke System
+ *   - Group 2 (Text & Transitions): Split-Text Staggered Reveal, Animated Number Counters, Seamless Fullscreen Modal, Infinite Marquee
+ *   - Group 3 (Ambient): Zero-gravity Floating + Canvas Particle/Smoke System
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -177,47 +176,6 @@ function renderSharedMotionRuntime(p) {
       } else {
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
-
-      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
-      window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-      }, { passive: true });
-
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
-
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
-
-      var dispMap = document.getElementById('${p}Displacement');
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
-          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
-          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
-        });
-        card.addEventListener('mouseleave', function () {
-          card.style.transform = '';
-          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
-        });
-      });
 
       // Group 3.3: Seamless Fullscreen Modal Transition
       var modal = document.getElementById('seamlessModal');
@@ -4290,17 +4248,17 @@ ${accessLine}    version: '1.0.0',
     copy: {
       vi: {
         name: ${JSON.stringify(data.title)},
-        desc: ${JSON.stringify(`Giao diện web ${data.title} với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).`)},
+        desc: ${JSON.stringify(`Giao diện web ${data.title} với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).`)},
         tags: [${JSON.stringify(data.category || 'Interactive UI')}, '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: ${JSON.stringify(data.title)},
-        desc: ${JSON.stringify(`Bespoke ${data.title} web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).`)},
+        desc: ${JSON.stringify(`Bespoke ${data.title} web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).`)},
         tags: [${JSON.stringify(data.category || 'Interactive UI')}, '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: ${JSON.stringify(data.title)},
-        desc: ${JSON.stringify(`单文件自包含 ${data.title} 网页模板，配备 3D 悬浮视觉与四组动态交互。`)},
+        desc: ${JSON.stringify(`单文件自包含 ${data.title} 网页模板，配备 3D 悬浮视觉与三组动态交互。`)},
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }

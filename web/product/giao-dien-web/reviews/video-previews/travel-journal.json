@@ -1,0 +1,48 @@
+{
+  "id": "t227",
+  "slug": "travel-journal",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:14:55.005Z",
+  "demo": "/demos/travel-journal/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "cd553d995fec",
+  "sha256": "cd553d995fec3065162bb1dab0b67e2ce5dbc4227367181c87bdcd120eb1e488",
+  "demoHtmlSha256": "f2a557c240cae5daee59045d0ee2ab4254023beb855e2476ee04c3649bc4b29b",
+  "demoSha256": "725cc88fe05fb581cae6e0aa8f703784074b6e06f896b3a41f3357e39e69a838",
+  "bytes": 223360,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.464,
+      "action": "click",
+      "selector": "#regionCycleBtn"
+    },
+    {
+      "seconds": 4.83,
+      "action": "click",
+      "selector": "#regionCycleBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 7
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\travel-journal-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\travel-journal-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\travel-journal-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\travel-journal-return.jpg"
+  ]
+}

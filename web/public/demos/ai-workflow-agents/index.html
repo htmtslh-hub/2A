@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Axon — Digital Workers for Mundane Workflows</title>
+  <meta name="description" content="Eliminate your tedious browser work and 10x your team's capacity. Put intelligent agents on every routine process so you grow faster and deliver more for clients — effortlessly.">
+  <meta property="og:title" content="Axon — Deploy Digital Workers for Mundane Workflows">
+  <meta property="og:description" content="Funded by Y Combinator — Autonomous browser agents for enterprise operations.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F3EEFF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3eeff;
+      --fg: #1b133c;
+      --muted: rgba(27, 19, 60, 0.72);
+      --border: rgba(27, 19, 60, 0.12);
+      --accent: #f97316;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: #1b133c; color: #ffffff; }
+    html, body {
+      font-family: 'Inter', sans-serif; color: var(--fg);
+      background: linear-gradient(180deg, #ede9fe 0%, #ddd6fe 50%, #f5f3ff 100%);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--fg); color: #ffffff;
+      font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+    button { transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out); }
+    button:active { transform: scale(0.97); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .aiw44-cursor-ring, .aiw44-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .aiw44-cursor-ring { width: 32px; height: 32px; border: 1.5px solid rgba(27, 19, 60, 0.35); margin: -16px 0 0 -16px; }
+    .aiw44-cursor-dot { width: 6px; height: 6px; background: var(--fg); margin: -3px 0 0 -3px; }
+
+    .aiw44-hero {
+      position: relative; width: 100%; min-height: 100vh; overflow: hidden;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 24px 20px 64px;
+    }
+    .aiw44-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 130%; object-fit: cover; object-position: top; z-index: 0;
+    }
+    .aiw44-bg-scrim {
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 24%, rgba(255, 255, 255, 0.68) 0%, rgba(237, 233, 254, 0.38) 60%, rgba(27, 19, 60, 0.14) 100%);
+      z-index: 1;
+    }
+
+    .aiw44-nav-pill {
+      position: relative; z-index: 10;
+      background: rgba(255, 255, 255, 0.76); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 12px 24px; display: flex; align-items: center; gap: 32px;
+      box-shadow: 0 4px 18px rgba(27, 19, 60, 0.06);
+    }
+    .aiw44-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .aiw44-nav-links a {
+      font-size: 14px; font-weight: 500; color: rgba(27, 19, 60, 0.8); text-decoration: none;
+    }
+    .aiw44-nav-links a:hover { color: var(--fg); }
+
+    .aiw44-hero-content {
+      position: relative; z-index: 10; margin-top: clamp(36px, 6vh, 64px);
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      max-width: 920px;
+    }
+    .aiw44-yc-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 16px; border-radius: 12px;
+      border: 1px solid rgba(27, 19, 60, 0.1);
+      background: rgba(255, 255, 255, 0.78); backdrop-filter: blur(8px);
+      font-size: 13.5px; font-weight: 500; color: var(--fg); margin-bottom: 24px;
+    }
+    .aiw44-yc-square {
+      width: 20px; height: 20px; border-radius: 4px; background: #f97316;
+      color: #ffffff; font-weight: 700; font-size: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .aiw44-heading {
+      font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;
+      font-size: clamp(2.8rem, 6.8vw, 5.8rem); line-height: 0.95; letter-spacing: -0.02em;
+      color: var(--fg);
+    }
+    .aiw44-subtitle {
+      margin-top: 22px; max-width: 680px;
+      font-size: clamp(13.5px, 1.2vw, 16px); line-height: 1.62; color: var(--muted);
+    }
+    .aiw44-cta-row {
+      margin-top: 30px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;
+    }
+    .aiw44-btn-early {
+      padding: 14px 32px; border-radius: 12px; border: 0;
+      background: #fefefe; color: var(--fg); font-size: 14px; font-weight: 600; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .aiw44-btn-early:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22); }
+
+    .aiw44-agent-dock {
+      position: relative; z-index: 10; margin-top: 44px; width: 100%; max-width: 960px;
+      background: rgba(255, 255, 255, 0.84); backdrop-filter: blur(16px);
+      border: 1px solid var(--border); border-radius: 22px; padding: 22px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+      box-shadow: 0 20px 50px rgba(27, 19, 60, 0.12);
+    }
+    .aiw44-agent-card {
+      background: rgba(255, 255, 255, 0.9); border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px; text-align: left; cursor: pointer;
+    }
+    .aiw44-agent-card.is-active {
+      border-color: var(--fg); box-shadow: 0 10px 24px rgba(27, 19, 60, 0.08);
+    }
+
+    .aiw44-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(27, 19, 60, 0.56); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .aiw44-modal.is-open { opacity: 1; pointer-events: auto; }
+    .aiw44-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 22px; padding: 28px; color: var(--fg);
+    }
+
+    @media (max-width: 860px) {
+      .aiw44-agent-dock { grid-template-columns: 1fr; }
+      .aiw44-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="aiw44-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="aiw44-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <main id="main-content">
+    <section class="aiw44-hero" aria-label="Axon Digital Workers Hero">
+      <video class="aiw44-bg-video" autoplay muted loop playsinline poster="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260715_014544_2e2e15ee-0037-456c-b0d1-1c174ef0bc27.png&w=1280&q=85">
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260714_113715_c7e0daa0-8bdd-4486-a2da-040901f8f0ea.mp4" type="video/mp4">
+      </video>
+      <div class="aiw44-bg-scrim" aria-hidden="true"></div>
+
+      <header class="aiw44-nav-pill">
+        <a href="#main-content" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-weight:700;font-size:15px;">
+          <svg width="24" height="24" viewBox="0 0 256 256" fill="#1B133C" aria-hidden="true">
+            <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z"/>
+            <path d="M 256 128 L 128 128 L 0 0 L 128 0 Z"/>
+          </svg>
+          <span>Axon</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="aiw44-nav-links">
+            <li><a href="#agents">Features</a></li>
+            <li><a href="#agents">Plans</a></li>
+            <li><a href="#agents">Security</a></li>
+            <li><a href="#agents">About</a></li>
+          </ul>
+        </nav>
+        <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:#ffffff;color:var(--fg);font-size:11.5px;font-weight:600;cursor:pointer;">
+          Motion: ON
+        </button>
+      </header>
+
+      <div class="aiw44-hero-content">
+        <div class="aiw44-yc-badge">
+          <span class="aiw44-yc-square">Y</span>
+          <span>Funded by Y Combinator</span>
+        </div>
+
+        <h1 class="aiw44-heading">
+          Deploy digital workers<br>for mundane workflows
+        </h1>
+
+        <p class="aiw44-subtitle" id="axonActiveSubtitle">
+          Eliminate your tedious browser work and 10x your team's capacity. Put intelligent agents on every routine process so you grow faster and deliver more for clients — effortlessly.
+        </p>
+
+        <div class="aiw44-cta-row">
+          <button type="button" id="exploreMagneticBtn" class="aiw44-btn-early">
+            Get Early Access
+          </button>
+          <button type="button" data-next-preview="true" id="cycleWorkerBtn" style="padding:14px 22px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.82);color:var(--fg);font-size:13.5px;font-weight:600;cursor:pointer;">
+            Active Worker: <span id="activeWorkerName">CRM Sync Agent</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="agents" class="aiw44-agent-dock" role="region" aria-label="Digital Worker Fleet">
+        <article class="aiw44-agent-card is-active" data-worker="CRM Sync Agent" data-desc="Autonomous Salesforce &amp; HubSpot browser worker reconciling 1,400+ daily lead records with zero human clicks.">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#f97316;font-weight:600;">WORKER 01 • LIVE</div>
+          <h2 style="font-size:16px;font-weight:700;margin:6px 0;">CRM &amp; Billing Reconciliation</h2>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.5;">Extracts invoices, validates PO line items, and updates ERP portals 24/7.</p>
+        </article>
+
+        <article class="aiw44-agent-card" data-worker="Claims Triage Agent" data-desc="Processes multi-portal insurance &amp; healthcare prior authorizations with full audit video replay.">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#1b133c;font-weight:600;">WORKER 02 • 10X SPEED</div>
+          <h2 style="font-size:16px;font-weight:700;margin:6px 0;">Portal Claims &amp; Onboarding</h2>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.5;">Navigates legacy web forms, MFA prompts, and PDF attachments autonomously.</p>
+        </article>
+
+        <article class="aiw44-agent-card" data-worker="Compliance QA Agent" data-desc="SOC2 Type II isolated browser fleet verifying vendor KYC documents and sanctions lists in real time.">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#1b133c;font-weight:600;">WORKER 03 • SOC2</div>
+          <h2 style="font-size:16px;font-weight:700;margin:6px 0;">KYC &amp; Vendor Verification</h2>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.5;">Deterministic browser checkpoints with human-in-the-loop Slack approvals.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="aiw44-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="aiw44-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span class="aiw44-yc-badge" style="margin:0;padding:4px 10px;font-size:11.5px;"><span class="aiw44-yc-square">Y</span> AXON EARLY ACCESS</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:10px;">Deploy Your First Digital Worker</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Connect Axon to your routine browser workflows in under 10 minutes. SOC2-compliant cloud sessions with full step-by-step telemetry.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" style="width:100%;padding:13px;border-radius:12px;border:0;background:var(--fg);color:#ffffff;font-weight:600;cursor:pointer;">
+        Request Workspace Invite →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.aiw44-agent-card'));
+      var nameEl = document.getElementById('activeWorkerName');
+      var subEl = document.getElementById('axonActiveSubtitle');
+      var idx = 0;
+      function selectCard(c) {
+        cards.forEach(function (el) { el.classList.remove('is-active'); });
+        c.classList.add('is-active');
+        if (nameEl) nameEl.textContent = c.getAttribute('data-worker') || '';
+        if (subEl) subEl.textContent = c.getAttribute('data-desc') || '';
+      }
+      cards.forEach(function (c, i) {
+        c.addEventListener('click', function () {
+          idx = i;
+          selectCard(c);
+        });
+      });
+      var cycleBtn = document.getElementById('cycleWorkerBtn');
+      if (cycleBtn) {
+        cycleBtn.addEventListener('click', function () {
+          idx = (idx + 1) % cards.length;
+          selectCard(cards[idx]);
+        });
+      }
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.aiw44-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('aiw44Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

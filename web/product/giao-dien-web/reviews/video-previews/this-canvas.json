@@ -1,0 +1,48 @@
+{
+  "id": "t223",
+  "slug": "this-canvas",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:09:53.264Z",
+  "demo": "/demos/this-canvas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "12730f69c700",
+  "sha256": "12730f69c70086efc201f3dd3431fadcd686ebbeec6bb3394f3efcd409058202",
+  "demoHtmlSha256": "d42196ca6255da09920d92182958c38f2cfacb2f73895f52e8217a31b311d152",
+  "demoSha256": "a9873efb860f2c3cce9d6c9a0db22113bcbf5bf8f24925e930ae91b7eaf7c368",
+  "bytes": 524124,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.485,
+      "action": "click",
+      "selector": "#nextJacketBtn"
+    },
+    {
+      "seconds": 4.851,
+      "action": "click",
+      "selector": "#nextJacketBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 144
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\this-canvas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\this-canvas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\this-canvas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\this-canvas-return.jpg"
+  ]
+}

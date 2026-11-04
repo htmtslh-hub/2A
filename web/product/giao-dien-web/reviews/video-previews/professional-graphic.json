@@ -1,0 +1,48 @@
+{
+  "id": "t224",
+  "slug": "professional-graphic",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-04T00:10:25.416Z",
+  "demo": "/demos/professional-graphic/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "13c2538034e2",
+  "sha256": "13c2538034e2e18613c09ae8a3ec2ce8d3a500219cc5f313666dbf55980007ee",
+  "demoHtmlSha256": "ec9fae087d9c34a2f5266cccf60631b87e4c82df626b6b80dab3771b33d81400",
+  "demoSha256": "8c6de522100293ae60c54e7d0bfbf866c515c3f67daf0278cd34102865ff7cd1",
+  "bytes": 385727,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.46,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"pro57-btn-orange\" data-next-preview=\"true\" data-folio-cat=\"ALL\">All Systems (12)</button>"
+    },
+    {
+      "seconds": 4.858,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"pro57-btn-orange\" data-next-preview=\"true\" data-folio-cat=\"ALL\">All Systems (12)</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 216
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\professional-graphic-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\professional-graphic-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\professional-graphic-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\professional-graphic-return.jpg"
+  ]
+}

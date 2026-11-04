@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JOANN — LUMINESCENT Town | AI Art &amp; Architectural Prompts</title>
+  <meta name="description" content="A captivating fusion of light and imagination by Joann (@joooo.ann) — Luminescent Town AI architectural showcase with 3D pink glass tower pop-out and neon night gallery.">
+  <meta property="og:title" content="JOANN — LUMINESCENT Town AI Art Portfolio">
+  <meta property="og:description" content="Original AI Artwork, Prompts &amp; Luminescent Town series by Designer Joann (Mei 2023).">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1A1A1D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #18181b;
+      --surface: #202024;
+      --surface-elevated: #29292f;
+      --glass: rgba(32, 32, 36, 0.84);
+      --fg: #ffffff;
+      --muted: #b8b8c2;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #f472b6;
+      --accent-text: #f9a8d4;
+      --accent-strong: #ec4899;
+      --on-accent: #18181b;
+      --font-display: 'Rubik Bubbles', 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 32% 38%, rgba(244, 114, 182, 0.14) 0%, #18181b 55%, #121215 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    .sle47-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .sle47-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .sle47-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .sle47-top-shell {
+      margin-top: 18px;
+      display: grid; grid-template-columns: 160px 1fr; align-items: center;
+      background: #18181b; border: 1px solid var(--border); border-radius: 22px; overflow: hidden;
+    }
+    .sle47-brand-box {
+      padding: 16px 22px; font-family: var(--font-display); font-size: 20px;
+      letter-spacing: 0.04em; color: #ffffff; text-decoration: none;
+    }
+    .sle47-white-nav {
+      background: #ffffff; color: #18181b; border-radius: 20px 0 0 20px;
+      padding: 13px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .sle47-nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .sle47-nav-links a {
+      color: #18181b; text-decoration: none; font-size: 12.5px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .sle47-nav-links a:hover { color: #db2777; }
+
+    .sle47-meta-strip {
+      display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 16px;
+      padding: 22px 0 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .sle47-meta-label { font-weight: 800; color: #ffffff; margin-bottom: 4px; }
+    .sle47-meta-val { color: var(--muted); display: flex; gap: 18px; flex-wrap: wrap; }
+
+    .sle47-title-stage { position: relative; padding: 14px 0 12px; text-align: center; }
+    .sle47-bubble-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 8.8vw, 7.6rem);
+      font-weight: 400; line-height: 0.94; letter-spacing: 0.01em;
+      color: #ffffff; text-transform: uppercase; user-select: none;
+    }
+    .sle47-script-town {
+      font-family: var(--font-script);
+      font-size: clamp(2.6rem, 6.2vw, 5.4rem);
+      color: #f472b6; font-weight: 700;
+      position: absolute; left: 50%; bottom: -16px; transform: translateX(-42%) rotate(-6deg);
+      text-shadow: 0 8px 24px rgba(236, 72, 153, 0.45);
+      pointer-events: none;
+    }
+
+    .sle47-sub-bar {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      padding: 12px 0 18px;
+    }
+    .sle47-swatches { display: inline-flex; align-items: center; gap: 6px; }
+    .sle47-swatch {
+      width: 34px; height: 34px; border-radius: 6px; border: 2px solid transparent; cursor: pointer;
+    }
+    .sle47-swatch.is-active { border-color: #ffffff; transform: scale(1.08); }
+
+    .sle47-bento-stage {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: stretch;
+      padding-bottom: 48px;
+    }
+    .sle47-tower-card {
+      position: relative; border-radius: 26px; overflow: hidden;
+      background: linear-gradient(180deg, #d8d4e8 0%, #9e8fb2 100%);
+      border: 1px solid rgba(244, 114, 182, 0.35);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      min-height: 490px; display: flex; align-items: flex-end; justify-content: center;
+    }
+    .sle47-tower-card img {
+      width: 100%; height: 100%; min-height: 490px; object-fit: cover; display: block;
+      transition: filter 0.35s var(--ease-out), transform 0.45s var(--ease-out);
+    }
+    .sle47-tower-card:hover img { transform: scale(1.02); }
+
+    .sle47-right-col { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
+    .sle47-about-box {
+      background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border);
+      border-radius: 24px; padding: 24px 26px;
+    }
+    .sle47-see-more-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 20px;
+    }
+    .sle47-btn-outline {
+      flex: 1; max-width: 320px; padding: 13px 28px; border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.65); background: transparent;
+      color: #ffffff; font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer;
+    }
+    .sle47-btn-outline:hover { background: var(--accent); border-color: var(--accent); color: #18181b; }
+
+    .sle47-kiosk-grid {
+      display: grid; grid-template-columns: 1.45fr 0.85fr; gap: 14px;
+    }
+    .sle47-kiosk-card {
+      border-radius: 22px; overflow: hidden; border: 1px solid rgba(244, 114, 182, 0.32);
+      position: relative; min-height: 240px; background: #12101b;
+    }
+    .sle47-kiosk-card img {
+      width: 100%; height: 240px; object-fit: cover; display: block;
+    }
+
+    .sle47-section { padding: 48px 0; border-top: 1px solid var(--border); }
+    .sle47-prompt-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .sle47-prompt-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 22px;
+    }
+
+    .sle47-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(18, 18, 21, 0.72); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .sle47-modal.is-open { opacity: 1; pointer-events: auto; }
+    .sle47-modal-box {
+      width: 100%; max-width: 460px; background: #202024; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .sle47-meta-strip { grid-template-columns: repeat(2, 1fr); }
+      .sle47-bento-stage, .sle47-prompt-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .sle47-top-shell { grid-template-columns: 1fr; }
+      .sle47-nav-links { display: none; }
+      .sle47-kiosk-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="sle47-wrap">
+    <div class="sle47-top-shell">
+      <a href="#top" class="sle47-brand-box">JOANN</a>
+      <div class="sle47-white-nav">
+        <nav aria-label="Primary">
+          <ul class="sle47-nav-links">
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#artworks">ARTWORKS</a></li>
+            <li><a href="#prompts">TALK TO ME?</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:7px 14px;border-radius:999px;border:1px solid #18181b;background:#ffffff;color:#18181b;font-size:11.5px;font-weight:700;cursor:pointer;">
+            Motion: ON
+          </button>
+          <button type="button" id="exploreMagneticBtn" style="width:36px;height:36px;border-radius:8px;border:0;background:#18181b;color:#ffffff;font-weight:700;cursor:pointer;" aria-label="Open Artwork Dossier">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="sle47-wrap">
+    <div class="sle47-meta-strip" aria-label="Artwork credentials">
+      <div>
+        <div class="sle47-meta-label">CREDENTIAL -</div>
+        <div class="sle47-meta-val">
+          <span>ORIGINAL ARTWORK</span>
+          <span>CREATING AI ART</span>
+          <span>PROMPTS</span>
+        </div>
+      </div>
+      <div>
+        <div class="sle47-meta-label">DATE -</div>
+        <div class="sle47-meta-val tabular-nums">MEI 2023</div>
+      </div>
+      <div>
+        <div class="sle47-meta-label">DESIGNER -</div>
+        <div class="sle47-meta-val">JOANN</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="sle47-meta-label">INSTAGRAM-</div>
+        <div class="sle47-meta-val" style="justify-content:flex-end;">@JOOOO.ANN</div>
+      </div>
+    </div>
+
+    <section id="top" aria-label="Luminescent Town Hero">
+      <div class="sle47-title-stage">
+        <h1 class="sle47-bubble-h1">LUMINESCENT</h1>
+        <span class="sle47-script-town">Town</span>
+      </div>
+
+      <div class="sle47-sub-bar">
+        <div style="display:flex;align-items:center;gap:18px;">
+          <svg width="58" height="28" viewBox="0 0 58 28" fill="none" aria-hidden="true">
+            <ellipse cx="29" cy="14" rx="27" ry="12" stroke="#ffffff" stroke-width="1.2"/>
+            <ellipse cx="29" cy="14" rx="18" ry="12" stroke="#ffffff" stroke-width="1.2"/>
+            <circle cx="29" cy="14" r="9" stroke="#ffffff" stroke-width="1.2"/>
+          </svg>
+          <span style="letter-spacing:0.4em;color:var(--muted);">• •</span>
+          <div>
+            <div style="font-size:15px;font-weight:700;letter-spacing:0.14em;">傷つく</div>
+            <div style="font-size:9.5px;letter-spacing:0.36em;color:var(--muted);">H U R T</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:14px;">
+          <button type="button" data-next-preview="true" id="cycleRoseFilterBtn" style="padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:#ffffff;font-size:11.5px;font-weight:700;cursor:pointer;">
+            »» Cycle Chroma (<span id="activeSwatchLabel">#F472B6</span>)
+          </button>
+          <div class="sle47-swatches" role="group" aria-label="Luminescent Rose Color Swatches">
+            <button type="button" class="sle47-swatch" style="background:#fbcfe8;" data-hue="0deg" data-hex="#FBCFE8" aria-label="Pastel Rose #FBCFE8"></button>
+            <button type="button" class="sle47-swatch is-active" style="background:#f9a8d4;" data-hue="8deg" data-hex="#F9A8D4" aria-label="Soft Pink #F9A8D4"></button>
+            <button type="button" class="sle47-swatch" style="background:#f472b6;" data-hue="-12deg" data-hex="#F472B6" aria-label="Neon Rose #F472B6"></button>
+            <button type="button" class="sle47-swatch" style="background:#ec4899;" data-hue="22deg" data-hex="#EC4899" aria-label="Magenta Glow #EC4899"></button>
+            <button type="button" class="sle47-swatch" style="background:#db2777;" data-hue="-28deg" data-hex="#DB2777" aria-label="Deep Crimson Pink #DB2777"></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="artworks" class="sle47-bento-stage">
+        <div class="sle47-tower-card">
+          <img id="luminescentTowerImg" src="assets/pink-glass-tower.webp" alt="Luminescent Town 3D Translucent Pink Architectural Tower in Misty Dusk">
+        </div>
+
+        <div id="about" class="sle47-right-col">
+          <div class="sle47-about-box">
+            <div style="font-size:12px;font-weight:800;letter-spacing:0.08em;margin-bottom:10px;">ABOUT</div>
+            <p style="font-size:12.5px;line-height:1.75;color:#e4e4eb;letter-spacing:0.03em;text-transform:uppercase;">
+              A CAPTIVATING FUSION OF LIGHT AND IMAGINATION. A MESMERIZING ARTWORK THAT TRANSPORTS YOU TO A WORLD OF ETHEREAL BEAUTY AND ENCHANTMENT. CREATED THROUGH THE INGENIOUS COLLABORATION OF HUMAN CREATIVITY AND ARTIFICIAL INTELLIGENCE ALGORITHMS. "LUMINESCENT TOWN" IS A TESTAMENT TO THE LIMITLESS POSSIBILITIES OF AI-GENERATED ART.
+            </p>
+            <div class="sle47-see-more-row">
+              <button type="button" class="sle47-btn-outline" data-seamless-trigger="Luminescent Town — Full AI Prompt &amp; Seed Archive">
+                SEE MORE
+              </button>
+              <div style="display:flex;align-items:center;gap:10px;text-align:right;font-size:10.5px;letter-spacing:0.08em;color:var(--muted);">
+                <span>CONTROL YOUR<br>SCROLL</span>
+                <span style="color:var(--accent);font-size:18px;line-height:1;">❖</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sle47-kiosk-grid">
+            <article class="sle47-kiosk-card">
+              <img src="assets/neon-noodle-stall.webp" alt="Luminescent Town Neon Pink Street Stall in Rain">
+            </article>
+            <article class="sle47-kiosk-card">
+              <img src="assets/neon-alley-watcher.webp" alt="Luminescent Town Silhouette Watcher at Pink Pavilion">
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prompts" class="sle47-section sle47-reveal" aria-label="AI Prompt Architecture">
+      <div class="sle47-prompt-grid">
+        <article class="sle47-prompt-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">PROMPT LAYER 01</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">Translucent Acrylic Brutalism</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Cantilevered pink frosted polycarbonate facades illuminated from within by warm 2700K tungsten bulbs against cold lavender mist.
+          </p>
+        </article>
+        <article class="sle47-prompt-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">PROMPT LAYER 02</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">Subsurface Atmospheric Fog</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Volumetric magenta halation and wet asphalt reflections calibrated with Midjourney v5.1 photoreal architectural weights.
+          </p>
+        </article>
+        <article class="sle47-prompt-card">
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);margin-bottom:6px;">PROMPT LAYER 03</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">Exhibition Print Editions</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Signed archival pigment prints and 8K wallpaper tokens curated by Joann (@joooo.ann) for collectors worldwide.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sle47-wrap" style="padding:24px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12px;">
+    <span>JOANN — LUMINESCENT TOWN (MEI 2023)</span>
+    <span>@JOOOO.ANN • ORIGINAL AI ARTWORK</span>
+  </footer>
+
+  <div class="sle47-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="sle47-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">@JOOOO.ANN ARCHIVE</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Luminescent Town Prompt Sheet</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Access the complete Midjourney architectural prompt parameters, lighting seed values, and high-res lossless plates from the Mei 2023 series.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="sle47-btn-outline" style="max-width:none;width:100%;background:var(--accent);color:#18181b;border-color:var(--accent);">
+        Unlock Prompt Dossier →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var towerImg = document.getElementById('luminescentTowerImg');
+      var labelEl = document.getElementById('activeSwatchLabel');
+      var swatches = Array.prototype.slice.call(document.querySelectorAll('.sle47-swatch'));
+      var idx = 1;
+      function activateSwatch(s) {
+        swatches.forEach(function (el) { el.classList.remove('is-active'); });
+        s.classList.add('is-active');
+        var hue = s.getAttribute('data-hue') || '0deg';
+        var hex = s.getAttribute('data-hex') || '#F472B6';
+        if (towerImg) towerImg.style.filter = 'hue-rotate(' + hue + ')';
+        if (labelEl) labelEl.textContent = hex;
+      }
+      swatches.forEach(function (s, i) {
+        s.addEventListener('click', function () {
+          idx = i;
+          activateSwatch(s);
+        });
+      });
+      var cycleBtn = document.getElementById('cycleRoseFilterBtn');
+      if (cycleBtn) {
+        cycleBtn.addEventListener('click', function () {
+          idx = (idx + 1) % swatches.length;
+          activateSwatch(swatches[idx]);
+        });
+      }
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.sle47-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

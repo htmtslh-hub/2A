@@ -109,7 +109,7 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
-    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com']);
+    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com']);
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
@@ -172,6 +172,7 @@ try {
       await page.waitForTimeout(1000);
     }
     if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo','gridwork-co','vaultra','lauberhorn-ridge','aetheris-voyage','digital-epoch','rivr','strata-ai','rocket-cta','mind-body-healing'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (['innovation-lab','vaultshield','visual-hero','koru-tech-footer'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:6000}).catch(() => {});
     if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard' || slug === 'gridwork-co' || slug === 'vaultra' || slug === 'lauberhorn-ridge' || slug === 'aetheris-voyage' || slug === 'digital-epoch' || slug === 'rivr') {
       await page.waitForTimeout(2000);
     }
@@ -876,6 +877,31 @@ try {
           actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '[role="dialog"] Back + Escape' });
         }
         return;
+      }
+      if (['quickcam-ui-ux','rome-explorer','hello-illustrator-folio','layla-astrology-wiki','laila-sakura-creator','innovation-lab','nimbusos-footer','vaultshield','visual-hero','koru-tech-footer','feathers-atlas'].includes(slug)) {
+        const step = actions.filter(a => a.action === 'click').length;
+        const customSel = {
+          'quickcam-ui-ux': ['[data-mode="ux"]', '[data-mode="both"]'],
+          'rome-explorer': ['#nextBtn', '#nextBtn'],
+          'hello-illustrator-folio': ['[data-cat="3d"]', '[data-cat="all"]'],
+          'layla-astrology-wiki': ['[data-tab="burst"]', '[data-tab="passive"]'],
+          'laila-sakura-creator': ['[data-theme="crimson"]', '[data-theme="sakura"]'],
+          'innovation-lab': ['[data-biome="Neural Flora"]', '[data-biome="Violet Dusk"]'],
+          'nimbusos-footer': ['#openOnboardingBtn', '#closeNimbusModalBtn'],
+          'vaultshield': ['#regenKeyBtn', '#regenKeyBtn'],
+          'visual-hero': ['[data-style="Editorial Brutalist Grid"]', '[data-style="Liquid Specular Glass"]'],
+          'koru-tech-footer': ['[data-region="APAC Tokyo-3 (1.1ms)"]', '[data-region="Global Mesh (0.8ms)"]'],
+          'feathers-atlas': ['[data-bird="hoopoe"]', '[data-bird="kingfisher"]'],
+        }[slug];
+        const targetSel = customSel?.[step % customSel.length];
+        if (targetSel) {
+          const btn = page.locator(targetSel).first();
+          if (await btn.isVisible()) {
+            await btn.click({ force: true });
+            actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: targetSel });
+            return;
+          }
+        }
       }
       const candidates = page.locator(nextSelector);
       for (let i = 0; i < await candidates.count(); i++) {

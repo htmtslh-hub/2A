@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROME — Eternal City Spatial Glass Explorer &amp; Architectural Guide</title>
+  <meta name="description" content="Rome, the Eternal City, brims with ancient history, from the Colosseum to the Roman Forum. Explore curated monuments through a spatial glass interface." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #120d0a;
+      --surface: #1e1612;
+      --fg: #fcf8f2;
+      --muted: #dfd3c3;
+      --accent: #e59849;
+      --accent-text: #ffbe76;
+      --on-accent: #140d08;
+      --font-display: 'Cinzel', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 700; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Spatial Hero Stage */
+    .rom-hero-stage {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 36px 44px;
+      background-image: linear-gradient(95deg, rgba(16, 10, 7, 0.84) 0%, rgba(16, 10, 7, 0.48) 46%, rgba(16, 10, 7, 0.72) 100%),
+                        url('assets/rome-colosseum-sunset.webp');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Spatial OS Top Glass Pill Bar */
+    .rom-spatial-header {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      background: rgba(28, 20, 15, 0.68);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 10px 22px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+    .rom-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .rom-win-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .rom-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+    .rom-dot.red { background: #ff5f56; }
+    .rom-dot.yellow { background: #ffbd2e; }
+    .rom-dot.green { background: #27c93f; }
+
+    .rom-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+    }
+    .rom-nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 15px;
+      border-radius: 999px;
+    }
+    .rom-nav-links a.active, .rom-nav-links a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+    }
+
+    .rom-search-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .rom-search-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 6px 14px;
+      color: #ffffff;
+      font-size: 0.8rem;
+    }
+    .rom-search-box input {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 0.8rem;
+      width: 135px;
+      outline: none;
+    }
+    .rom-search-box input::placeholder { color: rgba(255, 255, 255, 0.7); }
+    .rom-icon-btn {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* Center Spatial Split: Editorial Left + 4 Glass Cards Right */
+    .rom-hero-grid {
+      max-width: 1320px;
+      width: 100%;
+      margin: auto;
+      padding: 48px 0;
+      display: grid;
+      grid-template-columns: 0.92fr 1.28fr;
+      gap: 38px;
+      align-items: center;
+    }
+    .rom-coords {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      margin-bottom: 12px;
+    }
+    .rom-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.8rem, 8vw, 6.8rem);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 0.98;
+      margin-bottom: 18px;
+      text-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
+    }
+    .rom-lead {
+      font-size: clamp(0.96rem, 1.25vw, 1.08rem);
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+    }
+    .rom-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .rom-explore-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      color: #ffffff;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+    .rom-explore-btn:hover {
+      background: var(--accent);
+      color: var(--on-accent);
+      border-color: var(--accent);
+    }
+
+    /* Right 4-Card Spatial Glass Carousel */
+    .rom-carousel-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .rom-cards-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .rom-landmark-card {
+      position: relative;
+      height: 330px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+      background: #1a130e;
+      text-align: left;
+      padding: 0;
+      color: #ffffff;
+    }
+    .rom-landmark-card.active {
+      border-color: var(--accent-text);
+      transform: translateY(-8px);
+      box-shadow: 0 28px 56px rgba(229, 152, 73, 0.35);
+    }
+    .rom-landmark-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .rom-card-bookmark {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(18, 13, 10, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+    .rom-card-caption {
+      position: absolute;
+      inset: auto 10px 10px 10px;
+      background: rgba(18, 13, 10, 0.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    .rom-card-caption h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .rom-card-caption p {
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+    }
+
+    .rom-carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .rom-arrow-group {
+      display: flex;
+      gap: 10px;
+    }
+    .rom-circle-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Section 2: Curated Historical Epochs & Pass Telemetry */
+    .rom-section {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 76px 36px;
+    }
+    .rom-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 32px;
+    }
+    .rom-info-card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      padding: 26px;
+    }
+    .rom-info-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin: 8px 0 10px;
+    }
+    .rom-stat {
+      font-family: var(--font-mono);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--accent-text);
+    }
+
+    /* Modal */
+    .rom-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 7, 5, 0.82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .rom-modal-backdrop.open { display: flex; }
+    .rom-modal {
+      background: var(--surface);
+      border: 1px solid rgba(229, 152, 73, 0.45);
+      border-radius: 24px;
+      max-width: 520px;
+      width: 100%;
+      padding: 28px;
+    }
+
+    @media (max-width: 1080px) {
+      .rom-hero-grid { grid-template-columns: 1fr; }
+      .rom-cards-track { grid-template-columns: repeat(2, 1fr); }
+      .rom-bento { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .rom-hero-stage { padding: 16px 18px 32px; }
+      .rom-cards-track { grid-template-columns: 1fr; }
+      .rom-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="rom-hero-stage" id="heroStage" aria-labelledby="rome-title">
+      <header class="rom-spatial-header">
+        <nav class="rom-nav" aria-label="Spatial Destination Navigation">
+          <div class="rom-win-dots" aria-hidden="true">
+            <span class="rom-dot red"></span>
+            <span class="rom-dot yellow"></span>
+            <span class="rom-dot green"></span>
+          </div>
+
+          <ul class="rom-nav-links">
+            <li><a href="#heroStage" class="active">Home</a></li>
+            <li><a href="#landmarksCarousel">Destination</a></li>
+            <li><a href="#epochsSection">Gallery</a></li>
+            <li><a href="#epochsSection">Bookmark</a></li>
+          </ul>
+
+          <div class="rom-search-pill">
+            <label class="rom-search-box" aria-label="Search Roman Landmarks">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="search" id="landmarkSearchInput" placeholder="Search Location..." />
+            </label>
+            <button type="button" id="motionToggleBtn" class="rom-icon-btn">Motion: ON</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="rom-hero-grid">
+        <div>
+          <div class="rom-coords" id="activeCoords">ITALY · ETERNAL CITY · 41.8902° N, 12.4922° E</div>
+          <h1 id="rome-title" class="rom-h1">ROME</h1>
+          <p class="rom-lead" id="activeLead">
+            Rome, the Eternal City, brims with ancient history, from the Colosseum to the Roman Forum. Its vibrant streets, stunning architecture, and world-renowned cuisine create an unforgettable blend of past and present.
+          </p>
+          <div class="rom-cta-row">
+            <button type="button" class="rom-explore-btn" id="openPassModalBtn">
+              Explore
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </button>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-text);" id="activeMonumentTag">Active: Flavian Amphitheatre (80 AD)</span>
+          </div>
+        </div>
+
+        <div class="rom-carousel-wrap" id="landmarksCarousel">
+          <div class="rom-cards-track">
+            <button type="button" class="rom-landmark-card active" data-title="ROME" data-sub="Trevi Fountain · Baroque Aqueduct Terminus (1762)" data-coords="PIAZZA DI TREVI · 41.9009° N, 12.4833° E" data-desc="Designed by Italian architect Nicola Salvi, the Trevi Fountain stands 26.3 meters high as the largest Baroque fountain in Rome where travelers toss coins over their left shoulder." data-bg="assets/rome-trevi-fountain.webp">
+              <img src="assets/rome-trevi-fountain.webp" alt="Trevi Fountain at Golden Hour" width="380" height="520" />
+              <span class="rom-card-bookmark" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+              <div class="rom-card-caption">
+                <h3>Trevi Fountain</h3>
+                <p>Piazza di Trevi · 4.9 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></p>
+              </div>
+            </button>
+
+            <button type="button" class="rom-landmark-card" data-title="ROME" data-sub="The Pantheon · Hadrianic Rotunda &amp; Oculus (126 AD)" data-coords="PIAZZA DELLA ROTONDA · 41.8986° N, 12.4769° E" data-desc="Boasting the world's largest unreinforced concrete domenearly two millennia after its construction, the Pantheon's open oculus bathes ancient Corinthian columns in celestial light." data-bg="assets/rome-pantheon-dusk.webp">
+              <img src="assets/rome-pantheon-dusk.webp" alt="The Pantheon Piazza at Dusk" width="380" height="520" loading="lazy" />
+              <span class="rom-card-bookmark" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+              <div class="rom-card-caption">
+                <h3>The Pantheon</h3>
+                <p>Rotonda · 5.0 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></p>
+              </div>
+            </button>
+
+            <button type="button" class="rom-landmark-card" data-title="ROME" data-sub="St. Peter's Basilica · Michelangelo Dome &amp; Tiber Bridge" data-coords="VATICAN HORIZON · 41.9022° N, 12.4539° E" data-desc="Crowned by Michelangelo's soaring dome above the Vatican skyline and approached across the angel-lined Ponte Sant'Angelo over the glowing Tiber River." data-bg="assets/rome-st-peters-dome.webp">
+              <img src="assets/rome-st-peters-dome.webp" alt="St. Peter's Basilica Dome and Tiber River" width="380" height="520" loading="lazy" />
+              <span class="rom-card-bookmark" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+              <div class="rom-card-caption">
+                <h3>St. Peter's Dome</h3>
+                <p>Vatican · 4.9 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></p>
+              </div>
+            </button>
+
+            <button type="button" class="rom-landmark-card" data-title="ROME" data-sub="Spanish Steps · Trinità dei Monti Staircase (1725)" data-coords="PIAZZA DI SPAGNA · 41.9060° N, 12.4828° E" data-desc="Climbing 135 travertine marble steps from Bernini's Fontana della Barcaccia up to the twin-towered Trinità dei Monti church bathed in Mediterranean twilight." data-bg="assets/rome-spanish-steps.webp">
+              <img src="assets/rome-spanish-steps.webp" alt="Spanish Steps at Sunset" width="380" height="520" loading="lazy" />
+              <span class="rom-card-bookmark" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+              <div class="rom-card-caption">
+                <h3>Spanish Steps</h3>
+                <p>Piazza di Spagna · 4.8 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></p>
+              </div>
+            </button>
+          </div>
+
+          <div class="rom-carousel-controls">
+            <div class="rom-arrow-group">
+              <button type="button" class="rom-circle-btn" id="prevCardBtn" aria-label="Previous monument">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="rom-circle-btn" id="nextCardBtn" aria-label="Next monument">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+            <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--muted);" id="carouselCounter">01 / 04 CURATED MONUMENTS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rom-section" id="epochsSection" aria-labelledby="epochs-heading">
+      <p style="font-family:var(--font-mono);color:var(--accent-text);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;">Archaeological Telemetry</p>
+      <h2 id="epochs-heading" style="font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:6px;">Three Millennia of Architectural Strata</h2>
+
+      <div class="rom-bento">
+        <article class="rom-info-card">
+          <div class="rom-stat" data-counter="2779" data-suffix=" YRS">2779 YRS</div>
+          <h3>Imperial Roman Engineering</h3>
+          <p style="color:var(--muted);font-size:0.9rem;">From the travertine arches of the Colosseum (80 AD) to the unreinforced coffered concrete dome of the Pantheon.</p>
+        </article>
+        <article class="rom-info-card">
+          <div class="rom-stat" data-counter="900" data-suffix="+">900+</div>
+          <h3>Renaissance &amp; Baroque Basilicas</h3>
+          <p style="color:var(--muted);font-size:0.9rem;">Home to masterpieces by Michelangelo, Bernini, Borromini, and Caravaggio across historic rioni districts.</p>
+        </article>
+        <article class="rom-info-card">
+          <div class="rom-stat" data-counter="14" data-suffix=" ROUTES">14 ROUTES</div>
+          <h3>Private Twilight Audio Walks</h3>
+          <p style="color:var(--muted);font-size:0.9rem;">Spatial GPS-synced architectural walks avoiding peak daytime crowds at the Forum, Trevi, and Vatican.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid rgba(255,255,255,0.1);padding:32px 36px;text-align:center;color:var(--muted);font-size:0.85rem;">
+    <p>© 2026 ROME Spatial Explorer · Eternal City Architectural Heritage Guide.</p>
+  </footer>
+
+  <div class="rom-modal-backdrop" id="passModal" role="dialog" aria-modal="true" aria-labelledby="passModalTitle">
+    <div class="rom-modal">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">ROMA PASS · PRIORITY ACCESS</span>
+        <button type="button" id="closePassModalBtn" class="rom-icon-btn">ESC X</button>
+      </div>
+      <h2 id="passModalTitle" style="font-family:var(--font-display);font-size:1.45rem;margin-bottom:10px;">Reserve Twilight Architectural Pass</h2>
+      <p id="passModalDesc" style="color:var(--muted);font-size:0.9rem;margin-bottom:20px;">
+        Includes skip-the-line Colosseum Underground arena entry, Pantheon acoustic guide, and private Vatican dome terrace slot.
+      </p>
+      <button type="button" id="confirmPassBtn" class="rom-explore-btn" style="background:var(--accent);color:var(--on-accent);border-color:var(--accent);">Confirm Priority Pass</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const cards = Array.from(document.querySelectorAll('.rom-landmark-card'));
+      let activeIndex = 0;
+
+      function activateCard(idx) {
+        activeIndex = (idx + cards.length) % cards.length;
+        cards.forEach((c, i) => c.classList.toggle('active', i === activeIndex));
+        const card = cards[activeIndex];
+        document.getElementById('activeCoords').textContent = card.getAttribute('data-coords');
+        document.getElementById('activeLead').textContent = card.getAttribute('data-desc');
+        document.getElementById('activeMonumentTag').textContent = 'Active: ' + card.getAttribute('data-sub');
+        document.getElementById('carouselCounter').textContent = '0' + (activeIndex + 1) + ' / 0' + cards.length + ' CURATED MONUMENTS';
+      }
+
+      cards.forEach((card, idx) => {
+        card.addEventListener('click', () => activateCard(idx));
+      });
+      document.getElementById('prevCardBtn').addEventListener('click', () => activateCard(activeIndex - 1));
+      document.getElementById('nextCardBtn').addEventListener('click', () => activateCard(activeIndex + 1));
+
+      const searchInput = document.getElementById('landmarkSearchInput');
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.toLowerCase().trim();
+        if (!q) return;
+        const matchIdx = cards.findIndex((c) => c.textContent.toLowerCase().includes(q));
+        if (matchIdx !== -1) activateCard(matchIdx);
+      });
+
+      const modal = document.getElementById('passModal');
+      document.getElementById('openPassModalBtn').addEventListener('click', () => modal.classList.add('open'));
+      document.getElementById('closePassModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      document.getElementById('confirmPassBtn').addEventListener('click', () => modal.classList.remove('open'));
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

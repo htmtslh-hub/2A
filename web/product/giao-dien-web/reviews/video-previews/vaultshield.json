@@ -1,0 +1,44 @@
+{
+  "id": "t253",
+  "slug": "vaultshield",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:41:31.736Z",
+  "demo": "/demos/vaultshield/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2f1c7b2fd564",
+  "sha256": "2f1c7b2fd56436607284d32c062294ae384b4f8e7d28170d0f75885f2f617df9",
+  "demoHtmlSha256": "3fe9d5bd3c6e9c6693de31a7d9587192c7780cf086e3b11964da9451749cda8d",
+  "demoSha256": "3da30d67bcaa8c55b72781e86d8571d732e07f5439f765395da1cffa31ba5045",
+  "bytes": 481111,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.433,
+      "action": "click",
+      "selector": "#regenKeyBtn"
+    },
+    {
+      "seconds": 4.818,
+      "action": "click",
+      "selector": "#regenKeyBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 764
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultshield-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultshield-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultshield-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultshield-return.jpg"
+  ]
+}

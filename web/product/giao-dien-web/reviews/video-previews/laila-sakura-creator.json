@@ -1,0 +1,34 @@
+{
+  "id": "t250",
+  "slug": "laila-sakura-creator",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:40:31.738Z",
+  "demo": "/demos/laila-sakura-creator/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6733f43dc090",
+  "sha256": "6733f43dc09043a56fe23299b1ff299f4807daef94823a9dffc46e45c13ed0e4",
+  "demoHtmlSha256": "f40fc10cf53593c9ed279574f47e80d0c8d49506d99cfe850376fc8831ef23e3",
+  "demoSha256": "fa43c5233c0f6b92b0ea5ed2b0a4d1b197b1d6fc647ccecbc8e9ad1fd718f830",
+  "bytes": 481420,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 468
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-sakura-creator-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-sakura-creator-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-sakura-creator-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-sakura-creator-return.jpg"
+  ]
+}

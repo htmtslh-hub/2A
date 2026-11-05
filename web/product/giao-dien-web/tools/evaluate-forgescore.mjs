@@ -25,6 +25,17 @@ const PREVIEWS_DIR = join(WEB_ROOT, 'public', 'previews');
 const EXCLUDED_DIRS = new Set(['_design', 'design', 'docs', 'reviews', 'tools', 'free-sample']);
 
 const INLINE_PRODUCTS = new Set([
+  'feathers-atlas',
+  'koru-tech-footer',
+  'visual-hero',
+  'vaultshield',
+  'nimbusos-footer',
+  'innovation-lab',
+  'laila-sakura-creator',
+  'layla-astrology-wiki',
+  'hello-illustrator-folio',
+  'rome-explorer',
+  'quickcam-ui-ux',
   'mind-body-healing',
   'stark-minimal-footer',
   'rocket-cta',

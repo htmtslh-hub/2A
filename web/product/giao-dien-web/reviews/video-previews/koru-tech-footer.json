@@ -1,0 +1,44 @@
+{
+  "id": "t255",
+  "slug": "koru-tech-footer",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:42:11.515Z",
+  "demo": "/demos/koru-tech-footer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "22b5eb910953",
+  "sha256": "22b5eb910953c2ecda103355dcc8a68863aed7ef45757c02cd8a56be626a0b1a",
+  "demoHtmlSha256": "1bb6704d779ae4a37fc1b42299755963ade9a9b1106b0cce08c7cbc144106bc9",
+  "demoSha256": "b02a48937dbfd045896c097eae116570cbfac4fad5ba09f64bdfb3be681a7392",
+  "bytes": 453349,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.428,
+      "action": "click",
+      "selector": "[data-region=\"APAC Tokyo-3 (1.1ms)\"]"
+    },
+    {
+      "seconds": 4.811,
+      "action": "click",
+      "selector": "[data-region=\"Global Mesh (0.8ms)\"]"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 393
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\koru-tech-footer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\koru-tech-footer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\koru-tech-footer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\koru-tech-footer-return.jpg"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "t256",
+  "slug": "feathers-atlas",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:42:31.292Z",
+  "demo": "/demos/feathers-atlas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "94386a1e9e8d",
+  "sha256": "94386a1e9e8d5a19cf27ac9504607ccf31b032b9ad0f7f968399d7121c53e1a5",
+  "demoHtmlSha256": "512262bb89feec0168de4561a56e5877dfb16bae2aa930fdd9277ef69340bc23",
+  "demoSha256": "e3bbffb8d757d270c66aa5b8c916dc0e539cf260ebf323505a7d32e5409517c0",
+  "bytes": 214864,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 64
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\feathers-atlas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\feathers-atlas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\feathers-atlas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\feathers-atlas-return.jpg"
+  ]
+}

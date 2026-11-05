@@ -1,0 +1,34 @@
+{
+  "id": "t251",
+  "slug": "innovation-lab",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:40:51.872Z",
+  "demo": "/demos/innovation-lab/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "89400e323b59",
+  "sha256": "89400e323b59cff5aaba299dd2d370989e58c6d0ad76be23b75ac7d4455236e2",
+  "demoHtmlSha256": "d8f7fef2c5829e9ab69936f728c83338685f0aa3fdd5dfd48694bcbb913465a0",
+  "demoSha256": "043912446382032fd555c5b25a125d0ce116d7300865e5ba6ff527f6908ed48c",
+  "bytes": 1149233,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 581
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-lab-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-lab-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-lab-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-lab-return.jpg"
+  ]
+}

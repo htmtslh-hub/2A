@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koru Tech — Emerald Edge Infrastructure &amp; Horizon Grid Architecture</title>
+  <meta name="description" content="Building the digital backbone for tomorrow's enterprises with Koru Technologies' low-latency emerald edge network." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #030d0b;
+      --surface: #071915;
+      --fg: #e6f2ef;
+      --muted: #8ca39e;
+      --accent: #0be3ae;
+      --accent-text: #34f5c5;
+      --on-accent: #030d0b;
+      --font-display: 'Albert Sans', sans-serif;
+      --font-sans: 'Albert Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      overflow-x: clip;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 700; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Top Header */
+    .kru-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(3, 13, 11, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11, 227, 174, 0.18);
+      padding: 16px 36px;
+    }
+    .kru-nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .kru-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--fg);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+    }
+    .kru-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .kru-btn-emerald {
+      background: var(--accent);
+      color: var(--on-accent);
+      border: none;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+    .kru-btn-ghost {
+      background: rgba(11, 227, 174, 0.1);
+      color: var(--accent-text);
+      border: 1px solid rgba(11, 227, 174, 0.3);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    /* Fullscreen Koru Tech Architectural Stage per Spec */
+    .kru-stage {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 48px 40px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .kru-grid-12 {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    .kru-col-left {
+      grid-column: span 6;
+    }
+    .kru-col-prod {
+      grid-column: 8 / span 2;
+    }
+    .kru-col-comp {
+      grid-column: 10 / span 3;
+    }
+    .kru-h1 {
+      font-size: clamp(2.1rem, 3.8vw, 3.35rem);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.14;
+      color: var(--fg);
+      margin-bottom: 20px;
+    }
+    .kru-col-head {
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--fg);
+      margin-bottom: 16px;
+    }
+    .kru-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .kru-list a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    .kru-list a:hover { color: var(--accent-text); }
+
+    /* Perspective Grid Video & Outlined Wordmark Horizon */
+    .kru-horizon-wrap {
+      position: relative;
+      height: 54vh;
+      min-height: 390px;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(11, 227, 174, 0.24);
+      background: url('assets/koru-horizon.webp') center/cover no-repeat, #030d0b;
+    }
+    .kru-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .kru-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 25%, #030d0b 92%),
+                  linear-gradient(to bottom, #030d0b 0%, transparent 25%, transparent 72%, #030d0b 100%);
+      z-index: 1;
+    }
+    .kru-wordmark-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .kru-wordmark-svg {
+      width: 96%;
+      height: auto;
+      overflow: visible;
+    }
+    .kru-wordmark-reflection {
+      width: 96%;
+      height: auto;
+      transform: scaleY(-1);
+      opacity: 0.22;
+      margin-top: -18px;
+    }
+
+    /* Interactive Edge Region Telemetry Strip */
+    .kru-telemetry {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .kru-stat-card {
+      background: var(--surface);
+      border: 1px solid rgba(11, 227, 174, 0.2);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .kru-bottom-bar {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px 40px 36px;
+      border-top: 1px solid rgba(140, 163, 158, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    /* Modal */
+    .kru-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 8, 7, 0.84);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .kru-modal-backdrop.open { display: flex; }
+    .kru-modal {
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 24px;
+      max-width: 500px;
+      width: 100%;
+      padding: 28px;
+    }
+
+    @media (max-width: 960px) {
+      .kru-col-left { grid-column: span 12; }
+      .kru-col-prod, .kru-col-comp { grid-column: span 6; }
+      .kru-telemetry { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .kru-stage, .kru-telemetry, .kru-bottom-bar { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="kru-header">
+    <nav class="kru-nav" aria-label="Koru Technologies Navigation">
+      <a href="#main-content" class="kru-brand">
+        <span class="kru-dot"></span>
+        KORU TECH
+      </a>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="kru-btn-ghost">Motion: ON</button>
+        <button type="button" id="openNodeModalBtn" class="kru-btn-emerald">Deploy Edge Node</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="kru-stage" aria-labelledby="koru-heading">
+      <div class="kru-grid-12">
+        <div class="kru-col-left">
+          <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);letter-spacing:0.12em;">ENTERPRISE BACKBONE ARCHITECTURE</span>
+          <h1 id="koru-heading" class="kru-h1">
+            Building the digital backbone for tomorrow's enterprises.
+          </h1>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="kru-btn-emerald" data-region="Global Mesh (0.8ms)">Region: Global Mesh</button>
+            <button type="button" class="kru-btn-ghost" data-region="APAC Tokyo-3 (1.1ms)">Region: APAC Tokyo-3</button>
+            <button type="button" class="kru-btn-ghost" data-region="EU Frankfurt-1 (0.9ms)">Region: EU Frankfurt-1</button>
+          </div>
+          <p id="regionReadout" style="margin-top:10px;font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-text);">Active Routing: Global Mesh (0.8ms Anycast RTT)</p>
+        </div>
+
+        <div class="kru-col-prod">
+          <h2 class="kru-col-head">Product</h2>
+          <ul class="kru-list">
+            <li><a href="#horizon-stage">Infrastructure</a></li>
+            <li><a href="#horizon-stage">Security</a></li>
+            <li><a href="#horizon-stage">Edge Network</a></li>
+            <li><a href="#horizon-stage">Analytics</a></li>
+            <li><a href="#horizon-stage">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="kru-col-comp">
+          <h2 class="kru-col-head">Company</h2>
+          <ul class="kru-list">
+            <li><a href="#telemetry-cards">About</a></li>
+            <li><a href="#telemetry-cards">Careers</a></li>
+            <li><a href="#telemetry-cards">Blog</a></li>
+            <li><a href="#telemetry-cards">Contact</a></li>
+            <li><a href="#telemetry-cards">Partners</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="horizon-stage" class="kru-horizon-wrap">
+        <video
+          class="kru-video"
+          id="koruGridVideo"
+          src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/17d62c8c-c7a4-491d-82ff-b0cbd3387820.mp4"
+          poster="assets/koru-horizon.webp"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <div class="kru-vignette" aria-hidden="true"></div>
+
+        <div class="kru-wordmark-layer" aria-hidden="true">
+          <svg class="kru-wordmark-svg" viewBox="0 0 1440 200" aria-hidden="true">
+            <text x="50%" y="158" text-anchor="middle" fill="rgba(11, 227, 174, 0.04)" stroke="#0BE3AE" stroke-width="2.2" font-family="Albert Sans, sans-serif" font-weight="800" font-size="168" letter-spacing="0.06em">KORU TECH</text>
+          </svg>
+          <svg class="kru-wordmark-reflection" viewBox="0 0 1440 200" aria-hidden="true">
+            <text x="50%" y="158" text-anchor="middle" fill="none" stroke="#0BE3AE" stroke-width="1.5" font-family="Albert Sans, sans-serif" font-weight="800" font-size="168" letter-spacing="0.06em">KORU TECH</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="telemetry-cards" class="kru-telemetry" aria-label="Edge Network Telemetry">
+      <article class="kru-stat-card">
+        <div style="font-family:var(--font-mono);font-size:2rem;font-weight:800;color:var(--accent-text);" data-counter="310" data-suffix=" PoPs">310 PoPs</div>
+        <h3 style="margin:6px 0;">Autonomous Edge Backbone</h3>
+        <p style="font-size:0.88rem;color:var(--muted);">Hardware-accelerated BGP anycast routing across six continents.</p>
+      </article>
+      <article class="kru-stat-card">
+        <div style="font-family:var(--font-mono);font-size:2rem;font-weight:800;color:var(--accent-text);" data-counter="99.99" data-decimals="2" data-suffix="%">99.99%</div>
+        <h3 style="margin:6px 0;">Zero-Downtime Mesh Failover</h3>
+        <p style="font-size:0.88rem;color:var(--muted);">Instant packet rerouting around subsea fiber cuts in under 4 milliseconds.</p>
+      </article>
+      <article class="kru-stat-card">
+        <div style="font-family:var(--font-mono);font-size:2rem;font-weight:800;color:var(--accent-text);" data-counter="400" data-suffix=" Gbps">400 Gbps</div>
+        <h3 style="margin:6px 0;">Quantum-Resistant TLS</h3>
+        <p style="font-size:0.88rem;color:var(--muted);">Wire-speed post-quantum encryption on every enterprise tunnel.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="kru-bottom-bar">
+    <span>© 2026 Koru Technologies Inc. All rights reserved.</span>
+    <div style="display:flex;gap:24px;align-items:center;">
+      <a href="#horizon-stage" style="color:var(--muted);text-decoration:none;">Privacy Policy</a>
+      <a href="#horizon-stage" style="color:var(--muted);text-decoration:none;">Terms of Service</a>
+      <span style="display:inline-flex;align-items:center;gap:8px;color:var(--fg);">
+        <span class="kru-dot"></span> Status: All Systems Operational
+      </span>
+    </div>
+  </footer>
+
+  <div class="kru-modal-backdrop" id="koruModal" role="dialog" aria-modal="true" aria-labelledby="kruModalTitle">
+    <div class="kru-modal">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">KORU EDGE PROVISIONER</span>
+        <button type="button" id="closeKoruModalBtn" class="kru-btn-ghost">ESC X</button>
+      </div>
+      <h2 id="kruModalTitle" style="font-size:1.45rem;margin-bottom:10px;">Provision Dedicated Koru Cluster</h2>
+      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:20px;">
+        Deploy bare-metal emerald edge nodes with 400Gbps Anycast DDoS protection in 45 seconds.
+      </p>
+      <button type="button" id="confirmKoruModalBtn" class="kru-btn-emerald">Initialize Cluster</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const video = document.getElementById('koruGridVideo');
+      const motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn && video) {
+        motionBtn.addEventListener('click', () => {
+          setTimeout(() => {
+            if (document.body.getAttribute('data-motion') === 'paused') video.pause();
+            else video.play().catch(() => {});
+          }, 20);
+        });
+      }
+
+      document.querySelectorAll('[data-region]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.getElementById('regionReadout').textContent = 'Active Routing: ' + btn.getAttribute('data-region');
+        });
+      });
+
+      const modal = document.getElementById('koruModal');
+      document.getElementById('openNodeModalBtn').addEventListener('click', () => modal.classList.add('open'));
+      document.getElementById('closeKoruModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      document.getElementById('confirmKoruModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

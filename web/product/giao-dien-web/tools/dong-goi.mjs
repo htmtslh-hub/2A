@@ -33,6 +33,17 @@ const name = args.find(a => !a.startsWith('--'));
 const allowException = args.includes('--ngoai-le');
 
 const INLINE_PRODUCTS = new Set([
+  'feathers-atlas',
+  'koru-tech-footer',
+  'visual-hero',
+  'vaultshield',
+  'nimbusos-footer',
+  'innovation-lab',
+  'laila-sakura-creator',
+  'layla-astrology-wiki',
+  'hello-illustrator-folio',
+  'rome-explorer',
+  'quickcam-ui-ux',
   'mind-body-healing',
   'stark-minimal-footer',
   'rocket-cta',

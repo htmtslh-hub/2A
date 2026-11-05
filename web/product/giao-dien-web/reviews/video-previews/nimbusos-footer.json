@@ -1,0 +1,44 @@
+{
+  "id": "t252",
+  "slug": "nimbusos-footer",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:41:12.412Z",
+  "demo": "/demos/nimbusos-footer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5ef7cb02599e",
+  "sha256": "5ef7cb02599ee2bea2092e8c49de83614c520d853668c95c4edf6555084c97d9",
+  "demoHtmlSha256": "bf23ed866a4f9003b8c5fbb6333d85fb3c1f5a5b62c9b901bb06a5e273dd35a1",
+  "demoSha256": "8ab37bec4aaab054a7c30da9b6dad1372b6cd421d655497154a43468c1f1c5f7",
+  "bytes": 413543,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.434,
+      "action": "click",
+      "selector": "#openOnboardingBtn"
+    },
+    {
+      "seconds": 4.819,
+      "action": "click",
+      "selector": "#closeNimbusModalBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 627
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nimbusos-footer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nimbusos-footer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nimbusos-footer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nimbusos-footer-return.jpg"
+  ]
+}

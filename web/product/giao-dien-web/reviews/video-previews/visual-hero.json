@@ -1,0 +1,44 @@
+{
+  "id": "t254",
+  "slug": "visual-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:41:51.532Z",
+  "demo": "/demos/visual-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "58e6122dff9a",
+  "sha256": "58e6122dff9af33a90a2bc991e8709c97a3f33aca6d084aef38069c506f203eb",
+  "demoHtmlSha256": "140db552c2ec4f1ec6ac206b294f369ff6af257fb41649188d2db37f903092b9",
+  "demoSha256": "241290e096e2a2d1b7f6e226a41ea4b23fda42c5bf0a3e314105ebc99e7cda44",
+  "bytes": 967037,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.429,
+      "action": "click",
+      "selector": "[data-style=\"Editorial Brutalist Grid\"]"
+    },
+    {
+      "seconds": 4.818,
+      "action": "click",
+      "selector": "[data-style=\"Liquid Specular Glass\"]"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 777
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visual-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visual-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visual-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visual-hero-return.jpg"
+  ]
+}

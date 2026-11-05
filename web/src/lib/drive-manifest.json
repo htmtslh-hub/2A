@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-05T14:39:37.270Z",
+  "updatedAt": "2026-11-05T23:35:49.309Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1946,6 +1946,60 @@
       "sizeBytes": 22335,
       "sha256": "79de0cd420337d43f9aa3ff8251b3a06bdd57bee71017cc0a5ec31006a323aae",
       "updatedAt": "2026-11-05T14:39:37.270Z"
+    },
+    "innovation-lab": {
+      "fileId": "1zj4N9cj4ZruS7FICoj79ah3wz8oSTfAe",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1zj4N9cj4ZruS7FICoj79ah3wz8oSTfAe",
+      "webViewUrl": "https://drive.google.com/file/d/1zj4N9cj4ZruS7FICoj79ah3wz8oSTfAe/view",
+      "sizeBytes": 76514,
+      "sha256": "ca638879e7a3c3f0763a0c70b294e944e8006b24d49ab969a48d708f9024ed72",
+      "updatedAt": "2026-11-05T23:35:38.200Z"
+    },
+    "nimbusos-footer": {
+      "fileId": "1XAUu7FrB5rkVWnj-In1DexvJ5iwfNdX_",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1XAUu7FrB5rkVWnj-In1DexvJ5iwfNdX_",
+      "webViewUrl": "https://drive.google.com/file/d/1XAUu7FrB5rkVWnj-In1DexvJ5iwfNdX_/view",
+      "sizeBytes": 10739,
+      "sha256": "367711651d333031ddb09368e016e05f590931e21005b8ea0c28d776dabe0e2a",
+      "updatedAt": "2026-11-05T23:35:40.548Z"
+    },
+    "vaultshield": {
+      "fileId": "1w2xgMbErAtzbKbdRDh9xEhRa3L5QBeB_",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1w2xgMbErAtzbKbdRDh9xEhRa3L5QBeB_",
+      "webViewUrl": "https://drive.google.com/file/d/1w2xgMbErAtzbKbdRDh9xEhRa3L5QBeB_/view",
+      "sizeBytes": 10497,
+      "sha256": "9f3dd5ed3f0c8846755062116ad820aeb426f9871f027c7cf095930da18ae436",
+      "updatedAt": "2026-11-05T23:35:42.609Z"
+    },
+    "visual-hero": {
+      "fileId": "1YttDyn3z-u5NmdcYOuuiOhBS_uYnkW5X",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1YttDyn3z-u5NmdcYOuuiOhBS_uYnkW5X",
+      "webViewUrl": "https://drive.google.com/file/d/1YttDyn3z-u5NmdcYOuuiOhBS_uYnkW5X/view",
+      "sizeBytes": 121711,
+      "sha256": "ba4ddf6de88c8f9eb7912ee74f371babc6831e3c42255dfd8ca8bbb0bd5d165a",
+      "updatedAt": "2026-11-05T23:35:45.076Z"
+    },
+    "koru-tech-footer": {
+      "fileId": "1KVPIONSl2K4Cjv5umDagKNQu9hnt7ckX",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1KVPIONSl2K4Cjv5umDagKNQu9hnt7ckX",
+      "webViewUrl": "https://drive.google.com/file/d/1KVPIONSl2K4Cjv5umDagKNQu9hnt7ckX/view",
+      "sizeBytes": 31212,
+      "sha256": "91fe7fe847df3f88fa5a96f4827cbc431d7a89dc102212c0b75a6ba90ad8da3d",
+      "updatedAt": "2026-11-05T23:35:47.150Z"
+    },
+    "feathers-atlas": {
+      "fileId": "1rtqC2sO5N0HwbykDMRJA8vWJnteCsdO6",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1rtqC2sO5N0HwbykDMRJA8vWJnteCsdO6",
+      "webViewUrl": "https://drive.google.com/file/d/1rtqC2sO5N0HwbykDMRJA8vWJnteCsdO6/view",
+      "sizeBytes": 233690,
+      "sha256": "bd371f0375b87a009e509e9db87471692f0d9a597b8f1cea00a71585bc79173f",
+      "updatedAt": "2026-11-05T23:35:49.308Z"
     }
   }
 }

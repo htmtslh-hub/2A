@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feather Atlas — Interactive 3D Ornithology &amp; Kingfisher Compendium</title>
+  <meta name="description" content="Explore the Feather Atlas ornithological encyclopedia featuring the Common Kingfisher (Alcedo atthis), interactive plumage inspection, and habitat telemetry." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ec;
+      --surface: #eceae0;
+      --surface-card: #f2f0e6;
+      --fg: #1c211d;
+      --muted: #575e56;
+      --accent: #3d5240;
+      --accent-text: #273829;
+      --on-accent: #f6f4ec;
+      --sage-pill: #dfe5d5;
+      --border-hairline: #d9d6c8;
+      --font-display: 'Cormorant Garamond', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      overflow-x: clip;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 700; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Top Bar for Mobile / Accessibility & Motion Control */
+    .fta-topbar {
+      border-bottom: 1px solid var(--border-hairline);
+      padding: 12px 28px;
+      background: var(--bg);
+    }
+    .fta-topnav {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .fta-title-link {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--fg);
+      text-decoration: none;
+    }
+    .fta-pill-btn {
+      background: var(--sage-pill);
+      color: var(--fg);
+      border: 1px solid #bdcbb0;
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* 3-Column Ornithology Atlas Layout matching Reference Poster */
+    .fta-workspace {
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: calc(100vh - 60px);
+      display: grid;
+      grid-template-columns: 270px 1fr 370px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    /* Left Column: Taxonomy Sidebar */
+    .fta-sidebar {
+      border-right: 1px solid var(--border-hairline);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .fta-search {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      padding: 9px 12px;
+      margin-bottom: 18px;
+    }
+    .fta-search input {
+      border: none;
+      background: transparent;
+      color: var(--fg);
+      font-size: 0.85rem;
+      width: 100%;
+      outline: none;
+    }
+    .fta-side-section-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 16px 0 8px;
+    }
+    .fta-species-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .fta-species-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
+      color: var(--fg);
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    .fta-species-item.active {
+      background: var(--sage-pill);
+      font-weight: 600;
+    }
+    .fta-species-item span.count {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .fta-story-card {
+      background: var(--sage-pill);
+      border: 1px solid #c9d4be;
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .fta-story-card img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      display: block;
+      margin: 8px 0;
+    }
+    .fta-story-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    /* Center Column: 3D Specimen Stage */
+    .fta-center-stage {
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .fta-selector-strip {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .fta-bird-tab {
+      background: #faf9f4;
+      border: 1.5px solid var(--border-hairline);
+      border-radius: 16px;
+      padding: 10px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 155px;
+      text-align: center;
+    }
+    .fta-bird-tab.active {
+      background: var(--sage-pill);
+      border-color: var(--accent);
+    }
+    .fta-bird-tab img {
+      width: 68px;
+      height: 54px;
+      object-fit: contain;
+      margin-bottom: 4px;
+    }
+    .fta-bird-tab strong {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--fg);
+    }
+    .fta-bird-tab em {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .fta-specimen-canvas {
+      position: relative;
+      my: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 430px;
+    }
+    .fta-hero-bird-img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fta-3d-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .fta-specimen-canvas.video-mode .fta-3d-video {
+      opacity: 1;
+    }
+    .fta-specimen-canvas.video-mode .fta-hero-bird-img {
+      opacity: 0;
+    }
+
+    .fta-tool-rail {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 999px;
+      padding: 6px;
+    }
+    .fta-tool-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: var(--fg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .fta-tool-btn.active {
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .fta-360-badge {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .fta-poetic-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.45rem;
+      color: var(--muted);
+    }
+
+    /* Right Column: Specimen Dossier */
+    .fta-dossier {
+      border-left: 1px solid var(--border-hairline);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .fta-family-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .fta-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 3.6vw, 3.25rem);
+      font-weight: 600;
+      line-height: 1.05;
+      margin: 4px 0 2px;
+    }
+    .fta-binom {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .fta-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: 18px;
+    }
+    .fta-tag {
+      background: var(--sage-pill);
+      color: var(--accent-text);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .fta-trait-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 0.88rem;
+      border-bottom: 1px dashed var(--border-hairline);
+    }
+    .fta-closeup-card {
+      margin-top: 20px;
+      background: #faf9f4;
+      border: 1px solid var(--border-hairline);
+      border-radius: 18px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 14px;
+      align-items: center;
+      text-align: left;
+      width: 100%;
+    }
+    .fta-closeup-card img {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Modal */
+    .fta-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 33, 29, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .fta-modal-backdrop.open { display: flex; }
+    .fta-modal {
+      background: var(--bg);
+      border: 1.5px solid var(--accent);
+      border-radius: 24px;
+      max-width: 520px;
+      width: 100%;
+      padding: 28px;
+    }
+
+    @media (max-width: 1120px) {
+      .fta-workspace { grid-template-columns: 1fr; }
+      .fta-sidebar, .fta-dossier { border: none; border-top: 1px solid var(--border-hairline); }
+    }
+    @media (max-width: 600px) {
+      .fta-selector-strip { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="fta-topbar">
+    <nav class="fta-topnav" aria-label="Feather Atlas Navigation">
+      <a href="#main-content" class="fta-title-link">Feather Atlas</a>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="toggle3dVideoBtn" class="fta-pill-btn">360° Turntable Video: OFF</button>
+        <button type="button" id="motionToggleBtn" class="fta-pill-btn">Motion: ON</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="fta-workspace">
+    <!-- Left Column: Species Index -->
+    <section class="fta-sidebar" aria-label="Ornithology Species Index">
+      <div>
+        <label class="fta-search" aria-label="Search Bird Species">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="speciesSearchInput" placeholder="Search species..." />
+        </label>
+
+        <div class="fta-side-section-label">SPECIES ARCHIVE</div>
+        <ul class="fta-species-list">
+          <li><button type="button" class="fta-species-item" data-group="Songbirds"><span>Songbirds</span><span class="count" data-counter="34">34</span></button></li>
+          <li><button type="button" class="fta-species-item active" data-group="Kingfishers"><span>Kingfishers</span><span class="count" data-counter="8">8</span></button></li>
+          <li><button type="button" class="fta-species-item" data-group="Owls"><span>Owls</span><span class="count" data-counter="11">11</span></button></li>
+          <li><button type="button" class="fta-species-item" data-group="Hummingbirds"><span>Hummingbirds</span><span class="count" data-counter="15">15</span></button></li>
+          <li><button type="button" class="fta-species-item" data-group="Raptors"><span>Raptors</span><span class="count" data-counter="12">12</span></button></li>
+          <li><button type="button" class="fta-species-item" data-group="Waders"><span>Waders</span><span class="count" data-counter="9">9</span></button></li>
+        </ul>
+      </div>
+
+      <article class="fta-story-card">
+        <span class="fta-family-kicker">FEATURED STORY</span>
+        <img src="assets/river-card-bird.webp" alt="Miniature Kingfisher Illustration" width="144" height="144" />
+        <h3>A flash of river blue</h3>
+        <p style="font-size:0.8rem;color:var(--muted);">Why the kingfisher's feathers shimmer like light on water through structural refraction.</p>
+      </article>
+    </section>
+
+    <!-- Center Column: Specimen Viewer -->
+    <section class="fta-center-stage" aria-label="Interactive Bird Specimen Viewer">
+      <div class="fta-selector-strip" role="tablist" aria-label="Select Bird Specimen">
+        <button type="button" class="fta-bird-tab" data-specimen="hoopoe" role="tab" aria-selected="false">
+          <img src="assets/hoopoe-thumb.webp" alt="Eurasian Hoopoe Upupa epops" width="136" height="108" />
+          <strong>Hoopoe</strong>
+          <em>Upupa epops</em>
+        </button>
+
+        <button type="button" class="fta-bird-tab active" data-specimen="kingfisher" role="tab" aria-selected="true">
+          <img src="assets/kingfisher-thumb.webp" alt="Common Kingfisher Alcedo atthis" width="136" height="108" />
+          <strong>Kingfisher</strong>
+          <em>Alcedo atthis</em>
+        </button>
+      </div>
+
+      <div class="fta-specimen-canvas" id="specimenCanvas">
+        <img
+          id="specimenHeroImg"
+          src="assets/kingfisher-hero.webp"
+          alt="Common Kingfisher Alcedo atthis Diving Specimen"
+          width="920"
+          height="840"
+          class="fta-hero-bird-img"
+        />
+        <video
+          id="specimen3dVideo"
+          class="fta-3d-video"
+          src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4"
+          loop
+          muted
+          playsinline
+        ></video>
+
+        <div class="fta-tool-rail" role="group" aria-label="Specimen Zoom Controls">
+          <button type="button" class="fta-tool-btn active" id="zoomInBtn" aria-label="Zoom In">+</button>
+          <button type="button" class="fta-tool-btn" id="zoomResetBtn" aria-label="Reset Zoom">1x</button>
+        </div>
+
+        <button type="button" class="fta-360-badge" id="badge360Btn">360°</button>
+      </div>
+
+      <p class="fta-poetic-quote" id="specimenQuote">“Blink, and the river keeps its secret.”</p>
+    </section>
+
+    <!-- Right Column: Taxonomic Dossier -->
+    <section class="fta-dossier" aria-labelledby="specimen-heading">
+      <div>
+        <div class="fta-family-kicker" id="dossierFamily">ALCEDINIDAE</div>
+        <h1 id="specimen-heading" class="fta-h1">Kingfisher</h1>
+        <div class="fta-binom" id="dossierBinom">Alcedo atthis</div>
+
+        <div class="fta-tags">
+          <span class="fta-tag">River bird</span>
+          <span class="fta-tag">Diver</span>
+          <span class="fta-tag">Iridescent</span>
+        </div>
+
+        <h2 style="font-family:var(--font-display);font-size:1.35rem;margin-bottom:8px;">Key Traits</h2>
+        <article class="fta-trait-row">
+          <span style="color:var(--muted);">Wing Span</span>
+          <strong id="traitWingspan">24–26 cm</strong>
+        </article>
+        <article class="fta-trait-row">
+          <span style="color:var(--muted);">Diet</span>
+          <strong id="traitDiet">Small fish, aquatic insects</strong>
+        </article>
+        <article class="fta-trait-row">
+          <span style="color:var(--muted);">Flight Speed</span>
+          <strong id="traitSpeed"><span data-counter="40" data-suffix=" km/h">40 km/h</span></strong>
+        </article>
+
+        <h2 style="font-family:var(--font-display);font-size:1.35rem;margin:18px 0 6px;">Habitat</h2>
+        <p id="dossierHabitat" style="font-size:0.88rem;color:var(--muted);">
+          Found along clear, slow-moving rivers, streams, and lakes across Europe, Asia, and North Africa. Perches on low branches over water to hunt.
+        </p>
+      </div>
+
+      <button type="button" class="fta-closeup-card" id="openFeatherModalBtn">
+        <img src="assets/feather-macro.webp" alt="Close-up Detail of Iridescent Kingfisher Feathers" width="156" height="156" />
+        <div>
+          <strong style="font-family:var(--font-display);font-size:1.25rem;display:block;color:var(--fg);">Close-up Detail</strong>
+          <span style="font-size:0.8rem;color:var(--muted);">An intricate mosaic of structure and colour gives the kingfisher its unmistakable sheen.</span>
+        </div>
+      </button>
+    </section>
+  </main>
+
+  <footer style="padding:20px 28px;text-align:center;color:var(--muted);font-size:0.82rem;">
+    <p>© 2026 Feather Atlas — Digital Ornithology &amp; Structural Plumage Archive.</p>
+  </footer>
+
+  <div class="fta-modal-backdrop" id="featherModal" role="dialog" aria-modal="true" aria-labelledby="ftaModalTitle">
+    <div class="fta-modal">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="fta-family-kicker">MICRO-STRUCTURAL PLUMAGE OPTICS</span>
+        <button type="button" id="closeFeatherModalBtn" class="fta-pill-btn">ESC X</button>
+      </div>
+      <h2 id="ftaModalTitle" style="font-family:var(--font-display);font-size:1.75rem;margin-bottom:10px;">Photonic Crystal Barbules</h2>
+      <p style="color:var(--muted);font-size:0.92rem;margin-bottom:20px;">
+        Unlike pigment-based feathers, the Common Kingfisher's electric azure sheen is produced by spongy keratin nanostructures that scatter blue wavelengths via constructive interference.
+      </p>
+      <button type="button" id="confirmFeatherModalBtn" class="fta-pill-btn">Return to Atlas</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const heroImg = document.getElementById('specimenHeroImg');
+      const canvas = document.getElementById('specimenCanvas');
+      const video3d = document.getElementById('specimen3dVideo');
+      const toggleVideoBtn = document.getElementById('toggle3dVideoBtn');
+
+      function toggle3dMode() {
+        const active = canvas.classList.toggle('video-mode');
+        toggleVideoBtn.textContent = active ? '360° Turntable Video: ON' : '360° Turntable Video: OFF';
+        if (active) video3d.play().catch(() => {});
+        else video3d.pause();
+      }
+      toggleVideoBtn.addEventListener('click', toggle3dMode);
+      document.getElementById('badge360Btn').addEventListener('click', toggle3dMode);
+
+      document.getElementById('zoomInBtn').addEventListener('click', () => {
+        heroImg.style.transform = 'scale(1.16)';
+      });
+      document.getElementById('zoomResetBtn').addEventListener('click', () => {
+        heroImg.style.transform = 'scale(1)';
+      });
+
+      const specimens = {
+        kingfisher: {
+          family: 'ALCEDINIDAE',
+          name: 'Kingfisher',
+          binom: 'Alcedo atthis',
+          img: 'assets/kingfisher-hero.webp',
+          wingspan: '24–26 cm',
+          diet: 'Small fish, aquatic insects',
+          quote: '“Blink, and the river keeps its secret.”'
+        },
+        hoopoe: {
+          family: 'UPUPIDAE',
+          name: 'Hoopoe',
+          binom: 'Upupa epops',
+          img: 'assets/hoopoe-thumb.webp',
+          wingspan: '44–48 cm',
+          diet: 'Beetles, crickets, ground larvae',
+          quote: '“A crown of cinnamon and obsidian unfurls across the meadow.”'
+        }
+      };
+
+      const tabs = document.querySelectorAll('[data-specimen]');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((t) => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          const d = specimens[tab.getAttribute('data-specimen')];
+          if (d) {
+            canvas.classList.remove('video-mode');
+            heroImg.src = d.img;
+            document.getElementById('dossierFamily').textContent = d.family;
+            document.getElementById('specimen-heading').textContent = d.name;
+            document.getElementById('dossierBinom').textContent = d.binom;
+            document.getElementById('traitWingspan').textContent = d.wingspan;
+            document.getElementById('traitDiet').textContent = d.diet;
+            document.getElementById('specimenQuote').textContent = d.quote;
+          }
+        });
+      });
+
+      const modal = document.getElementById('featherModal');
+      document.getElementById('openFeatherModalBtn').addEventListener('click', () => modal.classList.add('open'));
+      document.getElementById('closeFeatherModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      document.getElementById('confirmFeatherModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

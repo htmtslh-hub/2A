@@ -46,6 +46,263 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t256: {
+    slug: 'feathers-atlas',
+    cat: 'education',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Feather Atlas Ornithology",
+        desc: "Bách khoa toàn thư điểu học tương tác 3D trên nền giấy kem tự nhiên #F6F4EC: bảng phân loại loài bên trái, sân khấu xoay 360° chim bói cá Alcedo atthis & chim đầu rìu Upupa epops ở giữa cùng hồ sơ giải phẫu lông vũ ánh kim bên phải.",
+        tags: ["3D Ornithology","Natural History","Interactive Atlas"]
+      },
+      en: {
+        name: "Feather Atlas Ornithology",
+        desc: "Three-column natural-history ornithology encyclopedia on a warm ivory #F6F4EC canvas featuring a species taxonomy sidebar, interactive 360° Kingfisher (Alcedo atthis) & Hoopoe specimen viewer, and structural plumage traits dossier.",
+        tags: ["3D Ornithology","Natural History","Interactive Atlas"]
+      },
+      zh: {
+        name: "Feather Atlas Ornithology",
+        desc: "自然历史鸟类学三栏交互百科全书：暖白画布、左侧鸟类分类索引、中央翠鸟与戴胜 360° 标本观察台以及右侧羽毛微观结构档案。",
+        tags: ["3D鸟类百科","自然历史","交互图鉴"]
+      }
+    }
+  },
+  t255: {
+    slug: 'koru-tech-footer',
+    cat: 'communication',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Koru Tech Horizon Grid",
+        desc: "Kiến trúc hạ tầng mạng biên doanh nghiệp Koru Tech trên nền đen ngọc lục bảo #030D0B: bố cục 12 cột bất đối xứng, video lưới phối cảnh 3D phát sáng #0BE3AE và chữ viền SVG KORU TECH khổng lồ phản chiếu trên đường chân trời.",
+        tags: ["Emerald Grid","Enterprise Edge","Horizon Wordmark"]
+      },
+      en: {
+        name: "Koru Tech Horizon Grid",
+        desc: "Enterprise edge infrastructure showcase on an obsidian-emerald #030D0B canvas combining a 12-column architectural grid, glowing perspective-grid horizon video, and an oversized outlined KORU TECH SVG wordmark with mirror reflection.",
+        tags: ["Emerald Grid","Enterprise Edge","Horizon Wordmark"]
+      },
+      zh: {
+        name: "Koru Tech Horizon Grid",
+        desc: "Koru Tech 企业级边缘网络基础设施展示：深邃翡翠黑画布、12列非对称网格、发光透视网格视频与地平线巨幅描边 KORU TECH 镜像字标。",
+        tags: ["翡翠透视网格","边缘计算","地平线字标"]
+      }
+    }
+  },
+  t254: {
+    slug: 'visual-hero',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "MicroVisuals Liquid Hero",
+        desc: "Studio sáng tạo hình ảnh tức thì MicroVisuals: thanh điều hướng và nút bấm kính lỏng .liquid-glass có viền phản xạ ánh sáng, tiêu đề chữ nghiêng Instrument Serif quy mô lớn trên nền video boomerang lặp mượt.",
+        tags: ["Liquid Glass","Instrument Serif","Boomerang Video"]
+      },
+      en: {
+        name: "MicroVisuals Liquid Hero",
+        desc: "High-impact visual creation hero pairing a giant italic Instrument Serif display headline and specular .liquid-glass pill navigation over a full-bleed boomerang video loop and interactive creative direction synthesizer.",
+        tags: ["Liquid Glass","Instrument Serif","Boomerang Video"]
+      },
+      zh: {
+        name: "MicroVisuals Liquid Hero",
+        desc: "MicroVisuals 视觉创作工作室英雄区：巨幅斜体 Instrument Serif 标题、高光液态玻璃胶囊导航栏与全屏无缝循环视频背景。",
+        tags: ["液态玻璃","衬线排版","无缝视频"]
+      }
+    }
+  },
+  t253: {
+    slug: 'vaultshield',
+    cat: 'communication',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "VaultShield Biometric Vault",
+        desc: "Trình quản lý mật khẩu & két sắt sinh trắc học không lưu trữ khóa VaultShield: tiêu đề tích hợp biểu tượng ổ khóa & vân tay kính mờ ngay trong dòng chữ, huy hiệu ưu đãi 50% tím #7342E2 và bộ tạo khóa Argon2id trực tiếp.",
+        tags: ["Cybersecurity","Inline Icon Typography","Password Vault"]
+      },
+      en: {
+        name: "VaultShield Biometric Vault",
+        desc: "Zero-knowledge password manager and biometric security showcase featuring inline frosted-glass LockKeyhole and Fingerprint badges embedded directly inside the display typography, a #7342E2 lifetime promo pill, and a live entropy key generator.",
+        tags: ["Cybersecurity","Inline Icon Typography","Password Vault"]
+      },
+      zh: {
+        name: "VaultShield Biometric Vault",
+        desc: "VaultShield 零知识生物识别密码保险库：标题内嵌毛玻璃锁孔与指纹图标徽章、紫色终身优惠胶囊与实时高熵密钥生成器。",
+        tags: ["网络安全","内嵌图标排版","密码管理"]
+      }
+    }
+  },
+  t252: {
+    slug: 'nimbusos-footer',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "NimbusOS Cloud Growth",
+        desc: "Nền tảng tăng trưởng số toàn diện NimbusOS: phân đoạn hero bầu trời xanh chàm #6E77DF kèm thanh đăng ký email viên nang nổi, nối tiếp tầng sàn sọc phối cảnh đỡ thẻ trắng bo góc 32px chứa bảng chỉ số ROI và sơ đồ 5 cột.",
+        tags: ["Cloud SaaS","Indigo Sky Hero","Elevated Footer Card"]
+      },
+      en: {
+        name: "NimbusOS Cloud Growth",
+        desc: "All-in-one founder growth platform combining an indigo sky hero stage and pill email capture bar with a perspective-striped floor supporting an elevated 32px white 5-column architecture card.",
+        tags: ["Cloud SaaS","Indigo Sky Hero","Elevated Footer Card"]
+      },
+      zh: {
+        name: "NimbusOS Cloud Growth",
+        desc: "NimbusOS 现代数字增长云平台：靛蓝天空英雄区配胶囊邮件订阅栏，下方透视条纹地面托起 32px 圆角纯白五列架构卡片。",
+        tags: ["云端SaaS","靛蓝天空","悬浮页脚卡"]
+      }
+    }
+  },
+  t251: {
+    slug: 'innovation-lab',
+    cat: 'entertainment',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "VortxLab Spatial Creations",
+        desc: "Phòng thí nghiệm thế giới tương tác V O R T X (VortxLab Creations): nút bấm vát 8 góc .btn-cut bằng clip-path polygon, chữ V O R T X giãn cách 0.4em và video cánh bướm bay về phía mặt trời tím trên thung lũng núi.",
+        tags: ["Octagonal UI","Spatial World","Fullscreen Video"]
+      },
+      en: {
+        name: "VortxLab Spatial Creations",
+        desc: "Full-screen spatial innovation lab for VortxLab Creations (V O R T X) featuring octagonal polygon-clipped .btn-cut controls, 0.4em tracked header typography, and a cinematic purple-sun mountain valley video stage.",
+        tags: ["Octagonal UI","Spatial World","Fullscreen Video"]
+      },
+      zh: {
+        name: "VortxLab Spatial Creations",
+        desc: "VortxLab (V O R T X) 空间创新实验室：八角形 clip-path 裁切按钮、宽字距顶栏字标与紫日山谷蝴蝶全屏视频背景。",
+        tags: ["八角裁切按钮","空间交互","全屏视频"]
+      }
+    }
+  },
+  t250: {
+    slug: 'laila-sakura-creator',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Laila Ouali Sakura Dev",
+        desc: "Portfolio lập trình viên sáng tạo & thiết kế giao diện anime neon hồng anh đào LAILA OUALI: cổng tròn phát sáng #FF2E93 đóng khung chân dung cyberpunk, huy hiệu quạt giấy sakura 60fps, dải tính năng 01–03 và phòng lab chuyển đổi công nghệ React/WebGL.",
+        tags: ["Neon Sakura","Creative Developer","Anime Cyberpunk UI"]
+      },
+      en: {
+        name: "Laila Ouali Sakura Dev",
+        desc: "Midnight violet and neon magenta-pink creator portfolio for Laila Ouali featuring a glowing circular sakura portal portrait, 60fps folding-fan shader badge, 01–03 engineering pillars, and interactive React/WebGL stack inspector.",
+        tags: ["Neon Sakura","Creative Developer","Anime Cyberpunk UI"]
+      },
+      zh: {
+        name: "Laila Ouali Sakura Dev",
+        desc: "Laila Ouali 霓虹樱花全栈创意开发者作品集：发光品红圆环肖像门户、樱花折扇徽章、01-03 核心能力栏与 React/WebGL 技术栈切换。",
+        tags: ["霓虹樱花","创意开发者","动漫赛博风"]
+      }
+    }
+  },
+  t249: {
+    slug: 'layla-astrology-wiki',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Rtawahist Layla Compendium",
+        desc: "Cổng thông tin chiêm tinh học & hồ sơ nhân vật Rtawahist Layla trên nền xanh đêm điểm vàng kim #F4D06F: chân dung vòng sao astrolabe, bảng chuyển đổi 2 nhân cách (Sinh viên thức trắng / Nhà chiêm tinh mộng du) và phòng trưng bày 3 khung tranh thiên văn.",
+        tags: ["Anime Character Wiki","Celestial Astrolabe","Interactive Lore"]
+      },
+      en: {
+        name: "Rtawahist Layla Compendium",
+        desc: "Nocturnal indigo-and-gold character compendium for Rtawahist scholar Layla featuring an ornate astrolabe portrait frame, dual-persona lore switcher (Awake Student vs Starlight Somnambulist), and 3-frame celestial art gallery.",
+        tags: ["Anime Character Wiki","Celestial Astrolabe","Interactive Lore"]
+      },
+      zh: {
+        name: "Rtawahist Layla Compendium",
+        desc: "梨多梵谛学者莱依拉星象图鉴与角色设定集：夜空蓝金配色、星盘肖像画框、双人格档案切换与三联星光插画画廊。",
+        tags: ["动漫角色百科","星盘美学","双人格交互"]
+      }
+    }
+  },
+  t248: {
+    slug: 'hello-illustrator-folio',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Hello 3D Illustrator Folio",
+        desc: "Portfolio họa sĩ minh họa nhân vật 3D & thiết kế bao bì đa ngành trên nền đỏ son #D9232E và giấy kem #FAF6F0: poster PORT FOLIO với nhân vật đất sét 3D cầm sổ vẽ, hồ sơ HELLO! CV trực quan và bộ lọc dự án bìa sách thiếu nhi, hũ mứt & gian hàng sự kiện.",
+        tags: ["3D Character Art","Book & Packaging","Illustrator Portfolio"]
+      },
+      en: {
+        name: "Hello 3D Illustrator Folio",
+        desc: "Multi-discipline 3D character illustrator and packaging designer portfolio pairing a crimson PORT FOLIO cover stage and 3D clay mascot with a cream HELLO! resume dossier and filterable book-cover, jar-label, and pop-up booth spreads.",
+        tags: ["3D Character Art","Book & Packaging","Illustrator Portfolio"]
+      },
+      zh: {
+        name: "Hello 3D Illustrator Folio",
+        desc: "3D 角色插画与包装设计师多学科作品集：绯红封面海报配 3D 黏土男孩吉祥物、HELLO! 奶油白简历档案以及童书封面、果酱包装与快闪展位筛选。",
+        tags: ["3D角色插画","包装与书籍","插画师作品集"]
+      }
+    }
+  },
+  t247: {
+    slug: 'rome-explorer',
+    cat: 'entertainment',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Rome Eternal City Explorer",
+        desc: "Cổng khám phá kiến trúc thành Rome hoàng hôn theo phong cách kính không gian Spatial OS: thanh điều hướng viên nang trong suốt trên nền đấu trường Colosseum rực nắng, tiêu đề ROME cổ điển và băng chuyền 4 thẻ kính (Đài phun nước Trevi, Pantheon, Vatican, Spanish Steps).",
+        tags: ["Spatial Glass UI","Rome Travel","3D Card Carousel"]
+      },
+      en: {
+        name: "Rome Eternal City Explorer",
+        desc: "Spatial glass travel guide to Rome set against a golden-hour Colosseum panorama: floating macOS-inspired glass pill navigation, Cinzel display typography, and an interactive 4-card monument carousel (Trevi Fountain, Pantheon, St. Peter's Dome, Spanish Steps).",
+        tags: ["Spatial Glass UI","Rome Travel","3D Card Carousel"]
+      },
+      zh: {
+        name: "Rome Eternal City Explorer",
+        desc: "罗马永恒之城空间玻璃旅游指南：黄金时刻斗兽场全景背景、悬浮毛玻璃胶囊导航栏与四张古迹卡片轮播（特莱维喷泉、万神殿、圣彼得大教堂、西班牙阶梯）。",
+        tags: ["空间毛玻璃","罗马旅游","古迹卡片轮播"]
+      }
+    }
+  },
+  t246: {
+    slug: 'quickcam-ui-ux',
+    cat: 'education',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "QuickCam UI vs UX Studio",
+        desc: "Hệ thống so sánh trực quan UI vs UX trên ứng dụng thương mại điện tử máy ảnh QuickCam: bảng trái là giao diện UI Dark Mode hoàn chỉnh màu đen cam #FF6B00, bảng phải là sơ đồ UX Wireframe & luồng người dùng đồng bộ theo thời gian thực khi chọn máy ảnh Canon EOS 4000D hoặc đèn Nanlite.",
+        tags: ["UI vs UX Study","Camera E-Commerce","Interactive Wireframe"]
+      },
+      en: {
+        name: "QuickCam UI vs UX Studio",
+        desc: "Interactive UI vs UX architectural comparison showcase featuring the high-fidelity dark-mode QuickCam camera store (#FF6B00 accent) synchronized in real time with its annotated UX wireframe user-flow blueprint.",
+        tags: ["UI vs UX Study","Camera E-Commerce","Interactive Wireframe"]
+      },
+      zh: {
+        name: "QuickCam UI vs UX Studio",
+        desc: "QuickCam 相机电商 UI 与 UX 实时对比教学展示：左侧深色高保真相机商城界面与右侧 UX 线框图及用户转化流程图实时联动。",
+        tags: ["UI与UX对比","相机电商","交互式线框图"]
+      }
+    }
+  },
   t245: {
     slug: 'mind-body-healing',
     cat: 'education',

@@ -1,0 +1,34 @@
+{
+  "id": "t246",
+  "slug": "quickcam-ui-ux",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:39:12.697Z",
+  "demo": "/demos/quickcam-ui-ux/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c979e879e3f8",
+  "sha256": "c979e879e3f86c4332e903d63c680e7a22651788a97a1d2b93e8ba3701baa10c",
+  "demoHtmlSha256": "88657f48f6f2a230ad3c3e7d91429ce4c319b4e7a1c91a6a137799e270aae331",
+  "demoSha256": "f33a59931a6a85daa8a7e82ffcdf7c81dd5c40273fd4d5e502bea19333b807c5",
+  "bytes": 579537,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 804
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quickcam-ui-ux-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quickcam-ui-ux-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quickcam-ui-ux-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quickcam-ui-ux-return.jpg"
+  ]
+}

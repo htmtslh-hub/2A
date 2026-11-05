@@ -1,0 +1,34 @@
+{
+  "id": "t249",
+  "slug": "layla-astrology-wiki",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:40:11.908Z",
+  "demo": "/demos/layla-astrology-wiki/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "50074beea564",
+  "sha256": "50074beea56477b3e48c38b363e56fa635ff857c94852f82db9280f0bd47169d",
+  "demoHtmlSha256": "c8b4083b0d8d0f6e6ed6404cf6482cd726f21f43a6405b37b4f0840cd40cc247",
+  "demoSha256": "15afab55c00f590141fd0435628f04e4c133696b67e9222cd9f71f80d5a602fb",
+  "bytes": 685992,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1217
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\layla-astrology-wiki-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\layla-astrology-wiki-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\layla-astrology-wiki-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\layla-astrology-wiki-return.jpg"
+  ]
+}

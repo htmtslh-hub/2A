@@ -1,0 +1,34 @@
+{
+  "id": "t248",
+  "slug": "hello-illustrator-folio",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:39:52.041Z",
+  "demo": "/demos/hello-illustrator-folio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "306aa5c7d5f0",
+  "sha256": "306aa5c7d5f0dc94c7785dbebda32f8827bf0dd32ac3fac250a368873afe6e88",
+  "demoHtmlSha256": "4cf05653e562b6aa550f8bde02d9d6b198be0061481454c7a9497a3abccdaf68",
+  "demoSha256": "ac355897b858b2d17c7c6710527b2b74b5bdb5ac18e6c836b89b8c780da1e0a1",
+  "bytes": 532102,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1024
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hello-illustrator-folio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hello-illustrator-folio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hello-illustrator-folio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hello-illustrator-folio-return.jpg"
+  ]
+}

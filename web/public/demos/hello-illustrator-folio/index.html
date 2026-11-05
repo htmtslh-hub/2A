@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORT FOLIO — 3D Character Illustrator &amp; Brand Packaging Showcase</title>
+  <meta name="description" content="Multi-discipline portfolio of a 3D character illustrator, children's book cover artist, and tactile packaging designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf6f0;
+      --surface: #ffffff;
+      --surface-crimson: #d9232e;
+      --fg: #181311;
+      --muted: #5c534f;
+      --accent: #d9232e;
+      --accent-text: #b91c1c;
+      --on-accent: #fffdf9;
+      --gold-badge: #f59e0b;
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      overflow-x: clip;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 700; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Sticky Top Header */
+    .hlf-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #e7dfd5;
+      padding: 14px 28px;
+    }
+    .hlf-nav {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hlf-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .hlf-nav-list {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .hlf-nav-list a {
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .hlf-nav-list a:hover { color: var(--accent); }
+    .hlf-btn-row { display: flex; gap: 10px; align-items: center; }
+    .hlf-pill-btn {
+      background: var(--accent);
+      color: var(--on-accent);
+      border: none;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.84rem;
+    }
+    .hlf-ghost-btn {
+      background: #efe9e0;
+      color: var(--fg);
+      border: 1px solid #d6ccc0;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .hlf-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    /* Crimson Poster Hero Stage */
+    .hlf-poster-hero {
+      background: var(--surface-crimson);
+      color: #fffdf9;
+      border-radius: 34px;
+      padding: 44px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 28px 64px rgba(217, 35, 46, 0.26);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 44px;
+    }
+    .hlf-edition-tag {
+      display: inline-block;
+      background: rgba(255, 253, 249, 0.16);
+      border: 1px solid rgba(255, 253, 249, 0.35);
+      color: #fffdf9;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+    }
+    .hlf-giant-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.4rem, 7.2vw, 6.2rem);
+      font-weight: 800;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+      color: #fff8ed;
+    }
+    .hlf-hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255, 253, 249, 0.9);
+      max-width: 490px;
+      margin-bottom: 24px;
+    }
+    .hlf-tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hlf-sticker {
+      background: #fff8ed;
+      color: #991b1b;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .hlf-char-card {
+      background: #fff8ed;
+      border-radius: 26px;
+      padding: 16px;
+      color: var(--fg);
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.25);
+      transform: rotate(-1.5deg);
+    }
+    .hlf-char-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    /* HELLO! Resume & Skill Dossier Sheet */
+    .hlf-hello-sheet {
+      background: var(--surface);
+      border: 2px solid #e6ded3;
+      border-radius: 30px;
+      padding: 38px;
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+    }
+    .hlf-hello-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 4.8vw, 4rem);
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .hlf-resume-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .hlf-resume-box {
+      background: var(--bg);
+      border: 1px solid #e2d9cc;
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .hlf-resume-box h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--accent-text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+    .hlf-sw-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .hlf-sw-chip {
+      background: var(--fg);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    /* Interactive Multi-Discipline Works Showcase */
+    .hlf-filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .hlf-filter-btn {
+      background: #efe9e0;
+      color: var(--fg);
+      border: 1px solid #d6ccc0;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .hlf-filter-btn.active {
+      background: var(--accent);
+      color: var(--on-accent);
+      border-color: var(--accent);
+    }
+
+    .hlf-works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .hlf-work-card {
+      background: var(--surface);
+      border: 2px solid #e6ded3;
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hlf-work-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+    .hlf-work-body {
+      padding: 22px;
+    }
+    .hlf-work-cat {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--accent-text);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .hlf-work-body h3 {
+      font-size: 1.22rem;
+      font-weight: 800;
+      margin: 6px 0 8px;
+    }
+
+    /* Modal */
+    .hlf-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(24, 19, 17, 0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .hlf-modal-backdrop.open { display: flex; }
+    .hlf-modal {
+      background: var(--surface);
+      border: 2px solid var(--accent);
+      border-radius: 26px;
+      max-width: 520px;
+      width: 100%;
+      padding: 28px;
+    }
+
+    @media (max-width: 980px) {
+      .hlf-poster-hero, .hlf-hello-sheet { grid-template-columns: 1fr; }
+      .hlf-works-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .hlf-resume-grid, .hlf-works-grid { grid-template-columns: 1fr; }
+      .hlf-nav-list { display: none; }
+    }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="hlf-header">
+    <nav class="hlf-nav" aria-label="Illustrator Portfolio Navigation">
+      <a href="#main-content" class="hlf-logo">PORT·FOLIO ’26</a>
+      <ul class="hlf-nav-list">
+        <li><a href="#hello-dossier">HELLO! Dossier</a></li>
+        <li><a href="#selected-works">Editorial &amp; Packaging</a></li>
+        <li><a href="#metrics-strip">Studio Telemetry</a></li>
+      </ul>
+      <div class="hlf-btn-row">
+        <button type="button" id="motionToggleBtn" class="hlf-ghost-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:5px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>Motion: ON</button>
+        <button type="button" id="openCommissionBtn" class="hlf-pill-btn">Book Illustration Brief</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="hlf-container">
+    <section class="hlf-poster-hero" aria-labelledby="folio-hero-title">
+      <div>
+        <span class="hlf-edition-tag">ILLUSTRATION &amp; GRAPHIC DESIGN ARCHIVE · 2024–2026</span>
+        <h1 id="folio-hero-title" class="hlf-giant-title">PORT<br/>FOLIO</h1>
+        <p class="hlf-hero-sub">
+          Tactile 3D character worlds, whimsical children's publishing covers, artisanal jar packaging, and experiential pop-up merchandise booths.
+        </p>
+        <div class="hlf-tag-cloud">
+          <span class="hlf-sticker">Character 3D</span>
+          <span class="hlf-sticker">Book Covers</span>
+          <span class="hlf-sticker">Die-Cut Packaging</span>
+          <span class="hlf-sticker">Event Booths</span>
+        </div>
+      </div>
+
+      <div class="hlf-char-card">
+        <img src="assets/hello-3d-boy.webp" alt="3D Clay Illustrated Boy Character with Sketchbook" width="540" height="420" />
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <strong>Character Mascot No. 01 — Studio Sketchbook</strong>
+          <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">Blender + Procreate</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="hello-dossier" class="hlf-hello-sheet" aria-labelledby="hello-heading">
+      <div>
+        <h2 id="hello-heading" class="hlf-hello-title">HELLO!</h2>
+        <p style="font-size:1rem;color:var(--muted);margin-bottom:18px;">
+          I'm an independent visual storyteller blending tactile 3D clay shaders with bold Swiss-editorial print typography. Every project is engineered from pencil thumbnail to press-ready CMYK dielines.
+        </p>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;" id="metrics-strip">
+          <div>
+            <div style="font-size:2rem;font-weight:800;color:var(--accent);font-family:var(--font-mono);" data-counter="48" data-suffix="+">48+</div>
+            <span style="font-size:0.8rem;color:var(--muted);">Published Book &amp; Brand Kits</span>
+          </div>
+          <div>
+            <div style="font-size:2rem;font-weight:800;color:var(--accent);font-family:var(--font-mono);" data-counter="100" data-suffix="%">100%</div>
+            <span style="font-size:0.8rem;color:var(--muted);">Print-Ready CMYK Dielines</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hlf-resume-grid">
+        <div class="hlf-resume-box">
+          <h3>Education &amp; Honours</h3>
+          <p style="font-size:0.86rem;font-weight:700;">BFA Visual Communication &amp; Illustration</p>
+          <p style="font-size:0.8rem;color:var(--muted);">Dean's Award for Children's Editorial Picture Books &amp; Tactile Toy Packaging.</p>
+        </div>
+        <div class="hlf-resume-box">
+          <h3>Experience</h3>
+          <p style="font-size:0.86rem;font-weight:700;">Senior Character &amp; Packaging Designer</p>
+          <p style="font-size:0.8rem;color:var(--muted);">Lead visual identity, die-cut food labels, and festival booth environments.</p>
+        </div>
+        <div class="hlf-resume-box" style="grid-column: 1 / -1;">
+          <h3>Creative Toolchain</h3>
+          <div class="hlf-sw-badges">
+            <span class="hlf-sw-chip">Ai · Illustrator</span>
+            <span class="hlf-sw-chip">Ps · Photoshop</span>
+            <span class="hlf-sw-chip">Id · InDesign</span>
+            <span class="hlf-sw-chip">Blender 3D Cycles</span>
+            <span class="hlf-sw-chip">Procreate Brushes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="selected-works" aria-labelledby="works-heading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:20px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.78rem;color:var(--accent-text);text-transform:uppercase;">Curated Spreads</span>
+          <h2 id="works-heading" style="font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,2.6rem);">Selected Multi-Discipline Works</h2>
+        </div>
+
+        <div class="hlf-filter-bar" role="group" aria-label="Filter Portfolio Disciplines">
+          <button type="button" class="hlf-filter-btn active" data-filter="all">All Spreads (3)</button>
+          <button type="button" class="hlf-filter-btn" data-filter="editorial">Editorial Books</button>
+          <button type="button" class="hlf-filter-btn" data-filter="packaging">Jar Packaging</button>
+          <button type="button" class="hlf-filter-btn" data-filter="merch">Merch &amp; Booth</button>
+        </div>
+      </div>
+
+      <div class="hlf-works-grid">
+        <article class="hlf-work-card" data-category="editorial">
+          <img src="assets/hello-book-covers.webp" alt="Children's Book Covers: Don't Touch This Book and The Boy Who Cried Wolf" width="520" height="360" />
+          <div class="hlf-work-body">
+            <span class="hlf-work-cat">01 · Editorial &amp; Children's Publishing</span>
+            <h3>Don't Touch This Book! &amp; Story Series</h3>
+            <p style="font-size:0.88rem;color:var(--muted);margin-bottom:14px;">Hardcover dust-jacket illustrations with spot-UV tactile monster scales and hand-lettered display titles.</p>
+            <button type="button" class="hlf-ghost-btn open-work-modal" data-work="Editorial Hardcover Series">Inspect Print Dieline</button>
+          </div>
+        </article>
+
+        <article class="hlf-work-card" data-category="packaging">
+          <img src="assets/hello-packaging-jar.webp" alt="Artisanal Jam Jar Packaging and Die-Cut Botanical Label" width="520" height="360" loading="lazy" />
+          <div class="hlf-work-body">
+            <span class="hlf-work-cat">02 · Food &amp; Beverage Packaging</span>
+            <h3>Orchard Berry Preserve — Jar &amp; Box Kit</h3>
+            <p style="font-size:0.88rem;color:var(--muted);margin-bottom:14px;">Custom scalloped wrap-around label, embossed lid seal, and botanical fruit character mascots.</p>
+            <button type="button" class="hlf-ghost-btn open-work-modal" data-work="Orchard Berry Preserve Packaging">Inspect Print Dieline</button>
+          </div>
+        </article>
+
+        <article class="hlf-work-card" data-category="merch">
+          <img src="assets/hello-merch-booth.webp" alt="Pop-Up Exhibition Booth and Illustrated Tote Bag Merchandise" width="520" height="360" loading="lazy" />
+          <div class="hlf-work-body">
+            <span class="hlf-work-cat">03 · Environmental &amp; Merchandise</span>
+            <h3>Art Fair Pop-Up Booth &amp; Apparel</h3>
+            <p style="font-size:0.88rem;color:var(--muted);margin-bottom:14px;">Complete 3x3m exhibition booth backdrop, screen-printed heavyweight canvas totes, and enamel pin cards.</p>
+            <button type="button" class="hlf-ghost-btn open-work-modal" data-work="Art Fair Pop-Up Booth & Merch">Inspect Print Dieline</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:2px solid #e6ded3;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.86rem;">
+    <p>© 2026 PORT·FOLIO Studio — Character Illustration, Book Design &amp; Tactile Packaging.</p>
+  </footer>
+
+  <div class="hlf-modal-backdrop" id="commissionModal" role="dialog" aria-modal="true" aria-labelledby="commModalTitle">
+    <div class="hlf-modal">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">STUDIO COMMISSION BRIEF</span>
+        <button type="button" id="closeCommissionBtn" class="hlf-ghost-btn">ESC X</button>
+      </div>
+      <h2 id="commModalTitle" style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:10px;">Request Illustration or Packaging Scope</h2>
+      <p id="commModalDesc" style="color:var(--muted);font-size:0.9rem;margin-bottom:18px;">
+        Includes 3 concept sketches, 3D clay lighting turnarounds, and press-ready CMYK vector dielines.
+      </p>
+      <button type="button" id="confirmCommissionBtn" class="hlf-pill-btn">Send Studio Brief</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const filterBtns = document.querySelectorAll('[data-filter]');
+      const workCards = document.querySelectorAll('.hlf-work-card');
+      filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.getAttribute('data-filter');
+          workCards.forEach((card) => {
+            card.style.display = (cat === 'all' || card.getAttribute('data-category') === cat) ? 'flex' : 'none';
+          });
+        });
+      });
+
+      const modal = document.getElementById('commissionModal');
+      const modalDesc = document.getElementById('commModalDesc');
+      document.getElementById('openCommissionBtn').addEventListener('click', () => modal.classList.add('open'));
+      document.querySelectorAll('.open-work-modal').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          modalDesc.textContent = 'Inspecting production specification for: ' + btn.getAttribute('data-work') + ' (300 DPI CMYK + Spot UV + Die-Cut Vector Layers).';
+          modal.classList.add('open');
+        });
+      });
+      document.getElementById('closeCommissionBtn').addEventListener('click', () => modal.classList.remove('open'));
+      document.getElementById('confirmCommissionBtn').addEventListener('click', () => modal.classList.remove('open'));
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

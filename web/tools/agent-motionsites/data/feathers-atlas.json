@@ -1,0 +1,30 @@
+{
+  "id": "feathers-atlas",
+  "title": "Feathers Atlas",
+  "slug": "feathers-atlas",
+  "isFreeOnMotionsites": true,
+  "promptSource": "visual_architectural_spec",
+  "category": "3D",
+  "type": "hero",
+  "status": "queued_unused",
+  "matched2ASlug": null,
+  "matchReason": null,
+  "videoPreviewUrl": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4",
+  "imagePreviewUrl": "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261004_105730_10a54951-d439-4e1b-9776-2b9e54fdd1b1.png&w=1280&q=85",
+  "githubUrl": null,
+  "promptHash": "c2cffceddfea1ab1b9a79998a90c1bbdbc231b1161b12158647a0ad6669bfaf4",
+  "promptLength": 2336,
+  "prompt_text": "Create a high-craft, production-ready full-page web template for **\"Feathers Atlas\"** in the **3D** category.\n\n### 1. Visual Direction & Reference Assets\n- **Template ID:** `feathers-atlas`\n- **Category:** 3D (hero)\n- **Reference Video / Motion Preview:** https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4\n- **High-Res Reference Poster (1280px):** https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261004_105730_10a54951-d439-4e1b-9776-2b9e54fdd1b1.png&w=1280&q=85\n- **Design Paradigm:** Kinetic typography & neo-brutalist Swiss grids blended with atmospheric minimalism andchoreographed motion.\n\n### 2. Color & Atmospheric Polarity\n- **Primary Background Surface:** `#090A0F`\n- **Elevated Card / Module Surface:** `#12151E`\n- **Primary Typography Ink:** `#F5F7FA`\n- **Primary Accent & Interactive Highlight:** `#38BDF8`\n- **Border & Hairline Token:** `1px solid rgba(255,255,255,0.08)`\n\n### 3. Typography & Scannable Hierarchy\n- **Display / Headline Font:** `'Instrument Serif'`, `'Playfair Display'`, or `'Plus Jakarta Sans'` (`clamp(2.5rem, 5vw, 4.75rem)`, line-height `0.98`, letter-spacing `-0.03em`)\n- **UI & Body Font:** `'Inter'` or `'Plus Jakarta Sans'` (400, 500, 600)\n- **Technical / Numeric Meta Font:** `'JetBrains Mono'` with `font-variant-numeric: tabular-nums`\n\n### 4. Layout, Spatial Architecture & Interactive Functional Requirements\n1. **Top Navigation Bar:** Glassmorphic sticky header with brand wordmark **\"Feathers Atlas\"**, section anchors, interactive theme/mode or live status pill, and primary CTA button.\n2. **Primary Hero / Focal Showcase:**\n   - Incorporate the motion preview asset (https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4) with smooth parallax depth, subtle ambient glow, and crisp frame border.\n   - Headline copy tailored to **\"Feathers Atlas\"** (3D) with dual action triggers and live telemetry/metrics strip.\n3. **Interactive Bento / Feature Architecture:**\n   - 3-to-4 interactive cards or live calculator/filter controls depending on the archetype of **\"Feathers Atlas\"**.\n   - Micro-interactions on hover (`cubic-bezier(0.22, 1, 0.36, 1)`), live tab switching, and responsive 4-viewport adaptation (`1440px`, `1024px`, `768px`, `375px`).",
+  "sections": [
+    {
+      "title": "Feathers Atlas — Master Specification",
+      "content": "Create a high-craft, production-ready full-page web template for **\"Feathers Atlas\"** in the **3D** category.\n\n### 1. Visual Direction & Reference Assets\n- **Template ID:** `feathers-atlas`\n- **Category:** 3D (hero)\n- **Reference Video / Motion Preview:** https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4\n- **High-Res Reference Poster (1280px):** https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261004_105730_10a54951-d439-4e1b-9776-2b9e54fdd1b1.png&w=1280&q=85\n- **Design Paradigm:** Kinetic typography & neo-brutalist Swiss grids blended with atmospheric minimalism andchoreographed motion.\n\n### 2. Color & Atmospheric Polarity\n- **Primary Background Surface:** `#090A0F`\n- **Elevated Card / Module Surface:** `#12151E`\n- **Primary Typography Ink:** `#F5F7FA`\n- **Primary Accent & Interactive Highlight:** `#38BDF8`\n- **Border & Hairline Token:** `1px solid rgba(255,255,255,0.08)`\n\n### 3. Typography & Scannable Hierarchy\n- **Display / Headline Font:** `'Instrument Serif'`, `'Playfair Display'`, or `'Plus Jakarta Sans'` (`clamp(2.5rem, 5vw, 4.75rem)`, line-height `0.98`, letter-spacing `-0.03em`)\n- **UI & Body Font:** `'Inter'` or `'Plus Jakarta Sans'` (400, 500, 600)\n- **Technical / Numeric Meta Font:** `'JetBrains Mono'` with `font-variant-numeric: tabular-nums`\n\n### 4. Layout, Spatial Architecture & Interactive Functional Requirements\n1. **Top Navigation Bar:** Glassmorphic sticky header with brand wordmark **\"Feathers Atlas\"**, section anchors, interactive theme/mode or live status pill, and primary CTA button.\n2. **Primary Hero / Focal Showcase:**\n   - Incorporate the motion preview asset (https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4) with smooth parallax depth, subtle ambient glow, and crisp frame border.\n   - Headline copy tailored to **\"Feathers Atlas\"** (3D) with dual action triggers and live telemetry/metrics strip.\n3. **Interactive Bento / Feature Architecture:**\n   - 3-to-4 interactive cards or live calculator/filter controls depending on the archetype of **\"Feathers Atlas\"**.\n   - Micro-interactions on hover (`cubic-bezier(0.22, 1, 0.36, 1)`), live tab switching, and responsive 4-viewport adaptation (`1440px`, `1024px`, `768px`, `375px`)."
+    }
+  ],
+  "isFree": true,
+  "image": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4",
+  "poster": "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261004_105730_10a54951-d439-4e1b-9776-2b9e54fdd1b1.png&w=1280&q=85",
+  "assignedTier": "premium",
+  "fetchedAt": "2026-11-05T22:56:07.196Z",
+  "daily_state": null
+}

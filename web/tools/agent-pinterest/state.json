@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-05",
+  "lastRunDate": "2026-11-06",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -60,7 +60,12 @@
     "local-3c68a61913a1",
     "local-b8a941e5e683",
     "local-e5cb93685a9b",
-    "local-4e26518c5939"
+    "local-4e26518c5939",
+    "local-6300d9d7e167",
+    "local-c93780188fbb",
+    "local-e1b973e02dfd",
+    "local-c214605a9f7e",
+    "local-d4d8be69d52c"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -118,7 +123,12 @@
     "3c68a61913a143db72f520fc4779f0733e7bb1c690e5860ef1a9581b601da197",
     "b8a941e5e6833e9edb0329d54a36038b0847d34661636acf2379022bedb05113",
     "e5cb93685a9b644d1ab0e526cd169c419a22f2499df28a0c2366699fb21d9370",
-    "4e26518c59394a2a3e58201d631d301387c1781c1027bba0820e0fe3a173309d"
+    "4e26518c59394a2a3e58201d631d301387c1781c1027bba0820e0fe3a173309d",
+    "6300d9d7e1674ba5ae29151592afa40b1c5d82d14fb077f7a87597d8dedccc56",
+    "c93780188fbb5bc66f0a810c00294295b4e562a14304c2c7b5bea88d2ca882e6",
+    "e1b973e02dfdc7b1ef140dc12864e9a16484e3b3e452cce944133992c8835a98",
+    "c214605a9f7e78af9ba5ca824c930c5602cd084d573521f0b0397884010faca6",
+    "d4d8be69d52cd53885456dc5a6aa55230b02482903aed58809135cfbb92bded7"
   ],
   "processedSlugs": [
     "_design",
@@ -197,6 +207,7 @@
     "haul",
     "health-portal",
     "helios-investments",
+    "hello-illustrator-folio",
     "impact-ventures",
     "industrix-engineering",
     "innovation",
@@ -209,9 +220,11 @@
     "kinetiq",
     "kresna-footer",
     "laila",
+    "laila-sakura-creator",
     "lauberhorn-ridge",
     "launch-video",
     "lawyer-justicia",
+    "layla-astrology-wiki",
     "leaflit",
     "lingoglass",
     "looo-ai-magic",
@@ -269,6 +282,7 @@
     "professional-graphic",
     "prosthetics-hero",
     "puro-amor",
+    "quickcam-ui-ux",
     "rayhan-aditya",
     "razer-mamba-pro",
     "reelmark",
@@ -276,6 +290,7 @@
     "reviews",
     "riverine-ai",
     "rivr",
+    "rome-explorer",
     "saas-software",
     "securify",
     "sellix",
@@ -528,14 +543,45 @@
         "playing-market-audio": "premium",
         "mythwood-sanctuary": "premium"
       }
+    },
+    {
+      "date": "2026-11-06",
+      "built": [
+        "quickcam-ui-ux",
+        "rome-explorer",
+        "hello-illustrator-folio",
+        "layla-astrology-wiki",
+        "laila-sakura-creator"
+      ],
+      "catalogIds": [
+        "t246",
+        "t247",
+        "t248",
+        "t249",
+        "t250"
+      ],
+      "pinIds": [
+        "local-6300d9d7e167",
+        "local-c93780188fbb",
+        "local-e1b973e02dfd",
+        "local-c214605a9f7e",
+        "local-d4d8be69d52c"
+      ],
+      "tiers": {
+        "quickcam-ui-ux": "free",
+        "rome-explorer": "free",
+        "hello-illustrator-folio": "premium",
+        "layla-astrology-wiki": "premium",
+        "laila-sakura-creator": "premium"
+      }
     }
   ],
   "todayCreatedCount": 5,
   "todayBuilt": [
-    "alpine-telemetry",
-    "japan-sunrise-tours",
-    "dream-machu-picchu",
-    "playing-market-audio",
-    "mythwood-sanctuary"
+    "quickcam-ui-ux",
+    "rome-explorer",
+    "hello-illustrator-folio",
+    "layla-astrology-wiki",
+    "laila-sakura-creator"
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "id": "t247",
+  "slug": "rome-explorer",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T23:39:32.205Z",
+  "demo": "/demos/rome-explorer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4fc1136bd121",
+  "sha256": "4fc1136bd121b975e1f8e1abfd4173d024618e8192eb6c9e6721cc3dc68677eb",
+  "demoHtmlSha256": "115aeaa2543930b3f4bb7808f97d3768049889cad22a56e245c9e500b41d3027",
+  "demoSha256": "f48f6f61f4e3741fd2c6d40224492899207c3f7ffedab9a2945123080aa79d63",
+  "bytes": 689229,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 623
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rome-explorer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rome-explorer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rome-explorer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rome-explorer-return.jpg"
+  ]
+}

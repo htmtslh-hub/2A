@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rtawahist Layla — Celestial Astrology Compendium &amp; Lore Portal</title>
+  <meta name="description" content="Celestial character compendium and astrolabe lore portal for Rtawahist scholar Layla, featuring interactive star-chart telemetry and gallery archives." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b1124;
+      --surface: #131e3a;
+      --surface-gold: rgba(244, 208, 111, 0.12);
+      --fg: #f4f7ff;
+      --muted: #b3c2e0;
+      --accent: #f4d06f;
+      --accent-text: #fde68a;
+      --on-accent: #0b1124;
+      --cryo: #7dd3fc;
+      --font-display: 'Cormorant Garamond', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      background: radial-gradient(circle at 75% 18%, rgba(125, 211, 252, 0.16), transparent 40%),
+                  radial-gradient(circle at 20% 60%, rgba(244, 208, 111, 0.11), transparent 45%),
+                  var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 700; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .lyl-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 17, 36, 0.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(244, 208, 111, 0.28);
+      padding: 14px 28px;
+    }
+    .lyl-nav {
+      max-width: 1260px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .lyl-brand {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--accent-text);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+    .lyl-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .lyl-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .lyl-links a:hover { color: var(--accent-text); }
+    .lyl-btn-gold {
+      background: var(--accent);
+      color: var(--on-accent);
+      border: none;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+    .lyl-btn-ghost {
+      background: rgba(244, 208, 111, 0.1);
+      color: var(--accent-text);
+      border: 1px solid rgba(244, 208, 111, 0.35);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .lyl-main {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 40px 24px 84px;
+    }
+
+    /* Hero Stage */
+    .lyl-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(244, 208, 111, 0.25);
+    }
+    .lyl-darshan {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--accent-text);
+      margin-bottom: 4px;
+    }
+    .lyl-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.8rem, 7vw, 6.2rem);
+      font-weight: 700;
+      line-height: 0.95;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    .lyl-quote-pill {
+      border-left: 3px solid var(--accent);
+      padding: 10px 16px;
+      background: rgba(19, 30, 58, 0.75);
+      border-radius: 0 14px 14px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    .lyl-portrait-frame {
+      position: relative;
+      border-radius: 28px;
+      padding: 14px;
+      background: linear-gradient(145deg, rgba(244, 208, 111, 0.35), rgba(125, 211, 252, 0.15));
+      border: 1.5px solid rgba(244, 208, 111, 0.55);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.55);
+    }
+    .lyl-portrait-frame img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+
+    /* Section 2: Rtawahist Lore & Persona Switcher */
+    .lyl-lore-panel {
+      margin-top: 56px;
+      background: var(--surface);
+      border: 1.5px solid rgba(244, 208, 111, 0.38);
+      border-radius: 28px;
+      padding: 36px;
+      position: relative;
+    }
+    .lyl-persona-tabs {
+      display: inline-flex;
+      gap: 8px;
+      background: rgba(11, 17, 36, 0.7);
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(244, 208, 111, 0.3);
+      margin-bottom: 22px;
+    }
+    .lyl-persona-btn {
+      background: transparent;
+      color: var(--muted);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+    .lyl-persona-btn.active {
+      background: var(--accent);
+      color: var(--on-accent);
+    }
+    .lyl-lore-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* Section 3: Gallery 3 Ornate Astral Frames */
+    .lyl-gallery-sec {
+      margin-top: 64px;
+      text-align: center;
+    }
+    .lyl-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 28px;
+    }
+    .lyl-art-card {
+      background: var(--surface);
+      border: 1.5px solid rgba(244, 208, 111, 0.42);
+      border-radius: 22px;
+      padding: 12px;
+      text-align: left;
+    }
+    .lyl-art-card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* Chibi Footer Banner */
+    .lyl-chibi-banner {
+      margin-top: 56px;
+      background: linear-gradient(90deg, rgba(19, 30, 58, 0.95), rgba(28, 43, 82, 0.95));
+      border: 1.5px solid rgba(244, 208, 111, 0.4);
+      border-radius: 26px;
+      padding: 24px 32px;
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    .lyl-chibi-banner img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+    }
+
+    /* Modal */
+    .lyl-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 10, 22, 0.84);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .lyl-modal-backdrop.open { display: flex; }
+    .lyl-modal {
+      background: var(--surface);
+      border: 1.5px solid var(--accent);
+      border-radius: 24px;
+      max-width: 520px;
+      width: 100%;
+      padding: 28px;
+    }
+
+    @media (max-width: 960px) {
+      .lyl-hero, .lyl-lore-cols, .lyl-gallery-grid, .lyl-chibi-banner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .lyl-links { display: none; }
+    }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="lyl-header">
+    <nav class="lyl-nav" aria-label="Celestial Compendium Navigation">
+      <a href="#main-content" class="lyl-brand">RTAWAHIST · LAYLA</a>
+      <ul class="lyl-links">
+        <li><a href="#hero-stage">Home</a></li>
+        <li><a href="#akasha-lore">About</a></li>
+        <li><a href="#astral-gallery">Gallery</a></li>
+        <li><a href="#chibi-outro">More</a></li>
+      </ul>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="lyl-btn-ghost"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:5px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>Motion: ON</button>
+        <button type="button" id="openAstrolabeBtn" class="lyl-btn-gold">Read Star Chart</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="lyl-main">
+    <section id="hero-stage" class="lyl-hero" aria-labelledby="layla-title">
+      <div>
+        <div class="lyl-darshan">Rtawahist Darshan · Theoretical Astrology</div>
+        <h1 id="layla-title" class="lyl-h1">Layla</h1>
+        <div class="lyl-quote-pill" id="personaQuote">
+          “The stars revolve according to eternal laws, yet my thesis pages somehow fill themselves with flawless orbital proofs while I sleep...”
+        </div>
+        <p style="color:var(--muted);margin-bottom:24px;">
+          Specializing in Nocturnal Astrolabe Cartography at the Sumeru Akademiya. Surrounded by floating golden starlight rings, Layla shields companions inside the Curtain of Slumber.
+        </p>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
+          <button type="button" class="lyl-btn-gold" id="heroReadMoreBtn">READ MORE</button>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--cryo);">ELEMENT: CRYO · CONSTELLATION: LUSCINIA</span>
+        </div>
+      </div>
+
+      <div class="lyl-portrait-frame">
+        <img src="assets/layla-hero.webp" alt="Rtawahist Layla Celestial Astrologer Portrait" width="560" height="580" />
+      </div>
+    </section>
+
+    <section id="akasha-lore" class="lyl-lore-panel" aria-labelledby="lore-heading">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:14px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">AKASHA ARCHIVE · DUAL CONSCIOUSNESS</span>
+          <h2 id="lore-heading" style="font-family:var(--font-display);font-size:clamp(2rem,3.6vw,3rem);">Rtawahist Scholarly Dossier</h2>
+        </div>
+
+        <div class="lyl-persona-tabs" role="tablist" aria-label="Layla Persona State">
+          <button type="button" class="lyl-persona-btn active" data-persona="awake" role="tab" aria-selected="true">Awake Student</button>
+          <button type="button" class="lyl-persona-btn" data-persona="dream" role="tab" aria-selected="false">Starlight Somnambulist</button>
+        </div>
+      </div>
+
+      <div class="lyl-lore-cols" id="personaContent">
+        <div>
+          <h3 style="color:var(--accent-text);margin-bottom:8px;" id="loreCol1Title">01 · Heavy-Eyed Thesis Anxiety</h3>
+          <p style="color:var(--muted);font-size:0.92rem;" id="loreCol1Text">
+            Burdened by stacks of unread star charts and orbital ephemeris tables, daytime Layla constantly worries she has fallen behind her Rtawahist peers.
+          </p>
+        </div>
+        <div>
+          <h3 style="color:var(--accent-text);margin-bottom:8px;" id="loreCol2Title">02 · The Blessing of the Stars</h3>
+          <p style="color:var(--muted);font-size:0.92rem;" id="loreCol2Text">
+            Once asleep inside her Curtain of Slumber, a calm, razor-sharp astral persona awakens—solving complex celestial mechanics in minutes.
+          </p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(244,208,111,0.2);">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:1.85rem;font-weight:700;color:var(--accent-text);" data-counter="108" data-suffix=" CHARTS">108 CHARTS</div>
+          <span style="font-size:0.78rem;color:var(--muted);">Completed Nocturnal Ephemerides</span>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:1.85rem;font-weight:700;color:var(--cryo);" data-counter="12.0" data-decimals="1" data-suffix="s">12.0s</div>
+          <span style="font-size:0.78rem;color:var(--muted);">Curtain of Slumber Shield Uptime</span>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:1.85rem;font-weight:700;color:var(--accent-text);" data-counter="4" data-suffix=" STARS">4 STARS</div>
+          <span style="font-size:0.78rem;color:var(--muted);">Shooting Star Volley Threshold</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="astral-gallery" class="lyl-gallery-sec" aria-labelledby="gallery-heading">
+      <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);letter-spacing:0.14em;">CELESTIAL ILLUSTRATIONS</span>
+      <h2 id="gallery-heading" style="font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);margin-top:4px;">Gallery</h2>
+
+      <div class="lyl-gallery-grid">
+        <article class="lyl-art-card">
+          <img src="assets/layla-starlight-art1.webp" alt="Layla Nocturnal Astrolabe Study" width="400" height="440" />
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--accent-text);">I · Nights of Formal Focus</h3>
+          <p style="font-size:0.84rem;color:var(--muted);">Tracing the northern circumpolar constellations beneath the Akademiya observatory dome.</p>
+        </article>
+
+        <article class="lyl-art-card">
+          <img src="assets/layla-dream-art2.webp" alt="Layla Dreaming Inside the Starlight Shield" width="400" height="440" loading="lazy" />
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--accent-text);">II · Solemnity of Dreams</h3>
+          <p style="font-size:0.84rem;color:var(--muted);">Drifting peacefully inside a crystalline Cryo astrolabe sphere as Night Stars coalesce.</p>
+        </article>
+
+        <article class="lyl-art-card">
+          <img src="assets/layla-chibi-sleepy.webp" alt="Sleepy Chibi Layla with Starlight Sprite" width="400" height="440" loading="lazy" />
+          <h3 style="font-family:var(--font-display);font-size:1.3rem;color:var(--accent-text);">III · Starlight Slumber</h3>
+          <p style="font-size:0.84rem;color:var(--muted);">Resting on a crescent moon pillow after another all-night celestial calculation session.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="chibi-outro" class="lyl-chibi-banner" aria-label="Sleepy Astrologer Epilogue">
+      <img src="assets/layla-chibi-sleepy.webp" alt="Chibi Layla Icon" width="160" height="160" loading="lazy" />
+      <div>
+        <h3 style="font-family:var(--font-display);font-size:1.6rem;color:var(--accent-text);">“Wait... who finished writing my entire astrology dissertation?!”</h3>
+        <p style="color:var(--muted);font-size:0.9rem;">Inspect Layla's full constellation scaling, shield absorption calculator, and Rtawahist bibliography.</p>
+      </div>
+      <button type="button" class="lyl-btn-gold" id="openCalcModalBtn">Open Shield Calculator</button>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid rgba(244,208,111,0.22);padding:32px 24px;text-align:center;color:var(--muted);font-size:0.84rem;">
+    <p>© 2026 Rtawahist Layla Celestial Compendium · Crafted for Character Lore &amp; Anime UI Fans.</p>
+  </footer>
+
+  <div class="lyl-modal-backdrop" id="astrolabeModal" role="dialog" aria-modal="true" aria-labelledby="astroModalTitle">
+    <div class="lyl-modal">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">LUSCINIA ASTROLABE TELEMETRY</span>
+        <button type="button" id="closeAstroModalBtn" class="lyl-btn-ghost">ESC X</button>
+      </div>
+      <h2 id="astroModalTitle" style="font-family:var(--font-display);font-size:1.65rem;margin-bottom:10px;">Curtain of Slumber — Max HP Shield Spec</h2>
+      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:18px;">
+        At Talent Lv. 10 (36,000 Max HP), Layla's Curtain of Slumber absorbs 14,820 DMG (250% Cryo efficiency) while firing 4 homing Shooting Stars per cycle.
+      </p>
+      <button type="button" id="confirmAstroModalBtn" class="lyl-btn-gold">Close Star Chart</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const personaBtns = document.querySelectorAll('[data-persona]');
+      personaBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          personaBtns.forEach((b) => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          const mode = btn.getAttribute('data-persona');
+          if (mode === 'dream') {
+            document.getElementById('loreCol1Title').textContent = '01 · Somnambulant Star-Seer';
+            document.getElementById('loreCol1Text').textContent = 'Speaking with effortless authority, Dream-Layla drafts peerless celestial proofs and reprimands anyone who disturbs the stars.';
+            document.getElementById('loreCol2Title').textContent = '02 · Starlight Volley Synchrony';
+            document.getElementById('loreCol2Text').textContent = 'Four Night Stars lock onto astral coordinates automatically, launching homing Cryo projectiles across the battlefield.';
+          } else {
+            document.getElementById('loreCol1Title').textContent = '01 · Heavy-Eyed Thesis Anxiety';
+            document.getElementById('loreCol1Text').textContent = 'Burdened by stacks of unread star charts and orbital ephemeris tables, daytime Layla constantly worries she has fallen behind her Rtawahist peers.';
+            document.getElementById('loreCol2Title').textContent = '02 · The Blessing of the Stars';
+            document.getElementById('loreCol2Text').textContent = 'Once asleep inside her Curtain of Slumber, a calm, razor-sharp astral persona awakens—solving complex celestial mechanics in minutes.';
+          }
+        });
+      });
+
+      const modal = document.getElementById('astrolabeModal');
+      ['openAstrolabeBtn', 'heroReadMoreBtn', 'openCalcModalBtn'].forEach((id) => {
+        document.getElementById(id).addEventListener('click', () => modal.classList.add('open'));
+      });
+      document.getElementById('closeAstroModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      document.getElementById('confirmAstroModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

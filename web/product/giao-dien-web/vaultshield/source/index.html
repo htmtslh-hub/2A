@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultShield — Ironclad Security &amp; Effortless Biometric Vault</title>
+  <meta name="description" content="Protect your passwords, credit cards, and private notes in an unbreakable zero-knowledge vault that syncs across all your devices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #eef2f9;
+      --surface: #ffffff;
+      --fg: #192837;
+      --muted: #4b5b6b;
+      --accent: #7342e2;
+      --accent-text: #5b2bc4;
+      --on-accent: #ffffff;
+      --font-display: 'Helvetica Now Display Bold', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      overflow-x: clip;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--fg); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Hero Stage with vertically flipped CloudFront video per spec */
+    .vsh-hero {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background: linear-gradient(180deg, #e8eef8 0%, #dbe4f3 100%);
+    }
+    .vsh-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleY(-1);
+      z-index: 0;
+    }
+    .vsh-hero-veil {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.35), rgba(238, 242, 249, 0.68));
+      z-index: 1;
+    }
+
+    /* Navigation Bar */
+    .vsh-header {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      padding: 20px 32px;
+    }
+    .vsh-nav {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .vsh-logo {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--fg);
+      text-decoration: none;
+    }
+    .vsh-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .vsh-nav-links a {
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+    .vsh-nav-links a:hover { opacity: 0.7; }
+    .vsh-btn-dark {
+      background: var(--fg);
+      color: #ffffff;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 12px 28px rgba(25, 40, 55, 0.22);
+    }
+    .vsh-btn-glass {
+      background: rgba(255, 255, 255, 0.58);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      color: var(--fg);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* Center Hero Copy with Inline Icon Badges */
+    .vsh-hero-center {
+      position: relative;
+      z-index: 10;
+      max-width: 980px;
+      margin: auto;
+      padding: 40px 24px 72px;
+      text-align: center;
+    }
+    .vsh-promo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 999px;
+      padding: 6px 20px 6px 6px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(25, 40, 55, 0.08);
+    }
+    .vsh-zap-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vsh-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5.8vw, 4.75rem);
+      font-weight: 800;
+      color: var(--fg);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+    .vsh-inline-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(42px, 5vw, 62px);
+      height: clamp(42px, 5vw, 62px);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 12px 28px rgba(25, 40, 55, 0.12);
+      vertical-align: middle;
+      margin: 0 6px;
+      color: var(--fg);
+    }
+    .vsh-lead {
+      font-size: clamp(1.02rem, 1.35vw, 1.2rem);
+      font-weight: 600;
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 34px;
+      line-height: 1.5;
+    }
+
+    /* Section 2: Interactive Zero-Knowledge Entropy & Password Vault Generator */
+    .vsh-vault-sec {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 76px 24px 92px;
+    }
+    .vsh-generator-card {
+      background: var(--surface);
+      border: 1px solid #dce4f0;
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 24px 56px rgba(25, 40, 55, 0.08);
+      margin-bottom: 36px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .vsh-pass-display {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: #f4f7fc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 16px 20px;
+      color: var(--fg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .vsh-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .vsh-info-card {
+      background: var(--surface);
+      border: 1px solid #dce4f0;
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    /* Modal */
+    .vsh-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(25, 40, 55, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+    .vsh-modal-backdrop.open { display: flex; }
+    .vsh-modal {
+      background: #ffffff;
+      border-radius: 26px;
+      max-width: 500px;
+      width: 100%;
+      padding: 30px;
+    }
+
+    @media (max-width: 960px) {
+      .vsh-generator-card, .vsh-bento { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .vsh-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="vsh-hero" aria-labelledby="vault-heading">
+      <video
+        class="vsh-bg-video"
+        id="vaultHeroVideo"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260518_003132_8b7edcb6-c64d-4a52-a9ca-879942e122ad.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+      <div class="vsh-hero-veil" aria-hidden="true"></div>
+
+      <header class="vsh-header">
+        <nav class="vsh-nav" aria-label="VaultShield Navigation">
+          <a href="#main-content" class="vsh-logo">VaultShield</a>
+          <ul class="vsh-nav-links">
+            <li><a href="#vault-heading">Overview</a></li>
+            <li><a href="#vault-generator">Security</a></li>
+            <li><a href="#vault-metrics">Pricing</a></li>
+            <li><a href="#vault-metrics">FAQ</a></li>
+          </ul>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button type="button" id="motionToggleBtn" class="vsh-btn-glass" style="padding:10px 16px;font-family:var(--font-mono);font-size:0.78rem;">Motion: ON</button>
+            <button type="button" id="downloadTopBtn" class="vsh-btn-dark">Download</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="vsh-hero-center">
+        <div class="vsh-promo-pill">
+          <span class="vsh-zap-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          <span style="font-weight:700;font-size:0.95rem;color:var(--fg);">Get 50% OFF VaultShield lifetime purchase</span>
+        </div>
+
+        <h1 id="vault-heading" class="vsh-h1">
+          Ironclad security<br/>
+          and
+          <span class="vsh-inline-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+          </span>
+          effortless<br/>
+          access
+          <span class="vsh-inline-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/><path d="M5 19.5C5.5 18 6 15 6 12c0-.7.12-1.37.34-2"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/></svg>
+          </span>
+          to<br/>
+          your digital world
+        </h1>
+
+        <p class="vsh-lead">
+          Protect your passwords, credit cards, and private notes in an unbreakable vault that syncs across all your devices.
+        </p>
+
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <button type="button" class="vsh-btn-dark" id="getVaultBtn">Get VaultShield</button>
+          <a href="#vault-generator" class="vsh-btn-glass" style="text-decoration:none;">Explore Features</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="vault-generator" class="vsh-vault-sec" aria-labelledby="gen-heading">
+      <div class="vsh-generator-card">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);font-weight:700;">LIVE ZERO-KNOWLEDGE KEY SYNTHESIZER</span>
+          <h2 id="gen-heading" style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);margin-top:6px;">Test Hardware-Seeded Vault Keys</h2>
+          <div class="vsh-pass-display">
+            <span id="generatedKeyText">VS9#mK2$pL8@xQ4!vR7&amp;nZ5*</span>
+            <button type="button" class="vsh-btn-dark" id="regenKeyBtn" style="padding:8px 16px;font-size:0.8rem;">Rotate Key</button>
+          </div>
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--muted);" id="entropyReadout">Entropy: 158.4 bits · Argon2id + AES-256-GCM Verified</span>
+        </div>
+
+        <div style="background:#f4f7fc;border-radius:20px;padding:22px;">
+          <h3 style="font-size:1.05rem;margin-bottom:8px;">Biometric Enclave Handshake</h3>
+          <p style="font-size:0.88rem;color:var(--muted);margin-bottom:14px;">Keys never leave your device's Secure Enclave in plaintext. Sub-15ms TouchID / FaceID / Passkey autofill.</p>
+          <div style="font-family:var(--font-mono);font-size:1.9rem;font-weight:800;color:var(--accent-text);" data-counter="256" data-suffix="-BIT">256-BIT</div>
+        </div>
+      </div>
+
+      <div id="vault-metrics" class="vsh-bento">
+        <article class="vsh-info-card">
+          <div style="font-family:var(--font-mono);font-size:2rem;font-weight:800;color:var(--fg);" data-counter="0" data-suffix=" BREACHES">0 BREACHES</div>
+          <h3 style="margin:8px 0;">Zero-Knowledge Architecture</h3>
+          <p style="font-size:0.88rem;color:var(--muted);">Audited annually by independent cryptographic researchers.</p>
+        </article>
+        <article class="vsh-info-card">
+          <div style="font-family:var(--font-mono);font-size:2rem;font-weight:800;color:var(--fg);" data-counter="14" data-suffix="ms">14ms</div>
+          <h3 style="margin:8px 0;">Cross-Device Delta Sync</h3>
+          <p style="font-size:0.88rem;color:var(--muted);">Instant encrypted vault synchronization across macOS, Windows, iOS, Android, and Linux.</p>
+        </article>
+        <article class="vsh-info-card">
+          <div style="font-family:var(--font-mono);font-size:2rem;font-weight:800;color:var(--accent-text);" data-counter="50" data-suffix="% OFF">50% OFF</div>
+          <h3 style="margin:8px 0;">Lifetime Family &amp; Founder Pass</h3>
+          <p style="font-size:0.88rem;color:var(--muted);">One-time cryptographic licence with emergency kit recovery and dark-web breach alerts.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid #dce4f0;padding:32px 24px;text-align:center;color:var(--muted);font-size:0.86rem;">
+    <p>© 2026 VaultShield Security Inc. Zero-Knowledge Biometric Password Manager.</p>
+  </footer>
+
+  <div class="vsh-modal-backdrop" id="vaultModal" role="dialog" aria-modal="true" aria-labelledby="vshModalTitle">
+    <div class="vsh-modal">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:0.76rem;color:var(--accent-text);">VAULTSHIELD LIFETIME LICENCE</span>
+        <button type="button" id="closeVaultModalBtn" class="vsh-btn-glass" style="padding:6px 14px;">ESC X</button>
+      </div>
+      <h2 id="vshModalTitle" style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:10px;">Claim 50% OFF VaultShield Lifetime</h2>
+      <p style="color:var(--muted);font-size:0.9rem;margin-bottom:20px;">
+        Includes unlimited device sync, hardware YubiKey MFA support, and 100GB encrypted document storage.
+      </p>
+      <button type="button" id="confirmVaultModalBtn" class="vsh-btn-dark">Download Installer &amp; Claim Pass</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const video = document.getElementById('vaultHeroVideo');
+      const motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn && video) {
+        motionBtn.addEventListener('click', () => {
+          setTimeout(() => {
+            if (document.body.getAttribute('data-motion') === 'paused') video.pause();
+            else video.play().catch(() => {});
+          }, 20);
+        });
+      }
+
+      const samples = [
+        'VS9#mK2$pL8@xQ4!vR7&nZ5*',
+        'K9!qW4#zX8$mP2@rT6&vB3*L',
+        ' E7$nM3@pQ9!wK5#vC8&xL2*R',
+        'Z4@rT9#kL2$pW7!mN5&vX8*Q'
+      ];
+      let sIdx = 0;
+      document.getElementById('regenKeyBtn').addEventListener('click', () => {
+        sIdx = (sIdx + 1) % samples.length;
+        document.getElementById('generatedKeyText').textContent = samples[sIdx].trim();
+        document.getElementById('entropyReadout').textContent = 'Entropy: ' + (158.4 + sIdx * 2.1).toFixed(1) + ' bits · Hardware RNG Seeded';
+      });
+
+      const modal = document.getElementById('vaultModal');
+      document.getElementById('downloadTopBtn').addEventListener('click', () => modal.classList.add('open'));
+      document.getElementById('getVaultBtn').addEventListener('click', () => modal.classList.add('open'));
+      document.getElementById('closeVaultModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      document.getElementById('confirmVaultModalBtn').addEventListener('click', () => modal.classList.remove('open'));
+      window.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

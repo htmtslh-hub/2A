@@ -1,0 +1,44 @@
+{
+  "id": "t233",
+  "slug": "clothing-rail-menswear",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T13:02:45.128Z",
+  "demo": "/demos/clothing-rail-menswear/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "006b54846f86",
+  "sha256": "006b54846f86e252d9d8012b43034f6ad8ba02afb21617e66b8a718d5ba492ec",
+  "demoHtmlSha256": "e7d4676ed63101a5f118313c4e21d978b1c5676ac3c971d2b5548f08253f1293",
+  "demoSha256": "402a6f242490e54b18c79b8e0cd4fbe6027a5bf40a33f8f3fda06eefcf56db26",
+  "bytes": 670652,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.261,
+      "action": "click",
+      "selector": "[data-garment=\"3\"]"
+    },
+    {
+      "seconds": 5.287,
+      "action": "click",
+      "selector": "[role=\"dialog\"] Back + Escape"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-menswear-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-menswear-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-menswear-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-menswear-return.jpg"
+  ]
+}

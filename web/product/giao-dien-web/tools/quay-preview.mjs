@@ -109,7 +109,7 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
-    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai']);
+    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','cdn.21st.dev','images.unsplash.com']);
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
@@ -178,6 +178,14 @@ try {
     if (slug === 'solaris-gate') {
       await page.waitForFunction(() => document.body.classList.contains('intro-ready'), null, { timeout: 30000 });
       await page.waitForTimeout(2200);
+    }
+    if (slug === 'clothing-rail-menswear' || slug === 'clothing-rail-dress-atelier') {
+      await page.waitForFunction(() => {
+        const btns = Array.from(document.querySelectorAll('[data-garment]'));
+        const imgs = Array.from(document.querySelectorAll('[data-garment] img'));
+        return btns.length >= 8 && imgs.length >= 8 && imgs.every(i => i.complete && i.naturalWidth > 0);
+      }, null, { timeout: 45000 });
+      await page.waitForTimeout(1400);
     }
     const start = Date.now();
     const at = async seconds => { const remaining = seconds * 1000 - (Date.now() - start); if (remaining > 0) await page.waitForTimeout(remaining); };
@@ -847,6 +855,27 @@ try {
         const name = actions.some(a=>a.action==='click') ? 'Cài đặt' : 'Xem kịch bản mẫu (Demo)';
         await page.getByRole('button',{name,exact:true}).click();
         actions.push({seconds:(Date.now()-start)/1000,action:'click',selector:`button named ${name}`}); return;
+      }
+      if (slug === 'clothing-rail-menswear' || slug === 'clothing-rail-dress-atelier') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(380, 340, { steps: 8 });
+          await page.mouse.move(860, 340, { steps: 16 });
+          const targetGarment = page.locator('[data-garment="3"]').first();
+          if (await targetGarment.isVisible()) {
+            await targetGarment.click({ force: true });
+            actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '[data-garment="3"]' });
+          }
+        } else {
+          const backBtn = page.locator('[role="dialog"] button:has-text("Back")').first();
+          if (await backBtn.isVisible()) {
+            await backBtn.click({ force: true });
+            await page.waitForTimeout(450);
+          }
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '[role="dialog"] Back + Escape' });
+        }
+        return;
       }
       const candidates = page.locator(nextSelector);
       for (let i = 0; i < await candidates.count(); i++) {

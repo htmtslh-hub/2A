@@ -1,0 +1,19 @@
+Maestiq Dress Atelier Web Template Licence (v1.0.0)
+==================================================
+
+Copyright (c) 2026 Forge Zone (2A Template Store). All rights reserved.
+
+1. GRANT OF LICENCE
+This licence grants you a non-exclusive, non-transferable, worldwide right to use,
+modify, and deploy the "Maestiq Dress Atelier" template for your own personal, creative, or
+commercial web projects.
+
+2. PERMITTED USES
+- Customise all React/TypeScript source code, Tailwind CSS v4 tokens, 3D clothing rail items, and media assets.
+- Deploy the compiled site on unlimited domains owned or operated by you or your direct clients.
+
+3. RESTRICTIONS
+- You may NOT redistribute, resell, lease, sublicense, or publish the template source package in any template marketplace or public repository.
+
+4. DISCLAIMER OF WARRANTY
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.

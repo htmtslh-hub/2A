@@ -110,6 +110,18 @@ try {
       const page = await context.newPage();
       await page.goto(demoUrl, { waitUntil: 'load', timeout: 45000 });
       await page.evaluate(() => document.fonts.ready);
+      await page.evaluate(async () => {
+        const waitImg = (img) =>
+          img.complete && img.naturalWidth > 0
+            ? Promise.resolve()
+            : new Promise((resolve) => {
+                const done = () => resolve();
+                img.addEventListener('load', done, { once: true });
+                img.addEventListener('error', done, { once: true });
+                setTimeout(done, 12000);
+              });
+        await Promise.all(Array.from(document.images, waitImg));
+      });
       await page.waitForFunction(() => {
         const v = document.querySelector('video');
         return !v || v.readyState >= 2;

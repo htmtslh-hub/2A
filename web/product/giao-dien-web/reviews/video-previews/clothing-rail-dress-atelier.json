@@ -1,0 +1,44 @@
+{
+  "id": "t234",
+  "slug": "clothing-rail-dress-atelier",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T13:03:06.067Z",
+  "demo": "/demos/clothing-rail-dress-atelier/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a1da9e21c19a",
+  "sha256": "a1da9e21c19a848276e37b6312faad82760c1c461bede3c49d421c5bb81f8eec",
+  "demoHtmlSha256": "6c9ccde0917e6a93a3b56d04a8cccf91f7a7c554cd330677404163162ed283af",
+  "demoSha256": "87c5f2db46a9ff560c26249c73cc60ae48e3b3bac71a70f5e9e884b6f8012220",
+  "bytes": 659257,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.236,
+      "action": "click",
+      "selector": "[data-garment=\"3\"]"
+    },
+    {
+      "seconds": 5.278,
+      "action": "click",
+      "selector": "[role=\"dialog\"] Back + Escape"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-dress-atelier-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-dress-atelier-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-dress-atelier-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\clothing-rail-dress-atelier-return.jpg"
+  ]
+}

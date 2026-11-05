@@ -2504,5 +2504,33 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "clothing-rail-menswear": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "006b54846f86",
+    "sha256": "006b54846f86e252d9d8012b43034f6ad8ba02afb21617e66b8a718d5ba492ec",
+    "demoHtmlSha256": "e7d4676ed63101a5f118313c4e21d978b1c5676ac3c971d2b5548f08253f1293",
+    "demoSha256": "402a6f242490e54b18c79b8e0cd4fbe6027a5bf40a33f8f3fda06eefcf56db26",
+    "bytes": 670652,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "clothing-rail-dress-atelier": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "a1da9e21c19a",
+    "sha256": "a1da9e21c19a848276e37b6312faad82760c1c461bede3c49d421c5bb81f8eec",
+    "demoHtmlSha256": "6c9ccde0917e6a93a3b56d04a8cccf91f7a7c554cd330677404163162ed283af",
+    "demoSha256": "87c5f2db46a9ff560c26249c73cc60ae48e3b3bac71a70f5e9e884b6f8012220",
+    "bytes": 659257,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

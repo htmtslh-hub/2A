@@ -46,6 +46,94 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t234: {
+    slug: 'clothing-rail-dress-atelier',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Maestiq Dress Atelier",
+        desc: "Showroom đầm dạ hội & atelier 3D tương tác vật lý lò xo dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4 và shadcn/ui: giá treo 10 mẫu đầm cao cấp (kèm 30 ảnh .webp tách nền 3 góc front/back/side cho lụa Mulberry 19-momme, đầm xếp ly 300 nếp sunray plissé, đầm nhung noir và blazer wool), kéo trượt móc treo, nhấc đầm xoay xem dáng lưng, tuỳ chọn móc treo (none/wood/matte), chọn size XS–L, giỏ hàng và 3 chương chất liệu atelier.",
+        tags: ["3D Dress Rail","Đầm dạ hội Atelier","React + Tailwind v4"]
+      },
+      en: {
+        name: "Maestiq Dress Atelier",
+        desc: "An interactive 3D spring-physics eveningwear and dress atelier showroom built with React 18, TypeScript, Vite 6, Tailwind CSS v4 and shadcn/ui: a 10-dress 3D rail bundled with 30 local 3-angle cutout WebP photographs (19-momme Mulberry silk slips, 300-fold sunray plissé, sculpted evening gowns, tailored virgin wool), inertia hanger sliding, 3D back-drape inspection modal, hanger material switcher, XS–L sizing, shopping bag and 3 textile chapters.",
+        tags: ["3D Dress Rail","Eveningwear Atelier","React + Tailwind v4"]
+      },
+      zh: {
+        name: "Maestiq Dress Atelier",
+        desc: "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4 与 shadcn/ui 构建的 3D 高定礼服衣架展厅：内置 10 款高定礼服与连衣裙的 30 张本地前/后/侧三视角 WebP 抠图（19 姆米桑蚕丝、300 褶太阳百褶、丝绒晚礼服等），支持物理滑动衣架、3D 提裙背部垂坠检视、衣架材质切换与购物袋。",
+        tags: ["3D 礼服衣架","高定女装展厅","React + Tailwind v4"]
+      }
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + shadcn/ui (kèm dist/)'],
+        ['Phiên bản', '1.0.0'],
+        ['Gói tải', '1155.8 KB ZIP'],
+        ['Tương tác', 'Giá treo quần áo 3D vật lý lò xo · xoay 3 góc nhìn · chọn size & giỏ hàng']
+      ],
+      en: [
+        ['Format', 'React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + shadcn/ui (includes dist/)'],
+        ['Version', '1.0.0'],
+        ['Package', '1155.8 KB ZIP'],
+        ['Interaction', '3D spring-physics clothing rail · 3-angle cutout rotation · bag & sizing']
+      ],
+      zh: [
+        ['格式', 'React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + shadcn/ui（含 dist/）'],
+        ['版本', '1.0.0'],
+        ['下载包', '1155.8 KB ZIP'],
+        ['交互', '3D 弹簧物理衣架 · 三视角旋转检视 · 尺码与购物袋']
+      ]
+    }
+  },
+
+  t233: {
+    slug: 'clothing-rail-menswear',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Maestiq Menswear Rail",
+        desc: "Showroom thời trang nam 3D tương tác vật lý lò xo dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4 và shadcn/ui: giá treo quần áo 3D (ClothingRailHero) gồm 10 mẫu áo (30 ảnh cutout 3 góc front/back/side), kéo lướt móc treo theo quán tính, nhấc áo khỏi giá để xoay 360° mặt trước/sau, chuyển đổi chế độ ảnh thật / vector-wood, lọc danh mục, chọn size S–XL, giỏ hàng tương tác và 3 chương chất liệu (240 GSM Jersey, 400 GSM Fleece, Scottish Lambswool).",
+        tags: ["3D Clothing Rail","Thời trang nam","React + Tailwind v4"]
+      },
+      en: {
+        name: "Maestiq Menswear Rail",
+        desc: "An interactive 3D spring-physics menswear clothing rail storefront built with React 18, TypeScript, Vite 6, Tailwind CSS v4 and shadcn/ui: a tactile 10-piece 3D clothing rail (30 front/back/side cutout WebPs) with inertia hanger sliding, 360° lift-off detail inspection, photo vs. vector-wood mode toggle, category filtering, S–XL size selection, interactive shopping bag and 3 material chapters (240 GSM Jersey, 400 GSM Fleece, Scottish Lambswool).",
+        tags: ["3D Clothing Rail","Menswear Showroom","React + Tailwind v4"]
+      },
+      zh: {
+        name: "Maestiq Menswear Rail",
+        desc: "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4 与 shadcn/ui 构建的 3D 弹簧物理男装衣架展厅：包含 10 款单品（30 张前/后/侧三视角透明抠图）、惯性滑动衣架、360° 提衣正反检视弹窗、实拍/木纹矢量双模式切换、尺码与购物袋交互及三大面料工艺章节。",
+        tags: ["3D 物理衣架","男装展厅","React + Tailwind v4"]
+      }
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + shadcn/ui (kèm dist/)'],
+        ['Phiên bản', '1.0.0'],
+        ['Gói tải', '170.0 KB ZIP'],
+        ['Tương tác', 'Giá treo quần áo 3D vật lý lò xo · xoay 3 góc nhìn · chọn size & giỏ hàng']
+      ],
+      en: [
+        ['Format', 'React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + shadcn/ui (includes dist/)'],
+        ['Version', '1.0.0'],
+        ['Package', '170.0 KB ZIP'],
+        ['Interaction', '3D spring-physics clothing rail · 3-angle cutout rotation · bag & sizing']
+      ],
+      zh: [
+        ['格式', 'React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + shadcn/ui（含 dist/）'],
+        ['版本', '1.0.0'],
+        ['下载包', '170.0 KB ZIP'],
+        ['交互', '3D 弹簧物理衣架 · 三视角旋转检视 · 尺码与购物袋']
+      ]
+    }
+  },
+
   t232: {
     slug: 'cyberpunk-reveal',
     cat: 'portfolio',

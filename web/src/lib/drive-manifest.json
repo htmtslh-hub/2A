@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-04T13:40:54.951Z",
+  "updatedAt": "2026-11-05T12:59:09.505Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1829,6 +1829,24 @@
       "sizeBytes": 14488,
       "sha256": "2094e04b87f710e554db168e51a02bddbd6ff0818e05fad66a0dcd2d7f19e8ad",
       "updatedAt": "2026-11-04T13:40:54.951Z"
+    },
+    "clothing-rail-menswear": {
+      "fileId": "1bb-TioOsEacusDdcXN_6QHfWLlI4FBK9",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1bb-TioOsEacusDdcXN_6QHfWLlI4FBK9",
+      "webViewUrl": "https://drive.google.com/file/d/1bb-TioOsEacusDdcXN_6QHfWLlI4FBK9/view",
+      "sizeBytes": 174098,
+      "sha256": "264cfffe0c5b2ab0d76dee1851c2ed0066ada5fc41f6e487df74a5575660b43b",
+      "updatedAt": "2026-11-05T12:59:06.929Z"
+    },
+    "clothing-rail-dress-atelier": {
+      "fileId": "1yqtX5v3Oi4pRgruUHouoiv4a9fXHP4VL",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1yqtX5v3Oi4pRgruUHouoiv4a9fXHP4VL",
+      "webViewUrl": "https://drive.google.com/file/d/1yqtX5v3Oi4pRgruUHouoiv4a9fXHP4VL/view",
+      "sizeBytes": 1183530,
+      "sha256": "7fa16df7438f42748b3e1cbbb2b0fcfccc05589afc507f4390ed109afd869a4e",
+      "updatedAt": "2026-11-05T12:59:09.505Z"
     }
   }
 }

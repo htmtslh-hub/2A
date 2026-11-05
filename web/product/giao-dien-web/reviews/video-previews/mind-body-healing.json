@@ -1,0 +1,44 @@
+{
+  "id": "t245",
+  "slug": "mind-body-healing",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T14:42:50.484Z",
+  "demo": "/demos/mind-body-healing/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d6713694db67",
+  "sha256": "d6713694db67af65ee473e0cd898017baf2c93800c2942a1478cac265d442e8b",
+  "demoHtmlSha256": "f1b95162ad6f8b052bb9f28c8e5ce5b411a59b8bd7d5006f6c6fb76c008cac8c",
+  "demoSha256": "a1fe8ce966fef058de4b90c6a43b2c9d0d557f88da113604a9c314996d317518",
+  "bytes": 922540,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.467,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"nav-pill-item\" data-method=\"home\" data-next=\"\">Home</button>"
+    },
+    {
+      "seconds": 4.828,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"nav-pill-item is-active\" data-method=\"home\" data-next=\"\">Home</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1011
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mind-body-healing-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mind-body-healing-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mind-body-healing-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mind-body-healing-return.jpg"
+  ]
+}

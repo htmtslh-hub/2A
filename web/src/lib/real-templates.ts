@@ -46,6 +46,263 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t245: {
+    slug: 'mind-body-healing',
+    cat: 'education',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Aurelia Mind-Body Healing",
+        desc: "Trang chủ khu nghỉ dưỡng trị liệu tâm-thể tự nhiên trên nền video toàn màn hình: hiệu ứng kính lỏng viền sáng mask-composite, huy hiệu 4 avatar xếp chồng, thanh điều hướng viên nang nổi và cụm chấm tam giác 48 giờ tư vấn ban đầu.",
+        tags: ["Liquid Glass","Holistic Wellness","Video Hero"]
+      },
+      en: {
+        name: "Aurelia Mind-Body Healing",
+        desc: "Full-viewport holistic wellness and mind-body healing showcase featuring a looping nature video backdrop, 1px mask-composite liquid-glass pills, overlapping 4-avatar social proof badge, and triangular/checkerboard dot telemetry clusters.",
+        tags: ["Liquid Glass","Holistic Wellness","Video Hero"]
+      },
+      zh: {
+        name: "Aurelia Mind-Body Healing",
+        desc: "全屏自然疗愈与身心健康中心主页：循环视频背景、1px 液态玻璃胶囊导航、四头像重叠徽章与几何点阵数据栏。",
+        tags: ["液态玻璃","身心疗愈","全屏视频"]
+      }
+    }
+  },
+  t244: {
+    slug: 'stark-minimal-footer',
+    cat: 'communication',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "EngineTech Propulsion",
+        desc: "Chuyên trang công nghệ động cơ đẩy vũ trụ EngineTech chuẩn Stark Minimal đen-trắng tuyệt đối: bảng chuyển đổi thông số động cơ Hall-effect & hạt nhân, dải chấm hạt 3 lớp trôi vô tận, lưới 4 cột và logo sóng cắt tròn quy mô lớn.",
+        tags: ["Stark Minimal","Aerospace","Dotted Footer"]
+      },
+      en: {
+        name: "EngineTech Propulsion",
+        desc: "Monochrome black-and-white aerospace propulsion showcase for EngineTech featuring an interactive orbital thruster telemetry switcher above a signature stark minimal footer with a 3-layer drifting radial-dot band and wave-clipped circular emblem.",
+        tags: ["Stark Minimal","Aerospace","Dotted Footer"]
+      },
+      zh: {
+        name: "EngineTech Propulsion",
+        desc: "EngineTech 航天推进技术极简黑白展示页：霍尔与核热推进器遥测切换、三层漂移点阵带与巨幅波浪裁切圆形徽标页脚。",
+        tags: ["极简黑白","航空航天","点阵页脚"]
+      }
+    }
+  },
+  t243: {
+    slug: 'rocket-cta',
+    cat: 'education',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "UI Rocket & Velorah AI",
+        desc: "Nền tảng học thiết kế & xây dựng sản phẩm AI UI Rocket tích hợp cửa sổ đôi kính lỏng: khung trái là trợ lý chat AI Vibe Design tương tác trực tiếp, khung phải là bản xem trước trang web hàng không vũ trụ Velorah® chạy video thực.",
+        tags: ["Split Dashboard","Liquid Glass","AI Course"]
+      },
+      en: {
+        name: "UI Rocket & Velorah AI",
+        desc: "Split-layout AI product and design course hero pairing a high-converting headline with a liquid-glass dual dashboard containing an interactive Vibe Design AI coach chat and a live video-backed Velorah® aviation preview.",
+        tags: ["Split Dashboard","Liquid Glass","AI Course"]
+      },
+      zh: {
+        name: "UI Rocket & Velorah AI",
+        desc: "UI Rocket AI 设计课程分屏英雄区：左侧高转化标题与右侧液态玻璃双栏仪表盘，内含 Vibe Design AI 互动聊天与 Velorah® 实时视频预览。",
+        tags: ["分屏仪表盘","液态玻璃","AI课程"]
+      }
+    }
+  },
+  t242: {
+    slug: 'radial-diagram',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Alex West Radial Studio",
+        desc: "Showcase phương pháp xây dựng thương hiệu toàn diện trên nền tối #0f0f0f: chân dung nhà sáng lập Alex West đen trắng với 10 ô vuông pixel glitch trắng cùng sơ đồ tròn SVG tương tác 3 trục (Websites 215°, Brands 335°, UI/UX Design 110°).",
+        tags: ["Radial SVG","Glitch Portrait","Brand Studio"]
+      },
+      en: {
+        name: "Alex West Radial Studio",
+        desc: "Minimalist dark branding agency showcase pairing a grayscale pixel-glitch founder portrait and editorial quote by Alex West with an interactive SVG radial circle diagram across Websites (215°), Brands (335°), and UI/UX Design (110°).",
+        tags: ["Radial SVG","Glitch Portrait","Brand Studio"]
+      },
+      zh: {
+        name: "Alex West Radial Studio",
+        desc: "Alex West 极简深色品牌工作室展示：黑白像素故障创始人肖像配以三轴交互式 SVG 径向圆图（网站 215°、品牌 335°、UI/UX 110°）。",
+        tags: ["径向图表","像素故障","品牌设计"]
+      }
+    }
+  },
+  t241: {
+    slug: 'portfolio-about',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Kaelen 3D Scroll Portfolio",
+        desc: "Portfolio đạo diễn chuyển động 3D trên nền đen sâu #0C0C0C: 4 vật thể 3D nổi ở 4 góc màn hình, tiêu đề ABOUT ME gradient kim loại font Kanit, hiệu ứng sáng dần từng ký tự theo cuộn trang và nút CONTACT ME dải màu neon đa điểm.",
+        tags: ["Scroll Reveal","3D Corner Objects","Kanit Typography"]
+      },
+      en: {
+        name: "Kaelen 3D Scroll Portfolio",
+        desc: "High-contrast dark 3D motion portfolio featuring four floating 3D corner objects, metallic gradient Kanit display typography, progressive character-by-character scroll-opacity illumination, and a multi-stop neon contact pill.",
+        tags: ["Scroll Reveal","3D Corner Objects","Kanit Typography"]
+      },
+      zh: {
+        name: "Kaelen 3D Scroll Portfolio",
+        desc: "深黑高对比 3D 动态设计作品集：四角悬浮 3D 几何体、金属渐变 Kanit 标题、逐字滚动点亮段落与霓虹多色胶囊按钮。",
+        tags: ["逐字点亮","3D悬浮","创意作品集"]
+      }
+    }
+  },
+  t240: {
+    slug: 'strata-ai',
+    cat: 'communication',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Strata Grounded AI",
+        desc: "Trang chủ nền tảng mô hình AI doanh nghiệp Strata: nền tối lưới vuông #0d0c11, tiêu đề nhấn màu xanh bạc hà #bdf7ee, video khối kính dữ liệu 3D isometric kết hợp 2 thẻ kính mờ nổi STRATA Index (+14.8%) và BASTION Red-Team.",
+        tags: ["Enterprise AI","Isometric Data","Glass Cards"]
+      },
+      en: {
+        name: "Strata Grounded AI",
+        desc: "Enterprise AI foundation model landing page on a gridded #0d0c11 canvas featuring an isometric 3D glass data slabs video overlapped by floating STRATA Index benchmark and BASTION red-team telemetry glass cards.",
+        tags: ["Enterprise AI","Isometric Data","Glass Cards"]
+      },
+      zh: {
+        name: "Strata Grounded AI",
+        desc: "Strata 企业级可信 AI 基础模型主页：网格深色画布、薄荷绿渐变标题、等轴测 3D 玻璃数据块视频与 STRATA Index / BASTION 悬浮毛玻璃卡片。",
+        tags: ["企业级AI","3D数据块","毛玻璃卡片"]
+      }
+    }
+  },
+  t239: {
+    slug: 'mythwood-sanctuary',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Mythwood Sanctuary",
+        desc: "Cổng rừng cổ tích & biên niên sử Starlight Guild: minh họa cổng gỗ chạm khắc giữa rừng chiều tím, chim phượng hoàng xanh ngọc bay lượn trên bầu trời vàng ấm, thư viện cây cổ thụ Hollow Oak, vòng đá cổ ngữ phát sáng và bảng tương tác 3 ấn ký cổ ngữ.",
+        tags: ["Fantasy Portal","Storybook UI","Woodland Lore"]
+      },
+      en: {
+        name: "Mythwood Sanctuary",
+        desc: "Enchanted woodland portal and Starlight Guild chronicle featuring a carved elder-oak archway, soaring teal-and-ember phoenix guardians, the Elder Tree Library, glowing runestone circle, and interactive rune sigil lore switcher.",
+        tags: ["Fantasy Portal","Storybook UI","Woodland Lore"]
+      },
+      zh: {
+        name: "Mythwood Sanctuary",
+        desc: "奇幻森林传送门与星光公会编年史：雕花古橡木拱门、翱翔的青羽火凤、古树图书馆与发光符文石阵交互。",
+        tags: ["奇幻门户","插画界面","符文交互"]
+      }
+    }
+  },
+  t238: {
+    slug: 'playing-market-audio',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Playing Market Audio",
+        desc: "Showroom tai nghe không dây phòng thu PLAYING / MARKET trên nền khung hồng đất terracotta và sân khấu đen tuyền phản chiếu gương: tai nghe kim loại Vàng Hồng (Oro Rosa), Xanh Đêm (Blue) và Tím Hoàng Gia (Púrpura), bộ chuyển màu 3D trực tiếp, 3 chế độ EQ DSP và củ loa Neodymium 50mm.",
+        tags: ["Rose-Gold Audio","3D Headphones","E-Commerce"]
+      },
+      en: {
+        name: "Playing Market Audio",
+        desc: "Flagship wireless studio headphones showcase framed in warm terracotta-rose around a pitch-black reflective stage: interactive Rose-Gold, Midnight Blue, and Royal Purple 3D finish switcher, 3 DSP equalization modes, and 50mm copper-rose driver cutaway.",
+        tags: ["Rose-Gold Audio","3D Headphones","E-Commerce"]
+      },
+      zh: {
+        name: "Playing Market Audio",
+        desc: "PLAYING / MARKET 旗舰无线监听耳机展厅：玫瑰金、午夜蓝与皇家紫 3D 配色实时切换、3 种 DSP 均衡模式与 50mm 铜金驱动单元。",
+        tags: ["玫瑰金耳机","音频电商","3D展示"]
+      }
+    }
+  },
+  t237: {
+    slug: 'dream-machu-picchu',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Dream Machu Expedition",
+        desc: "Chuyên trang thám hiểm rừng mây Andes & thành cổ Machu Picchu tông xanh rừng già và vàng Inca: khung vòm đá rừng nhiệt đới nhìn ra đỉnh Huayna Picchu, timeline 5 lý do khám phá với khung ảnh xoay thoi 45° và bảng chọn lịch trình 4 tuyến Inca Trail.",
+        tags: ["Machu Picchu","Diamond Grid","Andean Expedition"]
+      },
+      en: {
+        name: "Dream Machu Expedition",
+        desc: "Andean cloud-forest and Machu Picchu expedition showcase in deep rainforest emerald and Incan gold: mossy cliff arch hero with condor and llama, 5-node diamond photography timeline, and interactive 4-route Inca Trail itinerary selector.",
+        tags: ["Machu Picchu","Diamond Grid","Andean Expedition"]
+      },
+      zh: {
+        name: "Dream Machu Expedition",
+        desc: "安第斯云雾森林与马丘比丘探险专题：深林绿与印加金配色、45度菱形摄影时间轴与4条印加古道行程交互切换。",
+        tags: ["马丘比丘","菱形画廊","探险旅游"]
+      }
+    }
+  },
+  t236: {
+    slug: 'japan-sunrise-tours',
+    cat: 'entertainment',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Japan Sunrise Tours",
+        desc: "Hành trình 10 ngày khám phá Nhật Bản mùa hoa anh đào qua 3 thành phố Osaka, Kyoto và Tokyo: bình minh sương sớm trên thung lũng núi với lữ khách kimono, 5 thẻ điểm nhấn dọc, timeline lịch trình Ngày 1–10 kèm ảnh thực tế và biểu mẫu đặt tour kính mờ trước tháp Chureito & núi Phú Sĩ.",
+        tags: ["Japan Travel","Sakura Itinerary","Mountain Sunrise"]
+      },
+      en: {
+        name: "Japan Sunrise Tours",
+        desc: "10-day golden sunrise and sakura itinerary across Osaka, Kyoto, and Tokyo featuring a misty mountain dawn hero with kimono traveler, 5 vertical highlight cards, Days 1–10 visual timeline, and a frosted-glass Mount Fuji booking form.",
+        tags: ["Japan Travel","Sakura Itinerary","Mountain Sunrise"]
+      },
+      zh: {
+        name: "Japan Sunrise Tours",
+        desc: "日本10日金色日出与樱花之旅（大阪·京都·东京）：晨雾山谷和服旅人主视觉、5张垂直精选卡片、1-10日时间轴与富士山玻璃拟态预订表单。",
+        tags: ["日本旅游","樱花行程","日出山谷"]
+      }
+    }
+  },
+  t235: {
+    slug: 'alpine-telemetry',
+    cat: 'communication',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Alpine Ridge Telemetry",
+        desc: "Bảng điều khiển viễn thám địa hình núi cao & sinh thái rừng thông ALPINE.OS: thanh bên trắng hiển thị chỉ số băng tan 13%, sân khấu tối 3D đỉnh núi phủ đường đồng mức độ cao phát sáng vàng cam - xanh lam, biểu đồ rừng thông chiều tà và bộ mô phỏng khí áp theo độ cao.",
+        tags: ["3D Mountain Telemetry","Ecological Dashboard","Topographic UI"]
+      },
+      en: {
+        name: "Alpine Ridge Telemetry",
+        desc: "High-altitude mountain ridge telemetry and ecological analytics dashboard featuring a dual-tone white sidebar (13% Glacial Melt Index) and dark charcoal bento stage with 3D sunlit mountain elevation isolines, boreal pine canopy histogram, and altitude lapse simulator.",
+        tags: ["3D Mountain Telemetry","Ecological Dashboard","Topographic UI"]
+      },
+      zh: {
+        name: "Alpine Ridge Telemetry",
+        desc: "高山山脊遥测与生态分析仪表盘：白底侧边栏冰川融化指数、3D 日照山峰等高线图、针叶林生物量直方图与海拔气压模拟器。",
+        tags: ["3D山脉遥测","生态仪表盘","等高线可视化"]
+      }
+    }
+  },
   t234: {
     slug: 'clothing-rail-dress-atelier',
     cat: 'commerce',

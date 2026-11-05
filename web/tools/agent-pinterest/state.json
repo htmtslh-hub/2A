@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-04",
+  "lastRunDate": "2026-11-05",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -55,7 +55,12 @@
     "local-3df0bcf73489",
     "local-9a302d1d5803",
     "local-889f9af56c00",
-    "local-d6e5604bd067"
+    "local-d6e5604bd067",
+    "local-5cdb43fa93f2",
+    "local-3c68a61913a1",
+    "local-b8a941e5e683",
+    "local-e5cb93685a9b",
+    "local-4e26518c5939"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -108,7 +113,12 @@
     "3df0bcf73489dd9511c7b4a46f167f4010c80446810891729be7640803832eb2",
     "9a302d1d5803243bc3bcd8441334506b322975f41ef40de6d320be53f1b33c43",
     "889f9af56c003c3d03efb3374f957615ffb80c57252dcc67e9de42e23b3a335c",
-    "d6e5604bd06700da55a4ff8811900dcb2fc60d77e5db7c59518da48b87667450"
+    "d6e5604bd06700da55a4ff8811900dcb2fc60d77e5db7c59518da48b87667450",
+    "5cdb43fa93f2d486beca20552b1a9fc9125724369ad9e21633f85213f0cac8d4",
+    "3c68a61913a143db72f520fc4779f0733e7bb1c690e5860ef1a9581b601da197",
+    "b8a941e5e6833e9edb0329d54a36038b0847d34661636acf2379022bedb05113",
+    "e5cb93685a9b644d1ab0e526cd169c419a22f2499df28a0c2366699fb21d9370",
+    "4e26518c59394a2a3e58201d631d301387c1781c1027bba0820e0fe3a173309d"
   ],
   "processedSlugs": [
     "_design",
@@ -121,6 +131,7 @@
     "airmax-plus",
     "ais-folio",
     "alex-carter-ui",
+    "alpine-telemetry",
     "apartment-flow",
     "apex-squad-light",
     "apex-upheaval",
@@ -159,6 +170,7 @@
     "digitwist-ai-builder",
     "docs",
     "dot",
+    "dream-machu-picchu",
     "dualplay",
     "duolingo-styleguide",
     "eclipsio",
@@ -191,6 +203,7 @@
     "interactive-discovery",
     "iris",
     "jack-3d",
+    "japan-sunrise-tours",
     "japan-trails",
     "keystead",
     "kinetiq",
@@ -225,6 +238,7 @@
     "motora",
     "murmur",
     "music-app",
+    "mythwood-sanctuary",
     "network-hero",
     "neuralkinetics",
     "neuralyn",
@@ -245,6 +259,7 @@
     "organic-odyssey",
     "pinehaven",
     "place-saver",
+    "playing-market-audio",
     "portal",
     "portfolio-cosmic",
     "power-ai",
@@ -482,14 +497,45 @@
         "nugraha-jati": "premium",
         "websi-atelier": "premium"
       }
+    },
+    {
+      "date": "2026-11-05",
+      "built": [
+        "alpine-telemetry",
+        "japan-sunrise-tours",
+        "dream-machu-picchu",
+        "playing-market-audio",
+        "mythwood-sanctuary"
+      ],
+      "catalogIds": [
+        "t235",
+        "t236",
+        "t237",
+        "t238",
+        "t239"
+      ],
+      "pinIds": [
+        "local-5cdb43fa93f2",
+        "local-3c68a61913a1",
+        "local-b8a941e5e683",
+        "local-e5cb93685a9b",
+        "local-4e26518c5939"
+      ],
+      "tiers": {
+        "alpine-telemetry": "free",
+        "japan-sunrise-tours": "free",
+        "dream-machu-picchu": "premium",
+        "playing-market-audio": "premium",
+        "mythwood-sanctuary": "premium"
+      }
     }
   ],
   "todayCreatedCount": 5,
   "todayBuilt": [
-    "sleek-futuri",
-    "this-canvas",
-    "professional-graphic",
-    "nugraha-jati",
-    "websi-atelier"
+    "alpine-telemetry",
+    "japan-sunrise-tours",
+    "dream-machu-picchu",
+    "playing-market-audio",
+    "mythwood-sanctuary"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-04",
+  "lastRunDate": "2026-11-05",
   "todayCopiedCount": 6,
   "processedSlugs": [
     "_design",
@@ -14,6 +14,7 @@
     "airmax-plus",
     "ais-folio",
     "alex-carter-ui",
+    "alpine-telemetry",
     "apartment-flow",
     "apex-squad-light",
     "apex-upheaval",
@@ -37,6 +38,8 @@
     "chronoform",
     "cinder-axis",
     "cinematic",
+    "clothing-rail-dress-atelier",
+    "clothing-rail-menswear",
     "codenest-coding-platform",
     "contact-cybernetic",
     "cozypaws",
@@ -54,6 +57,7 @@
     "digitwist-ai-builder",
     "docs",
     "dot",
+    "dream-machu-picchu",
     "dualplay",
     "duolingo-styleguide",
     "eclipsio",
@@ -88,6 +92,7 @@
     "interactive-discovery",
     "iris",
     "jack-3d",
+    "japan-sunrise-tours",
     "japan-trails",
     "keystead",
     "kinetiq",
@@ -113,6 +118,7 @@
     "meridian",
     "metaverse-cyber-webinar",
     "micai-aristide",
+    "mind-body-healing",
     "mindloop-landing",
     "mint-atlas",
     "modern-agency",
@@ -122,6 +128,7 @@
     "motora",
     "murmur",
     "music-app",
+    "mythwood-sanctuary",
     "network-hero",
     "neuralkinetics",
     "neuralyn",
@@ -142,7 +149,9 @@
     "organic-odyssey",
     "pinehaven",
     "place-saver",
+    "playing-market-audio",
     "portal",
+    "portfolio-about",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
@@ -151,6 +160,7 @@
     "professional-graphic",
     "prosthetics-hero",
     "puro-amor",
+    "radial-diagram",
     "rayhan-aditya",
     "razer-mamba-pro",
     "reelmark",
@@ -158,6 +168,7 @@
     "reviews",
     "riverine-ai",
     "rivr",
+    "rocket-cta",
     "saas-software",
     "securify",
     "sellix",
@@ -172,14 +183,17 @@
     "sonicore",
     "soniq",
     "spaceedu",
+    "stark-minimal-footer",
     "startup-devkit",
     "steary-spatial-cinema",
     "stellar-ai",
+    "strata-ai",
     "subscription-agency",
     "swatch-luxury-chronograph",
     "synapsex",
     "targo",
     "taskly",
+    "tech-forward",
     "this-canvas",
     "tidal",
     "tools",
@@ -315,7 +329,14 @@
     "ai-workflow-agents",
     "f1-racing-hub",
     "ai-workflow",
-    "cyberpunk-reveal"
+    "cyberpunk-reveal",
+    "strata-ai",
+    "portfolio-about",
+    "tech-forward",
+    "radial-diagram",
+    "rocket-cta",
+    "stark-minimal-footer",
+    "mind-body-healing"
   ],
   "history": [
     {
@@ -595,6 +616,42 @@
         "ai-workflow-hero": "premium",
         "cyberpunk-reveal": "premium"
       }
+    },
+    {
+      "date": "2026-11-05",
+      "built": [
+        "strata-ai",
+        "portfolio-about",
+        "radial-diagram"
+      ],
+      "catalogIds": [
+        "t240",
+        "t241",
+        "t242"
+      ],
+      "tiers": {
+        "strata-ai": "free",
+        "portfolio-about": "premium",
+        "radial-diagram": "premium"
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "built": [
+        "rocket-cta",
+        "stark-minimal-footer",
+        "mind-body-healing"
+      ],
+      "catalogIds": [
+        "t243",
+        "t244",
+        "t245"
+      ],
+      "tiers": {
+        "rocket-cta": "free",
+        "stark-minimal-footer": "premium",
+        "mind-body-healing": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -653,15 +710,21 @@
     "05ca5c8d3d49c544bfdf12a301863b23e800bc1780031b01daf8c9bf299c29e3",
     "64a0f460aababfc6d45fa727fd82f69c16febbfaa9e84d449f85aac0966c5460",
     "e42fd7caf02036199ffc1ba10228e93524afa28a617321229b3a00aaffee51c1",
-    "2ef94ff0248588d46eb2f21e03a26f446a66fa831570e3a7f889c9b6b1a19922"
+    "2ef94ff0248588d46eb2f21e03a26f446a66fa831570e3a7f889c9b6b1a19922",
+    "9f7feb5178921076d9254076fcdf810cf8831a810a9620a73108bd5ea54157f3",
+    "8517051a70ab33353206d3f800df5d3b7b16809746d1a65fdc3a0920caa58b7c",
+    "2e928d74cb6c4d56642e7a28a6be130dc5c4a3185741c7170385b05f00e1b784",
+    "f7b2e5aec6965f491513fc005249e66099cd0de8e61e5011e6da8244281c9331",
+    "cd3f7a40354f7fa1e15d9417809c9c4ca29273abc36ddddd33de0a957fb8103c",
+    "0eda43f4b69ab508bf26d28a72573154bd80a9d65e873b6069eed6f9895f080a"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "travel-journal",
-    "celestial-renewal",
-    "ai-workflow-agents",
-    "f1-racing-hub",
-    "ai-workflow-hero",
-    "cyberpunk-reveal"
+    "strata-ai",
+    "portfolio-about",
+    "radial-diagram",
+    "rocket-cta",
+    "stark-minimal-footer",
+    "mind-body-healing"
   ]
 }

@@ -1,0 +1,44 @@
+{
+  "id": "t240",
+  "slug": "strata-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T14:41:12.935Z",
+  "demo": "/demos/strata-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9a43dbb7cfcf",
+  "sha256": "9a43dbb7cfcfc9234a6fa568f7693eb726cd2820d964ef9115372e7cd1096573",
+  "demoHtmlSha256": "308338248a8b5088cee22c8fef139ba2d0fee531006a1cb5f0b3586d4c72501a",
+  "demoSha256": "66586eee91917c7ae975c1c435394af1be344040245cc636543b485c8d8434b6",
+  "bytes": 721389,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.514,
+      "action": "click",
+      "selector": "#meetStrataBtn"
+    },
+    {
+      "seconds": 4.854,
+      "action": "click",
+      "selector": "#meetStrataBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1369
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\strata-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\strata-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\strata-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\strata-ai-return.jpg"
+  ]
+}

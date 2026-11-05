@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strata AI — Grounded Enterprise Models &amp; Verifiable Data Lineage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0d0c11;
+      --bg-elevated: #14121b;
+      --bg-glass: rgba(255, 255, 255, 0.04);
+      --bg-glass-strong: rgba(255, 255, 255, 0.08);
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.72);
+      --text-muted: rgba(255, 255, 255, 0.45);
+      --accent-purple-start: #4d19b1;
+      --accent-purple-end: #6f5adc;
+      --accent-teal: #9ff0ec;
+      --accent-mint: #bdf7ee;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(255, 255, 255, 0.16);
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    .grid-backdrop {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 35%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 35%, transparent 100%);
+    }
+    .ambient-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 72% 36%, rgba(111, 90, 220, 0.22) 0%, rgba(77, 25, 177, 0.08) 38%, transparent 70%),
+        radial-gradient(circle at 22% 75%, rgba(159, 240, 236, 0.08) 0%, transparent 55%);
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 2;
+    }
+    /* Navbar */
+    .navbar {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(13, 12, 17, 0.78);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid transparent;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 9px 16px;
+      border-radius: 9999px;
+      cursor: pointer;
+    }
+    .btn-purple-sm {
+      background: linear-gradient(135deg, var(--accent-purple-start), var(--accent-purple-end));
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 8px 24px -4px rgba(111, 90, 220, 0.5);
+    }
+    /* Hero */
+    .hero-section {
+      padding: 64px 0 56px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      backdrop-filter: blur(12px);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      box-shadow: 0 0 12px var(--accent-teal);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 5.2vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1.06;
+      letter-spacing: -0.035em;
+      margin-bottom: 22px;
+    }
+    .hero-title .mint-text {
+      background: linear-gradient(90deg, var(--accent-mint) 0%, var(--accent-teal) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-lead {
+      font-size: clamp(1rem, 1.15vw, 1.125rem);
+      line-height: 1.65;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .btn-primary-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, var(--accent-purple-start) 0%, var(--accent-purple-end) 100%);
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 8px 28px -4px rgba(111, 90, 220, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+    }
+    .btn-secondary-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      cursor: pointer;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    /* Right Visual Stage */
+    .visual-stage {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-frame {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1 / 1;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      background: radial-gradient(circle at 50% 50%, rgba(111, 90, 220, 0.24), rgba(13, 12, 17, 0.92));
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.65);
+    }
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: screen;
+      display: block;
+    }
+    .glass-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.03) 100%);
+      backdrop-filter: blur(20px);
+      
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      padding: 18px 20px;
+    }
+    .float-card-top {
+      position: absolute;
+      top: 16px;
+      right: -10px;
+      width: 268px;
+      z-index: 4;
+      animation: floatA 6s ease-in-out infinite;
+    }
+    .float-card-bottom {
+      position: absolute;
+      bottom: 18px;
+      left: -14px;
+      width: 286px;
+      z-index: 4;
+      animation: floatB 7s ease-in-out infinite;
+    }
+    @keyframes floatA {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes floatB {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(7px); }
+    }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .card-kicker {
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+    .card-title-sm {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .pill-delta {
+      padding: 3px 9px;
+      border-radius: 9999px;
+      background: rgba(159, 240, 236, 0.14);
+      border: 1px solid rgba(159, 240, 236, 0.35);
+      color: var(--accent-mint);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .metric-bar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .metric-bar-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+    .bar-track {
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .bar-fill-teal {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-purple-end), var(--accent-teal));
+    }
+    .bar-fill-purple {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-purple-start), var(--accent-purple-end));
+    }
+    .bastion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .bastion-cell {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+    .bastion-cell-label {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+    .bastion-cell-val {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-mint);
+      margin-top: 2px;
+      font-weight: 500;
+    }
+    /* Partner Logos Bar */
+    .partner-bar {
+      margin-top: 48px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .partner-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 44px;
+    }
+    .partner-logo-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.56);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+    /* Section 2: Interactive Corpus Workbench */
+    .section-block {
+      padding: 84px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+    .tab-group {
+      display: inline-flex;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--accent-purple-start), var(--accent-purple-end));
+      color: #fff;
+    }
+    .workbench-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+    }
+    .workbench-panel {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .code-box {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--accent-mint);
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 18px;
+      overflow-x: auto;
+    }
+    /* Section 3: Architecture & Pricing */
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .feature-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 6, 10, 0.82);
+      /* blur budget capped */
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-backdrop.is-open { display: flex; }
+    .modal-card {
+      background: #161420;
+      border: 1px solid var(--border-highlight);
+      border-radius: 22px;
+      max-width: 520px;
+      width: 100%;
+      padding: 32px;
+    }
+    .input-field {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      color: #fff;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      font-family: var(--font-sans);
+    }
+    footer {
+      padding: 48px 0;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    @media (max-width: 1024px) {
+      .hero-grid, .workbench-grid, .cards-3 {
+        grid-template-columns: 1fr;
+      }
+      .float-card-top { right: 12px; }
+      .float-card-bottom { left: 12px; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .stats-row { grid-template-columns: 1fr; }
+      .float-card-top, .float-card-bottom {
+        position: static;
+        width: 100%;
+        margin-top: 14px;
+      }
+      .visual-stage { flex-direction: column; }
+    }
+  
+    :root {
+      --bg: #0d0c11;
+      --surface: #15141c;
+      --fg: #ffffff;
+      --muted: #9a98a6;
+      --accent: #7c5cff;
+      --accent-text: #bdf7ee;
+      --on-accent: #ffffff;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="grid-backdrop" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <header class="navbar"><nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+      <a href="#top" class="brand">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 2L25 8.5V21.5L14 28L3 21.5V8.5L14 2Z" stroke="#9ff0ec" stroke-width="1.75" fill="rgba(111,90,220,0.22)"/>
+          <path d="M14 14L25 8.5M14 14L3 8.5M14 14V28" stroke="#6f5adc" stroke-width="1.5"/>
+        </svg>
+        <span>Strata</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#models">Models</a></li>
+        <li><a href="#benchmarks">Benchmarks</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="btn-ghost" id="motionToggleBtn">Motion: Auto</button>
+        <button type="button" class="btn-purple-sm" id="openApiModalBtn">Get API Key</button>
+      </div>
+    </div>
+  </nav></header>
+
+  <main id="top">
+    <section class="hero-section" id="platform">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow-pill">
+              <span class="pulse-dot"></span>
+              <span>Strata Engine v4.2 — Enterprise General Availability</span>
+            </div>
+            <h1 class="hero-title">
+              Grounded models<br />
+              made of data<br />
+              <span class="mint-text">you trust.</span>
+            </h1>
+            <p class="hero-lead">
+              Curated, audited, and continuously stress-tested training corpora for regulated enterprise AI. Ship frontier models with verifiable lineage and zero hallucination drift.
+            </p>
+            <div class="cta-row">
+              <button type="button" class="btn-primary-pill" id="meetStrataBtn" data-next>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M5 3.5L12.5 8L5 12.5V3.5Z" fill="currentColor"/>
+                </svg>
+                <span>Meet Strata</span>
+              </button>
+              <button type="button" class="btn-secondary-pill" id="tryFreeBtn">
+                <span>Try Free</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="stats-row">
+              <div>
+                <div class="stat-num"><span data-counter="2.1" data-decimals="1" data-suffix="B">2.1B</span></div>
+                <div class="stat-label">Verified human labels</div>
+              </div>
+              <div>
+                <div class="stat-num"><span data-counter="400" data-suffix="+">400+</span></div>
+                <div class="stat-label">Domain eval suites</div>
+              </div>
+              <div>
+                <div class="stat-num"><span data-counter="99.9" data-decimals="1" data-suffix="%">99.9%</span></div>
+                <div class="stat-label">Lineage SLA uptime</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visual-stage">
+            <div class="video-frame">
+              <video
+                src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/435a4fe7-e43b-4e7c-af78-0be083e73569.mp4"
+                poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/782a4a52-4c1e-4471-bb0c-aa232927f4a6.webp"
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
+            </div>
+
+            <div class="glass-card float-card-top">
+              <div class="card-header">
+                <div>
+                  <div class="card-kicker">BENCHMARKING</div>
+                  <div class="card-title-sm">STRATA Index</div>
+                </div>
+                <span class="pill-delta" id="strataDeltaBadge">+14.8%</span>
+              </div>
+              <div class="metric-bar-list">
+                <div>
+                  <div class="metric-bar-top"><span>Clinical Reasoning</span><span id="barVal1">94.2%</span></div>
+                  <div class="bar-track"><div class="bar-fill-teal" id="barFill1" style="width:94.2%"></div></div>
+                </div>
+                <div>
+                  <div class="metric-bar-top"><span>Legal Citation Fidelity</span><span id="barVal2">98.7%</span></div>
+                  <div class="bar-track"><div class="bar-fill-teal" id="barFill2" style="width:98.7%"></div></div>
+                </div>
+                <div>
+                  <div class="metric-bar-top"><span>Financial Tabular QA</span><span id="barVal3">96.1%</span></div>
+                  <div class="bar-track"><div class="bar-fill-purple" id="barFill3" style="width:96.1%"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card float-card-bottom">
+              <div class="card-header">
+                <div>
+                  <div class="card-kicker">RED-TEAM</div>
+                  <div class="card-title-sm">BASTION</div>
+                </div>
+                <span class="pill-delta">ACTIVE</span>
+              </div>
+              <div class="bastion-grid">
+                <div class="bastion-cell">
+                  <div class="bastion-cell-label">Prompt Injection</div>
+                  <div class="bastion-cell-val">0.02% pass</div>
+                </div>
+                <div class="bastion-cell">
+                  <div class="bastion-cell-label">PII Leakage</div>
+                  <div class="bastion-cell-val">0.00% pass</div>
+                </div>
+                <div class="bastion-cell">
+                  <div class="bastion-cell-label">Toxicity Drift</div>
+                  <div class="bastion-cell-val">Blocked</div>
+                </div>
+                <div class="bastion-cell">
+                  <div class="bastion-cell-label">Audit Hash</div>
+                  <div class="bastion-cell-val">SHA-384</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-bar">
+          <div class="partner-kicker">TRUSTED BY FRONTIER AI &amp; ENTERPRISE TEAMS</div>
+          <div class="partner-logos">
+            <div class="partner-logo-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="10" r="2.5" fill="currentColor"/></svg>
+              <span>Arbor</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2L13 8L19 10L13 12L10 18L7 12L1 10L7 8L10 2Z" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>Nova</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M7 10H13" stroke="currentColor" stroke-width="1.8"/></svg>
+              <span>lumina</span>
+            </div>
+            <div class="partner-logo-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 15L10 4L17 15H3Z" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span style="letter-spacing:0.12em;font-size:0.92rem;">HALCYONIX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="benchmarks">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="card-kicker" style="color:var(--accent-teal);margin-bottom:8px;">LIVE CORPUS TELEMETRY</div>
+            <h2 class="section-title">Cryptographic Data Lineage &amp; Eval Workbench</h2>
+          </div>
+          <div class="tab-group" role="tablist">
+            <button type="button" class="tab-btn active" data-corpus="clinical">Clinical Bio-QA</button>
+            <button type="button" class="tab-btn" data-corpus="legal">Sovereign Legal</button>
+            <button type="button" class="tab-btn" data-corpus="quant">Financial Tabular</button>
+          </div>
+        </div>
+        <div class="workbench-grid">
+          <div class="workbench-panel">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h3 id="corpusTitle" style="font-family:var(--font-display);font-size:1.35rem;">Strata-Clinical-v4.2 Corpus Manifest</h3>
+              <span class="pill-delta" id="corpusHash">SHA-384 • VERIFIED</span>
+            </div>
+            <p id="corpusDesc" style="color:var(--text-secondary);margin-top:10px;line-height:1.6;">
+              480M peer-reviewed clinical notes, ICD-11 diagnostic trees, and double-blind physician preference annotations with zero synthetic contamination.
+            </p>
+            <pre class="code-box" id="corpusCode">{
+  "corpus_id": "strata-clinical-v4.2",
+  "provenance_merkle_root": "0x9f8c...e41a",
+  "hallucination_drift": "0.0014%",
+  "hipaa_deidentification": "PASSED_ATTESTED"
+}</pre>
+          </div>
+          <div class="workbench-panel" style="display:flex;flex-direction:column;justify-content:space-between;">
+            <div>
+              <div class="card-kicker">CONTINUOUS RED-TEAM ATTESTATION</div>
+              <h3 style="font-family:var(--font-display);font-size:1.25rem;margin-top:6px;">BASTION Autonomous Stress Guard</h3>
+              <p style="color:var(--text-secondary);margin-top:10px;font-size:0.92rem;line-height:1.6;">
+                Every training slab is fingerprinted at token ingestion and challenged against 14,000 adversarial jailbreak vectors before checkpoint release.
+              </p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;">
+              <div class="bastion-cell">
+                <div class="bastion-cell-label">Token Provenance</div>
+                <div class="bastion-cell-val"><span data-counter="100" data-suffix="%">100%</span> Audited</div>
+              </div>
+              <div class="bastion-cell">
+                <div class="bastion-cell-label">Eval Latency</div>
+                <div class="bastion-cell-val"><span data-counter="18" data-suffix="ms">18ms</span> p99</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="models">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="card-kicker" style="color:var(--accent-teal);margin-bottom:8px;">GROUNDED ARCHITECTURE</div>
+            <h2 class="section-title" id="docs">Three Slabs of Verifiable Intelligence</h2>
+          </div>
+        </div>
+        <div class="cards-3" id="pricing">
+          <article class="feature-card">
+            <div>
+              <div class="pill-delta" style="display:inline-block;margin-bottom:14px;">SLAB 01 • INGEST</div>
+              <h3>Merkle-Signed Corpora</h3>
+              <p>Every document chunk carries cryptographic licensing metadata, author consent proofs, and domain expert sign-off hashes.</p>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-teal);">2.1B+ Verified Spans</div>
+          </article>
+          <article class="feature-card">
+            <div>
+              <div class="pill-delta" style="display:inline-block;margin-bottom:14px;">SLAB 02 • EVAL</div>
+              <h3>STRATA Index Harnesses</h3>
+              <p>Over 400 domain-specific evaluation benchmarks co-designed with practicing surgeons, appellate attorneys, and quantitative analysts.</p>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-teal);">+14.8% Frontier Uplift</div>
+          </article>
+          <article class="feature-card">
+            <div>
+              <div class="pill-delta" style="display:inline-block;margin-bottom:14px;">SLAB 03 • SHIELD</div>
+              <h3>BASTION Red-Team Firewall</h3>
+              <p>Real-time adversarial filtering blocks prompt injection, PII exfiltration, and copyright memorization at both training and inference time.</p>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-teal);">99.9% Lineage SLA</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="apiModal" role="dialog" aria-modal="true" aria-labelledby="apiModalTitle">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h3 id="apiModalTitle" style="font-family:var(--font-display);font-size:1.35rem;">Provision Strata Engine v4.2 Key</h3>
+        <button type="button" class="btn-ghost" id="closeApiModalBtn">Close</button>
+      </div>
+      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:16px;">
+        Generate a scoped sandbox key with full access to STRATA Index benchmarks and BASTION lineage verification endpoints.
+      </p>
+      <label style="font-size:0.8rem;color:var(--text-muted);">Enterprise Work Email</label>
+      <input type="email" class="input-field" value="architect@enterprise-ai.io" aria-label="Enterprise Work Email" />
+      <button type="button" class="btn-primary-pill" id="generateKeyConfirmBtn" style="width:100%;justify-content:center;">Generate Attested Key</button>
+      <div id="keyResultMsg" style="margin-top:14px;font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-mint);display:none;">
+        KEY ISSUED: st_live_99a4f82c10e7b3d1 (SHA-384 Attested)
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;">
+      <span>© 2026 Strata AI Inc. Verifiable Data Lineage &amp; Grounded Foundation Models.</span>
+      <span>SOC2 Type II • HIPAA Attested • ISO/IEC 42001</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const corpora = {
+        clinical: {
+          title: 'Strata-Clinical-v4.2 Corpus Manifest',
+          hash: 'SHA-384 • VERIFIED',
+          desc: '480M peer-reviewed clinical notes, ICD-11 diagnostic trees, and double-blind physician preference annotations with zero synthetic contamination.',
+          code: '{\n  "corpus_id": "strata-clinical-v4.2",\n  "provenance_merkle_root": "0x9f8c...e41a",\n  "hallucination_drift": "0.0014%",\n  "hipaa_deidentification": "PASSED_ATTESTED"\n}',
+          b1: '94.2%', b2: '98.7%', b3: '96.1%', delta: '+14.8%'
+        },
+        legal: {
+          title: 'Strata-Juris-v4.2 Sovereign Legal Corpus',
+          hash: 'LEX-SHA384 • AUDITED',
+          desc: '620M multi-jurisdictional appellate rulings, regulatory filings, and Shepardized statutory citations verified by senior bar reviewers.',
+          code: '{\n  "corpus_id": "strata-juris-v4.2",\n  "provenance_merkle_root": "0x4b12...c809",\n  "citation_fidelity": "99.42%",\n  "zero_copyright_leak": "VERIFIED"\n}',
+          b1: '97.8%', b2: '99.4%', b3: '95.6%', delta: '+18.2%'
+        },
+        quant: {
+          title: 'Strata-Quant-v4.2 Financial Tabular Corpus',
+          hash: 'SEC-17A4 • ATTESTED',
+          desc: '1.0B audited XBRL balance sheets, central bank macro telemetry, and multi-step actuarial reconciliation traces.',
+          code: '{\n  "corpus_id": "strata-quant-v4.2",\n  "provenance_merkle_root": "0x7d3a...91ef",\n  "numerical_consistency": "99.89%",\n  "basel_iii_audit": "COMPLIANT"\n}',
+          b1: '95.9%', b2: '98.1%', b3: '99.3%', delta: '+16.4%'
+        }
+      };
+
+      const tabs = document.querySelectorAll('[data-corpus]');
+      const keys = Object.keys(corpora);
+      let activeIdx = 0;
+
+      function applyCorpus(key) {
+        const item = corpora[key];
+        if (!item) return;
+        tabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-corpus') === key));
+        document.getElementById('corpusTitle').textContent = item.title;
+        document.getElementById('corpusHash').textContent = item.hash;
+        document.getElementById('corpusDesc').textContent = item.desc;
+        document.getElementById('corpusCode').textContent = item.code;
+        document.getElementById('barVal1').textContent = item.b1;
+        document.getElementById('barFill1').style.width = item.b1;
+        document.getElementById('barVal2').textContent = item.b2;
+        document.getElementById('barFill2').style.width = item.b2;
+        document.getElementById('barVal3').textContent = item.b3;
+        document.getElementById('barFill3').style.width = item.b3;
+        document.getElementById('strataDeltaBadge').textContent = item.delta;
+      }
+
+      tabs.forEach((btn, idx) => {
+        btn.addEventListener('click', () => {
+          activeIdx = idx;
+          applyCorpus(btn.getAttribute('data-corpus'));
+        });
+      });
+
+      const meetBtn = document.getElementById('meetStrataBtn');
+      if (meetBtn) {
+        meetBtn.addEventListener('click', () => {
+          activeIdx = (activeIdx + 1) % keys.length;
+          applyCorpus(keys[activeIdx]);
+        });
+      }
+
+      const modal = document.getElementById('apiModal');
+      const openBtns = [document.getElementById('openApiModalBtn'), document.getElementById('tryFreeBtn')];
+      openBtns.forEach(b => b && b.addEventListener('click', () => modal.classList.add('is-open')));
+      document.getElementById('closeApiModalBtn')?.addEventListener('click', () => modal.classList.remove('is-open'));
+      document.getElementById('generateKeyConfirmBtn')?.addEventListener('click', () => {
+        document.getElementById('keyResultMsg').style.display = 'block';
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('is-open');
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

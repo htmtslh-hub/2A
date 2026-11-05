@@ -1,0 +1,34 @@
+{
+  "id": "t238",
+  "slug": "playing-market-audio",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T13:59:34.471Z",
+  "demo": "/demos/playing-market-audio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f5e18e1c800e",
+  "sha256": "f5e18e1c800ebc83c419f6765478ca0eac8d3d49ec10bd789bc68a1c8779a6db",
+  "demoHtmlSha256": "a715247e7d1027377c2e05cea06cf7331208eacb3c62fb8a83d3f6f62b3c9901",
+  "demoSha256": "1286204ded72add0af8178d3e463ee22dda41297d47bb9a688360b461792c0f9",
+  "bytes": 492765,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 936
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\playing-market-audio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\playing-market-audio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\playing-market-audio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\playing-market-audio-return.jpg"
+  ]
+}

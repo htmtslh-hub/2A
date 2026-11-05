@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Rocket &amp; Velorah® — Liquid-Glass AI Product &amp; Design Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-black: #000000;
+      --bg-slate: #14191E;
+      --text-white: #ffffff;
+      --text-white-90: rgba(255, 255, 255, 0.9);
+      --text-white-80: rgba(255, 255, 255, 0.8);
+      --text-white-60: rgba(255, 255, 255, 0.6);
+      --text-white-40: rgba(255, 255, 255, 0.4);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: radial-gradient(ellipse at 50% 0%, #14191E 0%, #07090c 60%, #000000 100%);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.025);
+      backdrop-filter: blur(12px);
+      position: relative;
+      isolation: isolate;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.12) 20%,
+        transparent 45%,
+        transparent 75%,
+        rgba(255, 255, 255, 0.22) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .site-header {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 22px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .pill-ghost {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    /* Hero Stage */
+    .hero-stage {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 32px 96px;
+    }
+    .hero-split {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 44px;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+    }
+    .hero-headline {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #fff;
+      margin-top: 22px;
+      margin-bottom: 18px;
+    }
+    .hero-subtitle {
+      font-size: 0.9375rem;
+      color: var(--text-white-80);
+      line-height: 1.6;
+      max-width: 420px;
+      margin-bottom: 28px;
+    }
+    .btn-white-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 9999px;
+      padding: 14px 28px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 12px 32px rgba(255, 255, 255, 0.18);
+    }
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .kpi-val {
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .kpi-lbl {
+      font-size: 0.75rem;
+      color: var(--text-white-60);
+      margin-top: 2px;
+    }
+    /* Right Split Dashboard Window */
+    .dashboard-window {
+      border-radius: 24px;
+      height: 460px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.75);
+      background: rgba(14, 18, 23, 0.72);
+    }
+    /* Left Chat Pane */
+    .chat-pane {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      height: 100%;
+      background: rgba(10, 13, 17, 0.65);
+    }
+    .chat-header {
+      height: 54px;
+      padding: 0 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .icon-btn-28 {
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .chat-feed {
+      flex: 1;
+      padding: 14px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .user-bubble {
+      align-self: flex-end;
+      max-width: 86%;
+      border-radius: 16px 16px 4px 16px;
+      padding: 10px 13px;
+      font-size: 0.75rem;
+      line-height: 1.45;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .ai-bubble {
+      align-self: flex-start;
+      max-width: 94%;
+      border-radius: 16px 16px 16px 4px;
+      padding: 12px 14px;
+      font-size: 0.74rem;
+      line-height: 1.5;
+      color: var(--text-white-90);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ai-bubble strong {
+      display: block;
+      color: #fff;
+      margin-top: 6px;
+      margin-bottom: 3px;
+    }
+    .ai-bubble ul {
+      padding-left: 15px;
+      color: var(--text-white-80);
+    }
+    .chat-input-row {
+      padding: 10px 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chat-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 9999px;
+      padding: 8px 12px;
+      color: #fff;
+      font-size: 0.75rem;
+      font-family: var(--font-sans);
+    }
+    .send-btn-28 {
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    /* Right Velorah Video Preview Pane */
+    .velorah-pane {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px 22px;
+    }
+    .velorah-pane video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .velorah-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.68) 100%);
+      z-index: 1;
+    }
+    .velorah-nav, .velorah-center, .velorah-footer {
+      position: relative;
+      z-index: 2;
+    }
+    .velorah-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+    }
+    .velorah-brand {
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: -0.02em;
+    }
+    .velorah-links {
+      display: flex;
+      gap: 12px;
+      color: var(--text-white-80);
+    }
+    .velorah-center {
+      text-align: center;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    .aether-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.65rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      margin-bottom: 10px;
+    }
+    .velorah-serif-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+      font-weight: 400;
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+    .velorah-sub {
+      font-size: 0.72rem;
+      color: var(--text-white-80);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .velorah-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.68rem;
+      color: var(--text-white-80);
+    }
+    .progress-track-sm {
+      width: 48px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.25);
+      overflow: hidden;
+    }
+    .progress-fill-sm {
+      width: 45%;
+      height: 100%;
+      background: #ffffff;
+    }
+    /* Horizon Atmosphere Overlay */
+    .horizon-curve {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 110px;
+      pointer-events: none;
+      z-index: 2;
+      background: radial-gradient(ellipse 75% 90% at 50% 100%, rgba(120, 180, 255, 0.16) 0%, transparent 75%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    /* Secondary Sections */
+    .content-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 72px 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .glass-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 26px;
+    }
+    .modal-wrap {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.84);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-wrap.is-open { display: flex; }
+    .modal-inner {
+      background: #101419;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      padding: 32px;
+    }
+    @media (max-width: 1024px) {
+      .hero-split, .grid-3 { grid-template-columns: 1fr; }
+      .dashboard-window { grid-template-columns: 1fr; height: auto; }
+      .velorah-pane { min-height: 360px; }
+    }
+    @media (max-width: 640px) {
+      .kpi-row { grid-template-columns: 1fr; }
+      .velorah-links { display: none; }
+    }
+  
+    :root {
+      --bg: #0d0c11;
+      --surface: #15141c;
+      --fg: #ffffff;
+      --muted: #9a98a6;
+      --accent: #7c5cff;
+      --accent-text: #bdf7ee;
+      --on-accent: #ffffff;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="site-header"><nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <a href="#top" class="logo-chip">
+      <span class="logo-circle liquid-glass">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4.5 16.5C3 18 3 21 3 21C3 21 6 21 7.5 19.5C8.32 18.68 8.32 17.32 7.5 16.5C6.68 15.68 5.32 15.68 4.5 16.5Z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M14.5 4.5C17.5 3 21 3 21 3C21 3 21 6.5 19.5 9.5L13 16L8 11L14.5 4.5Z" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+      </span>
+      <span style="font-weight:600;letter-spacing:-0.02em;">UI Rocket</span>
+    </a>
+    <div class="header-actions">
+      <button type="button" class="pill-ghost" id="motionToggleBtn">Motion: ON</button>
+      <button type="button" class="pill-ghost" id="openEnrollModalTop">Syllabus</button>
+    </div>
+  </nav></header>
+
+  <main id="top">
+    <section class="hero-stage">
+      <div class="hero-split">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);font-size:0.78rem;">
+            <span>COHORT 08 • VIBE DESIGN &amp; AI ENGINEERING</span>
+          </div>
+          <h1 class="hero-headline">
+            Learn how can one go from 0 to $11.5k with AI in 60 days.
+          </h1>
+          <p class="hero-subtitle">
+            From scratch to shipping high-ticket AI products and design systems. Master prompt-to-production architecture, liquid-glass interfaces, and live client retainers.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;">
+            <button type="button" class="btn-white-pill" id="startFreeBtn">
+              <span>Start for free</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button type="button" class="pill-ghost" id="promptDemoBtn" data-next>Simulate AI Prompt</button>
+          </div>
+
+          <div class="kpi-row">
+            <div>
+              <div class="kpi-val">$<span data-counter="11.5" data-decimals="1" data-suffix="k">11.5k</span></div>
+              <div class="kpi-lbl">60-Day Target MRR</div>
+            </div>
+            <div>
+              <div class="kpi-val"><span data-counter="1420" data-suffix="+">1420+</span></div>
+              <div class="kpi-lbl">Shipped Student Apps</div>
+            </div>
+            <div>
+              <div class="kpi-val"><span data-counter="97.8" data-decimals="1" data-suffix="%">97.8%</span></div>
+              <div class="kpi-lbl">Completion Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-window liquid-glass">
+          <!-- Left Pane: Vibe Design Course AI Chat -->
+          <div class="chat-pane">
+            <div class="chat-header">
+              <button type="button" class="icon-btn-28" aria-label="Back to curriculum">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </button>
+              <span style="font-size:0.78rem;font-weight:600;letter-spacing:-0.01em;">Vibe Design course</span>
+              <button type="button" class="icon-btn-28" aria-label="Chat options">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="4" cy="8" r="1.2" fill="currentColor"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="12" cy="8" r="1.2" fill="currentColor"/></svg>
+              </button>
+            </div>
+
+            <div class="chat-feed" id="chat-feed" aria-live="polite">
+              <div class="user-bubble">
+                Give me a design road map to reach $10k/month using AI
+              </div>
+              <div class="ai-bubble">
+                Here is your 60-day blueprint to reach $10k–$11.5k/mo:
+                <strong>Phase 1: Core Foundations (Weeks 1-2)</strong>
+                <ul>
+                  <li>Master Liquid-Glass UI &amp; typography hierarchy</li>
+                  <li>Build 3 cinematic video-backed hero prototypes</li>
+                  <li>Automate component tokens with AI workflows</li>
+                </ul>
+                <strong>Phase 2: High-Ticket Offer (Weeks 3-4)</strong>
+                <ul>
+                  <li>Package 5-day Sprint retainers at $3,800/client</li>
+                  <li>Close 3 recurring SaaS founders via live audits</li>
+                </ul>
+              </div>
+            </div>
+
+            <form class="chat-input-row" id="chatForm">
+              <input
+                type="text"
+                id="chatInput"
+                class="chat-input"
+                placeholder="Ask AI coach anything..."
+                aria-label="Ask AI coach anything"
+              />
+              <button type="submit" class="send-btn-28" aria-label="Send prompt">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 12.5V3.5M8 3.5L4.5 7M8 3.5L11.5 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Pane: Velorah Live Website Preview -->
+          <div class="velorah-pane">
+            <video
+              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+            ></video>
+            <div class="velorah-shade" aria-hidden="true"></div>
+
+            <div class="velorah-nav">
+              <span class="velorah-brand">Velorah®</span>
+              <div class="velorah-links">
+                <span>About</span>
+                <span>Technology</span>
+                <span>Journal</span>
+                <span>Access</span>
+              </div>
+              <span class="aether-badge" style="margin:0;">Reserve Flight</span>
+            </div>
+
+            <div class="velorah-center">
+              <span class="aether-badge">Introducing The Aether-1</span>
+              <h2 class="velorah-serif-title" id="velorahPreviewTitle">Where dreams rise through the silence.</h2>
+              <p class="velorah-sub" id="velorahPreviewSub">
+                Experience the future of private aviation with zero-emission stratospheric flight.
+              </p>
+              <button type="button" class="pill-ghost" id="exploreCabinBtn" style="font-size:0.74rem;padding:7px 16px;">
+                Explore the Cabin
+              </button>
+            </div>
+
+            <div class="velorah-footer">
+              <span id="velorahSlideIdx">01</span>
+              <div class="progress-track-sm"><div class="progress-fill-sm" id="velorahProgFill"></div></div>
+              <span>03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="horizon-curve" aria-hidden="true"></div>
+    </section>
+
+    <section class="content-section" id="curriculum">
+      <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-white-60);">60-DAY SPRINT ARCHITECTURE</div>
+      <h2 style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:500;letter-spacing:-0.03em;margin-top:6px;">Three Modules from Blank Canvas to $11.5k MRR</h2>
+      <div class="grid-3">
+        <article class="glass-box">
+          <div style="font-size:0.75rem;color:var(--text-white-60);margin-bottom:8px;">WEEKS 01 – 02</div>
+          <h3 style="font-size:1.2rem;font-weight:500;margin-bottom:10px;">Liquid-Glass &amp; Shader Craft</h3>
+          <p style="font-size:0.9rem;color:var(--text-white-80);line-height:1.6;">Construct specular 1px mask-composite borders, Instrument Serif editorial pairings, and 60fps video hero stages.</p>
+        </article>
+        <article class="glass-box">
+          <div style="font-size:0.75rem;color:var(--text-white-60);margin-bottom:8px;">WEEKS 03 – 04</div>
+          <h3 style="font-size:1.2rem;font-weight:500;margin-bottom:10px;">AI Prompt-to-Product Pipelines</h3>
+          <p style="font-size:0.9rem;color:var(--text-white-80);line-height:1.6;">Turn structured design tokens and motion prompts into production-ready landing pages in under 90 minutes.</p>
+        </article>
+        <article class="glass-box">
+          <div style="font-size:0.75rem;color:var(--text-white-60);margin-bottom:8px;">WEEKS 05 – 08</div>
+          <h3 style="font-size:1.2rem;font-weight:500;margin-bottom:10px;">High-Ticket Retainer Acquisition</h3>
+          <p style="font-size:0.9rem;color:var(--text-white-80);line-height:1.6;">Deploy async video teardown funnels that convert funded AI startups into $3,800+ design engineering sprints.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="outcomes">
+      <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-white-60);">VERIFIED STUDENT OUTCOMES</div>
+      <h2 style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:500;letter-spacing:-0.03em;margin-top:6px;">Real Prototypes Shipped Inside the Sandbox</h2>
+      <div class="grid-3">
+        <div class="glass-box">
+          <h3 style="font-size:1.15rem;font-weight:500;">Velorah® Aviation Flagship</h3>
+          <p style="font-size:0.88rem;color:var(--text-white-80);margin-top:8px;line-height:1.6;">Built in 4 hours during Week 2; closed a $4,500 Series-A aerospace redesign contract.</p>
+        </div>
+        <div class="glass-box">
+          <h3 style="font-size:1.15rem;font-weight:500;">Aether-1 Telemetry HUD</h3>
+          <p style="font-size:0.88rem;color:var(--text-white-80);margin-top:8px;line-height:1.6;">Zero-dependency glassmorphic dashboard with interactive cabin pressure and Mach telemetry.</p>
+        </div>
+        <div class="glass-box">
+          <h3 style="font-size:1.15rem;font-weight:500;">Vibe Design Token System</h3>
+          <p style="font-size:0.88rem;color:var(--text-white-80);margin-top:8px;line-height:1.6;">Reusable 3-layer CSS custom property kit shared across 1,420+ cohort members.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-wrap" id="enrollModal" role="dialog" aria-modal="true" aria-labelledby="enrollModalTitle">
+    <div class="modal-inner">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h3 id="enrollModalTitle" style="font-size:1.35rem;font-weight:500;">Unlock Module 1 &amp; Velorah® Source</h3>
+        <button type="button" class="pill-ghost" id="closeEnrollModalBtn">Close</button>
+      </div>
+      <p style="color:var(--text-white-80);font-size:0.9rem;line-height:1.6;margin-bottom:18px;">
+        Get instant access to the 60-day AI Design Roadmap, the Velorah® liquid-glass template, and 24/7 AI Coach prompts.
+      </p>
+      <button type="button" class="btn-white-pill" id="confirmEnrollBtn" style="width:100%;justify-content:center;">Claim Free Sandbox Access</button>
+      <div id="enrollSuccessMsg" style="display:none;margin-top:14px;font-size:0.85rem;color:#9ff0ec;text-align:center;">
+        Sandbox unlocked — check your inbox for the Cohort 08 starter kit.
+      </div>
+    </div>
+  </div>
+
+  <footer style="max-width:1280px;margin:0 auto;padding:40px 32px;border-top:1px solid rgba(255,255,255,0.08);color:var(--text-white-60);font-size:0.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 UI Rocket &amp; Velorah® Sandbox. All rights reserved.</span>
+    <span>Liquid-Glass UI • Instrument Serif • 60-Day AI Sprint</span>
+  </footer>
+
+  <script>
+    (function () {
+      const feed = document.getElementById('chat-feed');
+      const form = document.getElementById('chatForm');
+      const input = document.getElementById('chatInput');
+      const slides = [
+        { idx: '01', fill: '33%', title: 'Where dreams rise through the silence.', sub: 'Experience the future of private aviation with zero-emission stratospheric flight.' },
+        { idx: '02', fill: '66%', title: 'Whisper-quiet Mach 0.92 stratospheric cabin.', sub: 'Panoramic electro-chromic glass fuselage with autonomous turbulence cancellation.' },
+        { idx: '03', fill: '100%', title: 'Zero-emission liquid-hydrogen propulsion.', sub: '4,800 NM non-stop intercontinental range with private terminal boarding.' }
+      ];
+      let sIdx = 0;
+
+      function appendPromptAndReply(userText, replyText) {
+        const u = document.createElement('div');
+        u.className = 'user-bubble';
+        u.textContent = userText;
+        feed.appendChild(u);
+
+        const a = document.createElement('div');
+        a.className = 'ai-bubble';
+        a.innerHTML = replyText;
+        feed.appendChild(a);
+        feed.scrollTop = feed.scrollHeight;
+
+        sIdx = (sIdx + 1) % slides.length;
+        const sl = slides[sIdx];
+        document.getElementById('velorahSlideIdx').textContent = sl.idx;
+        document.getElementById('velorahProgFill').style.width = sl.fill;
+        document.getElementById('velorahPreviewTitle').textContent = sl.title;
+        document.getElementById('velorahPreviewSub').textContent = sl.sub;
+      }
+
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const val = input.value.trim() || 'Update Velorah hero copy for stratospheric cabin specs';
+        input.value = '';
+        appendPromptAndReply(val, '<strong>Live Preview Updated</strong><ul><li>Synced Velorah® cabin telemetry slide</li><li>Applied 1px specular liquid-glass border mask</li></ul>');
+      });
+
+      document.getElementById('promptDemoBtn')?.addEventListener('click', () => {
+        appendPromptAndReply(
+          'Switch Velorah® preview to Mach 0.92 cabin specs',
+          '<strong>Velorah® Preview Synced</strong><ul><li>Headline updated in Instrument Serif</li><li>Cabin range &amp; acoustic telemetry active</li></ul>'
+        );
+      });
+
+      document.getElementById('exploreCabinBtn')?.addEventListener('click', () => {
+        sIdx = (sIdx + 1) % slides.length;
+        const sl = slides[sIdx];
+        document.getElementById('velorahSlideIdx').textContent = sl.idx;
+        document.getElementById('velorahProgFill').style.width = sl.fill;
+        document.getElementById('velorahPreviewTitle').textContent = sl.title;
+        document.getElementById('velorahPreviewSub').textContent = sl.sub;
+      });
+
+      const modal = document.getElementById('enrollModal');
+      document.getElementById('startFreeBtn')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('openEnrollModalTop')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('closeEnrollModalBtn')?.addEventListener('click', () => modal.classList.remove('is-open'));
+      document.getElementById('confirmEnrollBtn')?.addEventListener('click', () => {
+        document.getElementById('enrollSuccessMsg').style.display = 'block';
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('is-open');
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "id": "t239",
+  "slug": "mythwood-sanctuary",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T13:59:54.368Z",
+  "demo": "/demos/mythwood-sanctuary/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "97c68343a77e",
+  "sha256": "97c68343a77eb02aab27d7554c40cd16ef378beff1dc0ee9b3fce659f0844b44",
+  "demoHtmlSha256": "029481bbafb11d08210c1cad4657bc17df6f40258cb7d4e5b9ddd37292ce907e",
+  "demoSha256": "0e158f25c471c27bd57e70bfa20913f120019002eeff6fe35e11f6d961c09e3c",
+  "bytes": 815636,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 594
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mythwood-sanctuary-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mythwood-sanctuary-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mythwood-sanctuary-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mythwood-sanctuary-return.jpg"
+  ]
+}

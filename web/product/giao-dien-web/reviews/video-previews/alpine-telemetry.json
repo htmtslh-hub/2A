@@ -1,0 +1,34 @@
+{
+  "id": "t235",
+  "slug": "alpine-telemetry",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T13:58:34.850Z",
+  "demo": "/demos/alpine-telemetry/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "ee817c10feb5",
+  "sha256": "ee817c10feb5d887f2a477a71d728ea33ab511834da5bc0784635fcd21aa7932",
+  "demoHtmlSha256": "2c3e9b3eef3a68eeeed9a7497cd291400b83ae8e4a94ca431071e48a9c703f02",
+  "demoSha256": "1ad4e74e6b80f603a95f1f3950541748f3169d209d7ade63248d5d8d31849940",
+  "bytes": 572210,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 720
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alpine-telemetry-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alpine-telemetry-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alpine-telemetry-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alpine-telemetry-return.jpg"
+  ]
+}

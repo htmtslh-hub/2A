@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DREAM MACHU. — Let Us Plan You a Perfect Machu Picchu Trip</title>
+  <meta name="description" content="Explore mysterious Incan settlements, Huayna Picchu cloud-forest trails, and curated Andean expeditions with Dream Machu Agency.">
+  <meta property="og:title" content="DREAM MACHU. — Andean Cloud Forest &amp; Machu Picchu Expedition">
+  <meta property="og:description" content="Five reasons why you should visit Machu Picchu &amp; curated 4-day classic Inca Trail tours.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0E1813">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1813;
+      --surface: #122019;
+      --surface-elevated: #172920;
+      --fg: #f8fafc;
+      --muted: #a7b8ae;
+      --accent: #c8a24a;
+      --accent-text: #dfc072;
+      --on-accent: #0e1813;
+      --border: rgba(200, 162, 74, 0.34);
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: #0a120e;
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out);
+      cursor: pointer;
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .mch-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .mch-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .mch-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--bg);
+      box-shadow: 0 36px 96px rgba(0, 0, 0, 0.65);
+      border-left: 1px solid rgba(200, 162, 74, 0.12);
+      border-right: 1px solid rgba(200, 162, 74, 0.12);
+      overflow: hidden;
+    }
+
+    /* SECTION 1: HERO */
+    .mch-hero {
+      position: relative;
+      min-height: 730px;
+      padding: 28px clamp(24px, 5vw, 68px) 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .mch-hero-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%;
+      z-index: 0;
+    }
+    .mch-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10, 18, 14, 0.35) 0%, rgba(14, 24, 19, 0.22) 55%, #0e1813 100%);
+      z-index: 1; pointer-events: none;
+    }
+
+    .mch-nav {
+      position: relative; z-index: 3;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .mch-brand {
+      font-weight: 800; font-size: 13px; line-height: 1.05; letter-spacing: 0.08em;
+      color: #ffffff; text-decoration: none; text-transform: uppercase;
+    }
+    .mch-nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
+    .mch-nav-links a {
+      color: #e2e8f0; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .mch-ghost-btn {
+      padding: 6px 14px; border-radius: 4px; border: 1px solid var(--border);
+      background: rgba(14, 24, 19, 0.65); color: var(--accent-text); font-size: 11px; font-weight: 700;
+    }
+
+    .mch-hero-center {
+      position: relative; z-index: 2;
+      text-align: center;
+      margin: auto 0;
+      padding: 40px 0 24px;
+    }
+    .mch-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #f1f5f9; margin-bottom: 12px;
+    }
+    .mch-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 6vw, 4.75rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: 0.06em;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    .mch-scroll-cue {
+      position: relative; z-index: 3;
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 12px;
+    }
+    .mch-scroll-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #cbd5e1;
+    }
+    .mch-gold-line {
+      width: 1px; height: 54px; background: linear-gradient(180deg, var(--accent), rgba(200, 162, 74, 0.15));
+    }
+
+    /* SECTION 2: FIVE REASONS DIAMOND TIMELINE */
+    .mch-reasons {
+      position: relative;
+      padding: 36px clamp(24px, 5vw, 68px) 72px;
+      background: var(--bg);
+    }
+    .mch-sec-header { text-align: center; margin-bottom: 54px; }
+    .mch-gold-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent-text); margin-bottom: 10px; display: block;
+    }
+    .mch-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.1vw, 2.35rem);
+      font-weight: 700; line-height: 1.22; letter-spacing: 0.05em; color: #ffffff; text-transform: uppercase;
+    }
+
+    .mch-diamond-stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 48px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .mch-spine {
+      position: relative;
+      height: 100%;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    .mch-spine::before {
+      content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
+      width: 1px; background: rgba(200, 162, 74, 0.35);
+    }
+    .mch-node {
+      position: relative; z-index: 2;
+      width: 11px; height: 11px; border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(200, 162, 74, 0.18);
+    }
+
+    .mch-left-col, .mch-right-col {
+      display: flex; flex-direction: column; gap: 38px;
+    }
+    .mch-diamond-cluster {
+      display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap;
+    }
+    .mch-diamond {
+      width: 176px; height: 176px;
+      transform: rotate(45deg);
+      overflow: hidden;
+      border: 2px solid rgba(200, 162, 74, 0.45);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.55);
+      flex-shrink: 0;
+      background: #172920;
+    }
+    .mch-diamond.is-small { width: 112px; height: 112px; }
+    .mch-diamond img {
+      width: 142%; height: 142%;
+      object-fit: cover;
+      transform: rotate(-45deg) translate(-15%, -15%);
+    }
+    .mch-reason-box {
+      max-width: 290px;
+      font-size: 12.5px; line-height: 1.65; color: var(--muted);
+    }
+    .mch-reason-box strong { color: #ffffff; font-weight: 700; }
+
+    .mch-gold-btn {
+      display: inline-block;
+      padding: 13px 44px;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent-text);
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    }
+
+    /* SECTION 3: TOURS OF OUR AGENCY */
+    .mch-tours {
+      padding: 32px clamp(24px, 5vw, 68px) 76px;
+      background: var(--bg);
+    }
+    .mch-tours-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+    .mch-feature-photo {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      min-height: 460px;
+      border: 1px solid rgba(200, 162, 74, 0.25);
+    }
+    .mch-feature-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .mch-photo-meta {
+      position: absolute; right: 20px; bottom: 18px;
+      background: rgba(14, 24, 19, 0.86);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      text-align: right;
+    }
+
+    .mch-route-list {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 10px;
+    }
+    .mch-route-item {
+      display: grid; grid-template-columns: 82px 1fr; gap: 16px;
+      padding: 16px 20px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--fg);
+      text-align: left;
+    }
+    .mch-route-item.is-active {
+      background: linear-gradient(90deg, rgba(200, 162, 74, 0.88) 0%, rgba(180, 142, 58, 0.78) 100%);
+      color: #0e1813;
+    }
+    .mch-route-date { font-size: 12px; font-weight: 700; opacity: 0.85; }
+    .mch-route-title { font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+    .mch-route-sub { font-size: 11.5px; opacity: 0.82; margin-top: 3px; }
+    .mch-route-link { font-size: 10px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 8px; display: inline-block; }
+
+    /* SECTION 4: ACCLIMATIZATION & FOOTER */
+    .mch-footer {
+      padding: 36px clamp(24px, 5vw, 68px);
+      background: #0a120e;
+      border-top: 1px solid rgba(200, 162, 74, 0.2);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px;
+    }
+
+    /* Modal */
+    .mch-modal-backdrop {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(8, 14, 11, 0.82); backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .mch-modal-backdrop.is-open { display: flex; }
+    .mch-modal {
+      background: #13221a; border: 1px solid var(--accent);
+      border-radius: 8px; max-width: 510px; width: 100%; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 960px) {
+      .mch-diamond-stage { grid-template-columns: 1fr; }
+      .mch-spine { display: none; }
+      .mch-tours-grid { grid-template-columns: 1fr; }
+      .mch-nav-links { display: none; }
+    }
+      @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Machu Picchu Expedition</a>
+  <main class="mch-shell" id="main-content">
+    <!-- SECTION 1: HERO -->
+    <section class="mch-hero" aria-label="Machu Picchu Cloud Forest Hero">
+      <img src="assets/machu-hero-valley.webp" alt="Machu Picchu and Huayna Picchu framed by rainforest cliffs, an Andean bird, a soaring condor, and a grazing llama" class="mch-hero-bg" width="1440" height="810">
+
+      <header class="mch-nav">
+        <a href="#main-content" class="mch-brand">DREAM<br>MACHU.</a>
+        <nav aria-label="Main agency navigation">
+          <ul class="mch-nav-links">
+            <li><a href="#reasons">INFO</a></li>
+            <li><a href="#tours">TOURS</a></li>
+            <li><a href="#reasons">GALLERY</a></li>
+            <li><a href="#footer">ABOUT US</a></li>
+            <li><a href="#footer">CONTACTS</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="mch-ghost-btn" data-modal-open="Plan Your Private Machu Picchu Expedition">BOOK</button>
+          <button type="button" class="mch-ghost-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+        </div>
+      </header>
+
+      <div class="mch-hero-center">
+        <p class="mch-eyebrow">LET US PLAN YOU A PERFECT</p>
+        <h1 class="mch-h1">MACHU PICCHU<br>TRIP</h1>
+      </div>
+
+      <div class="mch-scroll-cue">
+        <span class="mch-scroll-label">TRAVEL DETAILS</span>
+        <span class="mch-gold-line"></span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FIVE REASONS DIAMOND TIMELINE -->
+    <section class="mch-reasons mch-reveal" id="reasons" aria-labelledby="reasons-title">
+      <div class="mch-sec-header">
+        <span class="mch-gold-tag">REASONS</span>
+        <h2 class="mch-h2" id="reasons-title">FIVE REASONS WHY<br>YOU SHOULD VISIT<br>MACHUPICCHU</h2>
+      </div>
+
+      <div class="mch-diamond-stage">
+        <div class="mch-left-col">
+          <div class="mch-diamond-cluster">
+            <div class="mch-diamond">
+              <img src="assets/stone-terraces.webp" alt="Ancient Incan stone terraces at Machu Picchu" loading="lazy" width="400" height="400">
+            </div>
+            <div class="mch-diamond is-small">
+              <img src="assets/white-llamas.webp" alt="Two white Andean alpacas on mountain ridge" loading="lazy" width="300" height="300">
+            </div>
+          </div>
+          <article class="mch-reason-box" style="margin-left:auto;">
+            <strong>The Inca Trail.</strong> This is one of the most popular ways to get to Machu Picchu, hiking over a long distance in the Andes Mountains, camping on the trail, and being able to see other Incan ruins.
+          </article>
+          <article class="mch-reason-box" style="margin-left:auto;">
+            <strong>The amazing view.</strong> Even in pictures, seeing the citadel from the Sun Gate does not compare to standing above the Urubamba cloud forest in person.
+          </article>
+        </div>
+
+        <div class="mch-spine" aria-hidden="true">
+          <span class="mch-node"></span>
+          <span class="mch-node"></span>
+          <span class="mch-node"></span>
+          <span class="mch-node"></span>
+          <span class="mch-node"></span>
+        </div>
+
+        <div class="mch-right-col">
+          <article class="mch-reason-box">
+            <strong>The Mystery.</strong> Built by the Incas centuries ago high in the Peruvian Andes, the sacred citadel remained hidden above the Urubamba gorge until 1911.
+          </article>
+          <article class="mch-reason-box">
+            <strong>Other sites en route.</strong> Patallacta and Wiñay Wayna are monumental terraced sanctuaries you pass along the classic high-mountain Inca Trail.
+          </article>
+          <div class="mch-diamond-cluster">
+            <div class="mch-diamond is-small">
+              <img src="assets/poncho-traveler.webp" alt="Peruvian explorer in traditional Andean poncho" loading="lazy" width="300" height="300">
+            </div>
+            <div class="mch-diamond">
+              <img src="assets/sungate-trail.webp" alt="Inca trail stone corridor leading to Machu Picchu" loading="lazy" width="400" height="400">
+            </div>
+          </div>
+          <article class="mch-reason-box">
+            <strong>Being an explorer.</strong> Cutting your way through cloud forests, exploring ancient temples, and crossing hand-woven Incan suspension bridges.
+          </article>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:46px;">
+        <button type="button" class="mch-gold-btn" data-modal-open="Book Your 4-Day Classic Inca Trail &amp; Machu Picchu Expedition">BOOK TOUR</button>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TOURS OF OUR AGENCY -->
+    <section class="mch-tours mch-reveal" id="tours" aria-labelledby="tours-title">
+      <div class="mch-sec-header">
+        <span class="mch-gold-tag">TOURS</span>
+        <h2 class="mch-h2" id="tours-title">TOURS OF<br>OUR AGENCY</h2>
+      </div>
+
+      <div class="mch-tours-grid">
+        <div class="mch-feature-photo">
+          <img src="assets/poncho-traveler.webp" alt="Traveler in traditional Peruvian poncho overlooking Machu Picchu" id="activeTourImg" loading="lazy" width="1000" height="700">
+          <div class="mch-photo-meta">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--accent-text);" id="activeTourLabel">MACHU PICCHU CLASSIC TOUR 4 DAYS</div>
+            <div style="font-size:16px;font-weight:800;margin-top:4px;" class="tabular-nums">
+              <span id="activeTourDate">18.07</span> &nbsp;|&nbsp; <span style="color:var(--accent-text);" id="activeTourPrice">$ 735</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mch-route-list" role="tablist" aria-label="Select Machu Picchu tour itinerary">
+          <button type="button" class="mch-route-item" data-title="MACHU PICCHU FULL DAY" data-date="19.07" data-price="$ 420" data-img="assets/stone-terraces.webp">
+            <span class="mch-route-date tabular-nums">19 / 07</span>
+            <div>
+              <div class="mch-route-title">MACHU PICCHU FULL DAY</div>
+              <div class="mch-route-sub">Experience the best of Machupicchu &amp; Huayna</div>
+              <span class="mch-route-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg> VIEW ROUTE</span>
+            </div>
+          </button>
+
+          <button type="button" class="mch-route-item" data-title="2-DAY INCA TRAIL" data-date="12.08" data-price="$ 580" data-img="assets/sungate-trail.webp">
+            <span class="mch-route-date tabular-nums">12-14 / 08</span>
+            <div>
+              <div class="mch-route-title">2-DAY INCA TRAIL</div>
+              <div class="mch-route-sub">Explore Short Inca Trail &amp; Machu Picchu Sun Gate</div>
+              <span class="mch-route-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg> VIEW ROUTE</span>
+            </div>
+          </button>
+
+          <button type="button" class="mch-route-item is-active" data-title="MACHU PICCHU CLASSIC TOUR 4 DAYS" data-date="18.07" data-price="$ 735" data-img="assets/poncho-traveler.webp">
+            <span class="mch-route-date tabular-nums">18-22 / 08</span>
+            <div>
+              <div class="mch-route-title">MACHU PICCHU CLASSIC TOUR 4 DAYS</div>
+              <div class="mch-route-sub">Explore mysterious Inca settlements &amp; Machu Picchu</div>
+              <span class="mch-route-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg> VIEW ROUTE</span>
+            </div>
+          </button>
+
+          <button type="button" class="mch-route-item" data-title="MACHU PICCHU AMAZON TRIP 7 DAYS" data-date="24.08" data-price="$ 1,190" data-img="assets/machu-hero-valley.webp">
+            <span class="mch-route-date tabular-nums">24-31 / 08</span>
+            <div>
+              <div class="mch-route-title">MACHU PICCHU AMAZON TRIP 7 DAYS</div>
+              <div class="mch-route-sub">Explore the Andes Mountains and Amazon Jungle</div>
+              <span class="mch-route-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg> VIEW ROUTE</span>
+            </div>
+          </button>
+
+          <div style="padding-top:10px;">
+            <button type="button" class="mch-gold-btn" data-modal-open="Reserve Selected Machu Picchu Expedition Route">BOOK TOUR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FOOTER -->
+    <footer class="mch-footer mch-reveal" id="footer">
+      <a href="#main-content" class="mch-brand">DREAM MACHU.</a>
+      <div style="font-size:12px;color:var(--muted);">© 2026 Dream Machu Cusco Expedition Agency · Official Peruvian Ministry of Culture Permit Holder</div>
+      <div style="display:flex;gap:20px;font-size:11px;font-weight:700;letter-spacing:0.12em;">
+        <a href="#reasons" style="color:var(--accent-text);text-decoration:none;">REASONS</a>
+        <a href="#tours" style="color:var(--accent-text);text-decoration:none;">TOURS</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MODAL -->
+  <div class="mch-modal-backdrop" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="mch-modal">
+      <div style="font-size:11px;letter-spacing:0.16em;color:var(--accent-text);text-transform:uppercase;">DREAM MACHU · CUSCO PERMIT DESK</div>
+      <h3 id="seamlessTitle" style="font-family:var(--font-display);font-size:21px;font-weight:700;margin:8px 0 12px;">Plan Your Private Machu Picchu Expedition</h3>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:20px;">Includes official Inca Trail Ministry permits, Vistadome panoramic train tickets, private bilingual Quechua/English archaeologists, and luxury Sacred Valley lodges.</p>
+      <div style="display:flex;justify-content:flex-end;gap:12px;">
+        <button type="button" class="mch-ghost-btn" id="closeSeamlessBtn">Close</button>
+        <button type="button" class="mch-gold-btn" id="confirmSeamlessBtn" style="padding:8px 22px;">Confirm Permit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var routes = Array.prototype.slice.call(document.querySelectorAll('.mch-route-item'));
+      var imgEl = document.getElementById('activeTourImg');
+      var labelEl = document.getElementById('activeTourLabel');
+      var dateEl = document.getElementById('activeTourDate');
+      var priceEl = document.getElementById('activeTourPrice');
+
+      routes.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          routes.forEach(function (r) { r.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (labelEl) labelEl.textContent = btn.getAttribute('data-title') || '';
+          if (dateEl) dateEl.textContent = btn.getAttribute('data-date') || '';
+          if (priceEl) priceEl.textContent = btn.getAttribute('data-price') || '';
+          if (imgEl) imgEl.src = btn.getAttribute('data-img') || 'assets/poncho-traveler.webp';
+        });
+      });
+
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      
+      var counters = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        var target = parseFloat(el.getAttribute('data-counter-target') || '0');
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          el.textContent = Math.round(target * ease) + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      counters.forEach(animateCounter);
+
+      var reveals = document.querySelectorAll('.mch-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      function openModal(txt) {
+        if (!modal) return;
+        if (txt && modalTitle) modalTitle.textContent = txt;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      document.querySelectorAll('[data-modal-open]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-modal-open'));
+        });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaelen Vance — 3D Motion Director &amp; Interactive Design Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0C0C0C;
+      --bg-elevated: #141416;
+      --text-primary: #FFFFFF;
+      --text-muted: rgba(255, 255, 255, 0.2);
+      --heading-grad-top: #646973;
+      --heading-grad-bottom: #BBCCD7;
+      --cta-stop-1: #18011F;
+      --cta-stop-2: #B600A8;
+      --cta-stop-3: #7621B0;
+      --cta-stop-4: #BE4C00;
+      --font-display: 'Kanit', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 36px;
+      z-index: 50;
+      background: rgba(12, 12, 12, 0.78);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .brand-logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+      color: #fff;
+      text-decoration: none;
+    }
+    .nav-pills {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .pill-action {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    /* Hero / About Scroll Stage */
+    .about-stage-wrapper {
+      position: relative;
+      min-height: 118vh;
+      padding-top: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-stage {
+      position: relative;
+      width: 100%;
+      max-width: 1380px;
+      min-height: 86vh;
+      margin: 0 auto;
+      padding: 80px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .ambient-center-glow {
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(182, 0, 168, 0.14) 0%, rgba(118, 33, 176, 0.06) 45%, transparent 72%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    /* 4 Corner Floating 3D Assets */
+    .corner-3d {
+      position: absolute;
+      pointer-events: none;
+      z-index: 2;
+      filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.75));
+    }
+    .corner-tl {
+      top: 7%;
+      left: 6%;
+      width: 116px;
+      height: 116px;
+      transform: rotate(-6deg);
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+    .corner-bl {
+      bottom: 8%;
+      left: 5%;
+      width: 180px;
+      height: 168px;
+      transform: rotate(8deg);
+      animation: floatSlow 7.5s ease-in-out infinite 1s;
+    }
+    .corner-tr {
+      top: 10%;
+      right: 8%;
+      width: 132px;
+      height: 132px;
+      transform: rotate(11deg);
+      animation: floatSlow 8s ease-in-out infinite 0.5s;
+    }
+    .corner-br {
+      bottom: 4%;
+      right: 4%;
+      width: 260px;
+      height: 220px;
+      transform: rotate(-4deg);
+      animation: floatSlow 6.5s ease-in-out infinite 1.5s;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-14px) rotate(3deg); }
+    }
+    /* Central Typography Stack */
+    .center-stack {
+      position: relative;
+      z-index: 10;
+      max-width: 780px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-heading {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.75rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, var(--heading-grad-top) 0%, var(--heading-grad-bottom) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 2.25rem;
+    }
+    .reveal-paragraph {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.25rem, 2.35vw, 1.875rem);
+      line-height: 1.52;
+      letter-spacing: -0.01em;
+      text-align: center;
+      margin-bottom: 2.75rem;
+      color: #fff;
+    }
+    .reveal-paragraph .word {
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .reveal-paragraph .char {
+      display: inline-block;
+      opacity: 0.16;
+      transition: opacity 0.12s linear, color 0.12s linear;
+      will-change: opacity;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .btn-contact-neon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0.875rem 2.35rem;
+      border-radius: 9999px;
+      background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 30px -5px rgba(182, 0, 168, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+    }
+    .metrics-strip {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      width: 100%;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .metric-val {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(180deg, #FFFFFF, #BBCCD7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .metric-lbl {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    /* Section 2 & 3 */
+    .showcase-section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 88px 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .work-card {
+      background: var(--bg-elevated);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 22px;
+      padding: 28px;
+    }
+    .work-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e985ff;
+      margin-bottom: 10px;
+    }
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 8, 10, 0.85);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-overlay.is-open { display: flex; }
+    .modal-box {
+      background: #17151c;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      max-width: 500px;
+      width: 100%;
+      padding: 32px;
+    }
+    @media (max-width: 1024px) {
+      .corner-tl { width: 84px; height: 84px; top: 4%; left: 3%; }
+      .corner-bl { width: 120px; height: 112px; bottom: 4%; left: 2%; }
+      .corner-tr { width: 92px; height: 92px; top: 5%; right: 3%; }
+      .corner-br { width: 170px; height: 144px; bottom: 3%; right: 2%; }
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .corner-tl, .corner-tr { opacity: 0.4; width: 64px; height: 64px; }
+      .corner-bl, .corner-br { opacity: 0.35; width: 96px; height: 86px; }
+      .metrics-strip { grid-template-columns: 1fr; gap: 18px; }
+    }
+  
+    :root {
+      --bg: #0d0c11;
+      --surface: #15141c;
+      --fg: #ffffff;
+      --muted: #9a98a6;
+      --accent: #7c5cff;
+      --accent-text: #bdf7ee;
+      --on-accent: #ffffff;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="topbar"><nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <a href="#top" class="brand-logo">KAELEN.3D</a>
+    <div class="nav-pills">
+      <button type="button" class="pill-action" id="scrubSweepBtn" data-next>Illuminate Text</button>
+      <button type="button" class="pill-action" id="openContactModalTop">Book Commission</button>
+    </div>
+  </nav></header>
+
+  <main id="top">
+    <section class="about-stage-wrapper" id="about-section">
+      <div class="about-stage">
+        <div class="ambient-center-glow" aria-hidden="true"></div>
+
+        <!-- Top-Left: 3D Moon & Orbital Ring -->
+        <div class="corner-3d corner-tl" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="100%" height="100%" fill="none" aria-hidden="true">
+            <defs>
+              <radialGradient id="moonGrad" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#F5F7FA"/>
+                <stop offset="55%" stop-color="#8B93A6"/>
+                <stop offset="100%" stop-color="#232631"/>
+              </radialGradient>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#B600A8"/>
+                <stop offset="100%" stop-color="#BE4C00"/>
+              </linearGradient>
+            </defs>
+            <circle cx="60" cy="60" r="36" fill="url(#moonGrad)"/>
+            <circle cx="48" cy="46" r="7" fill="rgba(20,22,30,0.35)"/>
+            <circle cx="72" cy="68" r="10" fill="rgba(20,22,30,0.4)"/>
+            <ellipse cx="60" cy="62" rx="54" ry="18" transform="rotate(-24 60 62)" stroke="url(#ringGrad)" stroke-width="5" fill="none"/>
+          </svg>
+        </div>
+
+        <!-- Bottom-Left: 3D Faceted Octahedron -->
+        <div class="corner-3d corner-bl" aria-hidden="true">
+          <svg viewBox="0 0 180 168" width="100%" height="100%" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="octaLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D7E1EC"/>
+                <stop offset="100%" stop-color="#525866"/>
+              </linearGradient>
+              <linearGradient id="octaRight" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#B600A8"/>
+                <stop offset="100%" stop-color="#310A42"/>
+              </linearGradient>
+            </defs>
+            <polygon points="90,14 26,86 90,112" fill="url(#octaLeft)"/>
+            <polygon points="90,14 154,86 90,112" fill="url(#octaRight)"/>
+            <polygon points="26,86 90,154 90,112" fill="#2B2E38"/>
+            <polygon points="154,86 90,154 90,112" fill="#1C0926"/>
+          </svg>
+        </div>
+
+        <!-- Top-Right: 3D Isometric Lego / Stud Block -->
+        <div class="corner-3d corner-tr" aria-hidden="true">
+          <svg viewBox="0 0 132 132" width="100%" height="100%" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="legoTop" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E4ECF5"/>
+                <stop offset="100%" stop-color="#7B8494"/>
+              </linearGradient>
+              <linearGradient id="legoSide" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7621B0"/>
+                <stop offset="100%" stop-color="#BE4C00"/>
+              </linearGradient>
+            </defs>
+            <polygon points="66,22 114,48 66,74 18,48" fill="url(#legoTop)"/>
+            <polygon points="18,48 66,74 66,114 18,88" fill="#464B57"/>
+            <polygon points="114,48 66,74 66,114 114,88" fill="url(#legoSide)"/>
+            <ellipse cx="66" cy="44" rx="16" ry="9" fill="#FFFFFF" opacity="0.85"/>
+          </svg>
+        </div>
+
+        <!-- Bottom-Right: 3D Group Cluster -->
+        <div class="corner-3d corner-br" aria-hidden="true">
+          <svg viewBox="0 0 260 220" width="100%" height="100%" fill="none" aria-hidden="true">
+            <defs>
+              <radialGradient id="orbChrome" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="45%" stop-color="#9BA5B8"/>
+                <stop offset="100%" stop-color="#1E2028"/>
+              </radialGradient>
+              <linearGradient id="torusNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#B600A8"/>
+                <stop offset="50%" stop-color="#7621B0"/>
+                <stop offset="100%" stop-color="#BE4C00"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="136" cy="118" rx="88" ry="44" transform="rotate(-18 136 118)" stroke="url(#torusNeon)" stroke-width="22" fill="none"/>
+            <circle cx="118" cy="96" r="42" fill="url(#orbChrome)"/>
+            <circle cx="182" cy="144" r="24" fill="url(#orbChrome)"/>
+          </svg>
+        </div>
+
+        <div class="center-stack">
+          <h1 class="about-heading">ABOUT ME</h1>
+          <p class="reveal-paragraph" id="scroll-reveal-text">
+            Hi, I'm Kaelen Vance — a creative 3D motion director and design engineer crafting tactile WebGL worlds, kinetic typography systems, and high-converting flagship product launches for global design teams.
+          </p>
+          <div class="cta-group">
+            <button type="button" class="btn-contact-neon" id="contactMeBtn">
+              <span>CONTACT ME</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M4 9H14M14 9L9.5 4.5M14 9L9.5 13.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="metrics-strip">
+            <div>
+              <div class="metric-val"><span data-counter="64" data-suffix="+">64+</span></div>
+              <div class="metric-lbl">Flagship 3D Launches</div>
+            </div>
+            <div>
+              <div class="metric-val"><span data-counter="14">14</span></div>
+              <div class="metric-lbl">SOTD &amp; FWA Honors</div>
+            </div>
+            <div>
+              <div class="metric-val"><span data-counter="99.4" data-decimals="1" data-suffix="%">99.4%</span></div>
+              <div class="metric-lbl">60fps Shader Budget</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-section" id="works">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;">
+        <div>
+          <div class="work-tag">SELECTED KINETIC ARCHIVE</div>
+          <h2 style="font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:0.01em;">3D Direction &amp; Spatial Systems</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+        <article class="work-card">
+          <span class="work-tag">01 • REALTIME SHADERS</span>
+          <h3 style="font-size:1.4rem;margin-bottom:10px;">Chromatica Audio Synth</h3>
+          <p style="color:rgba(255,255,255,0.68);font-family:var(--font-sans);font-size:0.94rem;line-height:1.6;">
+            Procedural SDF raymarching stage and audio-reactive metallic primitives engineered for a 120Hz hardware synthesizer reveal.
+          </p>
+        </article>
+        <article class="work-card">
+          <span class="work-tag">02 • KINETIC TYPOGRAPHY</span>
+          <h3 style="font-size:1.4rem;margin-bottom:10px;">Vortex Spatial OS</h3>
+          <p style="color:rgba(255,255,255,0.68);font-family:var(--font-sans);font-size:0.94rem;line-height:1.6;">
+            Scroll-scrubbed character illumination and custom GLSL glass refraction pipeline across 18 localized product editions.
+          </p>
+        </article>
+        <article class="work-card">
+          <span class="work-tag">03 • DESIGN SYSTEMS</span>
+          <h3 style="font-size:1.4rem;margin-bottom:10px;">Monolith Studio Reel</h3>
+          <p style="color:rgba(255,255,255,0.68);font-family:var(--font-sans);font-size:0.94rem;line-height:1.6;">
+            Sub-millisecond spring physics, hardware-accelerated transform choreography, and accessible reduced-motion fallbacks.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="showcase-section" id="capabilities">
+      <div class="work-tag">CAPABILITY MATRIX</div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;">End-to-End Creative Engineering</h2>
+      <div class="grid-3">
+        <div class="work-card">
+          <h3 style="font-size:1.25rem;margin-bottom:8px;">3D Art Direction</h3>
+          <p style="color:rgba(255,255,255,0.65);font-family:var(--font-sans);font-size:0.9rem;line-height:1.6;">Octane, Blender, and custom procedural materials baked into ultra-lightweight WebP and GLTF assets.</p>
+        </div>
+        <div class="work-card">
+          <h3 style="font-size:1.25rem;margin-bottom:8px;">Scroll Choreography</h3>
+          <p style="color:rgba(255,255,255,0.65);font-family:var(--font-sans);font-size:0.9rem;line-height:1.6;">Character-level scroll progress mapping with zero layout thrashing and deterministic frame pacing.</p>
+        </div>
+        <div class="work-card">
+          <h3 style="font-size:1.25rem;margin-bottom:8px;">Production Handoff</h3>
+          <p style="color:rgba(255,255,255,0.65);font-family:var(--font-sans);font-size:0.9rem;line-height:1.6;">Clean, dependency-free Vanilla JS or React/Three.js modules tested across desktop, tablet, and mobile.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h3 id="contactModalTitle" style="font-size:1.5rem;font-weight:700;">Start a 3D Motion Commission</h3>
+        <button type="button" class="pill-action" id="closeContactModalBtn">Close</button>
+      </div>
+      <p style="color:rgba(255,255,255,0.72);font-family:var(--font-sans);font-size:0.92rem;line-height:1.6;margin-bottom:18px;">
+        Available for Q4/Q1 flagship product launches, interactive WebGL hero stages, and design engineering sprints.
+      </p>
+      <button type="button" class="btn-contact-neon" id="sendBriefBtn" style="width:100%;">Send Direct Brief — studio@kaelenvance.io</button>
+      <div id="briefSentNotice" style="display:none;margin-top:14px;color:#e985ff;font-size:0.9rem;text-align:center;">
+        Brief slot reserved — Kaelen's producer will respond within 24 hours.
+      </div>
+    </div>
+  </div>
+
+  <footer style="padding:48px 32px;text-align:center;color:rgba(255,255,255,0.45);border-top:1px solid rgba(255,255,255,0.08);font-family:var(--font-sans);font-size:0.875rem;">
+    © 2026 Kaelen Vance Studio. Crafted with Kanit Typography &amp; Scroll-Scrub Character Reveal.
+  </footer>
+
+  <script>
+    (function () {
+      const paragraph = document.getElementById('scroll-reveal-text');
+      const section = document.getElementById('about-section');
+      const rawText = paragraph.textContent.trim().replace(/\s+/g, ' ');
+      paragraph.innerHTML = '';
+
+      const chars = [];
+      rawText.split(' ').forEach((word, wIdx, arr) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'word';
+        for (let i = 0; i < word.length; i++) {
+          const charSpan = document.createElement('span');
+          charSpan.className = 'char';
+          charSpan.textContent = word[i];
+          wordSpan.appendChild(charSpan);
+          chars.push(charSpan);
+        }
+        paragraph.appendChild(wordSpan);
+        if (wIdx < arr.length - 1) {
+          paragraph.appendChild(document.createTextNode(' '));
+        }
+      });
+
+      let manualProgress = 0.68;
+      function renderChars(progress) {
+        const total = chars.length;
+        chars.forEach((charEl, index) => {
+          const charThreshold = index / total;
+          const charEnd = (index + 4) / total;
+          let opacity = 0.16;
+          if (progress >= charEnd) {
+            opacity = 1;
+          } else if (progress > charThreshold) {
+            const localProgress = (progress - charThreshold) / (charEnd - charThreshold);
+            opacity = 0.16 + localProgress * 0.84;
+          }
+          charEl.style.opacity = opacity.toFixed(3);
+        });
+      }
+
+      // Initial state: show 68% illuminated so hero looks alive immediately, and scrub on scroll
+      renderChars(manualProgress);
+
+      function updateRevealFromScroll() {
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const start = windowHeight * 0.85;
+        const end = windowHeight * 0.1;
+        let scrollProg = (start - rect.top) / (start - end);
+        scrollProg = Math.max(0.25, Math.min(1, scrollProg));
+        renderChars(scrollProg);
+      }
+
+      window.addEventListener('scroll', () => {
+        window.requestAnimationFrame(updateRevealFromScroll);
+      }, { passive: true });
+
+      // Interactive sweep button for instant character-by-character illumination
+      const sweepBtn = document.getElementById('scrubSweepBtn');
+      sweepBtn?.addEventListener('click', () => {
+        const startT = performance.now();
+        const duration = 1100;
+        function step(now) {
+          const t = Math.min(1, (now - startT) / duration);
+          renderChars(0.15 + t * 0.85);
+          if (t < 1) window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+      });
+
+      const modal = document.getElementById('contactModal');
+      document.getElementById('contactMeBtn')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('openContactModalTop')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('closeContactModalBtn')?.addEventListener('click', () => modal.classList.remove('is-open'));
+      document.getElementById('sendBriefBtn')?.addEventListener('click', () => {
+        document.getElementById('briefSentNotice').style.display = 'block';
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('is-open');
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

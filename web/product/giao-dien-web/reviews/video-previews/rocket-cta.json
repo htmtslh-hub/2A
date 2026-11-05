@@ -1,0 +1,44 @@
+{
+  "id": "t243",
+  "slug": "rocket-cta",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T14:42:11.214Z",
+  "demo": "/demos/rocket-cta/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "093fde893997",
+  "sha256": "093fde893997db465cc758570993dccc5e714cc2ca092a2141d7f437c18122d0",
+  "demoHtmlSha256": "cc2c052e35eb47e55f4995e1207279f5642679cb964e01c8b8b9daf80bbc911e",
+  "demoSha256": "249497acb6120fa7ec90255d99643f85c4b5ac7c03cb5c73032c678a83e0d970",
+  "bytes": 551592,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.465,
+      "action": "click",
+      "selector": "#promptDemoBtn"
+    },
+    {
+      "seconds": 4.845,
+      "action": "click",
+      "selector": "#promptDemoBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 727
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-cta-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-cta-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-cta-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-cta-return.jpg"
+  ]
+}

@@ -25,6 +25,17 @@ const PREVIEWS_DIR = join(WEB_ROOT, 'public', 'previews');
 const EXCLUDED_DIRS = new Set(['_design', 'design', 'docs', 'reviews', 'tools', 'free-sample']);
 
 const INLINE_PRODUCTS = new Set([
+  'mind-body-healing',
+  'stark-minimal-footer',
+  'rocket-cta',
+  'radial-diagram',
+  'portfolio-about',
+  'strata-ai',
+  'mythwood-sanctuary',
+  'playing-market-audio',
+  'dream-machu-picchu',
+  'japan-sunrise-tours',
+  'alpine-telemetry',
   'spaceedu', 'fennec', 'riverine-ai', 'freight-axis', 'meridian', 'solaris-gate',
   'cyber-ronin', 'vertex-shops', 'aethera', 'nexlayer', 'toonhub', 'vectrus-energy',
   'halden', 'prmpt', 'designpro', 'cinematic', 'viktor', 'camper', 'sellix',

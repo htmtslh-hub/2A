@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurelia Sanctuary — Holistic Mind-Body Healing &amp; Natural Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-fallback: #c86478;
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.9);
+      --text-muted: rgba(255, 255, 255, 0.8);
+      --glass-fill: rgba(255, 255, 255, 0.01);
+      --glass-active: rgba(255, 255, 255, 0.2);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #1e1319;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px);
+      border: none;
+      position: relative;
+      isolation: isolate;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.2) 20%,
+        transparent 40%,
+        transparent 60%,
+        rgba(255, 255, 255, 0.2) 80%,
+        rgba(255, 255, 255, 0.5) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    /* Full-Screen Video Hero Stage */
+    .hero-viewport {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 30%, #c86478 0%, #311722 85%);
+    }
+    .hero-viewport video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 10, 14, 0.28) 0%, rgba(16, 10, 14, 0.18) 50%, rgba(16, 10, 14, 0.52) 100%);
+      z-index: 1;
+    }
+    /* Top Navbar */
+    .top-nav-row {
+      position: relative;
+      z-index: 10;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-pill-container {
+      border-radius: 9999px;
+      padding: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-pill-item {
+      padding: 8px 20px;
+      border-radius: 9999px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-pill-item.is-active {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+    /* Center Hero Stack */
+    .center-hero-stack {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .social-proof-pill {
+      border-radius: 9999px;
+      padding: 8px 20px 8px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+    }
+    .avatar-stack img {
+      width: 36px;
+      height: 36px;
+      border-radius: 9999px;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.65);
+      margin-left: -10px;
+    }
+    .avatar-stack img:first-child {
+      margin-left: 0;
+    }
+    .hero-h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+    .cta-journey-btn {
+      border-radius: 9999px;
+      padding: 20px 44px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    /* Bottom Telemetry / Stats Row */
+    .bottom-stats-row {
+      position: relative;
+      z-index: 10;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 32px 44px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .stat-cluster {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .tri-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tri-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .dot-6 {
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background: #ffffff;
+    }
+    .dot-6.is-faint {
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .v-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .checker-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 6px);
+      gap: 6px;
+    }
+    /* Secondary Sections */
+    .sanctuary-section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 80px 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .modality-card {
+      border-radius: 24px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .modal-sanctuary {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 9, 13, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-sanctuary.is-open { display: flex; }
+    .modal-sanctuary-box {
+      background: #271820;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 24px;
+      max-width: 500px;
+      width: 100%;
+      padding: 32px;
+    }
+    @media (max-width: 960px) {
+      .cards-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .top-nav-row { flex-direction: column; gap: 16px; }
+      .bottom-stats-row { flex-direction: column; align-items: flex-start; }
+    }
+  
+    :root {
+      --bg: #0d0c11;
+      --surface: #15141c;
+      --fg: #ffffff;
+      --muted: #9a98a6;
+      --accent: #7c5cff;
+      --accent-text: #bdf7ee;
+      --on-accent: #ffffff;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="hero-viewport" id="top">
+    <video
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260715_082433_69699cf8-444b-4484-93cc-053e57896dfd.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <header class="top-nav-row"><nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+      <a href="#top" aria-label="Aurelia Natural Wellness Home" style="color:#fff;">
+        <svg width="40" height="40" viewBox="0 0 256 256" fill="none" aria-hidden="true">
+          <path d="M128 136C104 92 48 72 28 104C12 130 44 176 92 168C110 165 122 152 128 136ZM128 136C152 92 208 72 228 104C244 130 212 176 164 168C146 165 134 152 128 136Z" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M96 76C110 92 120 112 128 136C136 112 146 92 160 76" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <div class="nav-pill-container liquid-glass" role="tablist">
+        <button type="button" class="nav-pill-item is-active" data-method="home" data-next>Home</button>
+        <button type="button" class="nav-pill-item" data-method="approach">Our Approach</button>
+        <button type="button" class="nav-pill-item" data-method="methods">Healing Methods</button>
+      </div>
+
+      <button type="button" class="nav-pill-item liquid-glass" id="motionToggleBtn" style="border-radius:9999px;">Motion: ON</button>
+    </nav></header>
+
+    <div class="center-hero-stack">
+      <div class="social-proof-pill liquid-glass">
+        <div class="avatar-stack">
+          <img src="assets/avatar-1.webp" width="36" height="36" alt="Wellness member Maya" />
+          <img src="assets/avatar-2.webp" width="36" height="36" alt="Wellness member Liam" />
+          <img src="assets/avatar-3.webp" width="36" height="36" alt="Wellness member Elena" />
+          <img src="assets/avatar-4.webp" width="36" height="36" alt="Wellness member Noah" />
+        </div>
+        <span style="font-size:0.875rem;font-weight:500;" id="badgePathText">our path to natural wellness</span>
+      </div>
+
+      <h1 class="hero-h1" id="heroMainHeading">Heal Your Body<br />Naturally</h1>
+      <p class="hero-sub" id="heroMainSub">Holistic wellness. Transformative results.</p>
+
+      <button type="button" class="cta-journey-btn liquid-glass" id="beginJourneyBtn">
+        Begin Your Journey
+      </button>
+    </div>
+
+    <div class="bottom-stats-row">
+      <div class="stat-cluster">
+        <div class="tri-dots" aria-hidden="true">
+          <div class="tri-col"><span class="dot-6"></span></div>
+          <div class="tri-col"><span class="dot-6"></span><span class="dot-6"></span></div>
+          <div class="tri-col"><span class="dot-6"></span><span class="dot-6"></span><span class="dot-6"></span></div>
+        </div>
+        <div class="v-divider" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:1.5rem;font-weight:600;line-height:1.15;"><span data-counter="48">48</span> Hours</div>
+          <div style="font-size:0.875rem;color:var(--text-muted);">Initial Consultation</div>
+        </div>
+      </div>
+
+      <div class="stat-cluster">
+        <div class="checker-grid" aria-hidden="true">
+          <span class="dot-6"></span><span class="dot-6 is-faint"></span><span class="dot-6"></span>
+          <span class="dot-6 is-faint"></span><span class="dot-6"></span><span class="dot-6 is-faint"></span>
+          <span class="dot-6"></span><span class="dot-6 is-faint"></span><span class="dot-6"></span>
+        </div>
+        <div>
+          <div style="font-size:0.875rem;color:var(--text-muted);">Initial Consultation</div>
+          <div style="font-size:1.25rem;font-weight:600;">Healing Sessions (<span data-counter="96" data-suffix="%">96%</span> Relief)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="sanctuary-section" id="approach">
+      <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);">RESTORATIVE MODALITIES</div>
+      <h2 style="font-size:clamp(1.85rem,3.2vw,2.75rem);font-weight:500;letter-spacing:-0.025em;margin-top:8px;">Somatic Regulation &amp; Botanical Medicine</h2>
+      <div class="cards-grid-3">
+        <article class="modality-card">
+          <h3 style="font-size:1.25rem;font-weight:500;margin-bottom:10px;">01 / Vagus Nerve Resonance</h3>
+          <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.6;">Breath-synchronized acoustic therapy and craniosacral decompression designed to reset chronic cortisol elevation within 48 hours.</p>
+        </article>
+        <article class="modality-card">
+          <h3 style="font-size:1.25rem;font-weight:500;margin-bottom:10px;">02 / Adaptogenic Phyto-Infusions</h3>
+          <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.6;">Cold-extracted clinical botanicals tailored to your circadian biomarker curve and cellular inflammation profile.</p>
+        </article>
+        <article class="modality-card">
+          <h3 style="font-size:1.25rem;font-weight:500;margin-bottom:10px;">03 / Myofascial Thermal Unwinding</h3>
+          <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.6;">Guided infrared hydro-immersion paired with slow-release fascia bodywork for deep neuromuscular recovery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sanctuary-section" id="clinical-outcomes">
+      <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);">BIOMARKER TELEMETRY</div>
+      <h2 style="font-size:clamp(1.85rem,3.2vw,2.75rem);font-weight:500;letter-spacing:-0.025em;margin-top:8px;">Measured Nervous System Restoration</h2>
+      <div class="cards-grid-3">
+        <article class="modality-card">
+          <div style="font-size:2.2rem;font-weight:600;">+<span data-counter="44" data-suffix="%">44%</span></div>
+          <div style="font-weight:500;margin-top:6px;">Heart-Rate Variability (HRV)</div>
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-top:8px;line-height:1.6;">Average parasympathetic rebound recorded across 14-day residential guests.</p>
+        </article>
+        <article class="modality-card">
+          <div style="font-size:2.2rem;font-weight:600;"><span data-counter="3400" data-suffix="+">3400+</span></div>
+          <div style="font-weight:500;margin-top:6px;">Restorative Journeys Completed</div>
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-top:8px;line-height:1.6;">Personalized 1-on-1 somatic and naturopathic protocols guided by integrative practitioners.</p>
+        </article>
+        <article class="modality-card">
+          <div style="font-size:2.2rem;font-weight:600;"><span data-counter="98.2" data-decimals="1" data-suffix="%">98.2%</span></div>
+          <div style="font-weight:500;margin-top:6px;">Deep Sleep Architecture Gain</div>
+          <p style="color:var(--text-muted);font-size:0.88rem;margin-top:8px;line-height:1.6;">Verified slow-wave sleep improvement within the first 72 hours of sanctuary immersion.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-sanctuary" id="journeyModal" role="dialog" aria-modal="true" aria-labelledby="journeyModalTitle">
+    <div class="modal-sanctuary-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h3 id="journeyModalTitle" style="font-size:1.35rem;font-weight:500;">Schedule Your 48-Hour Initial Consultation</h3>
+        <button type="button" class="nav-pill-item" id="closeJourneyModalBtn" style="background:rgba(255,255,255,0.12);">Close</button>
+      </div>
+      <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.6;margin-bottom:20px;">
+        Connect with our lead integrative physician to map your HRV, cortisol curve, and bespoke somatic healing itinerary.
+      </p>
+      <button type="button" class="cta-journey-btn" id="confirmJourneyBtn" style="width:100%;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);">
+        Confirm Sanctuary Intake Slot
+      </button>
+      <div id="journeyConfirmMsg" style="display:none;margin-top:14px;font-size:0.88rem;color:#ffffff;text-align:center;">
+        Intake reserved — your holistic care coordinator will reach out within 2 hours.
+      </div>
+    </div>
+  </div>
+
+  <footer style="max-width:1240px;margin:0 auto;padding:44px 32px;border-top:1px solid rgba(255,255,255,0.1);color:var(--text-muted);font-size:0.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 Aurelia Holistic Mind-Body Sanctuary. All rights reserved.</span>
+    <span>48-Hour Initial Consultation • Somatic &amp; Botanical Healing</span>
+  </footer>
+
+  <script>
+    (function () {
+      const states = {
+        home: {
+          badge: 'our path to natural wellness',
+          h1: 'Heal Your Body<br />Naturally',
+          sub: 'Holistic wellness. Transformative results.'
+        },
+        approach: {
+          badge: 'parasympathetic nervous system reset',
+          h1: 'Restore Cellular<br />Harmony',
+          sub: 'Evidence-backed somatic decompression and circadian nourishment.'
+        },
+        methods: {
+          badge: '48-hour personalized intake protocol',
+          h1: 'Bespoke Botanical<br />&amp; Somatic Care',
+          sub: 'Vagus nerve resonance, phyto-infusions, and thermal hydro-therapy.'
+        }
+      };
+
+      const order = ['home', 'approach', 'methods'];
+      let idx = 0;
+
+      function applyMethod(key) {
+        const s = states[key];
+        if (!s) return;
+        idx = order.indexOf(key);
+        document.querySelectorAll('[data-method]').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-method') === key);
+        });
+        document.getElementById('badgePathText').textContent = s.badge;
+        document.getElementById('heroMainHeading').innerHTML = s.h1;
+        document.getElementById('heroMainSub').textContent = s.sub;
+      }
+
+      document.querySelectorAll('[data-method]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-method');
+          if (key === 'home' && btn.classList.contains('is-active')) {
+            applyMethod(order[(idx + 1) % order.length]);
+          } else {
+            applyMethod(key);
+          }
+        });
+      });
+
+      const modal = document.getElementById('journeyModal');
+      document.getElementById('beginJourneyBtn')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('closeJourneyModalBtn')?.addEventListener('click', () => modal.classList.remove('is-open'));
+      document.getElementById('confirmJourneyBtn')?.addEventListener('click', () => {
+        document.getElementById('journeyConfirmMsg').style.display = 'block';
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('is-open');
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

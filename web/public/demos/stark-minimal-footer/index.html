@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EngineTech — Proven Advanced Propulsion Technology &amp; Stark Minimal Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-footer: #000000;
+      --text-primary: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.72);
+      --text-subtle: rgba(255, 255, 255, 0.56);
+      --dot-bright: rgba(255, 255, 255, 0.85);
+      --dot-mid: rgba(255, 255, 255, 0.55);
+      --dot-faint: rgba(255, 255, 255, 0.35);
+      --border-hairline: rgba(255, 255, 255, 0.16);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    .container-shell {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    /* Stark Minimal Top Header */
+    .stark-header {
+      height: 76px;
+      border-bottom: 1px solid var(--border-hairline);
+      display: flex;
+      align-items: center;
+    }
+    .stark-header-inner {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-lockup-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+    }
+    .stark-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+      padding: 9px 18px;
+      font-size: 0.82rem;
+      font-family: var(--font-sans);
+      cursor: pointer;
+    }
+    .stark-btn.is-active, .stark-btn:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+    /* Propulsion Hero & Signature Footer Showcase */
+    .propulsion-hero {
+      padding: 64px 0 56px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    .hero-top-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+      align-items: end;
+    }
+    .kicker-mono {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      margin-bottom: 18px;
+    }
+    .hero-display {
+      font-size: clamp(2.4rem, 4.4vw, 4.25rem);
+      font-weight: 200;
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+    .telemetry-switcher {
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .telemetry-readout {
+      border: 1px solid var(--border-hairline);
+      padding: 28px;
+      background: #050505;
+    }
+    .spec-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-hairline);
+    }
+    .spec-val {
+      font-size: clamp(1.6rem, 2.5vw, 2.35rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+    }
+    .spec-lbl {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-subtle);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+    /* Signature Stark Minimal Dotted Footer */
+    .site-footer {
+      position: relative;
+      background: #000000;
+      color: #ffffff;
+      overflow: hidden;
+    }
+    .footer-dots {
+      height: 108px;
+      width: 100%;
+      background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.85) 1.15px, transparent 1.35px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.55) 1px, transparent 1.25px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.35) 0.85px, transparent 1.15px);
+      background-size: 12px 12px, 16px 16px, 22px 22px;
+      background-position: 0 0, 5px 3px, 9px 7px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.82) 56%, transparent 100%);
+      -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.82) 56%, transparent 100%);
+      animation: footerDotsMove 18s linear infinite;
+    }
+    @keyframes footerDotsMove {
+      0% { background-position: 0 0, 5px 3px, 9px 7px; }
+      100% { background-position: 24px 12px, -16px 19px, 22px -11px; }
+    }
+    .site-footer__inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 46px 40px 28px;
+    }
+    .site-footer__top {
+      display: grid;
+      grid-template-columns: minmax(280px, 1.38fr) repeat(3, minmax(150px, 0.72fr));
+      gap: 32px;
+      align-items: start;
+    }
+    .site-footer__headline {
+      font-size: clamp(34px, 3.5vw, 62px);
+      font-weight: 200;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      max-width: 11.2ch;
+      color: #ffffff;
+    }
+    .site-footer__nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .site-footer__nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: clamp(16px, 1.05vw, 20px);
+      font-weight: 400;
+      line-height: 1.48;
+      letter-spacing: -0.015em;
+    }
+    .site-footer__nav a:hover {
+      opacity: 0.72;
+    }
+    .site-footer__brand-row {
+      margin-top: clamp(56px, 7vw, 88px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .site-footer__brand {
+      font-size: clamp(46px, 5.4vw, 92px);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.045em;
+    }
+    .site-footer__mark {
+      width: clamp(44px, 4.9vw, 82px);
+      height: clamp(44px, 4.9vw, 82px);
+      border-radius: 50%;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .site-footer__mark-wave {
+      position: absolute;
+      inset: 0;
+      background: #000000;
+      clip-path: polygon(
+        0% 59%, 10% 56%, 20% 57%, 31% 61%, 43% 66%,
+        55% 68%, 67% 65%, 78% 60%, 89% 57%, 100% 58%,
+        100% 100%, 0% 100%
+      );
+    }
+    .site-footer__bottom {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: -0.01em;
+    }
+    .site-footer__legal {
+      display: flex;
+      gap: 24px;
+    }
+    .site-footer__legal a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    /* Extra Section for Deep Technical Matrix */
+    .matrix-section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    .matrix-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 28px;
+    }
+    .matrix-card {
+      border: 1px solid var(--border-hairline);
+      padding: 26px;
+    }
+    .modal-stark {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-stark.is-open { display: flex; }
+    .modal-stark-box {
+      background: #080808;
+      border: 1px solid #ffffff;
+      max-width: 500px;
+      width: 100%;
+      padding: 32px;
+    }
+    @media (max-width: 960px) {
+      .hero-top-grid, .matrix-cards { grid-template-columns: 1fr; }
+      .site-footer__top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .site-footer__top, .spec-grid-3 { grid-template-columns: 1fr; }
+      .site-footer__bottom { flex-direction: column; align-items: flex-start; }
+    }
+  
+    :root {
+      --bg: #0d0c11;
+      --surface: #15141c;
+      --fg: #ffffff;
+      --muted: #9a98a6;
+      --accent: #7c5cff;
+      --accent-text: #bdf7ee;
+      --on-accent: #ffffff;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="stark-header"><nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div class="stark-header-inner">
+      <a href="#top" class="brand-lockup-sm">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#ffffff"/>
+          <path d="M2 14C6 12 10 16 14 15C18 14 20 12 22 13V22H2V14Z" fill="#000000"/>
+        </svg>
+        <span>EngineTech</span>
+      </a>
+      <div style="display:flex;gap:10px;">
+        <button type="button" class="stark-btn" id="motionToggleBtn">Motion: ON</button>
+        <button type="button" class="stark-btn" id="openSpecSheetBtn">Datasheet</button>
+      </div>
+    </div>
+  </nav></header>
+
+  <main id="top">
+    <!-- Signature Stark Minimal Dotted Showcase Above the Fold -->
+    <section class="site-footer" aria-label="EngineTech Stark Minimal Dotted Showcase" style="border-bottom:1px solid var(--border-hairline);">
+      <div class="footer-dots" aria-hidden="true"></div>
+      <div class="site-footer__inner">
+        <div class="site-footer__top">
+          <h1 class="site-footer__headline">Proven Advanced Propulsion Technology</h1>
+          <ul class="site-footer__nav" aria-label="Company and technology links">
+            <li><a href="#propulsion-telemetry">Company</a></li>
+            <li><a href="#propulsion-telemetry">Technology</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#solutions">Our Edge</a></li>
+            <li><a href="#solutions">Investors</a></li>
+          </ul>
+          <ul class="site-footer__nav" aria-label="Team and contact links">
+            <li><a href="#solutions">Our Team</a></li>
+            <li><a href="#solutions">News</a></li>
+            <li><a href="#solutions">Careers</a></li>
+            <li><a href="#solutions" id="footerContactLink">Contact Us</a></li>
+          </ul>
+          <ul class="site-footer__nav" aria-label="Social channels">
+            <li><a href="#solutions">LinkedIn</a></li>
+            <li><a href="#solutions">Follow Us on X</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__brand-row">
+          <div class="site-footer__brand">EngineTech</div>
+          <div class="site-footer__mark" aria-hidden="true">
+            <div class="site-footer__mark-wave"></div>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <span>©2026 EngineTech. All Rights Reserved.</span>
+          <div class="site-footer__legal">
+            <a href="#propulsion-telemetry">Privacy Policy</a>
+            <a href="#propulsion-telemetry">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="propulsion-hero" id="propulsion-telemetry">
+      <div class="container-shell">
+        <div class="hero-top-grid">
+          <div>
+            <div class="kicker-mono">ENGINETECH // ORBITAL PROPULSION ARCHITECTURE</div>
+            <h2 class="hero-display">Deep-Space Hall-Effect &amp; Bimodal Thruster Systems.</h2>
+            <div class="telemetry-switcher" role="tablist">
+              <button type="button" class="stark-btn is-active" data-thruster="hall" data-next>ET-900 Hall Thruster</button>
+              <button type="button" class="stark-btn" data-thruster="mpd">ET-2400 Magnetoplasma</button>
+              <button type="button" class="stark-btn" data-thruster="ntp">ET-X Bimodal Nuclear</button>
+            </div>
+          </div>
+
+          <div class="telemetry-readout" aria-live="polite">
+            <div class="kicker-mono" id="thrusterCode">TELEMETRY // ET-900 XENON HALL-EFFECT</div>
+            <h3 style="font-size:1.45rem;font-weight:400;margin-bottom:10px;" id="thrusterName">45 kW High-Isp Orbital Transfer Engine</h3>
+            <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6;" id="thrusterDesc">
+              Magnetically shielded Hall-effect thruster qualified for 28,000 hours of continuous cislunar cargo tug operation.
+            </p>
+          </div>
+        </div>
+
+        <div class="spec-grid-3">
+          <article>
+            <div class="spec-val"><span id="ispVal" data-counter="3450" data-suffix=" s">3450 s</span></div>
+            <div class="spec-lbl">Specific Impulse (Isp)</div>
+          </article>
+          <article>
+            <div class="spec-val"><span id="thrustVal" data-counter="2.4" data-decimals="1" data-suffix=" N">2.4 N</span></div>
+            <div class="spec-lbl">Continuous Rated Thrust</div>
+          </article>
+          <article>
+            <div class="spec-val"><span data-counter="99.94" data-decimals="2" data-suffix="%">99.94%</span></div>
+            <div class="spec-lbl">On-Orbit Ignition Reliability</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="matrix-section" id="solutions">
+      <div class="container-shell">
+        <div class="kicker-mono">FLIGHT HERITAGE &amp; QUALIFICATION</div>
+        <h2 style="font-size:clamp(1.6rem,2.6vw,2.4rem);font-weight:300;letter-spacing:-0.025em;">Engineered for Zero-Fault Orbital Maneuvering</h2>
+        <div class="matrix-cards">
+          <article class="matrix-card">
+            <div class="kicker-mono">01 / CATHODE LONGEVITY</div>
+            <h3 style="font-size:1.2rem;font-weight:400;margin-bottom:8px;">Lanthanum Hexaboride Hollow Cathode</h3>
+            <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.6;">Redundant dual-emitter architecture rated for 45,000 cold-start ignition cycles in GEO and lunar orbit.</p>
+          </article>
+          <article class="matrix-card">
+            <div class="kicker-mono">02 / POWER PROCESSING</div>
+            <h3 style="font-size:1.2rem;font-weight:400;margin-bottom:8px;">97.4% Efficient Direct-Drive PPU</h3>
+            <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.6;">Radiation-hardened silicon-carbide power conversion linking solar arrays directly to the discharge channel.</p>
+          </article>
+          <article class="matrix-card">
+            <div class="kicker-mono">03 / PROPELLANT FLEXIBILITY</div>
+            <h3 style="font-size:1.2rem;font-weight:400;margin-bottom:8px;">Xenon, Krypton &amp; Argon Multi-Mode</h3>
+            <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.6;">Automated mass-flow controller adapts magnetic field topology in real time across noble gas propellants.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding:28px 40px;max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--text-muted);font-size:13px;">
+    <span>©2026 EngineTech Orbital Propulsion Division. All Rights Reserved.</span>
+    <span>Stark Minimal Dotted Footer System • ISO-14620</span>
+  </footer>
+
+  <div class="modal-stark" id="specModal" role="dialog" aria-modal="true" aria-labelledby="specModalTitle">
+    <div class="modal-stark-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h3 id="specModalTitle" style="font-size:1.25rem;font-weight:400;">EngineTech Flight Qualification Dossier</h3>
+        <button type="button" class="stark-btn" id="closeSpecModalBtn">Close</button>
+      </div>
+      <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.6;margin-bottom:18px;">
+        Request full interface control documents (ICD), thermal vacuum test logs, and PPU radiation tolerance telemetry.
+      </p>
+      <button type="button" class="stark-btn is-active" id="downloadIcdBtn" style="width:100%;">Request Encrypted ICD Package</button>
+      <div id="icdNotice" style="display:none;margin-top:14px;font-family:var(--font-mono);font-size:0.78rem;color:#ffffff;">
+        DISPATCHED // ICD-ET900-REV4.PDF QUEUED FOR CLEARANCE
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const thrusters = {
+        hall: {
+          code: 'TELEMETRY // ET-900 XENON HALL-EFFECT',
+          name: '45 kW High-Isp Orbital Transfer Engine',
+          desc: 'Magnetically shielded Hall-effect thruster qualified for 28,000 hours of continuous cislunar cargo tug operation.',
+          isp: '3450 s',
+          thrust: '2.4 N'
+        },
+        mpd: {
+          code: 'TELEMETRY // ET-2400 MAGNETOPLASMADYNAMIC',
+          name: '250 kW High-Thrust Deep-Space Freighter Drive',
+          desc: 'Self-field lithium and argon Lorentz-force accelerator delivering high thrust density for heavy interplanetary payloads.',
+          isp: '5800 s',
+          thrust: '14.8 N'
+        },
+        ntp: {
+          code: 'TELEMETRY // ET-X BIMODAL NUCLEAR THERMAL',
+          name: '1.2 MW Rapid Mars Transit Propulsion Core',
+          desc: 'High-assay solid-core bimodal nuclear thermal rocket with closed-loop Brayton electrical co-generation.',
+          isp: '920 s',
+          thrust: '68,000 N'
+        }
+      };
+
+      const order = ['hall', 'mpd', 'ntp'];
+      let idx = 0;
+
+      function setThruster(key) {
+        const t = thrusters[key];
+        if (!t) return;
+        idx = order.indexOf(key);
+        document.querySelectorAll('[data-thruster]').forEach(b => {
+          b.classList.toggle('is-active', b.getAttribute('data-thruster') === key);
+        });
+        document.getElementById('thrusterCode').textContent = t.code;
+        document.getElementById('thrusterName').textContent = t.name;
+        document.getElementById('thrusterDesc').textContent = t.desc;
+        document.getElementById('ispVal').textContent = t.isp;
+        document.getElementById('thrustVal').textContent = t.thrust;
+      }
+
+      document.querySelectorAll('[data-thruster]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-thruster');
+          if (key === 'hall' && btn.classList.contains('is-active')) {
+            setThruster(order[(idx + 1) % order.length]);
+          } else {
+            setThruster(key);
+          }
+        });
+      });
+
+      const modal = document.getElementById('specModal');
+      document.getElementById('openSpecSheetBtn')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('footerContactLink')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('is-open');
+      });
+      document.getElementById('closeSpecModalBtn')?.addEventListener('click', () => modal.classList.remove('is-open'));
+      document.getElementById('downloadIcdBtn')?.addEventListener('click', () => {
+        document.getElementById('icdNotice').style.display = 'block';
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('is-open');
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

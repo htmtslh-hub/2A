@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>MYTHWOOD SANCTUARY — Starlight Guild &amp; Woodland Portal</title>
+  <meta name="description" content="Enter the ancient woodland portal of Mythwood Sanctuary. Explore the Elder Tree Archive, Phoenix Familiar Bestiary, and Runestone Chronicles.">
+  <meta property="og:title" content="MYTHWOOD SANCTUARY — Starlight Guild &amp; Woodland Portal">
+  <meta property="og:description" content="Enchanted woodland portal, phoenix familiar lore, and interactive runestone chronicles.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1A1A22">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #181a22;
+      --surface: #252029;
+      --fg: #fdfaf6;
+      --muted: #d5cbd8;
+      --accent: #5fa8b8;
+      --accent-text: #8cd4e4;
+      --gold: #f3c878;
+      --on-accent: #141820;
+      --border: rgba(255, 255, 255, 0.22);
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: linear-gradient(90deg, #131c24 0%, #131c24 50%, #f6efe4 50%, #f6efe4 100%);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: #ffffff; color: #181a22;
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out);
+      cursor: pointer;
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .myt-reveal { opacity: 0; transform: translate3d(0, 16px, 0); transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out); }
+    .myt-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .myt-outer {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 26px clamp(16px, 3.2vw, 40px) 56px;
+    }
+
+    /* Storybook Rounded Portal Frame */
+    .myt-portal-card {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 690px;
+      box-shadow: 0 36px 88px rgba(8, 12, 18, 0.52);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 26px clamp(26px, 4.5vw, 56px) 34px;
+      background: #241e28;
+    }
+    .myt-portal-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
+      z-index: 0;
+    }
+    .myt-portal-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(35, 30, 42, 0.94) 0%, rgba(45, 37, 48, 0.82) 38%, rgba(45, 37, 48, 0.12) 68%, rgba(45, 37, 48, 0.05) 100%);
+      z-index: 1; pointer-events: none;
+    }
+
+    /* Top Breadcrumb Navbar */
+    .myt-nav {
+      position: relative; z-index: 3;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+    }
+    .myt-brand-orb {
+      width: 34px; height: 34px; border-radius: 999px;
+      background: #ffffff; color: #1e1b24;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 13px; text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+    .myt-crumbs {
+      display: flex; align-items: center; gap: 18px; list-style: none; flex-wrap: wrap;
+    }
+    .myt-crumbs a {
+      color: rgba(255, 255, 255, 0.9); text-decoration: none;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .myt-chev { color: rgba(255, 255, 255, 0.55); font-size: 12px; }
+    .myt-motion-pill {
+      padding: 6px 14px; border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(24, 26, 34, 0.55); backdrop-filter: blur(8px);
+      color: #ffffff; font-size: 11px; font-weight: 700;
+    }
+
+    /* Main Split Content */
+    .myt-hero-body {
+      position: relative; z-index: 2;
+      display: grid;
+      grid-template-columns: 450px 1fr;
+      gap: 32px;
+      align-items: center;
+      margin: auto 0;
+      padding: 28px 0;
+    }
+    .myt-eyebrow {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.65); margin-bottom: 10px;
+    }
+    .myt-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.8vw, 3.35rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    .myt-lore-desc {
+      font-size: 13px;
+      line-height: 1.72;
+      color: var(--muted);
+      margin-bottom: 26px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 14px 0;
+    }
+    .myt-pill-row {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      margin-bottom: 34px;
+    }
+    .myt-white-pill {
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #1e1b24;
+      border: none;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 3 Circular Rune Icons */
+    .myt-rune-trio {
+      display: flex; align-items: center; gap: 34px;
+      margin-bottom: 24px;
+    }
+    .myt-rune-item {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      background: transparent; border: none; color: #ffffff;
+    }
+    .myt-rune-circle {
+      width: 44px; height: 44px; border-radius: 999px;
+      background: #ffffff; color: #1e1b24;
+      display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+    }
+    .myt-rune-cap {
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    /* Right Floating Gate Pill */
+    .myt-gate-scene {
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 36px;
+    }
+    .myt-sky-pill {
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: rgba(114, 152, 166, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+    }
+
+    .myt-bottom-wordmark {
+      position: relative; z-index: 3;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 12px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Below-the-fold Sections */
+    .myt-section {
+      margin-top: 26px;
+      background: #1e1b24;
+      border-radius: 22px;
+      padding: 32px clamp(24px, 4vw, 48px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 24px 60px rgba(8, 12, 18, 0.36);
+    }
+    .myt-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+    .myt-lore-card {
+      background: #282330; border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;
+    }
+    .myt-lore-card img { width: 100%; height: 190px; object-fit: cover; }
+    .myt-lore-body { padding: 18px; }
+
+    /* Modal */
+    .myt-modal-backdrop {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(14, 12, 18, 0.82); backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .myt-modal-backdrop.is-open { display: flex; }
+    .myt-modal {
+      background: #25202c; border: 1px solid var(--gold);
+      border-radius: 18px; max-width: 500px; width: 100%; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 920px) {
+      .myt-hero-body, .myt-grid-3 { grid-template-columns: 1fr; }
+      .myt-crumbs { display: none; }
+    }
+      @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Mythwood Sanctuary Portal</a>
+  <div class="myt-outer">
+    <!-- SECTION 1: HERO STORYBOOK PORTAL -->
+    <div class="myt-portal-card" id="main-content">
+      <img src="assets/mythwood-portal-hero.webp" alt="Enchanted woodland carved wooden archway gate with soaring teal and ember phoenix birds and golden sunlit stone path" class="myt-portal-bg" width="1440" height="810">
+
+      <header class="myt-nav">
+        <a href="#main-content" class="myt-brand-orb" aria-label="Mythwood Sanctuary Home"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></a>
+        <nav aria-label="Sanctuary Lore Navigation">
+          <ul class="myt-crumbs">
+            <li><a href="#chronicles">SANCTUARY</a></li>
+            <li><a href="#chronicles">CHRONICLES</a></li>
+            <li class="myt-chev" aria-hidden="true">&lt;</li>
+            <li><a href="#bestiary">BESTIARY</a></li>
+            <li class="myt-chev" aria-hidden="true">Є</li>
+            <li><a href="#runestones">PORTAL ARCHIVE</a></li>
+            <li><a href="#footer">FELLOWSHIP</a></li>
+            <li class="myt-chev" aria-hidden="true">&lt;</li>
+          </ul>
+        </nav>
+        <button type="button" class="myt-motion-pill" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+      </header>
+
+      <main class="myt-hero-body">
+        <div>
+          <p class="myt-eyebrow">CHRONICLES OF THE ANCIENT GROVE</p>
+          <h1 class="myt-h1">Starlight Guild<br>Woodland Portal</h1>
+          <p class="myt-lore-desc" id="activeRuneLore">
+            Step across the carved elder-oak threshold where teal-winged phoenix familiars guard the sun-dappled pathway into the Nocturne Archive.
+          </p>
+
+          <div class="myt-pill-row">
+            <button type="button" class="myt-white-pill" data-modal-open="Enter the Starlight Woodland Sanctuary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> Enter the Grove</button>
+            <button type="button" class="myt-white-pill" data-modal-open="Unseal the Elder Tree Codex">Explore Lore</button>
+          </div>
+
+          <div class="myt-rune-trio" role="tablist" aria-label="Inspect woodland rune sigils">
+            <button type="button" class="myt-rune-item" data-lore="Rune of the Sunlit Arch: Opens the carved oak portal between the twilight plum forest and the golden sanctuary.">
+              <span class="myt-rune-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></span>
+              <span class="myt-rune-cap">Elder Gate</span>
+            </button>
+            <button type="button" class="myt-rune-item" data-lore="Sigil of the Teal Phoenix: Summons the sky-guardian flock that patrols the high canopy above Mythwood.">
+              <span class="myt-rune-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></span>
+              <span class="myt-rune-cap">Phoenix Wing</span>
+            </button>
+            <button type="button" class="myt-rune-item" data-lore="Chronicle of the Hollow Oak: Grants access to 1,400 illuminated manuscripts preserved inside the Elder Tree.">
+              <span class="myt-rune-circle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></span>
+              <span class="myt-rune-cap">Rune Codex</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="myt-gate-scene">
+          <button type="button" class="myt-sky-pill" data-modal-open="Sanctuary Gate Telemetry · Portal Resonance Active">Sanctuary Gate</button>
+        </div>
+      </main>
+
+      <div class="myt-bottom-wordmark">
+        <span>NOCTURNE ARCHIVE</span>
+        <span style="border:1px solid rgba(255,255,255,0.45);padding:4px 8px;border-radius:6px;font-size:11px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></span>
+      </div>
+    </div>
+
+    <!-- SECTION 2: THE ELDER TREE ARCHIVE & BESTIARY -->
+    <section class="myt-section myt-reveal" id="chronicles" aria-labelledby="chron-title">
+      <span style="font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">SANCTUARY REALMS</span>
+      <h2 id="chron-title" style="font-size:clamp(1.45rem,2.5vw,2rem);font-weight:800;margin-top:4px;">Illuminated Realms Beyond the Wooden Arch</h2>
+      <div class="myt-grid-3" id="bestiary">
+        <article class="myt-lore-card">
+          <img src="assets/elder-archive.webp" alt="Ancient woodland library inside a hollow giant tree" loading="lazy" width="900" height="600">
+          <div class="myt-lore-body">
+            <div style="font-size:11px;color:var(--gold);font-weight:700;">REALM // 01 · HOLLOW OAK</div>
+            <h3 style="font-size:17px;font-weight:700;margin:6px 0;">The Elder Tree Library</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.55;">Spiraling timber galleries lit by floating amber lanterns and glowing cyan botanical runes.</p>
+          </div>
+        </article>
+        <article class="myt-lore-card">
+          <img src="assets/phoenix-familiar.webp" alt="Mystical forest phoenix guardian with teal and gold feathers" loading="lazy" width="900" height="600">
+          <div class="myt-lore-body">
+            <div style="font-size:11px;color:var(--accent-text);font-weight:700;">REALM // 02 · SKY GUARDIANS</div>
+            <h3 style="font-size:17px;font-weight:700;margin:6px 0;">Teal-Crested Phoenix Aviary</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.55;">Winged woodland familiars that guide travelers across the misty canopy bridges at dawn.</p>
+          </div>
+        </article>
+        <article class="myt-lore-card" id="runestones">
+          <img src="assets/runestone-grove.webp" alt="Misty twilight forest clearing with glowing standing stones" loading="lazy" width="900" height="600">
+          <div class="myt-lore-body">
+            <div style="font-size:11px;color:#d8b4fe;font-weight:700;">REALM // 03 · STANDING STONES</div>
+            <h3 style="font-size:17px;font-weight:700;margin:6px 0;">Sacred Runestone Circle</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.55;">Bioluminescent moss and carved monoliths resonating with ancient starlight harmonics.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GUILD INITIATION COUNTER -->
+    <section class="myt-section myt-reveal" aria-labelledby="guild-title">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center;">
+        <div>
+          <div style="font-size:32px;font-weight:800;color:var(--gold);" class="tabular-nums">1,420</div>
+          <div style="font-size:12px;color:var(--muted);" id="guild-title">Preserved Elder Scrolls</div>
+        </div>
+        <div>
+          <div style="font-size:32px;font-weight:800;color:var(--accent-text);" class="tabular-nums">38</div>
+          <div style="font-size:12px;color:var(--muted);">Active Phoenix Guardians</div>
+        </div>
+        <div>
+          <div style="font-size:32px;font-weight:800;color:#ffffff;" class="tabular-nums">9</div>
+          <div style="font-size:12px;color:var(--muted);">Woodland Portal Archways</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FOOTER -->
+    <footer class="myt-section myt-reveal" id="footer" style="padding:20px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+      <div style="font-size:12px;color:var(--muted);">© 2026 MYTHWOOD SANCTUARY · Nocturne Archive &amp; Starlight Guild</div>
+      <div style="display:flex;gap:18px;font-size:11px;font-weight:700;letter-spacing:0.12em;">
+        <a href="#main-content" style="color:#ffffff;text-decoration:none;">PORTAL</a>
+        <a href="#chronicles" style="color:#ffffff;text-decoration:none;">CHRONICLES</a>
+        <a href="#bestiary" style="color:#ffffff;text-decoration:none;">BESTIARY</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL -->
+  <div class="myt-modal-backdrop" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="myt-modal">
+      <div style="font-size:11px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;">NOCTURNE ARCHIVE · PORTAL SEAL</div>
+      <h3 id="seamlessTitle" style="font-size:20px;font-weight:800;margin:8px 0 12px;">Enter the Starlight Woodland Sanctuary</h3>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:20px;">The carved oak portal is attuned to your guild sigil. Follow the golden stone path past the phoenix perch into the Hollow Tree Archive.</p>
+      <div style="display:flex;justify-content:flex-end;gap:10px;">
+        <button type="button" class="myt-motion-pill" id="closeSeamlessBtn">Close</button>
+        <button type="button" class="myt-white-pill" id="confirmSeamlessBtn" style="padding:9px 22px;">Step Through</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var runes = Array.prototype.slice.call(document.querySelectorAll('.myt-rune-item'));
+      var loreEl = document.getElementById('activeRuneLore');
+      runes.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (loreEl && btn.getAttribute('data-lore')) {
+            loreEl.textContent = btn.getAttribute('data-lore');
+          }
+        });
+      });
+
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      
+      var counters = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        var target = parseFloat(el.getAttribute('data-counter-target') || '0');
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          el.textContent = Math.round(target * ease) + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      counters.forEach(animateCounter);
+
+      var reveals = document.querySelectorAll('.myt-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      function openModal(txt) {
+        if (!modal) return;
+        if (txt && modalTitle) modalTitle.textContent = txt;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      document.querySelectorAll('[data-modal-open]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-modal-open'));
+        });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

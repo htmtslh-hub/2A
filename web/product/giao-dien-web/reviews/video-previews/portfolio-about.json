@@ -1,0 +1,44 @@
+{
+  "id": "t241",
+  "slug": "portfolio-about",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T14:41:32.313Z",
+  "demo": "/demos/portfolio-about/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "54bf15a33040",
+  "sha256": "54bf15a33040b321320ee1db10bcc67221e17b2314628a4d318904016d9cffdd",
+  "demoHtmlSha256": "3f34a28b8bd877c60ea629738ef513144a2c51ebaf929b076e0e0ac5274b2513",
+  "demoSha256": "9cf347db80a4e49a9b2b051defdacbb0a78110941cb72e7433098d48c521f857",
+  "bytes": 403260,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.475,
+      "action": "click",
+      "selector": "#scrubSweepBtn"
+    },
+    {
+      "seconds": 4.847,
+      "action": "click",
+      "selector": "#scrubSweepBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1255
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-about-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-about-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-about-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-about-return.jpg"
+  ]
+}

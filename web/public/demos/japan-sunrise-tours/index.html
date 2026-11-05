@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JAPAN TOURS — 10-Day Golden Sunrise &amp; Sakura Itinerary (Osaka · Kyoto · Tokyo)</title>
+  <meta name="description" content="We've planned a simple and convenient 10-day itinerary for your trip to Japan. Visit Osaka, Kyoto, and Tokyo with expert local guides, flights, transfers, and boutique hotels included.">
+  <meta property="og:title" content="JAPAN TOURS — 10-Day Golden Sunrise &amp; Sakura Itinerary">
+  <meta property="og:description" content="Explore 3 iconic cities in Japan over 10 unforgettable days: Osaka, Kyoto, and Tokyo.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0A0C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --surface: #121216;
+      --fg: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #a3b84c;
+      --accent-text: #c9dc6e;
+      --gold: #f5d08a;
+      --on-accent: #0a0a0c;
+      --border: rgba(255, 255, 255, 0.22);
+      --font-display: 'Montserrat', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: linear-gradient(180deg, #dcd5b8 0%, #aeb3a8 100%);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out);
+      cursor: pointer;
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .jpn-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .jpn-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .jpn-frame {
+      max-width: 1140px;
+      margin: 22px auto 48px;
+      background: var(--bg);
+      box-shadow: 0 36px 90px rgba(0, 0, 0, 0.48);
+      overflow: hidden;
+    }
+
+    /* HERO SECTION */
+    .jpn-hero {
+      position: relative;
+      min-height: 750px;
+      padding: 26px clamp(24px, 5vw, 64px) 54px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #141210;
+      overflow: hidden;
+    }
+    .jpn-hero-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 25%;
+      z-index: 0;
+    }
+    .jpn-hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(25, 22, 18, 0.18) 0%, rgba(10, 10, 12, 0.25) 62%, #0a0a0c 100%);
+      z-index: 1; pointer-events: none;
+    }
+
+    /* Translucent Glass Navbar */
+    .jpn-nav {
+      position: relative; z-index: 3;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      padding: 10px 22px;
+    }
+    .jpn-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.08em;
+      color: #ffffff; text-decoration: none; text-transform: uppercase;
+    }
+    .jpn-nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .jpn-nav-links a {
+      color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 500;
+    }
+    .jpn-nav-btn {
+      padding: 6px 22px; border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.14); color: #ffffff;
+      font-size: 12.5px; font-weight: 600;
+    }
+
+    /* Giant Display Title JAPAN */
+    .jpn-title-wrap {
+      position: relative; z-index: 2;
+      text-align: center;
+      margin: 14px 0 auto;
+      padding-right: 12%;
+    }
+    .jpn-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(4.6rem, 11.8vw, 8.8rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 0.95;
+      color: rgba(255, 252, 240, 0.72);
+      text-transform: uppercase;
+      text-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    /* 5 Vertical Highlight Cards + Book CTA */
+    .jpn-cards-bar {
+      position: relative; z-index: 3;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .jpn-5cards {
+      display: grid;
+      grid-template-columns: repeat(5, 112px);
+      gap: 14px;
+    }
+    .jpn-mini-card {
+      position: relative;
+      height: 184px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.55);
+      background: #18181c;
+      text-align: left;
+      padding: 0;
+    }
+    .jpn-mini-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.45s var(--ease-out);
+    }
+    .jpn-mini-card::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.82) 100%);
+    }
+    .jpn-mini-cap {
+      position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 2;
+      font-size: 12px; font-weight: 600; line-height: 1.25; color: #ffffff;
+    }
+    .jpn-book-cta {
+      padding: 11px 58px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      background: rgba(241, 245, 249, 0.84);
+      backdrop-filter: blur(8px);
+      color: #0f172a;
+      font-family: var(--font-display);
+      font-size: 15px; font-weight: 600;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    /* SECTION 2: ABOUT THE TOUR */
+    .jpn-about {
+      padding: 36px clamp(24px, 5vw, 64px) 56px;
+      background: #0a0a0c;
+    }
+    .jpn-rule-head {
+      display: flex; align-items: center; gap: 22px; margin-bottom: 42px;
+    }
+    .jpn-rule-line { flex: 1; height: 1px; background: rgba(255, 255, 255, 0.42); }
+    .jpn-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.6vw, 2.55rem);
+      font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #cbd5e1;
+    }
+    .jpn-about-grid {
+      display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: stretch;
+    }
+    .jpn-about-copy {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 48px;
+      font-size: 14.5px; line-height: 1.65; color: #e2e8f0;
+    }
+    .jpn-olive { color: var(--accent-text); font-weight: 600; }
+
+    /* Right Timeline */
+    .jpn-timeline {
+      position: relative;
+      display: flex; flex-direction: column; gap: 36px;
+      padding-left: 20px;
+    }
+    .jpn-timeline::before {
+      content: ''; position: absolute; left: 50%; top: 10px; bottom: 10px;
+      width: 1px; background: rgba(255, 255, 255, 0.38);
+    }
+    .jpn-t-item {
+      display: grid; grid-template-columns: 1fr 28px 1fr; align-items: center; gap: 16px;
+    }
+    .jpn-t-dot {
+      width: 15px; height: 15px; border-radius: 999px; background: #e2e8f0;
+      margin: 0 auto; box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.12);
+    }
+    .jpn-t-photo {
+      width: 118px; height: 118px; border-radius: 6px; object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6);
+    }
+    .jpn-t-day { font-size: 12px; color: #94a3b8; }
+    .jpn-t-city { font-size: 18px; font-weight: 700; color: #ffffff; margin-top: 2px; }
+
+    /* SECTION 3: WHAT'S INCLUDED */
+    .jpn-included {
+      padding: 24px clamp(24px, 5vw, 64px) 64px;
+      background: #0a0a0c;
+    }
+    .jpn-inc-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 32px;
+    }
+    .jpn-inc-card {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 16px;
+      padding: 24px 20px;
+      background: rgba(18, 18, 22, 0.85);
+    }
+    .jpn-inc-title {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 700; color: #ffffff; margin-bottom: 14px;
+    }
+    .jpn-inc-desc { font-size: 13px; color: #cbd5e1; line-height: 1.55; }
+
+    /* SECTION 4: FUJI FOOTER & BOOKING FORM */
+    .jpn-footer-stage {
+      position: relative;
+      padding: 64px clamp(24px, 5vw, 64px) 32px;
+      background: #0f1015;
+      overflow: hidden;
+    }
+    .jpn-footer-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center; opacity: 0.72;
+    }
+    .jpn-footer-stage::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, #0a0a0c 0%, rgba(10, 10, 12, 0.25) 35%, rgba(10, 10, 12, 0.78) 100%);
+      z-index: 1;
+    }
+    .jpn-form-card {
+      position: relative; z-index: 2;
+      max-width: 430px;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 16px;
+      padding: 32px 28px;
+    }
+    .jpn-input {
+      width: 100%; background: transparent; border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+      padding: 10px 4px; color: #ffffff; font-size: 13.5px; margin-bottom: 16px;
+    }
+    .jpn-input::placeholder { color: rgba(255, 255, 255, 0.72); }
+    .jpn-send-btn {
+      width: 100%; padding: 11px; border-radius: 6px; border: none;
+      background: #ffffff; color: #0a0a0c; font-weight: 700; font-size: 14px; margin-top: 8px;
+    }
+    .jpn-bottom-bar {
+      position: relative; z-index: 2;
+      margin-top: 48px; padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+
+    /* Modal */
+    .jpn-modal-backdrop {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(10, 10, 12, 0.8); backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .jpn-modal-backdrop.is-open { display: flex; }
+    .jpn-modal {
+      background: #16161c; border: 1px solid rgba(201, 220, 110, 0.45);
+      border-radius: 18px; max-width: 500px; width: 100%; padding: 26px; color: #ffffff;
+    }
+
+    @media (max-width: 960px) {
+      .jpn-5cards { grid-template-columns: repeat(3, 110px); }
+      .jpn-about-grid, .jpn-inc-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .jpn-5cards { grid-template-columns: repeat(2, 1fr); width: 100%; }
+      .jpn-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Japan Tour Itinerary</a>
+  <main class="jpn-frame" id="main-content">
+    <!-- SECTION 1: HERO -->
+    <section class="jpn-hero" aria-label="Japan Sunrise Hero">
+      <img src="assets/japan-hero-sunrise.webp" alt="Golden mountain sunrise in Japan with blooming cherry blossoms and a traveler in a traditional kimono" class="jpn-hero-bg" width="1440" height="810">
+
+      <header class="jpn-nav">
+        <a href="#main-content" class="jpn-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>JAPAN TOURS</span>
+        </a>
+        <nav aria-label="Main tour navigation">
+          <ul class="jpn-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#included">Included</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" class="jpn-nav-btn" data-modal-open="Reserve Your 10-Day Japan Sakura Seat">Book</button>
+          <button type="button" class="jpn-nav-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+        </div>
+      </header>
+
+      <div class="jpn-title-wrap">
+        <h1 class="jpn-h1">JAPAN</h1>
+      </div>
+
+      <div class="jpn-cards-bar">
+        <div class="jpn-5cards">
+          <button type="button" class="jpn-mini-card" data-modal-open="3 Iconic Cities: Osaka, Kyoto &amp; Tokyo">
+            <img src="assets/pagoda-dusk.webp" alt="Yasaka Pagoda in Kyoto at dusk" width="320" height="480">
+            <span class="jpn-mini-cap">3 cities<br>in Japan</span>
+          </button>
+          <button type="button" class="jpn-mini-card" data-modal-open="10 Curated Days Across Honshu">
+            <img src="assets/japan-hero-sunrise.webp" alt="Misty morning valleys in Japan" width="320" height="480">
+            <span class="jpn-mini-cap">10 days</span>
+          </button>
+          <button type="button" class="jpn-mini-card" data-modal-open="Chureito Pagoda &amp; Mt. Fuji Photo Spots">
+            <img src="assets/fuji-twilight.webp" alt="Chureito Pagoda and Mount Fuji" width="320" height="480">
+            <span class="jpn-mini-cap">gigabytes<br>of photos</span>
+          </button>
+          <button type="button" class="jpn-mini-card" data-modal-open="Authentic Late-Night Tonkotsu Ramen Alleys">
+            <img src="assets/ramen-chef.webp" alt="Japanese ramen stall chef at night" width="320" height="480">
+            <span class="jpn-mini-cap">eat ramen</span>
+          </button>
+          <button type="button" class="jpn-mini-card" data-modal-open="Historic Gion &amp; Shibuya Nightlife Vibe">
+            <img src="assets/osaka-castle.webp" alt="Osaka castle and sakura gardens" width="320" height="480">
+            <span class="jpn-mini-cap">enjoy<br>the vibe</span>
+          </button>
+        </div>
+
+        <button type="button" class="jpn-book-cta" data-modal-open="Book Your 10-Day Japan Tour Package">Book</button>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT THE TOUR -->
+    <section class="jpn-about jpn-reveal" id="about" aria-labelledby="about-heading">
+      <div class="jpn-rule-head">
+        <span class="jpn-rule-line"></span>
+        <h2 class="jpn-h2" id="about-heading">ABOUT THE TOUR</h2>
+        <span class="jpn-rule-line"></span>
+      </div>
+
+      <div class="jpn-about-grid">
+        <div class="jpn-about-copy">
+          <p>
+            We've planned a simple and convenient<br>
+            <span class="tabular-nums">10</span>-day itinerary for your trip to Japan.<br>
+            You'll visit three cities:<br>
+            <span class="jpn-olive">Osaka, Kyoto, and Tokyo.</span>
+          </p>
+          <p>
+            No need to worry about routes, schedules,<br>
+            or finding places — everything is already<br>
+            organized. We'll show you where to go,<br>
+            what to see, and where to eat, so you can<br>
+            simply <span class="jpn-olive">enjoy the journey.</span>
+          </p>
+        </div>
+
+        <div class="jpn-timeline">
+          <div class="jpn-t-item">
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:14px;">
+              <img src="assets/osaka-castle.webp" alt="Osaka Castle surrounded by cherry blossoms" class="jpn-t-photo" loading="lazy" width="240" height="240">
+              <div style="text-align:right;">
+                <div class="jpn-t-day tabular-nums">Days 1–3</div>
+                <div class="jpn-t-city">Osaka</div>
+              </div>
+            </div>
+            <span class="jpn-t-dot"></span>
+            <div>
+              <img src="assets/pagoda-dusk.webp" alt="Dotonbori and historic lantern streets" class="jpn-t-photo" loading="lazy" width="240" height="240">
+            </div>
+          </div>
+
+          <div class="jpn-t-item">
+            <div></div>
+            <span class="jpn-t-dot"></span>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <div>
+                <div class="jpn-t-day tabular-nums">Days 4–6</div>
+                <div class="jpn-t-city">Kyoto</div>
+              </div>
+              <img src="assets/pagoda-dusk.webp" alt="Kyoto pagoda and torii shrines" class="jpn-t-photo" loading="lazy" width="240" height="240">
+            </div>
+          </div>
+
+          <div class="jpn-t-item">
+            <div style="display:flex;align-items:center;justify-content:flex-end;gap:16px;">
+              <img src="assets/ramen-chef.webp" alt="Tokyo neon streets and ramen alley" class="jpn-t-photo" loading="lazy" width="240" height="240">
+              <div style="text-align:right;">
+                <div class="jpn-t-day tabular-nums">Days 7–10</div>
+                <div class="jpn-t-city">Tokyo</div>
+              </div>
+            </div>
+            <span class="jpn-t-dot"></span>
+            <div>
+              <img src="assets/fuji-twilight.webp" alt="Mount Fuji day excursion from Tokyo" class="jpn-t-photo" loading="lazy" width="240" height="240">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WHAT'S INCLUDED -->
+    <section class="jpn-included jpn-reveal" id="included" aria-labelledby="inc-heading">
+      <div class="jpn-rule-head">
+        <h2 class="jpn-h2" id="inc-heading">WHAT'S INCLUDED</h2>
+        <span class="jpn-rule-line"></span>
+      </div>
+
+      <div class="jpn-inc-grid">
+        <article class="jpn-inc-card">
+          <h3 class="jpn-inc-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9dc6e" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            <span>Guides</span>
+          </h3>
+          <p class="jpn-inc-desc">2 awesome guides who know everything about Japan!</p>
+        </article>
+        <article class="jpn-inc-card">
+          <h3 class="jpn-inc-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9dc6e" stroke-width="2" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            <span>Flights</span>
+          </h3>
+          <p class="jpn-inc-desc">Routes:<br>Moscow — Osaka<br>Tokyo — Moscow</p>
+        </article>
+        <article class="jpn-inc-card">
+          <h3 class="jpn-inc-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9dc6e" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="11" rx="2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+            <span>Transfers</span>
+          </h3>
+          <p class="jpn-inc-desc">From the airport to the hotels &amp; Shinkansen bullet train passes</p>
+        </article>
+        <article class="jpn-inc-card">
+          <h3 class="jpn-inc-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9dc6e" stroke-width="2" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+            <span>Hotels</span>
+          </h3>
+          <p class="jpn-inc-desc">Comfortable accommodation 2 people per room (breakfasts included)</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONTACTS & MOUNT FUJI FOOTER -->
+    <footer class="jpn-footer-stage jpn-reveal" id="contacts">
+      <img src="assets/fuji-twilight.webp" alt="Chureito Pagoda and Mount Fuji surrounded by cherry blossoms at twilight" class="jpn-footer-bg" loading="lazy" width="1440" height="810">
+
+      <div class="jpn-form-card">
+        <h2 style="font-size:22px;font-weight:600;line-height:1.3;margin-bottom:14px;">Want to join us,<br>but still have questions?</h2>
+        <p style="font-size:14px;color:#e2e8f0;margin-bottom:18px;">Leave a request</p>
+        <form id="japanRequestForm">
+          <input type="text" class="jpn-input" placeholder="Your name" aria-label="Your name" required>
+          <input type="tel" class="jpn-input" placeholder="Phone number" aria-label="Phone number" required>
+          <input type="text" class="jpn-input" placeholder="Comment" aria-label="Comment">
+          <button type="submit" class="jpn-send-btn">Send</button>
+        </form>
+      </div>
+
+      <div class="jpn-bottom-bar">
+        <a href="#main-content" class="jpn-brand">JAPAN TOURS</a>
+        <div style="display:flex;gap:28px;font-size:13px;">
+          <a href="#about" style="color:#ffffff;text-decoration:none;">About</a>
+          <a href="#included" style="color:#ffffff;text-decoration:none;">Included</a>
+          <a href="#contacts" style="color:#ffffff;text-decoration:none;">Contacts</a>
+        </div>
+        <button type="button" class="jpn-nav-btn" data-modal-open="Book Your 10-Day Japan Tour">Book</button>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MODAL -->
+  <div class="jpn-modal-backdrop" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="jpn-modal">
+      <div style="font-size:11px;letter-spacing:0.08em;color:var(--accent-text);text-transform:uppercase;">JAPAN TOURS · SPRING &amp; AUTUMN DEPARTURES</div>
+      <h3 id="seamlessTitle" style="font-size:20px;font-weight:700;margin:8px 0 12px;">Reserve Your 10-Day Japan Sakura Seat</h3>
+      <p style="font-size:13.5px;color:#cbd5e1;line-height:1.6;margin-bottom:20px;">All-inclusive 10-day guided expedition across Osaka (Days 1–3), Kyoto (Days 4–6), and Tokyo (Days 7–10) with Shinkansen passes and boutique hotels.</p>
+      <div style="display:flex;justify-content:flex-end;gap:10px;">
+        <button type="button" class="jpn-nav-btn" id="closeSeamlessBtn">Close</button>
+        <button type="button" class="jpn-nav-btn" id="confirmSeamlessBtn" style="background:var(--accent);color:#0a0a0c;border-color:var(--accent);">Confirm Seat</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      
+      var counters = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        var target = parseFloat(el.getAttribute('data-counter-target') || '0');
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          el.textContent = Math.round(target * ease) + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      counters.forEach(animateCounter);
+
+      var reveals = document.querySelectorAll('.jpn-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      function openModal(txt) {
+        if (!modal) return;
+        if (txt && modalTitle) modalTitle.textContent = txt;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      document.querySelectorAll('[data-modal-open]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-modal-open'));
+        });
+      });
+      var form = document.getElementById('japanRequestForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          openModal('Request Received — Our Japan Guide Team Will Call You Shortly');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

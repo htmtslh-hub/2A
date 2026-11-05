@@ -1,0 +1,44 @@
+{
+  "id": "t242",
+  "slug": "radial-diagram",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-05T14:41:51.746Z",
+  "demo": "/demos/radial-diagram/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9e149da86195",
+  "sha256": "9e149da861950050d0dbff129fb272f039d838c3af43fcc3495fddaed0e2169c",
+  "demoHtmlSha256": "11b8c8f17cebfa5f123c67f27ba2522bb4bac79e2076c870ff2665961202fda8",
+  "demoSha256": "29d774c883fe825512686a5eb8fee0c20b2948921c31604d1474917acfee293b",
+  "bytes": 310085,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.464,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"node-btn node-websites\" data-node=\"websites\" data-next=\"\">websites</button>"
+    },
+    {
+      "seconds": 4.843,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"node-btn node-websites is-active\" data-node=\"websites\" data-next=\"\">websites</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 876
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\radial-diagram-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\radial-diagram-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\radial-diagram-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\radial-diagram-return.jpg"
+  ]
+}

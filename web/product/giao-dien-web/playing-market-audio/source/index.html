@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PLAYING / MARKET — Headphones Wireless Rose-Gold Studio Edition</title>
+  <meta name="description" content="Mejores efectos de sonido y una mejor experiencia auditiva. Tiene 3 modos de ecualización con los que puede cambiar libremente.">
+  <meta property="og:title" content="PLAYING / MARKET — Headphones Wireless Studio">
+  <meta property="og:description" content="Auriculares inalámbricos de estudio con 3 modos de ecualización y acabado metálico Oro Rosa, Azul y Púrpura.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#050505">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --outer-rose: #a86e6a;
+      --surface: #0c0c0e;
+      --fg: #ffffff;
+      --muted: #b5b5be;
+      --accent: #a86e6a;
+      --accent-text: #e2a9a5;
+      --on-accent: #ffffff;
+      --border: rgba(255, 255, 255, 0.14);
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: linear-gradient(145deg, #b07470 0%, #a26864 52%, #8e5854 100%);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: #ffffff; color: #050505;
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out);
+      cursor: pointer;
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .ply-reveal { opacity: 0; transform: translate3d(0, 16px, 0); transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out); }
+    .ply-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .ply-outer {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3.5vw, 44px) 56px;
+    }
+    .ply-top-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px; color: rgba(255, 255, 255, 0.92);
+      font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+
+    /* Pitch-Black Flagship Stage */
+    .ply-stage {
+      background: #040404;
+      border-radius: 6px;
+      box-shadow: 0 36px 84px rgba(0, 0, 0, 0.55), 0 8px 24px rgba(0, 0, 0, 0.35);
+      padding: 32px clamp(28px, 4.5vw, 60px) 38px;
+      position: relative;
+      overflow: hidden;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ply-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+      position: relative; z-index: 3;
+    }
+    .ply-brand {
+      display: inline-flex; align-items: center; gap: 12px;
+      text-decoration: none; color: #ffffff; font-size: 13.5px; letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .ply-brand-ring {
+      width: 24px; height: 24px; border-radius: 999px;
+      background: #ffffff; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .ply-brand-dot { width: 11px; height: 11px; border-radius: 999px; background: #a86e6a; }
+    .ply-nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .ply-nav-links a {
+      color: #e2e8f0; text-decoration: none; font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .ply-cart-btn {
+      background: transparent; border: 1px solid rgba(255,255,255,0.22); color: #ffffff;
+      padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    /* Hero 2-Col */
+    .ply-hero-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 28px;
+      align-items: center;
+      margin: 24px 0 18px;
+      position: relative; z-index: 2;
+    }
+    .ply-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 4.6vw, 4.1rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    .ply-sub {
+      font-size: 13px;
+      line-height: 1.68;
+      color: var(--muted);
+      max-width: 420px;
+      margin-bottom: 28px;
+    }
+    .ply-cta-rose {
+      display: inline-block;
+      padding: 15px 38px;
+      background: #a86e6a;
+      color: #ffffff;
+      border: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .ply-product-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 360px;
+    }
+    .ply-product-img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.45s var(--ease-out), filter 0.35s var(--ease-out);
+    }
+
+    /* Bottom Featured Switcher Bar */
+    .ply-featured-bar {
+      position: relative; z-index: 3;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    }
+    .ply-feat-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #e2e8f0; margin-bottom: 12px;
+    }
+    .ply-variants {
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+    }
+    .ply-variant-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: transparent; border: 1px solid transparent;
+      padding: 6px 12px 6px 6px; border-radius: 8px;
+      color: #ffffff; text-align: left;
+    }
+    .ply-variant-btn.is-active {
+      border-color: rgba(226, 169, 165, 0.55);
+      background: rgba(168, 110, 106, 0.14);
+    }
+    .ply-variant-thumb {
+      width: 52px; height: 52px; border-radius: 8px; object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .ply-v-price { font-size: 13px; font-weight: 800; color: #ffffff; }
+    .ply-v-name { font-size: 11px; color: var(--accent-text); margin-top: 2px; }
+
+    /* Below-the-fold Sections */
+    .ply-section {
+      margin-top: 26px;
+      background: #08080a;
+      border-radius: 6px;
+      padding: 32px clamp(24px, 4vw, 52px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ply-eq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
+    .ply-eq-card {
+      background: #111115; border: 1px solid var(--border); border-radius: 8px; padding: 20px;
+      text-align: left; color: #ffffff;
+    }
+    .ply-eq-card.is-active { border-color: var(--accent-text); background: rgba(168, 110, 106, 0.16); }
+
+    .ply-driver-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+    .ply-driver-img { width: 100%; border-radius: 8px; border: 1px solid var(--border); }
+
+    /* Modal */
+    .ply-modal-backdrop {
+      position: fixed; inset: 0; z-index: 9000;
+      background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .ply-modal-backdrop.is-open { display: flex; }
+    .ply-modal {
+      background: #101014; border: 1px solid var(--accent);
+      border-radius: 8px; max-width: 500px; width: 100%; padding: 28px; color: #ffffff;
+    }
+
+    @media (max-width: 920px) {
+      .ply-hero-grid, .ply-eq-grid, .ply-driver-grid { grid-template-columns: 1fr; }
+      .ply-nav-links { display: none; }
+    }
+      @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar a la tienda de auriculares</a>
+  <div class="ply-outer">
+    <div class="ply-top-meta">
+      <span>PROSANDOVAL CREATIVO · AUDIO STUDIO</span>
+      <span>PROSANDOVAL.COM</span>
+    </div>
+
+    <!-- SECTION 1: HERO BLACK STAGE -->
+    <div class="ply-stage" id="main-content">
+      <header class="ply-nav">
+        <a href="#main-content" class="ply-brand">
+          <span class="ply-brand-ring"><span class="ply-brand-dot"></span></span>
+          <span><strong>PLAYING</strong> / <span style="font-weight:400;color:#a1a1aa;">MARKET</span></span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <ul class="ply-nav-links">
+            <li><a href="#main-content">INICIO</a></li>
+            <li><a href="#ecualizacion">TIENDA</a></li>
+            <li><a href="#ingenieria">CATEGORÍAS</a></li>
+            <li><a href="#ingenieria">BLOG</a></li>
+            <li><a href="#footer">CONTACTO</a></li>
+          </ul>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" class="ply-cart-btn" data-modal-open="Carrito Playing Market — Headphones Wireless ($55,00)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+            <span class="tabular-nums" id="activeCartPrice">$55,00</span>
+          </button>
+          <button type="button" class="ply-cart-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+        </div>
+      </header>
+
+      <main class="ply-hero-grid">
+        <div>
+          <h1 class="ply-h1">Headphones<br>Wireless</h1>
+          <p class="ply-sub" id="activeHeroDesc">
+            Mejores efectos de sonido y una mejor experiencia auditiva. Tiene 3 modos de ecualización con los que puede cambiar libremente.
+          </p>
+          <button type="button" class="ply-cta-rose" data-modal-open="Comprar Headphones Wireless Studio Edition">IR A LA TIENDA</button>
+        </div>
+
+        <div class="ply-product-visual">
+          <img src="assets/headphones-rosegold.webp" alt="Auriculares inalámbricos metálicos color Oro Rosa sobre superficie negra reflectante" class="ply-product-img" id="heroHeadphoneImg" width="1100" height="825">
+        </div>
+      </main>
+
+      <div class="ply-featured-bar">
+        <div>
+          <div class="ply-feat-label">ARTÍCULOS DESTACADOS</div>
+          <div class="ply-variants" role="tablist" aria-label="Seleccionar acabado de auriculares">
+            <button type="button" class="ply-variant-btn is-active" data-img="assets/headphones-rosegold.webp" data-price="$55,00" data-color="Oro rosa">
+              <img src="assets/headphones-rosegold.webp" alt="Oro rosa" class="ply-variant-thumb" width="104" height="104">
+              <div>
+                <div class="ply-v-price tabular-nums">$55,00</div>
+                <div class="ply-v-name">Oro rosa</div>
+              </div>
+            </button>
+
+            <button type="button" class="ply-variant-btn" data-img="assets/headphones-blue.webp" data-price="$65,00" data-color="Blue">
+              <img src="assets/headphones-blue.webp" alt="Midnight Blue" class="ply-variant-thumb" width="104" height="104">
+              <div>
+                <div class="ply-v-price tabular-nums">$65,00</div>
+                <div class="ply-v-name" style="color:#7dd3fc;">Blue</div>
+              </div>
+            </button>
+
+            <button type="button" class="ply-variant-btn" data-img="assets/headphones-purple.webp" data-price="$55,00" data-color="Púrpura">
+              <img src="assets/headphones-purple.webp" alt="Royal Purple" class="ply-variant-thumb" width="104" height="104">
+              <div>
+                <div class="ply-v-price tabular-nums">$55,00</div>
+                <div class="ply-v-name" style="color:#d8b4fe;">Púrpura</div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="ply-cart-btn" style="border-radius:999px;padding:10px 14px;" data-modal-open="Soporte Directo de Audio Playing Market" aria-label="Contacto directo">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>Chat Audio</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SECTION 2: 3 EQUALIZATION MODES -->
+    <section class="ply-section ply-reveal" id="ecualizacion" aria-labelledby="eq-heading">
+      <span style="font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);">DSP STUDIO TUNING</span>
+      <h2 id="eq-heading" style="font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:800;margin-top:4px;">3 Modos de Ecualización Integrados</h2>
+      <div class="ply-eq-grid">
+        <button type="button" class="ply-eq-card is-active" data-eq-desc="Modo Warm Studio: Realce armónico en medios y graves sedosos para sesiones largas de escucha.">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">EQ // 01 · WARM ROSE STUDIO</div>
+          <h3 style="font-size:17px;font-weight:700;margin:8px 0;">Acústica Cálida &amp; Vocal</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Respuesta plana extendida (20Hz – 40kHz) con calidez analógica en frecuencias vocales.</p>
+        </button>
+        <button type="button" class="ply-eq-card" data-eq-desc="Modo Deep Sub-Bass: Compresión dinámica de subgraves a 32Hz sin distorsión armónica.">
+          <div style="font-family:var(--font-mono);font-size:11px;color:#7dd3fc;">EQ // 02 · DEEP SUB-BASS</div>
+          <h3 style="font-size:17px;font-weight:700;margin:8px 0;">Refuerzo Dinámico 32Hz</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Potencia las frecuencias sub-bajas manteniendo la claridad cristalina de los platillos.</p>
+        </button>
+        <button type="button" class="ply-eq-card" data-eq-desc="Modo Spatial Mastering: Escenario tridimensional de 360° con cancelación activa híbrida (-42dB).">
+          <div style="font-family:var(--font-mono);font-size:11px;color:#d8b4fe;">EQ // 03 · SPATIAL MASTERING</div>
+          <h3 style="font-size:17px;font-weight:700;margin:8px 0;">Escenario Espacial 360°</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Separación instrumental milimétrica y cancelación de ruido activa de 42 dB.</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 50MM DRIVER ENGINEERING -->
+    <section class="ply-section ply-reveal" id="ingenieria" aria-labelledby="eng-heading">
+      <div class="ply-driver-grid">
+        <div>
+          <span style="font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);">INGENIERÍA ACÚSTICA</span>
+          <h2 id="eng-heading" style="font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:800;margin:6px 0 14px;">Transductor de Neodimio Cobre-Rosa de 50 mm</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:20px;">Cada cápsula incorpora una bobina móvil de cobre libre de oxígeno bañada en oro rosa y almohadillas viscoelásticas de cuero proteico con aislamiento pasivo.</p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+            <article style="background:#111115;padding:14px;border-radius:6px;border:1px solid var(--border);">
+              <div style="font-size:20px;font-weight:800;" class="tabular-nums">48h</div>
+              <div style="font-size:11px;color:var(--muted);">Autonomía USB-C</div></article>
+            <article style="background:#111115;padding:14px;border-radius:6px;border:1px solid var(--border);">
+              <div style="font-size:20px;font-weight:800;" class="tabular-nums">-42dB</div>
+              <div style="font-size:11px;color:var(--muted);">ANC Híbrido</div></article>
+            <article style="background:#111115;padding:14px;border-radius:6px;border:1px solid var(--border);">
+              <div style="font-size:20px;font-weight:800;" class="tabular-nums">50mm</div>
+              <div style="font-size:11px;color:var(--muted);">Driver Titanio</div></article>
+          </div>
+        </div>
+        <img src="assets/acoustic-driver.webp" alt="Transductor acústico de 50mm en cobre rosa" class="ply-driver-img" loading="lazy" width="900" height="600">
+      </div>
+    </section>
+
+    <!-- SECTION 4: FOOTER -->
+    <footer class="ply-section ply-reveal" id="footer" style="padding:22px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;">
+      <div style="font-size:12px;color:var(--muted);">© 2026 PLAYING / MARKET · ProSandoval Creativo Flagship Audio Store</div>
+      <div style="display:flex;gap:20px;font-size:11px;font-weight:700;letter-spacing:0.12em;">
+        <a href="#main-content" style="color:#ffffff;text-decoration:none;">INICIO</a>
+        <a href="#ecualizacion" style="color:#ffffff;text-decoration:none;">ECUALIZACIÓN</a>
+        <a href="#ingenieria" style="color:#ffffff;text-decoration:none;">INGENIERÍA</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL -->
+  <div class="ply-modal-backdrop" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="ply-modal">
+      <div style="font-size:11px;letter-spacing:0.14em;color:var(--accent-text);text-transform:uppercase;">PLAYING / MARKET · ENVÍO EXPRESS 24H</div>
+      <h3 id="seamlessTitle" style="font-size:20px;font-weight:800;margin:8px 0 12px;">Comprar Headphones Wireless Studio Edition</h3>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Incluye estuche rígido de viaje en cuero vegano, cable trenzado OFC de 3.5mm, carga rápida USB-C y garantía oficial de 3 años.</p>
+      <div style="display:flex;justify-content:flex-end;gap:10px;">
+        <button type="button" class="ply-cart-btn" id="closeSeamlessBtn">Cerrar</button>
+        <button type="button" class="ply-cta-rose" id="confirmSeamlessBtn" style="padding:10px 24px;">Confirmar Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var variants = Array.prototype.slice.call(document.querySelectorAll('.ply-variant-btn'));
+      var heroImg = document.getElementById('heroHeadphoneImg');
+      var cartPrice = document.getElementById('activeCartPrice');
+
+      variants.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          variants.forEach(function (v) { v.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (heroImg) heroImg.src = btn.getAttribute('data-img') || 'assets/headphones-rosegold.webp';
+          if (cartPrice) cartPrice.textContent = btn.getAttribute('data-price') || '$55,00';
+        });
+      });
+
+      var eqCards = Array.prototype.slice.call(document.querySelectorAll('.ply-eq-card'));
+      var heroDesc = document.getElementById('activeHeroDesc');
+      eqCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          eqCards.forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (heroDesc && card.getAttribute('data-eq-desc')) {
+            heroDesc.textContent = card.getAttribute('data-eq-desc');
+          }
+        });
+      });
+
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      
+      var counters = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        var target = parseFloat(el.getAttribute('data-counter-target') || '0');
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          el.textContent = Math.round(target * ease) + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      counters.forEach(animateCounter);
+
+      var reveals = document.querySelectorAll('.ply-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      function openModal(txt) {
+        if (!modal) return;
+        if (txt && modalTitle) modalTitle.textContent = txt;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      document.querySelectorAll('[data-modal-open]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-modal-open'));
+        });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

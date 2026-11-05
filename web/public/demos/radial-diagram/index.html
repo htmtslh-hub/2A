@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex West Studio — Comprehensive Branding Approach &amp; Radial System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #0f0f0f;
+      --bg-surface: #161616;
+      --text-primary: #ffffff;
+      --text-secondary: #8a8a8a;
+      --text-muted: #6e6e6e;
+      --border-subtle: #262626;
+      --diagram-line: #3a3a3a;
+      --accent-white: #ffffff;
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    .page-shell {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 36px 64px;
+    }
+    /* Header Row */
+    .top-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .section-heading {
+      font-size: clamp(2.1rem, 3.8vw, 3.35rem);
+      font-weight: 400;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+    .section-heading .muted-line {
+      display: block;
+      color: var(--text-muted);
+    }
+    .section-heading .white-line {
+      display: block;
+      color: var(--text-primary);
+    }
+    .plus-btn {
+      width: 48px;
+      height: 48px;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    .plus-btn:hover {
+      border-color: #ffffff;
+      transform: rotate(90deg);
+    }
+    /* Asymmetric 2-Column Main Grid */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 56px;
+      padding-top: 32px;
+      align-items: center;
+    }
+    /* Glitch Portrait */
+    .portrait-wrap {
+      position: relative;
+      width: 230px;
+      height: 276px;
+      overflow: hidden;
+      background: #1a1a1a;
+      margin-bottom: 22px;
+    }
+    .portrait-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.15) brightness(0.92);
+      display: block;
+    }
+    .glitch-px {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ffffff;
+      pointer-events: none;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .portrait-wrap:hover .glitch-px:nth-child(odd) {
+      transform: translate(5px, -4px);
+    }
+    .portrait-wrap:hover .glitch-px:nth-child(even) {
+      transform: translate(-5px, 4px);
+    }
+    .editorial-quote {
+      font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+      font-weight: 400;
+      line-height: 1.62;
+      color: #a0a0a0;
+      max-width: 440px;
+      margin-bottom: 16px;
+    }
+    .author-name {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+    .author-role {
+      font-size: 0.85rem;
+      color: #7a7a7a;
+      margin-top: 3px;
+    }
+    /* Radial Diagram Stage */
+    .diagram-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .radial-stage {
+      position: relative;
+      width: 440px;
+      height: 440px;
+      max-width: 100%;
+    }
+    .radial-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+    .spoke-line {
+      stroke: #4a4a4a;
+      stroke-width: 0.35;
+      transition: stroke 0.25s ease, opacity 0.25s ease;
+    }
+    .spoke-line.is-active {
+      stroke: #ffffff;
+      stroke-width: 0.75;
+    }
+    .spoke-dot {
+      fill: #ffffff;
+      transition: r 0.25s ease;
+    }
+    .node-btn {
+      position: absolute;
+      background: transparent;
+      border: 1px solid transparent;
+      color: #a8a8a8;
+      font-family: var(--font-sans);
+      font-size: clamp(1rem, 1.3vw, 1.2rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      padding: 6px 12px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .node-btn.is-active, .node-btn:hover {
+      color: #ffffff;
+      font-weight: 600;
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+    .node-websites {
+      top: 21%;
+      left: 3%;
+    }
+    .node-brands {
+      top: 28%;
+      right: 1%;
+    }
+    .node-uiux {
+      bottom: 6%;
+      left: 24%;
+    }
+    .discipline-inspector {
+      width: 100%;
+      margin-top: 24px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 24px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+    .inspector-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #fff;
+    }
+    .inspector-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-top: 6px;
+      max-width: 520px;
+      line-height: 1.55;
+    }
+    /* Secondary Sections */
+    .archive-section {
+      margin-top: 84px;
+      padding-top: 56px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 28px;
+    }
+    .metric-number {
+      font-size: 2.25rem;
+      font-weight: 500;
+      color: #fff;
+    }
+    .modal-drawer {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.86);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 90;
+      padding: 24px;
+    }
+    .modal-drawer.is-open { display: flex; }
+    .drawer-box {
+      background: #161616;
+      border: 1px solid #3a3a3a;
+      max-width: 520px;
+      width: 100%;
+      padding: 36px;
+    }
+    @media (max-width: 1024px) {
+      .page-shell { padding: 48px 36px; }
+      .main-grid { grid-template-columns: 1fr; }
+      .radial-stage { width: 420px; height: 420px; }
+      .metrics-bar { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .page-shell { padding: 32px 20px; }
+      .radial-stage { width: 310px; height: 310px; }
+    }
+  
+    :root {
+      --bg: #0d0c11;
+      --surface: #15141c;
+      --fg: #ffffff;
+      --muted: #9a98a6;
+      --accent: #7c5cff;
+      --accent-text: #bdf7ee;
+      --on-accent: #ffffff;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <main class="page-shell">
+    <header class="top-header"><nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+      <h1 class="section-heading">
+        <span class="muted-line">Our Comprehensive</span>
+        <span class="white-line">Branding Approach</span>
+      </h1>
+      <button type="button" class="plus-btn" id="openMethodologyBtn" aria-label="Expand branding methodology">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M10 3V17M3 10H17" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </nav></header>
+
+    <section class="main-grid" aria-label="Branding approach and interactive radial diagram">
+      <div>
+        <div class="portrait-wrap">
+          <img
+            src="assets/alex-west-portrait.webp"
+            width="250"
+            height="310"
+            alt="Alex West — Founder &amp; Creative Director"
+          />
+          <span class="glitch-px" style="top:12%;left:18%;"></span>
+          <span class="glitch-px" style="top:12%;left:26.8%;"></span>
+          <span class="glitch-px" style="top:24%;left:62%;"></span>
+          <span class="glitch-px" style="top:38%;left:14%;"></span>
+          <span class="glitch-px" style="top:46%;left:74%;"></span>
+          <span class="glitch-px" style="top:58%;left:28%;"></span>
+          <span class="glitch-px" style="top:66%;left:52%;"></span>
+          <span class="glitch-px" style="top:78%;left:19%;"></span>
+          <span class="glitch-px" style="top:84%;left:68%;"></span>
+          <span class="glitch-px" style="top:31%;left:42%;"></span>
+        </div>
+
+        <blockquote class="editorial-quote">
+          We believe a brand is more than visuals — it's a living story that connects with people. Every detail we craft is designed to spark curiosity, build trust, and leave a lasting impression.
+        </blockquote>
+
+        <div>
+          <div class="author-name">Alex West</div>
+          <div class="author-role">Founder &amp; Creative Director</div>
+        </div>
+      </div>
+
+      <div class="diagram-column">
+        <div class="radial-stage">
+          <svg class="radial-svg" viewBox="0 0 100 100" aria-label="Interactive Brand Disciplines Radial Diagram">
+            <!-- Outer Main Ring -->
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#3a3a3a" stroke-width="0.35" />
+            <!-- Subtle Inner Reference Ring -->
+            <circle cx="50" cy="50" r="14" fill="none" stroke="#222222" stroke-width="0.25" stroke-dasharray="1.5 1.5" />
+            <!-- Center Node -->
+            <circle cx="50" cy="50" r="0.9" fill="#6e6e6e" />
+
+            <!-- Spoke 1: websites (215 deg) -->
+            <line id="spoke-websites" class="spoke-line is-active" x1="50" y1="50" x2="16" y2="26.2" />
+            <circle id="dot-websites" class="spoke-dot" cx="25.4" cy="32.8" r="1.4" />
+
+            <!-- Spoke 2: brands (335 deg) -->
+            <line id="spoke-brands" class="spoke-line" x1="50" y1="50" x2="86.5" y2="33" />
+            <circle id="dot-brands" class="spoke-dot" cx="77.2" cy="37.3" r="1.0" />
+
+            <!-- Spoke 3: ui/ux design (110 deg) -->
+            <line id="spoke-uiux" class="spoke-line" x1="50" y1="50" x2="36" y2="88.5" />
+            <circle id="dot-uiux" class="spoke-dot" cx="39.7" cy="78.2" r="1.0" />
+          </svg>
+
+          <button type="button" class="node-btn node-websites is-active" data-node="websites" data-next>websites</button>
+          <button type="button" class="node-btn node-brands" data-node="brands">brands</button>
+          <button type="button" class="node-btn node-uiux" data-node="uiux">ui/ux design</button>
+        </div>
+
+        <div class="discipline-inspector" aria-live="polite">
+          <div>
+            <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);" id="inspectorCode">DISCIPLINE 01 / 215° VECTOR</div>
+            <div class="inspector-title" id="inspectorTitle">Flagship Websites &amp; Editorial Platforms</div>
+            <p class="inspector-desc" id="inspectorDesc">
+              Bespoke digital flagships engineered with Swiss typographic discipline, sub-second page transitions, and tactile micro-interactions.
+            </p>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:1.5rem;font-weight:500;color:#fff;" id="inspectorMetric">+42%</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);" id="inspectorMetricLabel">Avg. Conversion Lift</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-section" id="telemetry">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);">STUDIO BENCHMARKS</div>
+          <h2 style="font-size:clamp(1.6rem,2.6vw,2.25rem);font-weight:400;margin-top:6px;">Measured Brand Equity Across Three Vectors</h2>
+        </div>
+      </div>
+      <div class="metrics-bar">
+        <article class="metric-card">
+          <div class="metric-number"><span data-counter="128" data-suffix="+">128+</span></div>
+          <div style="color:#fff;margin-top:8px;font-weight:500;">Global Identity Systems</div>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:8px;line-height:1.6;">Cohesive visual languages, custom typefaces, and motion guidelines shipped for category leaders.</p>
+        </article>
+        <article class="metric-card">
+          <div class="metric-number"><span data-counter="98.6" data-decimals="1" data-suffix="%">98.6%</span></div>
+          <div style="color:#fff;margin-top:8px;font-weight:500;">Client Retention Rate</div>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:8px;line-height:1.6;">Multi-year design partnerships spanning product UI, design tokens, and quarterly campaign launches.</p>
+        </article>
+        <article class="metric-card">
+          <div class="metric-number"><span data-counter="24">24</span></div>
+          <div style="color:#fff;margin-top:8px;font-weight:500;">International Design Awards</div>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:8px;line-height:1.6;">Recognized for restraint, typographic clarity, and high-craft interactive geometry.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-section" id="deliverables">
+      <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);">DELIVERABLE MATRIX</div>
+      <h2 style="font-size:clamp(1.6rem,2.6vw,2.25rem);font-weight:400;margin-top:6px;">Architectural Rigor from Concept to Code</h2>
+      <div class="metrics-bar">
+        <div class="metric-card">
+          <h3 style="font-size:1.15rem;font-weight:500;">01 / Brand Strategy &amp; Narrative</h3>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:10px;line-height:1.6;">Positioning architecture, verbal identity, and editorial manifesto systems built for high-trust categories.</p>
+        </div>
+        <div class="metric-card">
+          <h3 style="font-size:1.15rem;font-weight:500;">02 / Digital Product &amp; UI/UX</h3>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:10px;line-height:1.6;">Component token libraries, interactive radial data visualizations, and accessible multi-device interfaces.</p>
+        </div>
+        <div class="metric-card">
+          <h3 style="font-size:1.15rem;font-weight:500;">03 / Flagship Web Engineering</h3>
+          <p style="color:var(--text-secondary);font-size:0.88rem;margin-top:10px;line-height:1.6;">Zero-bloat semantic HTML, SVG geometry engines, and deterministic 60fps scroll choreography.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-drawer" id="methodologyModal" role="dialog" aria-modal="true" aria-labelledby="methodologyTitle">
+    <div class="drawer-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+        <h3 id="methodologyTitle" style="font-size:1.35rem;font-weight:500;">Alex West — Radial Brand Methodology</h3>
+        <button type="button" class="plus-btn" id="closeMethodologyBtn" style="width:36px;height:36px;" aria-label="Close methodology dialog"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      </div>
+      <p style="color:var(--text-secondary);font-size:0.92rem;line-height:1.65;margin-bottom:20px;">
+        Our radial model unifies three interdependent vectors — Websites (215°), Brands (335°), and UI/UX Design (110°) — around a single narrative core so every touchpoint reinforces trust.
+      </p>
+      <button type="button" class="node-btn is-active" id="cycleVectorInModalBtn" style="border:1px solid #fff;width:100%;text-align:center;">
+        Cycle Active Radial Vector
+      </button>
+    </div>
+  </div>
+
+  <footer style="max-width:1400px;margin:0 auto;padding:36px 72px;border-top:1px solid var(--border-subtle);color:var(--text-muted);font-size:0.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 Alex West Creative Direction. All rights reserved.</span>
+    <span>215° Websites • 335° Brands • 110° UI/UX Design</span>
+  </footer>
+
+  <script>
+    (function () {
+      const disciplines = {
+        websites: {
+          code: 'DISCIPLINE 01 / 215° VECTOR',
+          title: 'Flagship Websites & Editorial Platforms',
+          desc: 'Bespoke digital flagships engineered with Swiss typographic discipline, sub-second page transitions, and tactile micro-interactions.',
+          metric: '+42%',
+          metricLabel: 'Avg. Conversion Lift'
+        },
+        brands: {
+          code: 'DISCIPLINE 02 / 335° VECTOR',
+          title: 'Living Brand Identities & Visual Systems',
+          desc: 'Enduring verbal and visual identity systems, bespoke grid geometries, and motion guidelines that command category authority.',
+          metric: '3.8x',
+          metricLabel: 'Unaided Brand Recall'
+        },
+        uiux: {
+          code: 'DISCIPLINE 03 / 110° VECTOR',
+          title: 'UI/UX Design & Multi-Platform Design Tokens',
+          desc: 'Precision interface systems, interactive SVG telemetry diagrams, and accessible component libraries built for scale.',
+          metric: '99.2%',
+          metricLabel: 'Task Completion Score'
+        }
+      };
+
+      const order = ['websites', 'brands', 'uiux'];
+      let currentIdx = 0;
+
+      function activateDiscipline(key) {
+        const d = disciplines[key];
+        if (!d) return;
+        currentIdx = order.indexOf(key);
+        order.forEach(k => {
+          const btn = document.querySelector('[data-node="' + k + '"]');
+          const spoke = document.getElementById('spoke-' + k);
+          const dot = document.getElementById('dot-' + k);
+          const active = k === key;
+          btn?.classList.toggle('is-active', active);
+          spoke?.classList.toggle('is-active', active);
+          if (dot) dot.setAttribute('r', active ? '1.5' : '1.0');
+        });
+        document.getElementById('inspectorCode').textContent = d.code;
+        document.getElementById('inspectorTitle').textContent = d.title;
+        document.getElementById('inspectorDesc').textContent = d.desc;
+        document.getElementById('inspectorMetric').textContent = d.metric;
+        document.getElementById('inspectorMetricLabel').textContent = d.metricLabel;
+      }
+
+      document.querySelectorAll('[data-node]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const key = btn.getAttribute('data-node');
+          if (key === 'websites' && btn.classList.contains('is-active')) {
+            // If websites button is clicked while already active (e.g. by preview runner [data-next]), cycle to next node!
+            const nextKey = order[(currentIdx + 1) % order.length];
+            activateDiscipline(nextKey);
+          } else {
+            activateDiscipline(key);
+          }
+        });
+      });
+
+      const modal = document.getElementById('methodologyModal');
+      document.getElementById('openMethodologyBtn')?.addEventListener('click', () => modal.classList.add('is-open'));
+      document.getElementById('closeMethodologyBtn')?.addEventListener('click', () => modal.classList.remove('is-open'));
+      document.getElementById('cycleVectorInModalBtn')?.addEventListener('click', () => {
+        const nextKey = order[(currentIdx + 1) % order.length];
+        activateDiscipline(nextKey);
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.classList.remove('is-open');
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

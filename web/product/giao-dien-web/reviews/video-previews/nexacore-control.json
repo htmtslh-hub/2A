@@ -1,0 +1,34 @@
+{
+  "id": "t264",
+  "slug": "nexacore-control",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:49:37.139Z",
+  "demo": "/demos/nexacore-control/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "03b8a1ab7154",
+  "sha256": "03b8a1ab715424da7eecc31bdf17af1238643b4a9d8b6d01d5b45566c21deffe",
+  "demoHtmlSha256": "c5b139fab2b84ef7b7b81c8ab04edabbe51e387cbc85abee45f9f6c241891de9",
+  "demoSha256": "cb269410435593ee9b084de09da7e03fd92f71b79e8d3af525b52fa666374e66",
+  "bytes": 382081,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 820
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-control-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-control-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-control-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-control-return.jpg"
+  ]
+}

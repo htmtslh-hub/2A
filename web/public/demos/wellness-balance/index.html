@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TerraElix — The Power of Nature in Every Capsule · Plant-Based Adaptogen Supplements</title>
+  <meta name="description" content="Support stress balance, sustained energy, and inner clarity with clean, plant-based supplements designed for modern life. 100% Plant-Based, Third-Party Tested, Zero Fillers.">
+  <meta property="og:title" content="TerraElix — The Power of Nature in Every Capsule">
+  <meta property="og:description" content="Clean plant-based adaptogen formulas for calm, sustained energy, cellular recovery, and cognitive clarity.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-forest: #0e1b14;
+      --ink: #ffffff;
+      --ink-soft: rgba(255, 255, 255, 0.85);
+      --ink-mute: rgba(255, 255, 255, 0.65);
+      --accent: #ffffff;
+      --accent-text: #bef264;
+      --font-display: 'DM Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-forest); color: var(--ink); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      background: var(--bg-forest);
+      color: var(--ink);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent-text); color: #0e1b14; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: #ffffff; color: #0e1b14;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input):focus-visible {
+      outline: 3px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Hero Stage */
+    .te-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image:
+        linear-gradient(180deg, rgba(8, 20, 14, 0.35) 0%, rgba(10, 24, 16, 0.25) 45%, rgba(8, 19, 13, 0.86) 100%),
+        url('assets/terraelix-nature-bg.webp');
+      background-size: cover;
+      background-position: center;
+      padding-bottom: 40px;
+    }
+
+    /* Header */
+    .te-header {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px clamp(20px, 4vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .te-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    .te-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .te-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.9rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .te-nav a:hover { color: #ffffff; }
+    .te-white-pill {
+      min-height: 44px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #111827;
+      font-weight: 600;
+      font-size: 0.88rem;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .te-glass-pill {
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Headline & Floating Capsule */
+    .te-center {
+      max-width: 1400px;
+      width: 100%;
+      margin: 24px auto;
+      padding: 0 clamp(20px, 4vw, 48px);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .te-headline {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      max-width: 16ch;
+      margin-bottom: 24px;
+      text-wrap: balance;
+    }
+    .te-capsule-orb {
+      width: min(88vw, 380px);
+      height: 220px;
+      border-radius: 28px;
+      object-fit: cover;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.45);
+      animation: teFloat 6s ease-in-out infinite;
+    }
+    @keyframes teFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Bottom 3-Panel Grid */
+    .te-bottom-grid {
+      max-width: 1400px;
+      width: 100%;
+      margin: 28px auto 0;
+      padding: 0 clamp(20px, 4vw, 48px);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      align-items: end;
+      gap: 28px;
+    }
+
+    /* Center Formula Carousel Card */
+    .te-formula-card {
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .te-formula-card img {
+      width: 84px;
+      height: 84px;
+      border-radius: 16px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .te-bars {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .te-bar-btn {
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .te-bar-btn span {
+      display: block;
+      height: 4px;
+      width: 22px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.35);
+      transition: transform 220ms var(--ease-out), background-color 220ms var(--ease-out);
+    }
+    .te-bar-btn[aria-selected="true"] span {
+      width: 36px;
+      background: #ffffff;
+    }
+
+    /* Right Panel Feature Tags */
+    .te-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .te-tag {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+    }
+
+    /* Section 2: 60-Second Personalized Assessment */
+    .te-quiz-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: clamp(56px, 8vw, 92px) clamp(20px, 4vw, 48px);
+    }
+    .te-quiz-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 24px;
+    }
+    .te-quiz-box {
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    @media (max-width: 1024px) {
+      .te-bottom-grid, .te-quiz-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .te-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to TerraElix botanical formulas</a>
+
+  <div class="te-hero">
+    <header class="te-header" role="banner">
+      <a href="#main" class="te-logo">
+        <span style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.18);display:inline-flex;align-items:center;justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </span>
+        <span>TerraElix</span>
+      </a>
+
+      <nav class="te-nav" aria-label="TerraElix Navigation">
+        <a href="#main">Home</a>
+        <a href="#match-quiz">Benefits</a>
+        <a href="#match-quiz">Reviews</a>
+        <a href="mailto:care@terraelix.example.com">Contact</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" class="te-glass-pill" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play motion">Motion</button>
+        <a href="#match-quiz" class="te-white-pill">Browse Products</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="te-center">
+        <h1 class="te-headline">The Power of Nature in Every Capsule</h1>
+        <img class="te-capsule-orb" src="assets/terraelix-capsules.webp" alt="TerraElix golden plant-based adaptogen capsules surrounded by fresh botanical leaves" width="380" height="220">
+      </section>
+
+      <section class="te-bottom-grid" aria-label="Formula Selector and Wellness Metrics">
+        <!-- Left Panel -->
+        <div>
+          <p style="font-size:0.95rem;color:var(--ink-soft);margin-bottom:14px;">Support stress balance, sustained energy, and inner clarity with clean, plant-based supplements designed for modern life.</p>
+          <p style="font-size:0.8rem;color:var(--ink-mute);margin-bottom:18px;">Take a 60-second assessment to get a personalized recommendation</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <a href="#match-quiz" class="te-white-pill">Explore Formulas</a>
+            <button type="button" class="te-glass-pill" id="openMatchModalBtn">Find Your Match</button>
+          </div>
+        </div>
+
+        <!-- Center Carousel Panel -->
+        <div>
+          <article class="te-formula-card" aria-live="polite">
+            <img id="formulaThumb" src="assets/terraelix-capsules.webp" alt="Selected TerraElix herbal capsule formula" width="84" height="84">
+            <div>
+              <span style="font-size:0.75rem;color:var(--accent-text);font-family:var(--font-mono);" id="formulaTag">Ashwagandha + L-Theanine</span>
+              <h2 style="font-family:var(--font-display);font-size:1.25rem;margin:2px 0 4px;" id="formulaTitle">Calm &amp; Stress Balance</h2>
+              <p style="font-size:0.84rem;color:var(--ink-soft);" id="formulaDesc">Supports relaxation, emotional balance, and everyday mental clarity.</p>
+            </div>
+          </article>
+          <div class="te-bars" role="tablist" aria-label="Botanical Formulas">
+            <button type="button" class="te-bar-btn" role="tab" data-formula-idx="0" aria-selected="true" aria-label="Formula 1 Calm and Stress Balance"><span></span></button>
+            <button type="button" class="te-bar-btn" role="tab" data-formula-idx="1" aria-selected="false" aria-label="Formula 2 Sustained Daily Energy"><span></span></button>
+            <button type="button" class="te-bar-btn" role="tab" data-formula-idx="2" aria-selected="false" aria-label="Formula 3 Deep Cellular Recovery"><span></span></button>
+            <button type="button" class="te-bar-btn" role="tab" data-formula-idx="3" aria-selected="false" aria-label="Formula 4 Cognitive Clarity"><span></span></button>
+          </div>
+        </div>
+
+        <!-- Right Metric Panel -->
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+            <strong class="num" style="font-family:var(--font-display);font-size:2.8rem;line-height:1;">+<span data-counter="14">14</span>K</strong>
+            <span style="font-size:0.82rem;color:var(--accent-text);font-weight:600;">Verified Daily Rituals</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--ink-soft);">Join thousands prioritizing daily balance, natural energy, and mindful wellness with TerraElix.</p>
+          <div class="te-tags">
+            <span class="te-tag">100% Plant-Based</span>
+            <span class="te-tag">Third-Party Tested</span>
+            <span class="te-tag">Zero Fillers</span>
+          </div>
+        </div>
+      </section>
+    
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+  </main>
+  </div>
+
+  <!-- Section 2: Interactive 60-Second Adaptogen Matcher -->
+  <section id="match-quiz" class="te-quiz-section">
+    <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--accent-text);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:8px;">02 / Personalized Botanical Assessment</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.8vw,2.8rem);margin-bottom:12px;">Select Your Primary Daily Wellness Goal</h2>
+    <div class="te-quiz-grid">
+      <div class="te-quiz-box">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+          <button type="button" class="te-glass-pill" data-goal="calm">Cortisol &amp; Calm</button>
+          <button type="button" class="te-glass-pill" data-goal="energy">Clean Stamina</button>
+          <button type="button" class="te-glass-pill" data-goal="sleep">Deep Sleep</button>
+          <button type="button" class="te-glass-pill" data-goal="focus">Noo-Clarity</button>
+        </div>
+        <p id="goalResultText" style="color:var(--ink-soft);font-size:0.96rem;">Recommended Stack: <strong>Calm &amp; Stress Balance</strong> (300mg KSM-66 Ashwagandha + 200mg Suntheanine® L-Theanine, 2 capsules at 08:00 AM).</p>
+      </div>
+      <div class="te-quiz-box" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+        <div>
+          <h3 style="font-size:1.25rem;margin-bottom:6px;">Certificate of Analysis (CoA)</h3>
+          <p style="font-size:0.88rem;color:var(--ink-soft);">Every batch is ISO-17025 lab verified for heavy metals, microbial purity, and active adaptogen potency.</p>
+        </div>
+        <a href="mailto:care@terraelix.example.com?subject=TerraElix%20Formula%20Consultation" class="te-white-pill">Order Starter Kit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1200px;margin:0 auto;padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,0.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--ink-soft);font-size:0.88rem;" role="contentinfo">
+    <div><strong>TerraElix Botanicals</strong> · Clean Adaptogen Formulations</div>
+    <div><a href="mailto:care@terraelix.example.com" style="color:var(--accent-text);">care@terraelix.example.com</a></div>
+  </footer>
+
+  <div id="matchModal" role="dialog" aria-modal="true" aria-labelledby="matchModalTitle" aria-hidden="true" style="position:fixed;inset:0;z-index:200;background:rgba(6,14,10,0.84);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:20px;">
+    <div style="width:min(100%,480px);border-radius:24px;padding:28px;background:#13261c;border:1px solid rgba(255,255,255,0.26);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="matchModalTitle" style="font-family:var(--font-display);font-size:1.5rem;">Your Personalized Ritual</h2>
+        <button type="button" id="closeMatchModalBtn" class="te-glass-pill" style="padding:0 14px;" aria-label="Close modal">X</button>
+      </div>
+      <p style="color:var(--ink-soft);margin-bottom:18px;">Connect with our naturopathic formulation desk to customize your monthly TerraElix subscription pack.</p>
+      <a href="mailto:care@terraelix.example.com" class="te-white-pill">Request Custom Pack</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const formulas = [
+        { title: 'Calm & Stress Balance', tag: 'Ashwagandha + L-Theanine', desc: 'Supports relaxation, emotional balance, and everyday mental clarity.' },
+        { title: 'Sustained Daily Energy', tag: 'Rhodiola + Cordyceps', desc: 'Clean cellular stamina without caffeine jitters or afternoon crashes.' },
+        { title: 'Deep Cellular Recovery', tag: 'Reishi + Magnesium', desc: 'Restores overnight parasympathetic balance and neuromuscular ease.' },
+        { title: 'Cognitive Clarity', tag: "Lion's Mane + Bacopa", desc: 'Nourishes focus, recall speed, and calm creative flow states.' }
+      ];
+      let fIdx = 0;
+      function setFormula(i) {
+        fIdx = (i + formulas.length) % formulas.length;
+        const f = formulas[fIdx];
+        document.getElementById('formulaTitle').textContent = f.title;
+        document.getElementById('formulaTag').textContent = f.tag;
+        document.getElementById('formulaDesc').textContent = f.desc;
+        document.querySelectorAll('[data-formula-idx]').forEach(function (b, idx) {
+          b.setAttribute('aria-selected', String(idx === fIdx));
+        });
+      }
+      document.querySelectorAll('[data-formula-idx]').forEach(function (b) {
+        b.addEventListener('click', function () { setFormula(Number(b.getAttribute('data-formula-idx')) || 0); });
+      });
+
+      const goals = {
+        calm: 'Recommended Stack: Calm & Stress Balance (300mg KSM-66 Ashwagandha + 200mg L-Theanine).',
+        energy: 'Recommended Stack: Sustained Daily Energy (400mg Cordyceps Militaris + Rhodiola Rosea).',
+        sleep: 'Recommended Stack: Deep Cellular Recovery (Organic Reishi Fruiting Body + Magnesium Bisglycinate).',
+        focus: "Recommended Stack: Cognitive Clarity (500mg Dual-Extract Lion's Mane + Bacopa Monnieri)."
+      };
+      document.querySelectorAll('[data-goal]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const g = btn.getAttribute('data-goal');
+          if (goals[g]) document.getElementById('goalResultText').textContent = goals[g];
+        });
+      });
+
+      const modal = document.getElementById('matchModal');
+      document.getElementById('openMatchModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); }
+      });
+      document.getElementById('closeMatchModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); }
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

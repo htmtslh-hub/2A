@@ -25,6 +25,17 @@ const PREVIEWS_DIR = join(WEB_ROOT, 'public', 'previews');
 const EXCLUDED_DIRS = new Set(['_design', 'design', 'docs', 'reviews', 'tools', 'free-sample']);
 
 const INLINE_PRODUCTS = new Set([
+  'guardnet-benefits',
+  'axion-about',
+  'wellness-balance',
+  'nexacore-control',
+  'rocket-pricing',
+  'no-code-waitlist',
+  'mufi-aba-scheduler',
+  'bloodhound-outlands-tracker',
+  'abstract-future-sculpt',
+  'foxico-indonesia-expedition',
+  'artmuseum-spatial-gallery',
   'feathers-atlas',
   'koru-tech-footer',
   'visual-hero',

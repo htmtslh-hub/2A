@@ -1,0 +1,34 @@
+{
+  "id": "t261",
+  "slug": "mufi-aba-scheduler",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:48:35.736Z",
+  "demo": "/demos/mufi-aba-scheduler/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "e1885889e87d",
+  "sha256": "e1885889e87d975c1a2c6811716074a09c988d5d0bcd3bb9620fd8adcc4ba53b",
+  "demoHtmlSha256": "a72e4d06ce2ef50f169535cccc477d4947d5a203b750256c58ffa01ac5af11b8",
+  "demoSha256": "527bbd8f18b1704e742bd05c0596bd85278e8a4e44b059d17928e8b7402434a7",
+  "bytes": 473054,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 777
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mufi-aba-scheduler-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mufi-aba-scheduler-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mufi-aba-scheduler-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mufi-aba-scheduler-return.jpg"
+  ]
+}

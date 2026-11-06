@@ -1,0 +1,34 @@
+{
+  "id": "t258",
+  "slug": "foxico-indonesia-expedition",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:47:34.474Z",
+  "demo": "/demos/foxico-indonesia-expedition/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "276b579d4238",
+  "sha256": "276b579d42385f27b0642c61463f411dd44b94c0b37c9577314e34ca37f51e41",
+  "demoHtmlSha256": "95f1fafaf67c534a2764cdc5415651d1e3688351cc1996e8e2239a4cea60b79d",
+  "demoSha256": "b8b511532d8339d6e7f9a063b2d22924d94c837d9500d45be2e5a06a89987e4c",
+  "bytes": 484105,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1137
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foxico-indonesia-expedition-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foxico-indonesia-expedition-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foxico-indonesia-expedition-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foxico-indonesia-expedition-return.jpg"
+  ]
+}

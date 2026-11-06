@@ -1,0 +1,34 @@
+{
+  "id": "t262",
+  "slug": "no-code-waitlist",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:48:56.238Z",
+  "demo": "/demos/no-code-waitlist/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8435ed7d1802",
+  "sha256": "8435ed7d1802100e596933da166fd14c898e50eb39c13f122150bdcaa3f615ef",
+  "demoHtmlSha256": "0dd39f66278aab83cc52a1b72c2395b886b51d8ed4bc1d064984b47e3b76b02c",
+  "demoSha256": "e41c54a7af06bb26e03b4609775ba55f3856607588d9cb4d8a450542a1baa22f",
+  "bytes": 255500,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\no-code-waitlist-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\no-code-waitlist-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\no-code-waitlist-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\no-code-waitlist-return.jpg"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-05T23:35:49.309Z",
+  "updatedAt": "2026-11-06T13:39:26.087Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2000,6 +2000,168 @@
       "sizeBytes": 233690,
       "sha256": "bd371f0375b87a009e509e9db87471692f0d9a597b8f1cea00a71585bc79173f",
       "updatedAt": "2026-11-05T23:35:49.308Z"
+    },
+    "rocket-pricing": {
+      "fileId": "1ucCsSwiJ806glyxONfbRQoO0cjEgT5bG",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1ucCsSwiJ806glyxONfbRQoO0cjEgT5bG",
+      "webViewUrl": "https://drive.google.com/file/d/1ucCsSwiJ806glyxONfbRQoO0cjEgT5bG/view",
+      "sizeBytes": 13101,
+      "sha256": "316040fb0ba74e310973c196faff6111850123c3b13d08d6bb7258248982eacb",
+      "updatedAt": "2026-11-06T13:39:21.895Z"
+    },
+    "nexacore-control": {
+      "fileId": "1XKoKjCDfmNn9LCp5keVs1AmAKDa9ycMi",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1XKoKjCDfmNn9LCp5keVs1AmAKDa9ycMi",
+      "webViewUrl": "https://drive.google.com/file/d/1XKoKjCDfmNn9LCp5keVs1AmAKDa9ycMi/view",
+      "sizeBytes": 34784,
+      "sha256": "0d5e51f845b1f730fb702ce612556c8681811be4b978ecb9dcf81153940db772",
+      "updatedAt": "2026-11-06T13:39:21.969Z"
+    },
+    "mufi-aba-scheduler": {
+      "fileId": "1GWfI_xuxpKfeR1KRpsXURHRUZmM3C_95",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1GWfI_xuxpKfeR1KRpsXURHRUZmM3C_95",
+      "webViewUrl": "https://drive.google.com/file/d/1GWfI_xuxpKfeR1KRpsXURHRUZmM3C_95/view",
+      "sizeBytes": 115733,
+      "sha256": "c200ac3b7d30f6408a369f4df2491f3295ca325b94a7daf830f68ae3cbef25c1",
+      "updatedAt": "2026-11-06T13:39:22.102Z"
+    },
+    "wellness-balance": {
+      "fileId": "1sf8pBqFc95lBbJ9eUZjygJdqwjEPbvly",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1sf8pBqFc95lBbJ9eUZjygJdqwjEPbvly",
+      "webViewUrl": "https://drive.google.com/file/d/1sf8pBqFc95lBbJ9eUZjygJdqwjEPbvly/view",
+      "sizeBytes": 85282,
+      "sha256": "2fcaceede41ded7db35e861d3afd0c13e296bcf54af6fbb299441f02dd97e292",
+      "updatedAt": "2026-11-06T13:39:22.135Z"
+    },
+    "axion-about": {
+      "fileId": "1abuJ5bAjdLWGx4pnpnZak-h8rF3KUQL2",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1abuJ5bAjdLWGx4pnpnZak-h8rF3KUQL2",
+      "webViewUrl": "https://drive.google.com/file/d/1abuJ5bAjdLWGx4pnpnZak-h8rF3KUQL2/view",
+      "sizeBytes": 111548,
+      "sha256": "b83f44087206a1f1149f382e19d061a12879548339f9e876f3a5e0170cb821eb",
+      "updatedAt": "2026-11-06T13:39:22.158Z"
+    },
+    "bloodhound-outlands-tracker": {
+      "fileId": "1U5NjLeLhFkIb1GssNQyQLxZmrAIQNpGF",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1U5NjLeLhFkIb1GssNQyQLxZmrAIQNpGF",
+      "webViewUrl": "https://drive.google.com/file/d/1U5NjLeLhFkIb1GssNQyQLxZmrAIQNpGF/view",
+      "sizeBytes": 131273,
+      "sha256": "1ec227abfba930bcf10e577b2e6480c5661347bf56a6aedfe07335552449950d",
+      "updatedAt": "2026-11-06T13:39:22.250Z"
+    },
+    "guardnet-benefits": {
+      "fileId": "1NkrGkV5n2FF2O0Ff9x7S5fpGWeyXJCyD",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1NkrGkV5n2FF2O0Ff9x7S5fpGWeyXJCyD",
+      "webViewUrl": "https://drive.google.com/file/d/1NkrGkV5n2FF2O0Ff9x7S5fpGWeyXJCyD/view",
+      "sizeBytes": 21969,
+      "sha256": "5a2523153708cba6c5287ce8de5f3e0ee69fa6f34fa93821d5086e420f4b0671",
+      "updatedAt": "2026-11-06T13:39:22.261Z"
+    },
+    "no-code-waitlist": {
+      "fileId": "1XFSksTswWvNUfXkcyViHdiLm_Jdtffew",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1XFSksTswWvNUfXkcyViHdiLm_Jdtffew",
+      "webViewUrl": "https://drive.google.com/file/d/1XFSksTswWvNUfXkcyViHdiLm_Jdtffew/view",
+      "sizeBytes": 74987,
+      "sha256": "c1b5ceab5597956cebd84ada799793f240ef858b57fc87ef3b62274113ac67dc",
+      "updatedAt": "2026-11-06T13:39:22.387Z"
+    },
+    "abstract-future-sculpt": {
+      "fileId": "1sSW0S_JxOVsKK3zrRY8tY8-h2UAL_uJM",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1sSW0S_JxOVsKK3zrRY8tY8-h2UAL_uJM",
+      "webViewUrl": "https://drive.google.com/file/d/1sSW0S_JxOVsKK3zrRY8tY8-h2UAL_uJM/view",
+      "sizeBytes": 75237,
+      "sha256": "c51b17f108d08ead9b0deb8e517babcd581112b205537a50588abe7f7055efdd",
+      "updatedAt": "2026-11-06T13:39:24.140Z"
+    },
+    "foxico-indonesia-expedition": {
+      "fileId": "1GocSXRCQhMBoM7dAfQL18Vh2Tocwe-A5",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1GocSXRCQhMBoM7dAfQL18Vh2Tocwe-A5",
+      "webViewUrl": "https://drive.google.com/file/d/1GocSXRCQhMBoM7dAfQL18Vh2Tocwe-A5/view",
+      "sizeBytes": 140608,
+      "sha256": "28cd78532961d683a4fc98bc779b8444cb1d12c015edb572fc0e720decbeefc2",
+      "updatedAt": "2026-11-06T13:39:24.171Z"
+    },
+    "artmuseum-spatial-gallery": {
+      "fileId": "1_Bn5mUHAWPrnZIuTuQMt_WNLoKmjkNxb",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1_Bn5mUHAWPrnZIuTuQMt_WNLoKmjkNxb",
+      "webViewUrl": "https://drive.google.com/file/d/1_Bn5mUHAWPrnZIuTuQMt_WNLoKmjkNxb/view",
+      "sizeBytes": 272977,
+      "sha256": "5df8470213c4efba598ccee09039cfac9d3b2e71b9776b67c814d22f3d20e522",
+      "updatedAt": "2026-11-06T13:39:24.214Z"
+    },
+    "laila-sakura-creator": {
+      "fileId": "1FEUY-r-Hjf41L0gDJzsbNRh4BkjYHyhJ",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1FEUY-r-Hjf41L0gDJzsbNRh4BkjYHyhJ",
+      "webViewUrl": "https://drive.google.com/file/d/1FEUY-r-Hjf41L0gDJzsbNRh4BkjYHyhJ/view",
+      "sizeBytes": 234272,
+      "sha256": "247f14506757694484d1adf17ea897866979d9aa4d82e43c6e65195c9951fd5f",
+      "updatedAt": "2026-11-06T13:39:24.247Z"
+    },
+    "hello-illustrator-folio": {
+      "fileId": "1jdil8izk6BDrwCNPEuL6qqpdV3rbld41",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1jdil8izk6BDrwCNPEuL6qqpdV3rbld41",
+      "webViewUrl": "https://drive.google.com/file/d/1jdil8izk6BDrwCNPEuL6qqpdV3rbld41/view",
+      "sizeBytes": 220240,
+      "sha256": "1c50fe55f9eac45079551d19897c9a9cb03b14f5d15d80a289960662e8700143",
+      "updatedAt": "2026-11-06T13:39:24.329Z"
+    },
+    "quickcam-ui-ux": {
+      "fileId": "1WwHZ5LhEu0eZvQZHaKg7L54qr2XvP-Mv",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1WwHZ5LhEu0eZvQZHaKg7L54qr2XvP-Mv",
+      "webViewUrl": "https://drive.google.com/file/d/1WwHZ5LhEu0eZvQZHaKg7L54qr2XvP-Mv/view",
+      "sizeBytes": 218840,
+      "sha256": "3de87de411c6efc9ca753e77fdae3b6341b0525d7a2386f7cde59303b1477edb",
+      "updatedAt": "2026-11-06T13:39:24.410Z"
+    },
+    "rome-explorer": {
+      "fileId": "1ho72gVyWpjPys6VeyiphC_ay89824Asb",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1ho72gVyWpjPys6VeyiphC_ay89824Asb",
+      "webViewUrl": "https://drive.google.com/file/d/1ho72gVyWpjPys6VeyiphC_ay89824Asb/view",
+      "sizeBytes": 874194,
+      "sha256": "0f261af7368ce3316fd1bfe199d5a6af2880f3b80477b532472770f087b0b5ee",
+      "updatedAt": "2026-11-06T13:39:24.446Z"
+    },
+    "layla-astrology-wiki": {
+      "fileId": "1vNfettwJEk_9icJ5y2yAqDrYe8xkuDMt",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1vNfettwJEk_9icJ5y2yAqDrYe8xkuDMt",
+      "webViewUrl": "https://drive.google.com/file/d/1vNfettwJEk_9icJ5y2yAqDrYe8xkuDMt/view",
+      "sizeBytes": 618959,
+      "sha256": "2a1f46f692b0ee09eae5593834866c1207ba12587425a072e0d11ecccf46d626",
+      "updatedAt": "2026-11-06T13:39:25.458Z"
+    },
+    "ai-workflow-hero": {
+      "fileId": "15q-4jSSdjAOcfd2_bo5km15a_OG409w1",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=15q-4jSSdjAOcfd2_bo5km15a_OG409w1",
+      "webViewUrl": "https://drive.google.com/file/d/15q-4jSSdjAOcfd2_bo5km15a_OG409w1/view",
+      "sizeBytes": 12556,
+      "sha256": "2bde8d188ab28a9037bc730d6683b1125ce7c5186b7ed7d9724e161a0474d771",
+      "updatedAt": "2026-11-06T13:39:25.838Z"
+    },
+    "cyberpunk-reveal": {
+      "fileId": "1n2iObMGakAVVaBuUxUTcZfyanfLRCwSB",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1n2iObMGakAVVaBuUxUTcZfyanfLRCwSB",
+      "webViewUrl": "https://drive.google.com/file/d/1n2iObMGakAVVaBuUxUTcZfyanfLRCwSB/view",
+      "sizeBytes": 13096,
+      "sha256": "da5137d20debf48b8e0705ee43e41e1e4602c197b99751763dd6b78d282c58a1",
+      "updatedAt": "2026-11-06T13:39:26.087Z"
     }
   }
 }

@@ -46,6 +46,263 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t267: {
+    slug: 'guardnet-benefits',
+    cat: 'communication',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Guardnet Cyber Defense",
+        desc: "Hệ thống phòng thủ an ninh mạng chủ động trên nền đen #000000: lưới 3 cột нейтрал-950 với quầng sáng xanh #1e3a8a, video lõi bảo mật trung tâm hòa sắc đáy và bộ mô phỏng kiểm tra gói tin eBPF độ trễ bằng không.",
+        tags: ["Cybersecurity", "Zero-Bandwidth eBPF", "Dark Bento Grid"]
+      },
+      en: {
+        name: "Guardnet Cyber Defense",
+        desc: "Autonomous enterprise cybersecurity showcase on a pure black #000000 canvas featuring a 3-column neutral-950 bento grid with ambient #1e3a8a radial glow blobs, a center seamless looping security core video, and an interactive eBPF packet inspection simulator.",
+        tags: ["Cybersecurity", "Zero-Bandwidth eBPF", "Dark Bento Grid"]
+      },
+      zh: {
+        name: "Guardnet Cyber Defense",
+        desc: "Guardnet 企业级主动网络安全展示：纯黑 #000000 画布、带深蓝环境光晕的三栏暗色网格、中央无缝循环安全核心视频以及交互式零带宽损耗 eBPF 流量检测模拟器。",
+        tags: ["网络安全", "零带宽损耗", "暗黑网格"]
+      }
+    }
+  },
+  t266: {
+    slug: 'axion-about',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Axion Creative Studio",
+        desc: "Giới thiệu studio sáng tạo chiến lược Axion trên nền trắng biên tập #FFFFFF với điểm nhấn cam #F26522: lưới 3 cột bất đối xứng (26% - khoảng trắng - 48%), hai khung hình nhiếp ảnh studio và ma trận năng lực thương hiệu tương tác.",
+        tags: ["Editorial Agency", "Asymmetric Grid", "Strategy Studio"]
+      },
+      en: {
+        name: "Axion Creative Studio",
+        desc: "Clean white #FFFFFF editorial agency introduction with #F26522 orange accents, an asymmetrical 3-column desktop grid (26% | 1fr whitespace | 48%), dual studio photography plates, and an interactive practice discipline matrix.",
+        tags: ["Editorial Agency", "Asymmetric Grid", "Strategy Studio"]
+      },
+      zh: {
+        name: "Axion Creative Studio",
+        desc: "Axion 策略创意工作室纯白杂志风介绍页：#F26522 活力橙点缀、26%-留白-48% 三栏非对称网格、双工作室摄影画幅与交互式品牌能力矩阵。",
+        tags: ["创意机构", "非对称排版", "品牌策略"]
+      }
+    }
+  },
+  t265: {
+    slug: 'wellness-balance',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "TerraElix Botanical Supplements",
+        desc: "Trang đích thực phẩm bổ sung thảo dược TerraElix: tiêu đề DM Sans cỡ lớn trên nền thiên nhiên toàn màn hình, viên nang thảo mộc nổi, băng chuyền 4 công thức thích nghi (Ashwagandha, Rhodiola, Reishi, Lion's Mane) và bài trắc nghiệm cá nhân hóa 60 giây.",
+        tags: ["Plant Supplements", "Adaptogen Carousel", "Nature Wellness"]
+      },
+      en: {
+        name: "TerraElix Botanical Supplements",
+        desc: "Plant-based adaptogen supplement hero pairing a full-bleed nature backdrop and floating botanical capsule artwork with a 3-panel bottom bar, 4-formula interactive carousel, +14K community metric, and a 60-second formula matcher.",
+        tags: ["Plant Supplements", "Adaptogen Carousel", "Nature Wellness"]
+      },
+      zh: {
+        name: "TerraElix Botanical Supplements",
+        desc: "TerraElix 草本适应原营养胶囊首屏：全屏自然森林背景、悬浮草本胶囊视觉、底部三栏式 4 配方轮播切换器、+14K 用户指标与 60 秒个性化配方测评。",
+        tags: ["草本营养", "适应原轮播", "自然健康"]
+      }
+    }
+  },
+  t264: {
+    slug: 'nexacore-control',
+    cat: 'communication',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "NexaCore Operational Control",
+        desc: "Bố cục so sánh điều hành 3 cột trên nền trắng tinh khiết #FFFFFF với chữ tím than #1a0b54: 5 thẻ áp lực thủ công bên trái, cổng video tròn xoay trung tâm phóng đại 160% và 5 thẻ kiểm soát chiến lược bên phải kèm thanh trượt chẩn đoán tải công việc.",
+        tags: ["Operational Control", "3-Column Comparison", "Circular Video Portal"]
+      },
+      en: {
+        name: "NexaCore Operational Control",
+        desc: "Executive operational clarity showcase on pure white #FFFFFF with #1a0b54 deep indigo typography, contrasting 5 'Running on Manual Effort' cards against 5 'Running with Control' cards around a 300px circular HLS video portal.",
+        tags: ["Operational Control", "3-Column Comparison", "Circular Video Portal"]
+      },
+      zh: {
+        name: "NexaCore Operational Control",
+        desc: "NexaCore 运营控制对比展示：纯白 #FFFFFF 画布搭配 #1a0b54 深靛蓝排版，左侧 5 张手动内耗痛点卡片与右侧 5 张全局掌控优势卡片环绕中央 300px 圆形视频门户。",
+        tags: ["运营管理", "三栏对比", "圆形视频门户"]
+      }
+    }
+  },
+  t263: {
+    slug: 'rocket-pricing',
+    cat: 'education',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Rocket AI Course & Templates Pricing",
+        desc: "Bảng giá khóa học thiết kế AI & bộ mẫu Lovable trên nền đen #000000: hiệu ứng viền sáng SpotlightBorder 1px bám theo con trỏ chuột giữa gói Course ($159) và gói Best Value Course + Lovable Templates ($239) kèm công cụ tính ROI.",
+        tags: ["Spotlight Border", "SaaS Pricing", "Lovable Templates"]
+      },
+      en: {
+        name: "Rocket AI Course & Templates Pricing",
+        desc: "High-contrast #000000 pricing showcase featuring cursor-tracking 1px radial SpotlightBorder cards comparing the AI Design Course ($159) and All-Access Lovable Templates bundle ($239), complete with a launch velocity ROI estimator.",
+        tags: ["Spotlight Border", "SaaS Pricing", "Lovable Templates"]
+      },
+      zh: {
+        name: "Rocket AI Course & Templates Pricing",
+        desc: "Rocket AI 设计课程与 Lovable 模板定价展示：纯黑 #000000 背景搭配鼠标跟随 1px 聚光灯描边双栏卡片（$159 课程版 vs $239 全通版）及项目交付投产比计算器。",
+        tags: ["聚光灯描边", "SaaS定价", "模板工作流"]
+      }
+    }
+  },
+  t262: {
+    slug: 'no-code-waitlist',
+    cat: 'communication',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Asme No-Code AI Waitlist",
+        desc: "Trang đích danh sách chờ ứng dụng AI không cần code Asme: thanh điều hướng kính lỏng .liquid-glass, tiêu đề Instrument Serif trên nền video HLS tối giản, nút Join waitlist biến hình thành ô nhập email gõ chữ tự động và khung video sản phẩm 16:9.",
+        tags: ["Liquid Glass", "Waitlist Morph", "Instrument Serif"]
+      },
+      en: {
+        name: "Asme No-Code AI Waitlist",
+        desc: "Atmospheric dark waitlist hero for the Asme no-code AI app builder combining specular .liquid-glass navigation, Instrument Serif display typography, an inline morphing waitlist email bar, and a 16:9 live workspace preview frame.",
+        tags: ["Liquid Glass", "Waitlist Morph", "Instrument Serif"]
+      },
+      zh: {
+        name: "Asme No-Code AI Waitlist",
+        desc: "Asme 零代码 AI 应用构建器候补名单首屏：液态玻璃导航栏、Instrument Serif 衬线大标题、点击展开的动态候补邮箱输入框与 16:9 实时工作区视频预览框。",
+        tags: ["液态玻璃", "候补名单交互", "衬线排版"]
+      }
+    }
+  },
+  t261: {
+    slug: 'mufi-aba-scheduler',
+    cat: 'communication',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Mufi Smart ABA Scheduler",
+        desc: "Nền tảng tự động hóa lịch trị liệu ABA Mufi trên nền tím obsidian #0d0718 với hai vòng sáng neon hổ phách - thạch anh tím: bảng điều khiển Bento 2 cột quản lý ca hẹn Wilson Rhiel Madsen và ghi nhật ký phiên trực tiếp theo thời gian thực.",
+        tags: ["ABA Healthcare SaaS", "Dual Neon Bento", "Session Telemetry"]
+      },
+      en: {
+        name: "Mufi Smart ABA Scheduler",
+        desc: "Automated ABA therapy scheduling and clinical data-logging SaaS on an obsidian-violet #0d0718 canvas featuring dual amber-and-amethyst neon light rings and an interactive 2-column Bento appointment & trial prompt workspace.",
+        tags: ["ABA Healthcare SaaS", "Dual Neon Bento", "Session Telemetry"]
+      },
+      zh: {
+        name: "Mufi Smart ABA Scheduler",
+        desc: "Mufi 智能 ABA 康复排班与临床记录 SaaS 平台：黑曜石紫背景配琥珀金与紫水晶双霓虹光环，以及双栏预约管理与实时干预提示记录 Bento 面板。",
+        tags: ["医疗排班SaaS", "双色霓虹Bento", "临床数据记录"]
+      }
+    }
+  },
+  t260: {
+    slug: 'bloodhound-outlands-tracker',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Apex Bloodhound Outlands Tracker",
+        desc: "Hồ sơ nhân vật chiến thuật Bloodhound (Technological Tracker) trên bố cục 3 cột tương phản: hai cột bên màu giấy kem #f5f3ef kẹp cột trụ đỏ thẫm #a8281c ở giữa, chuyển đổi nhân vật Mirage và bộ mô phỏng xung sonar Allfather Eye.",
+        tags: ["Tactical Character", "Crimson Pillar Grid", "Sonar Telemetry"]
+      },
+      en: {
+        name: "Apex Bloodhound Outlands Tracker",
+        desc: "Three-column tactical legend dossier pairing warm off-white #f5f3ef outer wings with a full-bleed #a8281c crimson center pillar, interactive Bloodhound/Mirage roster switching, ability breakdown, and an Allfather Eye sonar cone simulator.",
+        tags: ["Tactical Character", "Crimson Pillar Grid", "Sonar Telemetry"]
+      },
+      zh: {
+        name: "Apex Bloodhound Outlands Tracker",
+        desc: "《Apex》寻血猎犬战术角色档案：米白双翼搭配中央深红立柱三栏布局，支持幻象角色切换、战术/被动/终极技能解析与全父之眼声呐扫描模拟器。",
+        tags: ["战术角色档案", "深红立柱排版", "声呐遥测模拟"]
+      }
+    }
+  },
+  t259: {
+    slug: 'abstract-future-sculpt',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Abstract Future Sculpt",
+        desc: "Studio điêu khắc tính toán ABSTRACT — DESIGNING FOR THE FUTURE trên nền không gian sao tối #0b0c0e: khối cầu sóng hữu cơ than chì mờ 3D nổi sau chữ khoảng cách rộng phát sáng và bộ tổng hợp tần số bề mặt Perlin.",
+        tags: ["3D Graphite Sculpture", "Futurist Minimalist", "Wave Topology"]
+      },
+      en: {
+        name: "Abstract Future Sculpt",
+        desc: "Futurist computational sculpture showcase on a deep starfield void #0b0c0e centering a 3D matte-graphite organic wave sphere behind wide-tracked glowing typography and a 4-chapter harmonic displacement synthesizer.",
+        tags: ["3D Graphite Sculpture", "Futurist Minimalist", "Wave Topology"]
+      },
+      zh: {
+        name: "Abstract Future Sculpt",
+        desc: "ABSTRACT 未来计算雕塑工作室首屏：深邃星空黑画布、中央悬浮 3D 哑光石墨有机波浪球体、宽字距发光标题与四章节谐波拓扑合成器。",
+        tags: ["3D石墨雕塑", "未来极简主义", "波浪拓扑"]
+      }
+    }
+  },
+  t258: {
+    slug: 'foxico-indonesia-expedition',
+    cat: 'entertainment',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Foxico Indonesia Expedition",
+        desc: "Trang khám phá quần đảo núi lửa Indonesia của Foxico: đỉnh núi lửa hoàng hôn trên ruộng bậc thang mờ sương, thanh timeline dọc 01/04, bộ 3 thẻ điểm đến (Buddha temple Thailand, Broken Beach Bali, Kerala) và bộ lập lịch trình mùa leo núi.",
+        tags: ["Archipelago Travel", "Destination Slider", "Volcano Twilight"]
+      },
+      en: {
+        name: "Foxico Indonesia Expedition",
+        desc: "Twilight archipelago expedition showcase for Foxico featuring a volcanic ridge backdrop, vertical 01/04 chapter timeline, interactive 3-card destination slider (Thailand, Broken Beach Bali, Kerala), and a seasonal summit traverse planner.",
+        tags: ["Archipelago Travel", "Destination Slider", "Volcano Twilight"]
+      },
+      zh: {
+        name: "Foxico Indonesia Expedition",
+        desc: "Foxico 印度尼西亚火山群岛探险模板：暮色火山梯田背景、左侧 01/04 垂直章节时间轴、右侧泰国佛寺/巴厘岛破碎海滩/喀拉拉邦三卡片滑块与登山季规划器。",
+        tags: ["群岛探险旅行", "目的地卡片滑块", "暮色火山"]
+      }
+    }
+  },
+  t257: {
+    slug: 'artmuseum-spatial-gallery',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "ArtMuseum Spatial Gallery",
+        desc: "Bảo tàng nghệ thuật không gian VisionOS ArtMuseum.com: thanh trình duyệt kính mờ nổi, chồng 5 tác phẩm xếp quạt 3D của Vincent van Gogh (The Starry Night — June 1889), dock chân dung họa sĩ và phòng thí nghiệm soi ánh sáng nghiêng Impasto.",
+        tags: ["Spatial VisionOS UI", "3D Fanned Gallery", "Van Gogh Archive"]
+      },
+      en: {
+        name: "ArtMuseum Spatial Gallery",
+        desc: "Spatial glassmorphism museum exhibition for ArtMuseum.com featuring a floating VisionOS browser chrome, a 5-card 3D fanned stack of Vincent van Gogh masterpieces led by The Starry Night (June 1889), and an impasto raking-light analyzer.",
+        tags: ["Spatial VisionOS UI", "3D Fanned Gallery", "Van Gogh Archive"]
+      },
+      zh: {
+        name: "ArtMuseum Spatial Gallery",
+        desc: "ArtMuseum.com 空间计算美术馆：悬浮毛玻璃浏览器栏、梵高《星月夜》等 5 幅杰作 3D 扇形堆叠画廊、底部艺术家胶囊船坞与厚涂颜料侧光分析仪。",
+        tags: ["空间计算UI", "3D扇形画廊", "梵高艺术馆"]
+      }
+    }
+  },
   t256: {
     slug: 'feathers-atlas',
     cat: 'education',

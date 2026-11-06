@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaCore — Stop Absorbing the Chaos. Run With Confidence.</title>
+  <meta name="description" content="Transform manual operational load into structured executive clarity. Compare Running on Manual Effort versus Running with Control with NexaCore.">
+  <meta property="og:title" content="NexaCore — Stop Absorbing the Chaos. Run With Confidence.">
+  <meta property="og:description" content="Full visibility across priorities, progress, and bottlenecks without constant oversight.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-white: #ffffff;
+      --bg-card: #f7f7f9;
+      --ink-indigo: #1a0b54;
+      --ink-soft: rgba(26, 11, 84, 0.72);
+      --coral-neg: #f43f5e;
+      --indigo-pos: #6366f1;
+      --accent: #1a0b54;
+      --accent-text: #a3265c;
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-white); color: var(--ink-indigo); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.55;
+      background: var(--bg-white);
+      color: var(--ink-indigo);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: #1a0b54; color: #ffffff; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: #1a0b54; color: #ffffff;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input):focus-visible {
+      outline: 3px solid var(--indigo-pos);
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Top Nav */
+    .nx-header {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .nx-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--ink-indigo);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .nx-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nx-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nx-btn {
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: var(--ink-indigo);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.88rem;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* FreedomSection */
+    .nx-freedom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(40px, 6vw, 80px) 24px;
+    }
+    .nx-head {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .nx-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 4.8vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink-indigo);
+      margin-bottom: 16px;
+    }
+    .nx-grad-text {
+      background: linear-gradient(90deg, #1a0b54 0%, #c83e7b 35%, #f47b52 70%, #1a0b54 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .nx-sub {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin: 0 auto;
+    }
+
+    /* 3-Column Comparison Grid */
+    .nx-grid {
+      display: grid;
+      grid-template-columns: 1fr 310px 1fr;
+      align-items: center;
+      gap: 24px;
+    }
+    .nx-col-title {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .nx-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+    }
+    .nx-item {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 18px 20px;
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.94rem;
+      line-height: 1.45;
+      color: var(--ink-indigo);
+    }
+    .nx-icon-neg, .nx-icon-pos {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+    .nx-icon-neg { background: var(--coral-neg); }
+    .nx-icon-pos { background: var(--indigo-pos); }
+
+    /* Center Circular Video Portal */
+    .nx-orb-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .nx-orb {
+      width: 300px;
+      height: 300px;
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(26, 11, 84, 0.16);
+      border: 4px solid #f7f7f9;
+    }
+    .nx-orb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.6);
+      transform-origin: center;
+    }
+
+    @media (max-width: 1024px) {
+      .nx-grid { grid-template-columns: 1fr; }
+      .nx-orb { width: 250px; height: 250px; margin: 16px auto; }
+    }
+      @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to operational comparison</a>
+
+  <header class="nx-header" role="banner">
+    <a href="#main" class="nx-brand">NexaCore</a>
+    <nav class="nx-nav" aria-label="NexaCore Navigation">
+      <a href="#main">Comparison</a>
+      <a href="#workload-simulator">Simulator</a>
+      <button type="button" class="nx-btn" style="background:#f7f7f9;color:var(--ink-indigo);" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play motion">Motion</button>
+      <button type="button" class="nx-btn" id="openAuditModalBtn">Book Audit</button>
+    </nav>
+  </header>
+
+  <main id="main" class="nx-freedom">
+    <div class="nx-head">
+      <h1 class="nx-title">
+        Stop absorbing the chaos.<br>
+        <span class="nx-grad-text">Run with confidence.</span>
+      </h1>
+      <p class="nx-sub">Without the right system, the pressure doesn't disappear. It lands on you.</p>
+    </div>
+
+    <div class="nx-grid">
+      <!-- Left Column: Running on Manual Effort -->
+      <section aria-label="Running on Manual Effort">
+        <h2 class="nx-col-title" style="opacity:0.72;">Running on Manual Effort</h2>
+        <ul class="nx-stack">
+          <li class="nx-item">
+            <span class="nx-icon-neg" aria-hidden="true">X</span>
+            <span>Constant mental load from tracking tasks, people, and moving parts</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-neg" aria-hidden="true">X</span>
+            <span>Priorities keep shifting without clear ownership or follow-through</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-neg" aria-hidden="true">X</span>
+            <span>Problems surface too late, when they are already urgent</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-neg" aria-hidden="true">X</span>
+            <span>Progress depends on you checking, reminding, and pushing</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-neg" aria-hidden="true">X</span>
+            <span>Strategic work gets pushed aside by daily operational noise</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Center Circular Video -->
+      <div class="nx-orb-wrap">
+        <div class="nx-orb">
+          <video autoplay loop muted playsinline poster="assets/nexacore-orb-poster.webp">
+            <source src="https://stream.mux.com/bnYL6x5cAX6WiJv2pOKpITehZd3NVdXpj3ylJFpX5Lk.m3u8" type="application/x-mpegURL">
+          </video>
+        </div>
+      </div>
+
+      <!-- Right Column: Running with Control -->
+      <section aria-label="Running with Control">
+        <h2 class="nx-col-title nx-grad-text">Running with Control</h2>
+        <ul class="nx-stack">
+          <li class="nx-item">
+            <span class="nx-icon-pos" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Full visibility across priorities, progress, and bottlenecks</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-pos" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Clear alignment between daily work and company goals</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-pos" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Early warning on risks before they turn into fire drills</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-pos" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Execution that moves forward without constant oversight</span>
+          </li>
+          <li class="nx-item">
+            <span class="nx-icon-pos" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Space to lead, plan, and scale with confidence</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Section 2: Interactive Executive Load Simulator -->
+    <section id="workload-simulator" style="margin-top:64px;padding:32px;border-radius:24px;background:var(--bg-card);">
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center;">
+        <div>
+          <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--accent-text);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:6px;">02 / Executive Bandwidth Diagnostic</p>
+          <h2 style="font-size:1.75rem;margin-bottom:10px;">Measure Weekly Leadership Hours Reclaimed</h2>
+          <label for="teamSizeRange" style="display:flex;justify-content:space-between;font-weight:600;margin-bottom:8px;">
+            <span>Active Cross-Functional Contributors</span>
+            <output id="teamSizeOut" class="num" style="color:var(--accent-text);">24 contributors</output>
+          </label>
+          <input type="range" id="teamSizeRange" min="5" max="120" value="24" style="width:100%;min-height:44px;accent-color:var(--ink-indigo);">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="num">
+          <div style="background:#ffffff;padding:20px;border-radius:16px;">
+            <div style="font-size:0.8rem;color:var(--ink-soft);">Fire-Drill Reduction</div>
+            <div style="font-size:1.8rem;font-weight:800;color:var(--indigo-pos);" data-counter="78" data-suffix="%">78%</div>
+          </div>
+          <div style="background:#ffffff;padding:20px;border-radius:16px;">
+            <div style="font-size:0.8rem;color:var(--ink-soft);">Exec Hours Reclaimed</div>
+            <div style="font-size:1.8rem;font-weight:800;color:var(--ink-indigo);" id="reclaimedHoursVal">14.5 hrs/wk</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+  </main>
+
+  <footer style="max-width:1120px;margin:0 auto;padding:32px 24px;border-top:1px solid rgba(26,11,84,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--ink-soft);font-size:0.88rem;" role="contentinfo">
+    <div><strong>NexaCore Operations</strong> · Operational Control System</div>
+    <div><a href="mailto:control@nexacore.example.com" style="color:var(--ink-indigo);font-weight:600;">control@nexacore.example.com</a></div>
+  </footer>
+
+  <div id="auditModal" role="dialog" aria-modal="true" aria-labelledby="auditModalTitle" aria-hidden="true" style="position:fixed;inset:0;z-index:200;background:rgba(26,11,84,0.65);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px;">
+    <div style="width:min(100%,480px);border-radius:20px;padding:28px;background:#ffffff;color:var(--ink-indigo);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="auditModalTitle" style="font-size:1.45rem;">Schedule Operational Audit</h2>
+        <button type="button" id="closeAuditModalBtn" class="nx-btn" style="background:var(--bg-card);color:var(--ink-indigo);" aria-label="Close modal">X</button>
+      </div>
+      <p style="color:var(--ink-soft);margin-bottom:18px;">Map your team’s current bottlenecks and deploy NexaCore’s automated early-warning system.</p>
+      <a href="mailto:control@nexacore.example.com" class="nx-btn">Email Operations Architect</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const range = document.getElementById('teamSizeRange');
+      if (range) {
+        range.addEventListener('input', function () {
+          const v = Number(range.value);
+          document.getElementById('teamSizeOut').textContent = v + ' contributors';
+          document.getElementById('reclaimedHoursVal').textContent = (6 + v * 0.35).toFixed(1) + ' hrs/wk';
+        });
+      }
+      const modal = document.getElementById('auditModal');
+      document.getElementById('openAuditModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); }
+      });
+      document.getElementById('closeAuditModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); }
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

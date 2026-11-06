@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX — Bloodhound Technological Tracker &amp; Outlands Legend Dossier</title>
+  <meta name="description" content="Tactical character dossier for Bloodhound, Technological Tracker of the Outlands: Allfather Eye sonar scan, Tracker clue telemetry, and Beast of the Hunt.">
+  <meta property="og:title" content="APEX — Bloodhound Technological Tracker">
+  <meta property="og:description" content="Interactive 3-column tactical legend roster featuring Bloodhound, Mirage, and Wraith ability telemetry.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #f5f3ef;
+      --bg-card: #ffffff;
+      --crimson: #a8281c;
+      --crimson-deep: #851d13;
+      --ink: #171514;
+      --ink-soft: #4a4542;
+      --ink-mute: #6d6662;
+      --accent: #a8281c;
+      --accent-text: #991f14;
+      --font-display: 'Chakra Petch', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-paper); color: var(--ink); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      background: var(--bg-paper);
+      color: var(--ink);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--crimson); color: #ffffff; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: var(--crimson); color: #ffffff;
+      font-weight: 700; border-radius: 6px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input):focus-visible {
+      outline: 3px solid var(--crimson);
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Hero Stage with Center Crimson Vertical Pillar */
+    .bh-stage {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        linear-gradient(90deg, var(--bg-paper) 0%, var(--bg-paper) 34%, var(--crimson) 34%, var(--crimson) 66%, var(--bg-paper) 66%, var(--bg-paper) 100%);
+      padding: clamp(20px, 3vw, 36px) clamp(20px, 4.5vw, 64px) 48px;
+    }
+
+    /* Header */
+    .bh-header {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      align-items: center;
+      gap: 16px;
+    }
+    .bh-logo {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .bh-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 2.2vw, 32px);
+    }
+    .bh-nav a {
+      font-family: var(--font-display);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-decoration: none;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .bh-nav a[aria-current="page"] { color: #1b0705; }
+    .bh-cta-group {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+    }
+    .bh-download-split {
+      display: inline-flex;
+      align-items: stretch;
+      min-height: 44px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(168, 40, 28, 0.25);
+    }
+    .bh-download-split__search {
+      width: 44px;
+      border: 0;
+      background: #1f1716;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .bh-download-split__btn {
+      padding: 0 20px;
+      border: 0;
+      background: var(--crimson);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 3-Column Roster Main */
+    .bh-main {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      align-items: center;
+      gap: clamp(20px, 3vw, 40px);
+      margin: auto 0;
+      padding: 24px 0;
+    }
+
+    /* Left Column */
+    .bh-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .bh-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .bh-role {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--accent-text);
+      margin-bottom: 48px;
+    }
+    .bh-next-card {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid rgba(23, 21, 20, 0.08);
+      box-shadow: 0 18px 38px rgba(23, 21, 20, 0.08);
+      width: min(100%, 280px);
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+    }
+    .bh-next-card img {
+      width: 88px;
+      height: 82px;
+      object-fit: cover;
+      display: block;
+    }
+    .bh-next-card__body {
+      padding: 12px 18px;
+    }
+    .bh-next-card__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--ink-mute);
+      display: block;
+    }
+    .bh-next-card__name {
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+    }
+    .bh-diamonds {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      align-self: flex-end;
+      margin-right: 40px;
+    }
+    .bh-diamond-btn {
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .bh-diamond {
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      border: 1.5px solid var(--crimson);
+      display: inline-block;
+    }
+    .bh-diamond-btn[aria-selected="true"] .bh-diamond {
+      background: var(--crimson);
+    }
+
+    /* Center Character Figure */
+    .bh-center-figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .bh-center-figure img {
+      width: min(100%, 440px);
+      height: auto;
+      max-height: 580px;
+      object-fit: contain;
+      filter: drop-shadow(0 26px 44px rgba(0, 0, 0, 0.38));
+      transition: transform 380ms var(--ease-out);
+    }
+
+    /* Right Lore & Abilities Column */
+    .bh-right {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding-left: clamp(8px, 2vw, 24px);
+    }
+    .bh-lore {
+      font-size: 0.92rem;
+      line-height: 1.72;
+      color: var(--ink-soft);
+      max-width: 46ch;
+    }
+    .bh-abilities {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      list-style: none;
+    }
+    .bh-ability__type {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .bh-ability__name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    /* Section 2: Tactical Allfather Sonar & Cooldown Simulator */
+    .bh-section {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: clamp(56px, 8vw, 92px) clamp(20px, 4.5vw, 64px);
+    }
+    .bh-sim-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      margin-top: 28px;
+    }
+    .bh-panel {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid rgba(23, 21, 20, 0.1);
+      box-shadow: 0 14px 32px rgba(23, 21, 20, 0.05);
+    }
+
+    @media (max-width: 1024px) {
+      .bh-stage {
+        background: var(--bg-paper);
+      }
+      .bh-nav a { color: var(--ink); }
+      .bh-main { grid-template-columns: 1fr; text-align: left; }
+      .bh-center-figure {
+        background: var(--crimson);
+        border-radius: 20px;
+        padding: 24px;
+      }
+      .bh-sim-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .bh-header { grid-template-columns: 1fr auto; }
+      .bh-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to legend dossier</a>
+
+  <div class="bh-stage">
+    <header class="bh-header" role="banner">
+      <a href="#main" class="bh-logo">APEX</a>
+
+      <nav class="bh-nav" aria-label="Outlands Navigation">
+        <a href="#main" aria-current="page">LEGENDS</a>
+        <a href="#sonar-simulator">SEZONS</a>
+        <a href="#sonar-simulator">BATTLE PASS</a>
+        <a href="#sonar-simulator">NEWS</a>
+      </nav>
+
+      <div class="bh-cta-group">
+        <button type="button" class="bh-diamond-btn" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play animations" style="border:1px solid rgba(23,21,20,0.2);border-radius:6px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <div class="bh-download-split">
+          <button type="button" class="bh-download-split__search" id="openLoadoutModalBtn" aria-label="Inspect tactical loadout">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </button>
+          <a href="#sonar-simulator" class="bh-download-split__btn">FREE DOWNLOAD</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="bh-main" aria-live="polite">
+      <section class="bh-left">
+        <h1 class="bh-title" id="legendName">BLOODHOUND</h1>
+        <p class="bh-role" id="legendRole">Technological Tracker</p>
+
+        <button type="button" class="bh-next-card" id="nextLegendCardBtn" aria-label="Switch to next legend in roster">
+          <img id="nextLegendThumb" src="assets/mirage-next-thumb.webp" alt="Mirage Holographic Trickster portrait thumbnail" width="88" height="82">
+          <div class="bh-next-card__body">
+            <span class="bh-next-card__eyebrow">NEXT</span>
+            <span class="bh-next-card__name" id="nextLegendLabel">MIRRAGE</span>
+          </div>
+        </button>
+
+        <div class="bh-diamonds" role="tablist" aria-label="Legend Roster Selector">
+          <button type="button" class="bh-diamond-btn" role="tab" data-legend-idx="0" aria-selected="true" aria-label="Select Bloodhound">
+            <span class="bh-diamond"></span>
+          </button>
+          <button type="button" class="bh-diamond-btn" role="tab" data-legend-idx="1" aria-selected="false" aria-label="Select Mirage">
+            <span class="bh-diamond"></span>
+          </button>
+        </div>
+      </section>
+
+      <figure class="bh-center-figure">
+        <img id="legendHeroImg" src="assets/bloodhound-figure.webp" alt="Bloodhound Technological Tracker in respirator mask with black raven Artur perched on arm" width="440" height="548">
+      </figure>
+
+      <section class="bh-right">
+        <p class="bh-lore" id="legendLore">Bloodhound is known across the Outlands as one of the greatest game hunters the Frontier has ever seen – and that’s about all anyone knows. Their identity is a mystery wrapped in layers of rumors: they are fabulously wealthy, a bloodthirsty murderer, a Goliath whisperer, a former slave, half bat, and a dozen other things depending on who’s doing the whispering.</p>
+
+        <ul class="bh-abilities">
+          <li>
+            <span class="bh-ability__type">TACTICAL ABILITY</span>
+            <strong class="bh-ability__name" id="abTactical">ALLFATHER EYE</strong>
+          </li>
+          <li>
+            <span class="bh-ability__type">PASSIVE ABILITY</span>
+            <strong class="bh-ability__name" id="abPassive">TRACKER</strong>
+          </li>
+          <li>
+            <span class="bh-ability__type">ULTIMATE ABILITY</span>
+            <strong class="bh-ability__name" id="abUltimate">BEAST OF THE HUNT</strong>
+          </li>
+        </ul>
+      </section>
+    
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+  </main>
+  </div>
+
+  <!-- Section 2: Allfather Sonar Pulse & Telemetry Calibration -->
+  <section id="sonar-simulator" class="bh-section">
+    <p style="font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);margin-bottom:8px;">02 / Outlands Recon Telemetry</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:12px;">Allfather Eye Sonar Cone &amp; Clue Decay Analyzer</h2>
+    <p style="color:var(--ink-soft);max-width:65ch;">Calibrate sonar scan range and Beast of the Hunt thermal overdrive duration before dropping into World’s Edge.</p>
+
+    <div class="bh-sim-grid">
+      <div class="bh-panel">
+        <label for="sonarRangeInput" style="display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px;">
+          <span>Allfather Sonar Pulse Cone Radius</span>
+          <output id="sonarRangeOut" class="num" style="font-family:var(--font-mono);color:var(--accent-text);">75 meters</output>
+        </label>
+        <input type="range" id="sonarRangeInput" min="35" max="125" value="75" style="width:100%;min-height:44px;accent-color:var(--crimson);">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;" class="num">
+          <div style="padding:14px;border-radius:10px;background:var(--bg-paper);">
+            <div style="font-size:0.76rem;color:var(--ink-mute);">Hostile Reveal</div>
+            <div style="font-size:1.35rem;font-weight:800;color:var(--accent-text);" id="revealDurationVal">4.0 sec</div>
+          </div>
+          <div style="padding:14px;border-radius:10px;background:var(--bg-paper);">
+            <div style="font-size:0.76rem;color:var(--ink-mute);">Clue Retention</div>
+            <div style="font-size:1.35rem;font-weight:800;" data-counter="90" data-suffix="s">90s</div>
+          </div>
+          <div style="padding:14px;border-radius:10px;background:var(--bg-paper);">
+            <div style="font-size:0.76rem;color:var(--ink-mute);">Hunt Speed Boost</div>
+            <div style="font-size:1.35rem;font-weight:800;">+30%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bh-panel" style="display:flex;align-items:center;gap:20px;">
+        <img src="assets/studio-bloodhound-portrait.webp" alt="Studio portrait of Bloodhound and Artur raven" width="150" height="180" style="border-radius:12px;object-fit:cover;" loading="lazy">
+        <div>
+          <h3 style="font-family:var(--font-display);font-size:1.35rem;margin-bottom:8px;">Talon &amp; Artur Recon Pack</h3>
+          <p style="color:var(--ink-soft);font-size:0.92rem;margin-bottom:16px;">Unlock the Heirloom Raven’s Bite axe and Outlands survival telemetry HUD.</p>
+          <a href="mailto:outlands@apex.example.com?subject=Legend%20Dossier" class="bh-download-split__btn" style="min-height:44px;border-radius:6px;">Download Recon Pack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(23,21,20,0.12);padding:32px clamp(20px,4.5vw,64px);max-width:1220px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--ink-soft);font-size:0.9rem;" role="contentinfo">
+    <div><strong>APEX OUTLANDS ARCHIVE</strong> · Talos · World’s Edge</div>
+    <div><a href="mailto:outlands@apex.example.com" style="color:var(--accent-text);font-weight:600;">outlands@apex.example.com</a></div>
+  </footer>
+
+  <div id="loadoutModal" role="dialog" aria-modal="true" aria-labelledby="loadoutModalTitle" aria-hidden="true" style="position:fixed;inset:0;z-index:200;background:rgba(20,16,15,0.8);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px;">
+    <div style="width:min(100%,520px);border-radius:16px;padding:28px;background:#ffffff;color:var(--ink);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="loadoutModalTitle" style="font-family:var(--font-display);font-size:1.5rem;">Outlands Tracker Telemetry</h2>
+        <button type="button" id="closeLoadoutModalBtn" style="width:44px;height:44px;border:1px solid rgba(0,0,0,0.2);background:#f5f3ef;border-radius:8px;cursor:pointer;" aria-label="Close modal">X</button>
+      </div>
+      <p style="color:var(--ink-soft);margin-bottom:18px;">Passive Tracker highlights footsteps, weapon fire residue, and ordinance shrapnel left within the last 90 seconds.</p>
+      <a href="mailto:outlands@apex.example.com" class="bh-download-split__btn" style="min-height:44px;border-radius:6px;">Request Squad Briefing</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const legends = [
+        {
+          name: 'BLOODHOUND',
+          role: 'Technological Tracker',
+          nextLabel: 'MIRRAGE',
+          img: 'assets/bloodhound-figure.webp',
+          lore: 'Bloodhound is known across the Outlands as one of the greatest game hunters the Frontier has ever seen – and that’s about all anyone knows. Their identity is a mystery wrapped in layers of rumors: they are fabulously wealthy, a bloodthirsty murderer, a Goliath whisperer, a former slave, half bat, and a dozen other things depending on who’s doing the whispering.',
+          tactical: 'ALLFATHER EYE',
+          passive: 'TRACKER',
+          ultimate: 'BEAST OF THE HUNT'
+        },
+        {
+          name: 'MIRRAGE',
+          role: 'Holographic Trickster',
+          nextLabel: 'BLOODHOUND',
+          img: 'assets/studio-bloodhound-portrait.webp',
+          lore: 'Elliott Witt is the kind of outlaw who likes to stand out. Armed with custom holo-emitter rigs developed with his mother, he deploys lifelike decoys across the Outlands arena to baffle sharpshooters and flank squads.',
+          tactical: 'PSYCHE OUT',
+          passive: 'NOW YOU SEE ME',
+          ultimate: 'LIFE OF THE PARTY'
+        }
+      ];
+      let cur = 0;
+      function setLegend(i) {
+        cur = (i + legends.length) % legends.length;
+        const l = legends[cur];
+        document.getElementById('legendName').textContent = l.name;
+        document.getElementById('legendRole').textContent = l.role;
+        document.getElementById('nextLegendLabel').textContent = l.nextLabel;
+        document.getElementById('legendHeroImg').src = l.img;
+        document.getElementById('legendLore').textContent = l.lore;
+        document.getElementById('abTactical').textContent = l.tactical;
+        document.getElementById('abPassive').textContent = l.passive;
+        document.getElementById('abUltimate').textContent = l.ultimate;
+        document.querySelectorAll('[data-legend-idx]').forEach(function (b, idx) {
+          b.setAttribute('aria-selected', String(idx === cur));
+        });
+      }
+      document.getElementById('nextLegendCardBtn')?.addEventListener('click', function () { setLegend(cur + 1); });
+      document.querySelectorAll('[data-legend-idx]').forEach(function (b) {
+        b.addEventListener('click', function () { setLegend(Number(b.getAttribute('data-legend-idx')) || 0); });
+      });
+
+      const rangeIn = document.getElementById('sonarRangeInput');
+      const rangeOut = document.getElementById('sonarRangeOut');
+      const revVal = document.getElementById('revealDurationVal');
+      if (rangeIn) {
+        rangeIn.addEventListener('input', function () {
+          const v = Number(rangeIn.value);
+          if (rangeOut) rangeOut.textContent = v + ' meters';
+          if (revVal) revVal.textContent = (2.2 + v * 0.024).toFixed(1) + ' sec';
+        });
+      }
+
+      const modal = document.getElementById('loadoutModal');
+      document.getElementById('openLoadoutModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); }
+      });
+      document.getElementById('closeLoadoutModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); }
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "id": "t260",
+  "slug": "bloodhound-outlands-tracker",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:48:15.311Z",
+  "demo": "/demos/bloodhound-outlands-tracker/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "86d8694e92c9",
+  "sha256": "86d8694e92c9345c8a6019cde6eac389bfb9439967a9efef9eeb005b15141211",
+  "demoHtmlSha256": "58c88e8806e56575d709fa4bd4aae5dd7cc8c5c0407305b314f30f9070a71dbd",
+  "demoSha256": "3d24c954124ba10def4f0b057456b2ba19c338362eb560eaa65f4d2b774f2e87",
+  "bytes": 439830,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 807
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloodhound-outlands-tracker-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloodhound-outlands-tracker-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloodhound-outlands-tracker-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloodhound-outlands-tracker-return.jpg"
+  ]
+}

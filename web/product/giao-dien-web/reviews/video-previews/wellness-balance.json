@@ -1,0 +1,34 @@
+{
+  "id": "t265",
+  "slug": "wellness-balance",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:49:57.177Z",
+  "demo": "/demos/wellness-balance/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a62b48963713",
+  "sha256": "a62b4896371356c771486a9d8f2e372f2d44920a34bb6ca2c4caf568fad170ae",
+  "demoHtmlSha256": "b660a5b5ae1f09c35051304388ce318e34af17963667b88461d1bdb514bfab38",
+  "demoSha256": "9a2bbc0d7497c5a34a075f59b77aabe7155bb18f1a6249de5b1c0a4c51fd6790",
+  "bytes": 574140,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 708
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-balance-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-balance-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-balance-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-balance-return.jpg"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "t266",
+  "slug": "axion-about",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:50:17.584Z",
+  "demo": "/demos/axion-about/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "95be10b2d962",
+  "sha256": "95be10b2d962e34a286cb075ff610279d2924b8c3388682e8236b297790d624e",
+  "demoHtmlSha256": "3313fc255dc7cf4be6dc338774f57bf9c2c7bc8a0498afe021bc08051bd7feee",
+  "demoSha256": "de58bdd6600d3962f7d47b2a00fc36f8d9f3494cb448b1920651c9251c7d34a5",
+  "bytes": 466293,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1516
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axion-about-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axion-about-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axion-about-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axion-about-return.jpg"
+  ]
+}

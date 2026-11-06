@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asme — A New Way to Think and Create with Computers · No-Code AI App Builder</title>
+  <meta name="description" content="Build a no-code AI app in minutes. Asme transforms ideas into reality without coding, designing, or technical setup. Simply speak your vision and watch it take shape.">
+  <meta property="og:title" content="Asme — Build a No-Code AI App in Minutes">
+  <meta property="og:description" content="Asme transforms ideas into reality without coding, designing, or technical setup.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-black: #000000;
+      --ink: #ffffff;
+      --ink-soft: rgba(255, 255, 255, 0.78);
+      --ink-mute: rgba(255, 255, 255, 0.56);
+      --accent: #ffffff;
+      --accent-text: #e2e8f0;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-black); color: var(--ink); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      background: var(--bg-black);
+      color: var(--ink);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: #ffffff; color: #000000; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: #ffffff; color: #000000;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input):focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Liquid Glass Utility */
+    .liquid-glass {
+      position: relative;
+      background: rgba(255, 255, 255, 0.035);
+      backdrop-filter: blur(12px);
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.16), 0 18px 42px rgba(0, 0, 0, 0.48);
+    }
+
+    /* Hero Stage */
+    .as-hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      padding-bottom: 80px;
+    }
+    .as-bg-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .as-bg-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0) brightness(0.55);
+    }
+    .as-bg-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 45%, #000000 100%);
+    }
+
+    /* Floating Liquid-Glass Navbar */
+    .as-nav-wrap {
+      position: relative;
+      z-index: 20;
+      padding: 20px 16px 0;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .as-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      gap: 16px;
+    }
+    .as-logo {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.9rem;
+      color: #ffffff;
+      text-decoration: none;
+      line-height: 1;
+    }
+    .as-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .as-links a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .as-links a:hover { color: #ffffff; }
+    .as-pill-btn {
+      min-height: 44px;
+      padding: 0 20px;
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    /* Center Hero Copy */
+    .as-center {
+      position: relative;
+      z-index: 10;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: clamp(64px, 9vw, 112px) 20px 56px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .as-eyebrow {
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+    .as-headline {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(2.8rem, 6.4vw, 5.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 24px;
+      text-wrap: balance;
+    }
+    .as-desc {
+      max-width: 56ch;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+
+    /* Interactive Waitlist Morph Control */
+    .as-waitlist-slot {
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .as-cta-trigger {
+      min-height: 54px;
+      padding: 0 36px;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    .as-waitlist-form {
+      display: none;
+      align-items: center;
+      width: min(100%, 420px);
+      padding: 6px 6px 6px 20px;
+      gap: 10px;
+    }
+    .as-waitlist-form.is-open {
+      display: flex;
+    }
+    .as-waitlist-input {
+      flex: 1;
+      background: transparent;
+      border: 0;
+      color: #ffffff;
+      font-size: 0.94rem;
+      min-height: 44px;
+      outline: none;
+    }
+    .as-waitlist-submit {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 0;
+      background: #ffffff;
+      color: #000000;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* Preview Video Frame */
+    .as-preview-shell {
+      position: relative;
+      z-index: 10;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .as-preview-frame {
+      border-radius: 26px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.75);
+    }
+    .as-preview-inner {
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: #0d0f14;
+      position: relative;
+    }
+    .as-preview-inner video, .as-preview-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Section 2: Voice-to-App Architecture Synthesizer */
+    .as-section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: clamp(56px, 8vw, 96px) 20px;
+    }
+    .as-prompt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+    .as-card {
+      border-radius: 22px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .as-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .as-chip {
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .as-chip[aria-pressed="true"] {
+      background: #ffffff;
+      color: #000000;
+      font-weight: 600;
+    }
+
+    @media (max-width: 820px) {
+      .as-links { display: none; }
+      .as-prompt-grid { grid-template-columns: 1fr; }
+    }
+      @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Asme AI builder</a>
+
+  <div class="as-hero">
+    <div class="as-bg-media" aria-hidden="true">
+      <video autoplay loop muted playsinline poster="assets/asme-bg-poster.webp">
+        <source src="https://stream.mux.com/kimF2ha9zLrX64H00UgLGPflCzNtl1T0215MlAmeOztv8.m3u8" type="application/x-mpegURL">
+      </video>
+    </div>
+
+    <header class="as-nav-wrap" role="banner">
+      <div class="as-navbar liquid-glass">
+        <a href="#main" class="as-logo">Asme</a>
+        <nav class="as-links" aria-label="Asme Navigation">
+          <a href="#blueprint-synth">Features</a>
+          <a href="#blueprint-synth">Manifesto</a>
+          <a href="#blueprint-synth">Blueprint</a>
+          <a href="#blueprint-synth">Pricing</a>
+          <a href="mailto:founders@asme.example.com">Connect</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" class="as-pill-btn liquid-glass" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play motion">Motion</button>
+          <button type="button" class="as-pill-btn liquid-glass" id="navWaitlistBtn">Join waitlist</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="as-center">
+        <p class="as-eyebrow">BUILD A NO-CODE AI APP IN MINUTES</p>
+        <h1 class="as-headline">A new way to think and create with computers</h1>
+        <p class="as-desc">Asme transforms ideas into reality without coding, designing, or technical setup. Simply speak your vision and watch it take shape</p>
+
+        <div class="as-waitlist-slot">
+          <button type="button" class="as-cta-trigger liquid-glass" id="heroWaitlistTrigger">Join waitlist</button>
+
+          <form class="as-waitlist-form liquid-glass" id="waitlistForm" onsubmit="return false;">
+            <label for="waitlistEmailInput" class="skip-link">Email address (Demo only)</label>
+            <input type="email" id="waitlistEmailInput" class="as-waitlist-input" placeholder="name@email.com" aria-label="Enter email for Asme waitlist (Demo only)">
+            <button type="button" class="as-waitlist-submit" id="submitWaitlistBtn" aria-label="Confirm waitlist reservation">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+        <p id="waitlistFeedback" style="font-size:0.84rem;color:var(--accent-text);margin-top:10px;min-height:22px;" aria-live="polite"></p>
+      </section>
+
+      <section class="as-preview-shell" aria-label="Asme Live Product Workspace Preview">
+        <div class="as-preview-frame">
+          <div class="as-preview-inner">
+            <video autoplay loop muted playsinline poster="assets/asme-preview-poster.webp">
+              <source src="https://stream.mux.com/iY611PYuZ02AKpIzYB4Q1BMpl7W2O3UwqjQm9p01xlmVg.m3u8" type="application/x-mpegURL">
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Voice-to-App Blueprint Synthesizer -->
+      <section id="blueprint-synth" class="as-section">
+        <p class="as-eyebrow">02 / INSTANT ARCHITECTURE SYNTHESIS</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,4.2vw,3.4rem);font-weight:400;margin-bottom:12px;">Speak Your App Idea — Inspect the Generated Stack</h2>
+        <div class="as-prompt-grid">
+          <div class="as-card">
+            <h3 style="font-size:1.15rem;margin-bottom:8px;">Select Voice Prompt Preset</h3>
+            <div class="as-chip-row" role="group" aria-label="App Idea Presets">
+              <button type="button" class="as-chip" data-app-preset="crm" aria-pressed="true">AI Sales Copilot</button>
+              <button type="button" class="as-chip" data-app-preset="studio" aria-pressed="false">Podcast Clip Studio</button>
+              <button type="button" class="as-chip" data-app-preset="finance" aria-pressed="false">Treasury Forecasting</button>
+            </div>
+            <p id="presetPromptText" style="color:var(--ink-soft);font-size:0.94rem;">“Build an autonomous B2B pipeline workspace that summarizes discovery calls and drafts follow-up proposals.”</p>
+          </div>
+
+          <div class="as-card num">
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--ink-mute);margin-bottom:10px;">COMPILED BLUEPRINT TELEMETRY</div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+              <div>
+                <div style="font-size:0.78rem;color:var(--ink-soft);">Build Time</div>
+                <div style="font-size:1.5rem;font-weight:700;" id="buildTimeVal">42 sec</div>
+              </div>
+              <div>
+                <div style="font-size:0.78rem;color:var(--ink-soft);">UI Views</div>
+                <div style="font-size:1.5rem;font-weight:700;" id="viewsCountVal">6 screens</div>
+              </div>
+              <div>
+                <div style="font-size:0.78rem;color:var(--ink-soft);">Waitlist Queue</div>
+                <div style="font-size:1.5rem;font-weight:700;" data-counter="14820">14820</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+  </main>
+
+    <footer style="max-width:1080px;margin:0 auto;padding:32px 20px;border-top:1px solid rgba(255,255,255,0.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--ink-soft);font-size:0.88rem;" role="contentinfo">
+      <div><strong>Asme Computing Inc.</strong> · San Francisco</div>
+      <div><a href="mailto:founders@asme.example.com" style="color:#ffffff;">founders@asme.example.com</a></div>
+    </footer>
+  </div>
+
+  <div id="asmeModal" role="dialog" aria-modal="true" aria-labelledby="asmeModalTitle" aria-hidden="true" style="position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.82);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:20px;">
+    <div style="width:min(100%,480px);border-radius:24px;padding:28px;background:#111318;border:1px solid rgba(255,255,255,0.25);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="asmeModalTitle" style="font-family:var(--font-display);font-size:1.8rem;font-weight:400;">Early Access Cohort</h2>
+        <button type="button" id="closeAsmeModalBtn" class="as-pill-btn liquid-glass" style="padding:0 14px;" aria-label="Close modal">X</button>
+      </div>
+      <p style="color:var(--ink-soft);margin-bottom:18px;">Demo preview mode: click below to reserve your founder onboarding invite directly via email.</p>
+      <a href="mailto:founders@asme.example.com?subject=Asme%20Waitlist%20Access" class="as-pill-btn liquid-glass">Request Priority Invite</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const trigger = document.getElementById('heroWaitlistTrigger');
+      const navBtn = document.getElementById('navWaitlistBtn');
+      const form = document.getElementById('waitlistForm');
+      const input = document.getElementById('waitlistEmailInput');
+      const submitBtn = document.getElementById('submitWaitlistBtn');
+      const feedback = document.getElementById('waitlistFeedback');
+
+      const placeholders = ['name@email.com', 'creator@domain.com', 'founder@company.io', 'builder@startup.ai'];
+      let pIdx = 0;
+
+      function openWaitlistInput() {
+        if (trigger) trigger.style.display = 'none';
+        if (form) form.classList.add('is-open');
+        if (input) input.focus();
+      }
+
+      if (trigger) trigger.addEventListener('click', openWaitlistInput);
+      if (navBtn) navBtn.addEventListener('click', function () {
+        openWaitlistInput();
+        document.getElementById('asmeModal').style.display = 'flex';
+        document.getElementById('asmeModal').setAttribute('aria-hidden', 'false');
+      });
+      document.getElementById('closeAsmeModalBtn')?.addEventListener('click', function () {
+        document.getElementById('asmeModal').style.display = 'none';
+        document.getElementById('asmeModal').setAttribute('aria-hidden', 'true');
+      });
+
+      if (submitBtn) {
+        submitBtn.addEventListener('click', function () {
+          const val = input && input.value.trim() ? input.value.trim() : placeholders[pIdx % placeholders.length];
+          if (feedback) feedback.textContent = 'Demo reservation noted for ' + val + ' — Priority Cohort #14,821';
+        });
+      }
+
+      // Preset switcher
+      const presets = {
+        crm: { text: '“Build an autonomous B2B pipeline workspace that summarizes discovery calls and drafts follow-up proposals.”', time: '42 sec', views: '6 screens' },
+        studio: { text: '“Create an AI audio clipper that detects viral moments, generates captions, and exports 9:16 reels.”', time: '38 sec', views: '5 screens' },
+        finance: { text: '“Generate a multi-currency runway dashboard with live burn-rate scenario sliders and investor PDF export.”', time: '51 sec', views: '8 screens' }
+      };
+      document.querySelectorAll('[data-app-preset]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const k = btn.getAttribute('data-app-preset');
+          const d = presets[k];
+          if (!d) return;
+          document.querySelectorAll('[data-app-preset]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b === btn));
+          });
+          document.getElementById('presetPromptText').textContent = d.text;
+          document.getElementById('buildTimeVal').textContent = d.time;
+          document.getElementById('viewsCountVal').textContent = d.views;
+        });
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axion Studio — Strategy-Led Creatives, Delivering Results in Digital and Beyond</title>
+  <meta name="description" content="At Axion, we turn bold ideas into digital experiences that connect, inspire, and perform. Strategy-led brand identity, web design, and creative campaigns.">
+  <meta property="og:title" content="Axion Studio — Strategy-Led Creatives">
+  <meta property="og:description" content="Driven by strategy, powered by creativity — we craft what's next.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-white: #ffffff;
+      --bg-pill: #f3f3f3;
+      --ink: #111111;
+      --ink-body: #4a4a4a;
+      --ink-mute: #6b6b6b;
+      --orange: #f26522;
+      --accent: #f26522;
+      --accent-text: #c2410c;
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-white); color: var(--ink); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      background: var(--bg-white);
+      color: var(--ink);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--orange); color: #ffffff; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: var(--ink); color: #ffffff;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input):focus-visible {
+      outline: 3px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Top Header */
+    .ax-header {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px clamp(24px, 5vw, 80px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    }
+    .ax-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .ax-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .ax-nav a {
+      color: var(--ink-body);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .ax-nav a:hover { color: var(--ink); }
+
+    /* Main Editorial Container */
+    .ax-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: clamp(56px, 7vw, 96px) clamp(24px, 5vw, 80px);
+    }
+    .ax-badge-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .ax-badge-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--orange);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ax-badge-label {
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .ax-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.35rem, 5vw, 4.25rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 980px;
+      margin-bottom: clamp(48px, 6vw, 72px);
+      text-wrap: balance;
+    }
+
+    /* 3-Column Asymmetrical Grid (26% | 1fr | 48%) */
+    .ax-grid {
+      display: grid;
+      grid-template-columns: 26% 1fr 48%;
+      gap: 40px;
+      align-items: start;
+    }
+    .ax-photo-left {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 18px;
+    }
+    .ax-caption {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--ink-mute);
+    }
+    .ax-caption strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .ax-photo-right {
+      width: 100%;
+      height: 360px;
+      border-radius: 20px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 32px;
+    }
+    .ax-body-copy p {
+      font-size: 1.06rem;
+      line-height: 1.65;
+      color: var(--ink-body);
+      margin-bottom: 20px;
+    }
+
+    /* Pill CTA Button with Orange Square Icon */
+    .ax-cta-pill {
+      margin-top: 12px;
+      min-height: 48px;
+      padding: 10px 14px 10px 22px;
+      border-radius: 999px;
+      background: var(--bg-pill);
+      border: 1px solid rgba(17, 17, 17, 0.08);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .ax-cta-pill:hover { background: #e8e8e8; }
+    .ax-cta-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--orange);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Section 2: Interactive Capability & Case Study Index */
+    .ax-capabilities {
+      margin-top: 80px;
+      padding-top: 56px;
+      border-top: 1px solid rgba(17, 17, 17, 0.1);
+    }
+    .ax-cap-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .ax-cap-tab {
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(17, 17, 17, 0.15);
+      background: #ffffff;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .ax-cap-tab[aria-selected="true"] {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    @media (max-width: 1024px) {
+      .ax-grid { grid-template-columns: 1fr 1.3fr; }
+      .ax-spacer { display: none; }
+    }
+    @media (max-width: 760px) {
+      .ax-grid { grid-template-columns: 1fr; }
+      .ax-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Axion Studio introduction</a>
+
+  <header class="ax-header" role="banner">
+    <a href="#main" class="ax-logo">Axion®</a>
+    <nav class="ax-nav" aria-label="Axion Studio Navigation">
+      <a href="#main">About</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="mailto:hello@axion.example.com">Contact</a>
+      <button type="button" class="ax-cap-tab" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play motion">Motion</button>
+    </nav>
+  </header>
+
+  <main id="main" class="ax-container">
+    <div class="ax-badge-row">
+      <span class="ax-badge-num num">1</span>
+      <span class="ax-badge-label">Introducing Axion</span>
+    </div>
+
+    <h1 class="ax-headline">Strategy-led creatives, delivering results in digital and beyond.</h1>
+
+    <div class="ax-grid">
+      <!-- Column 1 (26%) -->
+      <div>
+        <img class="ax-photo-left" src="assets/axion-vr-portrait.webp" alt="Creative technologist wearing spatial VR headset in Axion studio" width="380" height="300">
+        <p class="ax-caption"><strong>Driven by strategy</strong>, powered by creativity — we craft what's next.</p>
+      </div>
+
+      <!-- Column 2 (Whitespace spacer on desktop) -->
+      <div class="ax-spacer" aria-hidden="true"></div>
+
+      <!-- Column 3 (48%) -->
+      <div>
+        <img class="ax-photo-right" src="assets/axion-studio-collab.webp" alt="Two Axion creative directors reviewing brand systems on laptop" width="680" height="360">
+        <div class="ax-body-copy">
+          <p>At Axion, we turn bold ideas into digital experiences that connect, inspire, and perform. Our team blends strategic thinking with creative craftsmanship to help brands grow and stand out in an ever-changing world.</p>
+          <p>From brand identity and web design to campaigns and content, we approach every project with curiosity, clarity, and purpose — creating work that not only looks great, but drives real results.</p>
+        </div>
+        <button type="button" class="ax-cta-pill" id="openAxionModalBtn">
+          <span>More about us</span>
+          <span class="ax-cta-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 2: Interactive Capabilities & Outcomes Matrix -->
+    <section id="capabilities" class="ax-capabilities">
+      <div class="ax-badge-row">
+        <span class="ax-badge-num num">2</span>
+        <span class="ax-badge-label">Practice Disciplines</span>
+      </div>
+      <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:500;letter-spacing:-0.02em;">Explore Our Strategic Deliverables</h2>
+      <div class="ax-cap-tabs" role="tablist" aria-label="Studio Disciplines">
+        <button type="button" class="ax-cap-tab" role="tab" data-cap="brand" aria-selected="true">01 / Brand Architecture</button>
+        <button type="button" class="ax-cap-tab" role="tab" data-cap="digital" aria-selected="false">02 / Digital Flagships</button>
+        <button type="button" class="ax-cap-tab" role="tab" data-cap="campaign" aria-selected="false">03 / Spatial &amp; Motion Campaigns</button>
+      </div>
+      <div style="padding:28px;border-radius:20px;background:#f7f7f7;display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;align-items:center;">
+        <div>
+          <h3 id="capTitle" style="font-size:1.35rem;margin-bottom:8px;">Brand Positioning &amp; Visual Identity Systems</h3>
+          <p id="capDesc" style="color:var(--ink-body);">Comprehensive verbal and visual design systems engineered for category leadership, multi-market scalability, and unmistakable shelf presence.</p>
+        </div>
+        <div class="num" style="display:flex;gap:28px;justify-content:flex-end;">
+          <div>
+            <div style="font-size:0.78rem;color:var(--ink-mute);">Avg Conversion Lift</div>
+            <div style="font-size:2rem;font-weight:700;color:var(--accent-text);" id="capMetric">+42%</div>
+          </div>
+          <div>
+            <div style="font-size:0.78rem;color:var(--ink-mute);">Global Awards</div>
+            <div style="font-size:2rem;font-weight:700;" data-counter="38">38</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+    <section aria-label="Commercial Deployment & Customization Matrix" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Commercial Deployment & Customization Matrix</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Ready for instant static hosting with tokenized CSS custom properties, semantic markup, and comprehensive 10-step buyer documentation.</p>
+    </section>
+    <section aria-label="Interactive Telemetry & State Verification" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Interactive Telemetry & State Verification</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Deterministic state transitions powered by finite requestAnimationFrame loops and IntersectionObserver viewport triggers.</p>
+    </section>
+  </main>
+
+  <footer style="max-width:1440px;margin:0 auto;padding:32px clamp(24px,5vw,80px);border-top:1px solid rgba(17,17,17,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--ink-mute);font-size:0.9rem;" role="contentinfo">
+    <div><strong>Axion Creative Studio</strong> · London · Amsterdam · New York</div>
+    <div><a href="mailto:hello@axion.example.com" style="color:var(--ink);font-weight:600;">hello@axion.example.com</a></div>
+  </footer>
+
+  <div id="axionModal" role="dialog" aria-modal="true" aria-labelledby="axModalTitle" aria-hidden="true" style="position:fixed;inset:0;z-index:200;background:rgba(17,17,17,0.65);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:20px;">
+    <div style="width:min(100%,480px);border-radius:20px;padding:28px;background:#ffffff;color:var(--ink);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="axModalTitle" style="font-size:1.45rem;">Commission Axion Studio</h2>
+        <button type="button" id="closeAxionModalBtn" class="ax-cap-tab" aria-label="Close modal">X</button>
+      </div>
+      <p style="color:var(--ink-body);margin-bottom:18px;">Share your Q3/Q4 brand transformation or digital flagship brief directly with our strategy partners.</p>
+      <a href="mailto:hello@axion.example.com?subject=Axion%20Project%20Brief" class="ax-cta-pill">Send Project Brief</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const caps = {
+        brand: { title: 'Brand Positioning & Visual Identity Systems', desc: 'Comprehensive verbal and visual design systems engineered for category leadership, multi-market scalability, and unmistakable presence.', metric: '+42%' },
+        digital: { title: 'High-Craft Web Platforms & Design Systems', desc: 'Interactive product flagships, tokenized component libraries, and conversion-focused digital Flagships.', metric: '+64%' },
+        campaign: { title: '3D Motion Direction & Spatial Launches', desc: 'Real-time WebGL product reveals, cinema-grade launch films, and immersive experiential campaigns.', metric: '3.8x ROI' }
+      };
+      document.querySelectorAll('[data-cap]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const k = btn.getAttribute('data-cap');
+          const d = caps[k];
+          if (!d) return;
+          document.querySelectorAll('[data-cap]').forEach(function (b) {
+            b.setAttribute('aria-selected', String(b === btn));
+          });
+          document.getElementById('capTitle').textContent = d.title;
+          document.getElementById('capDesc').textContent = d.desc;
+          document.getElementById('capMetric').textContent = d.metric;
+        });
+      });
+
+      const modal = document.getElementById('axionModal');
+      document.getElementById('openAxionModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); }
+      });
+      document.getElementById('closeAxionModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); }
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

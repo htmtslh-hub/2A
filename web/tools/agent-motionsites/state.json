@@ -2,6 +2,7 @@
   "lastRunDate": "2026-11-06",
   "todayCopiedCount": 6,
   "processedSlugs": [
+    "404-planet",
     "_design",
     "adoratorio-summer",
     "aeris",
@@ -24,6 +25,7 @@
     "atlas",
     "atrium-mtl",
     "auralis",
+    "axion-about",
     "backbest-800",
     "bame-esports",
     "beetbuh",
@@ -82,11 +84,13 @@
     "geospace-canvas",
     "glow-features",
     "gridwork-co",
+    "guardnet-benefits",
     "halden",
     "halo-use-case",
     "haul",
     "health-portal",
     "helios-investments",
+    "hello-illustrator-folio",
     "impact-ventures",
     "industrix-engineering",
     "innovation",
@@ -101,9 +105,11 @@
     "koru-tech-footer",
     "kresna-footer",
     "laila",
+    "laila-sakura-creator",
     "lauberhorn-ridge",
     "launch-video",
     "lawyer-justicia",
+    "layla-astrology-wiki",
     "leaflit",
     "lingoglass",
     "looo-ai-magic",
@@ -135,12 +141,14 @@
     "network-hero",
     "neuralkinetics",
     "neuralyn",
+    "nexacore-control",
     "nexacore-results",
     "nexlayer",
     "nexora-automation",
     "nextsus-gamerlix",
     "nike-hover",
     "nimbusos-footer",
+    "no-code-waitlist",
     "nourish-bowl",
     "nova-glass",
     "novatrend",
@@ -164,6 +172,7 @@
     "professional-graphic",
     "prosthetics-hero",
     "puro-amor",
+    "quickcam-ui-ux",
     "radial-diagram",
     "rayhan-aditya",
     "razer-mamba-pro",
@@ -173,6 +182,8 @@
     "riverine-ai",
     "rivr",
     "rocket-cta",
+    "rocket-pricing",
+    "rome-explorer",
     "saas-software",
     "securify",
     "sellix",
@@ -226,6 +237,7 @@
     "watchroom",
     "websi-atelier",
     "wellbeing-os",
+    "wellness-balance",
     "wellness-companion",
     "yellow-beast"
   ],
@@ -348,7 +360,14 @@
     "vaultshield",
     "visual-hero",
     "koru-tech-footer",
-    "feathers-atlas"
+    "feathers-atlas",
+    "no-code-waitlist",
+    "rocket-pricing",
+    "nexacore-control",
+    "wellness-balance",
+    "404-planet",
+    "axion-about",
+    "guardnet-benefits"
   ],
   "history": [
     {
@@ -700,6 +719,33 @@
         "koru-tech-footer": "premium",
         "feathers-atlas": "premium"
       }
+    },
+    {
+      "date": "2026-11-06",
+      "built": [
+        "no-code-waitlist",
+        "rocket-pricing",
+        "nexacore-control",
+        "wellness-balance",
+        "axion-about",
+        "guardnet-benefits"
+      ],
+      "catalogIds": [
+        "t262",
+        "t263",
+        "t264",
+        "t265",
+        "t266",
+        "t267"
+      ],
+      "tiers": {
+        "no-code-waitlist": "free",
+        "rocket-pricing": "premium",
+        "nexacore-control": "premium",
+        "wellness-balance": "free",
+        "axion-about": "premium",
+        "guardnet-benefits": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -770,15 +816,21 @@
     "bc0dee85e1848eacd91af9b38024b8853e27b23572e86326ccab396d75b7b5ff",
     "772b97713db0f210823dfbfc4d3f17f879c89887eac3c7f21117064d8478beaa",
     "366be196d0ee377619833f80de4e6ac5241cb9a42b91b542f24afa9e2766a03b",
-    "c2cffceddfea1ab1b9a79998a90c1bbdbc231b1161b12158647a0ad6669bfaf4"
+    "c2cffceddfea1ab1b9a79998a90c1bbdbc231b1161b12158647a0ad6669bfaf4",
+    "601cc396470b69406eaa041848e3ec2eebf0bacb86394ff2f1261d7f7d038a63",
+    "37b8528fae4ef43dfff9b43c5a8455a296de70a17079c99feb3de13fdf7c9451",
+    "e0b3a480cf94cf7524fece5ca08f5449492f1cfb393b35734959cbf644d6dae7",
+    "6d5127d809b35cf3d08bba6e739a13327955d222045f809667854c37b6c444a6",
+    "faa8f755249b12391353f9068276f56df47a3768022d594a3a8e5351682a8556",
+    "dd97cc7592f91205f3dd467d6e484480006656f1a7b10a54571912e32a906285"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "innovation-lab",
-    "nimbusos-footer",
-    "vaultshield",
-    "visual-hero",
-    "koru-tech-footer",
-    "feathers-atlas"
+    "no-code-waitlist",
+    "rocket-pricing",
+    "nexacore-control",
+    "wellness-balance",
+    "axion-about",
+    "guardnet-benefits"
   ]
 }

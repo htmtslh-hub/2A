@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foxico — Indonesia Volcanic Archipelago &amp; Southeast Asia Expeditions</title>
+  <meta name="description" content="Explore Indonesia's volcanic peaks, Bali coastal arches, Thailand water temples, and Kerala backwaters with Foxico curated archipelago expeditions.">
+  <meta property="og:title" content="Foxico — Indonesia Archipelago Expeditions">
+  <meta property="og:description" content="Cinematic archipelago travel platform featuring Mount Agung twilight treks, Broken Beach Bali, and Buddha Temple Thailand.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-abyss: #0c1726;
+      --bg-panel: #122238;
+      --ink: #f8fafc;
+      --ink-soft: #cbd5e1;
+      --ink-mute: #94a3b8;
+      --accent: #275399;
+      --accent-bright: #3b82f6;
+      --accent-text: #7dd3fc;
+      --fox-orange: #f59e0b;
+      --font-display: 'Outfit', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --r-card: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-abyss); color: var(--ink); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      background: var(--bg-abyss);
+      color: var(--ink);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent-bright); color: #ffffff; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: var(--fox-orange); color: #0c1726;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input, select):focus-visible {
+      outline: 3px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Hero Stage */
+    .fx-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(20px, 3vw, 36px) clamp(20px, 4.5vw, 64px) 38px;
+      background-image:
+        linear-gradient(90deg, rgba(10, 20, 35, 0.84) 0%, rgba(12, 24, 42, 0.46) 52%, rgba(10, 20, 35, 0.68) 100%),
+        linear-gradient(180deg, rgba(14, 27, 48, 0.45) 0%, rgba(10, 20, 35, 0.25) 55%, rgba(8, 17, 28, 0.92) 100%),
+        url('assets/indonesia-volcano-bg.webp');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Header */
+    .fx-header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .fx-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .fx-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.8vw, 38px);
+    }
+    .fx-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .fx-nav a:hover { color: #ffffff; }
+    .fx-user-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .fx-icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.92);
+      color: #0f172a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .fx-greeting {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Main Hero Content Grid */
+    .fx-main-grid {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 44px 1.05fr 1.25fr;
+      align-items: center;
+      gap: clamp(18px, 3vw, 42px);
+      margin: 36px 0;
+    }
+    /* Left Vertical Stepper */
+    .fx-rail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      position: relative;
+    }
+    .fx-rail::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.24);
+      z-index: 0;
+    }
+    .fx-rail__step {
+      position: relative;
+      z-index: 1;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(15, 28, 48, 0.72);
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .fx-rail__step[aria-current="step"] {
+      background: rgba(255, 255, 255, 0.26);
+      border-color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Center Headline Column */
+    .fx-copy__title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 6.8vw, 5.4rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      line-height: 1.02;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      text-wrap: balance;
+    }
+    .fx-copy__desc {
+      color: var(--ink-soft);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      max-width: 54ch;
+      margin-bottom: 28px;
+    }
+    .fx-explore-btn {
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 10px;
+      background: var(--accent);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.98rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      text-decoration: none;
+      box-shadow: 0 16px 32px rgba(15, 35, 72, 0.55);
+    }
+    .fx-explore-btn:hover { background: #3164b5; }
+
+    /* Right Destination Cards Row */
+    .fx-cards-row {
+      display: grid;
+      grid-template-columns: 1.12fr 1fr 0.72fr;
+      align-items: end;
+      gap: 18px;
+    }
+    .fx-dest-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      cursor: pointer;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      color: var(--ink);
+    }
+    .fx-dest-card__label {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #ffffff;
+    }
+    .fx-stars {
+      display: flex;
+      gap: 4px;
+      color: #f8fafc;
+      font-size: 0.75rem;
+      margin-bottom: 4px;
+    }
+    .fx-dest-card__media {
+      position: relative;
+      border-radius: var(--r-card);
+      overflow: hidden;
+      aspect-ratio: 3 / 4.2;
+      border: 1.5px solid rgba(255, 255, 255, 0.24);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+    }
+    .fx-dest-card--active .fx-dest-card__media {
+      aspect-ratio: 3 / 4.6;
+      border-color: var(--accent-text);
+    }
+    .fx-dest-card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 360ms var(--ease-out);
+    }
+    .fx-dest-card:hover .fx-dest-card__media img { transform: scale(1.05); }
+    .fx-bookmark-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0f172a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Bottom Slider Controls */
+    .fx-bottom-bar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .fx-ghost-word {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.16);
+      letter-spacing: 0.02em;
+    }
+    .fx-arrow-pair {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .fx-circle-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(12px);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .fx-circle-btn:hover { background: rgba(255, 255, 255, 0.32); }
+
+    /* Section 2: Archipelago Expedition Planner (+15-20% Expansion) */
+    .fx-section {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: clamp(56px, 8vw, 96px) clamp(20px, 4.5vw, 64px);
+    }
+    .fx-planner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 32px;
+    }
+    .fx-box {
+      border-radius: 20px;
+      padding: 28px;
+      background: var(--bg-panel);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .fx-season-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0 22px;
+    }
+    .fx-season-btn {
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--ink);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .fx-season-btn[aria-pressed="true"] {
+      background: var(--accent);
+      border-color: var(--accent-text);
+    }
+
+    .fx-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 32px clamp(20px, 4.5vw, 64px);
+      max-width: 1220px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    /* Modal */
+    .fx-modal {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(6, 12, 22, 0.84);
+      backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .fx-modal[aria-hidden="false"] { display: flex; }
+    .fx-modal__card {
+      width: min(100%, 580px);
+      border-radius: 22px;
+      padding: 28px;
+      background: #13253e;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+    }
+
+    @media (max-width: 1040px) {
+      .fx-main-grid { grid-template-columns: 1fr; }
+      .fx-rail { flex-direction: row; justify-content: flex-start; }
+      .fx-rail::before { display: none; }
+      .fx-planner-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .fx-cards-row { grid-template-columns: 1fr; }
+      .fx-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to expedition showcase</a>
+
+  <div class="fx-hero" id="heroStage">
+    <header class="fx-header" role="banner">
+      <a href="#main" class="fx-brand">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--fox-orange)" aria-hidden="true" focusable="false"><path d="M4 3l4.5 4L12 5l3.5 2L20 3l-1.5 9.5L12 21l-6.5-8.5L4 3z"/></svg>
+        <span>Foxico</span>
+      </a>
+
+      <nav class="fx-nav" aria-label="Expedition Navigation">
+        <a href="#main">News</a>
+        <a href="#expedition-planner">Destinations</a>
+        <a href="#expedition-planner">Blog</a>
+        <a href="mailto:expeditions@foxico.example.com">Contact</a>
+      </nav>
+
+      <div class="fx-user-bar">
+        <button type="button" class="fx-icon-btn" id="openDispatchModalBtn" aria-label="Search archipelago itineraries">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button type="button" class="fx-circle-btn" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play animations">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <span class="fx-greeting">Hello, Anney!</span>
+      </div>
+    </header>
+
+    <main id="main" class="fx-main-grid">
+      <aside class="fx-rail" aria-label="Archipelago Chapter Timeline">
+        <button type="button" class="fx-rail__step num" data-region-step="0" aria-current="step" aria-label="Region 1 Indonesia">1</button>
+        <button type="button" class="fx-rail__step num" data-region-step="1" aria-label="Region 2 Thailand">2</button>
+        <button type="button" class="fx-rail__step num" data-region-step="2" aria-label="Region 3 Bali">3</button>
+        <button type="button" class="fx-rail__step num" data-region-step="3" aria-label="Region 4 Kerala">4</button>
+      </aside>
+
+      <section class="fx-copy" aria-live="polite">
+        <h1 class="fx-copy__title" id="regionTitle">INDONESIA</h1>
+        <p class="fx-copy__desc" id="regionDesc">As the largest archipelagic country in the world, Indonesia is blessed with so many different people, cultures, customs, traditions, artworks, food, animals, plants, landscapes, and everything that made it almost like 100 (or even 200) countries melted beautifully into one.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="#expedition-planner" class="fx-explore-btn" id="exploreRegionBtn">
+            <span>Explore</span>
+            <span aria-hidden="true">-></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="fx-cards-row" aria-label="Featured Destination Cards">
+        <button type="button" class="fx-dest-card fx-dest-card--active" data-region-card="1">
+          <span class="fx-dest-card__label">Buddha temple, Thailand</span>
+          <div class="fx-stars" aria-label="4 out of 5 stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></div>
+          <div class="fx-dest-card__media">
+            <img src="assets/card-buddha-temple.webp" alt="Golden spires of Buddha temple reflecting on calm water in Thailand" width="320" height="460">
+            <span class="fx-bookmark-badge" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+            </span>
+          </div>
+        </button>
+
+        <button type="button" class="fx-dest-card" data-region-card="2">
+          <span class="fx-dest-card__label">Broken Beach, Bali</span>
+          <div class="fx-stars" aria-label="4.5 out of 5 stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></div>
+          <div class="fx-dest-card__media">
+            <img src="assets/card-broken-beach.webp" alt="Natural limestone coastal arch over turquoise water at Broken Beach, Nusa Penida, Bali" width="320" height="420">
+            <span class="fx-bookmark-badge" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+            </span>
+          </div>
+        </button>
+
+        <button type="button" class="fx-dest-card" data-region-card="3">
+          <span class="fx-dest-card__label">Kerala</span>
+          <div class="fx-stars" aria-label="5 out of 5 stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg> <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg></div>
+          <div class="fx-dest-card__media">
+            <img src="assets/card-kerala-backwaters.webp" alt="Tropical palm lagoons and emerald waterways in Kerala" width="260" height="420">
+          </div>
+        </button>
+      </section>
+    
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+  </main>
+
+    <div class="fx-bottom-bar">
+      <div style="display:flex;align-items:center;gap:18px;">
+        <span class="num" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--ink-soft);" id="stepFraction">01/04</span>
+        <span class="fx-ghost-word" id="ghostWatermark">Thailand</span>
+      </div>
+
+      <div class="fx-arrow-pair">
+        <button type="button" class="fx-circle-btn" id="prevRegionBtn" aria-label="Previous destination">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button type="button" class="fx-circle-btn" id="nextRegionBtn" aria-label="Next destination">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <div class="num" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--ink-soft);">
+        <span id="bottomCounterStart">01</span> ─────── <span>04</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Interactive Monsoon & Summit Route Planner -->
+  <section id="expedition-planner" class="fx-section">
+    <p style="font-family:var(--font-mono);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent-text);margin-bottom:8px;">02 / Archipelago Route Intelligence</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);margin-bottom:12px;">Volcanic Ridge &amp; Coastal Traverse Simulator</h2>
+    <p style="color:var(--ink-soft);max-width:64ch;">Select your expedition window and island chain to calculate summit visibility, sea-crossing swell index, and guided basecamp logistics across <span data-counter="17508" class="num">17508</span> islands.</p>
+
+    <div class="fx-planner-grid">
+      <div class="fx-box">
+        <h3 style="font-family:var(--font-display);font-size:1.35rem;">Select Seasonal Traverse Window</h3>
+        <div class="fx-season-pills" role="group" aria-label="Expedition Season">
+          <button type="button" class="fx-season-btn" data-season="dry" aria-pressed="true">Dry Trade Winds (May–Sep)</button>
+          <button type="button" class="fx-season-btn" data-season="shoulder" aria-pressed="false">Caldera Shoulder (Apr / Oct)</button>
+          <button type="button" class="fx-season-btn" data-season="emerald" aria-pressed="false">Emerald Monsoon (Nov–Mar)</button>
+        </div>
+        <dl style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;" class="num">
+          <div style="padding:14px;border-radius:12px;background:rgba(255,255,255,0.04);">
+            <dt style="font-size:0.78rem;color:var(--ink-soft);">Summit Visibility</dt>
+            <dd style="font-size:1.45rem;font-weight:800;color:var(--accent-text);" id="visMetric">94%</dd>
+          </div>
+          <div style="padding:14px;border-radius:12px;background:rgba(255,255,255,0.04);">
+            <dt style="font-size:0.78rem;color:var(--ink-soft);">Strait Swell</dt>
+            <dd style="font-size:1.45rem;font-weight:800;color:#ffffff;" id="swellMetric">0.8 m</dd>
+          </div>
+          <div style="padding:14px;border-radius:12px;background:rgba(255,255,255,0.04);">
+            <dt style="font-size:0.78rem;color:var(--ink-soft);">9-Day Base Rate</dt>
+            <dd style="font-size:1.45rem;font-weight:800;color:var(--fox-orange);" id="rateMetric">$1,480</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="fx-box" style="display:flex;flex-direction:column;justify-content:space-between;gap:18px;">
+        <div>
+          <h3 style="font-family:var(--font-display);font-size:1.35rem;margin-bottom:8px;">Mount Agung &amp; Nusa Penida Dawn Charter</h3>
+          <p style="color:var(--ink-soft);font-size:0.94rem;">Includes private 02:30 AM ridge guide from Besakih Temple, high-altitude thermal gear, and fast-boat crossing to Broken Beach (Pasih Uug).</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="mailto:expeditions@foxico.example.com?subject=Indonesia%20Expedition%20Charter" class="fx-explore-btn">Reserve Basecamp Slot -></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fx-footer" role="contentinfo">
+    <div><strong>Foxico Expeditions</strong> · Jakarta · Denpasar · Chiang Mai</div>
+    <div> Expedition Desk: <a href="mailto:expeditions@foxico.example.com" style="color:var(--accent-text);">expeditions@foxico.example.com</a></div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="fx-modal" id="dispatchModal" role="dialog" aria-modal="true" aria-labelledby="dispatchModalTitle" aria-hidden="true">
+    <div class="fx-modal__card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h2 id="dispatchModalTitle" style="font-family:var(--font-display);font-size:1.6rem;">Foxico Archipelago Dispatch</h2>
+        <button type="button" class="fx-circle-btn" id="closeDispatchModalBtn" aria-label="Close dispatch dialog">X</button>
+      </div>
+      <p style="color:var(--ink-soft);margin-bottom:18px;">Direct volcanic summit permits and private coastal vessel charters for Indonesia, Thailand, Bali, and Kerala.</p>
+      <a href="mailto:expeditions@foxico.example.com" class="fx-explore-btn">Email Lead Mountaineer -></a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const regions = [
+        {
+          title: 'INDONESIA',
+          watermark: 'Thailand',
+          desc: 'As the largest archipelagic country in the world, Indonesia is blessed with so many different people, cultures, customs, traditions, artworks, food, animals, plants, landscapes, and everything that made it almost like 100 (or even 200) countries melted beautifully into one.',
+          bg: 'assets/indonesia-volcano-bg.webp'
+        },
+        {
+          title: 'THAILAND',
+          watermark: 'Bali',
+          desc: 'Golden Lanna water sanctuaries, misty limestone karsts, and lantern-lit temple reflections stretching from Ayutthaya’s river basins to Chiang Rai’s high mountain ridges.',
+          bg: 'assets/studio-volcano-dawn.webp'
+        },
+        {
+          title: 'BALI ARCHIPELAGO',
+          watermark: 'Kerala',
+          desc: 'Sculpted volcanic rice amphitheaters in Tegallalang paired with Nusa Penida’s dramatic Broken Beach limestone archways and turquoise manta ray channels.',
+          bg: 'assets/indonesia-volcano-bg.webp'
+        },
+        {
+          title: 'KERALA LAGOONS',
+          watermark: 'Indonesia',
+          desc: 'Serene palm-fringed Malabar backwaters, cardamom cloud hills in Munnar, and traditional Kettuvallam houseboat expeditions along the Arabian Sea coast.',
+          bg: 'assets/studio-volcano-dawn.webp'
+        }
+      ];
+
+      let activeRegion = 0;
+      let motionPaused = false;
+
+      const titleEl = document.getElementById('regionTitle');
+      const descEl = document.getElementById('regionDesc');
+      const ghostEl = document.getElementById('ghostWatermark');
+      const fracEl = document.getElementById('stepFraction');
+      const bottomStartEl = document.getElementById('bottomCounterStart');
+      const heroEl = document.getElementById('heroStage');
+
+      function setRegion(idx) {
+        activeRegion = (idx + regions.length) % regions.length;
+        const r = regions[activeRegion];
+        if (titleEl) titleEl.textContent = r.title;
+        if (descEl) descEl.textContent = r.desc;
+        if (ghostEl) ghostEl.textContent = r.watermark;
+        const numStr = '0' + (activeRegion + 1);
+        if (fracEl) fracEl.textContent = numStr + '/04';
+        if (bottomStartEl) bottomStartEl.textContent = numStr;
+        if (heroEl) {
+          heroEl.style.backgroundImage = "linear-gradient(90deg, rgba(10, 20, 35, 0.84) 0%, rgba(12, 24, 42, 0.46) 52%, rgba(10, 20, 35, 0.68) 100%), linear-gradient(180deg, rgba(14, 27, 48, 0.45) 0%, rgba(10, 20, 35, 0.25) 55%, rgba(8, 17, 28, 0.92) 100%), url('" + r.bg + "')";
+        }
+        document.querySelectorAll('[data-region-step]').forEach(function (btn, i) {
+          if (i === activeRegion) btn.setAttribute('aria-current', 'step');
+          else btn.removeAttribute('aria-current');
+        });
+      }
+
+      document.querySelectorAll('[data-region-step]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setRegion(Number(btn.getAttribute('data-region-step')) || 0);
+        });
+      });
+      document.querySelectorAll('[data-region-card]').forEach(function (card) {
+        card.addEventListener('click', function () {
+          setRegion(Number(card.getAttribute('data-region-card')) || 0);
+        });
+      });
+      const prevBtn = document.getElementById('prevRegionBtn');
+      const nextBtn = document.getElementById('nextRegionBtn');
+      if (prevBtn) prevBtn.addEventListener('click', function () { setRegion(activeRegion - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { setRegion(activeRegion + 1); });
+
+      // Season buttons
+      const seasonData = {
+        dry: { vis: '94%', swell: '0.8 m', rate: '$1,480' },
+        shoulder: { vis: '86%', swell: '1.1 m', rate: '$1,290' },
+        emerald: { vis: '74%', swell: '1.6 m', rate: '$1,120' }
+      };
+      document.querySelectorAll('[data-season]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const key = btn.getAttribute('data-season');
+          const d = seasonData[key];
+          if (!d) return;
+          document.querySelectorAll('[data-season]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b === btn));
+          });
+          document.getElementById('visMetric').textContent = d.vis;
+          document.getElementById('swellMetric').textContent = d.swell;
+          document.getElementById('rateMetric').textContent = d.rate;
+        });
+      });
+
+      // Modal
+      const modal = document.getElementById('dispatchModal');
+      const openBtn = document.getElementById('openDispatchModalBtn');
+      const closeBtn = document.getElementById('closeDispatchModalBtn');
+      if (openBtn && modal) openBtn.addEventListener('click', function () { modal.setAttribute('aria-hidden', 'false'); });
+      if (closeBtn && modal) closeBtn.addEventListener('click', function () { modal.setAttribute('aria-hidden', 'true'); });
+
+      // Motion toggle
+      const motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+        });
+      }
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

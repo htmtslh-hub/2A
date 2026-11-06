@@ -1,0 +1,34 @@
+{
+  "id": "t267",
+  "slug": "guardnet-benefits",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:50:37.703Z",
+  "demo": "/demos/guardnet-benefits/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3c2aff01a9be",
+  "sha256": "3c2aff01a9be7a9ba1766641db4f4699914629d801ceb05c7b8ee541293775db",
+  "demoHtmlSha256": "b2969c59555f1e1805c888ea95181b7cee1665081973051741b505592c2ffecc",
+  "demoSha256": "0b68fb8feb1388148d1ee918cc065c308aa6585ade7396b3c358ef6f2c62605b",
+  "bytes": 401864,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 589
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\guardnet-benefits-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\guardnet-benefits-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\guardnet-benefits-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\guardnet-benefits-return.jpg"
+  ]
+}

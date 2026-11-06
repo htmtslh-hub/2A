@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardnet Defense — Key Benefits · Autonomous Cyber Threat Detection &amp; Compliance</title>
+  <meta name="description" content="Unlock peace of mind with cutting-edge cybersecurity that safeguards your data and streamlines protection: Advanced Threat Detection, Zero-Bandwidth Impact, and Compliance Made Simple.">
+  <meta property="og:title" content="Guardnet Defense — Key Benefits">
+  <meta property="og:description" content="Proactively spot and neutralize cyber threats with zero bandwidth impact.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-black: #000000;
+      --bg-card: #0a0a0a;
+      --blue-glow: #1e3a8a;
+      --ink: #ffffff;
+      --ink-soft: #a3a3a3;
+      --accent: #2563eb;
+      --accent-text: #93c5fd;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg-black); color: var(--ink); }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+      background: var(--bg-black);
+      color: var(--ink);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent); color: #ffffff; }
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      padding: 10px 18px; background: #ffffff; color: #000000;
+      font-weight: 700; border-radius: 8px; text-decoration: none;
+    }
+    .skip-link:focus { top: 16px; }
+    :where(a, button, input):focus-visible {
+      outline: 3px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, a { transition: transform 150ms var(--ease-out), background-color 200ms var(--ease-out); }
+    button:active, a:active { transform: scale(0.97); }
+    .num { font-variant-numeric: tabular-nums; }
+
+    /* Header */
+    .gn-header {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .gn-brand {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .gn-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .gn-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.9rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .gn-nav a:hover { color: #ffffff; }
+    .gn-btn {
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.86rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    /* Key Benefits Section */
+    .gn-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: clamp(48px, 7vw, 88px) 24px;
+    }
+    .gn-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 64px;
+    }
+    .gn-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .gn-subtitle {
+      font-size: 1.12rem;
+      color: var(--ink-soft);
+    }
+
+    /* 3-Column Bento Grid */
+    .gn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .gn-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 36px;
+      min-height: 460px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .gn-blob-left {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.55) 0%, transparent 72%);
+      top: 50%;
+      left: -80px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .gn-blob-right {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30, 58, 138, 0.55) 0%, transparent 72%);
+      top: -60px;
+      right: -60px;
+      pointer-events: none;
+    }
+    .gn-icon-box {
+      position: relative;
+      z-index: 2;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(23, 23, 23, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+    .gn-card-video-wrap {
+      position: relative;
+      width: calc(100% + 72px);
+      margin: -36px -36px 0;
+      height: 290px;
+      overflow: hidden;
+      background: #050814;
+    }
+    .gn-card-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gn-card-video-wrap::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 96px;
+      background: linear-gradient(180deg, transparent 0%, var(--bg-card) 100%);
+    }
+    .gn-card-title {
+      position: relative;
+      z-index: 2;
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .gn-card-desc {
+      position: relative;
+      z-index: 2;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 980px) {
+      .gn-grid { grid-template-columns: 1fr; }
+    }
+      @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Guardnet security benefits</a>
+
+  <header class="gn-header" role="banner">
+    <a href="#main" class="gn-brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Guardnet</span>
+    </a>
+    <nav class="gn-nav" aria-label="Guardnet Defense Navigation">
+      <a href="#main">Benefits</a>
+      <a href="#telemetry-lab">SOC Telemetry</a>
+      <button type="button" class="gn-btn" id="motionToggleBtn" data-motion-toggle aria-pressed="false" aria-label="Pause or play motion">Motion</button>
+      <button type="button" class="gn-btn" id="openSocModalBtn">Deploy Sensor</button>
+    </nav>
+  </header>
+
+  <main id="main" class="gn-section">
+    <div class="gn-head">
+      <h1 class="gn-title">Key Benefits</h1>
+      <p class="gn-subtitle">Unlock peace of mind with cutting-edge cybersecurity that safeguards your data and streamlines protection.</p>
+    </div>
+
+    <div class="gn-grid">
+      <!-- Card 1: Advanced Threat Detection -->
+      <article class="gn-card">
+        <div class="gn-blob-left" aria-hidden="true"></div>
+        <div class="gn-icon-box" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <div>
+          <h2 class="gn-card-title">Advanced Threat Detection</h2>
+          <p class="gn-card-desc">Proactively spot and neutralize cyber threats before they cause harm.</p>
+        </div>
+      </article>
+
+      <!-- Card 2: Zero-Bandwidth Impact (Video Card) -->
+      <article class="gn-card">
+        <div class="gn-card-video-wrap">
+          <video autoplay loop muted playsinline poster="assets/guardnet-core-poster.webp">
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260421_072701_f6a01abb-eb30-4559-9d6e-774362defbc3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <h2 class="gn-card-title">Zero-Bandwidth Impact</h2>
+          <p class="gn-card-desc">Enjoy top-tier protection without slowing down your network or devices.</p>
+        </div>
+      </article>
+
+      <!-- Card 3: Compliance Made Simple -->
+      <article class="gn-card">
+        <div class="gn-blob-right" aria-hidden="true"></div>
+        <div class="gn-icon-box" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div>
+          <h2 class="gn-card-title">Compliance Made Simple</h2>
+          <p class="gn-card-desc">Effortlessly meet industry standards and keep your business audit-ready.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Section 2: Interactive Zero-Bandwidth Packet Inspection Simulator -->
+    <section id="telemetry-lab" style="margin-top:56px;padding:32px;border-radius:16px;background:var(--bg-card);border:1px solid rgba(255,255,255,0.1);">
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center;">
+        <div>
+          <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--accent-text);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:8px;">02 / Kernel eBPF Telemetry Benchmark</p>
+          <h2 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:10px;">Simulate Ingress Packet Inspection Load</h2>
+          <label for="throughputRange" style="display:flex;justify-content:space-between;font-size:0.9rem;margin-bottom:8px;">
+            <span>Cluster Ingress Throughput</span>
+            <output id="throughputOut" class="num" style="color:var(--accent-text);font-weight:700;">40 Gbps</output>
+          </label>
+          <input type="range" id="throughputRange" min="10" max="100" step="5" value="40" style="width:100%;min-height:44px;accent-color:var(--accent);">
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" class="num">
+          <div style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.04);">
+            <div style="font-size:0.76rem;color:var(--ink-soft);">CPU Overhead</div>
+            <div style="font-size:1.45rem;font-weight:700;color:var(--accent-text);" id="cpuOverheadVal">0.4%</div>
+          </div>
+          <div style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.04);">
+            <div style="font-size:0.76rem;color:var(--ink-soft);">P99 Latency</div>
+            <div style="font-size:1.45rem;font-weight:700;">0.12 ms</div>
+          </div>
+          <div style="padding:16px;border-radius:12px;background:rgba(255,255,255,0.04);">
+            <div style="font-size:0.76rem;color:var(--ink-soft);">SOC2 Controls</div>
+            <div style="font-size:1.45rem;font-weight:700;" data-counter="100" data-suffix="%">100%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+  </main>
+
+  <footer style="max-width:1280px;margin:0 auto;padding:32px 24px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--ink-soft);font-size:0.88rem;" role="contentinfo">
+    <div><strong>Guardnet Defense Systems</strong> · Zero-Latency eBPF Cloud Security</div>
+    <div><a href="mailto:soc@guardnet.example.com" style="color:var(--accent-text);">soc@guardnet.example.com</a></div>
+  </footer>
+
+  <div id="socModal" role="dialog" aria-modal="true" aria-labelledby="socModalTitle" aria-hidden="true" style="position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.84);backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:20px;">
+    <div style="width:min(100%,480px);border-radius:16px;padding:28px;background:#0f131f;border:1px solid rgba(147,197,253,0.35);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 id="socModalTitle" style="font-family:var(--font-display);font-size:1.45rem;">Deploy Guardnet Sensor</h2>
+        <button type="button" id="closeSocModalBtn" class="gn-btn" aria-label="Close modal">X</button>
+      </div>
+      <p style="color:var(--ink-soft);margin-bottom:18px;">Request a 14-day autonomous threat detection trial and automated SOC2/ISO27001 readiness audit.</p>
+      <a href="mailto:soc@guardnet.example.com?subject=Guardnet%20Sensor%20Deployment" class="gn-btn" style="background:var(--accent);">Contact Security Engineering</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      const range = document.getElementById('throughputRange');
+      if (range) {
+        range.addEventListener('input', function () {
+          const gbps = Number(range.value);
+          document.getElementById('throughputOut').textContent = gbps + ' Gbps';
+          document.getElementById('cpuOverheadVal').textContent = (0.2 + gbps * 0.005).toFixed(2) + '%';
+        });
+      }
+      const modal = document.getElementById('socModal');
+      document.getElementById('openSocModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); }
+      });
+      document.getElementById('closeSocModalBtn')?.addEventListener('click', function () {
+        if (modal) { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); }
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

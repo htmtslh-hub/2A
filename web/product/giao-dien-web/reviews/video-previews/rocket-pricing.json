@@ -1,0 +1,34 @@
+{
+  "id": "t263",
+  "slug": "rocket-pricing",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T13:49:16.681Z",
+  "demo": "/demos/rocket-pricing/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "255c449a28c8",
+  "sha256": "255c449a28c87dddb1d4dc4030b44e12075699fa188a854890b1b05419f195d8",
+  "demoHtmlSha256": "9520eeb4b22df423aba3d95c48a52355a9717d3d49cb33a3f7157522b9515c30",
+  "demoSha256": "77d11f8cb96ff08679870f86d16477e3eb2a2477971ac2eb79c0378cd99290f6",
+  "bytes": 360914,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1155
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-pricing-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-pricing-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-pricing-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rocket-pricing-return.jpg"
+  ]
+}

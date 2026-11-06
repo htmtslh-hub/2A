@@ -1,0 +1,44 @@
+{
+  "id": "t268",
+  "slug": "liquid-glass-cta",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T23:02:15.963Z",
+  "demo": "/demos/liquid-glass-cta/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "770693cee5b3",
+  "sha256": "770693cee5b31068b287f969203b197ef0bd0cad956f3b24573990734c381d61",
+  "demoHtmlSha256": "9d78cc707b642ed0cb11dc362361289547a5b804b4f0ce03e58e3c8931592368",
+  "demoSha256": "322c1624d376ac0f13ef1cc406275429a4fa9f4712523c18b61bd52cba3aa509",
+  "bytes": 243922,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.49,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.909,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 557
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\liquid-glass-cta-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\liquid-glass-cta-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\liquid-glass-cta-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\liquid-glass-cta-return.jpg"
+  ]
+}

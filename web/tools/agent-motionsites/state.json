@@ -1,15 +1,17 @@
 {
-  "lastRunDate": "2026-11-06",
-  "todayCopiedCount": 6,
+  "lastRunDate": "2026-11-07",
+  "todayCopiedCount": 3,
   "processedSlugs": [
     "404-planet",
     "_design",
+    "abstract-future-sculpt",
     "adoratorio-summer",
     "aeris",
     "aerosix",
     "aerox-studio",
     "aethera",
     "aetheris-voyage",
+    "ai-image-generator-ui",
     "ai-workflow-agents",
     "ai-workflow-hero",
     "airmax-plus",
@@ -19,6 +21,7 @@
     "apartment-flow",
     "apex-squad-light",
     "apex-upheaval",
+    "artmuseum-spatial-gallery",
     "asme",
     "astra-interior",
     "astro-armor",
@@ -31,6 +34,7 @@
     "beetbuh",
     "beyond-voyages",
     "bishop-tentwenty",
+    "bloodhound-outlands-tracker",
     "bloom-ai",
     "break-code",
     "camper",
@@ -77,6 +81,7 @@
     "flash-rocky-mountain",
     "flexible-spark",
     "forest-pulse",
+    "foxico-indonesia-expedition",
     "free-sample",
     "freight-axis",
     "fresh-reddy",
@@ -108,10 +113,12 @@
     "laila-sakura-creator",
     "lauberhorn-ridge",
     "launch-video",
+    "launchex-about",
     "lawyer-justicia",
     "layla-astrology-wiki",
     "leaflit",
     "lingoglass",
+    "liquid-glass-cta",
     "looo-ai-magic",
     "lumina",
     "luminex",
@@ -135,6 +142,7 @@
     "monolith-canvas",
     "mostar-city",
     "motora",
+    "mufi-aba-scheduler",
     "murmur",
     "music-app",
     "mythwood-sanctuary",
@@ -216,6 +224,7 @@
     "transform-data",
     "travel-journal",
     "tripg-ocean",
+    "undefined",
     "usd-halo",
     "vanguard",
     "vaultra",
@@ -367,7 +376,10 @@
     "wellness-balance",
     "404-planet",
     "axion-about",
-    "guardnet-benefits"
+    "guardnet-benefits",
+    "liquid-glass-cta",
+    "launchex-about",
+    "ai-image-generator-ui"
   ],
   "history": [
     {
@@ -746,10 +758,28 @@
         "axion-about": "premium",
         "guardnet-benefits": "premium"
       }
+    },
+    {
+      "date": "2026-11-07",
+      "built": [
+        "liquid-glass-cta",
+        "launchex-about",
+        "ai-image-generator-ui"
+      ],
+      "catalogIds": [
+        "t268",
+        "t269",
+        "t270"
+      ],
+      "tiers": {
+        "liquid-glass-cta": "free",
+        "launchex-about": "premium",
+        "ai-image-generator-ui": "premium"
+      }
     }
   ],
-  "todayFreeCount": 2,
-  "todayPremiumCount": 4,
+  "todayFreeCount": 1,
+  "todayPremiumCount": 2,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -822,7 +852,10 @@
     "e0b3a480cf94cf7524fece5ca08f5449492f1cfb393b35734959cbf644d6dae7",
     "6d5127d809b35cf3d08bba6e739a13327955d222045f809667854c37b6c444a6",
     "faa8f755249b12391353f9068276f56df47a3768022d594a3a8e5351682a8556",
-    "dd97cc7592f91205f3dd467d6e484480006656f1a7b10a54571912e32a906285"
+    "dd97cc7592f91205f3dd467d6e484480006656f1a7b10a54571912e32a906285",
+    "c2b930af8e18e1793374297475e356008a360bdf3138298ca9ef3e6c7b5a2050",
+    "4621b8cf06cb39a12e0c2cf9825a8267f15a187542aea204551cc9cffdaa189c",
+    "671a598b15d237479ee87fa4321d48d1e0394bf618a0329e1bd7a1f99f0ecf29"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [

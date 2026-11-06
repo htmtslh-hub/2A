@@ -1,0 +1,44 @@
+{
+  "id": "t270",
+  "slug": "ai-image-generator-ui",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T23:06:15.757Z",
+  "demo": "/demos/ai-image-generator-ui/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f75534c9e384",
+  "sha256": "f75534c9e384893c86d46d7daee1f753f5cfd0e6d77b2bd8a0f4ead0b43443fa",
+  "demoHtmlSha256": "37fed829fd88aaf0c21744245a93c7d78df5c1af65df5ce0a68ca001aeb7afc0",
+  "demoSha256": "96df53d809cfbc59b59305d9f3700b13f95b7585e490d1fcbeb3ae970946a2ef",
+  "bytes": 283245,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.496,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.881,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 560
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-image-generator-ui-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-image-generator-ui-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-image-generator-ui-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ai-image-generator-ui-return.jpg"
+  ]
+}

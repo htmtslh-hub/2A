@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t270: {
+    slug: 'ai-image-generator-ui',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "AI Image Generator UI",
+        desc: "Giao diện web AI Image Generator UI với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "AI Image Generator UI",
+        desc: "Bespoke AI Image Generator UI web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "AI Image Generator UI",
+        desc: "单文件自包含 AI Image Generator UI 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t269: {
+    slug: 'launchex-about',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "LaunchEx About",
+        desc: "Giao diện web LaunchEx About với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "LaunchEx About",
+        desc: "Bespoke LaunchEx About web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "LaunchEx About",
+        desc: "单文件自包含 LaunchEx About 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t268: {
+    slug: 'liquid-glass-cta',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Liquid Glass CTA",
+        desc: "Giao diện web Liquid Glass CTA với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["CTA", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Liquid Glass CTA",
+        desc: "Bespoke Liquid Glass CTA web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["CTA", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Liquid Glass CTA",
+        desc: "单文件自包含 Liquid Glass CTA 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t267: {
     slug: 'guardnet-benefits',
     cat: 'communication',

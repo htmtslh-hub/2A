@@ -1,0 +1,44 @@
+{
+  "id": "t269",
+  "slug": "launchex-about",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-06T23:04:15.952Z",
+  "demo": "/demos/launchex-about/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2ae6c8bc1e71",
+  "sha256": "2ae6c8bc1e713100d5bb0acffb13ef356e6fccedf5599714d4d63bd124ae61f5",
+  "demoHtmlSha256": "99ee6527172ec5865301a8a9833f2db5a25ff95d0898d9ebe636fa98efa8a6ec",
+  "demoSha256": "b1cb3d6314f9e94fab0b23a50b28292379d751b17d8b9aa70383f73dc25ee488",
+  "bytes": 217995,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.49,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.911,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 560
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\launchex-about-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\launchex-about-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\launchex-about-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\launchex-about-return.jpg"
+  ]
+}

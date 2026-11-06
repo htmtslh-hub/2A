@@ -2994,5 +2994,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "liquid-glass-cta": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "770693cee5b3",
+    "sha256": "770693cee5b31068b287f969203b197ef0bd0cad956f3b24573990734c381d61",
+    "demoHtmlSha256": "9d78cc707b642ed0cb11dc362361289547a5b804b4f0ce03e58e3c8931592368",
+    "demoSha256": "322c1624d376ac0f13ef1cc406275429a4fa9f4712523c18b61bd52cba3aa509",
+    "bytes": 243922,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "launchex-about": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "2ae6c8bc1e71",
+    "sha256": "2ae6c8bc1e713100d5bb0acffb13ef356e6fccedf5599714d4d63bd124ae61f5",
+    "demoHtmlSha256": "99ee6527172ec5865301a8a9833f2db5a25ff95d0898d9ebe636fa98efa8a6ec",
+    "demoSha256": "b1cb3d6314f9e94fab0b23a50b28292379d751b17d8b9aa70383f73dc25ee488",
+    "bytes": 217995,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "ai-image-generator-ui": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "f75534c9e384",
+    "sha256": "f75534c9e384893c86d46d7daee1f753f5cfd0e6d77b2bd8a0f4ead0b43443fa",
+    "demoHtmlSha256": "37fed829fd88aaf0c21744245a93c7d78df5c1af65df5ce0a68ca001aeb7afc0",
+    "demoSha256": "96df53d809cfbc59b59305d9f3700b13f95b7585e490d1fcbeb3ae970946a2ef",
+    "bytes": 283245,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

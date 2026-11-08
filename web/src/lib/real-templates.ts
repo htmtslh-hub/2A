@@ -337,79 +337,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t270: {
-    slug: 'ai-image-generator-ui',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "AuraGen AI Image Studio",
-        desc: "Phòng lab tạo ảnh AI thế hệ mới: kiểu chữ serif nghiêng kết hợp bảng điều khiển prompt kính mờ đa chế độ (Generate Image, Edit Image, Upscale) trên nền video 3D chuyển động mượt mà.",
-        tags: ["AI Image Studio", "Glassmorphic Prompt Box", "Serif & Sans Contrast"]
-      },
-      en: {
-        name: "AuraGen AI Image Studio",
-        desc: "Next-gen AI visual synthesis studio combining Instrument Serif italic typography with a multi-mode glassmorphic prompt workbench over a fullscreen looping 3D background video.",
-        tags: ["AI Image Studio", "Glassmorphic Prompt Box", "Serif & Sans Contrast"]
-      },
-      zh: {
-        name: "AuraGen AI 视觉生成工作室",
-        desc: "新一代 AI 图像生成工作台：优雅斜体衬线标题搭配多模式毛玻璃提示词控制台与全屏循环 3D 视频背景。",
-        tags: ["AI 图像生成", "毛玻璃提示词框", "衬线混排"]
-      }
-    }
-  },
-
-  t269: {
-    slug: 'launchex-about',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Launchex.Hub Founders",
-        desc: "Trang giới thiệu nhà sáng lập quỹ đầu tư Launchex.Hub: kiểu chữ công nghiệp TT Firs Neue kết hợp lưới 3 thẻ thống kê cắt góc đa giác (clip-path chamfer) và bộ lọc danh mục kỳ lân Đông Âu.",
-        tags: ["Venture Capital", "Chamfered Clip-Path Cards", "Cohort Explorer"]
-      },
-      en: {
-        name: "Launchex.Hub Founders",
-        desc: "Launchex.Hub venture accelerator showcase featuring geometric industrial typography, three polygonal clip-path chamfered stat cards, and an interactive regional cohort explorer.",
-        tags: ["Venture Capital", "Chamfered Clip-Path Cards", "Cohort Explorer"]
-      },
-      zh: {
-        name: "Launchex.Hub 创投孵化器关于页",
-        desc: "Launchex.Hub 创投平台创始人介绍页：硬朗工业风排版搭配三张多边形切角统计卡片及交互式区域孵化项目浏览器。",
-        tags: ["创投孵化器", "切角几何卡片", "项目浏览器"]
-      }
-    }
-  },
-
-  t268: {
-    slug: 'liquid-glass-cta',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Liquid Glass Video CTA",
-        desc: "Khối kêu gọi hành động Liquid Glass: nút bấm khúc xạ thủy tinh lỏng SVG feDisplacementMap đa lớp trên nền video 3D, đi kèm phòng thử nghiệm độ khúc xạ kính theo thời gian thực.",
-        tags: ["Liquid Glass SVG", "Optical Refraction CTA", "Token Playground"]
-      },
-      en: {
-        name: "Liquid Glass Video CTA",
-        desc: "Tactile Liquid Glass call-to-action hero featuring multi-layered SVG feDisplacementMap optical refraction buttons over a 3D video backdrop with a live refraction playground.",
-        tags: ["Liquid Glass SVG", "Optical Refraction CTA", "Token Playground"]
-      },
-      zh: {
-        name: "Liquid Glass 液态玻璃视频 CTA",
-        desc: "液态玻璃质感行动召唤组件：基于 SVG 置换滤镜的光学折射按钮搭配全屏 3D 视频背景与实时折射参数实验室。",
-        tags: ["液态玻璃滤镜", "光学折射按钮", "实时参数实验室"]
-      }
-    }
-  },
-
   t267: {
     slug: 'guardnet-benefits',
     cat: 'communication',
@@ -596,29 +523,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       }
     }
   },
-  t259: {
-    slug: 'abstract-future-sculpt',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Abstract Future Sculpt",
-        desc: "Studio điêu khắc tính toán ABSTRACT — DESIGNING FOR THE FUTURE trên nền không gian sao tối #0b0c0e: khối cầu sóng hữu cơ than chì mờ 3D nổi sau chữ khoảng cách rộng phát sáng và bộ tổng hợp tần số bề mặt Perlin.",
-        tags: ["3D Graphite Sculpture", "Futurist Minimalist", "Wave Topology"]
-      },
-      en: {
-        name: "Abstract Future Sculpt",
-        desc: "Futurist computational sculpture showcase on a deep starfield void #0b0c0e centering a 3D matte-graphite organic wave sphere behind wide-tracked glowing typography and a 4-chapter harmonic displacement synthesizer.",
-        tags: ["3D Graphite Sculpture", "Futurist Minimalist", "Wave Topology"]
-      },
-      zh: {
-        name: "Abstract Future Sculpt",
-        desc: "ABSTRACT 未来计算雕塑工作室首屏：深邃星空黑画布、中央悬浮 3D 哑光石墨有机波浪球体、宽字距发光标题与四章节谐波拓扑合成器。",
-        tags: ["3D石墨雕塑", "未来极简主义", "波浪拓扑"]
-      }
-    }
-  },
   t258: {
     slug: 'foxico-indonesia-expedition',
     cat: 'entertainment',
@@ -640,30 +544,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
         name: "Foxico Indonesia Expedition",
         desc: "Foxico 印度尼西亚火山群岛探险模板：暮色火山梯田背景、左侧 01/04 垂直章节时间轴、右侧泰国佛寺/巴厘岛破碎海滩/喀拉拉邦三卡片滑块与登山季规划器。",
         tags: ["群岛探险旅行", "目的地卡片滑块", "暮色火山"]
-      }
-    }
-  },
-  t257: {
-    slug: 'artmuseum-spatial-gallery',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "ArtMuseum Spatial Gallery",
-        desc: "Bảo tàng nghệ thuật không gian VisionOS ArtMuseum.com: thanh trình duyệt kính mờ nổi, chồng 5 tác phẩm xếp quạt 3D của Vincent van Gogh (The Starry Night — June 1889), dock chân dung họa sĩ và phòng thí nghiệm soi ánh sáng nghiêng Impasto.",
-        tags: ["Spatial VisionOS UI", "3D Fanned Gallery", "Van Gogh Archive"]
-      },
-      en: {
-        name: "ArtMuseum Spatial Gallery",
-        desc: "Spatial glassmorphism museum exhibition for ArtMuseum.com featuring a floating VisionOS browser chrome, a 5-card 3D fanned stack of Vincent van Gogh masterpieces led by The Starry Night (June 1889), and an impasto raking-light analyzer.",
-        tags: ["Spatial VisionOS UI", "3D Fanned Gallery", "Van Gogh Archive"]
-      },
-      zh: {
-        name: "ArtMuseum Spatial Gallery",
-        desc: "ArtMuseum.com 空间计算美术馆：悬浮毛玻璃浏览器栏、梵高《星月夜》等 5 幅杰作 3D 扇形堆叠画廊、底部艺术家胶囊船坞与厚涂颜料侧光分析仪。",
-        tags: ["空间计算UI", "3D扇形画廊", "梵高艺术馆"]
       }
     }
   },
@@ -2081,30 +1961,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t174: {
-    slug: 'cross-border',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Cross-Border",
-        desc: "Giao diện web Cross-Border với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
-        tags: ["Transportation", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      en: {
-        name: "Cross-Border",
-        desc: "Bespoke Cross-Border web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
-        tags: ["Transportation", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      zh: {
-        name: "Cross-Border",
-        desc: "单文件自包含 Cross-Border 网页模板，配备 3D 悬浮视觉与三组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
-      }
-    }
-  },
-
   t173: {
     slug: 'duolingo-styleguide',
     cat: 'portfolio',
@@ -2561,30 +2417,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t139: {
-    slug: 'bloom-ai',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Bloom AI",
-        desc: "Giao diện web Bloom AI với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
-        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      en: {
-        name: "Bloom AI",
-        desc: "Bespoke Bloom AI web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
-        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      zh: {
-        name: "Bloom AI",
-        desc: "单文件自包含 Bloom AI 网页模板，配备 3D 悬浮视觉与三组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
-      }
-    }
-  },
-
   t138: {
     slug: 'power-ai',
     cat: 'portfolio',
@@ -2727,30 +2559,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       }
     }
   },
-  t132: {
-    slug: 'codenest-coding-platform',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "CodeNest Coding Platform",
-        desc: "Giao diện web CodeNest Coding Platform với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
-        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      en: {
-        name: "CodeNest Coding Platform",
-        desc: "Bespoke CodeNest Coding Platform web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
-        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      zh: {
-        name: "CodeNest Coding Platform",
-        desc: "单文件自包含 CodeNest Coding Platform 网页模板，配备 3D 悬浮视觉与三组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
-      }
-    }
-  },
-
   t131: {
     slug: 'mindloop-landing',
     cat: 'commerce',
@@ -2896,29 +2704,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       }
     }
   },
-  t125: {
-    slug: 'adoratorio-summer',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Adoratorio Summer Club",
-        desc: "Adoratorio Summer Club (retrofuture-club) — Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
-      },
-      en: {
-        name: "Adoratorio Summer Club",
-        desc: "Adoratorio Summer Club (retrofuture-club) — Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
-      },
-      zh: {
-        name: "Adoratorio Summer Club",
-        desc: "Adoratorio Summer Club (retrofuture-club) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t124: {
     slug: 'fishfinger-creative',
     cat: 'commerce',
@@ -2938,54 +2723,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       zh: {
         name: "Fishfinger Creative",
         desc: "Fishfinger Creative (kraken-odyssey) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t123: {
-    slug: 'bishop-tentwenty',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Bishop Design Rogue",
-        desc: "Bishop Design Rogue (monochrome-architect) — Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
-      },
-      en: {
-        name: "Bishop Design Rogue",
-        desc: "Bishop Design Rogue (monochrome-architect) — Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
-      },
-      zh: {
-        name: "Bishop Design Rogue",
-        desc: "Bishop Design Rogue (monochrome-architect) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t122: {
-    slug: 'cinder-axis',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Cinder Axis Studio",
-        desc: "Cinder Axis Studio (terracotta-collage) — Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
-      },
-      en: {
-        name: "Cinder Axis Studio",
-        desc: "Cinder Axis Studio (terracotta-collage) — Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Reveal']
-      },
-      zh: {
-        name: "Cinder Axis Studio",
-        desc: "Cinder Axis Studio (terracotta-collage) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }

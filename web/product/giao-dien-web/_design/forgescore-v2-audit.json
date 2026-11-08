@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-10-31T00:25:51.487Z",
   "standardVersion": "ForgeScore v2.0 (product-standards.md v2.0.0)",
-  "totalEvaluated": 172,
+  "totalEvaluated": 166,
   "averageScore": 79.3,
   "countsByGrade": {
     "FORGEFRAME_GOLD": 33,
@@ -15,39 +15,6 @@
     "WEB-CRAFT-2": 171
   },
   "results": [
-    {
-      "slug": "adoratorio-summer",
-      "profile": "WEB-CRAFT-2",
-      "zipSize": 121209,
-      "fileCount": 5,
-      "total": 83.8,
-      "grade": "NEAR_PASS (80-89.9)",
-      "axes": {
-        "axis1_architecture_antislop": 25,
-        "axis2_tokens_surfaces": 14,
-        "axis3_motion_live_thing": 17.3,
-        "axis4_responsive_a11y": 16.5,
-        "axis5_packaging_docs": 11
-      },
-      "maxSimilarity": 1.3,
-      "mostSimilarSlug": "stellar-ai",
-      "hardFails": [],
-      "deductions": [
-        "[A2.4 -1.25đ] Thiếu tuỳ biến màu bôi đen chữ ::selection (impeccable craft-floor)",
-        "[A2.4 -1.5đ] Thiếu kiểu :focus-visible rõ ràng cho điều hướng bàn phím (impeccable / a11y)",
-        "[A2.4 -1.25đ] Thiếu font-variant-numeric: tabular-nums cho số liệu/giá/bộ đếm (impeccable / hallmark)",
-        "[A2.5 -2.0đ] Lạm dụng backdrop-filter: blur() (5 nơi > 4) gây tụt FPS khi cuộn (animation-performance)",
-        "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
-        "[A3.5 -0.8đ] Transition trực tiếp thuộc tính gây reflow (1 nơi: width/height/top/left/margin/padding)",
-        "[A4.1 -1đ] Thiếu landmark ngữ nghĩa: <nav>",
-        "[A4.2 -2.0đ] Thiếu liên kết bỏ qua điều hướng (.skip-link / href=\"#main\") cho bàn phím",
-        "[A4.3] 1/1 thẻ <svg> thiếu viewBox",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 0/10 bước hướng dẫn",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
-        "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
-      ],
-      "warnings": []
-    },
     {
       "slug": "aeris",
       "profile": "WEB-CRAFT-2",
@@ -781,76 +748,6 @@
       "warnings": []
     },
     {
-      "slug": "bishop-tentwenty",
-      "profile": "WEB-CRAFT-2",
-      "zipSize": 119150,
-      "fileCount": 5,
-      "total": 83.8,
-      "grade": "NEAR_PASS (80-89.9)",
-      "axes": {
-        "axis1_architecture_antislop": 25,
-        "axis2_tokens_surfaces": 14,
-        "axis3_motion_live_thing": 17.3,
-        "axis4_responsive_a11y": 16.5,
-        "axis5_packaging_docs": 11
-      },
-      "maxSimilarity": 0.9,
-      "mostSimilarSlug": "micai-aristide",
-      "hardFails": [],
-      "deductions": [
-        "[A2.4 -1.25đ] Thiếu tuỳ biến màu bôi đen chữ ::selection (impeccable craft-floor)",
-        "[A2.4 -1.5đ] Thiếu kiểu :focus-visible rõ ràng cho điều hướng bàn phím (impeccable / a11y)",
-        "[A2.4 -1.25đ] Thiếu font-variant-numeric: tabular-nums cho số liệu/giá/bộ đếm (impeccable / hallmark)",
-        "[A2.5 -2.0đ] Lạm dụng backdrop-filter: blur() (5 nơi > 4) gây tụt FPS khi cuộn (animation-performance)",
-        "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
-        "[A3.5 -0.8đ] Transition trực tiếp thuộc tính gây reflow (1 nơi: width/height/top/left/margin/padding)",
-        "[A4.1 -1đ] Thiếu landmark ngữ nghĩa: <nav>",
-        "[A4.2 -2.0đ] Thiếu liên kết bỏ qua điều hướng (.skip-link / href=\"#main\") cho bàn phím",
-        "[A4.3] 1/1 thẻ <svg> thiếu viewBox",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 0/10 bước hướng dẫn",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
-        "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
-      ],
-      "warnings": []
-    },
-    {
-      "slug": "bloom-ai",
-      "profile": "WEB-CRAFT-2",
-      "zipSize": 7119,
-      "fileCount": 4,
-      "total": 64,
-      "grade": "NEEDS_REWORK",
-      "axes": {
-        "axis1_architecture_antislop": 17.5,
-        "axis2_tokens_surfaces": 8,
-        "axis3_motion_live_thing": 16,
-        "axis4_responsive_a11y": 11.5,
-        "axis5_packaging_docs": 11
-      },
-      "maxSimilarity": 7.8,
-      "mostSimilarSlug": "mindloop-landing",
-      "hardFails": [],
-      "deductions": [
-        "[A1.1 -4đ] Dùng ký tự Emoji/Unicode làm icon (✿ ✦ ❀ ❁ ❃) thay vì SVG (taste-skill / hallmark)",
-        "[A1.4 -3.5đ] Cấu trúc trang quá ngắn (2 <section>)",
-        "[A2.1 -5.0đ] Thiếu kiến trúc CSS Design Tokens trong :root (3 biến)",
-        "[A2.2 -3.0đ] Thiếu token màu nhấn ngữ nghĩa (--accent / --accent-text)",
-        "[A2.4 -1.25đ] Thiếu tuỳ biến màu bôi đen chữ ::selection (impeccable craft-floor)",
-        "[A2.4 -1.5đ] Thiếu kiểu :focus-visible rõ ràng cho điều hướng bàn phím (impeccable / a11y)",
-        "[A2.4 -1.25đ] Thiếu font-variant-numeric: tabular-nums cho số liệu/giá/bộ đếm (impeccable / hallmark)",
-        "[A3.2 -2.0đ] Chưa dùng đường cong vật lý cubic-bezier() tuỳ chỉnh (emil-design-eng)",
-        "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
-        "[A4.1 -2đ] Thiếu landmark ngữ nghĩa: <nav>, <footer>",
-        "[A4.2 -2.0đ] Thiếu liên kết bỏ qua điều hướng (.skip-link / href=\"#main\") cho bàn phím",
-        "[A4.3 -3.0đ] Không có đồ họa/icon inline <svg> nào trong HTML",
-        "[A4.4 -1.5đ] Chỉ có 1 breakpoint @media; khuyến nghị tối thiểu 2 mốc (Tablet & Mobile)",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 0/10 bước hướng dẫn",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
-        "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
-      ],
-      "warnings": []
-    },
-    {
       "slug": "calfin-weather",
       "profile": "WEB-CRAFT-2",
       "zipSize": 13155,
@@ -990,39 +887,6 @@
       "warnings": []
     },
     {
-      "slug": "cinder-axis",
-      "profile": "WEB-CRAFT-2",
-      "zipSize": 109202,
-      "fileCount": 5,
-      "total": 83.8,
-      "grade": "NEAR_PASS (80-89.9)",
-      "axes": {
-        "axis1_architecture_antislop": 25,
-        "axis2_tokens_surfaces": 14,
-        "axis3_motion_live_thing": 17.3,
-        "axis4_responsive_a11y": 16.5,
-        "axis5_packaging_docs": 11
-      },
-      "maxSimilarity": 0.9,
-      "mostSimilarSlug": "micai-aristide",
-      "hardFails": [],
-      "deductions": [
-        "[A2.4 -1.25đ] Thiếu tuỳ biến màu bôi đen chữ ::selection (impeccable craft-floor)",
-        "[A2.4 -1.5đ] Thiếu kiểu :focus-visible rõ ràng cho điều hướng bàn phím (impeccable / a11y)",
-        "[A2.4 -1.25đ] Thiếu font-variant-numeric: tabular-nums cho số liệu/giá/bộ đếm (impeccable / hallmark)",
-        "[A2.5 -2.0đ] Lạm dụng backdrop-filter: blur() (5 nơi > 4) gây tụt FPS khi cuộn (animation-performance)",
-        "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
-        "[A3.5 -0.8đ] Transition trực tiếp thuộc tính gây reflow (1 nơi: width/height/top/left/margin/padding)",
-        "[A4.1 -1đ] Thiếu landmark ngữ nghĩa: <nav>",
-        "[A4.2 -2.0đ] Thiếu liên kết bỏ qua điều hướng (.skip-link / href=\"#main\") cho bàn phím",
-        "[A4.3] 1/1 thẻ <svg> thiếu viewBox",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 0/10 bước hướng dẫn",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
-        "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
-      ],
-      "warnings": []
-    },
-    {
       "slug": "cinematic",
       "profile": "WEB-CRAFT-2",
       "zipSize": 85717,
@@ -1059,40 +923,6 @@
         "[A4.2 -2.0đ] Thiếu thuộc tính ARIA trên các điều khiển tương tác",
         "[A4.3 -3.0đ] Không có đồ họa/icon inline <svg> nào trong HTML",
         "[A4.4 -4.0đ] Thiếu @media (max-width/min-width) cho đa thiết bị",
-        "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
-      ],
-      "warnings": []
-    },
-    {
-      "slug": "codenest-coding-platform",
-      "profile": "WEB-CRAFT-2",
-      "zipSize": 7798,
-      "fileCount": 4,
-      "total": 81,
-      "grade": "NEAR_PASS (80-89.9)",
-      "axes": {
-        "axis1_architecture_antislop": 25,
-        "axis2_tokens_surfaces": 12.5,
-        "axis3_motion_live_thing": 16,
-        "axis4_responsive_a11y": 16.5,
-        "axis5_packaging_docs": 11
-      },
-      "maxSimilarity": 13.6,
-      "mostSimilarSlug": "power-ai",
-      "hardFails": [],
-      "deductions": [
-        "[A2.1 -2.0đ] Hệ thống CSS Custom Properties trong :root còn mỏng (5 biến < 10)",
-        "[A2.2 -1.5đ] Có token màu nhấn nhưng chưa tách rõ --accent-text / --accent-strong / --on-accent bảo vệ tương phản chữ (hallmark Rule 4)",
-        "[A2.4 -1.25đ] Thiếu tuỳ biến màu bôi đen chữ ::selection (impeccable craft-floor)",
-        "[A2.4 -1.5đ] Thiếu kiểu :focus-visible rõ ràng cho điều hướng bàn phím (impeccable / a11y)",
-        "[A2.4 -1.25đ] Thiếu font-variant-numeric: tabular-nums cho số liệu/giá/bộ đếm (impeccable / hallmark)",
-        "[A3.2 -2.0đ] Chưa dùng đường cong vật lý cubic-bezier() tuỳ chỉnh (emil-design-eng)",
-        "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
-        "[A4.1 -1đ] Thiếu landmark ngữ nghĩa: <footer>",
-        "[A4.2 -2.0đ] Thiếu liên kết bỏ qua điều hướng (.skip-link / href=\"#main\") cho bàn phím",
-        "[A4.3] 1/1 thẻ <svg> thiếu aria-hidden=\"true\" hoặc role=\"img\"",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 0/10 bước hướng dẫn",
-        "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
         "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
       ],
       "warnings": []
@@ -1168,26 +998,6 @@
         "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
         "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
       ],
-      "warnings": []
-    },
-    {
-      "slug": "cross-border",
-      "profile": "WEB-CRAFT-2",
-      "zipSize": 13554,
-      "fileCount": 4,
-      "total": 100,
-      "grade": "FORGEFRAME_GOLD (>=95)",
-      "axes": {
-        "axis1_architecture_antislop": 25,
-        "axis2_tokens_surfaces": 20,
-        "axis3_motion_live_thing": 20,
-        "axis4_responsive_a11y": 20,
-        "axis5_packaging_docs": 15
-      },
-      "maxSimilarity": 7.8,
-      "mostSimilarSlug": "email-marketing",
-      "hardFails": [],
-      "deductions": [],
       "warnings": []
     },
     {

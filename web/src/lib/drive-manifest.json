@@ -48,15 +48,6 @@
       "sha256": "e93fa1bb22379d19afeae32c0555a48f432e87e875fbdc2dac4c050c19698aee",
       "updatedAt": "2026-10-30T14:12:40.534Z"
     },
-    "cross-border": {
-      "fileId": "1U4VthBHKhd7M5Z2ofWzY0nlaXQsk58RF",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1U4VthBHKhd7M5Z2ofWzY0nlaXQsk58RF",
-      "webViewUrl": "https://drive.google.com/file/d/1U4VthBHKhd7M5Z2ofWzY0nlaXQsk58RF/view",
-      "sizeBytes": 12957,
-      "sha256": "619acf269cb56f47ee2883dcd4a361da5a64edecbc7e574cafd0f615cf72b313",
-      "updatedAt": "2026-11-04T00:21:42.404Z"
-    },
     "subscription-agency": {
       "fileId": "1cnJ9LX7-t0ez7yoyG6I_nrvbFFSYksfk",
       "tier": "premium",
@@ -327,15 +318,6 @@
       "sha256": "a0e0be781e68583bcbe02f1ae2df31228f9530b99d2ab3aca4b4821d28194685",
       "updatedAt": "2026-11-04T00:22:11.396Z"
     },
-    "bloom-ai": {
-      "fileId": "1pTur7Sb2-k_ItMIBArviTcb2-Y5jU9f8",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1pTur7Sb2-k_ItMIBArviTcb2-Y5jU9f8",
-      "webViewUrl": "https://drive.google.com/file/d/1pTur7Sb2-k_ItMIBArviTcb2-Y5jU9f8/view",
-      "sizeBytes": 9454,
-      "sha256": "c747ead807cb6ad17c85c2f94e2c9663735815f9279520c854350fa34acf0bdb",
-      "updatedAt": "2026-11-04T00:21:31.869Z"
-    },
     "alex-carter-ui": {
       "fileId": "1tDwir3BPUMaEIJeW6AoyzuxY_AdHgkbz",
       "tier": "premium",
@@ -371,15 +353,6 @@
       "sizeBytes": 209734,
       "sha256": "f234a24b2178fb6855ab01f4d22393b9fe1e5e1bf409814b351b60433cfe81b9",
       "updatedAt": "2026-11-04T00:21:27.477Z"
-    },
-    "codenest-coding-platform": {
-      "fileId": "1KwQpCZajZXbNDN8oQyO6t_Zt58e7-APA",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1KwQpCZajZXbNDN8oQyO6t_Zt58e7-APA",
-      "webViewUrl": "https://drive.google.com/file/d/1KwQpCZajZXbNDN8oQyO6t_Zt58e7-APA/view",
-      "sizeBytes": 10144,
-      "sha256": "8d17934b9da3e06cd3bac12026b2bd034b391f28d2083f7fbebdc262e3a2a752",
-      "updatedAt": "2026-11-04T00:21:38.137Z"
     },
     "digital-kensei": {
       "fileId": "1nrFK_7WN3eOve6f0daOXK9WL5tW7mO8E",
@@ -452,33 +425,6 @@
       "sizeBytes": 152925,
       "sha256": "2f32325ee9d7cc6a8b44d4b9aef9fd5f39ceeec8b42897f0c3846a38b5b3bbad",
       "updatedAt": "2026-11-04T00:21:57.543Z"
-    },
-    "adoratorio-summer": {
-      "fileId": "1Atr1GyM8dzFoIYMJ6rdpxJzRWJshQ9TN",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1Atr1GyM8dzFoIYMJ6rdpxJzRWJshQ9TN",
-      "webViewUrl": "https://drive.google.com/file/d/1Atr1GyM8dzFoIYMJ6rdpxJzRWJshQ9TN/view",
-      "sizeBytes": 123489,
-      "sha256": "302e7131842923211724c2975a38c05dfcb0044ec3d4be4c6639f1c54ed5aa44",
-      "updatedAt": "2026-11-04T00:21:18.563Z"
-    },
-    "bishop-tentwenty": {
-      "fileId": "18wCORwP97jmLQ0WBwF3eBYD1WTAB31yK",
-      "tier": "free",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=18wCORwP97jmLQ0WBwF3eBYD1WTAB31yK",
-      "webViewUrl": "https://drive.google.com/file/d/18wCORwP97jmLQ0WBwF3eBYD1WTAB31yK/view",
-      "sizeBytes": 121427,
-      "sha256": "1cfc62e1e19f5791a8862193b4ac3f0a207c4e092fa915b14f5865f75b846ab6",
-      "updatedAt": "2026-11-04T00:21:29.834Z"
-    },
-    "cinder-axis": {
-      "fileId": "1lpiq_32lzjSQOVNQI4PJHFQpeAOwIy6E",
-      "tier": "free",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1lpiq_32lzjSQOVNQI4PJHFQpeAOwIy6E",
-      "webViewUrl": "https://drive.google.com/file/d/1lpiq_32lzjSQOVNQI4PJHFQpeAOwIy6E/view",
-      "sizeBytes": 111482,
-      "sha256": "d9eea875d8e31ab2114e6fbed50189a2cf34cd446635af4a5095e86792cf78f7",
-      "updatedAt": "2026-11-04T00:21:36.136Z"
     },
     "modern-agency": {
       "fileId": "1jWnlUtAIHWvS_VNNsybhY4H9W2n2hATW",
@@ -2073,15 +2019,6 @@
       "sha256": "c1b5ceab5597956cebd84ada799793f240ef858b57fc87ef3b62274113ac67dc",
       "updatedAt": "2026-11-06T13:39:22.387Z"
     },
-    "abstract-future-sculpt": {
-      "fileId": "1sSW0S_JxOVsKK3zrRY8tY8-h2UAL_uJM",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1sSW0S_JxOVsKK3zrRY8tY8-h2UAL_uJM",
-      "webViewUrl": "https://drive.google.com/file/d/1sSW0S_JxOVsKK3zrRY8tY8-h2UAL_uJM/view",
-      "sizeBytes": 75237,
-      "sha256": "c51b17f108d08ead9b0deb8e517babcd581112b205537a50588abe7f7055efdd",
-      "updatedAt": "2026-11-06T13:39:24.140Z"
-    },
     "foxico-indonesia-expedition": {
       "fileId": "1GocSXRCQhMBoM7dAfQL18Vh2Tocwe-A5",
       "tier": "free",
@@ -2090,15 +2027,6 @@
       "sizeBytes": 140608,
       "sha256": "28cd78532961d683a4fc98bc779b8444cb1d12c015edb572fc0e720decbeefc2",
       "updatedAt": "2026-11-06T13:39:24.171Z"
-    },
-    "artmuseum-spatial-gallery": {
-      "fileId": "1_Bn5mUHAWPrnZIuTuQMt_WNLoKmjkNxb",
-      "tier": "free",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1_Bn5mUHAWPrnZIuTuQMt_WNLoKmjkNxb",
-      "webViewUrl": "https://drive.google.com/file/d/1_Bn5mUHAWPrnZIuTuQMt_WNLoKmjkNxb/view",
-      "sizeBytes": 272977,
-      "sha256": "5df8470213c4efba598ccee09039cfac9d3b2e71b9776b67c814d22f3d20e522",
-      "updatedAt": "2026-11-06T13:39:24.214Z"
     },
     "laila-sakura-creator": {
       "fileId": "1FEUY-r-Hjf41L0gDJzsbNRh4BkjYHyhJ",
@@ -2162,33 +2090,6 @@
       "sizeBytes": 13096,
       "sha256": "da5137d20debf48b8e0705ee43e41e1e4602c197b99751763dd6b78d282c58a1",
       "updatedAt": "2026-11-06T13:39:26.087Z"
-    },
-    "liquid-glass-cta": {
-      "fileId": "1ad_15WxYcejnJQ_A2NyoCdMmf2-E7Ghh",
-      "tier": "free",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1ad_15WxYcejnJQ_A2NyoCdMmf2-E7Ghh",
-      "webViewUrl": "https://drive.google.com/file/d/1ad_15WxYcejnJQ_A2NyoCdMmf2-E7Ghh/view",
-      "sizeBytes": 10595,
-      "sha256": "8727c77ae44c02cd200d307eef68f58e30fbbeb644283e84a1dd09918d797eae",
-      "updatedAt": "2026-11-08T00:14:48.243Z"
-    },
-    "launchex-about": {
-      "fileId": "1HFnTQdfHhQYd_2BT_g6mHWghJ0Mzg9go",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1HFnTQdfHhQYd_2BT_g6mHWghJ0Mzg9go",
-      "webViewUrl": "https://drive.google.com/file/d/1HFnTQdfHhQYd_2BT_g6mHWghJ0Mzg9go/view",
-      "sizeBytes": 183806,
-      "sha256": "3ff5c5fd5aaa15af6179e1325acf8495f30ff079a85e33c19dfe13317d1b25c5",
-      "updatedAt": "2026-11-08T00:14:50.520Z"
-    },
-    "ai-image-generator-ui": {
-      "fileId": "1L73M900tbLM49vebk_dilvqeHz6svqdB",
-      "tier": "premium",
-      "publicUrl": "https://drive.google.com/uc?export=download&id=1L73M900tbLM49vebk_dilvqeHz6svqdB",
-      "webViewUrl": "https://drive.google.com/file/d/1L73M900tbLM49vebk_dilvqeHz6svqdB/view",
-      "sizeBytes": 10578,
-      "sha256": "519141d4ee70cfd1a1fae6196f3eaa88a533769090d59ff45a7ae4615f5bbf5e",
-      "updatedAt": "2026-11-08T00:14:52.590Z"
     },
     "interface-conce": {
       "fileId": "1GUCmH9WeZUniCZ_8SeU-Ox4TGM8Voerh",

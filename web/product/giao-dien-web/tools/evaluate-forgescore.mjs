@@ -40,9 +40,7 @@ const INLINE_PRODUCTS = new Set([
   'no-code-waitlist',
   'mufi-aba-scheduler',
   'bloodhound-outlands-tracker',
-  'abstract-future-sculpt',
   'foxico-indonesia-expedition',
-  'artmuseum-spatial-gallery',
   'feathers-atlas',
   'koru-tech-footer',
   'visual-hero',
@@ -74,18 +72,17 @@ const INLINE_PRODUCTS = new Set([
   'aetheris-voyage', 'digital-epoch', 'rivr', 'lumina', 'haul', 'vize-footer',
   'amazing-agency', 'glow-features', 'kresna-footer', 'price-calculator',
   'prisma-creative-studio', 'interactive-discovery', 'vex-ventures',
-  'skyelite-private-jets', 'modern-agency', 'asme', 'cinder-axis', 'bishop-tentwenty',
-  'fishfinger-creative', 'adoratorio-summer', 'micai-aristide', 'innovation',
-  'orbis-nft', 'portfolio-cosmic', 'max-reed-portfolio', 'mindloop-landing',
-  'codenest-coding-platform', 'digital-kensei', 'bame-esports', 'apex-upheaval',
-  'nova-glass', 'alex-carter-ui', 'power-ai', 'bloom-ai', 'luminex',
+  'skyelite-private-jets', 'modern-agency', 'asme',
+  'fishfinger-creative', 'micai-aristide', 'innovation',
+  'orbis-nft', 'portfolio-cosmic', 'max-reed-portfolio', 'mindloop-landing', 'digital-kensei', 'bame-esports', 'apex-upheaval',
+  'nova-glass', 'alex-carter-ui', 'power-ai', 'luminex',
   'transform-data', 'usd-halo', 'taskly', 'stellar-ai',
   'tripg-ocean', 'apex-squad-light', 'litera-bookstore', 'fischer-motorsport',
   'japan-sunrise-tour', 'datacore-booking', 'saas-software', 'neuralyn',
   'industrix-engineering', 'aquarium-animals',
   'flash-rocky-mountain', 'steary-spatial-cinema', 'swatch-luxury-chronograph',
   'digitwist-ai-builder', 'dot', 'email-marketing'
-, 'calfin-weather', 'cybr-brutalism', 'aurelia-biocyber', 'hush-futurist-bags', 'quiet-place-sanctuary', 'duolingo-styleguide', 'cross-border', 'subscription-agency', 'dotdna-cyber', 'polkacrypto-future', 'nexora-alex-portfolio', 'kata-ocado-portfolio', 'glitch-cyberwear', 'wellbeing-os', 'prosthetics-hero', 'retro-futurist', 'ozzies-pretzels', 'terrarium-deck-studio', 'foods-gourmet-bowl', 'visionglass-neo-ui', 'o2-moonish-cosmic', 'agentai-grid', 'porsche-caym', 'which-canvas', 'setting-stic', 'luminex-atelier-eab', 'contact-cybernetic', 'health-portal', 'impact-ventures', 'pumpit-grid', 'data-securit', 'laptop-computer', 'monolith-canvas-216', 'image-some', 'wanderful-hero', 'wellness-companion', 'nike-hover', 'helios-investments', 'rayhan-aditya', 'razer-mamba-pro', 'metaverse-cyber-webinar', 'looo-ai-magic', 'orbis-hello', 'organic-odyssey', 'nexacore-results', 'network-hero', 'portal', 'place-saver', 'sleek-futuri', 'this-canvas', 'professional-graphic', 'nugraha-jati', 'websi-atelier', 'travel-journal', 'celestial-renewal', 'ai-workflow-agents', 'f1-racing-hub', 'ai-workflow-hero', 'cyberpunk-reveal', 'clothing-rail-menswear', 'clothing-rail-dress-atelier', 'liquid-glass-cta', 'launchex-about', 'ai-image-generator-ui', 'interface-conce', 'reload-creat', 'endas-nfts', 'futuristic-canvas', 'nike-atelier']);
+, 'calfin-weather', 'cybr-brutalism', 'aurelia-biocyber', 'hush-futurist-bags', 'quiet-place-sanctuary', 'duolingo-styleguide', 'subscription-agency', 'dotdna-cyber', 'polkacrypto-future', 'nexora-alex-portfolio', 'kata-ocado-portfolio', 'glitch-cyberwear', 'wellbeing-os', 'prosthetics-hero', 'retro-futurist', 'ozzies-pretzels', 'terrarium-deck-studio', 'foods-gourmet-bowl', 'visionglass-neo-ui', 'o2-moonish-cosmic', 'agentai-grid', 'porsche-caym', 'which-canvas', 'setting-stic', 'luminex-atelier-eab', 'contact-cybernetic', 'health-portal', 'impact-ventures', 'pumpit-grid', 'data-securit', 'laptop-computer', 'monolith-canvas-216', 'image-some', 'wanderful-hero', 'wellness-companion', 'nike-hover', 'helios-investments', 'rayhan-aditya', 'razer-mamba-pro', 'metaverse-cyber-webinar', 'looo-ai-magic', 'orbis-hello', 'organic-odyssey', 'nexacore-results', 'network-hero', 'portal', 'place-saver', 'sleek-futuri', 'this-canvas', 'professional-graphic', 'nugraha-jati', 'websi-atelier', 'travel-journal', 'celestial-renewal', 'ai-workflow-agents', 'f1-racing-hub', 'ai-workflow-hero', 'cyberpunk-reveal', 'clothing-rail-menswear', 'clothing-rail-dress-atelier', 'interface-conce', 'reload-creat', 'endas-nfts', 'futuristic-canvas', 'nike-atelier', 'fintech-grid', 'vespera-canvas', 'marketing-canvas', 'elegant-colb', 'luminex-atelier-1f4']);
 
 const STATIC_ZIP_LIMIT = 20480;       // 20 KiB (WEB-STATIC-1)
 const CRAFT_ZIP_LIMIT = 1048576;      // 1 MiB (WEB-CRAFT-2)

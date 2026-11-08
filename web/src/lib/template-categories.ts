@@ -14,6 +14,7 @@ export const WEB_CATEGORY_LABELS: Record<LangCode, Record<WebCategory, string>> 
  * conservation programmes and public research belong to education.
  */
 export const TEMPLATE_CATEGORIES = {
+  'particle-brain': 'commerce',
   'vasari-curved-archive': 'entertainment',
   'leon-vasari': 'entertainment',
   'try-the-look': 'commerce',

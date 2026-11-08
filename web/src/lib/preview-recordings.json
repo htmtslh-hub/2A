@@ -3050,5 +3050,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "particle-brain": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "9b7c4ab26ef2",
+    "sha256": "9b7c4ab26ef210184232230807c0b7bcd42179dbbc7a55a7657710643f81a2e5",
+    "demoHtmlSha256": "2c8f386428ce82eb4e8225d4fafc32dbf481507e6a456c7b4fbf696212085bb1",
+    "demoSha256": "359b430de87e1568858779edb3863e1798be92f796a85956e17b1c56c94f2e20",
+    "bytes": 2222206,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

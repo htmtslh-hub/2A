@@ -35,6 +35,7 @@ function buildStoreCorpus() {
 }
 
 const EXPLICIT_2A_MAP = {
+  'nously-brain': 'particle-brain',
   'vasari-vhs-hero': 'leon-vasari',
   'vhs-archive': 'vasari-curved-archive',
   'vell-lookbook': 'maison-vell',

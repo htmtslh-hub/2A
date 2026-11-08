@@ -1,14 +1,14 @@
 # Kho Dữ Liệu Toàn Văn Prompt MotionSites.ai (`MOTIONSITES-PROMPT-BANK.md`)
 
-- **Thời điểm cập nhật:** `2026-11-08T02:34:06.908Z`
+- **Thời điểm cập nhật:** `2026-11-08T03:05:47.186Z`
 - **Tổng số mẫu trên MotionSites.ai:** **734 mẫu**
-- **Đã sử dụng trong kho 2A (Đã khóa chống trùng):** **143 mẫu**
+- **Đã sử dụng trong kho 2A (Đã khóa chống trùng):** **144 mẫu**
 - **Mẫu Free chưa dùng (Đầy đủ toàn văn `prompt_text` gốc từ MotionSites):** **159 mẫu**
-- **Mẫu Premium chưa dùng (Đầy đủ `prompt_text` kiến trúc + `video_preview_url` + `image_preview_url`):** **432 mẫu**
+- **Mẫu Premium chưa dùng (Đầy đủ `prompt_text` kiến trúc + `video_preview_url` + `image_preview_url`):** **431 mẫu**
 
 ---
 
-## PHẦN 1: Danh sách 143 mẫu đã từng sử dụng trong dự án 2A (Đã khóa tự động để không bao giờ làm trùng)
+## PHẦN 1: Danh sách 144 mẫu đã từng sử dụng trong dự án 2A (Đã khóa tự động để không bao giờ làm trùng)
 
 | # | MotionSites ID | Tên trên MotionSites | Phân loại | Slug trong kho 2A | Lý do phát hiện trùng |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -154,7 +154,8 @@
 | 140 | `feathers-atlas` | Feathers Atlas | Free | `feathers-atlas` | exact slug match |
 | 141 | `vasari-vhs-hero` | Shelf Hero | Free | `leon-vasari` | explicit 2A mapping (leon-vasari) |
 | 142 | `vell-lookbook` | Runway Lookbook | Free | `maison-vell` | explicit 2A mapping (maison-vell) |
-| 143 | `19` | Viktor Portfolio | Premium | `viktor-portfolio` | in processedPromptIds |
+| 143 | `nously-brain` | Particle Brain | Premium | `particle-brain` | explicit 2A mapping (particle-brain) |
+| 144 | `19` | Viktor Portfolio | Premium | `viktor-portfolio` | in processedPromptIds |
 
 ---
 
@@ -37399,7 +37400,7 @@ The images that are anchors (mug, iBook, book, t-shirt and the nav icons) wobble
 
 ---
 
-## PHẦN 3: Toàn văn Prompt & Video Preview của 432 mẫu Premium chưa dùng
+## PHẦN 3: Toàn văn Prompt & Video Preview của 431 mẫu Premium chưa dùng
 
 ### [PREMIUM-001] Dreamcore Landing (`dreamcore-landing`)
 - **Danh mục:** Landing Page | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
@@ -52625,45 +52626,7 @@ Create a high-craft, production-ready full-page web template for **"Car Atelier"
 
 ---
 
-### [PREMIUM-401] Particle Brain (`nously-brain`)
-- **Danh mục:** 3D | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
-- **Video Preview:** https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nously-brain.mp4
-- **Poster 1280px:** https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261102_080403_214a9ac1-5b38-455c-96bf-111f05313264.png&w=1280&q=85
-```markdown
-Create a high-craft, production-ready full-page web template for **"Particle Brain"** in the **3D** category.
-
-### 1. Visual Direction & Reference Assets
-- **Template ID:** `nously-brain`
-- **Category:** 3D (hero)
-- **Reference Video / Motion Preview:** https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nously-brain.mp4
-- **High-Res Reference Poster (1280px):** https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261102_080403_214a9ac1-5b38-455c-96bf-111f05313264.png&w=1280&q=85
-- **Design Paradigm:** Kinetic typography & neo-brutalist Swiss grids blended with atmospheric minimalism andchoreographed motion.
-
-### 2. Color & Atmospheric Polarity
-- **Primary Background Surface:** `#090A0F`
-- **Elevated Card / Module Surface:** `#12151E`
-- **Primary Typography Ink:** `#F5F7FA`
-- **Primary Accent & Interactive Highlight:** `#38BDF8`
-- **Border & Hairline Token:** `1px solid rgba(255,255,255,0.08)`
-
-### 3. Typography & Scannable Hierarchy
-- **Display / Headline Font:** `'Instrument Serif'`, `'Playfair Display'`, or `'Plus Jakarta Sans'` (`clamp(2.5rem, 5vw, 4.75rem)`, line-height `0.98`, letter-spacing `-0.03em`)
-- **UI & Body Font:** `'Inter'` or `'Plus Jakarta Sans'` (400, 500, 600)
-- **Technical / Numeric Meta Font:** `'JetBrains Mono'` with `font-variant-numeric: tabular-nums`
-
-### 4. Layout, Spatial Architecture & Interactive Functional Requirements
-1. **Top Navigation Bar:** Glassmorphic sticky header with brand wordmark **"Particle Brain"**, section anchors, interactive theme/mode or live status pill, and primary CTA button.
-2. **Primary Hero / Focal Showcase:**
-   - Incorporate the motion preview asset (https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nously-brain.mp4) with smooth parallax depth, subtle ambient glow, and crisp frame border.
-   - Headline copy tailored to **"Particle Brain"** (3D) with dual action triggers and live telemetry/metrics strip.
-3. **Interactive Bento / Feature Architecture:**
-   - 3-to-4 interactive cards or live calculator/filter controls depending on the archetype of **"Particle Brain"**.
-   - Micro-interactions on hover (`cubic-bezier(0.22, 1, 0.36, 1)`), live tab switching, and responsive 4-viewport adaptation (`1440px`, `1024px`, `768px`, `375px`).
-```
-
----
-
-### [PREMIUM-402] Glass Tree (`seedwell-hero`)
+### [PREMIUM-401] Glass Tree (`seedwell-hero`)
 - **Danh mục:** 3D | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/seedwell-hero.mp4
 - **Poster 1280px:** https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261104_034644_897e01e3-9a79-4089-b653-3e713d92e54d.png&w=1280&q=85
@@ -52701,7 +52664,7 @@ Create a high-craft, production-ready full-page web template for **"Glass Tree"*
 
 ---
 
-### [PREMIUM-403] Orbit Sphere (`orbit-sphere`)
+### [PREMIUM-402] Orbit Sphere (`orbit-sphere`)
 - **Danh mục:** Interactive | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/orbit-spher-hero-interactive.mp4
 - **Poster 1280px:** https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261103_172315_c36d295a-cfb3-4f1f-942d-37bc4e378b4e.png&w=1280&q=85
@@ -52739,7 +52702,7 @@ Create a high-craft, production-ready full-page web template for **"Orbit Sphere
 
 ---
 
-### [PREMIUM-404] Investor Deck (`deck-investor`)
+### [PREMIUM-403] Investor Deck (`deck-investor`)
 - **Danh mục:** Investor Presentations | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-deck-preview-CbidQJxW.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-deck-poster-yx2SqADM.png
@@ -52777,7 +52740,7 @@ Create a high-craft, production-ready full-page web template for **"Investor Dec
 
 ---
 
-### [PREMIUM-405] Vitara (`vitara-hero`)
+### [PREMIUM-404] Vitara (`vitara-hero`)
 - **Danh mục:** Landing Page | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-vitara-poster-CKA8M1gM.png
@@ -52815,7 +52778,7 @@ Create a high-craft, production-ready full-page web template for **"Vitara"** in
 
 ---
 
-### [PREMIUM-406] Weblex Dark Hero (`11`)
+### [PREMIUM-405] Weblex Dark Hero (`11`)
 - **Danh mục:** Landing Page | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-weblex-preview-BoIbrUHI.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-weblex-poster-EhV1BiMD.png
@@ -52853,7 +52816,7 @@ Create a high-craft, production-ready full-page web template for **"Weblex Dark 
 
 ---
 
-### [PREMIUM-407] New Era Automotive Hero (`8`)
+### [PREMIUM-406] New Era Automotive Hero (`8`)
 - **Danh mục:** Automotive | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-new-era-auto-preview-W56vp0xD.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-new-era-auto-poster-CSiQtduG.png
@@ -52891,7 +52854,7 @@ Create a high-craft, production-ready full-page web template for **"New Era Auto
 
 ---
 
-### [PREMIUM-408] Bionova Biotech (`bionova-hero`)
+### [PREMIUM-407] Bionova Biotech (`bionova-hero`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-bionova-preview-Sk76d0_D.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-bionova-poster-CPaKbq55.png
@@ -52929,7 +52892,7 @@ Create a high-craft, production-ready full-page web template for **"Bionova Biot
 
 ---
 
-### [PREMIUM-409] Finlytic AI Agent (`finlytic-hero`)
+### [PREMIUM-408] Finlytic AI Agent (`finlytic-hero`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-finlytic-preview-CV9g0FHP.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-finlytic-poster-BKqseFhS.png
@@ -52967,7 +52930,7 @@ Create a high-craft, production-ready full-page web template for **"Finlytic AI 
 
 ---
 
-### [PREMIUM-410] NOVA Space Systems (`nova-space-landing`)
+### [PREMIUM-409] NOVA Space Systems (`nova-space-landing`)
 - **Danh mục:** Landing Page | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-nova-space-preview-ej0OOJ0M.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-nova-space-poster-BNMHPfK2.png
@@ -53005,7 +52968,7 @@ Create a high-craft, production-ready full-page web template for **"NOVA Space S
 
 ---
 
-### [PREMIUM-411] Zenith Realty (`zenith-realty-landing`)
+### [PREMIUM-410] Zenith Realty (`zenith-realty-landing`)
 - **Danh mục:** Landing Page | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/landing-zenith-realty-preview-Y1uTjYYl.gif
 - **Poster 1280px:** https://motionsites.ai/assets/landing-zenith-realty-poster-Pwf4HO6U.png
@@ -53043,7 +53006,7 @@ Create a high-craft, production-ready full-page web template for **"Zenith Realt
 
 ---
 
-### [PREMIUM-412] Nexar (`nexar-hero`)
+### [PREMIUM-411] Nexar (`nexar-hero`)
 - **Danh mục:** Productivity | **Loại:** mobile | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-nexar-preview-Dk7ThCat.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-nexar-poster-CDz-DJNM.png
@@ -53081,7 +53044,7 @@ Create a high-craft, production-ready full-page web template for **"Nexar"** in 
 
 ---
 
-### [PREMIUM-413] AKOR Security (`akor-security-landing`)
+### [PREMIUM-412] AKOR Security (`akor-security-landing`)
 - **Danh mục:** Landing Page | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-akor-security-preview-hRrwsPNf.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-akor-security-poster-Cw0Ko1yz.png
@@ -53119,7 +53082,7 @@ Create a high-craft, production-ready full-page web template for **"AKOR Securit
 
 ---
 
-### [PREMIUM-414] Prioritize (`prioritize-hero`)
+### [PREMIUM-413] Prioritize (`prioritize-hero`)
 - **Danh mục:** Hero Section | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-prioritize-preview-DlI3SYr4.png
 - **Poster 1280px:** https://motionsites.ai/assets/hero-prioritize-preview-DlI3SYr4.png
@@ -53157,7 +53120,7 @@ Create a high-craft, production-ready full-page web template for **"Prioritize"*
 
 ---
 
-### [PREMIUM-415] Framelix 3D Studios (`13`)
+### [PREMIUM-414] Framelix 3D Studios (`13`)
 - **Danh mục:** Agency | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-framelix-preview-DsyIImVY.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-framelix-poster-Da8_fUvr.png
@@ -53195,7 +53158,7 @@ Create a high-craft, production-ready full-page web template for **"Framelix 3D 
 
 ---
 
-### [PREMIUM-416] Planet Orbit (`planet-orbit-hero`)
+### [PREMIUM-415] Planet Orbit (`planet-orbit-hero`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-planet-orbit-poster-CuWG70ga.png
@@ -53233,7 +53196,7 @@ Create a high-craft, production-ready full-page web template for **"Planet Orbit
 
 ---
 
-### [PREMIUM-417] Mindloop (`mindloop-hero`)
+### [PREMIUM-416] Mindloop (`mindloop-hero`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-mindloop-preview-BR8xW6xW.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-mindloop-poster-2_RhEWJd.png
@@ -53271,7 +53234,7 @@ Create a high-craft, production-ready full-page web template for **"Mindloop"** 
 
 ---
 
-### [PREMIUM-418] Nexus IT Solutions (`nexus-hero`)
+### [PREMIUM-417] Nexus IT Solutions (`nexus-hero`)
 - **Danh mục:** Hero Section | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-nexus-preview-74RfhYpA.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-nexus-poster-fNblRje9.png
@@ -53309,7 +53272,7 @@ Create a high-craft, production-ready full-page web template for **"Nexus IT Sol
 
 ---
 
-### [PREMIUM-419] Nickel Payments (`nickel-hero`)
+### [PREMIUM-418] Nickel Payments (`nickel-hero`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-nickel-preview-CnRoBZt5.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-nickel-poster-Co3f0jXk.png
@@ -53347,7 +53310,7 @@ Create a high-craft, production-ready full-page web template for **"Nickel Payme
 
 ---
 
-### [PREMIUM-420] Orbit Web3 (`orbit-web3-hero`)
+### [PREMIUM-419] Orbit Web3 (`orbit-web3-hero`)
 - **Danh mục:** Web3 | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-orbit-web3-poster-CsiRb_pp.png
@@ -53385,7 +53348,7 @@ Create a high-craft, production-ready full-page web template for **"Orbit Web3"*
 
 ---
 
-### [PREMIUM-421] Datacore SaaS Hero (`4`)
+### [PREMIUM-420] Datacore SaaS Hero (`4`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-datacore-preview-DWeq7Ls3.gif
 - **Poster 1280px:** —
@@ -53423,7 +53386,7 @@ Create a high-craft, production-ready full-page web template for **"Datacore Saa
 
 ---
 
-### [PREMIUM-422] Taskora SaaS Hero (`2`)
+### [PREMIUM-421] Taskora SaaS Hero (`2`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-taskora-preview-BlRBv8IU.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-taskora-poster-Cgi3qyR1.png
@@ -53461,7 +53424,7 @@ Create a high-craft, production-ready full-page web template for **"Taskora SaaS
 
 ---
 
-### [PREMIUM-423] Wealth Video Hero (`0`)
+### [PREMIUM-422] Wealth Video Hero (`0`)
 - **Danh mục:** Fintech | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-wealth-poster-D9mwBQ1R.png
@@ -53499,7 +53462,7 @@ Create a high-craft, production-ready full-page web template for **"Wealth Video
 
 ---
 
-### [PREMIUM-424] Apex SaaS (`apex-saas-hero`)
+### [PREMIUM-423] Apex SaaS (`apex-saas-hero`)
 - **Danh mục:** SaaS | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-apex-saas-preview-CbnBKSPv.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-apex-saas-poster-CZ6BkKIa.png
@@ -53537,7 +53500,7 @@ Create a high-craft, production-ready full-page web template for **"Apex SaaS"**
 
 ---
 
-### [PREMIUM-425] Dark Portfolio Hero (`15`)
+### [PREMIUM-424] Dark Portfolio Hero (`15`)
 - **Danh mục:** Portfolio | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-portfolio-dark-preview-RZYzJHIL.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-portfolio-dark-poster-CDlMFIzp.png
@@ -53575,7 +53538,7 @@ Create a high-craft, production-ready full-page web template for **"Dark Portfol
 
 ---
 
-### [PREMIUM-426] VertexAI Hero (`vertex-ai-hero`)
+### [PREMIUM-425] VertexAI Hero (`vertex-ai-hero`)
 - **Danh mục:** Hero Section | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-vertex-ai-preview-Da80y3xa.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-vertex-ai-poster-DEZfbTg3.png
@@ -53613,7 +53576,7 @@ Create a high-craft, production-ready full-page web template for **"VertexAI Her
 
 ---
 
-### [PREMIUM-427] Keep Ahead Features (`keep-ahead-features`)
+### [PREMIUM-426] Keep Ahead Features (`keep-ahead-features`)
 - **Danh mục:** Features Section | **Loại:** features | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/features-keep-ahead-poster-CriEHu8p.png
 - **Poster 1280px:** https://motionsites.ai/assets/features-keep-ahead-poster-CriEHu8p.png
@@ -53651,7 +53614,7 @@ Create a high-craft, production-ready full-page web template for **"Keep Ahead F
 
 ---
 
-### [PREMIUM-428] Benefits Features (`benefits-features`)
+### [PREMIUM-427] Benefits Features (`benefits-features`)
 - **Danh mục:** Features Section | **Loại:** features | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/features-benefits-preview-DO4ULagO.gif
 - **Poster 1280px:** https://motionsites.ai/assets/features-benefits-poster-DhGuAFq1.png
@@ -53689,7 +53652,7 @@ Create a high-craft, production-ready full-page web template for **"Benefits Fea
 
 ---
 
-### [PREMIUM-429] Zenith Footer (`zenith-footer`)
+### [PREMIUM-428] Zenith Footer (`zenith-footer`)
 - **Danh mục:** Footer Section | **Loại:** footer | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/footer-zenith-preview-CYxIE6aF.gif
 - **Poster 1280px:** https://motionsites.ai/assets/footer-zenith-poster-CYI_iYMw.png
@@ -53727,7 +53690,7 @@ Create a high-craft, production-ready full-page web template for **"Zenith Foote
 
 ---
 
-### [PREMIUM-430] Digital Reality (`digital-reality-hero`)
+### [PREMIUM-429] Digital Reality (`digital-reality-hero`)
 - **Danh mục:** Social Media | **Loại:** social-media | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-digital-reality-preview-BogjTXUi.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-digital-reality-poster-CmM0f68V.png
@@ -53765,7 +53728,7 @@ Create a high-craft, production-ready full-page web template for **"Digital Real
 
 ---
 
-### [PREMIUM-431] Community CTA (`community-cta`)
+### [PREMIUM-430] Community CTA (`community-cta`)
 - **Danh mục:** CTA Section | **Loại:** cta | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/cta-community-preview-C90X-RHI.gif
 - **Poster 1280px:** https://motionsites.ai/assets/cta-community-poster-BKT8jLLq.png
@@ -53803,7 +53766,7 @@ Create a high-craft, production-ready full-page web template for **"Community CT
 
 ---
 
-### [PREMIUM-432] What Package Fits You (`package-fits-pricing`)
+### [PREMIUM-431] What Package Fits You (`package-fits-pricing`)
 - **Danh mục:** Pricing | **Loại:** hero | **Nguồn Prompt:** `visual_architectural_spec`
 - **Video Preview:** https://motionsites.ai/assets/hero-package-fits-pricing-preview-Bglk5DXD.gif
 - **Poster 1280px:** https://motionsites.ai/assets/hero-package-fits-pricing-poster-a5yPlgS5.png

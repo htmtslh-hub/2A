@@ -46,6 +46,30 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t283: {
+    slug: 'particle-brain',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Nously — 3D Particle Brain AI",
+        desc: "Nền tảng trí tuệ tập thể Nously AI: mô hình bộ não 3D cấu thành từ 2.600 tam giác wireframe đa sắc phản hồi theo trỏ chuột, hiệu ứng phân rã không gian 3D theo cuộn trang và trạm truy vấn tri thức doanh nghiệp trực tiếp.",
+        tags: ["3D Particle Brain", "Scroll Explosion", "Collective Intelligence"]
+      },
+      en: {
+        name: "Nously — 3D Particle Brain AI",
+        desc: "Nously collective intelligence platform featuring an interactive 2,600-triangle 3D wireframe brain with magnetic cursor magnification, scroll-driven 3D fragment dispersion, and a live enterprise knowledge query simulator.",
+        tags: ["3D Particle Brain", "Scroll Explosion", "Collective Intelligence"]
+      },
+      zh: {
+        name: "Nously — 3D 粒子脑集体智慧平台",
+        desc: "Nously 企业集体智慧 AI 平台：由 2,600 个多彩线框三角形构成的交互式 3D 大脑模型，支持鼠标磁力放大、滚动驱动 3D 碎片扩散与实时知识图谱查询模拟器。",
+        tags: ["3D 粒子大脑", "滚动空间扩散", "企业知识引擎"]
+      }
+    }
+  },
+
   t282: {
     slug: 'vasari-curved-archive',
     cat: 'entertainment',

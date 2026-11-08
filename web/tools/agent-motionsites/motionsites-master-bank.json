@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-08T02:34:06.908Z",
+  "generatedAt": "2026-11-08T03:05:47.186Z",
   "totalTemplates": 734,
   "summary": {
     "total": 734,
-    "alreadyUsedIn2A": 143,
+    "alreadyUsedIn2A": 144,
     "queuedUnusedFreeWithPrompt": 159,
-    "queuedUnusedPremiumWithPreview": 432
+    "queuedUnusedPremiumWithPreview": 431
   },
   "items": [
     {
@@ -16768,9 +16768,9 @@
       "promptSource": "visual_architectural_spec",
       "category": "3D",
       "type": "hero",
-      "status": "queued_unused",
-      "matched2ASlug": null,
-      "matchReason": null,
+      "status": "already_used_in_2A",
+      "matched2ASlug": "particle-brain",
+      "matchReason": "explicit 2A mapping (particle-brain)",
       "videoPreviewUrl": "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nously-brain.mp4",
       "imagePreviewUrl": "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261102_080403_214a9ac1-5b38-455c-96bf-111f05313264.png&w=1280&q=85",
       "githubUrl": null,

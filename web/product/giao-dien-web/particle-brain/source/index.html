@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="active">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050508">
+<title>Nously — Unlock Collective Wisdom | 3D Particle Brain AI</title>
+<meta name="description" content="Stop managing knowledge. Start using it. Plug into your team's shared brainpower with Nously's collective intelligence engine across every tool you use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --bg-void: #050508;
+  --bg-surface: #0C0D14;
+  --bg-elevated: #131522;
+  --bg-glass: rgba(14, 16, 26, 0.76);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.84);
+  --text-muted: #9499AD;
+  --accent: #7C5CFC;
+  --accent-hover: #8E71FF;
+  --accent-text: #A78BFA;
+  --on-accent: #FFFFFF;
+  --gold-eyebrow: #DEB035;
+  --gold-bright: #F5C518;
+  --cyan-prism: #2DD4BF;
+  --emerald-node: #22C55E;
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-focus: rgba(124, 92, 252, 0.55);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-quart: cubic-bezier(0.16, 1, 0.3, 1);
+  --font-display: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+}
+
+button, input, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 300;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(120px);
+}
+
+/* Fixed 3D Particle Brain Canvas Backdrop */
+.brain-canvas-stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100svh;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#nously-brain-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@keyframes prismPulse {
+  0%, 100% { transform: scale(1); opacity: 0.92; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+
+/* 1. Top Navigation Header (Exact Reference Match) */
+.ns-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82px;
+  padding: 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 90;
+  background: linear-gradient(180deg, rgba(5, 5, 8, 0.86) 0%, rgba(5, 5, 8, 0) 100%);
+}
+
+.ns-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.ns-brand svg {
+  width: 22px;
+  height: 20px;
+  display: block;
+  animation: prismPulse 4s ease-in-out infinite;
+}
+
+.ns-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.ns-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.ns-nav-link {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  transition: color 0.25s var(--ease-out);
+}
+
+.ns-nav-link:hover {
+  color: var(--gold-bright);
+}
+
+.ns-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: var(--on-accent);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: background-color 0.25s var(--ease-out), transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+  box-shadow: 0 8px 28px rgba(124, 92, 252, 0.32);
+}
+
+.ns-btn-pill:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 34px rgba(124, 92, 252, 0.46);
+}
+
+/* 2. Scroll Theater: Hero + 3D Brain Zoom + Scattered Manifesto */
+.ns-scroll-theater {
+  position: relative;
+  z-index: 10;
+  min-height: 235svh;
+}
+
+.ns-hero-screen {
+  position: relative;
+  min-height: 100svh;
+  padding: 132px 42px 64px 120px;
+  display: grid;
+  grid-template-columns: minmax(320px, 500px) minmax(0, 1fr);
+  align-items: center;
+}
+
+.ns-hero-copy {
+  position: relative;
+  z-index: 12;
+  will-change: transform, opacity;
+}
+
+.ns-hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(54px, 6.7vw, 102px);
+  line-height: 0.97;
+  letter-spacing: -0.038em;
+  color: var(--text-primary);
+}
+
+.ns-hero-eyebrow {
+  margin: 38px 0 0;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-eyebrow);
+}
+
+.ns-hero-desc {
+  margin: 14px 0 0;
+  max-width: 430px;
+  font-family: var(--font-sans);
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.54;
+  color: var(--text-secondary);
+}
+
+.ns-hero-actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.ns-mode-bar {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgba(14, 16, 26, 0.72);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+}
+
+.ns-mode-btn {
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  transition: background-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+
+.ns-mode-btn.is-active {
+  background-color: rgba(124, 92, 252, 0.24);
+  color: var(--text-primary);
+}
+
+/* Scattered Fragments Manifesto Screen (Exact End Frame Copy) */
+.ns-manifesto-screen {
+  position: relative;
+  min-height: 115svh;
+  padding: 120px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 12;
+}
+
+.ns-manifesto-box {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 28px;
+  border-radius: 24px;
+  background: radial-gradient(circle at 50% 50%, rgba(5, 5, 8, 0.78) 0%, rgba(5, 5, 8, 0.25) 75%, transparent 100%);
+}
+
+.ns-manifesto-p {
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(23px, 2.55vw, 36px);
+  line-height: 1.34;
+  letter-spacing: -0.022em;
+  color: var(--text-primary);
+}
+
+.ns-manifesto-p + .ns-manifesto-p {
+  margin-top: 38px;
+}
+
+.ns-manifesto-stats {
+  margin-top: 44px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(14px);
+}
+
+.ns-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.ns-stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-bright);
+}
+
+/* 3. Interactive Collective Intelligence Query Workbench (#product) */
+.ns-section {
+  position: relative;
+  z-index: 15;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 96px 42px;
+}
+
+.ns-section-head {
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+.ns-kicker {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-eyebrow);
+  margin-bottom: 12px;
+}
+
+.ns-h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.ns-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 28px;
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
+}
+
+.ns-query-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ns-query-btn {
+  text-align: left;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s var(--ease-out), background-color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.ns-query-btn:hover {
+  border-color: rgba(245, 197, 24, 0.45);
+  transform: translateX(3px);
+}
+
+.ns-query-btn.is-active {
+  background: rgba(124, 92, 252, 0.16);
+  border-color: var(--accent);
+}
+
+.ns-q-tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--gold-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ns-q-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.ns-answer-card {
+  padding: 26px 28px;
+  border-radius: 18px;
+  background: rgba(8, 9, 15, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ns-answer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ns-confidence {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--emerald-node);
+  font-variant-numeric: tabular-nums;
+}
+
+.ns-answer-body {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ns-sources-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ns-source-chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 4. Neural Knowledge Architecture Bento (#blog) */
+.ns-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ns-bento-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.ns-bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 92, 252, 0.45);
+}
+
+.ns-bento-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold-bright);
+  font-variant-numeric: tabular-nums;
+}
+
+.ns-bento-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.ns-bento-desc {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.ns-bento-preview {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--cyan-prism);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 5. Pricing Section (#pricing) */
+.ns-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ns-price-card {
+  padding: 32px 28px;
+  border-radius: 22px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  /* blur budget capped */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ns-price-card.is-featured {
+  border-color: var(--accent);
+  box-shadow: 0 20px 50px rgba(124, 92, 252, 0.18);
+}
+
+.ns-price-tier {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-eyebrow);
+}
+
+.ns-price-val {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.ns-price-val span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.ns-price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* 6. Footer */
+.ns-footer {
+  position: relative;
+  z-index: 15;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 44px 42px 64px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.ns-footer-Snapshot {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ns-footer-Snapshot img {
+  width: 48px;
+  height: 27px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+/* 7. Request Access Modal */
+.ns-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(5, 5, 8, 0.82);
+  /* blur budget capped */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.ns-modal-backdrop[hidden] {
+  display: none !important;
+}
+
+.ns-modal {
+  width: 100%;
+  max-width: 460px;
+  padding: 32px;
+  border-radius: 22px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-focus);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.65);
+}
+
+.ns-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.ns-modal-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.ns-modal-close {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.ns-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.ns-field label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.ns-input {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .ns-hero-screen {
+    padding: 118px 32px 56px 42px;
+    grid-template-columns: minmax(280px, 440px) minmax(0, 1fr);
+  }
+  .ns-workbench {
+    grid-template-columns: 1fr;
+  }
+  .ns-bento-grid,
+  .ns-pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ns-header {
+    height: 68px;
+    padding: 0 20px;
+  }
+  .ns-nav-links {
+    display: none;
+  }
+  .ns-hero-screen {
+    grid-template-columns: 1fr;
+    padding: 98px 20px 48px;
+    align-items: flex-start;
+  }
+  .ns-section {
+    padding: 64px 20px;
+  }
+  .ns-bento-grid,
+  .ns-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .ns-footer {
+    padding: 32px 20px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to collective wisdom platform</a>
+
+<!-- Fixed 3D Wireframe Triangle Particle Brain Canvas -->
+<div class="brain-canvas-stage" aria-hidden="true">
+  <canvas id="nously-brain-canvas"></canvas>
+</div>
+
+<!-- 1. Top Navigation Bar (Exact Reference Match) -->
+<header class="ns-header">
+  <a href="#main-content" class="ns-brand" aria-label="Nously Home">
+    <svg viewBox="0 0 24 22" aria-hidden="true">
+      <polygon points="12,1 2,20 12,15" fill="#38BDF8"></polygon>
+      <polygon points="12,1 22,20 12,15" fill="#F5C518"></polygon>
+      <polygon points="2,20 22,20 12,15" fill="#8B5CF6"></polygon>
+    </svg>
+    <span>Nously</span>
+  </a>
+
+  <div class="ns-nav-right">
+    <nav class="ns-nav-links" aria-label="Primary navigation">
+      <a href="#product" class="ns-nav-link">PRODUCT</a>
+      <a href="#pricing" class="ns-nav-link">PRICING</a>
+      <a href="#blog" class="ns-nav-link">BLOG</a>
+    </nav>
+    <button type="button" class="ns-btn-pill" id="open-access-modal">REQUEST ACCESS</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <!-- 2. Scroll Theater: Hero + 3D Particle Brain Dispersion -->
+  <div class="ns-scroll-theater" id="scroll-theater">
+    <section class="ns-hero-screen" aria-labelledby="hero-heading">
+      <div class="ns-hero-copy" id="hero-copy">
+        <h1 class="ns-hero-title" id="hero-heading">
+          Unlock<br>
+          collective<br>
+          wisdom.
+        </h1>
+        <p class="ns-hero-eyebrow">STOP MANAGING KNOWLEDGE. START USING IT.</p>
+        <p class="ns-hero-desc">
+          Plug into your team's shared brainpower. Ask Nously to find anything, or anyone, across every tool you use. Focus on doing your best work with context, conviction and clarity.
+        </p>
+        <div class="ns-hero-actions">
+          <button type="button" class="ns-btn-pill" id="hero-request-btn">REQUEST ACCESS</button>
+        </div>
+
+        <div class="ns-mode-bar" role="group" aria-label="3D Particle Brain Topology">
+          <button type="button" class="ns-mode-btn is-active" data-brain-mode="cortex">Cortex 2.6k △</button>
+          <button type="button" class="ns-mode-btn" data-brain-mode="synapse">Synapse Pulse</button>
+          <button type="button" class="ns-mode-btn" data-brain-mode="quantum">Prism Scatter</button>
+        </div>
+      </div>
+      <div aria-hidden="true"></div>
+    </section>
+
+    <!-- Scattered Fragments Manifesto (Exact Scroll Scene Copy) -->
+    <section class="ns-manifesto-screen" id="manifesto-section" aria-label="The Problem with Scattered Knowledge">
+      <div class="ns-manifesto-box">
+        <p class="ns-manifesto-p">
+          This is work today. Countless fragments of critical knowledge scattered across hundreds of disconnected systems.
+        </p>
+        <p class="ns-manifesto-p">
+          Almost a third of your week goes on hunting for the information and the expertise you need to do your job.
+        </p>
+        <div class="ns-manifesto-stats">
+          <span class="ns-stat-pill"><span class="ns-stat-dot"></span>31.4% Week Lost Hunting Context</span>
+          <span class="ns-stat-pill"><span class="ns-stat-dot" style="background:#8B5CF6"></span>140+ Enterprise Silos Indexed</span>
+          <span class="ns-stat-pill"><span class="ns-stat-dot" style="background:#2DD4BF"></span>&lt; 180ms Semantic Recall</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 3. Interactive Collective Intelligence Workbench (#product) -->
+  <section class="ns-section" id="product" aria-labelledby="workbench-heading">
+    <div class="ns-section-head">
+      <span class="ns-kicker">SHARED BRAINPOWER ENGINE</span>
+      <h2 class="ns-h2" id="workbench-heading">Ask Nously anything across your entire stack.</h2>
+    </div>
+
+    <div class="ns-workbench">
+      <div class="ns-query-list" role="tablist" aria-label="Sample organizational queries">
+        <button type="button" class="ns-query-btn is-active" role="tab" aria-selected="true" data-query-idx="0">
+          <span class="ns-q-tag">01 / ENGINEERING &amp; ARCHITECTURE</span>
+          <span class="ns-q-text">"Why did we switch the vector index shard strategy in Q3, and who signed off?"</span>
+        </button>
+        <button type="button" class="ns-query-btn" role="tab" aria-selected="false" data-query-idx="1">
+          <span class="ns-q-tag">02 / PRODUCT &amp; REVENUE CONTEXT</span>
+          <span class="ns-q-text">"What were the top 3 enterprise blockers in EMEA security reviews last month?"</span>
+        </button>
+        <button type="button" class="ns-query-btn" role="tab" aria-selected="false" data-query-idx="2">
+          <span class="ns-q-tag">03 / EXPERTISE DISCOVERY</span>
+          <span class="ns-q-text">"Who on our team has shipped zero-downtime Postgres partitioning before?"</span>
+        </button>
+      </div>
+
+      <article class="ns-answer-card" aria-live="polite">
+        <div class="ns-answer-top">
+          <span class="ns-q-tag" id="ans-label">SYNTHESIZED FROM 14 FRAGMENTS</span>
+          <span class="ns-confidence" id="ans-conf">99.4% CONVICTION SCORE</span>
+        </div>
+        <p class="ns-answer-body" id="ans-body">
+          In RFC-218 (Aug 14), Principal Engineer Elena Rostova proposed migrating from HNSW flat shards to hybrid IVF-PQ to cut tail p99 latency from 310ms to 42ms. Approved by VP Infra Marcus Vance in #arch-council and merged in PR #4812.
+        </p>
+        <div class="ns-sources-row" id="ans-sources">
+          <span class="ns-source-chip">Notion · RFC-218</span>
+          <span class="ns-source-chip">GitHub · PR #4812</span>
+          <span class="ns-source-chip">Slack · #arch-council</span>
+          <span class="ns-source-chip">Linear · INF-904</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Neural Knowledge Graph Bento (#blog) -->
+  <section class="ns-section" id="blog" aria-labelledby="bento-heading">
+    <div class="ns-section-head">
+      <span class="ns-kicker">COLLECTIVE MEMORY ARCHITECTURE</span>
+      <h2 class="ns-h2" id="bento-heading">Context that reassembles itself around your work.</h2>
+    </div>
+
+    <div class="ns-bento-grid">
+      <article class="ns-bento-card">
+        <span class="ns-bento-num">01 / ZERO-MAINTENANCE GRAPH</span>
+        <h3 class="ns-bento-title">No wikis to curate</h3>
+        <p class="ns-bento-desc">Nously continuously maps conversations, commits, docs, and tickets into a living 3D semantic mesh without manual tagging.</p>
+        <div class="ns-bento-preview">
+          <span>Auto-Ingestion</span>
+          <span>2.4M nodes/hr</span>
+        </div>
+      </article>
+
+      <article class="ns-bento-card">
+        <span class="ns-bento-num">02 / EXPERTISE RADAR</span>
+        <h3 class="ns-bento-title">Find the person, not just the file</h3>
+        <p class="ns-bento-desc">Identify who actually solved the problem based on authored code, design critiques, and incident resolutions.</p>
+        <div class="ns-bento-preview">
+          <span>Authorship Graph</span>
+          <span>100% Verified</span>
+        </div>
+      </article>
+
+      <article class="ns-bento-card">
+        <span class="ns-bento-num">03 / PERMISSION-NATIVE</span>
+        <h3 class="ns-bento-title">Zero-leak ACL mirroring</h3>
+        <p class="ns-bento-desc">Every triangle in the collective brain respects source-level permissions from Okta, Google Workspace, Slack, and GitHub.</p>
+        <div class="ns-bento-preview">
+          <span>SOC2 Type II</span>
+          <span>AES-256-GCM</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. Pricing Section (#pricing) -->
+  <section class="ns-section" id="pricing" aria-labelledby="pricing-heading">
+    <div class="ns-section-head">
+      <span class="ns-kicker">TRANSPARENT DEPLOYMENT</span>
+      <h2 class="ns-h2" id="pricing-heading">Scale your organization's shared cortex.</h2>
+    </div>
+
+    <div class="ns-pricing-grid">
+      <article class="ns-price-card">
+        <span class="ns-price-tier">SEED TEAM</span>
+        <div class="ns-price-val">$29 <span>/ user / mo</span></div>
+        <ul class="ns-price-list">
+          <li>Up to 50 connected builders</li>
+          <li>25 native tool connectors</li>
+          <li>Instant semantic Q&amp;A</li>
+        </ul>
+        <button type="button" class="ns-btn-pill" data-open-modal="Seed Team">REQUEST ACCESS</button>
+      </article>
+
+      <article class="ns-price-card is-featured">
+        <span class="ns-price-tier">COLLECTIVE CORTEX</span>
+        <div class="ns-price-val">$64 <span>/ user / mo</span></div>
+        <ul class="ns-price-list">
+          <li>Unlimited seats &amp; historical depth</li>
+          <li>Real-time Expertise Radar &amp; API</li>
+          <li>Custom ACL &amp; SSO enforcement</li>
+        </ul>
+        <button type="button" class="ns-btn-pill" data-open-modal="Collective Cortex">REQUEST ACCESS</button>
+      </article>
+
+      <article class="ns-price-card">
+        <span class="ns-price-tier">SOVEREIGN VPC</span>
+        <div class="ns-price-val">Custom <span>/ dedicated</span></div>
+        <ul class="ns-price-list">
+          <li>Single-tenant AWS / GCP deployment</li>
+          <li>Zero-retention LLM inference</li>
+          <li>Dedicated forward-deployed engineer</li>
+        </ul>
+        <button type="button" class="ns-btn-pill" data-open-modal="Sovereign VPC">REQUEST ACCESS</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- 6. Footer -->
+<footer class="ns-footer">
+  <div class="ns-footer-Snapshot">
+    <img src="./assets/poster.webp" alt="Nously 3D Particle Brain reference snapshot" width="48" height="27" loading="lazy">
+    <span>© 2026 Nously Inc. Unlock collective wisdom.</span>
+  </div>
+  <div>SOC2 Type II Certified · ISO 27001 · GDPR Ready</div>
+</footer>
+
+<!-- 7. Request Access Modal Dialog -->
+<div class="ns-modal-backdrop" id="access-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <div class="ns-modal">
+    <div class="ns-modal-head">
+      <h2 class="ns-modal-title" id="modal-title">Request Nously Access</h2>
+      <button type="button" class="ns-modal-close" id="close-access-modal" aria-label="Close modal">X</button>
+    </div>
+    <form id="access-form">
+      <div class="ns-field">
+        <label for="work-email">Work Email</label>
+        <input type="email" id="work-email" class="ns-input" placeholder="you@company.com" required>
+      </div>
+      <div class="ns-field">
+        <label for="team-size">Organization Size</label>
+        <input type="text" id="team-size" class="ns-input" value="150–500 engineers &amp; operators" required>
+      </div>
+      <button type="submit" class="ns-btn-pill" style="width:100%;height:44px">PLUG INTO SHARED BRAINPOWER</button>
+    </form>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  const canvas = document.getElementById('nously-brain-canvas');
+  const ctx = canvas.getContext('2d');
+  const heroCopy = document.getElementById('hero-copy');
+  const theater = document.getElementById('scroll-theater');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  let W = window.innerWidth;
+  let H = window.innerHeight;
+  let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  function resizeCanvas() {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(W * dpr);
+    canvas.height = Math.floor(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  /* Deterministic PRNG for reproducible anatomical brain sculpture */
+  let seed = 42197;
+  function rand() {
+    seed = (seed * 16807) % 2147483647;
+    return (seed - 1) / 2147483646;
+  }
+
+  /* Build 2,550 3D wireframe triangles forming the exact side-profile human brain + brainstem + ambient tetrahedra */
+  const particles = [];
+  const BRAIN_COUNT = 2450;
+  const AMBIENT_COUNT = 110;
+
+  function insideBrainProfile(x, y, z) {
+    /* Main cerebral hemisphere dome: x in [-1.05, 1.05], y in [-0.85, 0.56], z in [-0.72, 0.72] */
+    /* Upper dome arch */
+    const nx = x / 1.04;
+    const ny = (y + 0.08) / 0.78;
+    const nz = z / 0.68;
+    let dMain = nx * nx + ny * ny + nz * nz;
+
+    /* Frontal-temporal notch (bottom-left indentation in side profile) */
+    if (x < -0.22 && y > 0.14) {
+      dMain += Math.pow(( -0.22 - x) * 1.45, 2) + Math.pow((y - 0.14) * 1.65, 2);
+    }
+
+    /* Temporal lobe lower-middle bulge */
+    const tx = (x - 0.06) / 0.48;
+    const ty = (y - 0.34) / 0.32;
+    const tz = z / 0.52;
+    const dTemp = tx * tx + ty * ty + tz * tz;
+
+    /* Occipital / Cerebellar lower-right bulge */
+    const cx = (x - 0.56) / 0.44;
+    const cy = (y - 0.32) / 0.30;
+    const cz = z / 0.48;
+    const dCereb = cx * cx + cy * cy + cz * cz;
+
+    const minShell = Math.min(dMain, dTemp, dCereb);
+    return { inside: minShell <= 1.0, shell: minShell };
+  }
+
+  let generated = 0;
+  let attempts = 0;
+  while (generated < BRAIN_COUNT && attempts < 30000) {
+    attempts++;
+    /* 120 brainstem triangles at the bottom column */
+    if (generated < 130) {
+      const bx = 0.05 + (rand() - 0.5) * 0.24;
+      const by = 0.55 + rand() * 0.62;
+      const bz = (rand() - 0.5) * 0.22;
+      particles.push({
+        bx: bx,
+        by: by,
+        bz: bz,
+        ex: (rand() - 0.5) * 4.5,
+        ey: (rand() - 0.5) * 3.8,
+        ez: (rand() - 0.5) * 3.5,
+        size: 3.4 + rand() * 2.2,
+        rot: rand() * Math.PI * 2,
+        rotSpeed: (rand() - 0.5) * 1.6,
+        color: rand() > 0.5 ? '#2DD4BF' : '#6D5AE6',
+        rim: false,
+        stem: true,
+        tetra: false,
+        alpha: 0.28 + rand() * 0.28
+      });
+      generated++;
+      continue;
+    }
+
+    /* Sample predominantly near cortical surface for crisp outline + folded interior gyri */
+    const u = rand() * 2 - 1;
+    const theta = rand() * Math.PI * 2;
+    const rBias = Math.pow(rand(), 0.28); /* concentrates near outer cortex */
+    const s = Math.sqrt(1 - u * u);
+    const x = rBias * s * Math.cos(theta) * 1.06;
+    const y = rBias * u * 0.82 - 0.04;
+    const z = rBias * s * Math.sin(theta) * 0.68;
+
+    const check = insideBrainProfile(x, y, z);
+    if (!check.inside) continue;
+
+    /* Gyri & Sulci cortical folds modulation */
+    const foldWave = Math.sin(x * 7.8 + Math.sin(y * 5.2) * 1.5) * Math.cos(y * 7.4 - x * 2.4);
+    const isOuterRim = check.shell > 0.76;
+    if (!isOuterRim && foldWave < -0.18 && rand() < 0.78) {
+      continue; /* Carves out the dark sulci channels seen in the reference */
+    }
+
+    /* Color distribution matching the Nously reference frame */
+    let color = '#F5C518'; /* Solar gold */
+    const rimHighlight = check.shell > 0.82;
+    if (rimHighlight) {
+      const rCol = rand();
+      if (y > 0.22) {
+        /* Heavy glowing golden base & occipital rim */
+        color = rCol < 0.72 ? '#F5C518' : rCol < 0.90 ? '#FFF3B0' : '#A855F7';
+      } else if (x < -0.35 || (x < 0.1 && y < -0.45)) {
+        /* Frontal / upper-left violet + gold + white rim */
+        color = rCol < 0.42 ? '#8B5CF6' : rCol < 0.76 ? '#F5C518' : '#FFFFFF';
+      } else {
+        color = rCol < 0.50 ? '#F5C518' : rCol < 0.82 ? '#FFFFFF' : '#8B5CF6';
+      }
+    } else {
+      /* Interior cortical folds: gold, white, emerald/cyan, violet */
+      const iCol = rand();
+      if (iCol < 0.36) color = '#EAB308';
+      else if (iCol < 0.62) color = '#E2E8F0';
+      else if (iCol < 0.84) color = '#2DD4BF';
+      else color = '#8B5CF6';
+    }
+
+    /* Explosion vector for scroll dispersion */
+    const len = Math.sqrt(x * x + y * y + z * z) || 1;
+    const spread = 1.6 + rand() * 2.8;
+    particles.push({
+      bx: x,
+      by: y,
+      bz: z,
+      ex: (x / len) * spread + (rand() - 0.5) * 1.4,
+      ey: (y / len) * spread + (rand() - 0.5) * 1.4,
+      ez: (z / len) * spread + (rand() - 0.42) * 2.2,
+      size: rimHighlight ? (3.0 + rand() * 3.2) : (4.8 + rand() * 3.8),
+      rot: rand() * Math.PI * 2,
+      rotSpeed: (rand() - 0.5) * 1.8,
+      color: color,
+      rim: rimHighlight,
+      stem: false,
+      tetra: rand() < 0.08,
+      alpha: rimHighlight ? (0.72 + rand() * 0.28) : (0.52 + rand() * 0.36)
+    });
+    generated++;
+  }
+
+  /* Add ambient floating 3D tetrahedra across space (including large close-up prisms) */
+  const ambientColors = ['#F5C518', '#2DD4BF', '#A855F7', '#FFFFFF', '#38BDF8'];
+  for (let k = 0; k < AMBIENT_COUNT; k++) {
+    const isHeroPrism = k < 9;
+    particles.push({
+      bx: (rand() - 0.5) * 3.4,
+      by: (rand() - 0.5) * 2.4,
+      bz: isHeroPrism ? (0.55 + rand() * 0.45) : ((rand() - 0.5) * 1.8),
+      ex: (rand() - 0.5) * 3.6,
+      ey: (rand() - 0.5) * 2.6,
+      ez: isHeroPrism ? (0.75 + rand() * 0.4) : ((rand() - 0.5) * 2.2),
+      size: isHeroPrism ? (14 + rand() * 18) : (3.5 + rand() * 4.5),
+      rot: rand() * Math.PI * 2,
+      rotSpeed: (rand() - 0.5) * 2.2,
+      color: ambientColors[k % ambientColors.length],
+      rim: false,
+      stem: false,
+      tetra: true,
+      alpha: isHeroPrism ? 0.78 : (0.28 + rand() * 0.35)
+    });
+  }
+
+  /* Interactive state */
+  let mx = W * 0.66;
+  let my = H * 0.48;
+  let smx = mx;
+  let smy = my;
+  let pointerActive = false;
+  let scrollProgress = 0;
+  let brainMode = 'cortex';
+
+  window.addEventListener('pointermove', function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+    pointerActive = true;
+  });
+
+  function updateScroll() {
+    const rect = theater.getBoundingClientRect();
+    const totalScrollable = Math.max(1, rect.height - H);
+    const raw = -rect.top / totalScrollable;
+    scrollProgress = Math.max(0, Math.min(1, raw));
+  }
+  window.addEventListener('scroll', updateScroll, { passive: true });
+  updateScroll();
+
+  /* Mode Switcher */
+  const modeBtns = Array.from(document.querySelectorAll('[data-brain-mode]'));
+  modeBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      brainMode = btn.dataset.brainMode || 'cortex';
+      modeBtns.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+    });
+  });
+
+  /* Render loop */
+  let startTime = performance.now();
+  function render(now) {
+    const t = (now - startTime) * 0.001;
+    smx += (mx - smx) * 0.12;
+    smy += (my - smy) * 0.12;
+
+    ctx.clearRect(0, 0, W, H);
+
+    /* Smooth scroll phases:
+       0.0 -> 0.30: Hero copy lifts, brain centers and zooms in
+       0.25 -> 0.75: Brain explodes outward into 3D scattered knowledge fragments */
+    const zoomPhase = Math.max(0, Math.min(1, scrollProgress / 0.35));
+    const explodeRaw = Math.max(0, Math.min(1, (scrollProgress - 0.22) / 0.52));
+    const explode = brainMode === 'quantum'
+      ? Math.max(0.55, explodeRaw)
+      : explodeRaw * explodeRaw * (3 - 2 * explodeRaw);
+
+    if (heroCopy) {
+      const heroY = -zoomPhase * 120;
+      const heroOp = Math.max(0, 1 - zoomPhase * 1.45);
+      heroCopy.style.transform = 'translate3d(0,' + heroY.toFixed(1) + 'px,0)';
+      heroCopy.style.opacity = heroOp.toFixed(3);
+    }
+
+    /* Brain center on screen: right-hand side on desktop hero, shifts to center as user scrolls */
+    const baseCx = W > 768 ? W * (0.64 - zoomPhase * 0.14) : W * 0.52;
+    const baseCy = W > 768 ? H * 0.49 : H * 0.62;
+    const brainRadius = Math.min(W, H) * (W > 768 ? 0.34 : 0.27) * (1 + zoomPhase * 0.34);
+
+    /* Subtle 3D breathing + pointer parallax */
+    const rotY = Math.sin(t * 0.45) * 0.09 + ((smx - W * 0.5) / W) * 0.22;
+    const rotX = Math.cos(t * 0.35) * 0.05 + ((smy - H * 0.5) / H) * 0.16;
+    const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+    const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+
+    const fov = 900;
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      /* Interpolate between assembled brain position and scattered fragment position */
+      const px = p.bx + (p.ex - p.bx) * explode;
+      const py = p.by + (p.ey - p.by) * explode;
+      const pz = p.bz + (p.ez - p.bz) * explode;
+
+      /* 3D rotation */
+      const x1 = px * cosY - pz * sinY;
+      const z1 = pz * cosY + px * sinY;
+      const y1 = py * cosX - z1 * sinX;
+      const z2 = z1 * cosX + py * sinX;
+
+      const worldZ = z2 * brainRadius;
+      const depthScale = fov / Math.max(180, fov - worldZ);
+      let sx = baseCx + x1 * brainRadius * depthScale;
+      let sy = baseCy + y1 * brainRadius * depthScale;
+
+      if (sx < -80 || sx > W + 80 || sy < -80 || sy > H + 80) continue;
+
+      /* Pointer magnetic magnification & vortex twist (exact match to frame_2.jpg) */
+      const dx = sx - smx;
+      const dy = sy - smy;
+      const distSq = dx * dx + dy * dy;
+      let sizeMult = 1;
+      let drawColor = p.color;
+      let alpha = p.alpha;
+      let extraRot = 0;
+
+      if (pointerActive && distSq < 26000) {
+        const dist = Math.sqrt(distSq);
+        const f = 1 - dist / 161;
+        const easeF = f * f;
+        sizeMult = 1 + easeF * 1.85;
+        sx += (dx / (dist || 1)) * easeF * 14;
+        sy += (dy / (dist || 1)) * easeF * 14;
+        extraRot = easeF * 1.2;
+        if (easeF > 0.35) {
+          drawColor = '#FFFFFF';
+          alpha = Math.min(1, alpha + 0.35);
+        }
+      }
+
+      if (brainMode === 'synapse') {
+        const wave = Math.sin(p.bx * 6 - t * 3.2 + p.by * 4);
+        if (wave > 0.65) {
+          drawColor = '#2DD4BF';
+          sizeMult *= 1.35;
+          alpha = 0.95;
+        }
+      }
+
+      const r = p.size * depthScale * sizeMult;
+      const a = p.rot + (reducedMotion.matches ? 0 : t * p.rotSpeed) + extraRot;
+
+      /* Draw hollow 3D wireframe triangle / tetrahedron */
+      const c0 = Math.cos(a), s0 = Math.sin(a);
+      const c1 = Math.cos(a + 2.0944), s1 = Math.sin(a + 2.0944);
+      const c2 = Math.cos(a + 4.1888), s2 = Math.sin(a + 4.1888);
+
+      const vx0 = sx + c0 * r, vy0 = sy + s0 * r;
+      const vx1 = sx + c1 * r, vy1 = sy + s1 * r;
+      const vx2 = sx + c2 * r, vy2 = sy + s2 * r;
+
+      ctx.strokeStyle = drawColor;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth = r > 12 ? 2.2 : (sizeMult > 1.3 ? 1.35 : 1.0);
+
+      ctx.beginPath();
+      ctx.moveTo(vx0, vy0);
+      ctx.lineTo(vx1, vy1);
+      ctx.lineTo(vx2, vy2);
+      ctx.closePath();
+
+      /* Draw internal tetrahedron apex ribs for 3D prism particles */
+      if (p.tetra || sizeMult > 1.45) {
+        const ax = sx + Math.cos(a * 0.7) * r * 0.28;
+        const ay = sy + Math.sin(a * 0.7) * r * 0.28;
+        ctx.moveTo(vx0, vy0); ctx.lineTo(ax, ay);
+        ctx.moveTo(vx1, vy1); ctx.lineTo(ax, ay);
+        ctx.moveTo(vx2, vy2); ctx.lineTo(ax, ay);
+      }
+      ctx.stroke();
+    }
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+
+  /* Interactive Query Workbench */
+  const QUERIES = [
+    {
+      label: 'SYNTHESIZED FROM 14 FRAGMENTS',
+      conf: '99.4% CONVICTION SCORE',
+      body: 'In RFC-218 (Aug 14), Principal Engineer Elena Rostova proposed migrating from HNSW flat shards to hybrid IVF-PQ to cut tail p99 latency from 310ms to 42ms. Approved by VP Infra Marcus Vance in #arch-council and merged in PR #4812.',
+      sources: ['Notion · RFC-218', 'GitHub · PR #4812', 'Slack · #arch-council', 'Linear · INF-904']
+    },
+    {
+      label: 'SYNTHESIZED FROM 23 FRAGMENTS',
+      conf: '98.9% CONVICTION SCORE',
+      body: 'Across 19 EMEA enterprise deals in Q3, the top 3 security review blockers were: (1) customer-managed KMS key rotation intervals, (2) EU-Central-1 data residency guarantees, and (3) SCIM group-level ACL propagation latency.',
+      sources: ['Salesforce · EMEA Pipeline', 'Slack · #sec-reviews', 'Google Docs · DPIA-v4', 'Jira · SEC-312']
+    },
+    {
+      label: 'SYNTHESIZED FROM 9 FRAGMENTS',
+      conf: '99.8% CONVICTION SCORE',
+      body: 'Staff Engineer David Kim and SRE Lead Priya Nair authored the zero-downtime pg_partman migration for the 14TB events ledger in March, achieving 0 dropped writes over a 6-hour cutover window.',
+      sources: ['GitHub · PR #3109', 'PagerDuty · Postmortem #88', 'Slack · #db-guild', 'Notion · Runbook-PG']
+    }
+  ];
+
+  const qBtns = Array.from(document.querySelectorAll('[data-query-idx]'));
+  const ansLabel = document.getElementById('ans-label');
+  const ansConf = document.getElementById('ans-conf');
+  const ansBody = document.getElementById('ans-body');
+  const ansSources = document.getElementById('ans-sources');
+
+  qBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const idx = Number(btn.dataset.queryIdx || 0);
+      const item = QUERIES[idx] || QUERIES[0];
+      qBtns.forEach(function (b) {
+        const active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      ansLabel.textContent = item.label;
+      ansConf.textContent = item.conf;
+      ansBody.textContent = item.body;
+      ansSources.innerHTML = item.sources.map(function (s) {
+        return '<span class="ns-source-chip">' + s + '</span>';
+      }).join('');
+    });
+  });
+
+  /* Request Access Modal */
+  const modal = document.getElementById('access-modal');
+  const closeBtn = document.getElementById('close-access-modal');
+  const accessForm = document.getElementById('access-form');
+
+  function openModal() {
+    modal.hidden = false;
+  }
+  function closeModal() {
+    modal.hidden = true;
+  }
+
+  document.getElementById('open-access-modal').addEventListener('click', openModal);
+  document.getElementById('hero-request-btn').addEventListener('click', openModal);
+  document.querySelectorAll('[data-open-modal]').forEach(function (b) {
+    b.addEventListener('click', openModal);
+  });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+  accessForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    closeModal();
+  });
+})();
+
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

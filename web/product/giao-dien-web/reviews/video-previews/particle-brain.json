@@ -1,0 +1,49 @@
+{
+  "id": "t283",
+  "slug": "particle-brain",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T03:04:23.062Z",
+  "demo": "/demos/particle-brain/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9b7c4ab26ef2",
+  "sha256": "9b7c4ab26ef210184232230807c0b7bcd42179dbbc7a55a7657710643f81a2e5",
+  "demoHtmlSha256": "2c8f386428ce82eb4e8225d4fafc32dbf481507e6a456c7b4fbf696212085bb1",
+  "demoSha256": "359b430de87e1568858779edb3863e1798be92f796a85956e17b1c56c94f2e20",
+  "bytes": 2222206,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.333,
+      "action": "click",
+      "selector": "[data-brain-mode=\"synapse\"]"
+    },
+    {
+      "seconds": 4.924,
+      "action": "click",
+      "selector": "[data-query-idx=\"1\"]"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    },
+    {
+      "seconds": 10.163,
+      "action": "click",
+      "selector": "#open-access-modal"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\particle-brain-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\particle-brain-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\particle-brain-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\particle-brain-return.jpg"
+  ]
+}

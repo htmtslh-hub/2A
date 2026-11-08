@@ -904,6 +904,22 @@ try {
         }
         return;
       }
+      if (slug === 'particle-brain') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(960, 440, { steps: 14 });
+          await page.mouse.move(820, 320, { steps: 14 });
+          await page.locator('[data-brain-mode="synapse"]').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '[data-brain-mode="synapse"]' });
+        } else if (clickedCount === 1) {
+          await page.locator('[data-query-idx="1"]').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '[data-query-idx="1"]' });
+        } else {
+          await page.locator('#open-access-modal').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#open-access-modal' });
+        }
+        return;
+      }
       if (slug === 'leon-vasari' || slug === 'vasari-curved-archive') {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (clickedCount === 0) {
@@ -996,7 +1012,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['leon-vasari', 'try-the-look', 'maison-vell', 'solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
+    if (['particle-brain', 'vasari-curved-archive', 'leon-vasari', 'try-the-look', 'maison-vell', 'solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

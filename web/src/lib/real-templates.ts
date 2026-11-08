@@ -46,6 +46,30 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t281: {
+    slug: 'leon-vasari',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Leon Vasari VHS Filmography",
+        desc: "Kệ băng từ VHS 3D của đạo diễn Leon Vasari (1958–1989): 36 hộp băng VHS xếp liền kề trên nền giấy in hạt, tự động xoay mở mặt bìa 3D khi chọn, đi kèm trang chi tiết phim loang mực SVG feDisplacementMap.",
+        tags: ["3D VHS Shelf", "SVG Ink Blot Reveal", "Director Filmography"]
+      },
+      en: {
+        name: "Leon Vasari VHS Filmography",
+        desc: "Endless 3D VHS filmography shelf for director Leon Vasari (1958–1989) featuring physical 3D cuboid tape rotation, masked bilingual captions, a cobalt OPEN cursor, and an ink-bleed SVG poster detail sheet.",
+        tags: ["3D VHS Shelf", "SVG Ink Blot Reveal", "Director Filmography"]
+      },
+      zh: {
+        name: "Leon Vasari VHS 录影带作品架",
+        desc: "电影导演 Leon Vasari (1958–1989) 3D VHS 录影带无限书架：纸质颗粒背景、3D 盒体翻转展开、双语遮罩字幕、钴蓝动态光标与 SVG 水墨晕染海报详情页。",
+        tags: ["3D 录影带书架", "水墨晕染遮罩", "导演作品集"]
+      }
+    }
+  },
+
   t280: {
     slug: 'try-the-look',
     cat: 'commerce',

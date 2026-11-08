@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-08T01:08:56.970Z",
+  "updatedAt": "2026-11-08T01:23:27.498Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2279,6 +2279,15 @@
       "sizeBytes": 521859,
       "sha256": "a5c271f24f9d1a5ed737df56d05d17d087ecf4c6b7b1eae46c781251e1e80b59",
       "updatedAt": "2026-11-08T01:08:56.970Z"
+    },
+    "leon-vasari": {
+      "fileId": "1iJOTTskkP7Q0-xubzWE5yv5T8pL_KXqW",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1iJOTTskkP7Q0-xubzWE5yv5T8pL_KXqW",
+      "webViewUrl": "https://drive.google.com/file/d/1iJOTTskkP7Q0-xubzWE5yv5T8pL_KXqW/view",
+      "sizeBytes": 879425,
+      "sha256": "4a1aa447eac9ac1d72cc627cbadf2682618bde2b7874e9241e97daa34d958ea3",
+      "updatedAt": "2026-11-08T01:23:27.497Z"
     }
   }
 }

@@ -1,0 +1,8 @@
+Use case: photorealistic-natural
+Asset type: local portrait asset for Crimson Folio portfolio, reused in hero, about and contact.
+Primary request: create a new fictional adult female designer with shoulder-length auburn hair, subtle darker lower strands, round wire-frame glasses and a black tailored jacket over a light top. Calm, confident expression, eyes toward camera, slight three-quarter turn. Fashion editorial photograph with realistic skin and natural details.
+Scene/backdrop: plain seamless burgundy studio backdrop, exact target colour #9d1925, no pattern, no scenery.
+Composition/framing: vertical waist-up portrait, centred, whole head and hair visible, small headroom, shoulders completely in frame. Subject occupies most of the vertical frame. Suitable for placement beside oversized editorial typography.
+Lighting/mood: soft directional studio light with warm highlights, sharp visible face and glasses, clean contemporary editorial quality.
+Text: none.
+Constraints: original fictional subject, no replication of a real person's face; no text, logo, watermark, frame, flowers, jewellery branding or additional people. Do not generate a website screenshot. Background is solid burgundy, not transparent. Output 1024x1536, gpt-image-2, high quality.

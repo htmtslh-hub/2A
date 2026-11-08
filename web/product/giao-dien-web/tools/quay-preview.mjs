@@ -904,6 +904,25 @@ try {
         }
         return;
       }
+      if (slug === 'leon-vasari') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(920, 440, { steps: 10 });
+          await page.locator('#arrow-next').click({ force: true });
+          await page.waitForTimeout(500);
+          await page.locator('[data-decade="1960"]').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#arrow-next + [data-decade="1960"]' });
+        } else if (clickedCount === 1) {
+          await page.mouse.move(720, 440, { steps: 10 });
+          await page.waitForTimeout(400);
+          await page.locator('#play-ring').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#play-ring openDetail' });
+        } else {
+          await page.locator('#detail-close').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#detail-close' });
+        }
+        return;
+      }
       if (slug === 'clothing-rail-menswear' || slug === 'clothing-rail-dress-atelier') {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (clickedCount === 0) {
@@ -973,7 +992,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['try-the-look', 'maison-vell', 'solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
+    if (['leon-vasari', 'try-the-look', 'maison-vell', 'solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

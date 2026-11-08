@@ -1,0 +1,340 @@
+{
+  "chromium": {
+    "version": "154.0.8037.93",
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "noJSNavigation": true,
+        "noJSScrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "menuOpened": true,
+        "menuScrollWidth": 375,
+        "escapeFocus": true,
+        "linkClosesMenu": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "menuOpened": true,
+        "menuScrollWidth": 320,
+        "escapeFocus": true,
+        "linkClosesMenu": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 320
+      }
+    ],
+    "errors": []
+  },
+  "edge": {
+    "version": "154.0.4258.53",
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "noJSNavigation": true,
+        "noJSScrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "menuOpened": true,
+        "menuScrollWidth": 375,
+        "escapeFocus": true,
+        "linkClosesMenu": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "menuOpened": true,
+        "menuScrollWidth": 320,
+        "escapeFocus": true,
+        "linkClosesMenu": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 320
+      }
+    ],
+    "errors": []
+  },
+  "coccoc": {
+    "version": "152.0.7977.124",
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "noJSNavigation": true,
+        "noJSScrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "menuOpened": true,
+        "menuScrollWidth": 375,
+        "escapeFocus": true,
+        "linkClosesMenu": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "headings": 1,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "links": true,
+        "menuOpened": true,
+        "menuScrollWidth": 320,
+        "escapeFocus": true,
+        "linkClosesMenu": true,
+        "noJSNavigation": false,
+        "noJSScrollWidth": 320
+      }
+    ],
+    "errors": []
+  },
+  "contrast": [
+    {
+      "bg": "250609",
+      "fg": "fff1d3",
+      "ratio": 16.934670059254888
+    },
+    {
+      "bg": "250609",
+      "fg": "dfc3b5",
+      "ratio": 11.374908169430004
+    },
+    {
+      "bg": "490c13",
+      "fg": "fff1d3",
+      "ratio": 13.95595623462538
+    },
+    {
+      "bg": "490c13",
+      "fg": "dfc3b5",
+      "ratio": 9.374125390691702
+    },
+    {
+      "bg": "9d1925",
+      "fg": "fff1d3",
+      "ratio": 7.222761962685002
+    },
+    {
+      "bg": "9d1925",
+      "fg": "dfc3b5",
+      "ratio": 4.851482418477588
+    }
+  ]
+}

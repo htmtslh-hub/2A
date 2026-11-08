@@ -3176,5 +3176,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "leon-vasari": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "191647ef939f",
+    "sha256": "191647ef939fe1837c2df84f660bf0342fd21ae0e636f6f68e79eb2bf1983d97",
+    "demoHtmlSha256": "bc42b0f44148da70e66a4ed80f51724e778eef2f7d596962c1ff9a0f0aef00f4",
+    "demoSha256": "2fdb96edc84c75867bbcba61f05e9d78339ef19a4211d382c62b83d46e9923dd",
+    "bytes": 602795,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

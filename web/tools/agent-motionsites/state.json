@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-08",
+  "lastRunDate": "2026-11-09",
   "todayCopiedCount": 6,
   "processedSlugs": [
     "404-planet",
@@ -16,6 +16,7 @@
     "ai-workflow-hero",
     "airmax-plus",
     "ais-folio",
+    "album-flow",
     "alex-carter-ui",
     "alpine-telemetry",
     "apartment-flow",
@@ -86,6 +87,7 @@
     "flash-rocky-mountain",
     "flexible-spark",
     "forest-pulse",
+    "fox-couture",
     "foxico-indonesia-expedition",
     "free-sample",
     "freight-axis",
@@ -95,6 +97,7 @@
     "futuristic-canvas",
     "galaxy-edge",
     "geospace-canvas",
+    "glass-portfolio",
     "glow-features",
     "gridwork-co",
     "guardnet-benefits",
@@ -227,6 +230,7 @@
     "sonicore",
     "soniq",
     "spaceedu",
+    "spin-product",
     "stark-minimal-footer",
     "startup-devkit",
     "steary-spatial-cinema",
@@ -244,6 +248,7 @@
     "toonhub",
     "transform-data",
     "travel-journal",
+    "trend-carousel",
     "tripg-ocean",
     "try-the-look",
     "undefined",
@@ -255,6 +260,7 @@
     "vectrus-energy",
     "velora",
     "verdant",
+    "verra-events-hero",
     "vertex-shops",
     "vesper-ai",
     "vex-ventures",
@@ -431,7 +437,13 @@
     "bag-slots",
     "future-fashion",
     "card-stack",
-    "work-ribbon"
+    "work-ribbon",
+    "trend-carousel",
+    "spin-product",
+    "album-flow",
+    "fox-couture",
+    "glass-portfolio",
+    "verra-events-hero"
   ],
   "history": [
     {
@@ -909,6 +921,42 @@
         "card-stack": "premium",
         "work-ribbon": "premium"
       }
+    },
+    {
+      "date": "2026-11-09",
+      "built": [
+        "trend-carousel",
+        "spin-product",
+        "album-flow"
+      ],
+      "catalogIds": [
+        "t296",
+        "t297",
+        "t298"
+      ],
+      "tiers": {
+        "trend-carousel": "free",
+        "spin-product": "premium",
+        "album-flow": "premium"
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "built": [
+        "fox-couture",
+        "glass-portfolio",
+        "verra-events-hero"
+      ],
+      "catalogIds": [
+        "t299",
+        "t300",
+        "t301"
+      ],
+      "tiers": {
+        "fox-couture": "free",
+        "glass-portfolio": "premium",
+        "verra-events-hero": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -1002,15 +1050,21 @@
     "b6ae782898294ddf50c1f643910a8621442dc633e6b918115b734874b60ee84d",
     "486fb86245aa0176ca395bd6f450011b4342249b01f432e67ecc8e12779ddc6f",
     "9041e3e7d76ce926c89106b183aea5196ce108c768ce84fc660231fcffc68984",
-    "cda6d667a91b0aabd83f6b3e9c3051a50eea358e1b29083711184061d5270026"
+    "cda6d667a91b0aabd83f6b3e9c3051a50eea358e1b29083711184061d5270026",
+    "9b3e8323c1b21f54ce6c126ac125cdb0097355461f84ed3678fb5297262ba26e",
+    "116a2465153a877e4bafb0cf6b628dc8fde16c6400ec5db656de3c2005c5e4ef",
+    "e96cc5fe2b4f5e42d8b0da22eb2ca3e121b51ae934b15250e233df5de15d9f41",
+    "adb3d71066a20438286c573e7d3e8d8eb368fa99121850f4834d517748814e0b",
+    "0d8593016ea67addee0fbb637a6ad26a2ff910f606283a27bb1932fba1281d07",
+    "23c460afc7a34036e2b1fc86634b5f7dfb256381bb832c0e4e0585222fcd44ba"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "main-character",
-    "outfit-drop",
-    "bag-slots",
-    "future-fashion",
-    "card-stack",
-    "work-ribbon"
+    "trend-carousel",
+    "spin-product",
+    "album-flow",
+    "fox-couture",
+    "glass-portfolio",
+    "verra-events-hero"
   ]
 }

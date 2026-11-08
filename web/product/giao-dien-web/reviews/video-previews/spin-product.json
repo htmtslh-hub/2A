@@ -1,0 +1,44 @@
+{
+  "id": "t297",
+  "slug": "spin-product",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T22:43:47.634Z",
+  "demo": "/demos/spin-product/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "27ea9f9db2fc",
+  "sha256": "27ea9f9db2fcb59aea35c78d8b05bf75a7c7c96693dae715f1d871c4f92dc7c7",
+  "demoHtmlSha256": "3e168b6a8450c013ff13caa5799265812c4a822178b19f013117e1e2481c893a",
+  "demoSha256": "97155f2d6ab2db629ff477194b968fe90013d0941a19bfb866b9b4383f9b3a6b",
+  "bytes": 198952,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.641,
+      "action": "click",
+      "selector": "#cta"
+    },
+    {
+      "seconds": 5.003,
+      "action": "click",
+      "selector": "#looks .lk:last-child"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spin-product-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spin-product-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spin-product-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spin-product-return.jpg"
+  ]
+}

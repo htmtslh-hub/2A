@@ -46,6 +46,152 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t301: {
+    slug: 'verra-events-hero',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Verra Events Hero",
+        desc: "Giao diện web Verra Events Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Community", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Verra Events Hero",
+        desc: "Bespoke Verra Events Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Community", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Verra Events Hero",
+        desc: "单文件自包含 Verra Events Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t300: {
+    slug: 'glass-portfolio',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Glass Portfolio",
+        desc: "Giao diện web Glass Portfolio với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Glass Portfolio",
+        desc: "Bespoke Glass Portfolio web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Glass Portfolio",
+        desc: "单文件自包含 Glass Portfolio 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t299: {
+    slug: 'fox-couture',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Fox Couture",
+        desc: "Giao diện web Fox Couture với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Fox Couture",
+        desc: "Bespoke Fox Couture web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Fox Couture",
+        desc: "单文件自包含 Fox Couture 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t298: {
+    slug: 'album-flow',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Album Flow",
+        desc: "Giao diện web Album Flow với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Music", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Album Flow",
+        desc: "Bespoke Album Flow web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Music", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Album Flow",
+        desc: "单文件自包含 Album Flow 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t297: {
+    slug: 'spin-product',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Spin Product",
+        desc: "Giao diện web Spin Product với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Spin Product",
+        desc: "Bespoke Spin Product web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Spin Product",
+        desc: "单文件自包含 Spin Product 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t296: {
+    slug: 'trend-carousel',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Trend Carousel",
+        desc: "Giao diện web Trend Carousel với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Trend Carousel",
+        desc: "Bespoke Trend Carousel web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Trend Carousel",
+        desc: "单文件自包含 Trend Carousel 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t295: {
     slug: 'work-ribbon',
     cat: 'portfolio',

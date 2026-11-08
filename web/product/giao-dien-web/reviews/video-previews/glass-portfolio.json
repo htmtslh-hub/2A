@@ -1,0 +1,44 @@
+{
+  "id": "t300",
+  "slug": "glass-portfolio",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T22:45:35.377Z",
+  "demo": "/demos/glass-portfolio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "95ca07abd9c6",
+  "sha256": "95ca07abd9c6af1fd66e792707adeead82cc797d0ea1d89d857a0b0a443afbf4",
+  "demoHtmlSha256": "6de3258e2894d27bbb07acb172a7bbd4888407d34800d386cb5e9a9a498e1e7a",
+  "demoSha256": "dc8cc2a0f9c184bfc37fa41f2a974c72f5141c5aee78fc620dec12255d03ac0c",
+  "bytes": 1944219,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 4.08,
+      "action": "click",
+      "selector": "#themeBtn"
+    },
+    {
+      "seconds": 6.322,
+      "action": "click",
+      "selector": "#workJumpBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1297
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glass-portfolio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glass-portfolio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glass-portfolio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glass-portfolio-return.jpg"
+  ]
+}

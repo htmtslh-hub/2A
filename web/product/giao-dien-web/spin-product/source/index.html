@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>OKTA/9 — The contour lines metallic puffer</title>
+  <meta name="description" content="OKTA/9 interactive 360-degree drag-to-rotate metallic puffer product showcase with live callout pins, notched specification cards, and pre-order bag flow.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@500&family=Tinos&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #e2e4e8;
+      --card: #ffffff;
+      --ink: #111111;
+      --mute: #7b7e84;
+      --chip: #eceef1;
+      --line: #b9bcc2;
+      --surface: #ffffff;
+      --surface-elevated: #eceef1;
+      --fg: #111111;
+      --accent: #111111;
+      --accent-text: #22252a;
+      --accent-strong: #000000;
+      --on-accent: #ffffff;
+      --font-display: "Inter Tight", sans-serif;
+      --font-sans: "IBM Plex Mono", monospace;
+      --font-mono: "IBM Plex Mono", monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.65, 0, 0.25, 1);
+      --k: 1;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 10px 18px; background: var(--ink); color: #ffffff;
+      font-weight: 500; text-decoration: none; border-radius: 6px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); outline: 2px solid var(--ink); }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    #vp {
+      position: fixed; inset: 0;
+      display: grid; place-items: center;
+    }
+    #art {
+      position: relative;
+      width: 1500px; height: 1000px;
+      transform: scale(var(--k));
+      transform-origin: center center;
+    }
+
+    /* HEADER & NAV */
+    #topHeader {
+      position: absolute; inset: 0 0 auto 0; height: 70px; z-index: 15;
+      pointer-events: none;
+    }
+    #topHeader > * { pointer-events: auto; }
+    #logo {
+      position: absolute; left: 26px; top: 21px;
+      font-family: var(--font-display); font-weight: 500;
+      font-size: clamp(20px, 1.6vw, 23px); letter-spacing: -0.02em; color: var(--ink);
+      cursor: pointer; text-decoration: none;
+    }
+    #crumb {
+      position: absolute; left: 298px; top: 26px;
+      font-size: 13px; color: var(--mute); letter-spacing: -0.01em;
+    }
+    #crumb b { color: var(--ink); font-weight: 400; }
+
+    #nav {
+      position: absolute; left: 938px; top: 18px;
+      display: flex; gap: 3px;
+    }
+    #nav button {
+      height: 31px; padding: 0 14px; border: 0; border-radius: 6px;
+      background: var(--card); color: var(--ink);
+      font: 400 13px/1 var(--font-mono); letter-spacing: -0.01em;
+      cursor: pointer; position: relative; z-index: 1;
+      transition: color 0.25s ease, transform 0.2s ease;
+    }
+    #nav button.on { background: var(--ink); color: #ffffff; }
+    #nav button:hover:not(.on) { background: #f3f4f6; }
+    #nav button:active { transform: scale(0.96); }
+
+    #acct {
+      position: absolute; right: 26px; top: 24px;
+      display: flex; align-items: center; gap: 18px;
+      font-size: 13px; color: var(--ink);
+    }
+    #acct button.link-btn {
+      background: transparent; border: 0; color: inherit;
+      font: inherit; cursor: pointer; padding: 2px 4px;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    #acct button.link-btn:hover { opacity: 0.55; }
+    #acct button.link-btn:active { transform: scale(0.96); }
+    #bag { position: relative; display: inline-flex; align-items: center; gap: 2px; }
+    #bag b {
+      font-weight: 500; display: inline-block;
+      transition: transform 0.35s cubic-bezier(0.3, 1.6, 0.4, 1);
+    }
+    #bag.bump b { transform: scale(1.45); }
+    #motionToggleBtn {
+      height: 27px; padding: 0 10px; border-radius: 5px;
+      border: 1px solid var(--line); background: var(--card);
+      color: var(--ink); font: 400 11px/1 var(--font-mono);
+      cursor: pointer; transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    #motionToggleBtn:hover { background: var(--chip); }
+    #motionToggleBtn:active { transform: scale(0.96); }
+
+    /* LEFT STAGE: 360 VIDEO + HOTSPOTS */
+    #stage {
+      position: absolute; left: 0; top: 0; width: 820px; height: 1000px;
+      overflow: hidden; cursor: grab;
+    }
+    #stage.dragging { cursor: grabbing; }
+    #vid {
+      position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;
+    }
+    #cv {
+      position: absolute; left: -95px; top: 55px; width: 1010px; height: 945px;
+      pointer-events: none;
+    }
+
+    #lines {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; overflow: visible;
+    }
+    #lines path {
+      fill: none; stroke: var(--line); stroke-width: 1;
+      stroke-dasharray: 260; stroke-dashoffset: 260;
+      transition: stroke-dashoffset 0.55s cubic-bezier(0.5, 0, 0.2, 1), opacity 0.25s ease;
+    }
+    #lines path.on { stroke-dashoffset: 0; }
+    #lines circle {
+      fill: var(--card); stroke: var(--line); stroke-width: 1.2;
+      opacity: 0; transform-box: fill-box; transform-origin: center;
+      transform: scale(0.4);
+      transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.3, 1.5, 0.4, 1);
+    }
+    #lines circle.on { opacity: 1; transform: scale(1); }
+
+    .hs {
+      position: absolute; width: 32px; height: 32px;
+      margin: -16px 0 0 -16px; border-radius: 6px;
+      background: var(--card); border: 0;
+      display: grid; place-items: center; cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s cubic-bezier(0.3, 1.5, 0.4, 1), background-color 0.2s ease, color 0.2s ease, opacity 0.25s ease;
+      z-index: 4; color: var(--ink);
+    }
+    .hs svg {
+      width: 11px; height: 11px; stroke: currentColor; stroke-width: 1.5;
+      transition: transform 0.35s cubic-bezier(0.5, 0, 0.2, 1);
+    }
+    .hs:hover { transform: scale(1.08); }
+    .hs:active { transform: scale(0.95); }
+    .hs.on { background: var(--ink); color: #ffffff; }
+    .hs.on svg { transform: rotate(45deg); }
+    .hs.hide { opacity: 0; pointer-events: none; transform: scale(0.7); }
+
+    .hs-card {
+      position: absolute; width: 224px;
+      background: var(--card); border-radius: 8px;
+      padding: 13px 15px 14px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      opacity: 0; transform: translateY(6px) scale(0.96);
+      pointer-events: none;
+      transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.25, 1, 0.3, 1);
+      z-index: 5;
+    }
+    .hs-card.on {
+      opacity: 1; transform: translateY(0) scale(1); pointer-events: auto;
+    }
+    .hs-card h4 {
+      font: 500 12px/1.2 var(--font-mono); letter-spacing: 0.03em;
+      text-transform: uppercase; margin-bottom: 5px; color: var(--ink);
+    }
+    .hs-card p {
+      font-size: 11.5px; line-height: 1.45; color: var(--mute);
+    }
+
+    #hint {
+      position: absolute; left: 26px; bottom: 26px;
+      width: 48px; height: 48px; border-radius: 8px;
+      border: 1px solid #cacdd3;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 2px; font-size: 12px; color: var(--ink);
+      background: rgba(226, 228, 232, 0.55); backdrop-filter: blur(4px);
+      cursor: pointer; transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    #hint:hover { transform: translateY(-2px); border-color: var(--ink); }
+    #hint:active { transform: scale(0.95); }
+    #hint svg { width: 24px; height: 11px; }
+
+    /* INFO CARD */
+    #info {
+      position: absolute; left: 820px; top: 204px; width: 416px;
+      background: var(--card); border-radius: 10px;
+      padding: 26px 26px 18px;
+      clip-path: url(#info-clip);
+    }
+    #title {
+      font-family: var(--font-display); font-weight: 500;
+      font-size: 32px; line-height: 1.03; letter-spacing: -0.025em;
+      max-width: 270px; color: var(--ink);
+    }
+    #price {
+      position: absolute; right: 26px; top: 25px;
+      font-family: var(--font-display); font-weight: 500;
+      font-size: 18px; letter-spacing: -0.01em;
+    }
+    #price span {
+      font-family: "Tinos", Georgia, serif; font-weight: 400; margin-right: 2px;
+    }
+    #badge {
+      display: inline-block; margin-top: 14px;
+      padding: 5px 9px 5px; border-radius: 4px;
+      background: var(--chip); font-size: 11px; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--ink);
+    }
+    #lead {
+      margin-top: 40px; font-size: 13px; line-height: 1.42;
+      letter-spacing: -0.015em; color: var(--ink); max-width: 358px;
+    }
+
+    #acc { margin-top: 22px; }
+    .row { border-top: 1px solid #e6e7ea; }
+    .row-h {
+      width: 100%; height: 42px; display: flex; align-items: center; justify-content: space-between;
+      font: 400 11.5px/1 var(--font-mono); letter-spacing: 0.045em;
+      text-transform: uppercase; color: var(--ink);
+      background: transparent; border: 0; cursor: pointer; text-align: left;
+      transition: opacity 0.2s ease;
+    }
+    .row-h:hover { opacity: 0.6; }
+    .row-h:active { transform: scale(0.99); }
+    .row-h i {
+      position: relative; width: 9px; height: 9px; display: inline-block;
+    }
+    .row-h i::before, .row-h i::after {
+      content: ""; position: absolute; background: var(--ink);
+      transition: transform 0.35s cubic-bezier(0.5, 0, 0.2, 1), opacity 0.25s ease;
+    }
+    .row-h i::before { left: 0; right: 0; top: 4px; height: 1.2px; }
+    .row-h i::after  { top: 0; bottom: 0; left: 4px; width: 1.2px; }
+    .row.open .row-h i::after { transform: rotate(90deg); opacity: 0; }
+    .row.open .row-h i::before { transform: rotate(180deg); }
+
+    .row-b {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.36s var(--ease-spring), opacity 0.3s ease;
+      opacity: 0; overflow: hidden;
+    }
+    .row.open .row-b {
+      grid-template-rows: 1fr; opacity: 1;
+    }
+    .row-b-inner {
+      min-height: 0; overflow: hidden;
+    }
+    .row-b p {
+      padding: 2px 18px 14px 0;
+      font-size: 12px; line-height: 1.48; color: var(--mute);
+      letter-spacing: -0.01em;
+    }
+
+    /* BUY CARD */
+    #buy {
+      position: absolute; left: 820px; top: 750px; width: 416px; height: 224px;
+      background: var(--card); border-radius: 10px;
+      clip-path: url(#buy-clip);
+    }
+    #szbar {
+      position: absolute; left: 26px; top: 22px; width: 364px; height: 64px;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+    #szbar::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+      height: 1px; background: #e5e6ea;
+    }
+    .sz {
+      height: 100%; display: grid; place-items: center;
+      font: 400 13px/1 var(--font-mono); color: var(--mute);
+      background: transparent; border: 0; cursor: pointer;
+      transition: color 0.25s ease, transform 0.2s ease;
+    }
+    .sz.on { color: var(--ink); font-weight: 500; }
+    .sz:hover { color: var(--ink); }
+    .sz:active { transform: scale(0.96); }
+    #hl {
+      position: absolute; bottom: 0; left: 0; width: 121.33px; height: 2px;
+      background: var(--ink); z-index: 2;
+      transform: translateX(0px);
+      transition: transform 0.42s var(--ease-spring);
+    }
+
+    #save {
+      position: absolute; left: 26px; bottom: 26px;
+      width: 148px; height: 50px; border-radius: 7px; border: 0;
+      background: var(--chip); color: var(--ink);
+      font: 400 12px/1 var(--font-mono); letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+    #save:hover { background: #e2e5ea; }
+    #save:active { transform: scale(0.98); }
+    #save svg {
+      width: 11px; height: 13px; stroke: var(--ink); stroke-width: 1.3; fill: none;
+      transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.4, 1), fill 0.2s ease;
+    }
+    #save.saved svg { fill: var(--ink); transform: scale(1.18); }
+
+    #cta {
+      position: absolute; right: 26px; bottom: 26px;
+      width: 204px; height: 50px; border-radius: 7px; border: 0;
+      background: var(--ink); color: #ffffff;
+      font: 400 12px/1 var(--font-mono); letter-spacing: 0.06em;
+      text-transform: uppercase; cursor: pointer; overflow: hidden;
+      transition: background-color 0.25s ease, transform 0.15s ease;
+    }
+    #cta:hover { background: #26282d; }
+    #cta:active { transform: scale(0.985); }
+    #cta span {
+      display: block;
+      transition: transform 0.38s cubic-bezier(0.55, 0, 0.2, 1), opacity 0.25s ease;
+    }
+
+    /* RIGHT LOOKS THUMBNAILS */
+    #looks {
+      position: absolute; right: 26px; bottom: 26px;
+      display: flex; gap: 10px;
+    }
+    .lk {
+      width: 96px; height: 108px; border-radius: 8px;
+      background: #ecedf0; border: 1.5px solid transparent; padding: 0;
+      overflow: hidden; cursor: pointer; position: relative;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .lk:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+    .lk:active { transform: scale(0.96); }
+    .lk.on { border-color: var(--ink); }
+    .lk canvas {
+      width: 100%; height: 100%; display: block; object-fit: cover;
+    }
+
+    .fly {
+      position: absolute; width: 44px; height: 52px; border-radius: 6px;
+      background: #ffffff; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      pointer-events: none; z-index: 30; overflow: hidden;
+    }
+    .fly canvas { width: 100%; height: 100%; }
+
+    .sp-specs-strip {
+      position: absolute; left: 26px; top: 82px; z-index: 8;
+      display: flex; gap: 8px; font-size: 11px; color: var(--mute);
+    }
+    .sp-specs-strip span {
+      padding: 4px 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.62);
+    }
+
+    #spFooter {
+      position: absolute; left: 96px; bottom: 38px; z-index: 12;
+      font-size: 11px; color: var(--mute); letter-spacing: 0.04em;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1200px) {
+      #crumb { display: none; }
+    }
+    @media (max-width: 768px) {
+      .sp-specs-strip { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="vp">
+    <div id="art">
+      <!-- SVG Clip-path defs -->
+      <svg width="0" height="0" viewBox="0 0 10 10" style="position:absolute" aria-hidden="true">
+        <defs>
+          <clipPath id="info-clip" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0.02 A 0.024,0.02 0 0 1 0.024,0 L 0.34,0 C 0.365,0 0.375,0.036 0.40,0.036 L 0.60,0.036 C 0.625,0.036 0.635,0 0.66,0 L 0.976,0 A 0.024,0.02 0 0 1 1,0.02 L 1,0.98 A 0.024,0.02 0 0 1 0.976,1 L 0.66,1 C 0.635,1 0.625,0.964 0.60,0.964 L 0.40,0.964 C 0.375,0.964 0.365,1 0.34,1 L 0.024,1 A 0.024,0.02 0 0 1 0,0.98 Z"/>
+          </clipPath>
+          <clipPath id="buy-clip" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0.045 A 0.024,0.045 0 0 1 0.024,0 L 0.34,0 C 0.365,0 0.375,0.08 0.40,0.08 L 0.60,0.08 C 0.625,0.08 0.635,0 0.66,0 L 0.976,0 A 0.024,0.045 0 0 1 1,0.045 L 1,0.955 A 0.024,0.045 0 0 1 0.976,1 L 0.024,1 A 0.024,0.045 0 0 1 0,0.955 Z"/>
+          </clipPath>
+        </defs>
+      </svg>
+
+      <header id="topHeader">
+        <a id="logo" href="#main-content">OKTA/9</a>
+        <div id="crumb">Men / Outerwear / <b>Down Jackets</b></div>
+        <nav id="nav" aria-label="Primary sections">
+          <button type="button" class="on" data-nav="shop">Shop</button>
+          <button type="button" data-nav="collections">Collections</button>
+          <button type="button" data-nav="explore">Explore</button>
+        </nav>
+        <div id="acct">
+          <button type="button" class="link-btn" id="loginBtn">Log in</button>
+          <button type="button" class="link-btn tabular-nums" id="bag">Bag/<b id="count">0</b></button>
+          <button type="button" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <!-- SECTION 1: 360 TURNTABLE STAGE -->
+        <section id="stage" aria-label="360-degree rotatable product stage">
+          <video id="vid" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261107_112151_ae5c9a8f-07da-4b83-8dd8-47c762a5dfc0.mp4" muted playsinline preload="auto" crossorigin="anonymous"></video>
+          <canvas id="cv" width="1080" height="1080"></canvas>
+
+          <svg id="lines" viewBox="0 0 820 1000" aria-hidden="true">
+            <path id="ln0" d="M 278 492 L 348 492 L 407 432"/>
+            <circle id="dt0" cx="407" cy="432" r="4"/>
+            <path id="ln1" d="M 556 322 L 496 322 L 456 362"/>
+            <circle id="dt1" cx="456" cy="362" r="4"/>
+            <path id="ln2" d="M 548 598 L 486 598 L 448 560"/>
+            <circle id="dt2" cx="448" cy="560" r="4"/>
+          </svg>
+
+          <button type="button" class="hs" data-i="0" style="left:262px;top:492px" aria-label="Inspect Two-way zip">
+            <svg viewBox="0 0 11 11" aria-hidden="true"><path d="M5.5 0v11M0 5.5h11"/></svg>
+          </button>
+          <button type="button" class="hs" data-i="1" style="left:572px;top:322px" aria-label="Inspect Contour print">
+            <svg viewBox="0 0 11 11" aria-hidden="true"><path d="M5.5 0v11M0 5.5h11"/></svg>
+          </button>
+          <button type="button" class="hs" data-i="2" style="left:564px;top:598px" aria-label="Inspect Hand-warmer pockets">
+            <svg viewBox="0 0 11 11" aria-hidden="true"><path d="M5.5 0v11M0 5.5h11"/></svg>
+          </button>
+
+          <div class="hs-card" id="hc0" style="left:46px;top:520px">
+            <h4>Two-way zip</h4>
+            <p>Concealed storm placket with matte rubberized pull and chin guard.</p>
+          </div>
+          <div class="hs-card" id="hc1" style="left:556px;top:218px">
+            <h4>Contour print</h4>
+            <p>Reflective topographic linework printed over liquid-finish ripstop.</p>
+          </div>
+          <div class="hs-card" id="hc2" style="left:548px;top:626px">
+            <h4>Hand-warmer pockets</h4>
+            <p>Fleece-lined welt pockets with hidden magnetic snap closure.</p>
+          </div>
+
+          <button type="button" id="hint" title="Click for 360° spin or drag jacket">
+            <svg viewBox="0 0 28 12" fill="none" stroke="#111" stroke-width="1.15" aria-hidden="true">
+              <ellipse cx="14" cy="6" rx="12" ry="4.2"/>
+              <path d="M19 9.2 L22 10.1 L19.8 7.3" fill="#111" stroke="none"/>
+            </svg>
+            <span class="tabular-nums">360°</span>
+          </button>
+        </section>
+
+        <!-- SECTION 2: TELEMETRY STRIP -->
+        <section class="sp-specs-strip tabular-nums" aria-label="Garment telemetry">
+          <span>750-FILL RDS DOWN</span>
+          <span>LIQUID-CHROME RIPSTOP</span>
+          <span id="angleReadout">ANGLE: 000°</span>
+        </section>
+
+        <!-- SECTION 3: PRODUCT INFO CARD -->
+        <article id="info">
+          <h1 id="title">The contour lines<br>metallic puffer</h1>
+          <div id="price" class="tabular-nums"><span>€</span> 1.120</div>
+          <div id="badge">PRE-ORDER</div>
+          <p id="lead">Engineered for sub-zero warmth with a liquid-chrome shell that shifts under light. Cut in a relaxed, cropped silhouette with high-loft RDS down baffles.</p>
+
+          <div id="acc">
+            <div class="row">
+              <button type="button" class="row-h"><span>Product description</span><i></i></button>
+              <div class="row-b"><div class="row-b-inner"><p>High-shine metallic nylon outer mapped with tonal contour lines. Internal snow skirt, rib-knit storm cuffs, and adjustable drawcord hem.</p></div></div>
+            </div>
+            <div class="row">
+              <button type="button" class="row-h"><span>Size &amp; fit</span><i></i></button>
+              <div class="row-b"><div class="row-b-inner"><p>Boxy, oversized fit with dropped shoulders. Model is 187 cm / 6'1" and wears size M/L. Take your regular dual size.</p></div></div>
+            </div>
+            <div class="row">
+              <button type="button" class="row-h"><span>Composition &amp; care</span><i></i></button>
+              <div class="row-b"><div class="row-b-inner"><p>Shell: 100% polyamide with polyurethane coating. Fill: 90% goose down, 10% feathers (750 fill power). Wipe clean with damp cloth.</p></div></div>
+            </div>
+            <div class="row">
+              <button type="button" class="row-h"><span>Details</span><i></i></button>
+              <div class="row-b"><div class="row-b-inner"><p>Water-repellent DWR finish · YKK Aquaguard two-way zip · Interior zip chest pocket · Made in Italy · Style OK9-AW25-014.</p></div></div>
+            </div>
+            <div class="row">
+              <button type="button" class="row-h"><span>Delivery &amp; returns</span><i></i></button>
+              <div class="row-b"><div class="row-b-inner"><p>Pre-order dispatches between Nov 18–25. Complimentary express courier shipping and 30-day returns on all orders.</p></div></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SECTION 4: SIZE & BUY CARD -->
+        <section id="buy" aria-label="Size selection and pre-order">
+          <div id="szbar" role="radiogroup" aria-label="Select garment size">
+            <button type="button" class="sz" data-s="0">XS/S</button>
+            <button type="button" class="sz on" data-s="1">M/L</button>
+            <button type="button" class="sz" data-s="2">XL/2XL</button>
+            <div id="hl" aria-hidden="true"></div>
+          </div>
+          <button type="button" id="save">
+            <svg viewBox="0 0 12 15" aria-hidden="true"><path d="M1 1h10v13l-5-3.4L1 14V1z"/></svg>
+            <span>SAVE</span>
+          </button>
+          <button type="button" id="cta"><span>PRE-ORDER</span></button>
+        </section>
+
+        <!-- SECTION 5: FRONT / BACK LOOK THUMBNAILS -->
+        <section id="looks" aria-label="Front and back look views">
+          <button type="button" class="lk on" data-t="0" title="Front view"><canvas width="180" height="202"></canvas></button>
+          <button type="button" class="lk" data-t="0.5" title="Back view"><canvas width="180" height="202"></canvas></button>
+        </section>
+      </main>
+
+      <footer id="spFooter" class="tabular-nums">
+        <span>OKTA/9 ARCHIVE SERIES · DRAG STAGE HORIZONTALLY TO ROTATE 360°</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var art = document.getElementById("art");
+      function fit() {
+        var k = Math.min(window.innerWidth / 1500, window.innerHeight / 1000);
+        art.style.setProperty("--k", k.toFixed(4));
+      }
+      window.addEventListener("resize", fit, { passive: true });
+      fit();
+
+      var navBtns = Array.prototype.slice.call(document.querySelectorAll("#nav button"));
+      navBtns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          navBtns.forEach(function (x) { x.classList.remove("on"); });
+          b.classList.add("on");
+        });
+      });
+
+      var vid = document.getElementById("vid");
+      var cv = document.getElementById("cv");
+      var ctx = cv.getContext("2d");
+      var stage = document.getElementById("stage");
+      var angleReadout = document.getElementById("angleReadout");
+
+      var dur = 10.04;
+      var cur = 0, target = 0, vel = 0;
+      var dragging = false, lastX = 0;
+      var autoSpin = false, ready = false;
+
+      var N = 72;
+      var frames = new Array(N);
+      var extracted = false;
+
+      function drawSource(src) {
+        var vw = src.videoWidth || src.width || 1080;
+        var vh = src.videoHeight || src.height || 1080;
+        if (!vw || !vh) return;
+        ctx.clearRect(0, 0, cv.width, cv.height);
+        var s = Math.max(cv.width / vw, cv.height / vh);
+        var w = vw * s, h = vh * s;
+        ctx.drawImage(src, (cv.width - w) / 2, (cv.height - h) / 2, w, h);
+
+        var id = ctx.getImageData(0, 0, cv.width, cv.height);
+        var d = id.data;
+        for (var i = 0; i < d.length; i += 4) {
+          var r = d[i], g = d[i + 1], b = d[i + 2];
+          var max = r > g ? (r > b ? r : b) : (g > b ? g : b);
+          var min = r < g ? (r < b ? r : b) : (g < b ? g : b);
+          var sat = max - min;
+          var lum = (r + g + b) * 0.3333;
+          if (sat < 16 && lum > 206) {
+            var k = Math.min(1, (lum - 206) / 14) * (1 - sat / 16);
+            d[i]     = r + (226 - r) * k;
+            d[i + 1] = g + (228 - g) * k;
+            d[i + 2] = b + (232 - b) * k;
+          }
+        }
+        ctx.putImageData(id, 0, 0);
+      }
+
+      var looks = Array.prototype.slice.call(document.querySelectorAll(".lk"));
+      function paintThumb(lkIdx, src) {
+        var c = looks[lkIdx].querySelector("canvas");
+        var g = c.getContext("2d");
+        g.fillStyle = "#ecedf0";
+        g.fillRect(0, 0, c.width, c.height);
+        var vw = src.videoWidth || src.width;
+        var vh = src.videoHeight || src.height;
+        var s = Math.max(c.width / vw, c.height / vh) * 1.08;
+        var w = vw * s, h = vh * s;
+        g.drawImage(src, (c.width - w) / 2, (c.height - h) / 2 + 8, w, h);
+      }
+
+      function extractAll() {
+        if (extracted) return;
+        extracted = true;
+        dur = vid.duration || 10.04;
+        var i = 0;
+        var step = function () {
+          if (i >= N) {
+            ready = true;
+            drawSource(frames[0]);
+            paintThumb(0, frames[0]);
+            paintThumb(1, frames[Math.floor(N / 2)]);
+            return;
+          }
+          var t = (i / N) * dur;
+          var onSeek = function () {
+            vid.removeEventListener("seeked", onSeek);
+            var off = document.createElement("canvas");
+            off.width = vid.videoWidth || 720;
+            off.height = vid.videoHeight || 720;
+            off.getContext("2d").drawImage(vid, 0, 0, off.width, off.height);
+            frames[i] = off;
+            if (i === 0) {
+              drawSource(off);
+              paintThumb(0, off);
+            }
+            if (i === Math.floor(N / 2)) paintThumb(1, off);
+            i++;
+            step();
+          };
+          vid.addEventListener("seeked", onSeek);
+          try { vid.currentTime = t; } catch (_) {}
+        };
+        step();
+      }
+
+      vid.addEventListener("loadeddata", extractAll, { once: true });
+      vid.load();
+
+      var hsBtns = Array.prototype.slice.call(document.querySelectorAll(".hs"));
+      var hsCards = [
+        document.getElementById("hc0"),
+        document.getElementById("hc1"),
+        document.getElementById("hc2")
+      ];
+      var lines = [
+        document.getElementById("ln0"),
+        document.getElementById("ln1"),
+        document.getElementById("ln2")
+      ];
+      var dots = [
+        document.getElementById("dt0"),
+        document.getElementById("dt1"),
+        document.getElementById("dt2")
+      ];
+      var activeHS = -1;
+
+      function setHS(idx) {
+        activeHS = idx === activeHS ? -1 : idx;
+        hsBtns.forEach(function (b, i) { b.classList.toggle("on", i === activeHS); });
+        hsCards.forEach(function (c, i) { c.classList.toggle("on", i === activeHS); });
+        lines.forEach(function (l, i) { l.classList.toggle("on", i === activeHS); });
+        dots.forEach(function (d, i) { d.classList.toggle("on", i === activeHS); });
+      }
+      hsBtns.forEach(function (b) {
+        b.addEventListener("click", function (e) {
+          e.stopPropagation();
+          setHS(+b.dataset.i);
+        });
+      });
+
+      var lastIdx = -1;
+      function tick() {
+        if (autoSpin && document.documentElement.getAttribute("data-motion") !== "paused") {
+          target += 0.0045;
+          if (target >= 1) {
+            target = 0;
+            cur -= 1;
+            autoSpin = false;
+          }
+        } else if (!dragging) {
+          target += vel;
+          vel *= 0.91;
+          if (Math.abs(vel) < 0.00004) vel = 0;
+        }
+        cur += (target - cur) * 0.18;
+        var norm = ((cur % 1) + 1) % 1;
+        var deg = Math.round(norm * 360) % 360;
+        if (angleReadout) {
+          angleReadout.textContent = "ANGLE: " + String(deg).padStart(3, "0") + "°";
+        }
+
+        var frontDist = Math.min(norm, 1 - norm);
+        var hideHotspots = frontDist > 0.085;
+        hsBtns.forEach(function (b) { b.classList.toggle("hide", hideHotspots); });
+        if (hideHotspots && activeHS !== -1) setHS(-1);
+
+        var isBack = norm > 0.25 && norm < 0.75;
+        looks[0].classList.toggle("on", !isBack);
+        looks[1].classList.toggle("on", isBack);
+
+        var idx = Math.floor(norm * N) % N;
+        if (idx !== lastIdx && frames[idx]) {
+          lastIdx = idx;
+          drawSource(frames[idx]);
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+
+      stage.addEventListener("pointerdown", function (e) {
+        if (e.target.closest(".hs, .hs-card, #hint")) return;
+        dragging = true;
+        autoSpin = false;
+        vel = 0;
+        lastX = e.clientX;
+        stage.classList.add("dragging");
+        stage.setPointerCapture(e.pointerId);
+      });
+      stage.addEventListener("pointermove", function (e) {
+        if (!dragging) return;
+        var dx = e.clientX - lastX;
+        lastX = e.clientX;
+        var delta = -dx / 680;
+        target += delta;
+        vel = delta * 0.45;
+      });
+      var endDrag = function () {
+        dragging = false;
+        stage.classList.remove("dragging");
+      };
+      stage.addEventListener("pointerup", endDrag);
+      stage.addEventListener("pointercancel", endDrag);
+
+      function spinTo(frac) {
+        autoSpin = false;
+        vel = 0;
+        var base = Math.round(cur);
+        var cand = [base - 1 + frac, base + frac, base + 1 + frac];
+        cand.sort(function (a, b) { return Math.abs(a - cur) - Math.abs(b - cur); });
+        target = cand[0];
+      }
+      looks.forEach(function (lk) {
+        lk.addEventListener("click", function () { spinTo(parseFloat(lk.dataset.t)); });
+      });
+
+      document.getElementById("hint").addEventListener("click", function () {
+        cur = ((cur % 1) + 1) % 1;
+        target = cur;
+        autoSpin = true;
+      });
+
+      var rows = Array.prototype.slice.call(document.querySelectorAll("#acc .row"));
+      rows.forEach(function (r) {
+        r.querySelector(".row-h").addEventListener("click", function () {
+          var wasOpen = r.classList.contains("open");
+          rows.forEach(function (x) { x.classList.remove("open"); });
+          if (!wasOpen) r.classList.add("open");
+        });
+      });
+
+      var szs = Array.prototype.slice.call(document.querySelectorAll(".sz"));
+      var hl = document.getElementById("hl");
+      function pickSize(i) {
+        szs.forEach(function (b, idx) { b.classList.toggle("on", idx === i); });
+        hl.style.transform = "translateX(" + (i * 121.33).toFixed(2) + "px)";
+      }
+      szs.forEach(function (b) {
+        b.addEventListener("click", function () { pickSize(+b.dataset.s); });
+      });
+      pickSize(1);
+
+      var save = document.getElementById("save");
+      save.addEventListener("click", function () {
+        save.classList.toggle("saved");
+        save.querySelector("span").textContent =
+          save.classList.contains("saved") ? "SAVED" : "SAVE";
+      });
+
+      var cta = document.getElementById("cta");
+      var bag = document.getElementById("bag");
+      var countEl = document.getElementById("count");
+      var count = 0;
+
+      cta.addEventListener("click", function () {
+        count++;
+        var label = cta.querySelector("span");
+        label.style.transform = "translateY(-140%)";
+        label.style.opacity = "0";
+        setTimeout(function () {
+          label.textContent = "ADDED TO BAG — OK";
+          label.style.transition = "none";
+          label.style.transform = "translateY(140%)";
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              label.style.transition = "";
+              label.style.transform = "translateY(0)";
+              label.style.opacity = "1";
+            });
+          });
+        }, 180);
+
+        if (frames[0]) {
+          var fly = document.createElement("div");
+          fly.className = "fly";
+          var fc = document.createElement("canvas");
+          fc.width = 88; fc.height = 104;
+          fc.getContext("2d").drawImage(frames[0], 0, 0, 88, 104);
+          fly.appendChild(fc);
+          art.appendChild(fly);
+          var sx = 1100, sy = 900, ex = 1445, ey = 28;
+          var t0 = performance.now();
+          var anim = function (now) {
+            var p = Math.min(1, (now - t0) / 560);
+            var e = 1 - Math.pow(1 - p, 3);
+            var x = sx + (ex - sx) * e;
+            var y = sy + (ey - sy) * e - Math.sin(p * Math.PI) * 140;
+            var s = 1 - e * 0.65;
+            fly.style.transform = "translate(" + x + "px," + y + "px) scale(" + s + ")";
+            fly.style.opacity = String(1 - Math.max(0, (p - 0.75) * 4));
+            if (p < 1) requestAnimationFrame(anim);
+            else fly.remove();
+          };
+          requestAnimationFrame(anim);
+        }
+
+        setTimeout(function () {
+          countEl.textContent = String(count);
+          bag.classList.add("bump");
+          setTimeout(function () { bag.classList.remove("bump"); }, 360);
+        }, 460);
+
+        setTimeout(function () {
+          label.textContent = "PRE-ORDER";
+        }, 1700);
+      });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        });
+      }, { threshold: 0.1 });
+      io.observe(stage);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.spi53-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

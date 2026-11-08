@@ -1,0 +1,44 @@
+{
+  "id": "t301",
+  "slug": "verra-events-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T22:45:55.314Z",
+  "demo": "/demos/verra-events-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1d99b7db5d6c",
+  "sha256": "1d99b7db5d6c4bb6fc51a19e496ea6332fa546279f95b688cbe2502d6b9d5fc0",
+  "demoHtmlSha256": "8f1a67df27eaac12da50ad38a47fc30ce81bbcead90b2e754ca95bb3f23d64ea",
+  "demoSha256": "24f0a17e859806aeb90095a654cce5654827065bf61070aa8a367055f22dbcdd",
+  "bytes": 985416,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.787,
+      "action": "click",
+      "selector": "#startBtn"
+    },
+    {
+      "seconds": 6.098,
+      "action": "click",
+      "selector": "#connectBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verra-events-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verra-events-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verra-events-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verra-events-hero-return.jpg"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "t299",
+  "slug": "fox-couture",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T22:45:15.130Z",
+  "demo": "/demos/fox-couture/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "fc6baedbc733",
+  "sha256": "fc6baedbc73314dc4ed35f26fda4170be95c23896779eaaf4e34c314ad1c6d17",
+  "demoHtmlSha256": "18bec4b12c88aaa3f40de403c2b2c41bd5867f0765498a166dc00d2b7c0b5e89",
+  "demoSha256": "2893d5de273634af704a3149b5313a0316ec87cefe433ea4dcc4729d29c37569",
+  "bytes": 701811,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.661,
+      "action": "click",
+      "selector": "#novuspaceBtn"
+    },
+    {
+      "seconds": 5.031,
+      "action": "click",
+      "selector": "#rndFox"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fox-couture-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fox-couture-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fox-couture-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fox-couture-return.jpg"
+  ]
+}

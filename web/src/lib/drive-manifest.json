@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-08T13:32:35.702Z",
+  "updatedAt": "2026-11-08T22:46:07.725Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2297,6 +2297,78 @@
       "sizeBytes": 15548,
       "sha256": "7d1fd30fc9895d716e7e3dd8a0cff8d3bed3a17774b406314dfa43cd3ac11ad5",
       "updatedAt": "2026-11-08T13:32:35.701Z"
+    },
+    "trend-carousel": {
+      "fileId": "1LzeU0QUk8JicTiRNmFIIZMdvE4jvQPN6",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1LzeU0QUk8JicTiRNmFIIZMdvE4jvQPN6",
+      "webViewUrl": "https://drive.google.com/file/d/1LzeU0QUk8JicTiRNmFIIZMdvE4jvQPN6/view",
+      "sizeBytes": 16959,
+      "sha256": "eebb8a585dcfaae93687828bb91370460975318cecfe9db107d21e9fb3c4d0af",
+      "updatedAt": "2026-11-08T22:35:53.396Z"
+    },
+    "spin-product": {
+      "fileId": "1PyPFwSUuYp_e1cH879eEW1nJQhpIQXsD",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1PyPFwSUuYp_e1cH879eEW1nJQhpIQXsD",
+      "webViewUrl": "https://drive.google.com/file/d/1PyPFwSUuYp_e1cH879eEW1nJQhpIQXsD/view",
+      "sizeBytes": 16150,
+      "sha256": "5f6781647560ad333e31cef30bf6ff1d201e033adb89670a6b6c53932e5186c3",
+      "updatedAt": "2026-11-08T22:35:55.658Z"
+    },
+    "fox-couture": {
+      "fileId": "1rQqxqVn1f1lYe7sY6BgkICX4-VB5zV-z",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1rQqxqVn1f1lYe7sY6BgkICX4-VB5zV-z",
+      "webViewUrl": "https://drive.google.com/file/d/1rQqxqVn1f1lYe7sY6BgkICX4-VB5zV-z/view",
+      "sizeBytes": 17489,
+      "sha256": "9df4b5a94f576a351d180bca57308c2e44cd210518aa58ee0efdfebc61f29db9",
+      "updatedAt": "2026-11-08T22:41:27.798Z"
+    },
+    "album-flow": {
+      "fileId": "1M0hFnkJmeEBLioQZpcfn9VFQ66nsnBjW",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1M0hFnkJmeEBLioQZpcfn9VFQ66nsnBjW",
+      "webViewUrl": "https://drive.google.com/file/d/1M0hFnkJmeEBLioQZpcfn9VFQ66nsnBjW/view",
+      "sizeBytes": 16711,
+      "sha256": "5cf729e765a352798a0f0454825266524fda1257e4dad42733a114b99af16e48",
+      "updatedAt": "2026-11-08T22:46:07.358Z"
+    },
+    "verra-events-hero": {
+      "fileId": "1PoV_UpGcisvhN28mTpZqaeTI_omXnIE2",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1PoV_UpGcisvhN28mTpZqaeTI_omXnIE2",
+      "webViewUrl": "https://drive.google.com/file/d/1PoV_UpGcisvhN28mTpZqaeTI_omXnIE2/view",
+      "sizeBytes": 12999,
+      "sha256": "ba28eacada64d41a5ff3573a5a8bea6f81c814f6922f82609f26ccaee0c920f2",
+      "updatedAt": "2026-11-08T22:46:07.361Z"
+    },
+    "glass-portfolio": {
+      "fileId": "1R6tT-UoByau1GolJV2lIOPFopzOrryqF",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1R6tT-UoByau1GolJV2lIOPFopzOrryqF",
+      "webViewUrl": "https://drive.google.com/file/d/1R6tT-UoByau1GolJV2lIOPFopzOrryqF/view",
+      "sizeBytes": 16345,
+      "sha256": "f954310bed690aef02d7d5e172f55e124dfe97dccbb74d762f91aa2b836690f6",
+      "updatedAt": "2026-11-08T22:46:07.381Z"
+    },
+    "pink-rider": {
+      "fileId": "1eIDMwUSWJQHi5Orr-ndfSk_2K0r4x1F0",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1eIDMwUSWJQHi5Orr-ndfSk_2K0r4x1F0",
+      "webViewUrl": "https://drive.google.com/file/d/1eIDMwUSWJQHi5Orr-ndfSk_2K0r4x1F0/view",
+      "sizeBytes": 10340,
+      "sha256": "aacb3cc95d0f19702bb4df20275e9f93af104c1879b4cf95f8a9ca62f7fd9a94",
+      "updatedAt": "2026-11-08T22:46:07.555Z"
+    },
+    "vasari-curved-archive": {
+      "fileId": "1IJx31uJWVePHyhPK76DggscOVubBFyt9",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1IJx31uJWVePHyhPK76DggscOVubBFyt9",
+      "webViewUrl": "https://drive.google.com/file/d/1IJx31uJWVePHyhPK76DggscOVubBFyt9/view",
+      "sizeBytes": 880650,
+      "sha256": "380aa047e7b36d73df38ac03d8d650e8460e2dbfacdaf00a26645a7cac62a2c3",
+      "updatedAt": "2026-11-08T22:46:07.725Z"
     }
   }
 }

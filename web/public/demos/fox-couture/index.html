@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Novu® London — High-Fashion Digital Couture</title>
+  <meta name="description" content="Novu London 3D digital fashion house featuring 7,777 styled fennec foxes, scroll-scrubbed 360-degree studio orbit, and partner lookbook carousel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #e9e6e1;
+      --surface: #f2efeb;
+      --surface-elevated: #ffffff;
+      --ink: #0b0b0b;
+      --fg: #0b0b0b;
+      --mute: #77736d;
+      --muted: #77736d;
+      --pill: rgba(255, 255, 255, 0.42);
+      --pill-b: rgba(11, 11, 11, 0.14);
+      --line: rgba(11, 11, 11, 0.14);
+      --accent: #ff5a1f;
+      --accent-text: #c43b08;
+      --accent-strong: #e0440c;
+      --on-accent: #ffffff;
+      --display: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+      --sans: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.3, 1.4, 0.4, 1);
+      --partner-sheet: url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261107_005542_4250aa05-1091-4015-b242-d58db718f6b7.png&w=2000&q=85");
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      width: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 10px 18px; background: var(--ink); color: #ffffff;
+      font-weight: 600; text-decoration: none; border-radius: 999px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); outline: 2px solid var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+    /* FIXED TOP & BOTTOM CHROME */
+    .bar {
+      position: fixed; left: 0; right: 0; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 28px; pointer-events: none;
+    }
+    .bar > * { pointer-events: auto; }
+    .bar.top { top: 0; }
+    .bar.bot { bottom: 0; padding-bottom: 18px; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      height: 36px; padding: 0 15px; border-radius: 999px;
+      background: var(--pill);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--pill-b);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ink);
+      transition: transform 0.25s var(--ease-out), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .pill:hover {
+      background: var(--ink); color: #ffffff; border-color: var(--ink);
+      transform: translateY(-1px);
+    }
+    .pill:active { transform: scale(0.96); }
+    .pill .tri {
+      width: 0; height: 0;
+      border-left: 6px solid currentColor;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+    .pill.icon { width: 38px; padding: 0; justify-content: center; }
+
+    .top-ticker {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      color: rgba(11, 11, 11, 0.62);
+      display: flex; align-items: center; gap: 16px;
+    }
+    .top-ticker span.sep {
+      width: 22px; height: 1px; background: rgba(11, 11, 11, 0.28); display: inline-block;
+    }
+    .top-r, .bot-l, .bot-r { display: flex; align-items: center; gap: 10px; }
+
+    .fox-btn {
+      width: 38px; height: 36px; border-radius: 999px;
+      background: var(--pill);
+      border: 1px solid var(--pill-b);
+      display: grid; place-items: center; position: relative;
+      transition: transform 0.25s var(--ease-out), background-color 0.25s ease, color 0.25s ease;
+    }
+    .fox-btn:hover { background: var(--ink); color: #ffffff; transform: translateY(-1px) rotate(-6deg); }
+    .fox-btn:active { transform: scale(0.95); }
+    .fox-badge {
+      position: absolute; top: -6px; right: -6px;
+      background: var(--accent); color: #ffffff;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.04em;
+      padding: 2px 5px; border-radius: 999px;
+      opacity: 0; transform: scale(0.7);
+      transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none;
+    }
+    .fox-btn.ping .fox-badge { opacity: 1; transform: scale(1); }
+
+    .fox-tip {
+      position: fixed; left: 170px; bottom: 64px; z-index: 45;
+      background: rgba(15, 15, 15, 0.92); color: #ffffff;
+      padding: 8px 13px; border-radius: 10px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+      display: flex; align-items: center; gap: 10px;
+      opacity: 0; transform: translateY(6px); pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .fox-tip.show { opacity: 1; transform: translateY(0); }
+    .fox-tip b { color: var(--accent); font-weight: 700; }
+
+    .space-hint {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(11, 11, 11, 0.65);
+      padding: 6px 12px; border-radius: 999px;
+      transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    }
+    .space-hint:hover { color: var(--ink); background: rgba(255, 255, 255, 0.35); }
+    .space-hint:active { transform: scale(0.96); }
+    .space-hint .key {
+      padding: 4px 10px; border-radius: 999px;
+      border: 1px solid var(--pill-b); background: var(--pill);
+      color: var(--ink); font-weight: 600;
+    }
+
+    /* SCROLL-SCRUBBED 3D STAGE */
+    .scrolly { position: relative; height: 360vh; }
+    .stage-sticky {
+      position: sticky; top: 0; width: 100%; height: 100vh;
+      overflow: hidden; background: #e8e5e0;
+    }
+    .stage-media {
+      position: absolute; inset: -3%; width: 106%; height: 106%;
+      will-change: transform; pointer-events: none;
+    }
+    .stage-media video,
+    .stage-media canvas,
+    .stage-media img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 50% 50%; display: block;
+    }
+    #heroStill { z-index: 1; transition: opacity 0.45s ease; }
+    #sceneVid { z-index: 2; opacity: 0; pointer-events: none; }
+    #sceneCanvas { z-index: 3; }
+
+    .stage-StickyVignette {
+      position: absolute; inset: 0; z-index: 4; pointer-events: none;
+      background:
+        radial-gradient(60% 55% at 50% 52%, rgba(255, 255, 255, 0) 55%, rgba(215, 210, 202, 0.35) 100%),
+        linear-gradient(180deg, rgba(235, 232, 226, 0.22) 0%, rgba(235, 232, 226, 0) 18%, rgba(235, 232, 226, 0) 82%, rgba(230, 226, 220, 0.35) 100%);
+    }
+
+    .stage-over {
+      position: relative; z-index: 10; margin-top: -100vh; pointer-events: none;
+    }
+    .stage-over a, .stage-over button, .stage-over .interactive { pointer-events: auto; }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative; height: 100vh; width: 100%;
+      padding: 58px 28px 68px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .wordmark-wrap {
+      width: 100%; overflow: visible; line-height: 0.82; user-select: none; will-change: transform, opacity;
+    }
+    .wordmark {
+      font-family: var(--display); font-weight: 900;
+      letter-spacing: -0.055em; line-height: 0.82;
+      color: var(--ink); white-space: nowrap;
+      display: inline-flex; align-items: flex-start;
+      transform-origin: left top;
+    }
+    .wordmark .wm-word { font-size: 230px; letter-spacing: -0.06em; }
+    .wordmark .wm-reg {
+      font-size: 56px; font-weight: 800; line-height: 1;
+      margin-left: 4px; margin-top: 10px;
+    }
+    .wordmark .wm-city {
+      font-family: var(--sans); font-weight: 600; font-size: 13px;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      align-self: flex-end; margin-left: 22px; margin-bottom: 18px;
+    }
+
+    .hero-mid {
+      position: relative; flex: 1;
+      display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+    }
+    .hero-left { max-width: 300px; will-change: transform, opacity; }
+    .hero-left .eyebrow {
+      font-size: 12px; font-weight: 600; line-height: 1.45;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink);
+    }
+    .hero-left .rule {
+      width: 168px; height: 1px; background: rgba(11, 11, 11, 0.35); margin: 14px 0;
+    }
+    .hero-left .sub {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute);
+    }
+    .hero-left .cta-row {
+      margin-top: 22px; display: flex; align-items: center; gap: 10px;
+    }
+
+    .hero-right {
+      justify-self: end; text-align: right; will-change: transform, opacity;
+    }
+    .hero-right .meet {
+      font-size: 11px; font-weight: 600; line-height: 1.45;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      color: rgba(11, 11, 11, 0.72); margin-bottom: 10px;
+    }
+    .hero-right .code {
+      font-family: var(--display); font-weight: 900;
+      font-size: clamp(54px, 7.6vw, 116px); line-height: 0.88;
+      letter-spacing: -0.045em; color: var(--ink);
+    }
+
+    /* STORY SECTION */
+    .story {
+      position: relative; height: 260vh; width: 100%;
+    }
+    .story-panel {
+      position: sticky; top: 0; height: 100vh; width: 100%;
+      display: grid; grid-template-columns: 1.05fr 0.95fr;
+      align-items: center; padding: 90px 56px 90px 64px;
+      pointer-events: none;
+    }
+    .story-copy {
+      max-width: 520px; pointer-events: auto;
+      will-change: transform, opacity;
+      transition: opacity 0.45s ease, transform 0.55s var(--ease-out);
+    }
+    .story-copy.hidden {
+      opacity: 0; transform: translateY(28px); pointer-events: none;
+    }
+    .story-kicker {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--mute); margin-bottom: 18px;
+    }
+    .story-kicker .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+    }
+    .story-h2 {
+      font-family: var(--display); font-weight: 900;
+      font-size: clamp(38px, 4.9vw, 72px); line-height: 0.94;
+      letter-spacing: -0.04em; text-transform: uppercase;
+      color: var(--ink); margin-bottom: 24px;
+    }
+    .story-p {
+      font-size: 14px; line-height: 1.65;
+      color: rgba(11, 11, 11, 0.72); max-width: 430px; margin-bottom: 14px;
+    }
+    .story-specs {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px; margin-top: 26px; padding-top: 20px;
+      border-top: 1px solid var(--line); max-width: 440px;
+    }
+    .spec-num {
+      font-family: var(--display); font-weight: 800;
+      font-size: 22px; letter-spacing: -0.03em;
+    }
+    .spec-lbl {
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--mute); margin-top: 3px;
+    }
+    .story-cta {
+      margin-top: 26px; display: inline-flex; align-items: center; gap: 12px;
+      height: 42px; padding: 0 20px; border-radius: 999px;
+      background: var(--ink); color: #ffffff;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.10em; text-transform: uppercase;
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+    .story-cta:hover { background: var(--accent); transform: translateY(-2px); }
+    .story-cta:active { transform: scale(0.96); }
+
+    /* PARTNERS CAROUSEL SECTION */
+    .partners {
+      position: relative; z-index: 20;
+      min-height: 100vh; background: var(--bg);
+      padding: 96px 0 110px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      border-top: 1px solid rgba(11, 11, 11, 0.08);
+      overflow: hidden;
+    }
+    .p-head { text-align: center; padding: 0 28px; margin-bottom: 34px; }
+    .p-kicker {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--mute); margin-bottom: 10px;
+    }
+    .p-title {
+      font-family: var(--display); font-weight: 900;
+      font-size: clamp(68px, 11vw, 164px); line-height: 0.88;
+      letter-spacing: -0.05em; color: var(--ink);
+    }
+
+    .p-rail-wrap {
+      position: relative; width: 100%; overflow: hidden;
+      padding: 18px 0 26px; cursor: grab; user-select: none;
+    }
+    .p-rail-wrap:active { cursor: grabbing; }
+    .p-track {
+      display: flex; gap: 22px; padding: 0 48px;
+      will-change: transform; width: max-content;
+    }
+
+    .p-card {
+      width: 248px; flex: 0 0 248px;
+      background: #dedad3; border-radius: 14px; padding: 12px;
+      border: 1px solid rgba(11, 11, 11, 0.08);
+      transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), background-color 0.3s ease;
+      position: relative;
+    }
+    .p-card:hover {
+      transform: translateY(-10px);
+      background: #f4f1ec;
+      box-shadow: 0 24px 48px -18px rgba(11, 11, 11, 0.22);
+    }
+    .p-portrait {
+      width: 100%; aspect-ratio: 1 / 1.12;
+      border-radius: 10px; background-color: #d7d3cc;
+      background-image: var(--partner-sheet);
+      background-size: 312% 212%;
+      background-repeat: no-repeat;
+      position: relative; overflow: hidden;
+    }
+    .p-portrait::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, rgba(0, 0, 0, 0.08) 100%);
+    }
+    .p-tag {
+      position: absolute; top: 10px; left: 10px;
+      height: 22px; padding: 0 9px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      font-size: 9.5px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      display: inline-flex; align-items: center;
+    }
+    .p-meta {
+      padding: 12px 4px 4px;
+      display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+    }
+    .p-name {
+      font-family: var(--display); font-weight: 800;
+      font-size: 16px; letter-spacing: -0.02em;
+    }
+    .p-role {
+      font-size: 10.5px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute);
+    }
+    .p-bio {
+      padding: 4px 4px 2px; font-size: 12px; line-height: 1.45;
+      color: rgba(11, 11, 11, 0.66);
+    }
+
+    .p-controls {
+      display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 8px;
+    }
+    .p-foot {
+      padding: 28px 48px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 11px; color: var(--mute);
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    /* MENU OVERLAY & TRAILER MODAL */
+    .menu-ov {
+      position: fixed; inset: 0; z-index: 60;
+      background: rgba(14, 14, 14, 0.94);
+      backdrop-filter: blur(16px); color: #f3f0ea;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 24px 36px 32px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .menu-ov.open { opacity: 1; pointer-events: auto; }
+    .menu-top { display: flex; justify-content: space-between; align-items: center; }
+    .menu-links {
+      display: grid; gap: 6px; my: auto;
+    }
+    .menu-links a {
+      font-family: var(--display); font-weight: 900;
+      font-size: clamp(38px, 6.2vw, 84px); line-height: 0.96;
+      letter-spacing: -0.04em; text-transform: uppercase;
+      display: inline-flex; align-items: baseline; gap: 18px;
+      transition: transform 0.3s var(--ease-out), color 0.25s ease;
+    }
+    .menu-links a span {
+      font-family: var(--sans); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.16em; color: var(--accent);
+    }
+    .menu-links a:hover { transform: translateX(14px); color: var(--accent); }
+
+    .modal {
+      position: fixed; inset: 0; z-index: 70;
+      background: rgba(10, 10, 10, 0.86);
+      display: grid; place-items: center; padding: 28px;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .modal.open { opacity: 1; pointer-events: auto; }
+    .modal-box {
+      width: min(960px, 92vw); aspect-ratio: 16 / 9;
+      background: #000000; border-radius: 16px; overflow: hidden;
+      position: relative; box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+    }
+    .modal-box video { width: 100%; height: 100%; object-fit: cover; }
+    .modal-close {
+      position: absolute; top: 14px; right: 14px;
+      height: 34px; padding: 0 14px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88); color: #000000;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    @media (max-width: 960px) {
+      .top-ticker { display: none; }
+      .hero-mid { grid-template-columns: 1fr; align-items: end; gap: 20px; }
+      .hero-right { justify-self: start; text-align: left; }
+      .story-panel { grid-template-columns: 1fr; padding: 84px 24px; align-items: end; }
+    }
+    @media (max-width: 600px) {
+      .bar { padding: 12px 16px; }
+      .p-foot { padding: 20px 16px 0; flex-direction: column; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- FIXED TOP CHROME -->
+  <header class="bar top">
+    <button class="pill" id="openTrailer" type="button">
+      <span class="tri" aria-hidden="true"></span>
+      <span>PLAY TRAILER</span>
+    </button>
+
+    <div class="top-ticker">
+      <span>HIGH-FASHION NOVUS</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>DESIGNED IN LONDON</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span>CRAFTED FOR DIGITAL CULTURE</span>
+    </div>
+
+    <nav class="top-r" aria-label="Primary actions">
+      <a class="pill" href="#partners">VIEW MARKETPLACE</a>
+      <button class="pill icon" id="menuBtn" type="button" aria-label="Open navigation menu">
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <path d="M1 1.5H13M1 5H13M1 8.5H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="pill" id="motionToggleBtn" type="button" aria-pressed="false">Motion: ON</button>
+    </nav>
+  </header>
+
+  <!-- FIXED BOTTOM CHROME -->
+  <div class="bar bot" role="region" aria-label="Quick controls">
+    <div class="bot-l">
+      <a class="pill" href="#walk">OUR ROADMAP</a>
+      <button class="fox-btn" id="rndFox" type="button" title="Generate random Novu ID">
+        <span class="fox-badge" id="foxBadge">NEW</span>
+        <svg width="16" height="15" viewBox="0 0 24 22" fill="currentColor" aria-hidden="true">
+          <path d="M2 1L8.5 7.5L12 6L15.5 7.5L22 1L20 13.5L12 21L4 13.5L2 1ZM8.5 13C7.7 13 7 13.7 7 14.5C7 15.3 7.7 16 8.5 16C9.3 16 10 15.3 10 14.5C10 13.7 9.3 13 8.5 13ZM15.5 13C14.7 13 14 13.7 14 14.5C14 15.3 14.7 16 15.5 16C16.3 16 17 15.3 17 14.5C17 13.7 16.3 13 15.5 13Z"/>
+        </svg>
+      </button>
+    </div>
+
+    <button class="space-hint" id="novuspaceBtn" type="button">
+      <span>PRESS</span>
+      <span class="key">· NOVUBAR ·</span>
+      <span>TO SWITCH</span>
+    </button>
+
+    <div class="bot-r">
+      <a class="pill" href="#partners">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="4" height="4" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="7" y="1" width="4" height="4" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="1" y="7" width="4" height="4" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="7" y="7" width="4" height="4" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+        <span>FASHION INDEX</span>
+      </a>
+    </div>
+  </div>
+  <div class="fox-tip tabular-nums" id="foxTip" role="status" aria-live="polite">INSPECTING <b id="foxTipCode">NVU0023</b> · COUTURE PUFFER</div>
+
+  <!-- FULLSCREEN MENU OVERLAY -->
+  <div class="menu-ov" id="menuOv" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div class="menu-top">
+      <span style="font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-0.04em;">Novu® LONDON</span>
+      <button class="pill" id="closeMenu" type="button" style="background:rgba(255,255,255,0.14);color:#fff;border-color:rgba(255,255,255,0.24);">CLOSE ×</button>
+    </div>
+    <div class="menu-links">
+      <a href="#top" data-nav><span>01</span>The Drop</a>
+      <a href="#walk" data-nav><span>02</span>The Walk</a>
+      <a href="#partners" data-nav><span>03</span>Partners</a>
+      <a href="#partners" data-nav><span>04</span>Fashion Index</a>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);">
+      <span>LONDON · TOKYO · NEW YORK</span>
+      <span>7,777 DIGITAL GARMENTS</span>
+    </div>
+  </div>
+
+  <!-- TRAILER MODAL -->
+  <div class="modal" id="trailerModal" role="dialog" aria-modal="true" aria-label="Novu London Trailer">
+    <div class="modal-box">
+      <video id="trailerVid" playsinline loop preload="metadata" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261107_145142_a39216fc-13cf-4ce3-baf8-d9bdbfd5f955.mp4"></video>
+      <button class="modal-close" id="closeTrailer" type="button">CLOSE ×</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="scrolly" id="scrolly">
+      <div class="stage-sticky">
+        <div class="stage-media" id="stageMedia">
+          <img id="heroStill" alt="Novu fennec fox wearing sculpted cream couture puffer">
+          <video id="sceneVid" muted playsinline preload="auto" crossorigin="anonymous" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261107_145142_a39216fc-13cf-4ce3-baf8-d9bdbfd5f955.mp4"></video>
+          <canvas id="sceneCanvas"></canvas>
+        </div>
+        <div class="stage-StickyVignette" aria-hidden="true"></div>
+      </div>
+
+      <div class="stage-over">
+        <!-- SECTION 1: HERO -->
+        <section class="hero" id="top" aria-label="Novu London Hero">
+          <div class="wordmark-wrap" id="wmWrap">
+            <h1 class="wordmark" id="wordmark">
+              <span class="wm-word">Novu</span>
+              <sup class="wm-reg">®</sup>
+              <span class="wm-city">LONDON</span>
+            </h1>
+          </div>
+
+          <div class="hero-mid">
+            <div class="hero-left" id="heroLeft">
+              <p class="eyebrow">BUILT IN 3D, READY TO<br>REDESIGN DIGITAL COUTURE</p>
+              <div class="rule"></div>
+              <p class="sub tabular-nums">7777 PIECES · BESPOKE RIG · DROP 01</p>
+              <div class="cta-row">
+                <a class="pill interactive" href="#walk" style="background:var(--ink);color:#fff;border-color:var(--ink);">EXPLORE THE WALK ↓</a>
+              </div>
+            </div>
+
+            <div class="hero-right" id="heroRight">
+              <p class="meet">MEET ALL 7777<br>STYLED BIG-EARED NOVUS</p>
+              <div class="code tabular-nums" id="heroCode">NVU0023.</div>
+            </div>
+          </div>
+
+          <div style="height:12px;"></div>
+        </section>
+
+        <!-- SECTION 2: STORY WALK -->
+        <section class="story" id="walk" aria-label="The Craft and Novuwalk">
+          <div class="story-panel">
+            <div>
+              <!-- ARTICLE 1: THE CRAFT -->
+              <article class="story-copy" id="panelA">
+                <div class="story-kicker"><span class="dot" aria-hidden="true"></span><span>01 / THE CRAFT</span></div>
+                <h2 class="story-h2">STREETWEAR,<br>BUT MADE<br>YOURS</h2>
+                <p class="story-p">
+                  Novu is a London-born digital fashion house dressing 7,777 fennec characters in runway-grade outerwear, technical knitwear, and modular accessories.
+                </p>
+                <p class="story-p">
+                  Every silhouette is pattern-cut in 3D, simulated for real cloth weight, and paired with holder-owned lookbook rights across virtual and physical drops.
+                </p>
+                <div class="story-specs tabular-nums">
+                  <div>
+                    <div class="spec-num">7,777</div>
+                    <div class="spec-lbl">Unique Novus</div>
+                  </div>
+                  <div>
+                    <div class="spec-num">240+</div>
+                    <div class="spec-lbl">Couture Traits</div>
+                  </div>
+                  <div>
+                    <div class="spec-num">4K</div>
+                    <div class="spec-lbl">Cloth Sim Rig</div>
+                  </div>
+                </div>
+                <a class="story-cta interactive" href="#partners">
+                  <span>ENTER STUDIO</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
+
+              <!-- ARTICLE 2: NOVUWALK -->
+              <article class="story-copy hidden" id="panelB" style="margin-top:-360px;">
+                <div class="story-kicker"><span class="dot" aria-hidden="true"></span><span>02 / NOVUWALK</span></div>
+                <h2 class="story-h2">RUN THE<br>NOVUWALK</h2>
+                <p class="story-p">
+                  Step onto the studio floor. As the camera orbits 360°, inspect the quilted baffling, matte technical hardware, and custom Vibram-inspired sole unit from every angle.
+                </p>
+                <p class="story-p">
+                  Collectors unlock seasonal capsule claims, full-body FBX/GLB files, and priority access to our physical London showroom fittings.
+                </p>
+                <a class="story-cta interactive" href="#partners">
+                  <span>VIEW PARTNERS</span>
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </article>
+            </div>
+            <div></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- SECTION 3: PARTNERS CAROUSEL -->
+    <section class="partners" id="partners" aria-label="Partners and Collaborations">
+      <div class="p-head">
+        <div class="p-kicker">COLLABORATIONS &amp; FRIENDS OF THE HOUSE</div>
+        <h2 class="p-title">Partners</h2>
+      </div>
+
+      <div class="p-rail-wrap" id="pRail">
+        <div class="p-track" id="pTrack"></div>
+      </div>
+
+      <div class="p-controls">
+        <button class="pill" id="pPrev" type="button">← PREV</button>
+        <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute);">DRAG OR SCROLL</span>
+        <button class="pill" id="pNext" type="button">NEXT →</button>
+      </div>
+
+      <footer class="p-foot tabular-nums">
+        <span>© 2026 NOVU® LONDON STUDIO — ALL RIGHTS RESERVED</span>
+        <span>DESIGNED FOR HIGH-FASHION DIGITAL CULTURE</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var HERO_STILL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261107_005547_8a9e6889-76aa-4688-81b5-4452d9afa4ad.png&w=2048&q=85";
+      var STORY_STILL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261107_005547_a3e2027b-0bcb-455d-bef4-6c0c6d722cb1.png&w=2048&q=85";
+      var heroStillEl = document.getElementById("heroStill");
+      if (heroStillEl) heroStillEl.src = HERO_STILL;
+
+      var wm = document.getElementById("wordmark");
+      var wmWrap = document.getElementById("wmWrap");
+      function fitWordmark() {
+        if (!wm || !wmWrap) return;
+        wm.style.transform = "scale(1)";
+        var target = wmWrap.clientWidth;
+        var actual = wm.scrollWidth;
+        if (actual > 0) {
+          var s = target / actual;
+          wm.style.transform = "scale(" + s.toFixed(4) + ")";
+          wmWrap.style.height = Math.round(wm.offsetHeight * s) + "px";
+        }
+      }
+      window.addEventListener("resize", fitWordmark, { passive: true });
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitWordmark);
+      }
+      fitWordmark();
+
+      var PARTNERS = [
+        { name: "Snowline",     role: "Alpine Outerwear", tag: "CAPSULE 01", col: 0, row: 0, bio: "Technical goose-down shells and glacier eyewear co-designed in Zurich." },
+        { name: "Hush Hare",    role: "Knitwear Atelier", tag: "CAPSULE 02", col: 1, row: 0, bio: "Heavyweight brushed mohair hoodies and hand-loomed balaclavas." },
+        { name: "Night Bandit", role: "Eyewear Lab",      tag: "CAPSULE 03", col: 2, row: 0, bio: "Milled acetate frames with custom amber mirror lenses." },
+        { name: "Hoot & Co",    role: "Tailoring House",  tag: "CAPSULE 04", col: 0, row: 1, bio: "Savile-inspired wool overcoats cut for oversized streetwear proportions." },
+        { name: "Axo Lab",      role: "Color & Dye",      tag: "CAPSULE 05", col: 1, row: 1, bio: "Pigment-dyed fleece and reactive thermo-chromatic puffer finishes." },
+        { name: "Ember Knit",   role: "Heritage Wool",    tag: "CAPSULE 06", col: 2, row: 1, bio: "Chunky cable-knit crewnecks spun from Scottish highland wool." }
+      ];
+
+      var pTrack = document.getElementById("pTrack");
+      var allCards = PARTNERS.concat(PARTNERS);
+      allCards.forEach(function (p, i) {
+        var bx = p.col === 0 ? "3%" : (p.col === 1 ? "50%" : "97%");
+        var by = p.row === 0 ? "4%" : "96%";
+        var card = document.createElement("article");
+        card.className = "p-card";
+        card.innerHTML =
+          '<div class="p-portrait" style="background-position:' + bx + " " + by + ';">' +
+            '<span class="p-tag tabular-nums">' + p.tag + '</span>' +
+          '</div>' +
+          '<div class="p-meta">' +
+            '<div class="p-name">' + p.name + '</div>' +
+            '<div class="p-role">' + p.role + '</div>' +
+          '</div>' +
+          '<p class="p-bio">' + p.bio + '</p>';
+        card.dataset.idx = String(i);
+        pTrack.appendChild(card);
+      });
+
+      var scrolly = document.getElementById("scrolly");
+      var vid = document.getElementById("sceneVid");
+      var canvas = document.getElementById("sceneCanvas");
+      var ctx = canvas.getContext("2d");
+      var heroLeft = document.getElementById("heroLeft");
+      var heroRight = document.getElementById("heroRight");
+      var panelA = document.getElementById("panelA");
+      var panelB = document.getElementById("panelB");
+      var stageMedia = document.getElementById("stageMedia");
+
+      var fallbackStoryImg = new Image();
+      fallbackStoryImg.crossOrigin = "anonymous";
+      fallbackStoryImg.src = STORY_STILL;
+
+      var vidDuration = 0;
+      var targetTime = 0;
+      var shownTime = -1;
+      var seeking = false;
+
+      function sizeCanvas() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.round(canvas.clientWidth * dpr);
+        canvas.height = Math.round(canvas.clientHeight * dpr);
+        drawCurrentFrame();
+      }
+
+      function drawCover(source, sw, sh) {
+        if (!sw || !sh) return;
+        var cw = canvas.width, ch = canvas.height;
+        var scale = Math.max(cw / sw, ch / sh);
+        var dw = sw * scale, dh = sh * scale;
+        var dx = (cw - dw) * 0.5, dy = (ch - dh) * 0.5;
+        ctx.drawImage(source, dx, dy, dw, dh);
+      }
+
+      function drawCurrentFrame() {
+        if (vid.readyState >= 2 && vid.videoWidth) {
+          drawCover(vid, vid.videoWidth, vid.videoHeight);
+        } else if (heroStillEl.complete && heroStillEl.naturalWidth) {
+          drawCover(heroStillEl, heroStillEl.naturalWidth, heroStillEl.naturalHeight);
+        }
+      }
+
+      function pumpSeek() {
+        if (!vidDuration || seeking) return;
+        if (Math.abs(targetTime - shownTime) < 0.012) return;
+        seeking = true;
+        shownTime = targetTime;
+        try { vid.currentTime = targetTime; } catch (_) { seeking = false; }
+      }
+
+      vid.addEventListener("loadedmetadata", function () {
+        vidDuration = vid.duration || 5;
+        sizeCanvas();
+      });
+      vid.addEventListener("loadeddata", function () {
+        drawCurrentFrame();
+        heroStillEl.style.opacity = "0";
+      });
+      vid.addEventListener("seeked", function () {
+        drawCurrentFrame();
+        seeking = false;
+        pumpSeek();
+      });
+      window.addEventListener("resize", sizeCanvas, { passive: true });
+      sizeCanvas();
+
+      var scrollProg = 0, smoothProg = 0;
+      function updateScrollTarget() {
+        var rect = scrolly.getBoundingClientRect();
+        var max = Math.max(1, scrolly.offsetHeight - window.innerHeight);
+        var raw = -rect.top / max;
+        scrollProg = Math.max(0, Math.min(1, raw));
+      }
+      window.addEventListener("scroll", updateScrollTarget, { passive: true });
+      updateScrollTarget();
+
+      var mx = 0, my = 0, smx = 0, smy = 0;
+      window.addEventListener("pointermove", function (e) {
+        mx = (e.clientX / window.innerWidth - 0.5) * 2;
+        my = (e.clientY / window.innerHeight - 0.5) * 2;
+      }, { passive: true });
+
+      var railX = 0, railTarget = 0, isDown = false, startX = 0, startRail = 0;
+      var pRail = document.getElementById("pRail");
+      function clampRail(v) {
+        var maxScroll = Math.max(0, pTrack.scrollWidth - window.innerWidth + 96);
+        return Math.max(-maxScroll, Math.min(0, v));
+      }
+      pRail.addEventListener("pointerdown", function (e) {
+        isDown = true;
+        startX = e.clientX;
+        startRail = railTarget;
+        pRail.setPointerCapture(e.pointerId);
+      });
+      pRail.addEventListener("pointermove", function (e) {
+        if (!isDown) return;
+        railTarget = clampRail(startRail + (e.clientX - startX) * 1.15);
+      });
+      var endDrag = function () { isDown = false; };
+      pRail.addEventListener("pointerup", endDrag);
+      pRail.addEventListener("pointercancel", endDrag);
+
+      document.getElementById("pPrev").addEventListener("click", function () {
+        railTarget = clampRail(railTarget + 540);
+      });
+      document.getElementById("pNext").addEventListener("click", function () {
+        railTarget = clampRail(railTarget - 540);
+      });
+
+      function tick() {
+        smoothProg += (scrollProg - smoothProg) * 0.14;
+        if (vidDuration > 0) {
+          targetTime = Math.min(vidDuration - 0.04, Math.max(0, smoothProg * vidDuration));
+          pumpSeek();
+        }
+        smx += (mx - smx) * 0.06;
+        smy += (my - smy) * 0.06;
+        stageMedia.style.transform = "translate3d(" + (-smx * 12).toFixed(2) + "px, " + (-smy * 8).toFixed(2) + "px, 0)";
+
+        var heroFade = Math.max(0, Math.min(1, 1 - smoothProg * 3.1));
+        wmWrap.style.opacity = String(heroFade);
+        wmWrap.style.transform = "translate3d(0, " + (-smoothProg * 90).toFixed(1) + "px, 0)";
+        heroLeft.style.opacity = String(heroFade);
+        heroLeft.style.transform = "translate3d(0, " + (-smoothProg * 50).toFixed(1) + "px, 0)";
+        heroRight.style.opacity = String(heroFade);
+        heroRight.style.transform = "translate3d(0, " + (-smoothProg * 50).toFixed(1) + "px, 0)";
+
+        var showA = smoothProg >= 0.24 && smoothProg < 0.64;
+        var showB = smoothProg >= 0.64;
+        panelA.classList.toggle("hidden", !showA);
+        panelB.classList.toggle("hidden", !showB);
+
+        railX += (railTarget - railX) * 0.12;
+        pTrack.style.transform = "translate3d(" + railX.toFixed(2) + "px, 0, 0)";
+
+        var center = window.innerWidth * 0.5;
+        var cards = pTrack.children;
+        for (var i = 0; i < cards.length; i++) {
+          var c = cards[i];
+          var r = c.getBoundingClientRect();
+          var cx = r.left + r.width * 0.5;
+          var norm = Math.max(-1, Math.min(1, (cx - center) / (window.innerWidth * 0.65)));
+          var rot = norm * 3.2;
+          var lift = Math.abs(norm) * 8;
+          c.style.transform = "translate3d(0, " + lift.toFixed(1) + "px, 0) rotate(" + rot.toFixed(2) + "deg)";
+        }
+
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+
+      var LOOKS = [
+        "COUTURE PUFFER", "ALPINE SHELL", "BRUSHED MOHAIR",
+        "SAVILE OVERCOAT", "THERMO FLEECE", "HIGHLAND KNIT"
+      ];
+      var heroCode = document.getElementById("heroCode");
+      var rndFox = document.getElementById("rndFox");
+      var foxTip = document.getElementById("foxTip");
+      var foxTipCode = document.getElementById("foxTipCode");
+      var tipTimer = null;
+
+      function cycleNovu() {
+        var n = Math.floor(1 + Math.random() * 7777);
+        var code = "NVU" + String(n).padStart(4, "0");
+        var look = LOOKS[n % LOOKS.length];
+        heroCode.textContent = code + ".";
+        foxTipCode.textContent = code;
+        foxTip.innerHTML = 'INSPECTING <b>' + code + '</b> · ' + look;
+        rndFox.classList.add("ping");
+        foxTip.classList.add("show");
+        clearTimeout(tipTimer);
+        tipTimer = setTimeout(function () {
+          rndFox.classList.remove("ping");
+          foxTip.classList.remove("show");
+        }, 2200);
+      }
+      rndFox.addEventListener("click", cycleNovu);
+
+      var stops = [0, 0.38, 0.78, 1.0];
+      var stopIdx = 0;
+      function stepStop() {
+        stopIdx = (stopIdx + 1) % stops.length;
+        if (stopIdx === 3) {
+          document.getElementById("partners").scrollIntoView({ behavior: "smooth" });
+        } else {
+          var max = scrolly.offsetHeight - window.innerHeight;
+          window.scrollTo({ top: stops[stopIdx] * max, behavior: "smooth" });
+        }
+        cycleNovu();
+      }
+      document.getElementById("novuspaceBtn").addEventListener("click", stepStop);
+
+      var menuOv = document.getElementById("menuOv");
+      document.getElementById("menuBtn").addEventListener("click", function () { menuOv.classList.add("open"); });
+      document.getElementById("closeMenu").addEventListener("click", function () { menuOv.classList.remove("open"); });
+      Array.prototype.slice.call(menuOv.querySelectorAll("[data-nav]")).forEach(function (a) {
+        a.addEventListener("click", function () { menuOv.classList.remove("open"); });
+      });
+
+      var trailerModal = document.getElementById("trailerModal");
+      var trailerVid = document.getElementById("trailerVid");
+      document.getElementById("openTrailer").addEventListener("click", function () {
+        trailerModal.classList.add("open");
+        trailerVid.currentTime = 0;
+        trailerVid.play().catch(function () {});
+      });
+      function closeTrailer() {
+        trailerModal.classList.remove("open");
+        trailerVid.pause();
+      }
+      document.getElementById("closeTrailer").addEventListener("click", closeTrailer);
+      trailerModal.addEventListener("click", function (e) {
+        if (e.target === trailerModal) closeTrailer();
+      });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        });
+      }, { threshold: 0.1 });
+      io.observe(scrolly);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.fox20-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

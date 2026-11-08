@@ -1,0 +1,44 @@
+{
+  "id": "t298",
+  "slug": "album-flow",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T22:44:07.096Z",
+  "demo": "/demos/album-flow/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f588c8ed9006",
+  "sha256": "f588c8ed90063aa8b1cb97dda55e91721d864335b85d02a94f5bd9acb830494a",
+  "demoHtmlSha256": "e5aec4f1ef1cb9eb016e6ed6c1fba5f74b2ea4d1e438be81427b3586182c8046",
+  "demoSha256": "076da06b3ba59b58da3ae12b2dcab90b6ffca166aabb2861595f62d4e3949a62",
+  "bytes": 240632,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.722,
+      "action": "click",
+      "selector": "#nextAlbumBtn"
+    },
+    {
+      "seconds": 5.11,
+      "action": "click",
+      "selector": "#playToggle"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\album-flow-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\album-flow-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\album-flow-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\album-flow-return.jpg"
+  ]
+}

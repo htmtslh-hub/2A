@@ -947,7 +947,7 @@ try {
         }
         return;
       }
-      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish'].includes(slug)) {
+      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish','trend-carousel','spin-product','album-flow','fox-couture','glass-portfolio','verra-events-hero'].includes(slug)) {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (slug === 'future-fashion') {
           await page.mouse.move(clickedCount === 0 ? 480 : 960, clickedCount === 0 ? 340 : 560, { steps: 14 });
@@ -1011,6 +1011,36 @@ try {
             await page.locator('#rail').click({ position: { x: 180, y: 11 }, force: true });
             actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#rail' });
           }
+        } else if (slug === 'trend-carousel') {
+          await page.mouse.move(clickedCount === 0 ? 720 : 620, 440, { steps: 10 });
+          const sel = clickedCount === 0 ? '#next' : '#prev';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'spin-product') {
+          await page.mouse.move(clickedCount === 0 ? 740 : 880, 480, { steps: 12 });
+          const sel = clickedCount === 0 ? '#cta' : '#looks .lk:last-child';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'album-flow') {
+          await page.mouse.move(clickedCount === 0 ? 840 : 540, 420, { steps: 10 });
+          const sel = clickedCount === 0 ? '#nextAlbumBtn' : '#playToggle';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'fox-couture') {
+          await page.mouse.move(clickedCount === 0 ? 720 : 880, 460, { steps: 12 });
+          const sel = clickedCount === 0 ? '#novuspaceBtn' : '#rndFox';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'glass-portfolio') {
+          await page.mouse.move(clickedCount === 0 ? 580 : 860, clickedCount === 0 ? 380 : 540, { steps: 14 });
+          const sel = clickedCount === 0 ? '#themeBtn' : '#workJumpBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'verra-events-hero') {
+          await page.mouse.move(clickedCount === 0 ? 640 : 840, 460, { steps: 12 });
+          const sel = clickedCount === 0 ? '#startBtn' : '#connectBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
         }
         return;
       }

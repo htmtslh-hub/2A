@@ -1,0 +1,44 @@
+{
+  "id": "t290",
+  "slug": "main-character",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T13:13:07.319Z",
+  "demo": "/demos/main-character/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "92a6e6a39973",
+  "sha256": "92a6e6a3997309cfbce4a20476a0467d39154fd35708289fe3440bbbe2200a7e",
+  "demoHtmlSha256": "97d41caa36ad87caa9fe28f0ec70d2f91688833e3c83b89fffa540aadfe0b46b",
+  "demoSha256": "24e2373558dade2a88d284ab0bb3128bca21988e557eb902c9befb2ed218c250",
+  "bytes": 477628,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.593,
+      "action": "click",
+      "selector": "#quickOutfitBtn"
+    },
+    {
+      "seconds": 5.06,
+      "action": "click",
+      "selector": "#gem"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\main-character-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\main-character-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\main-character-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\main-character-return.jpg"
+  ]
+}

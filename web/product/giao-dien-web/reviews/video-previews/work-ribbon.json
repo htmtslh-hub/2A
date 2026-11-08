@@ -1,0 +1,44 @@
+{
+  "id": "t295",
+  "slug": "work-ribbon",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T13:33:21.532Z",
+  "demo": "/demos/work-ribbon/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "917e2e04931e",
+  "sha256": "917e2e04931ee224a7533844217927db986c69d837b4980d8b96eaf4660bc976",
+  "demoHtmlSha256": "c42c9135358e6f830ad25b1e166aaa8c7fed37d0829e28b0f04d88383369cc04",
+  "demoSha256": "2cabb1ec4856be949db44d86c76e0da5740b7919f17991b4950dcaee49c9d8f9",
+  "bytes": 1289677,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 4.078,
+      "action": "click",
+      "selector": "#brandLink"
+    },
+    {
+      "seconds": 6.498,
+      "action": "click",
+      "selector": "#profileBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\work-ribbon-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\work-ribbon-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\work-ribbon-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\work-ribbon-return.jpg"
+  ]
+}

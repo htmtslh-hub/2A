@@ -1,0 +1,44 @@
+{
+  "id": "t294",
+  "slug": "card-stack",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T13:32:33.551Z",
+  "demo": "/demos/card-stack/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "780740068df2",
+  "sha256": "780740068df2b7e153aec7a1d14290ba17f9b2dc2bd18171b49f49ac54f49031",
+  "demoHtmlSha256": "b40fc2bb1248c166ba172f9e06f13482004a5af194f5bdf933287b0dfb5b30c6",
+  "demoSha256": "092df15697d9328db8b526416470988dc7aaee4c6003ba1d5ec6e62e32b72393",
+  "bytes": 705374,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.004,
+      "action": "click",
+      "selector": "#openSelectedBtn"
+    },
+    {
+      "seconds": 4.984,
+      "action": "click",
+      "selector": "#home"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\card-stack-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\card-stack-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\card-stack-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\card-stack-return.jpg"
+  ]
+}

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OPAQUE® Projects</title>
+  <meta name="description" content="OPAQUE® creative studio portfolio — WebGL leaning-card stack with soft-edge shader, category filtering, index view, and fly-to-page case study transitions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --ink: #141414;
+      --mute: #a9a9a9;
+      --line: rgba(0, 0, 0, 0.08);
+      --surface: #f2f2f1;
+      --surface-elevated: #ffffff;
+      --fg: #141414;
+      --muted: #6e6e6e;
+      --accent: #141414;
+      --accent-text: #141414;
+      --accent-strong: #000000;
+      --on-accent: #fafafa;
+      --border: rgba(0, 0, 0, 0.08);
+      --font-display: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 100;
+      padding: 8px 14px; background: var(--ink); color: var(--bg);
+      font-size: 11px; text-transform: uppercase; text-decoration: none;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(112px); outline: 2px solid var(--ink); }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .u {
+      font-size: clamp(10px, 0.72vw, 11px);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    /* WebGL Canvas */
+    #gl {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      display: block;
+      touch-action: none;
+      z-index: 1;
+    }
+    body.hov #gl { cursor: pointer; }
+    body.drag #gl { cursor: grabbing; }
+
+    /* Chrome elements */
+    .chrome {
+      transition: opacity 0.6s var(--ease-out);
+    }
+    body.loading .chrome {
+      opacity: 0;
+      pointer-events: none;
+    }
+    body.opened .chrome:not(.nav-bar) {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Glass surface */
+    .glass-tile {
+      background: rgba(242, 242, 241, 0.5);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    /* Top-left Nav */
+    .nav-bar {
+      position: fixed;
+      left: 6px; top: 6px;
+      display: flex; gap: 3px;
+      z-index: 10;
+    }
+    .nav-tile {
+      height: 58px;
+      width: 122px;
+      padding: 0 10px 10px;
+      border-radius: 4px;
+      border: 0;
+      display: flex; align-items: flex-end;
+      text-decoration: none;
+      font-family: inherit;
+      color: var(--mute);
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s var(--ease-out);
+    }
+    .nav-tile:first-child {
+      width: 198px;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .nav-tile:hover {
+      color: var(--ink);
+      background: #ececeb;
+    }
+    .nav-tile:active { transform: scale(0.95); }
+
+    /* Top-right Thumbnail */
+    #thumb {
+      position: fixed;
+      top: 10px; right: 10px;
+      width: 58px; height: 58px;
+      border-radius: 3px;
+      background-color: #ececeb;
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(1) contrast(1.1);
+      z-index: 9;
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    /* Filter chips #chips */
+    #chips {
+      position: fixed;
+      right: 10px; bottom: 62px;
+      display: flex; flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+      z-index: 9;
+    }
+    .chip-btn {
+      height: 30px;
+      padding: 0 13px;
+      border-radius: 30px;
+      border: 0;
+      background: rgba(242, 242, 241, 0.9);
+      box-shadow: inset 0 0 0 1px var(--line);
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--mute);
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 3px;
+      transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s var(--ease-out);
+    }
+    .chip-btn sup {
+      font-size: 7px;
+      line-height: 1;
+      transform: translateY(-3px);
+    }
+    .chip-btn:hover,
+    .chip-btn.active {
+      color: var(--ink);
+      background: #ffffff;
+    }
+    .chip-btn:active { transform: scale(0.95); }
+
+    /* Mode switch #mode */
+    #mode {
+      position: fixed;
+      right: 10px; bottom: 10px;
+      padding: 3px;
+      border-radius: 4px;
+      display: flex; gap: 3px;
+      z-index: 9;
+    }
+    .mode-btn {
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 3px;
+      border: 0;
+      background: transparent;
+      font-family: inherit;
+      color: var(--mute);
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s var(--ease-out);
+    }
+    .mode-btn.active {
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+    .mode-btn:hover { color: var(--ink); }
+    .mode-btn:active { transform: scale(0.95); }
+
+    /* Index list #index */
+    #index {
+      position: fixed;
+      left: 10px; top: 96px;
+      width: min(420px, 40vw);
+      z-index: 9;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+    }
+    body.index-mode:not(.opened) #index {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .idx-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 28px 1fr auto auto;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 4px;
+      border: 0;
+      border-top: 1px solid var(--line);
+      background: transparent;
+      font-family: inherit;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--mute);
+      text-align: left;
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s var(--ease-out);
+    }
+    .idx-row:last-child { border-bottom: 1px solid var(--line); }
+    .idx-row .idx-name {
+      font-weight: 500;
+      color: var(--ink);
+      transition: transform 0.2s var(--ease-out);
+    }
+    .idx-row:hover {
+      color: var(--ink);
+    }
+    .idx-row:hover .idx-name {
+      transform: translateX(12px);
+    }
+    .idx-row:active { transform: scale(0.98); }
+
+    /* Cursor label #label */
+    #label {
+      position: fixed;
+      left: 0; top: 0;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      pointer-events: none;
+      z-index: 15;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    body.hov:not(.opened):not(.drag) #label {
+      opacity: 1;
+    }
+
+    /* Project page #page */
+    #page {
+      position: fixed; inset: 0;
+      z-index: 8;
+      overflow-y: auto;
+      overscroll-behavior: none;
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .head {
+      height: 50vh;
+      min-height: 20rem;
+      margin-top: 3.75rem;
+      display: flex; align-items: center;
+      font-size: 11px;
+      line-height: 1.0909;
+    }
+    .head-inner {
+      width: 100%;
+      padding: 5rem 14px;
+      display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px;
+    }
+    .head h1 {
+      width: 12.5rem;
+      font-size: clamp(11px, 0.8vw, 12px);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .head p {
+      max-width: 287px;
+      padding: 0 2px;
+      color: var(--ink);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
+    }
+    .grid-block {
+      position: relative;
+      overflow: hidden;
+      background: #f0f0ef;
+    }
+    .grid-block.b1 { aspect-ratio: 1.2; }
+    .grid-block.b2 { aspect-ratio: 0.64; }
+    .grid-block.b3 { grid-column: 1 / -1; aspect-ratio: 1.67; }
+    .grid-block.b4 { aspect-ratio: 1; }
+    .grid-block.b5 { aspect-ratio: 1; }
+    .grid-block img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.6s var(--ease-out);
+    }
+    .grid-block img.in {
+      opacity: 1;
+    }
+
+    .next {
+      height: 50vh;
+      min-height: 20rem;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 14px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      gap: 18px;
+    }
+    .next-row {
+      display: flex; align-items: center;
+    }
+    .next-col-lbl {
+      width: 8.25rem;
+      opacity: 0.3;
+      transition: opacity 0.5s ease;
+    }
+    .next-link {
+      width: 100%;
+      display: flex; align-items: center;
+      background: none; border: 0;
+      padding: 8px 0;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+    }
+    .next-link:hover .next-col-lbl {
+      opacity: 1;
+    }
+    .next-link:active { transform: scale(0.98); }
+
+    /* Loader #loader */
+    #loader {
+      position: fixed; inset: 0;
+      z-index: 30;
+      background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 1024px) {
+      #index { width: min(440px, 52vw); }
+    }
+
+    @media (max-width: 760px) {
+      .nav-tile { width: 76px; }
+      .nav-tile:first-child { width: 120px; }
+      #index { width: 80vw; }
+    }
+  </style>
+</head>
+<body class="loading">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="loader" class="tabular-nums"><span id="loaderPct">0%</span></div>
+
+  <header class="chrome nav-bar u" aria-label="OPAQUE Studio Navigation">
+    <button type="button" class="nav-tile glass-tile" id="home" data-next-preview="true">
+      <span>OPAQUE<sup>®</sup>&nbsp;PROJECTS</span>
+    </button>
+    <button type="button" class="nav-tile glass-tile" id="openSelectedBtn" data-next-preview="true">
+      <span>Research</span>
+    </button>
+    <button type="button" class="nav-tile glass-tile" id="studioNavBtn">
+      <span>Studio</span>
+    </button>
+    <button type="button" class="nav-tile glass-tile" id="motionToggleBtn" aria-pressed="false">
+      <span>Contact</span>
+    </button>
+  </header>
+
+  <div id="thumb" class="chrome" role="img" aria-label="Hovered project preview"></div>
+
+  <nav id="chips" class="chrome tabular-nums" aria-label="Project Category Filter"></nav>
+
+  <div id="mode" class="chrome glass-tile u" role="group" aria-label="View Mode">
+    <button type="button" class="mode-btn u active" id="modeOverviewBtn">Overview</button>
+    <button type="button" class="mode-btn u" id="modeIndexBtn" data-next-preview="true">Index</button>
+  </div>
+
+  <main id="main-content">
+    <section aria-label="3D Leaning Card Portfolio Stack">
+      <canvas id="gl"></canvas>
+    </section>
+
+    <section id="index" class="chrome tabular-nums" aria-label="Project Index List"></section>
+
+    <section id="page" aria-label="Project Case Study Detail">
+      <article class="head">
+        <div class="head-inner">
+          <h1 id="pageTitle">MEMORIES</h1>
+          <p id="pageDesc">An AI-assisted portrait series about memory, distortion and the faces we half remember.</p>
+        </div>
+      </article>
+
+      <section class="grid" id="pageGrid" aria-label="Project Editorial Crops">
+        <article class="grid-block b1"><img id="crop0" alt="Editorial crop 1"></article>
+        <article class="grid-block b2"><img id="crop1" alt="Editorial crop 2"></article>
+        <article class="grid-block b3"><img id="crop2" alt="Editorial wide crop 3"></article>
+        <article class="grid-block b4"><img id="crop3" alt="Editorial detail crop 4"></article>
+        <article class="grid-block b5"><img id="crop4" alt="Editorial detail crop 5"></article>
+      </section>
+
+      <article class="next">
+        <div class="next-row">
+          <span class="next-col-lbl">Category</span>
+          <span id="pageCat">AI</span>
+        </div>
+        <button type="button" class="next-link" id="nextProjBtn">
+          <span class="next-col-lbl">Next project</span>
+          <span id="nextProjName">Shadowplay</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true" style="margin-left:8px;">
+            <path d="M2 6h8M7 3l3 3-3 3"/>
+          </svg>
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="chrome u" style="position:fixed;left:10px;bottom:14px;opacity:0.35;pointer-events:none;z-index:2;">OPAQUE® ARCHIVE</footer>
+
+  <div id="label" aria-hidden="true">MEMORIES</div>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    // Lightweight inline GSAP-compatible tween engine (expo.out, expo.inOut, power1.inOut)
+    const activeTweens = new Set();
+    const EASE_FNS = {
+      'none': (t) => t,
+      'power1.inOut': (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
+      'expo.out': (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t),
+      'expo.inOut': (t) => t === 0 ? 0 : t === 1 ? 1 : t < 0.5 ? Math.pow(2, 20 * t - 10) / 2 : (2 - Math.pow(2, -20 * t + 10)) / 2
+    };
+    const gsap = {
+      killTweensOf(target) {
+        for (const tw of activeTweens) {
+          if (tw.target === target) activeTweens.delete(tw);
+        }
+      },
+      to(target, vars) {
+        const duration = (vars.duration !== undefined ? vars.duration : 0.5) * 1000;
+        const delay = (vars.delay || 0) * 1000;
+        const easeFn = EASE_FNS[vars.ease] || EASE_FNS['expo.out'];
+        const onUpdate = vars.onUpdate || null;
+        const onComplete = vars.onComplete || null;
+        const props = {};
+        for (const k of Object.keys(vars)) {
+          if (k === 'duration' || k === 'delay' || k === 'ease' || k === 'onUpdate' || k === 'onComplete') continue;
+          const startVal = target instanceof HTMLElement && k === 'opacity'
+            ? parseFloat(getComputedStyle(target).opacity || '0')
+            : Number(target[k] || 0);
+          props[k] = { start: startVal, end: Number(vars[k]) };
+        }
+        const tw = {
+          target,
+          startTime: performance.now() + delay,
+          duration: Math.max(1, duration),
+          easeFn,
+          props,
+          onUpdate,
+          onComplete,
+          started: false
+        };
+        activeTweens.add(tw);
+        return tw;
+      }
+    };
+
+    function tickTweens(now) {
+      for (const tw of activeTweens) {
+        if (now < tw.startTime) continue;
+        if (!tw.started) {
+          tw.started = true;
+          for (const k of Object.keys(tw.props)) {
+            tw.props[k].start = tw.target instanceof HTMLElement && k === 'opacity'
+              ? parseFloat(getComputedStyle(tw.target).opacity || '0')
+              : Number(tw.target[k] || 0);
+          }
+        }
+        const t = Math.min(1, (now - tw.startTime) / tw.duration);
+        const e = tw.easeFn(t);
+        for (const k of Object.keys(tw.props)) {
+          const val = tw.props[k].start + (tw.props[k].end - tw.props[k].start) * e;
+          if (tw.target instanceof HTMLElement && k === 'opacity') {
+            tw.target.style.opacity = String(val);
+          } else {
+            tw.target[k] = val;
+          }
+        }
+        if (tw.onUpdate) tw.onUpdate();
+        if (t >= 1) {
+          activeTweens.delete(tw);
+          if (tw.onComplete) tw.onComplete();
+        }
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // §2. Data & Contact Sheet Cutter
+    // -------------------------------------------------------------------------
+    const SHEET_URL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261106_084005_ab0d1fcf-a93f-4e32-a277-1523e1768fbe.png&w=2400&q=88";
+    const SW = 2336, SH = 1744, CW = 0.2425, CG = 0.01, RH = 0.3244, RG = 0.0134;
+    const REPEAT = 3;
+
+    const PROJECTS = [
+      { name: 'Velvet Mouth', cat: 'Graphic identity', year: '2025', desc: 'A campaign built from close-up texture and saturated colour, shot and graded in-house.' },
+      { name: 'Cumulus', cat: 'Site design', year: '2025', desc: 'Site design and art direction for an atmospheric weather brand, all soft light and slow motion.' },
+      { name: 'No Signal', cat: 'Video', year: '2024', desc: 'A night-time film series exploring signal, noise and the glow of the city after dark.' },
+      { name: 'Still Life', cat: '3D', year: '2024', desc: 'Still lifes rendered in 3D, mixing studio light with synthetic materials.' },
+      { name: 'Memories', cat: 'AI', year: '2025', desc: 'An AI-assisted portrait series about memory, distortion and the faces we half remember.' },
+      { name: 'Shadowplay', cat: 'Graphic identity', year: '2024', desc: 'Visual identity built from shadow and warm light, for a theatre collective.' },
+      { name: 'Mercury', cat: '3D', year: '2025', desc: 'Liquid-metal forms for a product launch, modelled, lit and animated in 3D.' },
+      { name: 'Abyss', cat: 'Site design', year: '2024', desc: 'An immersive site for a deep-sea research lab, glowing in the dark.' },
+      { name: 'Concrete Poem', cat: 'Graphic identity', year: '2023', desc: 'A typographic identity cast in concrete for an architecture biennale.' },
+      { name: 'Prism', cat: 'AI', year: '2025', desc: 'Generative colour studies trained on refracted light.' },
+      { name: 'Headlights', cat: 'Video', year: '2023', desc: 'A short film shot entirely in fog, following two headlights through the night.' },
+      { name: 'Tide', cat: 'Site design', year: '2024', desc: 'An editorial site for a surf brand, built around the rhythm of the tide.' }
+    ];
+    const CATEGORIES = ['All', 'Graphic identity', 'Site design', 'AI', 'Video', '3D'];
+
+    const body = document.body;
+    const canvas = document.getElementById('gl');
+    const thumbEl = document.getElementById('thumb');
+    const labelEl = document.getElementById('label');
+    const chipsEl = document.getElementById('chips');
+    const indexEl = document.getElementById('index');
+    const pageEl = document.getElementById('page');
+    const loaderEl = document.getElementById('loader');
+    const loaderPctEl = document.getElementById('loaderPct');
+
+    let sheetImg = null;
+    const projAssets = new Array(12);
+
+    function cellRect(i, img) {
+      const c = i % 4;
+      const r = Math.floor(i / 4);
+      const k = (img.naturalWidth || SW) / SW;
+      return {
+        x: c * (CW + CG) * SW * k,
+        y: r * (RH + RG) * SH * k,
+        w: CW * SW * k,
+        h: RH * SH * k
+      };
+    }
+
+    function cellCanvas(i, size, img) {
+      const cv = document.createElement('canvas');
+      cv.width = size;
+      cv.height = size;
+      const ctx = cv.getContext('2d');
+      if (img && img.naturalWidth > 0) {
+        const b = cellRect(i, img);
+        ctx.drawImage(img, b.x, b.y, b.w, b.h, 0, 0, size, size);
+      } else {
+        ctx.fillStyle = `hsl(${(i * 32) % 360}, 45%, 45%)`;
+        ctx.fillRect(0, 0, size, size);
+      }
+      return cv;
+    }
+
+    function cropCellDataUrl(i, cx, cy, cw, ch, outW, outH) {
+      const cv = document.createElement('canvas');
+      cv.width = outW;
+      cv.height = outH;
+      const ctx = cv.getContext('2d');
+      if (sheetImg && sheetImg.naturalWidth > 0) {
+        const b = cellRect(i, sheetImg);
+        ctx.drawImage(sheetImg, b.x + cx * b.w, b.y + cy * b.h, cw * b.w, ch * b.h, 0, 0, outW, outH);
+      } else {
+        ctx.fillStyle = '#d8d8d6';
+        ctx.fillRect(0, 0, outW, outH);
+      }
+      return cv.toDataURL('image/jpeg', 0.85);
+    }
+
+    // Build category chips & index list UI
+    CATEGORIES.forEach((cat, idx) => {
+      const count = cat === 'All' ? PROJECTS.length : PROJECTS.filter((p) => p.cat === cat).length;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'chip-btn' + (idx === 0 ? ' active' : '');
+      btn.innerHTML = `<span>${cat}</span><sup>${count}</sup>`;
+      btn.addEventListener('click', () => filterByCategory(cat, btn));
+      chipsEl.appendChild(btn);
+    });
+
+    PROJECTS.forEach((p, idx) => {
+      const row = document.createElement('button');
+      row.type = 'button';
+      row.className = 'idx-row';
+      row.innerHTML = `
+        <span>${String(idx + 1).padStart(2, '0')}</span>
+        <span class="idx-name">${p.name}</span>
+        <span>${p.cat}</span>
+        <span>${p.year}</span>
+      `;
+      row.addEventListener('pointerenter', () => {
+        scroll.current = idx * 25;
+        if (projAssets[idx]) thumbEl.style.backgroundImage = `url(${projAssets[idx].url})`;
+      });
+      row.addEventListener('click', () => {
+        const card = cards.find((c) => c.i === idx && c.on) || cards[idx];
+        if (card) openTile(card);
+      });
+      indexEl.appendChild(row);
+    });
+
+    // -------------------------------------------------------------------------
+    // §3–5. Three.js Renderer, Camera, Card Shader & 36 Cards
+    // -------------------------------------------------------------------------
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+    renderer.setClearColor(0xfafafa, 1);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(5, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    function placeCamera() {
+      const aspect = window.innerWidth / window.innerHeight;
+      camera.position.set(0, 100 / 7.5, aspect < 1 ? 55 : 35);
+      camera.lookAt(0, 0, 0);
+    }
+    placeCamera();
+
+    const world = new THREE.Group();
+    scene.add(world);
+
+    const GAP = 0.375;
+    const BE = 4 / 3;
+    const SC = 1 - (BE - 1) * 0.5;
+    const H0 = 1.5 * SC;
+    const W0 = 1.5 * BE * SC;
+    const boxGeo = new THREE.BoxGeometry(H0, W0, 0.0175);
+    const hitMat = new THREE.MeshBasicMaterial({ opacity: 0, transparent: true, depthWrite: false });
+
+    const cardVs = `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+    const cardFs = `
+      precision highp float;
+      varying vec2 vUv;
+      uniform vec2 uMeshSize;
+      uniform vec2 uImageSize;
+      uniform sampler2D uImageTexture;
+      uniform sampler2D uBlurTexture;
+      uniform float uOpacity;
+      void main() {
+        vec2 ratio = vec2(
+          min((uMeshSize.x / uMeshSize.y) / (uImageSize.x / uImageSize.y), 1.0),
+          min((uMeshSize.y / uMeshSize.x) / (uImageSize.y / uImageSize.x), 1.0)
+        );
+        vec2 uvCover = vUv * ratio + (1.0 - ratio) * 0.5;
+        float margin = 0.15;
+        float px = smoothstep(0.0, margin, vUv.x) * smoothstep(1.0, 1.0 - margin, vUv.x);
+        float py = smoothstep(0.0, margin, vUv.y) * smoothstep(1.0, 1.0 - margin, vUv.y);
+        float prog = px * py;
+        vec4 sharp = texture2D(uImageTexture, uvCover);
+        vec4 blur = texture2D(uBlurTexture, uvCover);
+        blur.a *= 0.75;
+        vec4 color = mix(sharp, blur, 1.0 - prog);
+        color.a *= uOpacity;
+        gl_FragColor = color;
+      }
+    `;
+
+    const cards = [];
+    const scroll = { current: 0, previous: 0 };
+    const mouse = { x: -1, y: -1, hasMoved: false, drag: { x: 0, y: 0, active: false }, on: { x: 0, y: 0 }, down: false };
+    let M = 0;
+    const intro = { x: -20 };
+    let ready = false;
+    let opened = null;
+    let hovered = null;
+    let isMotionPaused = false;
+
+    function wrap(min, max, v) {
+      const range = max - min;
+      return ((((v - min) % range) + range) % range) + min;
+    }
+
+    function filterByCategory(cat, btnEl) {
+      chipsEl.querySelectorAll('.chip-btn').forEach((b) => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      cards.forEach((c) => {
+        c.on = (cat === 'All' || PROJECTS[c.i].cat === cat);
+      });
+    }
+
+    function buildCards() {
+      for (let n = 0; n < 12 * REPEAT; n++) {
+        const i = n % 12;
+        const asset = projAssets[i];
+        const mat = new THREE.ShaderMaterial({
+          vertexShader: cardVs,
+          fragmentShader: cardFs,
+          transparent: true,
+          uniforms: {
+            uMeshSize: { value: new THREE.Vector2(H0, W0) },
+            uImageSize: { value: new THREE.Vector2(1, 1) },
+            uImageTexture: { value: asset.sharpTex },
+            uBlurTexture: { value: asset.blurTex },
+            uOpacity: { value: 1 }
+          }
+        });
+        const mesh = new THREE.Mesh(boxGeo, mat);
+        const hit = new THREE.Mesh(boxGeo, hitMat);
+        hit.scale.x = 1.5;
+
+        const inner = new THREE.Group();
+        inner.add(mesh);
+
+        const holder = new THREE.Group();
+        holder.add(inner);
+        holder.add(hit);
+        holder.rotation.y = -Math.PI / 6;
+        world.add(holder);
+
+        const cardObj = { n, i, mesh, hit, inner, holder, order: n, visK: 1, on: true };
+        hit.userData.card = cardObj;
+        cards.push(cardObj);
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // §5–7. Layout, Raycast Picking & Open/Close Project Sequence
+    // -------------------------------------------------------------------------
+    const raycaster = new THREE.Raycaster();
+    const mouseNDC = new THREE.Vector2();
+
+    function layout() {
+      if (!cards.length) return;
+      const aspect = window.innerWidth / window.innerHeight;
+      M += (mouse.drag.x - mouse.drag.y - M) * 0.1;
+      scroll.previous += (scroll.current - scroll.previous) * 0.15;
+      const J = scroll.previous / 25 - M / 100 + intro.x;
+
+      const visCards = cards.filter((c) => c.on);
+      const N = Math.max(1, visCards.length);
+      const len = Math.max(N, 24);
+      const F = (len * GAP) / 2;
+      const step = len / N;
+      visCards.forEach((c, k) => { c.order = k * step; });
+
+      for (const c of cards) {
+        c.visK += ((c.on ? 1 : 0) - c.visK) * 0.12;
+        c.mesh.material.uniforms.uOpacity.value = c.visK;
+        if (!opened) {
+          const x = wrap(-F, F, (c.order - J) * GAP);
+          const y = -(1 - c.visK) * 1.2;
+          const z = aspect < 1 ? -x * 6 : -x * aspect * 1.5;
+          c.holder.position.set(x, y, z);
+          c.holder.rotation.set(0, -Math.PI / 6, 0);
+          c.holder.visible = c.visK > 0.02 && Math.abs(z) < 12.5;
+        }
+      }
+    }
+
+    function clearHover() {
+      if (hovered) {
+        gsap.to(hovered.inner.position, { x: 0, y: 0, duration: 0.5, ease: 'expo.out' });
+        hovered = null;
+      }
+      body.classList.remove('hov');
+    }
+
+    function pick() {
+      if (!ready || opened || mouse.drag.active || !mouse.hasMoved) return;
+      const hitList = cards.filter((c) => c.holder.visible && c.on).map((c) => c.hit);
+      raycaster.setFromCamera(mouseNDC, camera);
+      const hits = raycaster.intersectObjects(hitList, false);
+      const nextCard = hits.length > 0 ? hits[0].object.userData.card : null;
+      if (nextCard !== hovered) {
+        if (hovered) {
+          gsap.to(hovered.inner.position, { x: 0, y: 0, duration: 0.5, ease: 'expo.out' });
+        }
+        hovered = nextCard;
+        if (hovered) {
+          gsap.to(hovered.inner.position, { x: 2 / 3, y: -0.1, duration: 0.5, ease: 'expo.out' });
+          body.classList.add('hov');
+          labelEl.textContent = PROJECTS[hovered.i].name;
+          if (projAssets[hovered.i]) {
+            thumbEl.style.backgroundImage = `url(${projAssets[hovered.i].url})`;
+          }
+        } else {
+          body.classList.remove('hov');
+        }
+      }
+    }
+
+    function fillProjectPage(idx) {
+      const p = PROJECTS[idx];
+      const nextIdx = (idx + 1) % PROJECTS.length;
+      document.getElementById('pageTitle').textContent = p.name;
+      document.getElementById('pageDesc').textContent = p.desc;
+      document.getElementById('pageCat').textContent = p.cat;
+      document.getElementById('nextProjName').textContent = PROJECTS[nextIdx].name;
+
+      const crops = [
+        [0, 0.08, 1, 0.84, 600, 500],
+        [0.18, 0, 0.64, 1, 450, 700],
+        [0, 0.2, 1, 0.6, 900, 540],
+        [0.05, 0.05, 0.5, 0.5, 500, 500],
+        [0.45, 0.45, 0.5, 0.5, 500, 500]
+      ];
+      crops.forEach((cr, k) => {
+        const imgEl = document.getElementById('crop' + k);
+        imgEl.classList.remove('in');
+        imgEl.onload = () => imgEl.classList.add('in');
+        imgEl.src = cropCellDataUrl(idx, cr[0], cr[1], cr[2], cr[3], cr[4], cr[5]);
+      });
+    }
+
+    function openTile(t) {
+      if (opened) return;
+      opened = t;
+      clearHover();
+      body.classList.add('opened');
+
+      cards.forEach((c) => {
+        if (c !== t) c.holder.visible = false;
+      });
+      gsap.killTweensOf(t.inner.position);
+      t.inner.position.set(0, 0, 0);
+
+      const aspect = window.innerWidth / window.innerHeight;
+      gsap.to(t.holder.position, {
+        x: 0,
+        duration: (1.25 / 3) * 2,
+        ease: 'expo.out',
+        onUpdate: () => {
+          t.holder.position.z = -t.holder.position.x * aspect * 1.5;
+        }
+      });
+      gsap.to(t.holder.rotation, {
+        y: 0,
+        duration: 1.25,
+        ease: 'expo.inOut'
+      });
+      gsap.to(camera.position, {
+        x: 0,
+        y: 0,
+        z: window.innerWidth < 640 ? 35 : 30,
+        duration: 1.25,
+        ease: 'expo.inOut',
+        onUpdate: () => camera.lookAt(0, 0, 0),
+        onComplete: () => {
+          fillProjectPage(t.i);
+          pageEl.scrollTop = 0;
+          pageEl.style.visibility = 'visible';
+          gsap.to(pageEl, {
+            opacity: 1,
+            duration: 0.5,
+            ease: 'power1.inOut',
+            onComplete: () => {
+              if (opened) opened.holder.visible = false;
+            }
+          });
+        }
+      });
+    }
+
+    function closeTile() {
+      if (!opened) return;
+      gsap.killTweensOf(pageEl);
+      pageEl.style.opacity = '0';
+      pageEl.style.visibility = 'hidden';
+      body.classList.remove('opened');
+      opened.holder.rotation.y = -Math.PI / 6;
+      opened.holder.visible = true;
+      placeCamera();
+      opened = null;
+      intro.x = -20;
+      gsap.to(intro, { x: 0, duration: 2, ease: 'expo.out' });
+    }
+
+    // -------------------------------------------------------------------------
+    // §6. Events & Controls
+    // -------------------------------------------------------------------------
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      if (!opened) placeCamera();
+    });
+
+    window.addEventListener('wheel', (e) => {
+      if (!ready || opened) return;
+      scroll.current += (e.deltaY + e.deltaX) / 20;
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && opened) {
+        closeTile();
+      } else if (!opened && ready) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') scroll.current += 12;
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') scroll.current -= 12;
+      }
+    });
+
+    let downPos = { x: 0, y: 0 };
+    canvas.addEventListener('pointerdown', (e) => {
+      if (!ready || opened) return;
+      mouse.down = true;
+      downPos.x = e.clientX;
+      downPos.y = e.clientY;
+      mouse.on.x = mouse.drag.x - e.clientX;
+      mouse.on.y = mouse.drag.y - e.clientY;
+      try { canvas.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      mouse.hasMoved = true;
+      mouseNDC.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseNDC.y = -(e.clientY / window.innerHeight) * 2 + 1;
+      labelEl.style.transform = `translate(${e.clientX + 14}px, ${e.clientY + 12}px)`;
+
+      if (mouse.down && !opened) {
+        const dist = Math.hypot(e.clientX - downPos.x, e.clientY - downPos.y);
+        if (dist > 3 && !mouse.drag.active) {
+          mouse.drag.active = true;
+          body.classList.add('drag');
+          gsap.to(world.scale, { x: 0.825, y: 0.825, z: 0.825, duration: 0.75, ease: 'expo.out' });
+        }
+        if (mouse.drag.active) {
+          mouse.drag.x = mouse.on.x + e.clientX;
+          mouse.drag.y = mouse.on.y + e.clientY;
+        }
+      }
+    });
+
+    window.addEventListener('pointerup', () => {
+      if (!mouse.down) return;
+      mouse.down = false;
+      if (mouse.drag.active) {
+        mouse.drag.active = false;
+        body.classList.remove('drag');
+        gsap.to(world.scale, { x: 1, y: 1, z: 1, duration: 0.75, ease: 'expo.out' });
+      } else if (hovered && !opened) {
+        openTile(hovered);
+      }
+    });
+
+    document.getElementById('home').addEventListener('click', () => {
+      if (opened) closeTile();
+      else scroll.current += 24;
+    });
+
+    document.getElementById('openSelectedBtn').addEventListener('click', () => {
+      if (opened) {
+        closeTile();
+      } else if (cards.length) {
+        const targetCard = hovered || cards.find((c) => c.i === 4 && c.holder.visible) || cards[4];
+        if (targetCard) openTile(targetCard);
+      }
+    });
+
+    document.getElementById('nextProjBtn').addEventListener('click', () => {
+      if (!opened) return;
+      const nextIdx = (opened.i + 1) % PROJECTS.length;
+      const nextCard = cards.find((c) => c.i === nextIdx) || opened;
+      opened = nextCard;
+      gsap.to(pageEl, {
+        opacity: 0,
+        duration: 0.25,
+        ease: 'power1.inOut',
+        onComplete: () => {
+          fillProjectPage(nextIdx);
+          pageEl.scrollTop = 0;
+          gsap.to(pageEl, { opacity: 1, duration: 0.5, ease: 'power1.inOut' });
+        }
+      });
+    });
+
+    const modeOverviewBtn = document.getElementById('modeOverviewBtn');
+    const modeIndexBtn = document.getElementById('modeIndexBtn');
+    modeOverviewBtn.addEventListener('click', () => {
+      modeOverviewBtn.classList.add('active');
+      modeIndexBtn.classList.remove('active');
+      body.classList.remove('index-mode');
+    });
+    modeIndexBtn.addEventListener('click', () => {
+      const isIdx = body.classList.toggle('index-mode');
+      modeIndexBtn.classList.toggle('active', isIdx);
+      modeOverviewBtn.classList.toggle('active', !isIdx);
+    });
+
+    const motionBtn = document.getElementById('motionToggleBtn');
+    motionBtn.addEventListener('click', () => {
+      isMotionPaused = !isMotionPaused;
+      document.documentElement.setAttribute('data-motion', isMotionPaused ? 'paused' : 'on');
+      motionBtn.setAttribute('aria-pressed', String(isMotionPaused));
+    });
+
+    // -------------------------------------------------------------------------
+    // §10. Loader & Intro Sequence
+    // -------------------------------------------------------------------------
+    const prog = { current: 0, previous: 0 };
+    let loaderDone = false;
+
+    async function loadSheetAndBuild() {
+      sheetImg = new Image();
+      sheetImg.crossOrigin = 'anonymous';
+      await new Promise((res) => {
+        sheetImg.onload = res;
+        sheetImg.onerror = res;
+        sheetImg.src = SHEET_URL;
+      });
+
+      for (let i = 0; i < 12; i++) {
+        const sharpCv = cellCanvas(i, 512, sheetImg);
+        const blurCv = cellCanvas(i, 24, sheetImg);
+        const sharpTex = new THREE.CanvasTexture(sharpCv);
+        const blurTex = new THREE.CanvasTexture(blurCv);
+        blurTex.minFilter = THREE.LinearFilter;
+        blurTex.magFilter = THREE.LinearFilter;
+        projAssets[i] = {
+          sharpTex,
+          blurTex,
+          url: sharpCv.toDataURL('image/jpeg', 0.7)
+        };
+        prog.current = Math.min(100, ((i + 1) / 12) * 100);
+        await new Promise((r) => setTimeout(r, 30));
+      }
+
+      buildCards();
+      world.scale.set(0.825, 0.825, 0.825);
+    }
+    loadSheetAndBuild();
+
+    function finishLoader() {
+      if (loaderDone) return;
+      loaderDone = true;
+      gsap.to(loaderPctEl, { opacity: 0, duration: 0.5, delay: 0.25, ease: 'power1.inOut' });
+      gsap.to(loaderEl, {
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.75,
+        ease: 'power1.inOut',
+        onComplete: () => {
+          loaderEl.remove();
+          body.classList.remove('loading');
+        }
+      });
+      setTimeout(() => {
+        ready = true;
+        gsap.to(intro, { x: 0, duration: 2, ease: 'expo.out' });
+        gsap.to(world.scale, { x: 1, y: 1, z: 1, duration: 1, delay: 1.25, ease: 'expo.out' });
+        if (projAssets[4]) {
+          thumbEl.style.backgroundImage = `url(${projAssets[4].url})`;
+        }
+      }, 750);
+    }
+
+    function renderLoop(now) {
+      requestAnimationFrame(renderLoop);
+      tickTweens(now);
+
+      if (!loaderDone) {
+        prog.previous += (prog.current - prog.previous) * 0.1;
+        const pct = Math.round(prog.previous);
+        loaderPctEl.textContent = pct + '%';
+        if (pct >= 100 && cards.length > 0) {
+          finishLoader();
+        }
+      }
+
+      if (!isMotionPaused) {
+        layout();
+        pick();
+      }
+      renderer.render(scene, camera);
+    }
+    requestAnimationFrame(renderLoop);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('is-inview'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('section, article').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "id": "t291",
+  "slug": "outfit-drop",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T13:13:41.234Z",
+  "demo": "/demos/outfit-drop/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b279e681f6ce",
+  "sha256": "b279e681f6ce21c6c8d698a11bb28b39ddc069e1cc8e6b38471791e4f815d1e3",
+  "demoHtmlSha256": "93d991bd7d7c6e068368955a1c086db85f28bfb52f65558cdde8da5c72e14bbb",
+  "demoSha256": "5f15e528708a72116f5a46d3fbc8848c1eabe9b8e14dabb8afd3b30937851a72",
+  "bytes": 210803,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.44,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 4.818,
+      "action": "click",
+      "selector": "#prev"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\outfit-drop-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\outfit-drop-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\outfit-drop-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\outfit-drop-return.jpg"
+  ]
+}

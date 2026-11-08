@@ -351,7 +351,9 @@ export async function runFetchPipeline(options = {}) {
       }
 
       // Layer 6 deduplication: Check if any .mp4 video in prompt was ALREADY used in any existing 2A template
-      const promptVideos = [...new Set([...promptText.matchAll(/https?:\/\/[^\s"'`<>)]+\.mp4/gi)].map(m => m[0].split('/').pop()?.toLowerCase()))].filter(Boolean);
+      const promptVideos = candidate.isNewlyAdded
+        ? [candidate.videoPreviewUrl?.split('/').pop()?.toLowerCase()].filter(Boolean)
+        : [...new Set([...promptText.matchAll(/https?:\/\/[^\s"'`<>)]+\.mp4/gi)].map(m => m[0].split('/').pop()?.toLowerCase()))].filter(Boolean);
       const usedVideo = promptVideos.find(v => storeIdentity.videos.has(v));
       if (usedVideo) {
         console.warn(`[!] Video "${usedVideo}" from ${candidate.id} was ALREADY used in an existing 2A template! Marking processed & skipping.`);

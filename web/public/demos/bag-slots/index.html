@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bag Slots</title>
+  <meta name="description" content="Interactive 9:16 glass slot-machine bag reveal story for LUNE with 121-frame cached video, 3 spinning bag reels, and 7 leather colourway swatches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #16161a;
+      --glass: rgba(255, 255, 255, 0.14);
+      --edge: rgba(255, 255, 255, 0.42);
+      --bg: #cfd0cf;
+      --surface: #d4d5d3;
+      --surface-elevated: #ffffff;
+      --fg: #16161a;
+      --muted: #6d6d72;
+      --accent: #8cc27a;
+      --accent-text: #16161a;
+      --accent-strong: #b9a8ef;
+      --on-accent: #16161a;
+      --border: rgba(22, 22, 26, 0.14);
+      --font-display: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.2, 0.55, 0.3, 1);
+      --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);
+      --m: url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261106_072459_3a7afc56-a581-4651-8e7e-756e12183786.png&w=900&q=88");
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 10px 18px; background: var(--ink); color: #ffffff;
+      font-weight: 600; text-decoration: none; border-radius: 999px;
+    }
+    .skip-link:focus-visible { transform: translateY(116px); outline: 2px solid var(--accent); }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .story-hud {
+      position: fixed; top: 14px; left: 18px; right: 18px; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between;
+      pointer-events: none;
+      font-size: clamp(11px, 0.9vw, 13px); font-weight: 500; color: var(--ink);
+    }
+    .story-hud > * { pointer-events: auto; }
+    .story-hud h1 { font-size: inherit; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin: 0; }
+    .story-nav { display: flex; align-items: center; gap: 8px; }
+    .story-btn {
+      min-height: 34px; padding: 6px 13px; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--ink);
+      font-family: inherit; font-size: 12px; font-weight: 500;
+      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: transform 0.25s var(--ease-spring), background-color 0.2s var(--ease-out);
+    }
+    .story-btn:hover { transform: scale(1.04); background: #ffffff; }
+    .story-btn:active, .sw:active { transform: scale(0.95); }
+
+    .story-foot {
+      position: fixed; bottom: 12px; left: 18px; right: 18px; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between;
+      pointer-events: none;
+      font-size: 12px; color: var(--muted);
+    }
+
+    #story {
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      background: #d4d5d3;
+      border-radius: 2.2em;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+      z-index: 10;
+    }
+    #cv {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      display: block;
+    }
+    #pv {
+      position: absolute; width: 2px; height: 2px; opacity: 0; pointer-events: none;
+    }
+
+    #panel {
+      position: absolute; left: 6%; right: 6%; top: 37%; height: 22%;
+      border-radius: 2.6em;
+      cursor: pointer;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06) 55%, rgba(255, 255, 255, 0.12));
+      -webkit-backdrop-filter: blur(1.6em) saturate(1.25) brightness(1.06);
+      backdrop-filter: blur(1.6em) saturate(1.25) brightness(1.06);
+      box-shadow:
+        0 0 0 0.14em var(--edge) inset,
+        0 1.6em 3.4em rgba(0, 0, 0, 0.18),
+        0 0.25em 0 rgba(255, 255, 255, 0.35) inset;
+      transition: transform 0.6s cubic-bezier(0.3, 1.4, 0.5, 1), opacity 0.5s, filter 0.5s;
+      z-index: 4;
+    }
+    #panel::before {
+      content: ""; position: absolute; inset: 0; border-radius: inherit;
+      opacity: 0.35; pointer-events: none;
+      background:
+        linear-gradient(90deg, transparent 33.1%, rgba(255, 255, 255, 0.6) 33.3%, rgba(255, 255, 255, 0.6) 33.7%, transparent 33.9%, transparent 66.5%, rgba(255, 255, 255, 0.6) 66.7%, rgba(255, 255, 255, 0.6) 67.1%, transparent 67.3%),
+        linear-gradient(180deg, transparent 49.6%, rgba(255, 255, 255, 0.35) 50%, transparent 50.4%);
+      transition: opacity 0.4s;
+    }
+    #panel.pull {
+      transform: translateY(2.2em) rotate(-0.6deg) scale(0.985);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #panel.clear {
+      background: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      box-shadow: none;
+    }
+    #panel.clear::before { opacity: 0; }
+    #panel.gone {
+      opacity: 0;
+      transform: scale(0.92);
+      filter: blur(0.6em);
+      pointer-events: none;
+    }
+
+    .word {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 4.2em;
+      letter-spacing: 0.62em;
+      text-indent: 0.62em;
+      text-shadow: 0 0.15em 0.6em rgba(0, 0, 0, 0.22);
+      transition: opacity 0.4s, letter-spacing 0.5s, text-indent 0.5s;
+      pointer-events: none;
+    }
+    #panel.used .word {
+      opacity: 0;
+      letter-spacing: 1em;
+      text-indent: 1em;
+    }
+
+    .reels {
+      position: absolute; inset: 6% 4%;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 4%;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s;
+    }
+    #panel.used .reels { opacity: 1; }
+    .reel {
+      position: relative;
+      border-radius: 1.6em;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent);
+      mask-image: linear-gradient(transparent, #000 18%, #000 82%, transparent);
+    }
+    .strip {
+      position: absolute; left: 0; right: 0; top: 0;
+      will-change: transform, filter;
+    }
+    .cell {
+      width: 100%; height: var(--ch, 120px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cell .bag { width: 100%; height: 100%; transform: scale(1.28); }
+
+    .bag { position: relative; }
+    .bag .t {
+      position: absolute; inset: 0;
+      background: var(--c, #8cc27a);
+      -webkit-mask: var(--m) center / contain no-repeat;
+      mask: var(--m) center / contain no-repeat;
+      transition: background-color 0.5s;
+    }
+    .bag img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    #hint {
+      position: absolute; left: 0; right: 0; top: 61.6%;
+      text-align: center;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 2.7em;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      text-shadow: 0 0.15em 0.5em rgba(0, 0, 0, 0.28);
+      pointer-events: none;
+      z-index: 4;
+      transition: opacity 0.35s;
+    }
+    #hint.hide { opacity: 0; }
+
+    #white {
+      position: absolute; inset: 0;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+    #bigWrap {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      z-index: 6;
+    }
+    #big {
+      position: absolute;
+      left: 10%;
+      width: 80%;
+      aspect-ratio: 1 / 1;
+      top: 47%;
+      margin-top: -40%;
+      transform-origin: 50% 8%;
+    }
+
+    #pack {
+      position: absolute; left: 0; right: 0; bottom: 14%;
+      display: flex; flex-direction: column; align-items: center; gap: 3.2em;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.5s;
+      z-index: 7;
+    }
+    #pack.show { opacity: 1; pointer-events: auto; }
+    .swatches {
+      display: flex; align-items: center; gap: 2.4em;
+    }
+    .sw {
+      width: 5em; height: 5em; border-radius: 50%;
+      border: 0.25em solid #ffffff;
+      box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.25s var(--ease-spring), box-shadow 0.25s;
+    }
+    .sw:hover { transform: scale(1.14); }
+    .sw.active {
+      box-shadow: 0 0 0 0.22em var(--ink), 0 0.2em 0.6em rgba(0, 0, 0, 0.18);
+    }
+    #packTitle {
+      font-size: 2.5em;
+      font-weight: 500;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #8a8a8f;
+    }
+
+    #end {
+      position: absolute; inset: 0;
+      background: #000000;
+      display: none;
+      align-items: center; justify-content: center;
+      z-index: 8;
+      cursor: pointer;
+    }
+    #end.show { display: flex; }
+    #end .end-word {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 3.2em;
+      letter-spacing: 0.7em;
+      text-indent: 0.7em;
+    }
+    #end .end-sub {
+      position: absolute; left: 0; right: 0; bottom: 10%;
+      text-align: center;
+      font-size: 2.3em;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #6d6d72;
+    }
+
+    @keyframes bagSwing {
+      0% { transform: rotate(0deg); }
+      35% { transform: rotate(4deg); }
+      75% { transform: rotate(-2.5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @media (max-width: 1024px) {
+      .story-hud { top: 10px; left: 12px; right: 12px; }
+    }
+    @media (max-width: 768px) {
+      .story-foot { display: none; }
+    }
+    @media (max-width: 480px) {
+      .story-hud h1 { font-size: 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="story-hud">
+    <h1>LUNE · BAG SLOTS</h1>
+    <nav class="story-nav" aria-label="Story Controls">
+      <button type="button" class="story-btn" id="spinBtnHud" data-next-preview="true">
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 2v9M4.5 7.5 8 11l3.5-3.5"/><circle cx="8" cy="13.5" r="1"/></svg>
+        <span>Spin Lever</span>
+      </button>
+      <button type="button" class="story-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="story" aria-label="LUNE Bag Slots Interactive Story">
+      <canvas id="cv"></canvas>
+      <video id="pv" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261106_073138_ef13b890-f508-46d7-bf25-278d3144c3d5.mp4" muted playsinline preload="auto" crossorigin="anonymous"></video>
+
+      <section id="panel" role="button" tabindex="0" aria-label="Tap the glass to spin the LUNE bag slot reels">
+        <div class="word">LUNE</div>
+        <div class="reels" id="reels">
+          <article class="reel"><div class="strip"></div></article>
+          <article class="reel"><div class="strip"></div></article>
+          <article class="reel"><div class="strip"></div></article>
+        </div>
+      </section>
+
+      <div id="hint">Tap the glass to spin</div>
+      <div id="white" aria-hidden="true"></div>
+      <div id="bigWrap"></div>
+
+      <section id="pack" aria-label="LUNE Bag Colourway Packshot">
+        <div class="swatches" id="swatches"></div>
+        <div id="packTitle">The Lune Bag · Sage</div>
+      </section>
+
+      <section id="end" role="button" tabindex="0" aria-label="Tap to spin again">
+        <div class="end-word">LUNE</div>
+        <div class="end-sub">Tap to spin again</div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="story-foot">
+    <span>Tap the glass panel or press Space to pull the lever</span>
+    <span class="tabular-nums">9:16 CAMPAIGN STORY · 24 FPS</span>
+  </footer>
+
+  <script>
+  (function () {
+    const BAG_URL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261106_072459_3a7afc56-a581-4651-8e7e-756e12183786.png&w=900&q=88";
+    const COLOURS = [
+      { name: "Lilac", hex: "#b9a8ef" },
+      { name: "Butter", hex: "#f2dfa8" },
+      { name: "Sage", hex: "#8cc27a" },
+      { name: "Tangerine", hex: "#f29a52" },
+      { name: "Rose", hex: "#ee88b6" },
+      { name: "Ink", hex: "#3a3a44" },
+      { name: "Sky", hex: "#9ccff0" }
+    ];
+    const TARGET_CYCLE = [2, 1, 0, 4, 6, 3]; // Sage, Butter, Lilac, Rose, Sky, Tangerine
+
+    const story = document.getElementById("story");
+    const cv = document.getElementById("cv");
+    const ctx = cv.getContext("2d");
+    const pv = document.getElementById("pv");
+    const panel = document.getElementById("panel");
+    const hint = document.getElementById("hint");
+    const white = document.getElementById("white");
+    const bigWrap = document.getElementById("bigWrap");
+    const pack = document.getElementById("pack");
+    const swatchesEl = document.getElementById("swatches");
+    const packTitle = document.getElementById("packTitle");
+    const endCard = document.getElementById("end");
+    const reelEls = Array.from(document.querySelectorAll(".reel"));
+    const stripEls = reelEls.map((r) => r.querySelector(".strip"));
+
+    let reelCols = [0, 2, 1]; // Initial: Lilac, Sage, Butter
+    let cycleIdx = 0;
+    let state = "idle"; // idle | spinning | packshot | end
+    let idleTimer = null;
+
+    function makeBag(colIdx) {
+      const c = COLOURS[colIdx] || COLOURS[2];
+      const b = document.createElement("div");
+      b.className = "bag";
+      b.style.setProperty("--c", c.hex);
+      const t = document.createElement("div");
+      t.className = "t";
+      const im = document.createElement("img");
+      im.src = BAG_URL;
+      im.alt = "The Lune Bag in " + c.name;
+      b.appendChild(t);
+      b.appendChild(im);
+      return b;
+    }
+
+    function sizeStory() {
+      const w = Math.min(window.innerWidth, window.innerHeight * 9 / 16);
+      const h = w * 16 / 9;
+      story.style.width = w + "px";
+      story.style.height = h + "px";
+      story.style.fontSize = (w / 100) + "px";
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.round(w * dpr);
+      cv.height = Math.round(h * dpr);
+      const ch = reelEls[0]?.clientHeight || Math.round(h * 0.22 * 0.88);
+      story.style.setProperty("--ch", ch + "px");
+      drawFrame();
+    }
+    window.addEventListener("resize", sizeStory);
+
+    function mountInitialReels() {
+      stripEls.forEach((st, k) => {
+        st.innerHTML = "";
+        st.style.transform = "";
+        st.style.filter = "";
+        const cell = document.createElement("div");
+        cell.className = "cell";
+        cell.appendChild(makeBag(reelCols[k]));
+        st.appendChild(cell);
+      });
+    }
+
+    // Video frame cache & rAF playhead
+    const NF = 121;
+    const frames = new Array(NF).fill(null);
+    let cachedCount = 0;
+    let head = 0, want = 0, shown = -1;
+    window.__hero = { ready: false, settled: false };
+
+    function drawCover(source, sw, sh) {
+      const cw = cv.width, ch = cv.height;
+      if (!cw || !ch || !sw || !sh) return;
+      const scale = Math.max(cw / sw, ch / sh);
+      const dw = sw * scale, dh = sh * scale;
+      ctx.clearRect(0, 0, cw, ch);
+      ctx.drawImage(source, (cw - dw) * 0.5, (ch - dh) * 0.5, dw, dh);
+    }
+
+    function drawFrame() {
+      let best = -1, bestDist = 9999;
+      for (let i = 0; i < NF; i++) {
+        if (frames[i]) {
+          const d = Math.abs(i - want);
+          if (d < bestDist) { bestDist = d; best = i; }
+        }
+      }
+      if (best !== -1 && frames[best]) {
+        const bmp = frames[best];
+        drawCover(bmp, bmp.width, bmp.height);
+        shown = best;
+        window.__hero.settled = (shown === best);
+      } else if (pv.readyState >= 2) {
+        drawCover(pv, pv.videoWidth || 1080, pv.videoHeight || 1920);
+      }
+    }
+
+    const off = document.createElement("canvas");
+    off.width = 720; off.height = 1280;
+    const offCtx = off.getContext("2d");
+
+    function cacheCurrentFrame(idx) {
+      if (idx < 0 || idx >= NF || frames[idx]) return;
+      try {
+        offCtx.drawImage(pv, 0, 0, 720, 1280);
+        createImageBitmap(off).then((bmp) => {
+          if (!frames[idx]) {
+            frames[idx] = bmp;
+            cachedCount++;
+            if (cachedCount >= NF - 2) window.__hero.ready = true;
+            if (idx === 0 || shown === -1) drawFrame();
+          }
+        }).catch(() => {});
+      } catch (e) {}
+    }
+
+    pv.addEventListener("loadeddata", () => {
+      cacheCurrentFrame(0);
+      drawFrame();
+      if ("requestVideoFrameCallback" in pv) {
+        const onFrame = (now, meta) => {
+          const idx = Math.min(NF - 1, Math.max(0, Math.round(meta.mediaTime * 24)));
+          cacheCurrentFrame(idx);
+          if (!pv.paused && !pv.ended) pv.requestVideoFrameCallback(onFrame);
+        };
+        pv.requestVideoFrameCallback(onFrame);
+        pv.play().then(() => {
+          pv.onended = () => { window.__hero.ready = true; scheduleAuto(); };
+        }).catch(() => { window.__hero.ready = true; scheduleAuto(); });
+      } else {
+        window.__hero.ready = true;
+        scheduleAuto();
+      }
+    }, { once: true });
+
+    let tweenRaf = null;
+    function playClip(toFrame, ms) {
+      cancelAnimationFrame(tweenRaf);
+      const fromFrame = head;
+      const t0 = performance.now();
+      pv.currentTime = 0;
+      pv.play().catch(() => {});
+      function step(now) {
+        const p = Math.min(1, (now - t0) / ms);
+        head = fromFrame + (toFrame - fromFrame) * p;
+        want = Math.round(head);
+        drawFrame();
+        if (p < 1) tweenRaf = requestAnimationFrame(step);
+      }
+      tweenRaf = requestAnimationFrame(step);
+    }
+
+    function scheduleAuto() {
+      clearTimeout(idleTimer);
+      if (document.documentElement.getAttribute("data-motion") === "paused") return;
+      if (state === "idle") {
+        idleTimer = setTimeout(() => { if (state === "idle") spin(); }, 4200);
+      } else if (state === "packshot") {
+        idleTimer = setTimeout(() => { if (state === "packshot") goEndCard(); }, 2800);
+      } else if (state === "end") {
+        idleTimer = setTimeout(() => { if (state === "end") restartFromEnd(); }, 2600);
+      }
+    }
+
+    window.addEventListener("pointermove", () => {
+      if (state === "idle" || state === "packshot" || state === "end") scheduleAuto();
+    }, { passive: true });
+
+    let bigBagEl = null;
+    let whiteAnim = null;
+
+    function buildSwatches(activeCol) {
+      swatchesEl.innerHTML = "";
+      COLOURS.forEach((c, idx) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "sw" + (idx === activeCol ? " active" : "");
+        b.style.backgroundColor = c.hex;
+        b.setAttribute("aria-label", "Select " + c.name + " leather colourway");
+        b.addEventListener("click", (e) => {
+          e.stopPropagation();
+          swatchesEl.querySelectorAll(".sw").forEach((s, i) => s.classList.toggle("active", i === idx));
+          packTitle.textContent = "The Lune Bag · " + c.name;
+          if (bigBagEl) {
+            bigBagEl.style.setProperty("--c", c.hex);
+            bigBagEl.animate([
+              { transform: "rotate(0deg)" },
+              { transform: "rotate(4deg)", offset: 0.35 },
+              { transform: "rotate(-2.5deg)", offset: 0.72 },
+              { transform: "rotate(0deg)" }
+            ], { duration: 600, easing: "ease-out" });
+          }
+          scheduleAuto();
+        });
+        swatchesEl.appendChild(b);
+      });
+      packTitle.textContent = "The Lune Bag · " + COLOURS[activeCol].name;
+    }
+
+    function runJackpot(targetCol) {
+      // +450ms: left & right reels slide out, panel gets .clear
+      setTimeout(() => {
+        panel.classList.add("clear");
+        reelEls[0].animate(
+          [{ transform: "translateX(0)", opacity: 1 }, { transform: "translateX(-80%)", opacity: 0 }],
+          { duration: 600, easing: "cubic-bezier(.5,0,.75,0)", fill: "forwards" }
+        );
+        reelEls[2].animate(
+          [{ transform: "translateX(0)", opacity: 1 }, { transform: "translateX(80%)", opacity: 0 }],
+          { duration: 600, easing: "cubic-bezier(.5,0,.75,0)", fill: "forwards" }
+        );
+      }, 450);
+
+      // +1150ms: #big grows from centre reel to 80% of story width
+      setTimeout(() => {
+        const sRect = story.getBoundingClientRect();
+        const cRect = reelEls[1].getBoundingClientRect();
+        bigWrap.innerHTML = "";
+        bigBagEl = makeBag(targetCol);
+        bigBagEl.id = "big";
+        bigWrap.appendChild(bigBagEl);
+        const S = sRect.width * 0.8;
+        const dx = (cRect.left + cRect.width * 0.5) - (sRect.left + sRect.width * 0.5);
+        const dy = (cRect.top + cRect.height * 0.5) - (sRect.top + sRect.height * 0.47);
+        const sc = Math.max(0.2, cRect.width / S);
+        panel.classList.add("gone");
+        bigBagEl.animate([
+          { transform: "translate(" + dx.toFixed(1) + "px, " + dy.toFixed(1) + "px) scale(" + sc.toFixed(3) + ")" },
+          { transform: "none" }
+        ], { duration: 760, easing: "cubic-bezier(.55,0,.2,1)", fill: "backwards" });
+      }, 1150);
+
+      // +1700ms: white wash
+      setTimeout(() => {
+        whiteAnim = white.animate(
+          [{ opacity: 0 }, { opacity: 1 }],
+          { duration: 650, easing: "ease-in-out", fill: "forwards" }
+        );
+      }, 1700);
+
+      // +2350ms: packshot swatches
+      setTimeout(() => {
+        state = "packshot";
+        buildSwatches(targetCol);
+        pack.classList.add("show");
+        scheduleAuto();
+      }, 2350);
+    }
+
+    function spin() {
+      if (state !== "idle") return;
+      state = "spinning";
+      clearTimeout(idleTimer);
+      hint.classList.add("hide");
+
+      if (head > 0.5) {
+        head = 0; want = 0; drawFrame();
+      }
+      playClip(NF - 1, 5040);
+
+      setTimeout(() => { panel.classList.add("pull"); }, 1720);
+      setTimeout(() => {
+        panel.classList.remove("pull");
+        panel.classList.add("used");
+        const targetCol = TARGET_CYCLE[cycleIdx % TARGET_CYCLE.length];
+        cycleIdx++;
+        const cellH = reelEls[0].clientHeight || 120;
+        story.style.setProperty("--ch", cellH + "px");
+
+        let stopped = 0;
+        stripEls.forEach((st, k) => {
+          const count = 14 + 6 * k;
+          const seq = [reelCols[k]];
+          for (let i = 0; i < count; i++) seq.push(Math.floor(Math.random() * COLOURS.length));
+          seq.push(targetCol);
+          st.innerHTML = "";
+          seq.forEach((ci) => {
+            const c = document.createElement("div");
+            c.className = "cell";
+            c.appendChild(makeBag(ci));
+            st.appendChild(c);
+          });
+          const dist = (seq.length - 1) * cellH;
+          st.style.filter = "blur(0.35em)";
+          const dur = 1200 + 420 * k;
+          setTimeout(() => { st.style.filter = ""; }, 900 + 420 * k);
+          st.animate([
+            { transform: "translateY(0px)", offset: 0 },
+            { transform: "translateY(" + (-(dist + 0.18 * cellH)).toFixed(1) + "px)", offset: 0.90 },
+            { transform: "translateY(" + (-(dist - 0.06 * cellH)).toFixed(1) + "px)", offset: 0.96 },
+            { transform: "translateY(" + (-dist).toFixed(1) + "px)", offset: 1 }
+          ], {
+            duration: dur,
+            easing: "cubic-bezier(.2,.55,.3,1)",
+            fill: "forwards"
+          }).onfinish = () => {
+            reelCols[k] = targetCol;
+            st.getAnimations().forEach((a) => a.cancel());
+            st.innerHTML = "";
+            st.style.transform = "";
+            const single = document.createElement("div");
+            single.className = "cell";
+            single.appendChild(makeBag(targetCol));
+            st.appendChild(single);
+            stopped++;
+            if (stopped === 3) runJackpot(targetCol);
+          };
+        });
+      }, 2050);
+    }
+
+    function goEndCard() {
+      if (state !== "packshot") return;
+      state = "end";
+      clearTimeout(idleTimer);
+      endCard.classList.add("show");
+      scheduleAuto();
+    }
+
+    function restartFromEnd() {
+      if (state !== "end") return;
+      clearTimeout(idleTimer);
+      pack.classList.remove("show");
+      bigWrap.innerHTML = "";
+      bigBagEl = null;
+      if (whiteAnim) whiteAnim.cancel();
+      white.style.opacity = "0";
+      reelEls.forEach((r) => r.getAnimations().forEach((a) => a.cancel()));
+      panel.classList.remove("pull", "clear", "gone");
+      mountInitialReels();
+      head = 0; want = 0; drawFrame();
+      requestAnimationFrame(() => {
+        endCard.classList.remove("show");
+        state = "idle";
+        setTimeout(() => spin(), 350);
+      });
+    }
+
+    sizeStory();
+    mountInitialReels();
+
+    panel.addEventListener("click", () => { if (state === "idle") spin(); });
+    document.getElementById("spinBtnHud").addEventListener("click", () => {
+      if (state === "idle") spin();
+      else if (state === "packshot") goEndCard();
+      else if (state === "end") restartFromEnd();
+    });
+    story.addEventListener("click", (e) => {
+      if (state === "packshot" && !e.target.closest(".sw")) goEndCard();
+    });
+    endCard.addEventListener("click", (e) => {
+      e.stopPropagation();
+      restartFromEnd();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        if (state === "idle") spin();
+        else if (state === "packshot") goEndCard();
+        else if (state === "end") restartFromEnd();
+      }
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("is-inview"); });
+    }, { threshold: 0.1 });
+    io.observe(story);
+
+    const motionBtn = document.getElementById("motionToggleBtn");
+    motionBtn.addEventListener("click", () => {
+      const paused = document.documentElement.getAttribute("data-motion") === "paused";
+      const next = !paused;
+      document.documentElement.setAttribute("data-motion", next ? "paused" : "on");
+      motionBtn.setAttribute("aria-pressed", String(next));
+      motionBtn.textContent = next ? "Motion: PAUSED" : "Motion: ON";
+      if (next) clearTimeout(idleTimer);
+      else scheduleAuto();
+    });
+  })();
+  </script>
+</body>
+</html>

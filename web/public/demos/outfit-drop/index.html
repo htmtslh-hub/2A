@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Arriving Tomorrow</title>
+  <meta name="description" content="Interactive mix-and-match clothing drop teaser with real-time garment colourway masking, gamma 2.6 fold shading, and crossing WAAPI transitions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ececec;
+      --ink: #111111;
+      --surface: #e2e2e2;
+      --surface-elevated: #f7f7f7;
+      --fg: #111111;
+      --muted: #555555;
+      --accent: #1d84d2;
+      --accent-text: #111111;
+      --accent-strong: #ee4cb3;
+      --on-accent: #ffffff;
+      --border: rgba(17, 17, 17, 0.12);
+      --font-display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+      --font-sans: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.2, 0.75, 0.3, 1);
+      --ease-spring: cubic-bezier(0.3, 1.5, 0.5, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 10px 18px; background: var(--ink); color: #ffffff;
+      font-weight: 600; text-decoration: none; border-radius: 999px;
+    }
+    .skip-link:focus-visible { transform: translateY(116px); outline: 2px solid var(--accent); }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .chrome-top {
+      position: fixed; top: 14px; left: 18px; right: 18px; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between;
+      pointer-events: none;
+      font-size: clamp(11px, 0.9vw, 13px); font-weight: 600; color: var(--muted);
+    }
+    .chrome-top > * { pointer-events: auto; }
+    .chrome-nav { display: flex; align-items: center; gap: 8px; }
+    .chrome-btn {
+      min-height: 34px; padding: 6px 13px; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--ink);
+      font-family: inherit; font-size: 12px; font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.25s var(--ease-spring), background-color 0.2s var(--ease-out);
+    }
+    .chrome-btn:hover { transform: scale(1.04); background: #ffffff; }
+
+    .chrome-foot {
+      position: fixed; bottom: 12px; left: 18px; right: 18px; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between;
+      pointer-events: none;
+      font-size: 12px; font-weight: 500; color: var(--muted);
+    }
+
+    #card {
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      background: var(--bg);
+      z-index: 10;
+    }
+    #card h1 {
+      position: absolute; left: 0; right: 0; top: 5.4%;
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 4.1em;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      z-index: 5;
+    }
+    .row {
+      position: absolute; left: 0; width: 100%;
+    }
+    #top { top: 11%; height: 48%; z-index: 3; }
+    #bot { top: 58%; height: 36%; z-index: 2; }
+
+    .g {
+      position: absolute; top: 0; bottom: 0; left: 50%;
+      width: 46em; margin-left: -23em;
+      cursor: grab;
+      touch-action: pan-y;
+      filter: drop-shadow(0 0.9em 0.7em rgba(0, 0, 0, 0.13)) drop-shadow(0 0.15em 0.25em rgba(0, 0, 0, 0.08));
+      will-change: transform;
+    }
+    .g:active { cursor: grabbing; }
+    .hov {
+      position: absolute; inset: -6%;
+      transition: transform 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+    }
+    .g:hover .hov {
+      transform: translateY(-1.2%) scale(1.025);
+    }
+    .tint {
+      position: absolute; inset: 0;
+      -webkit-mask: var(--m) center / contain no-repeat;
+      mask: var(--m) center / contain no-repeat;
+    }
+    .g img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      filter: url(#shade);
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+
+    .arrow {
+      position: absolute; top: 50%;
+      width: 9em; height: 12em;
+      margin-top: -6em;
+      background: none; border: 0;
+      color: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      z-index: 6;
+    }
+    #prev { left: 1.5em; }
+    #next { right: 1.5em; }
+    .arrow svg {
+      width: 3.6em; height: 5.2em;
+      transition: transform 0.35s cubic-bezier(0.3, 1.5, 0.5, 1);
+    }
+    #prev:hover svg { transform: translateX(-0.6em); }
+    #next:hover svg { transform: translateX(0.6em); }
+    .arrow:active svg { transform: scale(0.85); }
+
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-2px); }
+    }
+
+    @media (max-width: 1024px) {
+      .chrome-top { top: 10px; left: 12px; right: 12px; }
+    }
+    @media (max-width: 768px) {
+      .chrome-foot { display: none; }
+    }
+    @media (max-width: 480px) {
+      .chrome-top > span { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <svg width="0" height="0" viewBox="0 0 1 1" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="shade" color-interpolation-filters="sRGB">
+        <feComponentTransfer>
+          <feFuncR type="gamma" amplitude="1" exponent="2.6" offset="0"/>
+          <feFuncG type="gamma" amplitude="1" exponent="2.6" offset="0"/>
+          <feFuncB type="gamma" amplitude="1" exponent="2.6" offset="0"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
+
+  <header class="chrome-top">
+    <span class="tabular-nums">DROP 04 · MIX &amp; MATCH</span>
+    <nav class="chrome-nav" aria-label="Outfit Drop Controls">
+      <span id="pairLabel" class="tabular-nums">SKY / LEMON</span>
+      <button type="button" class="chrome-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="card" aria-label="Arriving Tomorrow Mix-and-Match Outfit Teaser">
+      <h1>ARRIVING TOMORROW</h1>
+      <section id="top" class="row" aria-label="Oversized Pullover Hoodie"></section>
+      <section id="bot" class="row" aria-label="Relaxed Sweat Shorts"></section>
+      <article class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Heavyweight 480gsm organic cotton fleece pullover hoodie in 7 garment-dyed colourways.</article>
+      <article class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Relaxed drawstring sweat shorts in 7 matching and contrasting colourways.</article>
+      <button type="button" id="prev" class="arrow" aria-label="Previous outfit colourway">
+        <svg viewBox="0 0 24 34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 3 4 17l13 14"/>
+        </svg>
+      </button>
+      <button type="button" id="next" class="arrow" data-next-preview="true" aria-label="Next outfit colourway">
+        <svg viewBox="0 0 24 34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 3l13 14L7 31"/>
+        </svg>
+      </button>
+    </section>
+  </main>
+
+  <footer class="chrome-foot">
+    <span>Tap or drag hoodie &amp; shorts independently, or click ‹ › to swap both</span>
+    <span class="tabular-nums">7 COLOURWAYS · 49 COMBINATIONS</span>
+  </footer>
+
+  <script>
+  (function () {
+    const HOODIE = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261106_065532_0fd0b9b0-7f8e-4519-b490-6478519b5186.png&w=1200&q=88";
+    const SHORTS = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261106_065534_5ab4e8d0-8d00-42b4-b0ac-6dc60ea7aac0.png&w=1200&q=88";
+
+    const COLOURS = {
+      sky: "#8dd2ef",
+      lemon: "#f6dc55",
+      grass: "#46cc45",
+      lilac: "#b29de4",
+      tang: "#fa8430",
+      fuchsia: "#ee4cb3",
+      cobalt: "#1d84d2"
+    };
+
+    const TOPS = ["sky", "grass", "tang", "fuchsia", "lemon", "sky", "lilac", "tang"];
+    const BOTS = ["lemon", "lilac", "grass", "cobalt", "fuchsia", "tang", "sky", "lemon"];
+
+    const card = document.getElementById("card");
+    const topEl = document.getElementById("top");
+    const botEl = document.getElementById("bot");
+    const pairLabel = document.getElementById("pairLabel");
+
+    function sizeCard() {
+      const s = Math.min(window.innerWidth, window.innerHeight);
+      card.style.width = s + "px";
+      card.style.height = s + "px";
+      card.style.fontSize = (s / 100) + "px";
+    }
+    sizeCard();
+    window.addEventListener("resize", sizeCard);
+
+    const rows = {
+      top: { el: topEl, seq: TOPS, idx: 0, img: HOODIE, sign: 1, cur: null },
+      bot: { el: botEl, seq: BOTS, idx: 0, img: SHORTS, sign: -1, cur: null }
+    };
+
+    function updateBadge() {
+      if (pairLabel) {
+        pairLabel.textContent = rows.top.seq[rows.top.idx].toUpperCase() + " / " + rows.bot.seq[rows.bot.idx].toUpperCase();
+      }
+    }
+
+    function makeGarment(rowKey, colName) {
+      const r = rows[rowKey];
+      const g = document.createElement("div");
+      g.className = "g";
+      const hov = document.createElement("div");
+      hov.className = "hov";
+      const tint = document.createElement("div");
+      tint.className = "tint";
+      tint.style.backgroundColor = COLOURS[colName];
+      tint.style.setProperty("--m", 'url("' + r.img + '")');
+      const im = document.createElement("img");
+      im.src = r.img;
+      im.alt = rowKey === "top" ? (colName + " oversized hoodie") : (colName + " relaxed sweat shorts");
+      hov.appendChild(tint);
+      hov.appendChild(im);
+      g.appendChild(hov);
+      bindPieceDrag(rowKey, g);
+      return g;
+    }
+
+    let lastActionAt = performance.now();
+    function touchIdle() { lastActionAt = performance.now(); }
+    ["pointermove", "pointerdown", "click", "keydown"].forEach((ev) => {
+      window.addEventListener(ev, touchIdle, { passive: true });
+    });
+
+    function bindPieceDrag(rowKey, g) {
+      let dragging = false, x0 = 0, dx = 0;
+      g.addEventListener("pointerdown", (e) => {
+        if (rows[rowKey].cur !== g) return;
+        dragging = true;
+        x0 = e.clientX;
+        dx = 0;
+        g.setPointerCapture(e.pointerId);
+        touchIdle();
+      });
+      g.addEventListener("pointermove", (e) => {
+        if (!dragging) return;
+        dx = e.clientX - x0;
+        const w = g.offsetWidth || 200;
+        const pct = (dx / w) * 100;
+        const deg = (dx / w) * 8;
+        g.style.transform = "translateX(" + pct.toFixed(2) + "%) rotate(" + deg.toFixed(2) + "deg)";
+      });
+      const finish = () => {
+        if (!dragging) return;
+        dragging = false;
+        const w = g.offsetWidth || 200;
+        const p = dx / w;
+        if (Math.abs(dx) < 4) {
+          g.style.transform = "";
+          slide(rowKey, 1, 0, 0);
+        } else if (Math.abs(p) > 0.14) {
+          const sgnP = p > 0 ? 1 : -1;
+          const dir = rowKey === "top" ? -sgnP : sgnP;
+          slide(rowKey, dir, 0, p * 100);
+        } else {
+          g.animate(
+            [{ transform: g.style.transform || "none" }, { transform: "none" }],
+            { duration: 450, easing: "cubic-bezier(.3,1.6,.5,1)" }
+          ).onfinish = () => { g.style.transform = ""; };
+        }
+      };
+      g.addEventListener("pointerup", finish);
+      g.addEventListener("pointercancel", finish);
+    }
+
+    function slide(rowKey, dir, delay = 0, fromPct = 0) {
+      const r = rows[rowKey];
+      const sgn = dir * r.sign;
+      r.idx = (r.idx + dir + r.seq.length) % r.seq.length;
+      updateBadge();
+      const oldG = r.cur;
+      const newG = makeGarment(rowKey, r.seq[r.idx]);
+      r.el.appendChild(newG);
+      r.cur = newG;
+
+      if (oldG) {
+        oldG.style.pointerEvents = "none";
+        oldG.animate([
+          { transform: "translateX(" + fromPct + "%) rotate(0deg)" },
+          { transform: "translateX(" + (-sgn * 150) + "%) rotate(" + (-sgn * 9) + "deg)" }
+        ], {
+          duration: 520,
+          delay,
+          easing: "cubic-bezier(.55,0,.75,.35)",
+          fill: "forwards"
+        }).onfinish = () => oldG.remove();
+      }
+
+      newG.animate([
+        { transform: "translateX(" + (sgn * 150) + "%) rotate(" + (sgn * 10) + "deg)", offset: 0 },
+        { transform: "translateX(" + (sgn * 150) + "%) rotate(" + (sgn * 10) + "deg)", offset: 0.42 },
+        { transform: "translateX(" + (-sgn * 3) + "%) rotate(" + (-sgn * 3.5) + "deg)", offset: 0.78 },
+        { transform: "translateX(" + (sgn * 0.8) + "%) rotate(" + (sgn * 1.4) + "deg)", offset: 0.90 },
+        { transform: "none", offset: 1 }
+      ], {
+        duration: 1250,
+        delay,
+        easing: "cubic-bezier(.2,.75,.3,1)",
+        fill: "backwards"
+      });
+    }
+
+    let lastBothCall = 0;
+    function slideBoth(dir) {
+      const now = performance.now();
+      if (now - lastBothCall < 700) return;
+      lastBothCall = now;
+      slide("top", dir, 0, 0);
+      slide("bot", dir, 110, 0);
+    }
+
+    // Mount initial garments
+    rows.top.cur = makeGarment("top", rows.top.seq[0]);
+    rows.top.el.appendChild(rows.top.cur);
+    rows.bot.cur = makeGarment("bot", rows.bot.seq[0]);
+    rows.bot.el.appendChild(rows.bot.cur);
+    updateBadge();
+
+    document.getElementById("prev").addEventListener("click", () => { touchIdle(); slideBoth(-1); });
+    document.getElementById("next").addEventListener("click", () => { touchIdle(); slideBoth(1); });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { touchIdle(); slideBoth(1); }
+      else if (e.key === "ArrowLeft") { touchIdle(); slideBoth(-1); }
+    });
+
+    // 250ms idle autoplay loop + rAF heartbeat
+    setInterval(() => {
+      if (document.documentElement.getAttribute("data-motion") === "paused") return;
+      const now = performance.now();
+      if (now - lastActionAt > 3500) {
+        slideBoth(1);
+        lastActionAt = now - 1300;
+      }
+    }, 250);
+
+    function rafLoop() { requestAnimationFrame(rafLoop); }
+    requestAnimationFrame(rafLoop);
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("is-inview"); });
+    }, { threshold: 0.1 });
+    io.observe(card);
+
+    const motionBtn = document.getElementById("motionToggleBtn");
+    motionBtn.addEventListener("click", () => {
+      const paused = document.documentElement.getAttribute("data-motion") === "paused";
+      const next = !paused;
+      document.documentElement.setAttribute("data-motion", next ? "paused" : "on");
+      motionBtn.setAttribute("aria-pressed", String(next));
+      motionBtn.textContent = next ? "Motion: PAUSED" : "Motion: ON";
+    });
+  })();
+  </script>
+</body>
+</html>

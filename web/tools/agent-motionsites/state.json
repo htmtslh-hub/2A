@@ -30,6 +30,7 @@
     "auralis",
     "axion-about",
     "backbest-800",
+    "bag-slots",
     "bame-esports",
     "beetbuh",
     "beyond-voyages",
@@ -38,6 +39,7 @@
     "bloom-ai",
     "break-code",
     "camper",
+    "card-stack",
     "cast-and-render",
     "celestial-renewal",
     "chain-warden",
@@ -89,6 +91,7 @@
     "freight-axis",
     "fresh-reddy",
     "fun-404-page",
+    "future-fashion",
     "futuristic-canvas",
     "galaxy-edge",
     "geospace-canvas",
@@ -132,6 +135,7 @@
     "luminex",
     "luminex-atelier",
     "lumora",
+    "main-character",
     "maison-vell",
     "maldives-escape",
     "manganresto",
@@ -178,6 +182,7 @@
     "orbis-nft",
     "orbit-academy",
     "organic-odyssey",
+    "outfit-drop",
     "particle-brain",
     "pinehaven",
     "pink-rider",
@@ -267,6 +272,7 @@
     "wellbeing-os",
     "wellness-balance",
     "wellness-companion",
+    "work-ribbon",
     "yellow-beast"
   ],
   "processedPromptIds": [
@@ -419,7 +425,13 @@
     "virtual-fitting",
     "crystal-koi",
     "moss-island",
-    "medusa-jellyfish-hero"
+    "medusa-jellyfish-hero",
+    "main-character",
+    "outfit-drop",
+    "bag-slots",
+    "future-fashion",
+    "card-stack",
+    "work-ribbon"
   ],
   "history": [
     {
@@ -861,6 +873,42 @@
         "moss-island": "premium",
         "robot-jellyfish": "premium"
       }
+    },
+    {
+      "date": "2026-11-08",
+      "built": [
+        "main-character",
+        "outfit-drop",
+        "bag-slots"
+      ],
+      "catalogIds": [
+        "t290",
+        "t291",
+        "t292"
+      ],
+      "tiers": {
+        "main-character": "free",
+        "outfit-drop": "premium",
+        "bag-slots": "premium"
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "built": [
+        "future-fashion",
+        "card-stack",
+        "work-ribbon"
+      ],
+      "catalogIds": [
+        "t293",
+        "t294",
+        "t295"
+      ],
+      "tiers": {
+        "future-fashion": "free",
+        "card-stack": "premium",
+        "work-ribbon": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -949,15 +997,20 @@
     "f5d7b18d5622bb9b61f422c217da2f1b7af5c42f789dce2c3708b530cb34dddb",
     "41ad7d9540888b8a6feef90cee7b3a9893cce8d5cd80c2d8e815850041767996",
     "acb08ddd937e6a806e61574ade6eb8b9026a2fe7c2280e76dc22e4f7146c3c02",
-    "3411105a5d7270de88f5f00fba2a97a8c7987753dd47096b12384acf2a3c2591"
+    "3411105a5d7270de88f5f00fba2a97a8c7987753dd47096b12384acf2a3c2591",
+    "f526a107ea0b6c3193c0a15dec3ba178f74c6efccd4756fe30bb0df16d25be72",
+    "b6ae782898294ddf50c1f643910a8621442dc633e6b918115b734874b60ee84d",
+    "486fb86245aa0176ca395bd6f450011b4342249b01f432e67ecc8e12779ddc6f",
+    "9041e3e7d76ce926c89106b183aea5196ce108c768ce84fc660231fcffc68984",
+    "cda6d667a91b0aabd83f6b3e9c3051a50eea358e1b29083711184061d5270026"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "design-collage",
-    "pink-rider",
-    "virtual-fitting",
-    "crystal-koi",
-    "moss-island",
-    "robot-jellyfish"
+    "main-character",
+    "outfit-drop",
+    "bag-slots",
+    "future-fashion",
+    "card-stack",
+    "work-ribbon"
   ]
 }

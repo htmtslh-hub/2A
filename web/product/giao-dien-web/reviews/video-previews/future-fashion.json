@@ -1,0 +1,44 @@
+{
+  "id": "t293",
+  "slug": "future-fashion",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T13:31:19.236Z",
+  "demo": "/demos/future-fashion/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a88636e3634f",
+  "sha256": "a88636e3634f3731e5d0210656e6011da22421661d5ea91474c83241ed297b70",
+  "demoHtmlSha256": "3a23784b4a47f16b2aaf5a87bc1684e588a08502d0e5b89612dcccd2001701bd",
+  "demoSha256": "9fef1660dffdc83661a7b26331d6bce71f831e39d2722fa09f499065ee666b3a",
+  "bytes": 1061215,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 7.922,
+      "action": "click",
+      "selector": "#discoverBtn"
+    },
+    {
+      "seconds": 13.948,
+      "action": "click",
+      "selector": "#menuBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\future-fashion-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\future-fashion-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\future-fashion-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\future-fashion-return.jpg"
+  ]
+}

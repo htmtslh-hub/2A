@@ -25,6 +25,12 @@ const PREVIEWS_DIR = join(WEB_ROOT, 'public', 'previews');
 const EXCLUDED_DIRS = new Set(['_design', 'design', 'docs', 'reviews', 'tools', 'free-sample']);
 
 const INLINE_PRODUCTS = new Set([
+  'future-fashion',
+  'card-stack',
+  'work-ribbon',
+  'main-character',
+  'outfit-drop',
+  'bag-slots',
   'crystal-koi',
   'moss-island',
   'robot-jellyfish',

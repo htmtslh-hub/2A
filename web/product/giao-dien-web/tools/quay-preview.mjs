@@ -947,9 +947,37 @@ try {
         }
         return;
       }
-      if (['design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish'].includes(slug)) {
+      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish'].includes(slug)) {
         const clickedCount = actions.filter(a => a.action === 'click').length;
-        if (slug === 'design-collage') {
+        if (slug === 'future-fashion') {
+          await page.mouse.move(clickedCount === 0 ? 480 : 960, clickedCount === 0 ? 340 : 560, { steps: 14 });
+          const sel = clickedCount === 0 ? '#discoverBtn' : '#menuBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'card-stack') {
+          await page.mouse.move(clickedCount === 0 ? 680 : 760, 450, { steps: 10 });
+          const sel = clickedCount === 0 ? '#openSelectedBtn' : '#home';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'work-ribbon') {
+          await page.mouse.move(clickedCount === 0 ? 640 : 860, 450, { steps: 10 });
+          const sel = clickedCount === 0 ? '#brandLink' : '#profileBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'main-character') {
+          await page.mouse.move(clickedCount === 0 ? 520 : 880, 420, { steps: 10 });
+          const sel = clickedCount === 0 ? '#quickOutfitBtn' : '#gem';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'outfit-drop') {
+          const sel = clickedCount === 0 ? '#next' : '#prev';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'bag-slots') {
+          const sel = clickedCount === 0 ? '#panel' : '#spinBtnHud';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'design-collage') {
           await page.mouse.move(clickedCount === 0 ? 520 : 880, 420, { steps: 12 });
           const sel = clickedCount === 0 ? '.cta-btn' : '.nav-links a';
           await page.locator(sel).first().click({ force: true });

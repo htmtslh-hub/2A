@@ -46,6 +46,152 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t295: {
+    slug: 'work-ribbon',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Work Ribbon",
+        desc: "Giao diện web Work Ribbon với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Work Ribbon",
+        desc: "Bespoke Work Ribbon web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Work Ribbon",
+        desc: "单文件自包含 Work Ribbon 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t294: {
+    slug: 'card-stack',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Card Stack",
+        desc: "Giao diện web Card Stack với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Card Stack",
+        desc: "Bespoke Card Stack web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Card Stack",
+        desc: "单文件自包含 Card Stack 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t293: {
+    slug: 'future-fashion',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Future Fashion",
+        desc: "Giao diện web Future Fashion với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Future Fashion",
+        desc: "Bespoke Future Fashion web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Future Fashion",
+        desc: "单文件自包含 Future Fashion 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t292: {
+    slug: 'bag-slots',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Bag Slots",
+        desc: "Giao diện web Bag Slots với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Bag Slots",
+        desc: "Bespoke Bag Slots web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Bag Slots",
+        desc: "单文件自包含 Bag Slots 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t291: {
+    slug: 'outfit-drop',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Outfit Drop",
+        desc: "Giao diện web Outfit Drop với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Ecommerce", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Outfit Drop",
+        desc: "Bespoke Outfit Drop web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Ecommerce", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Outfit Drop",
+        desc: "单文件自包含 Outfit Drop 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t290: {
+    slug: 'main-character',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Main Character",
+        desc: "Giao diện web Main Character với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Main Character",
+        desc: "Bespoke Main Character web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Fashion", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Main Character",
+        desc: "单文件自包含 Main Character 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t289: {
     slug: 'robot-jellyfish',
     cat: 'commerce',

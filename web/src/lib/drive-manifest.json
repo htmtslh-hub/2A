@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-08T04:57:38.552Z",
+  "updatedAt": "2026-11-08T13:32:35.702Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2243,6 +2243,60 @@
       "sizeBytes": 23596,
       "sha256": "2d3265c6b8f994f2c96a965db1b151ef297b2ebdada91359815468a8d298a8b9",
       "updatedAt": "2026-11-08T04:57:38.552Z"
+    },
+    "main-character": {
+      "fileId": "1Alx708RPcBW4AP4rkHq3LqvLr4at9aVP",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1Alx708RPcBW4AP4rkHq3LqvLr4at9aVP",
+      "webViewUrl": "https://drive.google.com/file/d/1Alx708RPcBW4AP4rkHq3LqvLr4at9aVP/view",
+      "sizeBytes": 14092,
+      "sha256": "264269a24ac64deff5c1500dbb3cfdb0ec83ef02bfc97419d4556c94e2715ab2",
+      "updatedAt": "2026-11-08T13:12:23.225Z"
+    },
+    "outfit-drop": {
+      "fileId": "1oR1wOzcFxz8v5WhilU1rx4nexuyie6wn",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1oR1wOzcFxz8v5WhilU1rx4nexuyie6wn",
+      "webViewUrl": "https://drive.google.com/file/d/1oR1wOzcFxz8v5WhilU1rx4nexuyie6wn/view",
+      "sizeBytes": 10151,
+      "sha256": "518eacc2dfba6a937baf2a4b2b139fa3742609632326972b0f87e60a6cd62108",
+      "updatedAt": "2026-11-08T13:13:09.337Z"
+    },
+    "bag-slots": {
+      "fileId": "1dPGIHSDhcuOndvnwGHSQHl8YUPRrL6_J",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1dPGIHSDhcuOndvnwGHSQHl8YUPRrL6_J",
+      "webViewUrl": "https://drive.google.com/file/d/1dPGIHSDhcuOndvnwGHSQHl8YUPRrL6_J/view",
+      "sizeBytes": 12608,
+      "sha256": "9aa268ecb8ac43afc3ca9e097afc51c21b99abf766c252e8c4f3600da7ff4321",
+      "updatedAt": "2026-11-08T13:13:43.439Z"
+    },
+    "future-fashion": {
+      "fileId": "13yE77wgDiump60sbEnZP6C4HE_OZMQOw",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=13yE77wgDiump60sbEnZP6C4HE_OZMQOw",
+      "webViewUrl": "https://drive.google.com/file/d/13yE77wgDiump60sbEnZP6C4HE_OZMQOw/view",
+      "sizeBytes": 24866,
+      "sha256": "15b346124661235f6b1059751a2078e24cf1e20638f4bfaa48ccaee6d06d1315",
+      "updatedAt": "2026-11-08T13:30:24.010Z"
+    },
+    "card-stack": {
+      "fileId": "1_bpvI1SZvNVMIh7M3VVkmSyoS8AZX4mJ",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1_bpvI1SZvNVMIh7M3VVkmSyoS8AZX4mJ",
+      "webViewUrl": "https://drive.google.com/file/d/1_bpvI1SZvNVMIh7M3VVkmSyoS8AZX4mJ/view",
+      "sizeBytes": 15564,
+      "sha256": "522b66cc8feebe84b624b77c2812a12852ceb0fd7e296da9e046aee20dffc323",
+      "updatedAt": "2026-11-08T13:31:21.448Z"
+    },
+    "work-ribbon": {
+      "fileId": "166uj46MrF4o8NHRPPMQF6cdmipWg9Jh3",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=166uj46MrF4o8NHRPPMQF6cdmipWg9Jh3",
+      "webViewUrl": "https://drive.google.com/file/d/166uj46MrF4o8NHRPPMQF6cdmipWg9Jh3/view",
+      "sizeBytes": 15548,
+      "sha256": "7d1fd30fc9895d716e7e3dd8a0cff8d3bed3a17774b406314dfa43cd3ac11ad5",
+      "updatedAt": "2026-11-08T13:32:35.701Z"
     }
   }
 }

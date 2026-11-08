@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t286: {
+    slug: 'virtual-fitting',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Virtual Fitting",
+        desc: "Giao diện web Virtual Fitting với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Ecommerce", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Virtual Fitting",
+        desc: "Bespoke Virtual Fitting web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Ecommerce", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Virtual Fitting",
+        desc: "单文件自包含 Virtual Fitting 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t285: {
+    slug: 'pink-rider',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Pink Rider",
+        desc: "Giao diện web Pink Rider với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Pink Rider",
+        desc: "Bespoke Pink Rider web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Pink Rider",
+        desc: "单文件自包含 Pink Rider 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t284: {
+    slug: 'design-collage',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Design Collage",
+        desc: "Giao diện web Design Collage với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Interactive", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Design Collage",
+        desc: "Bespoke Design Collage web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Interactive", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Design Collage",
+        desc: "单文件自包含 Design Collage 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t283: {
     slug: 'particle-brain',
     cat: 'commerce',

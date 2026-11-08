@@ -25,6 +25,9 @@ const PREVIEWS_DIR = join(WEB_ROOT, 'public', 'previews');
 const EXCLUDED_DIRS = new Set(['_design', 'design', 'docs', 'reviews', 'tools', 'free-sample']);
 
 const INLINE_PRODUCTS = new Set([
+  'design-collage',
+  'pink-rider',
+  'virtual-fitting',
   'particle-brain',
   'vasari-curved-archive',
   'leon-vasari',

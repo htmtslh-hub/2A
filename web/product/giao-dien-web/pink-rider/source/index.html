@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mina Hwang-Seo — Pink Rider</title>
+  <meta name="description" content="Hover to reveal the pink rider.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdeef3;
+      --bg-2: #fbe3eb;
+      --ink: #141114;
+      --muted: #7a6870;
+      --ghost: #d6c3ca;
+      --accent: #ff7fab;
+      --accent-ink: #ffffff;
+      --accent-text: #b8295c;
+      --accent-strong: #ff6a9c;
+      --on-accent: #ffffff;
+      --font-sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --gutter: clamp(16px, 2.4vw, 32px);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--accent-ink); }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--ink); color: #ffffff;
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    button:active, .links .cta:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: var(--gutter);
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--ink);
+      font-weight: 500; font-size: 15px; letter-spacing: -0.01em;
+    }
+    .brand-mark {
+      width: 34px; height: 34px; border-radius: 9px;
+      background: var(--accent); display: grid; place-items: center;
+    }
+    .brand-mark svg { width: 18px; height: 18px; }
+    .links {
+      display: flex; align-items: center; gap: clamp(14px, 2vw, 28px);
+    }
+    .links a {
+      color: var(--muted); text-decoration: none; font-size: 14px;
+      transition: color 0.2s var(--ease);
+    }
+    .links a:hover { color: var(--ink); }
+    .links .cta {
+      background: var(--accent); color: var(--accent-ink);
+      font-weight: 500; padding: 10px 18px; border-radius: 10px;
+      display: inline-flex; gap: 6px; align-items: center;
+      border: none; cursor: pointer; font-family: inherit; font-size: 14px;
+      transition: transform 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .links .cta:hover { color: #ffffff; background: var(--accent-strong); transform: translateY(-1px); }
+
+    .hero {
+      position: relative; height: 100vh; height: 100svh; min-height: 560px;
+      overflow: hidden; touch-action: pan-y; cursor: none;
+      background:
+        radial-gradient(60% 55% at 50% 45%, #fff6f9 0%, rgba(255, 246, 249, 0) 70%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    }
+
+    .marquees {
+      position: absolute; left: 0; right: 0; top: 50%;
+      transform: translateY(-58%); z-index: 1;
+      pointer-events: none; user-select: none;
+      display: flex; flex-direction: column; gap: clamp(4px, 1.2vw, 18px);
+    }
+    .row {
+      display: flex; width: max-content; white-space: nowrap; will-change: transform;
+    }
+    .row span {
+      font-size: clamp(54px, 9.6vw, 168px); line-height: 1;
+      letter-spacing: -0.035em; text-transform: uppercase; padding-right: 0.3em;
+    }
+    .row.ghost span { color: var(--ghost); font-weight: 400; }
+    .row.solid span { color: var(--ink); font-weight: 500; }
+    .row.ghost { animation: pin50SlideL 38s linear infinite; }
+    .row.solid { animation: pin50SlideR 32s linear infinite; }
+    @keyframes pin50SlideL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes pin50SlideR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+    .figure {
+      position: absolute; left: 50%; bottom: 0; z-index: 2;
+      height: min(94svh, 133vw); aspect-ratio: 3 / 4;
+      transform: translateX(-50%); pointer-events: none;
+    }
+    .figure canvas {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center bottom; display: block;
+      opacity: 0; transition: opacity 0.8s var(--ease);
+    }
+    .figure canvas.ready { opacity: 1; }
+
+    .cursor {
+      position: fixed; left: 0; top: 0; z-index: 30;
+      pointer-events: none; width: 14px; height: 14px;
+      margin: -7px 0 0 -7px; border-radius: 50%;
+      background: var(--accent); opacity: 0;
+      transition: opacity 0.25s var(--ease), transform 0.2s var(--ease);
+    }
+    .hero:hover ~ .cursor, .cursor.on { opacity: 1; }
+
+    .hint {
+      position: absolute; left: var(--gutter); bottom: var(--gutter); z-index: 3;
+      font-size: 13px; color: var(--muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .hint i {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block;
+    }
+    .tag {
+      position: absolute; right: var(--gutter); bottom: var(--gutter); z-index: 3;
+      font-size: 12px; color: var(--ink);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      padding: 8px 12px; border-radius: 999px;
+      border: none; cursor: pointer; font-family: inherit;
+      transition: transform 0.2s var(--ease);
+    }
+
+    .pin50-sr-only {
+      position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+    }
+
+    @media (max-width: 900px) {
+      .marquees { transform: translateY(-60%); }
+    }
+    @media (max-width: 720px) {
+      .links a:not(.cta) { display: none; }
+      .links .cta { padding: 9px 14px; font-size: 13px; }
+      .brand { font-size: 14px; }
+      .brand-mark { width: 30px; height: 30px; border-radius: 8px; }
+      .hero { cursor: auto; }
+      .marquees { transform: translateY(-62%); }
+      .figure { height: auto; width: min(160%, 64svh); }
+      .tag { display: none; }
+      .hint {
+        left: 50%; transform: translateX(-50%); bottom: 18px;
+        background: rgba(255, 255, 255, 0.75); padding: 8px 12px;
+        border-radius: 999px; color: var(--ink); white-space: nowrap;
+      }
+    }
+    @media (hover: none) { .cursor { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="nav">
+    <a class="brand" href="#hero">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>
+        </svg>
+      </span>
+      <span>Mina Hwang-Seo</span>
+    </a>
+    <nav class="links" aria-label="Primary Navigation">
+      <a href="#hero">Rides</a>
+      <a href="#hero">Lookbooks</a>
+      <a href="#hero">Journal</a>
+      <button type="button" class="cta" id="suitUpBtn" data-next-preview="true">
+        <span>Say hi!</span>
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 11L11 3M5 3h6v6"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="hero" aria-label="Hover to reveal the pink rider">
+      <h1 class="pin50-sr-only">Mina Hwang-Seo — Pink Rider Interactive Lookbook</h1>
+      <div class="marquees" aria-hidden="true">
+        <div class="row ghost">
+          <span>Dream Ride Sparkle</span><span>Dream Ride Sparkle</span><span>Dream Ride Sparkle</span><span>Dream Ride Sparkle</span>
+        </div>
+        <div class="row solid">
+          <span>Ride Pretty Stay Bolder</span><span>Ride Pretty Stay Bolder</span><span>Ride Pretty Stay Bolder</span><span>Ride Pretty Stay Bolder</span>
+        </div>
+      </div>
+      <div class="figure" id="figure" role="img" aria-label="Korean rider in white ribbed top transforming into pink motorcycle helmet and racing jacket">
+        <canvas id="reveal" aria-hidden="true"></canvas>
+      </div>
+      <p class="hint"><i></i><span id="hintText">Move your cursor to suit up</span></p>
+      <button type="button" class="tag tabular-nums" id="motionToggleBtn" aria-pressed="false">Pink Rider · SS27</button>
+    </section>
+
+    <section class="pin50-sr-only" aria-label="Lookbook Specifications">
+      <article><h2>01 / Helmet Shell</h2><p class="tabular-nums">Glossy Baby-Pink Polycarbonate · Iridescent Visor</p></article>
+      <article><h2>02 / Racing Jacket</h2><p class="tabular-nums">SS27 Lambskin Leather · White Stripes &amp; Heart Patches</p></article>
+      <article><h2>03 / Brush Trail Engine</h2><p class="tabular-nums">1100 ms Stamp Lifetime · Multi-Lobe Composite Mask</p></article>
+      <article><h2>04 / Lookbook Edition</h2><p class="tabular-nums">Mina Hwang-Seo Archive · Seoul Studio</p></article>
+    </section>
+  </main>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <footer class="pin50-sr-only">
+    <span class="tabular-nums">© 2026 Mina Hwang-Seo · Pink Rider SS27</span>
+  </footer>
+
+  <script>
+    (function () {
+      var FRONT_URL = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261103_152350_4fd91a2b-94c2-4b86-834f-3b7f9a716d5b.png";
+      var BACK_URL = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261103_152354_98c21034-6558-4210-a810-8232cf9d2557.png";
+      var hero = document.getElementById("hero");
+      var figure = document.getElementById("figure");
+      var canvas = document.getElementById("reveal");
+      var ctx = canvas.getContext("2d");
+      var cursor = document.getElementById("cursor");
+      var hintText = document.getElementById("hintText");
+      var suitUpBtn = document.getElementById("suitUpBtn");
+      var motionBtn = document.getElementById("motionToggleBtn");
+
+      var mask = document.createElement("canvas");
+      var mctx = mask.getContext("2d");
+      var buf = document.createElement("canvas");
+      var bctx = buf.getContext("2d");
+
+      var touchMQ = window.matchMedia("(hover: none), (pointer: coarse)");
+      var coarse = false;
+      function syncTouch() {
+        coarse = touchMQ.matches;
+        if (hintText) {
+          hintText.textContent = coarse ? "Drag to suit up" : "Move your cursor to suit up";
+        }
+      }
+      syncTouch();
+      if (touchMQ.addEventListener) touchMQ.addEventListener("change", syncTouch);
+
+      var front = new Image();
+      front.crossOrigin = "anonymous";
+      var back = new Image();
+      back.crossOrigin = "anonymous";
+      var frontReady = false, backReady = false;
+
+      front.onload = function () {
+        frontReady = true;
+        canvas.classList.add("ready");
+      };
+      back.onload = function () {
+        backReady = true;
+      };
+      front.src = FRONT_URL;
+      back.src = BACK_URL;
+
+      var W = 400, H = 540, dpr = 1;
+      function resize() {
+        var r = figure.getBoundingClientRect();
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = Math.max(1, r.width);
+        H = Math.max(1, r.height);
+        var cw = Math.round(W * dpr);
+        var ch = Math.round(H * dpr);
+        canvas.width = mask.width = buf.width = cw;
+        canvas.height = mask.height = buf.height = ch;
+      }
+      resize();
+      window.addEventListener("resize", resize, { passive: true });
+
+      var LIFE = 1100;
+      var stamps = [];
+      var last = null;
+      var lastMove = 0;
+      var autoT = 0;
+      var lastAutoPt = null;
+      var motionPaused = false;
+
+      function addStamp(x, y, now) {
+        var base = Math.max(W, 260) * (coarse ? 0.15 : 0.12);
+        var n = 3 + Math.floor(Math.random() * 3);
+        var lobes = [];
+        for (var i = 0; i < n; i++) {
+          var ang = Math.random() * Math.PI * 2;
+          var dist = Math.random() * base * 0.45;
+          lobes.push({
+            dx: Math.cos(ang) * dist,
+            dy: Math.sin(ang) * dist,
+            r: base * (0.45 + Math.random() * 0.55)
+          });
+        }
+        stamps.push({ x: x, y: y, t: now, lobes: lobes });
+      }
+
+      function pointerTo(clientX, clientY, now) {
+        var r = figure.getBoundingClientRect();
+        var x = clientX - r.left;
+        var y = clientY - r.top;
+        if (last) {
+          var dx = x - last.x, dy = y - last.y;
+          var dist = Math.hypot(dx, dy);
+          var step = Math.max(W, 260) * 0.04;
+          var count = Math.min(40, Math.floor(dist / step));
+          for (var i = 1; i <= count; i++) {
+            var k = i / (count + 1);
+            addStamp(last.x + dx * k, last.y + dy * k, now);
+          }
+        }
+        addStamp(x, y, now);
+        last = { x: x, y: y };
+        lastMove = now;
+      }
+
+      hero.addEventListener("pointermove", function (e) {
+        var now = performance.now();
+        pointerTo(e.clientX, e.clientY, now);
+        cursor.style.transform = "translate3d(" + e.clientX + "px, " + e.clientY + "px, 0)";
+        cursor.classList.add("on");
+      });
+      hero.addEventListener("pointerleave", function () {
+        last = null;
+        cursor.classList.remove("on");
+      });
+      hero.addEventListener("pointerdown", function (e) {
+        pointerTo(e.clientX, e.clientY, performance.now());
+      });
+
+      if (suitUpBtn) {
+        suitUpBtn.addEventListener("click", function () {
+          var now = performance.now();
+          for (var i = 0; i < 9; i++) {
+            var k = i / 8;
+            addStamp(W * (0.35 + Math.sin(k * Math.PI) * 0.3), H * (0.22 + k * 0.52), now);
+          }
+        });
+      }
+
+      if (motionBtn) {
+        motionBtn.addEventListener("click", function () {
+          motionPaused = !motionPaused;
+          document.documentElement.setAttribute("data-motion", motionPaused ? "paused" : "on");
+          motionBtn.setAttribute("aria-pressed", String(motionPaused));
+        });
+      }
+
+      function drawCover(c, img) {
+        var cw = canvas.width, ch = canvas.height;
+        var iw = img.naturalWidth || 1536, ih = img.naturalHeight || 2048;
+        var scale = Math.max(cw / iw, ch / ih);
+        var dw = iw * scale, dh = ih * scale;
+        var dx = (cw - dw) * 0.5;
+        var dy = ch - dh;
+        c.drawImage(img, dx, dy, dw, dh);
+      }
+
+      function tick(now) {
+        if (!motionPaused && (coarse || now - lastMove > 1400)) {
+          autoT += 0.024;
+          var ax = W * (0.5 + Math.sin(autoT * 1.3) * 0.24);
+          var ay = H * (0.36 + Math.sin(autoT * 0.9 + 1) * 0.22);
+          if (!lastAutoPt || Math.hypot(ax - lastAutoPt.x, ay - lastAutoPt.y) > W * 0.02) {
+            addStamp(ax, ay, now);
+            lastAutoPt = { x: ax, y: ay };
+          }
+        }
+
+        while (stamps.length && now - stamps[0].t > LIFE) {
+          stamps.shift();
+        }
+
+        mctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        mctx.clearRect(0, 0, W, H);
+        mctx.fillStyle = "#000000";
+        for (var i = 0; i < stamps.length; i++) {
+          var s = stamps[i];
+          var age = now - s.t;
+          var k = Math.max(0, 1 - age / LIFE);
+          var sc = k < 0.75 ? k / 0.75 : 1;
+          var rPow = Math.pow(sc, 0.8);
+          for (var j = 0; j < s.lobes.length; j++) {
+            var l = s.lobes[j];
+            mctx.beginPath();
+            mctx.arc(s.x + l.dx * sc, s.y + l.dy * sc, l.r * rPow, 0, Math.PI * 2);
+            mctx.fill();
+          }
+        }
+
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.globalCompositeOperation = "source-over";
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (frontReady) {
+          drawCover(ctx, front);
+        }
+
+        if (stamps.length) {
+          ctx.globalCompositeOperation = "destination-out";
+          ctx.drawImage(mask, 0, 0);
+          ctx.globalCompositeOperation = "source-over";
+          if (backReady) {
+            bctx.setTransform(1, 0, 0, 1, 0, 0);
+            bctx.globalCompositeOperation = "source-over";
+            bctx.clearRect(0, 0, buf.width, buf.height);
+            bctx.drawImage(mask, 0, 0);
+            bctx.globalCompositeOperation = "source-in";
+            drawCover(bctx, back);
+            ctx.drawImage(buf, 0, 0);
+          }
+        }
+
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>

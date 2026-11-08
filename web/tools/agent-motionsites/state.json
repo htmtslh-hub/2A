@@ -1,6 +1,6 @@
 {
-  "lastRunDate": "2026-11-07",
-  "todayCopiedCount": 6,
+  "lastRunDate": "2026-11-08",
+  "todayCopiedCount": 3,
   "processedSlugs": [
     "404-planet",
     "_design",
@@ -55,6 +55,7 @@
     "cyberpunk-reveal",
     "datacore-booking",
     "design",
+    "design-collage",
     "designer-portfolio",
     "designpro",
     "diginest",
@@ -70,6 +71,7 @@
     "ecommerce-omorfia",
     "email-marketing",
     "ember-arcade",
+    "endas-nfts",
     "f1-racing-hub",
     "feathers-atlas",
     "fennec",
@@ -86,6 +88,7 @@
     "freight-axis",
     "fresh-reddy",
     "fun-404-page",
+    "futuristic-canvas",
     "galaxy-edge",
     "geospace-canvas",
     "glow-features",
@@ -103,6 +106,7 @@
     "innovation-lab",
     "intelligentx",
     "interactive-discovery",
+    "interface-conce",
     "iris",
     "jack-3d",
     "japan-sunrise-tours",
@@ -119,6 +123,7 @@
     "lawyer-justicia",
     "layla-astrology-wiki",
     "leaflit",
+    "leon-vasari",
     "lingoglass",
     "liquid-glass-cta",
     "looo-ai-magic",
@@ -126,6 +131,7 @@
     "luminex",
     "luminex-atelier",
     "lumora",
+    "maison-vell",
     "maldives-escape",
     "manganresto",
     "manufacturing-grid",
@@ -156,6 +162,7 @@
     "nexlayer",
     "nexora-automation",
     "nextsus-gamerlix",
+    "nike-atelier",
     "nike-hover",
     "nimbusos-footer",
     "no-code-waitlist",
@@ -169,7 +176,9 @@
     "orbis-nft",
     "orbit-academy",
     "organic-odyssey",
+    "particle-brain",
     "pinehaven",
+    "pink-rider",
     "place-saver",
     "playing-market-audio",
     "portal",
@@ -187,6 +196,7 @@
     "rayhan-aditya",
     "razer-mamba-pro",
     "reelmark",
+    "reload-creat",
     "retro-futurist",
     "reviews",
     "riverine-ai",
@@ -227,9 +237,11 @@
     "transform-data",
     "travel-journal",
     "tripg-ocean",
+    "try-the-look",
     "undefined",
     "usd-halo",
     "vanguard",
+    "vasari-curved-archive",
     "vaultra",
     "vaultshield",
     "vectrus-energy",
@@ -240,6 +252,7 @@
     "vex-ventures",
     "veyra",
     "viktor",
+    "virtual-fitting",
     "visual-hero",
     "vize-footer",
     "volt-hoodie",
@@ -397,7 +410,10 @@
     "vell-lookbook",
     "vhs-archive",
     "vasari-vhs-hero",
-    "nously-brain"
+    "nously-brain",
+    "design-collage",
+    "pink-rider",
+    "virtual-fitting"
   ],
   "history": [
     {
@@ -803,10 +819,28 @@
         "fun-404-page": "premium",
         "saas-value": "premium"
       }
+    },
+    {
+      "date": "2026-11-08",
+      "built": [
+        "design-collage",
+        "pink-rider",
+        "virtual-fitting"
+      ],
+      "catalogIds": [
+        "t284",
+        "t285",
+        "t286"
+      ],
+      "tiers": {
+        "design-collage": "free",
+        "pink-rider": "premium",
+        "virtual-fitting": "premium"
+      }
     }
   ],
-  "todayFreeCount": 2,
-  "todayPremiumCount": 4,
+  "todayFreeCount": 1,
+  "todayPremiumCount": 2,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -885,7 +919,10 @@
     "671a598b15d237479ee87fa4321d48d1e0394bf618a0329e1bd7a1f99f0ecf29",
     "290841aaf028b821eebcff51ef7fca9947566ea967b269ab51edfd499845358a",
     "65f0d73f34521a6a5c96a14d55ef88b60aeda0a67661aa1bd876ca7c33810470",
-    "a6c22889377337439e88083be916adadfdbbb8ee67ec379be3923eeb65394095"
+    "a6c22889377337439e88083be916adadfdbbb8ee67ec379be3923eeb65394095",
+    "1b21b9d6b294c95637e77e7b224f7b24e01a53a5384f1617c3a2c5d48c825c68",
+    "243fcc14eb3bc6109f4d4af818d08e99bcd1c8ca9647b257a26144d79baceea2",
+    "f5d7b18d5622bb9b61f422c217da2f1b7af5c42f789dce2c3708b530cb34dddb"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [

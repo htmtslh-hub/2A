@@ -904,6 +904,49 @@ try {
         }
         return;
       }
+      if (slug === 'design-collage') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(960, 380, { steps: 14 });
+          await page.mouse.move(480, 520, { steps: 14 });
+          await page.locator('#orrinCanvas').click({ position: { x: 420, y: 360 }, force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#orrinCanvas card' });
+        } else {
+          await page.locator('#scrollDownBtn').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#scrollDownBtn' });
+        }
+        return;
+      }
+      if (slug === 'pink-rider') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(580, 360, { steps: 16 });
+          await page.mouse.move(860, 520, { steps: 16 });
+          await page.mouse.move(720, 280, { steps: 16 });
+          await page.locator('#suitUpBtn').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#suitUpBtn' });
+        } else {
+          await page.mouse.move(640, 480, { steps: 16 });
+          await page.mouse.move(800, 360, { steps: 16 });
+          await page.locator('#suitUpBtn').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#suitUpBtn sweep' });
+        }
+        return;
+      }
+      if (slug === 'virtual-fitting') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(980, 420, { steps: 12 });
+          await page.locator('#nextBtn').click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#nextBtn' });
+        } else {
+          await page.locator('#nextBtn').click({ force: true });
+          await page.waitForTimeout(350);
+          await page.locator('.chip').first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#nextBtn + .chip' });
+        }
+        return;
+      }
       if (slug === 'particle-brain') {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (clickedCount === 0) {

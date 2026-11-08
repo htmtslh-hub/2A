@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" class="locked" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Orrin — Kinetic Art</title>
+  <meta name="description" content="Here's how the Orrin Motion Library is reshaping how web pages move, one frame at a time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --surface: #111113;
+      --ink: #ece8e1;
+      --mute: rgba(236, 232, 225, 0.55);
+      --accent: #ece8e1;
+      --accent-text: #ffffff;
+      --accent-strong: #c9c5be;
+      --on-accent: #0a0a0b;
+      --glass-bg: rgba(28, 28, 31, 0.62);
+      --border: rgba(236, 232, 225, 0.14);
+      --font-display: "Newsreader", Georgia, serif;
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+      --progress: 0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html {
+      font-size: clamp(8.5px, 0.625vw, 12px);
+      -webkit-font-smoothing: antialiased;
+      font-synthesis: none;
+      background: var(--bg);
+      color: var(--ink);
+      overflow-x: clip;
+    }
+    body {
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      background: var(--bg);
+      color: var(--ink);
+      touch-action: pan-y;
+      overscroll-behavior: none;
+      overflow-x: clip;
+    }
+    html.locked, html.locked body { overflow: hidden; }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid #fff; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .des41-track { height: 300lvh; position: relative; }
+    .des41-stage {
+      position: fixed; inset: 0; height: 100lvh; overflow: hidden;
+      background: radial-gradient(120% 90% at 50% 50%, #111113 0%, #0a0a0b 55%, #050506 100%);
+    }
+    .des41-stage.hot canvas.des41-gl { cursor: pointer; }
+    canvas.des41-gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+    .textH1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-variation-settings: "opsz" 72;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .textH2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-variation-settings: "opsz" 72;
+      font-size: clamp(3.2rem, 5.2vw, 6rem);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .textLabelS {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+    }
+    .blurredBg {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: var(--glass-bg);
+      border-radius: 1.2rem;
+      border: 1px solid var(--border);
+    }
+
+    .des41-introTitle {
+      position: absolute; left: 50%; top: 50%;
+      transform: translate3d(-50%, -50%, 0) scale(0.8);
+      display: flex; flex-direction: row; align-items: center; justify-content: center;
+      white-space: nowrap; font-size: clamp(4rem, 7vw, 8rem);
+      opacity: 0; pointer-events: none; z-index: 15; will-change: transform, opacity;
+    }
+    .des41-introTitle .line1, .des41-introTitle .line2 {
+      display: inline-block; will-change: transform, opacity;
+    }
+
+    .des41-breakoutWrap {
+      position: absolute; inset: 0; width: 100%; height: 100lvh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      pointer-events: none; z-index: 20; will-change: transform;
+    }
+    .des41-breakout {
+      position: relative; top: -5%; width: min(90rem, 92%);
+      display: flex; flex-direction: column; align-items: center; gap: 3rem;
+      text-align: center; text-wrap: pretty; opacity: 0; transform: scale(0.8);
+      will-change: transform, opacity;
+    }
+    .des41-breakout__sub {
+      font-weight: 500; width: min(44rem, 90%); color: var(--ink);
+    }
+    .des41-breakout__text {
+      color: var(--ink);
+      text-shadow: 0 0 3rem rgba(10, 10, 11, 0.85);
+    }
+    .des41-breakoutBtn {
+      position: relative; z-index: 10; pointer-events: auto;
+      display: inline-flex; flex-direction: row; align-items: center; gap: 1rem;
+      padding: 1.5rem 2rem; margin-top: 3rem;
+      font-family: var(--font-sans); font-weight: 500; font-size: 1.4rem;
+      letter-spacing: -0.02em; color: var(--ink); background: transparent;
+      border: none; cursor: pointer; visibility: hidden;
+      transition: transform 0.35s var(--ease-out), opacity 0.35s var(--ease-out);
+    }
+    .des41-breakoutBtn__bg {
+      position: absolute; inset: 0; z-index: -1;
+      border-radius: 1.2rem; background: var(--glass-bg);
+      border: 1px solid var(--border);
+      transition: transform 0.8s var(--ease-out);
+    }
+    .des41-breakoutBtn:hover .des41-breakoutBtn__bg { transform: scale(1.16); }
+
+    .des41-logos { position: fixed; inset: 0; pointer-events: none; z-index: 999; }
+    .des41-logoCenter, .des41-logoLeft {
+      position: fixed; pointer-events: auto; background: none; border: none;
+      color: var(--ink); cursor: pointer; font-family: var(--font-display);
+      font-variation-settings: "opsz" 72; letter-spacing: -0.02em;
+      transition: opacity 0.8s var(--ease-out), transform 0.35s var(--ease-out);
+    }
+    .des41-logoCenter {
+      left: 50%; top: 50lvh;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .des41-logo__mark {
+      display: flex; align-items: center; justify-content: center;
+      width: 10rem; height: 4rem; font-size: 4.4rem;
+    }
+    .des41-logoLeft {
+      left: 2rem; top: 2rem; opacity: 0;
+    }
+    .des41-logoLeft .des41-logo__mark {
+      width: 7.4rem; height: 3rem; font-size: 3.3rem; justify-content: flex-start;
+    }
+    .des41-logos.showLeftLogo .des41-logoCenter { opacity: 0; pointer-events: none; }
+    .des41-logos.showLeftLogo .des41-logoLeft { opacity: 1; }
+
+    .des41-nav { position: fixed; inset: 0; z-index: 100; pointer-events: none; }
+    .des41-menuBtn {
+      position: fixed; top: 2rem; right: 2rem; width: 4rem; height: 4rem;
+      pointer-events: auto; border: none; background: transparent; cursor: pointer;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem;
+    }
+    .des41-menuBtn::before {
+      content: ""; position: absolute; inset: 0; border-radius: 1.2rem;
+      background: var(--ink); z-index: -1;
+      transition: transform 0.8s var(--ease-out), background-color 0.25s var(--ease-out);
+    }
+    .des41-menuBtn:hover::before { transform: scale(1.1); }
+    .des41-menuBtn:active::before { background: var(--accent-strong); }
+    .des41-menuBtn span {
+      display: block; width: 36%; height: 1.5px; background: var(--bg);
+    }
+
+    .des41-dots {
+      position: fixed; right: 2rem; top: 50%; transform: translateY(-50%);
+      width: 4rem; height: 9rem; border-radius: 1rem;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem;
+      pointer-events: auto;
+    }
+    .des41-dot {
+      width: 0.5rem; height: 0.5rem; border-radius: 0.25rem;
+      background: rgba(236, 232, 225, 0.16); overflow: hidden; position: relative;
+    }
+    .des41-dot.is-active { height: 3rem; }
+    .des41-dot__fill {
+      position: absolute; inset: 0; background: var(--ink);
+      transform-origin: top center;
+      transform: scaleY(var(--progress));
+    }
+
+    .des41-creditsPopup {
+      position: fixed; right: 2rem; bottom: 2rem; z-index: 120;
+      display: flex; align-items: flex-start; gap: 1.8rem;
+      width: min(35.4rem, calc(100% - 3rem));
+      padding: 1.6rem 3.4rem 1.6rem 1.6rem;
+      opacity: 0; transform: scale(0.9); transform-origin: bottom right;
+      pointer-events: none;
+      transition: opacity 0.45s var(--ease-out), transform 0.65s var(--ease-out);
+    }
+    .des41-creditsPopup.active {
+      opacity: 1; transform: scale(1); pointer-events: auto;
+    }
+    .des41-creditsPopup--tutorial {
+      width: auto; padding: 1.8rem 3.2rem 1.8rem 2rem;
+    }
+    .des41-creditsClose {
+      position: absolute; top: 1.4rem; right: 1.4rem;
+      width: 2.2rem; height: 2.2rem; border: none; background: transparent;
+      color: var(--ink); cursor: pointer; display: grid; place-items: center;
+    }
+    .des41-creditsThumb {
+      width: 5.2rem; height: 5.2rem; border-radius: 0.6rem;
+      overflow: hidden; flex-shrink: 0; background: #050506; border: 1px solid var(--border);
+    }
+    .des41-creditsThumb video {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .des41-creditsBody {
+      font-size: 1.3rem; line-height: 1.35; color: var(--ink);
+    }
+    .des41-creditsBody strong { display: block; font-weight: 500; font-size: 1.4rem; }
+    .des41-creditsBody .cat { color: var(--mute); margin-top: 0.2rem; display: block; }
+    .des41-creditsBody .desc { color: var(--mute); margin-top: 0.9rem; display: block; }
+    .des41-creditsBody a { color: var(--ink); text-decoration: underline; }
+
+    .des41-sr-sections {
+      position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0);
+    }
+
+    @media (max-width: 900px) {
+      html { font-size: 11px; }
+      .des41-introTitle { flex-direction: column; font-size: 4rem; }
+      .des41-breakout { width: min(30rem, 90%); gap: 2rem; }
+      .des41-breakout__sub { width: 18rem; }
+      .des41-breakout__text { font-size: 2.8rem; line-height: 1.05; }
+      .des41-menuBtn { right: 1rem; }
+      .des41-dots { right: 1rem; top: 45%; width: 2.4rem; height: 7rem; }
+      .des41-creditsPopup { left: 1.5rem; right: 1.5rem; bottom: 2.4rem; width: auto; transform-origin: bottom center; }
+    }
+    @media (max-width: 600px) {
+      html { font-size: 10px; }
+      .des41-logo__mark { width: 6rem; height: 2.4rem; font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="des41-logos" id="logoHeader">
+    <button type="button" class="des41-logoCenter" id="logoCenterBtn" aria-label="Orrin Home">
+      <span class="des41-logo__mark">Orrin</span>
+    </button>
+    <button type="button" class="des41-logoLeft" id="logoLeftBtn" aria-label="Scroll to top">
+      <span class="des41-logo__mark">Orrin</span>
+    </button>
+    <nav class="des41-nav" aria-label="Orrin Gallery Controls">
+      <button type="button" class="des41-menuBtn" id="motionToggleBtn" aria-label="Toggle motion playback" aria-pressed="false">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="des41-dots blurredBg" role="navigation" aria-label="Scroll progress">
+        <div class="des41-dot is-active"><div class="des41-dot__fill" id="navDotFill"></div></div>
+        <div class="des41-dot"></div>
+        <div class="des41-dot"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="des41-track">
+    <section class="des41-stage" id="heroStage" aria-label="Orrin Kinetic Art 3D Video Collage">
+      <canvas class="des41-gl" id="orrinCanvas" aria-label="Interactive 3D video collage"></canvas>
+
+      <h1 class="des41-introTitle textH1" id="introTitle">
+        <span class="line1" id="introLine1">Kinetic</span><span class="line2" id="introLine2">Art</span>
+      </h1>
+
+      <div class="des41-breakoutWrap" id="breakoutWrap">
+        <div class="des41-breakout" id="breakoutBox">
+          <p class="des41-breakout__sub textLabelS">Hundreds of Designs, Rendered in Living Motion</p>
+          <h2 class="des41-breakout__text textH2">Here's how the Orrin Motion Library is reshaping how web pages move, one frame at a time.</h2>
+        </div>
+        <button type="button" class="des41-breakoutBtn" id="scrollDownBtn" data-next-preview="true">
+          <span class="des41-breakoutBtn__bg"></span>
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+            <path d="M7.5 1.5v12M2.5 8.5l5 5 5-5"/>
+          </svg>
+          <span>Scroll down</span>
+        </button>
+      </div>
+
+      <aside class="des41-creditsPopup des41-creditsPopup--tutorial blurredBg" id="creditsPopup" aria-live="polite">
+        <p class="textLabelS" id="tutorialText" style="color:var(--mute);">Click on any design to learn more.</p>
+      </aside>
+    </section>
+
+    <section class="des41-sr-sections" aria-label="Orrin Library Highlights">
+      <article><h3>Card Stack — Portfolio</h3><p class="tabular-nums">01 / 16 Live WebGL Showcase</p></article>
+      <article><h3>Flower Valley — 3D</h3><p class="tabular-nums">02 / 16 Interactive Scene</p></article>
+      <article><h3>Robot Jellyfish — 3D</h3><p class="tabular-nums">03 / 16 Field Simulator</p></article>
+      <article><h3>Runway Lookbook — Interactive</h3><p class="tabular-nums">09 / 16 Depth Lookbook</p></article>
+    </section>
+  </main>
+
+  <footer class="des41-sr-sections">
+    <span class="tabular-nums">Orrin Motion Library — 150 Kinetic Video Plates · 60 FPS</span>
+  </footer>
+
+  <script>
+    (function () {
+      var CLIPS = [
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/card-stack-hero.mp4", title: "Card Stack", cat: "Portfolio", id: "card-stack" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/fernhollow.mp4", title: "Flower Valley", cat: "3D", id: "fernhollow" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/medusa-jellyfish-hero.mp4", title: "Robot Jellyfish", cat: "3D", id: "medusa-jellyfish-hero" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/halftone-recap.mp4", title: "Year Recap", cat: "Portfolio", id: "" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/lumen-roof-hero.mp4", title: "Solar Fog", cat: "Interactive", id: "lumen-roof-hero" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/living-portrait-hero.mp4", title: "Living Portrait", cat: "Portfolio", id: "living-portrait-hero" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/wyrmfall.mp4", title: "Dragon Knight", cat: "3D", id: "" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/found-spider.mp4", title: "Spider Web", cat: "Interactive", id: "found-spider" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vell-lookbook.mp4", title: "Runway Lookbook", cat: "Interactive", id: "vell-lookbook" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nously-brain.mp4", title: "Particle Brain", cat: "3D", id: "" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vante-ribbon-hero.mp4", title: "Video Ribbon", cat: "Portfolio", id: "vante-ribbon-hero" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/mossline-hero.mp4", title: "Moss Island", cat: "SaaS", id: "moss-island" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/orbe-future-mode.mp4", title: "Future Fashion", cat: "Fashion", id: "future-fashion" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/driftlab-hero.mp4", title: "Jellyfish Scroll", cat: "Interactive", id: "driftlab-hero" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/aurelis-infinite-gallery.mp4", title: "Infinite Gallery", cat: "Interactive", id: "" },
+        { url: "https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vhs-arc-hero.mp4", title: "VHS Archive", cat: "Portfolio", id: "vhs-archive" }
+      ];
+
+      function mulberry32(a) {
+        return function () {
+          var t = a += 0x6D2B79F5;
+          t = Math.imul(t ^ (t >>> 15), t | 1);
+          t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+
+      function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+      function lerp(a, b, k) { return a + (b - a) * k; }
+      function p2Out(x) { var u = clamp(x, 0, 1); return 1 - Math.pow(1 - u, 3); }
+      function p2InOut(x) { var u = clamp(x, 0, 1); return u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2; }
+      function p3InOut(x) { var u = clamp(x, 0, 1); return u < 0.5 ? 8 * u * u * u * u : 1 - Math.pow(-2 * u + 2, 4) / 2; }
+      function sineInOut(x) { var u = clamp(x, 0, 1); return -(Math.cos(Math.PI * u) - 1) / 2; }
+
+      var videos = CLIPS.map(function (c, i) {
+        var v = document.createElement("video");
+        v.crossOrigin = "anonymous";
+        v.muted = true;
+        v.loop = true;
+        v.playsInline = true;
+        v.setAttribute("playsinline", "");
+        v.setAttribute("muted", "");
+        v.preload = "auto";
+        v.src = c.url;
+        setTimeout(function () {
+          v.play().catch(function () {});
+        }, i * 60);
+        return v;
+      });
+
+      var canvas = document.getElementById("orrinCanvas");
+      var ctx = canvas.getContext("2d");
+      var stage = document.getElementById("heroStage");
+      var logoHeader = document.getElementById("logoHeader");
+      var logoCenterBtn = document.getElementById("logoCenterBtn");
+      var logoLeftBtn = document.getElementById("logoLeftBtn");
+      var introTitle = document.getElementById("introTitle");
+      var introLine1 = document.getElementById("introLine1");
+      var introLine2 = document.getElementById("introLine2");
+      var breakoutWrap = document.getElementById("breakoutWrap");
+      var breakoutBox = document.getElementById("breakoutBox");
+      var scrollDownBtn = document.getElementById("scrollDownBtn");
+      var creditsPopup = document.getElementById("creditsPopup");
+      var motionBtn = document.getElementById("motionToggleBtn");
+
+      var W = window.innerWidth, H = window.innerHeight, dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var isMobile = W < 900;
+      var cards = [];
+      var motionPaused = false;
+      var openedDesign = false;
+      var tutorialShown = false;
+
+      var params = new URLSearchParams(window.location.search);
+      var frozenT = params.has("t") ? parseFloat(params.get("t")) : null;
+
+      function buildCollage() {
+        isMobile = W < 900;
+        var rand = mulberry32(20261108);
+        var cols = 3, rows = isMobile ? 30 : 25, layers = 2;
+        var count = cols * rows * layers;
+        var xSp = isMobile ? 1.7 : 2.8;
+        var ySp = isMobile ? 1.5 : 1.3;
+        var zSp = 1.0;
+        var minSz = isMobile ? 0.5 : 0.7, maxSz = isMobile ? 0.8 : 1.0;
+        var width = (cols - 1) * xSp;
+        var gridHeight = (rows - 1) * ySp;
+        var G = -width / 2 - xSp / 2;
+
+        var clipOrder = [];
+        for (var c = 0; c < 16; c++) clipOrder.push(c);
+        for (var i = 15; i > 0; i--) {
+          var r = Math.floor(rand() * (i + 1));
+          var tmp = clipOrder[i]; clipOrder[i] = clipOrder[r]; clipOrder[r] = tmp;
+        }
+
+        var shuf = [];
+        for (var j = 0; j < count; j++) shuf.push(j);
+        for (var k = count - 1; k > 0; k--) {
+          var rk = Math.floor(rand() * (k + 1));
+          var tk = shuf[k]; shuf[k] = shuf[rk]; shuf[rk] = tk;
+        }
+        var shufRank = new Array(count);
+        for (var s = 0; s < count; s++) shufRank[shuf[s]] = s;
+
+        var mid = Math.floor(count / 2);
+        cards = [];
+        for (var idx = 0; idx < count; idx++) {
+          var col = idx % cols;
+          var row = Math.floor((idx % (cols * rows)) / cols);
+          var layer = Math.floor(idx / (cols * rows));
+          var gx = col * xSp + (row % 2 === 1 ? xSp / 2 : 0) + (layer % 2 === 1 ? xSp / 2 : 0) + G;
+          var gy = -row * ySp + (col % 2 === 1 ? ySp * 0.3 : 0) + (layer % 2 === 1 ? ySp / 2 : 0) + (isMobile ? 0.7 : 0);
+          var gz = -layer * zSp;
+
+          var At = mid - Math.abs(idx - mid);
+          var xe = idx / count;
+          var rx = isMobile ? Math.sin(2 * Math.PI * xe) * 0.35 : lerp(-1.5, 1.5, xe) + 0.5;
+          var ry = isMobile ? lerp(-1, 1, xe) + 0.05 : Math.sin(2 * Math.PI * xe) * 0.7;
+          var rz = gz * 0.01 - At * 0.005;
+
+          cards.push({
+            idx: idx,
+            clipIdx: clipOrder[idx % 16],
+            layer: layer,
+            gx: gx, gy: gy, gz: gz,
+            rx: rx, ry: ry, rz: rz,
+            holderScale: lerp(minSz, maxSz, rand()),
+            hoverScale: 1,
+            rollover: 0,
+            d1: -0.1 + At * 0.008 + 0.2,
+            d2: 2.1 + shufRank[idx] * 0.003,
+            gridHeight: gridHeight,
+            screenBox: null
+          });
+        }
+      }
+
+      function onResize() {
+        var prevMobile = isMobile;
+        W = window.innerWidth; H = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.round(W * dpr);
+        canvas.height = Math.round(H * dpr);
+        if (!cards.length || (W < 900) !== prevMobile) buildCollage();
+      }
+      onResize();
+      window.addEventListener("resize", onResize, { passive: true });
+
+      var camX = 0, camY = 0, velX = 0, velY = 0, targetCamX = 0, targetCamY = 0;
+      var pointerX = -9999, pointerY = -9999;
+      var hoveredCard = null;
+      var smoothScroll = 0, collageScroll = 0;
+
+      window.addEventListener("pointermove", function (e) {
+        pointerX = e.clientX;
+        pointerY = e.clientY;
+        if (!isMobile) {
+          targetCamX = lerp(-0.25, 0.25, e.clientX / Math.max(1, W));
+          targetCamY = lerp(0.25, -0.25, e.clientY / Math.max(1, H));
+        }
+      }, { passive: true });
+
+      function showCreditCard(clipIdx) {
+        var c = CLIPS[clipIdx];
+        if (!c) return;
+        openedDesign = true;
+        var linkHref = c.id ? ("https://motionsites.ai/?prompt=" + encodeURIComponent(c.id)) : "https://motionsites.ai/";
+        creditsPopup.classList.remove("des41-creditsPopup--tutorial");
+        creditsPopup.innerHTML =
+          '<button type="button" class="des41-creditsClose" id="closeCreditBtn" aria-label="Close credit card">' +
+            '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11"/></svg>' +
+          '</button>' +
+          '<a class="des41-creditsThumb" href="' + linkHref + '" target="_blank" rel="noopener noreferrer">' +
+            '<video src="' + c.url + '" autoplay loop muted playsinline></video>' +
+          '</a>' +
+          '<div class="des41-creditsBody">' +
+            '<strong>' + c.title + '</strong>' +
+            '<span class="cat">' + c.cat + ' · Orrin Motion Library</span>' +
+            '<span class="desc"><a href="' + linkHref + '" target="_blank" rel="noopener noreferrer">Open the prompt</a>, a live motion design, free to remix</span>' +
+          '</div>';
+        creditsPopup.classList.add("active");
+        var closeBtn = document.getElementById("closeCreditBtn");
+        if (closeBtn) {
+          closeBtn.addEventListener("click", function (ev) {
+            ev.stopPropagation();
+            creditsPopup.classList.remove("active");
+          });
+        }
+      }
+
+      canvas.addEventListener("click", function () {
+        if (hoveredCard) {
+          showCreditCard(hoveredCard.clipIdx);
+        } else if (cards.length) {
+          showCreditCard(cards[0].clipIdx);
+        }
+      });
+
+      scrollDownBtn.addEventListener("click", function () {
+        document.documentElement.classList.remove("locked");
+        window.scrollTo({ top: window.innerHeight * 0.85, behavior: "smooth" });
+        showCreditCard(0);
+      });
+
+      function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
+      logoCenterBtn.addEventListener("click", scrollToTop);
+      logoLeftBtn.addEventListener("click", scrollToTop);
+
+      motionBtn.addEventListener("click", function () {
+        motionPaused = !motionPaused;
+        document.documentElement.setAttribute("data-motion", motionPaused ? "paused" : "on");
+        motionBtn.setAttribute("aria-pressed", String(motionPaused));
+        videos.forEach(function (v) {
+          if (motionPaused) v.pause();
+          else v.play().catch(function () {});
+        });
+      });
+
+      var startClock = performance.now();
+      var lastFrame = startClock;
+
+      function render(now) {
+        var dt = Math.min(0.05, Math.max(0.001, (now - lastFrame) / 1000));
+        lastFrame = now;
+        var t = frozenT !== null ? frozenT : (now - startClock) / 1000;
+
+        if (t >= 4.5 && document.documentElement.classList.contains("locked")) {
+          document.documentElement.classList.remove("locked");
+        }
+        if (t >= 6.5 && !tutorialShown && !openedDesign) {
+          tutorialShown = true;
+          creditsPopup.classList.add("active");
+        }
+
+        // Intro DOM choreography
+        var logoProg = p2InOut(t / 1.5);
+        logoCenterBtn.style.transform = "translate3d(-50%, calc(-50% - " + (logoProg * 45).toFixed(2) + "vh), 0)";
+
+        var titleIn = p3InOut((t - 0.1) / 1.5);
+        var titleOut = t >= 2.2 ? (1 - p2InOut((t - 2.2) / 0.5)) : 1;
+        introTitle.style.opacity = (titleIn * titleOut).toFixed(3);
+        introTitle.style.transform = "translate3d(-50%, -50%, 0) scale(" + lerp(0.8, 1, titleIn).toFixed(3) + ")";
+        var splitProg = p2InOut(t / 1.5);
+        if (isMobile) {
+          introLine1.style.transform = "translate3d(0, " + (-30 * splitProg).toFixed(2) + "vh, 0)";
+          introLine2.style.transform = "translate3d(0, " + (28 * splitProg).toFixed(2) + "vh, 0)";
+        } else {
+          introLine1.style.transform = "translate3d(" + (-41 * splitProg).toFixed(2) + "vh, 0, 0)";
+          introLine2.style.transform = "translate3d(" + (50 * splitProg).toFixed(2) + "vh, 0, 0)";
+        }
+
+        if (t >= 3.5) {
+          var brkIn = p2Out((t - 3.5) / 1.5);
+          scrollDownBtn.style.visibility = "visible";
+          var maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+          var rawP = document.documentElement.classList.contains("locked") ? 0 : clamp(window.scrollY / maxScroll, 0, 1);
+          smoothScroll += (rawP - smoothScroll) * 0.1;
+          var ST = smoothScroll * 4.5;
+          var scrollFade = clamp(1 - ST, 0, 1);
+          breakoutBox.style.opacity = Math.min(brkIn, scrollFade).toFixed(3);
+          breakoutBox.style.transform = "scale(" + lerp(0.8, 1, brkIn).toFixed(3) + ")";
+          breakoutWrap.style.transform = "translate3d(0, " + (-clamp(ST, 0, 1) * 75).toFixed(2) + "vh, 0)";
+          document.documentElement.style.setProperty("--progress", smoothScroll.toFixed(3));
+          logoHeader.classList.toggle("showLeftLogo", window.scrollY > 50);
+        }
+
+        var ST2 = smoothScroll * 4.5;
+        var camZ = lerp(5, 4, p2Out(ST2 / 1.5));
+        var dimFactor = sineInOut((ST2 - 1) / 1.0);
+        var gridH = cards.length ? cards[0].gridHeight : 30;
+        var secProg = clamp((ST2 / 18.8) / 0.7, 0, 1) * gridH;
+        collageScroll += (secProg - collageScroll) * 0.3;
+
+        var effTargetX = t >= 4.5 ? targetCamX : 0;
+        var effTargetY = t >= 4.5 ? targetCamY : 0;
+        var ax = -100 * (camX - effTargetX) - 30 * velX;
+        var ay = -100 * (camY - effTargetY) - 30 * velY;
+        velX += ax * dt; velY += ay * dt;
+        camX += velX * dt; camY += velY * dt;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, W, H);
+
+        var fovRad = (45 * Math.PI) / 180;
+        var focal = (H * 0.5) / Math.tan(fovRad * 0.5);
+        var startX = isMobile ? 0 : 0.5;
+        var repelR = isMobile ? 0.46 : 1.0;
+        var ribScale = isMobile ? 0.4 : 0.5;
+        var dimThresh = isMobile ? 0.5 : 1.0;
+
+        var drawList = [];
+        for (var i = 0; i < cards.length; i++) {
+          var card = cards[i];
+          var k1 = p2InOut((t - card.d1) / 1.5);
+          var k2 = p2InOut((t - card.d2) / 2.0);
+          var introScale = lerp(lerp(0, ribScale, k1), 1, k2);
+          if (introScale < 0.01) continue;
+
+          var sx = card.gx;
+          var sy = card.gy + collageScroll;
+          var sz = card.gz;
+
+          var fx = sx - 0;
+          var fy = sy - (0.93 + collageScroll);
+          if (Math.abs(fx) < 0.1) fx = 0.1;
+          var flen = Math.hypot(fx, fy) || 1;
+          var rxRest = sx + (fx / flen) * repelR;
+          var ryRest = sy + (fy / flen) * repelR;
+
+          var px = lerp(lerp(startX, card.rx, k1), rxRest, k2);
+          var py = lerp(lerp(0, card.ry, k1), ryRest, k2);
+          var pz = lerp(lerp(0, card.rz, k1), sz, k2);
+
+          var relX = px - camX;
+          var relY = py - camY;
+          var relZ = camZ - pz;
+          if (relZ <= 0.2) continue;
+
+          var projScale = focal / relZ;
+          var screenX = W * 0.5 + relX * projScale;
+          var screenY = H * 0.5 - relY * projScale;
+
+          var isHit = (hoveredCard === card);
+          var targetHov = isHit ? 1.1 : 1.0;
+          card.hoverScale += (targetHov - card.hoverScale) * 0.18;
+          card.rollover += ((isHit ? 1 : 0) - card.rollover) * 0.22;
+
+          var totalScale = introScale * card.holderScale * card.hoverScale;
+          var cardW = projScale * totalScale;
+          var cardH = cardW * (10 / 16);
+
+          if (screenX + cardW < -40 || screenX - cardW > W + 40 || screenY + cardH < -40 || screenY - cardH > H + 40) {
+            card.screenBox = null;
+            continue;
+          }
+
+          card.screenBox = {
+            x: screenX - cardW * 0.5,
+            y: screenY - cardH * 0.5,
+            w: cardW,
+            h: cardH,
+            pz: pz,
+            dimmed: Math.abs(card.gx) <= dimThresh ? dimFactor : 0
+          };
+          drawList.push(card);
+        }
+
+        drawList.sort(function (a, b) {
+          if (a === hoveredCard) return 1;
+          if (b === hoveredCard) return -1;
+          return a.screenBox.pz - b.screenBox.pz;
+        });
+
+        var nextHover = null;
+        for (var d = 0; d < drawList.length; d++) {
+          var c = drawList[d];
+          var b = c.screenBox;
+          var depthFactor = clamp((b.pz - (-1.0)) / 0.5, 0, 1);
+
+          if (c.layer === 1 && depthFactor < 0.15) {
+            ctx.fillStyle = "rgba(18, 18, 22, 0.72)";
+            ctx.fillRect(b.x, b.y, b.w, b.h);
+          } else {
+            var vid = videos[c.clipIdx];
+            if (vid && vid.readyState >= 2) {
+              ctx.save();
+              var alpha = clamp(0.25 + depthFactor * 0.75, 0, 1) * (1 - b.dimmed * 0.45 * (1 - c.rollover));
+              ctx.globalAlpha = alpha;
+              ctx.drawImage(vid, b.x, b.y, b.w, b.h);
+              ctx.restore();
+            } else {
+              ctx.fillStyle = "rgba(32, 32, 38, 0.85)";
+              ctx.fillRect(b.x, b.y, b.w, b.h);
+            }
+          }
+
+          if (t >= 4.0 && c.layer === 0 && pointerX >= b.x && pointerX <= b.x + b.w && pointerY >= b.y && pointerY <= b.y + b.h) {
+            nextHover = c;
+          }
+        }
+        hoveredCard = nextHover;
+        stage.classList.toggle("hot", Boolean(hoveredCard));
+
+        if (!motionPaused) {
+          requestAnimationFrame(render);
+        }
+      }
+      requestAnimationFrame(render);
+    })();
+  </script>
+</body>
+</html>

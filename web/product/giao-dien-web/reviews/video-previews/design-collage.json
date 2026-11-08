@@ -1,0 +1,44 @@
+{
+  "id": "t284",
+  "slug": "design-collage",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T04:20:33.575Z",
+  "demo": "/demos/design-collage/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8728e512e94e",
+  "sha256": "8728e512e94e5c15d0a958939def916d961a4e29e4e690a0c5a6f1320e03c66d",
+  "demoHtmlSha256": "6ceb9c991e55c5c49785231735d4c61b960f781fd9fbe0d92c26847e5769241e",
+  "demoSha256": "41ecbb45328bd5448f0414fdfaaadbdef0d4a3bfb3c6d33fe91743c5a9bc8173",
+  "bytes": 948579,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 4.671,
+      "action": "click",
+      "selector": "#orrinCanvas card"
+    },
+    {
+      "seconds": 5.591,
+      "action": "click",
+      "selector": "#scrollDownBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\design-collage-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\design-collage-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\design-collage-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\design-collage-return.jpg"
+  ]
+}

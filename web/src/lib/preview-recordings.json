@@ -3064,5 +3064,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "design-collage": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "8728e512e94e",
+    "sha256": "8728e512e94e5c15d0a958939def916d961a4e29e4e690a0c5a6f1320e03c66d",
+    "demoHtmlSha256": "6ceb9c991e55c5c49785231735d4c61b960f781fd9fbe0d92c26847e5769241e",
+    "demoSha256": "41ecbb45328bd5448f0414fdfaaadbdef0d4a3bfb3c6d33fe91743c5a9bc8173",
+    "bytes": 948579,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "pink-rider": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "c28487cfd7ad",
+    "sha256": "c28487cfd7adecb1ffbba471e60957598730a4c7bd5cbbafaebbfbbaef00001b",
+    "demoHtmlSha256": "4f3cdd6b0d08d89b246073aaf83619c34441d20a7b5adc5a9f6bde4a6be2a6ef",
+    "demoSha256": "f013f2e6cbf7bb0a0c52e38b3ed2d5ddb5015dae40b26d02414b71e59bab6517",
+    "bytes": 528843,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "virtual-fitting": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "111bca9fdc1a",
+    "sha256": "111bca9fdc1a6c1495e1f12995a47d27e7d52981e5388599b9647911627056a4",
+    "demoHtmlSha256": "f4b6cd2c45b1811b5e4e376e132a48cafa2d089333702ff3838a1a2194f02f07",
+    "demoSha256": "51977a03899a807383c78d1bca28b9240554a13426b1910f01a8df51e237450d",
+    "bytes": 463598,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

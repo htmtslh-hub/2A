@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VirtualFit: Spatial Try-On</title>
+  <meta name="description" content="visionOS-style spatial virtual try-on arc with real-time garment scan reveal and interactive sizing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #e9e4dc;
+      --fg: #ffffff;
+      --ink: #111111;
+      --muted: rgba(30, 30, 32, 0.72);
+      --accent: #ffffff;
+      --accent-text: #111111;
+      --accent-strong: #f4f2ee;
+      --on-accent: #111111;
+      --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --sans: "Inter", system-ui, -apple-system, sans-serif;
+      --MH: min(78vh, 62vw);
+      --CW: clamp(138px, 14.8vw, 240px);
+      --room: url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261104_080623_c94c85a3-23d5-4a0c-afff-41be1b5b8191.png&w=2400&q=85");
+      --model: url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261104_080717_e02cb856-b812-4c9b-9b86-8a741c7f65eb.png&w=2688&q=85");
+      --garm: url("https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261104_080719_f5a4cca2-cf42-4957-ab3b-ddec34d2b71a.png&w=2048&q=85");
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      overflow: hidden;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+    }
+    button {
+      font: inherit; color: inherit; background: none; border: none; cursor: pointer;
+      transition: transform 0.25s var(--ease), opacity 0.25s var(--ease), background-color 0.25s var(--ease);
+    }
+    button:active { transform: scale(0.95) translateY(1px); }
+    button:focus-visible, a:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: #111111; color: #ffffff;
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    @media (pointer: fine) {
+      html, body, button { cursor: none; }
+    }
+
+    .room {
+      position: fixed; inset: -3%; z-index: 1;
+      background: var(--room) center / cover no-repeat;
+      filter: blur(2.5px) saturate(1.05);
+      transform: scale(1.08);
+      will-change: transform;
+    }
+    .room::after {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(70% 60% at 50% 45%, rgba(255, 252, 246, 0.10), rgba(40, 30, 20, 0.16));
+    }
+
+    .ghost {
+      position: fixed; left: 50%; top: calc(50% - var(--MH) * 0.42);
+      transform: translate(-50%, 0); z-index: 2;
+      font-weight: 900; font-size: calc(var(--MH) * 0.42);
+      line-height: 0.8; letter-spacing: -0.04em;
+      color: rgba(255, 255, 255, 0.30);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+      pointer-events: none; white-space: nowrap;
+    }
+    .ghost span { display: inline-block; will-change: transform; }
+
+    .glass {
+      background: linear-gradient(155deg, rgba(250, 248, 245, 0.30), rgba(150, 144, 136, 0.20) 48%, rgba(205, 200, 192, 0.24));
+      backdrop-filter: blur(22px) saturate(1.5);
+      -webkit-backdrop-filter: blur(22px) saturate(1.5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -1px 0 rgba(255, 255, 255, 0.12), 0 20px 50px -24px rgba(40, 30, 20, 0.45);
+    }
+
+    .tabs {
+      position: fixed; left: 50%; top: 4.2vh; transform: translateX(-50%);
+      z-index: 30; padding: 5px; border-radius: 999px;
+      display: flex; align-items: center; gap: 2px;
+    }
+    .tab-btn {
+      position: relative; z-index: 2; height: 38px; padding: 0 22px;
+      border-radius: 999px; font-weight: 500; font-size: 14px;
+      color: var(--muted); white-space: nowrap;
+    }
+    .tab-btn.is-active {
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.3);
+    }
+
+    .rail {
+      position: fixed; left: max(18px, 1.8vw); top: 50%; transform: translateY(-50%);
+      z-index: 30; padding: 8px; border-radius: 999px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .rail-btn {
+      width: 42px; height: 42px; border-radius: 50%;
+      display: grid; place-items: center; color: rgba(30, 30, 32, 0.8);
+    }
+    .rail-btn.is-active {
+      background: rgba(255, 255, 255, 0.9); color: #111111;
+    }
+    .rail-btn:hover:not(.is-active) {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .stage {
+      position: fixed; inset: 0; z-index: 10; touch-action: pan-y;
+    }
+    .arc {
+      position: absolute; left: 50%; top: 46%; width: 0; height: 0;
+    }
+    .card {
+      position: absolute; width: var(--CW); height: calc(var(--CW) * 1.42);
+      left: calc(var(--CW) * -0.5); top: calc(var(--CW) * -0.71);
+      border-radius: 22px; overflow: hidden; will-change: transform, opacity, filter;
+    }
+    .card .g {
+      position: absolute; left: 8%; right: 8%; top: 5%; height: 66%;
+      background-image: var(--garm);
+      background-size: 320% 212.5%;
+      background-repeat: no-repeat;
+      filter: drop-shadow(0 14px 14px rgba(40, 30, 20, 0.22));
+    }
+    .card .cname {
+      position: absolute; left: 12px; right: 12px; bottom: 17%;
+      text-align: center; font-weight: 500;
+      font-size: clamp(11px, calc(var(--CW) * 0.068), 16px);
+      color: #ffffff; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
+    }
+    .card .cprice {
+      position: absolute; left: 12px; right: 12px; bottom: 7%;
+      text-align: center; font-weight: 700;
+      font-size: clamp(13px, calc(var(--CW) * 0.095), 22px);
+      color: #ffffff; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
+    }
+    .card .sheen {
+      position: absolute; inset: -40%; pointer-events: none;
+      background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.5) 50%, transparent 60%);
+      transform: translateX(-120%);
+      transition: transform 0.85s var(--ease);
+    }
+    .card:hover .sheen { transform: translateX(120%); }
+
+    .model {
+      position: fixed; left: 50%; bottom: 0; transform: translateX(-50%);
+      height: var(--MH); aspect-ratio: 524 / 1360; z-index: 50;
+      pointer-events: none;
+    }
+    .m-layer {
+      position: absolute; inset: 0;
+      background-image: var(--model);
+      background-size: 513% 111.76%;
+      background-position-y: 100%;
+      background-repeat: no-repeat;
+    }
+    #mNext { clip-path: inset(0 0 100% 0); }
+    .grid-scan {
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(0deg, transparent 0 5px, rgba(255, 255, 255, 0.22) 5px 6px);
+      mix-blend-mode: screen;
+      clip-path: inset(0 0 100% 0);
+    }
+    .scan-line {
+      position: absolute; left: -14%; right: -14%; top: 0%; height: 2px;
+      background: linear-gradient(90deg, transparent, #ffffff 18%, #ffffff 82%, transparent);
+      box-shadow: 0 0 18px 4px rgba(255, 255, 255, 0.75), 0 0 60px 10px rgba(190, 225, 255, 0.45);
+      opacity: 0; transform: scaleX(0.2);
+    }
+    .scan-line::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 100%;
+      height: calc(var(--MH) * 0.12);
+      background: linear-gradient(to top, rgba(220, 238, 255, 0.32), transparent);
+    }
+
+    .arrow-btn {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      width: 46px; height: 46px; border-radius: 50%; z-index: 40;
+      display: grid; place-items: center; color: #222222;
+    }
+    .arrow-prev { left: calc(max(18px, 1.8vw) + 76px); }
+    .arrow-next { right: max(18px, 1.8vw); }
+
+    .buy {
+      position: fixed; left: 50%; bottom: 4.6vh; transform: translateX(-50%);
+      z-index: 60; width: min(640px, calc(100% - 32px));
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      padding: 12px 22px 12px 12px; border-radius: 24px;
+      color: #ffffff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+    }
+    .buy-left { display: flex; align-items: center; gap: 14px; }
+    .buy-thumb {
+      width: 64px; height: 64px; border-radius: 14px;
+      background: rgba(255, 255, 255, 0.3); position: relative; overflow: hidden; flex-shrink: 0;
+    }
+    .buy-thumb-in {
+      position: absolute; inset: 6px;
+      background-image: var(--garm);
+      background-size: 320% 212.5%;
+      background-repeat: no-repeat;
+    }
+    .ln { height: 1.2em; overflow: hidden; display: block; }
+    .buy-name { font-weight: 600; font-size: 16px; }
+    .buy-price { font-weight: 500; font-size: 14px; opacity: 0.9; margin-top: 2px; }
+    .buy-group { display: flex; flex-direction: column; gap: 6px; }
+    .buy-label { font-weight: 500; font-size: 12px; opacity: 0.85; }
+    .chips { display: flex; gap: 6px; }
+    .chip {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22); color: #ffffff;
+      font-size: 12px; font-weight: 600; display: grid; place-items: center;
+    }
+    .chip.is-active { background: #ffffff; color: #111111; }
+    .dots-row { display: flex; gap: 8px; align-items: center; }
+    .color-dot {
+      width: 18px; height: 18px; border-radius: 50%;
+    }
+    .color-dot.is-active {
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.95), 0 0 0 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .cur {
+      position: fixed; left: 0; top: 0; width: 58px; height: 58px;
+      margin: -29px 0 0 -29px; z-index: 100; pointer-events: none;
+      display: grid; place-items: center; will-change: transform;
+    }
+    .cur-ring {
+      position: absolute; inset: 0; border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.35);
+      transition: transform 0.5s var(--ease), background-color 0.4s var(--ease);
+    }
+    .cur-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: #ffffff;
+      transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+    }
+    .cur-txt {
+      position: absolute; font-weight: 700; font-size: 10px;
+      letter-spacing: 0.12em; opacity: 0; transform: scale(0.6);
+      transition: transform 0.45s var(--ease), opacity 0.45s var(--ease);
+    }
+    .cur.mode-try .cur-ring { transform: scale(1.45); background: rgba(255, 255, 255, 0.92); }
+    .cur.mode-try .cur-dot { opacity: 0; }
+    .cur.mode-try .cur-try { opacity: 1; transform: scale(1); color: #111111; }
+    .cur.mode-drag .cur-ring { transform: scale(1.2); }
+    .cur.mode-drag .cur-dot { opacity: 0; }
+    .cur.mode-drag .cur-drag { opacity: 1; transform: scale(1); color: #ffffff; }
+    .cur.mode-btn .cur-ring { transform: scale(0.6); }
+
+    .vir71-sr-only {
+      position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+    }
+
+    @media (max-width: 960px) {
+      :root { --CW: min(22vw, 180px); }
+    }
+    @media (max-width: 767px) {
+      :root { --MH: min(62vh, 128vw); --CW: min(30vw, 170px); }
+      .tab-btn { height: 32px; padding: 0 13px; font-size: 12px; }
+      .rail { left: 10px; top: auto; bottom: calc(4.6vh + 150px); transform: none; }
+      .rail-btn { width: 34px; height: 34px; }
+      .arrow-btn { display: none; }
+      .buy { flex-wrap: wrap; gap: 12px; padding: 12px 16px; }
+      .cur { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="room" id="roomBg" aria-hidden="true"></div>
+  <div class="ghost" id="ghostWord" aria-hidden="true">
+    <span>F</span><span>I</span><span>T</span>
+  </div>
+
+  <header>
+    <nav class="tabs glass" aria-label="Garment Categories">
+      <button type="button" class="tab-btn is-active" data-tab="0">Tops</button>
+      <button type="button" class="tab-btn" data-tab="1">Bottoms</button>
+      <button type="button" class="tab-btn" data-tab="2">Outerwear</button>
+      <button type="button" class="tab-btn" data-tab="3">Shoes</button>
+      <button type="button" class="tab-btn" data-tab="4">Accessories</button>
+    </nav>
+  </header>
+
+  <aside class="rail glass" aria-label="Spatial Try-On Tools">
+    <button type="button" class="rail-btn is-active" aria-label="Try-On Studio">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 3l5 4-3 4-2-1.5V21H8V9.5L6 11 3 7l5-4c1.2 1.4 2.5 2 4 2s2.8-.6 4-2z"/></svg>
+    </button>
+    <button type="button" class="rail-btn" aria-label="Shopping Bag">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+    </button>
+    <button type="button" class="rail-btn" aria-label="Look Schedule">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+    </button>
+    <button type="button" class="rail-btn" id="motionToggleBtn" aria-label="Toggle Motion" aria-pressed="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.8-3.6 5-5.5 8-5.5s6.2 1.9 8 5.5"/></svg>
+    </button>
+  </aside>
+
+  <main id="main-content">
+    <h1 class="vir71-sr-only">VirtualFit: Spatial Try-On Arc</h1>
+
+    <section class="stage" id="arcStage" aria-label="3D Garment Arc">
+      <div class="arc" id="arcContainer"></div>
+    </section>
+
+    <section class="model" id="modelStage" aria-label="Virtual Model Preview">
+      <div class="m-layer" id="mCur" style="background-position-x: 0.37%;"></div>
+      <div class="m-layer" id="mNext" style="background-position-x: 0.37%;"></div>
+      <div class="grid-scan" id="scanGrid"></div>
+      <div class="scan-line" id="scanLine"></div>
+    </section>
+
+    <button type="button" class="arrow-btn arrow-prev glass" id="prevBtn" aria-label="Previous Garment">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg>
+    </button>
+    <button type="button" class="arrow-btn arrow-next glass" id="nextBtn" data-next-preview="true" aria-label="Next Garment">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
+    </button>
+
+    <section class="buy glass" aria-label="Selected Garment Details">
+      <div class="buy-left">
+        <div class="buy-thumb">
+          <div class="buy-thumb-in" id="buyThumb" style="background-position: 1.14% 3.06%;"></div>
+        </div>
+        <div>
+          <span class="ln"><strong class="buy-name" id="buyName">Basic T-shirt</strong></span>
+          <span class="ln"><span class="buy-price tabular-nums" id="buyPrice">$45</span></span>
+        </div>
+      </div>
+
+      <div class="buy-group">
+        <span class="buy-label">Size</span>
+        <div class="chips" role="radiogroup" aria-label="Select Size">
+          <button type="button" class="chip">S</button>
+          <button type="button" class="chip is-active">M</button>
+          <button type="button" class="chip">L</button>
+          <button type="button" class="chip">XL</button>
+        </div>
+      </div>
+
+      <div class="buy-group">
+        <span class="ln"><span class="buy-label" id="buyColorLabel">Color · White</span></span>
+        <div class="dots-row" id="colorDots"></div>
+      </div>
+    </section>
+
+    <section class="vir71-sr-only" aria-label="Catalog Inventory">
+      <article><h2>Basic T-shirt</h2><p class="tabular-nums">$45 · 4 Colorways</p></article>
+      <article><h2>Basic Sweater</h2><p class="tabular-nums">$105 · 4 Colorways</p></article>
+      <article><h2>Linen Shirt</h2><p class="tabular-nums">$95 · 4 Colorways</p></article>
+      <article><h2>Grey Hoodie</h2><p class="tabular-nums">$110 · 4 Colorways</p></article>
+    </section>
+  </main>
+
+  <footer class="vir71-sr-only">
+    <span class="tabular-nums">VirtualFit Spatial Commerce · 5 Garments · 60 FPS</span>
+  </footer>
+
+  <div class="cur mode-drag" id="customCur" aria-hidden="true">
+    <div class="cur-ring"></div>
+    <div class="cur-dot"></div>
+    <span class="cur-txt cur-try">TRY ON</span>
+    <span class="cur-txt cur-drag">DRAG</span>
+  </div>
+
+  <script>
+    (function () {
+      var ITEMS = [
+        { n: "Basic T-shirt", p: 45,  g: [1.14, 3.06],  m: 0.37,  c: [["White", "#f4f2ee"], ["Ash", "#c9c7c2"], ["Charcoal", "#3b3c3f"], ["Navy", "#27324d"]] },
+        { n: "Basic Sweater", p: 105, g: [49.7, 1.39],  m: 25.0,  c: [["White", "#f6f4ef"], ["Oat", "#ddd3c2"], ["Sage", "#b9c2ae"], ["Black", "#1f1f21"]] },
+        { n: "Linen Shirt",   p: 95,  g: [98.2, 3.33],  m: 49.86, c: [["White", "#f7f6f1"], ["Sand", "#d9ccb4"], ["Sky", "#bcd0e2"], ["Olive", "#717556"]] },
+        { n: "Grey Hoodie",   p: 110, g: [1.14, 93.3],  m: 74.77, c: [["Heather", "#a9a9a8"], ["Bone", "#e6e1d6"], ["Forest", "#33463a"], ["Black", "#1f1f21"]] },
+        { n: "Ringer Tee",    p: 55,  g: [49.7, 95.3],  m: 99.35, c: [["White / Black", "#f4f2ee"], ["Cream / Navy", "#efe6d3"], ["Grey / Red", "#c9c7c2"], ["White / Green", "#e9efe8"]] }
+      ];
+
+      var arcContainer = document.getElementById("arcContainer");
+      var arcStage = document.getElementById("arcStage");
+      var roomBg = document.getElementById("roomBg");
+      var ghostWord = document.getElementById("ghostWord");
+      var ghostLetters = ghostWord.querySelectorAll("span");
+      var mCur = document.getElementById("mCur");
+      var mNext = document.getElementById("mNext");
+      var scanGrid = document.getElementById("scanGrid");
+      var scanLine = document.getElementById("scanLine");
+      var buyThumb = document.getElementById("buyThumb");
+      var buyName = document.getElementById("buyName");
+      var buyPrice = document.getElementById("buyPrice");
+      var buyColorLabel = document.getElementById("buyColorLabel");
+      var colorDots = document.getElementById("colorDots");
+      var customCur = document.getElementById("customCur");
+      var motionBtn = document.getElementById("motionToggleBtn");
+
+      var cardEls = [];
+      for (var i = 0; i < 10; i++) {
+        var it = ITEMS[i % 5];
+        var el = document.createElement("article");
+        el.className = "card glass";
+        el.setAttribute("data-card-idx", String(i));
+        el.innerHTML =
+          '<div class="g" style="background-position:' + it.g[0] + '% ' + it.g[1] + '%;"></div>' +
+          '<div class="cname">' + it.n + '</div>' +
+          '<div class="cprice tabular-nums">$' + it.p + '</div>' +
+          '<div class="sheen"></div>';
+        arcContainer.appendChild(el);
+        cardEls.push(el);
+      }
+
+      var pos = 0, target = 0, intro = 0;
+      var dragging = false, dragStartX = 0, dragStartPos = 0, lastDragX = 0, lastDragT = 0, flickVel = 0;
+      var sx = 0, sy = 0, targetSx = 0, targetSy = 0;
+      var curX = window.innerWidth * 0.5, curY = window.innerHeight * 0.5;
+      var targetCurX = curX, targetCurY = curY;
+      var activeOutfit = -1;
+      var motionPaused = false;
+
+      function mod(n, m) { return ((n % m) + m) % m; }
+
+      function updateBuyCard(idx) {
+        var it = ITEMS[idx];
+        buyName.textContent = it.n;
+        buyPrice.textContent = "$" + it.p;
+        buyThumb.style.backgroundPosition = it.g[0] + "% " + it.g[1] + "%";
+        buyColorLabel.textContent = "Color · " + it.c[0][0];
+        colorDots.innerHTML = "";
+        it.c.forEach(function (pair, cIdx) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.className = "color-dot" + (cIdx === 0 ? " is-active" : "");
+          b.style.background = pair[1];
+          b.setAttribute("aria-label", pair[0]);
+          b.addEventListener("click", function () {
+            colorDots.querySelectorAll(".color-dot").forEach(function (d) { d.classList.remove("is-active"); });
+            b.classList.add("is-active");
+            buyColorLabel.textContent = "Color · " + pair[0];
+          });
+          colorDots.appendChild(b);
+        });
+      }
+
+      function runTryOn(idx) {
+        activeOutfit = idx;
+        var it = ITEMS[idx];
+        updateBuyCard(idx);
+        mNext.style.backgroundPositionX = it.m + "%";
+
+        if (mNext.animate && !motionPaused) {
+          var a1 = mNext.animate(
+            [{ clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)" }],
+            { duration: 950, easing: "cubic-bezier(0.65, 0, 0.35, 1)", fill: "forwards" }
+          );
+          scanGrid.animate(
+            [{ clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", offset: 0.5 }, { clipPath: "inset(100% 0 0% 0)" }],
+            { duration: 1092, easing: "cubic-bezier(0.65, 0, 0.35, 1)" }
+          );
+          scanLine.animate(
+            [
+              { top: "0%", transform: "scaleX(0.2)", opacity: 0 },
+              { top: "6%", transform: "scaleX(1)", opacity: 1, offset: 0.08 },
+              { top: "94%", transform: "scaleX(1)", opacity: 1, offset: 0.92 },
+              { top: "100%", transform: "scaleX(0.2)", opacity: 0 }
+            ],
+            { duration: 950, easing: "cubic-bezier(0.65, 0, 0.35, 1)" }
+          );
+          a1.onfinish = function () {
+            mCur.style.backgroundPositionX = it.m + "%";
+          };
+        } else {
+          mCur.style.backgroundPositionX = it.m + "%";
+          mNext.style.clipPath = "inset(0 0 0% 0)";
+        }
+      }
+
+      runTryOn(0);
+
+      function xAt(a, W) {
+        var ratios = W <= 767 ? [0, 0.36, 0.5, 0.56, 0.6, 0.62] : [0, 0.215, 0.345, 0.432, 0.49, 0.52];
+        var i = Math.min(4, Math.floor(a));
+        var f = Math.min(1, Math.max(0, a - i));
+        return (ratios[i] + (ratios[i + 1] - ratios[i]) * f) * W;
+      }
+
+      arcStage.addEventListener("pointerdown", function (e) {
+        dragging = true;
+        dragStartX = lastDragX = e.clientX;
+        lastDragT = performance.now();
+        dragStartPos = pos;
+        flickVel = 0;
+      });
+
+      window.addEventListener("pointermove", function (e) {
+        targetCurX = e.clientX;
+        targetCurY = e.clientY;
+        targetSx = (e.clientX / Math.max(1, window.innerWidth)) - 0.5;
+        targetSy = (e.clientY / Math.max(1, window.innerHeight)) - 0.5;
+
+        var tEl = e.target;
+        if (tEl && tEl.closest && tEl.closest("button, .buy, .tabs, .rail")) {
+          customCur.className = "cur mode-btn";
+        } else if (tEl && tEl.closest && tEl.closest(".card")) {
+          customCur.className = "cur mode-try";
+        } else {
+          customCur.className = "cur mode-drag";
+        }
+
+        if (dragging) {
+          var stepW = Math.max(120, xAt(1, window.innerWidth));
+          pos = dragStartPos - (e.clientX - dragStartX) / stepW;
+          var now = performance.now();
+          var dt = Math.max(1, now - lastDragT);
+          flickVel = (e.clientX - lastDragX) / dt;
+          lastDragX = e.clientX;
+          lastDragT = now;
+        }
+      }, { passive: true });
+
+      window.addEventListener("pointerup", function (e) {
+        if (!dragging) return;
+        dragging = false;
+        if (Math.abs(e.clientX - dragStartX) < 6) {
+          var card = e.target && e.target.closest ? e.target.closest(".card") : null;
+          if (card) {
+            var cIdx = parseInt(card.getAttribute("data-card-idx") || "0", 10);
+            var u = mod(cIdx - pos + 5, 10) - 5;
+            target = Math.round(pos + u);
+            return;
+          }
+        }
+        target = Math.round(pos - flickVel * 3.2);
+      });
+
+      var lastWheel = 0;
+      window.addEventListener("wheel", function (e) {
+        var now = performance.now();
+        if (now - lastWheel < 260) return;
+        var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        if (Math.abs(d) > 20) {
+          target += d > 0 ? 1 : -1;
+          lastWheel = now;
+        }
+      }, { passive: true });
+
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") target += 1;
+        else if (e.key === "ArrowLeft") target -= 1;
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", function () { target -= 1; });
+      document.getElementById("nextBtn").addEventListener("click", function () { target += 1; });
+
+      document.querySelectorAll(".tab-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.remove("is-active"); });
+          btn.classList.add("is-active");
+          target += 5;
+        });
+      });
+
+      document.querySelectorAll(".chip").forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          document.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("is-active"); });
+          chip.classList.add("is-active");
+        });
+      });
+
+      motionBtn.addEventListener("click", function () {
+        motionPaused = !motionPaused;
+        document.documentElement.setAttribute("data-motion", motionPaused ? "paused" : "on");
+        motionBtn.setAttribute("aria-pressed", String(motionPaused));
+      });
+
+      function tick(now) {
+        var t = now / 1000;
+        intro = Math.min(1, intro + 0.012);
+        var ie = 1 - Math.pow(1 - intro, 3);
+
+        if (!dragging) {
+          pos += (target - pos) * 0.11;
+          if (Math.abs(target - pos) < 0.02) {
+            var nextIdx = mod(Math.round(target), 5);
+            if (nextIdx !== activeOutfit) {
+              runTryOn(nextIdx);
+            }
+          }
+        }
+
+        sx += (targetSx - sx) * 0.06;
+        sy += (targetSy - sy) * 0.06;
+        curX += (targetCurX - curX) * 0.22;
+        curY += (targetCurY - curY) * 0.22;
+        customCur.style.transform = "translate3d(" + curX.toFixed(1) + "px, " + curY.toFixed(1) + "px, 0)";
+
+        var W = window.innerWidth, H = window.innerHeight;
+        roomBg.style.transform = "translate3d(" + (-sx * 22).toFixed(1) + "px, " + (-sy * 14).toFixed(1) + "px, 0) scale(" + (1.08 - 0.03 * ie).toFixed(3) + ")";
+        ghostWord.style.transform = "translate(calc(-50% - " + (sx * 40).toFixed(1) + "px), " + (-sy * 16).toFixed(1) + "px)";
+        for (var g = 0; g < ghostLetters.length; g++) {
+          ghostLetters[g].style.transform = "translateY(" + ((1 - ie) * (60 + 30 * g)).toFixed(1) + "px)";
+        }
+
+        for (var i = 0; i < 10; i++) {
+          var u = mod(i - pos + 5, 10) - 5;
+          var a = Math.abs(u);
+          var sg = u < 0 ? -1 : (u > 0 ? 1 : 0);
+          var x = sg * xAt(a, W) * ie;
+          var s, z, op, ry, blurPx = 0;
+
+          if (a < 1) {
+            s = 0.55 + 0.45 * a;
+            z = -260 * (1 - a);
+            op = a;
+            ry = -sg * 16 * a;
+          } else {
+            s = 1 / (1 + 0.3 * Math.pow(a - 1, 1.15));
+            z = -110 * (a - 1);
+            ry = -sg * (16 + 9 * Math.min(2, a - 1));
+            blurPx = Math.max(0, a - 1.6) * 2.4;
+            op = a > 3.4 ? Math.max(0, 1 - (a - 3.4) / 0.8) : 1;
+          }
+
+          var bob = motionPaused ? 0 : Math.sin(t * 1.1 + i * 1.3) * H * 0.006 * Math.min(1, a);
+          var y = bob - (1 - s) * H * 0.04;
+          ry += sx * 10;
+          var finalOp = op * ie;
+          var el = cardEls[i];
+
+          if (finalOp < 0.01) {
+            el.style.visibility = "hidden";
+          } else {
+            el.style.visibility = "visible";
+            el.style.opacity = finalOp.toFixed(3);
+            el.style.zIndex = String(a < 1 ? 1 : Math.round(100 - 10 * a));
+            el.style.filter = blurPx > 0.05 ? ("blur(" + blurPx.toFixed(2) + "px)") : "none";
+            el.style.transform =
+              "translate3d(" + x.toFixed(1) + "px, " + y.toFixed(1) + "px, 0) " +
+              "perspective(1300px) translateZ(" + z.toFixed(1) + "px) " +
+              "rotateY(" + ry.toFixed(2) + "deg) rotateX(" + (-sy * 6).toFixed(2) + "deg) " +
+              "scale(" + (s * (0.6 + 0.4 * ie)).toFixed(3) + ")";
+          }
+        }
+
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>

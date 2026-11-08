@@ -1,0 +1,44 @@
+{
+  "id": "t286",
+  "slug": "virtual-fitting",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T04:21:43.630Z",
+  "demo": "/demos/virtual-fitting/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "111bca9fdc1a",
+  "sha256": "111bca9fdc1a6c1495e1f12995a47d27e7d52981e5388599b9647911627056a4",
+  "demoHtmlSha256": "f4b6cd2c45b1811b5e4e376e132a48cafa2d089333702ff3838a1a2194f02f07",
+  "demoSha256": "51977a03899a807383c78d1bca28b9240554a13426b1910f01a8df51e237450d",
+  "bytes": 463598,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.509,
+      "action": "click",
+      "selector": "#nextBtn"
+    },
+    {
+      "seconds": 5.182,
+      "action": "click",
+      "selector": "#nextBtn + .chip"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\virtual-fitting-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\virtual-fitting-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\virtual-fitting-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\virtual-fitting-return.jpg"
+  ]
+}

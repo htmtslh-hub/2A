@@ -263,10 +263,13 @@ export async function runFetchPipeline(options = {}) {
     allItems = await fetchMotionsitesPrompts({ includePremium: true });
   }
 
-  // Prioritize unused Free items (with pre-harvested prompt_text) first, then unused Premium items
+  // Prioritize newly updated Free items (with pre-harvested prompt_text) first, then remaining Free items, then newly updated Premium items, then remaining Premium items
+  const isUnused = (i) => i.status !== 'already_used_in_2A' && i.status !== 'built_in_2A';
   const sortedItems = [
-    ...allItems.filter(i => i.isFree && i.status !== 'already_used_in_2A' && i.status !== 'built_in_2A'),
-    ...allItems.filter(i => !i.isFree && i.status !== 'already_used_in_2A' && i.status !== 'built_in_2A')
+    ...allItems.filter(i => i.isFree && i.isNewlyAdded && isUnused(i)),
+    ...allItems.filter(i => i.isFree && !i.isNewlyAdded && isUnused(i)),
+    ...allItems.filter(i => !i.isFree && i.isNewlyAdded && isUnused(i)),
+    ...allItems.filter(i => !i.isFree && !i.isNewlyAdded && isUnused(i))
   ];
 
   const candidates = sortedItems.filter(item => {

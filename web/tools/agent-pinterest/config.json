@@ -1,5 +1,6 @@
 {
   "agentName": "pinterest-web-design-2a-agent",
+  "enabled": false,
   "version": "2.0.0",
   "scheduleTime": "09:00",
   "timezone": "Asia/Ho_Chi_Minh",

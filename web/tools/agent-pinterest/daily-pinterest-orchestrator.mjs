@@ -24,6 +24,10 @@ export function shutdownComputer(logFn = console.log) {
 }
 
 export async function runDailyPinterestOrchestrator(options = {}) {
+  if (config.enabled === false) {
+    console.log('[Pinterest Agent] Disabled by configuration (only MotionSites task remains active). Exiting.');
+    return { status: 'disabled' };
+  }
   const startTime = new Date();
   const dateStr = startTime.toLocaleDateString('sv-SE', { timeZone: config.timezone || 'Asia/Ho_Chi_Minh' });
   const logFile = resolve(logsDir, `run-${dateStr}.log`);

@@ -34,7 +34,17 @@ function buildStoreCorpus() {
   return { slugs, videos, docs };
 }
 
+const EXPLICIT_2A_MAP = {
+  'vasari-vhs-hero': 'leon-vasari',
+  'vhs-archive': 'vasari-curved-archive',
+  'vell-lookbook': 'maison-vell',
+  'outfit-carousel': 'try-the-look'
+};
+
 function checkIfUsedIn2A(item, promptText, store, processedPromptIds) {
+  if (EXPLICIT_2A_MAP[item.id] && store.slugs.has(EXPLICIT_2A_MAP[item.id])) {
+    return { used: true, matchedSlug: EXPLICIT_2A_MAP[item.id], reason: `explicit 2A mapping (${EXPLICIT_2A_MAP[item.id]})` };
+  }
   const idStripped = item.id.replace(/-(hero|landing|page|template|footer|features|cta|pricing|section)$/i, '');
   if (store.slugs.has(item.slug)) return { used: true, matchedSlug: item.slug, reason: 'exact slug match' };
   if (store.slugs.has(item.id)) return { used: true, matchedSlug: item.id, reason: 'exact id match' };
@@ -59,11 +69,13 @@ function checkIfUsedIn2A(item, promptText, store, processedPromptIds) {
       }
     }
 
-    // Distinctive human headline (>= 22 chars, letters/spaces/punctuation only, no HTML/CSS/SVG tokens)
+    // Distinctive human headline (>= 22 chars, letters/spaces/punctuation only, no HTML/CSS/SVG path tokens)
     const quotes = [...promptText.matchAll(/"([^"\n]{22,80})"/g)]
       .map(m => m[1].trim().toLowerCase())
       .filter(s =>
         /^[a-z0-9\s.,!?'"&—–-]+$/i.test(s) &&
+        !/^[mMlLhHvVcCsSqQtTaAzZ0-9\s.,-]+$/.test(s) &&
+        (s.match(/[a-z]{3,}/gi) || []).length >= 4 &&
         s.split(/\s+/).length >= 4 &&
         !/https?:|flex|grid|rounded|padding|border|font-|text-|bg-|rgba|linear-gradient|instrument serif|helvetica|plus jakarta|inter|dm sans|jetbrains|monospace|sans-serif|system-ui|blinkmacsystemfont|initial-scale|device-width|enter your email|all rights reserved|preserveaspectratio|get started|learn more|contact us|privacy policy|autoplay muted|open navigation|subscribe to our|start a conversation/i.test(s)
       );

@@ -3190,5 +3190,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "vasari-curved-archive": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "34f4a9feefd5",
+    "sha256": "34f4a9feefd5c48cc7481c5a9617d429d1a06533ef53d9eca3b6d4d672dfd3f5",
+    "demoHtmlSha256": "40e4096369179a50f75c85e0c07807e6e1634f9d6f0602df5a5d9ab8bcfd1010",
+    "demoSha256": "b394e2ca500d23fa2ca149cb628148f391846a41c95fac24c8d1588112b21e8e",
+    "bytes": 540411,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

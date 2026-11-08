@@ -904,21 +904,25 @@ try {
         }
         return;
       }
-      if (slug === 'leon-vasari') {
+      if (slug === 'leon-vasari' || slug === 'vasari-curved-archive') {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (clickedCount === 0) {
-          await page.mouse.move(920, 440, { steps: 10 });
-          await page.locator('#arrow-next').click({ force: true });
+          await page.mouse.move(920, 400, { steps: 10 });
+          await page.locator('#arc-arrow-next, #arrow-next').first().click({ force: true });
           await page.waitForTimeout(500);
-          await page.locator('[data-decade="1960"]').click({ force: true });
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#arrow-next + [data-decade="1960"]' });
+          if (slug === 'vasari-curved-archive') {
+            await page.locator('#timeline-hit').click({ position: { x: 260, y: 16 }, force: true });
+          } else {
+            await page.locator('[data-decade="1960"]').click({ force: true });
+          }
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#arrow-next + nav' });
         } else if (clickedCount === 1) {
-          await page.mouse.move(720, 440, { steps: 10 });
+          await page.mouse.move(720, 380, { steps: 10 });
           await page.waitForTimeout(400);
           await page.locator('#play-ring').click({ force: true });
           actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#play-ring openDetail' });
         } else {
-          await page.locator('#detail-close').click({ force: true });
+          await page.locator('#arc-detail-close, #detail-close').first().click({ force: true });
           actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#detail-close' });
         }
         return;

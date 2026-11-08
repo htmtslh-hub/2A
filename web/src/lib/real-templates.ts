@@ -46,6 +46,30 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t282: {
+    slug: 'vasari-curved-archive',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Leon Vasari Curved VHS Archive",
+        desc: "Lưu trữ điện ảnh băng từ VHS uốn vòng cung 3D của Leon Vasari (1955–1990): kệ băng lùi sâu theo đường cong không gian, chữ Kanji halftone khổng lồ 映画の記憶, thước dòng thời gian 1955–1990 và trang chi tiết phim loang mực SVG.",
+        tags: ["Curved 3D VHS Arc", "Halftone Kanji", "Interactive Timeline"]
+      },
+      en: {
+        name: "Leon Vasari Curved VHS Archive",
+        desc: "Curved 3D VHS film archive hero for director Leon Vasari featuring depth-receding arc geometry, giant halftone kanji (映画の記憶), an interactive 1955–1990 timeline ruler, and an ink-bleed SVG poster detail sheet.",
+        tags: ["Curved 3D VHS Arc", "Halftone Kanji", "Interactive Timeline"]
+      },
+      zh: {
+        name: "Leon Vasari 弧形 3D VHS 电影档案馆",
+        desc: "导演 Leon Vasari 弧形景深 3D VHS 录影带档案馆：向两侧弯曲退缩的立体书架、巨型半调网点汉字（映画の記憶）、1955–1990 交互时间轴与 SVG 水墨晕染详情页。",
+        tags: ["弧形 3D 录影带架", "半调网点汉字", "交互式时间轴"]
+      }
+    }
+  },
+
   t281: {
     slug: 'leon-vasari',
     cat: 'entertainment',

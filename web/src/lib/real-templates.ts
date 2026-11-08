@@ -46,6 +46,30 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t280: {
+    slug: 'try-the-look',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Try the Look — Nike 3D Runway",
+        desc: "Trải nghiệm sàn diễn thời trang 3D Nike Streetwear: vòng xoay 6 bộ trang phục toàn thân với vật lý lò xo 95Hz, lightbox phóng to FLIP đính ghim sản phẩm, bảng chọn size trực tiếp và giỏ đồ Styling Bag lưu trữ cục bộ.",
+        tags: ["3D Ring Carousel", "FLIP Lightbox Pins", "Interactive Styling Bag"]
+      },
+      en: {
+        name: "Try the Look — Nike 3D Runway",
+        desc: "Nike-branded 3D streetwear outfit runway featuring a 6-look depth ring carousel, custom Drag/View cursor, FLIP zoom lightbox with numbered pins, inline size pickers, and a local styling bag.",
+        tags: ["3D Ring Carousel", "FLIP Lightbox Pins", "Interactive Styling Bag"]
+      },
+      zh: {
+        name: "Try the Look — Nike 3D 秀场穿搭",
+        desc: "Nike 街头潮流 3D 环形秀场展示：六套全身造型景深转盘、Drag/View 动态光标、FLIP 缩放热点弹窗、内联尺码选择器与本地穿搭购物袋。",
+        tags: ["3D 环形转盘", "FLIP 缩放热点", "交互式穿搭袋"]
+      }
+    }
+  },
+
   t279: {
     slug: 'maison-vell',
     cat: 'commerce',

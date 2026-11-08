@@ -1,0 +1,49 @@
+{
+  "id": "t280",
+  "slug": "try-the-look",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T01:11:07.599Z",
+  "demo": "/demos/try-the-look/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b2897eedd62b",
+  "sha256": "b2897eedd62b14ef3d94c0fa631abd846fdba5c254d62f6f8db248447b427c06",
+  "demoHtmlSha256": "b4d900328f787b3ee85219b1c907f843820d2a49fa82eb2d2ce2ce808a17f170",
+  "demoSha256": "d322daae71eaf0069d6114ed1d4e511c6c646ff425bae79b76ae463b68f28a9d",
+  "bytes": 208332,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.679,
+      "action": "click",
+      "selector": "[data-rw-next]"
+    },
+    {
+      "seconds": 5.219,
+      "action": "click",
+      "selector": "[data-rw-add] + [data-rw-confirm]"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.064,
+      "action": "click",
+      "selector": ".rw__hero.is-on [data-rw-zoom]"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\try-the-look-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\try-the-look-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\try-the-look-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\try-the-look-return.jpg"
+  ]
+}

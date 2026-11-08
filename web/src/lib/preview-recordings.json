@@ -3162,5 +3162,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "try-the-look": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "b2897eedd62b",
+    "sha256": "b2897eedd62b14ef3d94c0fa631abd846fdba5c254d62f6f8db248447b427c06",
+    "demoHtmlSha256": "b4d900328f787b3ee85219b1c907f843820d2a49fa82eb2d2ce2ce808a17f170",
+    "demoSha256": "d322daae71eaf0069d6114ed1d4e511c6c646ff425bae79b76ae463b68f28a9d",
+    "bytes": 208332,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

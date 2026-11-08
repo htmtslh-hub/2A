@@ -857,6 +857,30 @@ try {
         await page.getByRole('button',{name,exact:true}).click();
         actions.push({seconds:(Date.now()-start)/1000,action:'click',selector:`button named ${name}`}); return;
       }
+      if (slug === 'maison-vell') {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (clickedCount === 0) {
+          await page.mouse.move(460, 480, { steps: 10 });
+          await page.mouse.down();
+          await page.mouse.move(820, 480, { steps: 18 });
+          await page.mouse.up();
+          const favBtn = page.locator('.rail .fav').first();
+          if (await favBtn.isVisible()) await favBtn.click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#stage drag + .rail .fav' });
+        } else if (clickedCount === 1) {
+          const addBtn = page.locator('.rail .add').first();
+          if (await addBtn.isVisible()) await addBtn.click({ force: true });
+          await page.keyboard.press('ArrowRight');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '.rail .add + ArrowRight' });
+        } else {
+          await page.mouse.move(520, 460, { steps: 8 });
+          await page.mouse.down();
+          await page.mouse.move(900, 460, { steps: 18 });
+          await page.mouse.up();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#stage runway advance' });
+        }
+        return;
+      }
       if (slug === 'clothing-rail-menswear' || slug === 'clothing-rail-dress-atelier') {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (clickedCount === 0) {
@@ -926,7 +950,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
+    if (['maison-vell', 'solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

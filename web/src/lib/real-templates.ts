@@ -46,6 +46,30 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t279: {
+    slug: 'maison-vell',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Maison Vell Runway Depth",
+        desc: "Lookbook sàn diễn thời trang cao cấp Maison Vell: 6 người mẫu xếp hàng theo chiều sâu không gian với 7 điểm dừng nội suy độ mờ/tỷ lệ, cột 12 sản phẩm cuộn đồng bộ vô tận và con trỏ vòng nhẫn biến thiên.",
+        tags: ["Runway Depth Lookbook", "SVG Sprite Cropping", "Synchronized Product Rail"]
+      },
+      en: {
+        name: "Maison Vell Runway Depth",
+        desc: "Full-viewport luxury fashion lookbook where six models recede into blurred depth along a 7-stop interpolation line, paired with a synchronized 12-piece looping product rail and rolling look counter.",
+        tags: ["Runway Depth Lookbook", "SVG Sprite Cropping", "Synchronized Product Rail"]
+      },
+      zh: {
+        name: "Maison Vell 秀场景深造型录",
+        desc: "Maison Vell 全屏高级时装秀场造型录：六位模特按七级景深插值队列延伸，搭配右侧 12 件单品无限循环同步滚动栏与动态翻转造型编号。",
+        tags: ["秀场景深队列", "SVG 精灵裁切", "同步商品滚轴"]
+      }
+    }
+  },
+
   t278: {
     slug: 'saas-value',
     cat: 'commerce',

@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-08T00:18:39.986Z",
+  "updatedAt": "2026-11-08T00:51:00.242Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2261,6 +2261,15 @@
       "sizeBytes": 10106,
       "sha256": "599cbf801dacfb909dad04123d1f931297a0cea7d2574676224134348459c3a5",
       "updatedAt": "2026-11-08T00:18:39.986Z"
+    },
+    "maison-vell": {
+      "fileId": "1aYrdp-cCB4xQHpPdh8CSrIo2Kw14LE5L",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1aYrdp-cCB4xQHpPdh8CSrIo2Kw14LE5L",
+      "webViewUrl": "https://drive.google.com/file/d/1aYrdp-cCB4xQHpPdh8CSrIo2Kw14LE5L/view",
+      "sizeBytes": 521143,
+      "sha256": "947954dce446a3ef206d8eea2b9c40e337bf7910d90244c5ceac2337d5737432",
+      "updatedAt": "2026-11-08T00:51:00.242Z"
     }
   }
 }

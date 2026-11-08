@@ -3148,5 +3148,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "maison-vell": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "dd0fd80574a1",
+    "sha256": "dd0fd80574a1124a65ea7a546db5f8d9276fae32e960ed905d839f9ab4cb1160",
+    "demoHtmlSha256": "28933b97eb425303e96ce9e88a6660904717c8fbf04b6e302b309517af88c5e5",
+    "demoSha256": "9282642471c1e20fc981b61b5fe9ad125fd2880a046e630227add82e23013dae",
+    "bytes": 454413,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

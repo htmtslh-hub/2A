@@ -109,7 +109,7 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
-    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com']);
+    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com','cdn.jsdelivr.net']);
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
@@ -944,6 +944,45 @@ try {
           await page.waitForTimeout(350);
           await page.locator('.chip').first().click({ force: true });
           actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#nextBtn + .chip' });
+        }
+        return;
+      }
+      if (['design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish'].includes(slug)) {
+        const clickedCount = actions.filter(a => a.action === 'click').length;
+        if (slug === 'design-collage') {
+          await page.mouse.move(clickedCount === 0 ? 520 : 880, 420, { steps: 12 });
+          const sel = clickedCount === 0 ? '.cta-btn' : '.nav-links a';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'pink-rider') {
+          const sel = clickedCount === 0 ? '.work' : '.cta';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'virtual-fitting') {
+          if (clickedCount === 0) {
+            await page.locator('.next').click({ force: true });
+            actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '.next' });
+          } else {
+            await page.locator('.enter').click({ force: true });
+            actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '.enter' });
+          }
+        } else if (slug === 'crystal-koi') {
+          await page.mouse.move(clickedCount === 0 ? 640 : 920, 460, { steps: 12 });
+          const sel = clickedCount === 0 ? '.btn--fill' : '.btn--ghost';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'moss-island') {
+          const sel = clickedCount === 0 ? '.talk-btn' : '.nav-link';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'robot-jellyfish') {
+          if (clickedCount === 0) {
+            await page.locator('#play').click({ force: true });
+            actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#play' });
+          } else {
+            await page.locator('#rail').click({ position: { x: 180, y: 11 }, force: true });
+            actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: '#rail' });
+          }
         }
         return;
       }

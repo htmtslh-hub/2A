@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t289: {
+    slug: 'robot-jellyfish',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Robot Jellyfish",
+        desc: "Giao diện web Robot Jellyfish với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Robot Jellyfish",
+        desc: "Bespoke Robot Jellyfish web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Robot Jellyfish",
+        desc: "单文件自包含 Robot Jellyfish 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t288: {
+    slug: 'moss-island',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Moss Island",
+        desc: "Giao diện web Moss Island với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Moss Island",
+        desc: "Bespoke Moss Island web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Moss Island",
+        desc: "单文件自包含 Moss Island 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t287: {
+    slug: 'crystal-koi',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Crystal Koi",
+        desc: "Giao diện web Crystal Koi với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Crystal Koi",
+        desc: "Bespoke Crystal Koi web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Crystal Koi",
+        desc: "单文件自包含 Crystal Koi 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t286: {
     slug: 'virtual-fitting',
     cat: 'commerce',

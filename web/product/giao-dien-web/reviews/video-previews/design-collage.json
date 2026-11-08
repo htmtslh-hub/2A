@@ -2,15 +2,15 @@
   "id": "t284",
   "slug": "design-collage",
   "browser": "153.0.8010.12",
-  "date": "2026-11-08T04:20:33.575Z",
+  "date": "2026-11-08T04:58:11.836Z",
   "demo": "/demos/design-collage/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "8728e512e94e",
-  "sha256": "8728e512e94e5c15d0a958939def916d961a4e29e4e690a0c5a6f1320e03c66d",
-  "demoHtmlSha256": "6ceb9c991e55c5c49785231735d4c61b960f781fd9fbe0d92c26847e5769241e",
-  "demoSha256": "41ecbb45328bd5448f0414fdfaaadbdef0d4a3bfb3c6d33fe91743c5a9bc8173",
-  "bytes": 948579,
+  "revision": "4d4fee8360f0",
+  "sha256": "4d4fee8360f09a7327adc61463566ba6b2ba298b33fbe5156c1b118ddabc2eea",
+  "demoHtmlSha256": "fca8f0adfb79be053e1abfc611a86a060a69ecc01cd070e045cb47c5b707cfe7",
+  "demoSha256": "730e1fe0f277939179c183561e7dae195bf7c9567e9105d5ee9d301511b8a5be",
+  "bytes": 994692,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -18,12 +18,12 @@
   "audio": false,
   "actions": [
     {
-      "seconds": 4.671,
+      "seconds": 3.735,
       "action": "click",
       "selector": "#orrinCanvas card"
     },
     {
-      "seconds": 5.591,
+      "seconds": 5.062,
       "action": "click",
       "selector": "#scrollDownBtn"
     },

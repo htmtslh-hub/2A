@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-08T03:02:36.258Z",
+  "updatedAt": "2026-11-08T04:57:38.552Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2198,6 +2198,51 @@
       "sizeBytes": 142323,
       "sha256": "7b9e16be11e61525bed2a10e739bc99ba10ccdb9b21e12bf78bd490d4d2efb8a",
       "updatedAt": "2026-11-08T03:02:36.257Z"
+    },
+    "design-collage": {
+      "fileId": "1j5ZPgMEpOa7cqmQNY-lfMnBTLKk-alyR",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1j5ZPgMEpOa7cqmQNY-lfMnBTLKk-alyR",
+      "webViewUrl": "https://drive.google.com/file/d/1j5ZPgMEpOa7cqmQNY-lfMnBTLKk-alyR/view",
+      "sizeBytes": 13776,
+      "sha256": "610f88b4302a9363903098e882c9a46ed7cf6855a57d01d4e1fade1b0d7482ef",
+      "updatedAt": "2026-11-08T04:48:27.090Z"
+    },
+    "virtual-fitting": {
+      "fileId": "1Enx0e8zwOQzWdhse5y0_BY_K03aA2XcK",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1Enx0e8zwOQzWdhse5y0_BY_K03aA2XcK",
+      "webViewUrl": "https://drive.google.com/file/d/1Enx0e8zwOQzWdhse5y0_BY_K03aA2XcK/view",
+      "sizeBytes": 12975,
+      "sha256": "a8ba526a347c32efa6ae49876e2504768d38c3e9c796ca99d3a24d398495b656",
+      "updatedAt": "2026-11-08T04:48:29.061Z"
+    },
+    "crystal-koi": {
+      "fileId": "1eMXAybqehAHOQlEYRwPGWI0_1rX37WHi",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1eMXAybqehAHOQlEYRwPGWI0_1rX37WHi",
+      "webViewUrl": "https://drive.google.com/file/d/1eMXAybqehAHOQlEYRwPGWI0_1rX37WHi/view",
+      "sizeBytes": 24419,
+      "sha256": "3b65ce6dae38447ee68a68b57a62d1537341a93f763616c4367d7bdd2efe144d",
+      "updatedAt": "2026-11-08T04:57:34.319Z"
+    },
+    "moss-island": {
+      "fileId": "1uZwS7OPWA5SGJ3or4Nh5uneJqJXjeGSF",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1uZwS7OPWA5SGJ3or4Nh5uneJqJXjeGSF",
+      "webViewUrl": "https://drive.google.com/file/d/1uZwS7OPWA5SGJ3or4Nh5uneJqJXjeGSF/view",
+      "sizeBytes": 16798,
+      "sha256": "f5dab9b29343925492c27c15d7ef7289d537b95d9c0ba7cad6009fecedc791e5",
+      "updatedAt": "2026-11-08T04:57:36.455Z"
+    },
+    "robot-jellyfish": {
+      "fileId": "1N-Jq678EndVooJqC0FnzfTkbb4qWutQu",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1N-Jq678EndVooJqC0FnzfTkbb4qWutQu",
+      "webViewUrl": "https://drive.google.com/file/d/1N-Jq678EndVooJqC0FnzfTkbb4qWutQu/view",
+      "sizeBytes": 23596,
+      "sha256": "2d3265c6b8f994f2c96a965db1b151ef297b2ebdada91359815468a8d298a8b9",
+      "updatedAt": "2026-11-08T04:57:38.552Z"
     }
   }
 }

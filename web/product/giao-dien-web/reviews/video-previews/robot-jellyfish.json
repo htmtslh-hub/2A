@@ -1,0 +1,44 @@
+{
+  "id": "t289",
+  "slug": "robot-jellyfish",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T04:59:37.780Z",
+  "demo": "/demos/robot-jellyfish/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "53387d9c955e",
+  "sha256": "53387d9c955e66f79af7a179c7b42607c24e11138c0d18fb8841b3d2442ddc07",
+  "demoHtmlSha256": "03c36fc80b59a01e272ec9c1825a92e76073c0d41066ef74c554d6f33ff30ece",
+  "demoSha256": "5f6151354a05311f9db802bd350c17890f20b1f2b63ef51f419f041ffa556bfc",
+  "bytes": 363988,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.93,
+      "action": "click",
+      "selector": "#play"
+    },
+    {
+      "seconds": 6.237,
+      "action": "click",
+      "selector": "#rail"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\robot-jellyfish-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\robot-jellyfish-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\robot-jellyfish-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\robot-jellyfish-return.jpg"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "t288",
+  "slug": "moss-island",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T04:59:14.638Z",
+  "demo": "/demos/moss-island/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4f3b9c6d0799",
+  "sha256": "4f3b9c6d07990b335312549cac25055d9e17d2ab056f5b0bc8401c0145e45bd4",
+  "demoHtmlSha256": "86dccafe9cc5fa0a5f11f5b16960130e17b067a225f67d209005b409c9ebe608",
+  "demoSha256": "ef8d5fbc881d51c0c5d5ad836ab82dd42c535cc5c43fc07a5650cd23f289a5e3",
+  "bytes": 855805,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.438,
+      "action": "click",
+      "selector": ".talk-btn"
+    },
+    {
+      "seconds": 4.815,
+      "action": "click",
+      "selector": ".nav-link"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\moss-island-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\moss-island-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\moss-island-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\moss-island-return.jpg"
+  ]
+}

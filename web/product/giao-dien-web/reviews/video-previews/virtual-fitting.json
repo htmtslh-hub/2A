@@ -2,15 +2,15 @@
   "id": "t286",
   "slug": "virtual-fitting",
   "browser": "153.0.8010.12",
-  "date": "2026-11-08T04:21:43.630Z",
+  "date": "2026-11-08T04:58:31.580Z",
   "demo": "/demos/virtual-fitting/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "111bca9fdc1a",
-  "sha256": "111bca9fdc1a6c1495e1f12995a47d27e7d52981e5388599b9647911627056a4",
-  "demoHtmlSha256": "f4b6cd2c45b1811b5e4e376e132a48cafa2d089333702ff3838a1a2194f02f07",
-  "demoSha256": "51977a03899a807383c78d1bca28b9240554a13426b1910f01a8df51e237450d",
-  "bytes": 463598,
+  "revision": "f3dc6f3e8b3a",
+  "sha256": "f3dc6f3e8b3aa546132d926e892a143ba407d55383562e1da03e38e2bb7549a4",
+  "demoHtmlSha256": "80f1a909e83138c0d682e2d8031b92c6a41d0d5c780da974017c9993999b64f9",
+  "demoSha256": "4c95ce47da46f2d5a2f25196d95f4be86c60c7fda0c78562aadc0d6abd201c90",
+  "bytes": 457776,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -18,12 +18,12 @@
   "audio": false,
   "actions": [
     {
-      "seconds": 3.509,
+      "seconds": 3.201,
       "action": "click",
       "selector": "#nextBtn"
     },
     {
-      "seconds": 5.182,
+      "seconds": 5.176,
       "action": "click",
       "selector": "#nextBtn + .chip"
     },

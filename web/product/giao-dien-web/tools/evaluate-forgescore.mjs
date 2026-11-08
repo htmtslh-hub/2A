@@ -25,6 +25,9 @@ const PREVIEWS_DIR = join(WEB_ROOT, 'public', 'previews');
 const EXCLUDED_DIRS = new Set(['_design', 'design', 'docs', 'reviews', 'tools', 'free-sample']);
 
 const INLINE_PRODUCTS = new Set([
+  'saas-value',
+  'fun-404-page',
+  'intelligentx',
   'guardnet-benefits',
   'axion-about',
   'wellness-balance',
@@ -78,7 +81,7 @@ const INLINE_PRODUCTS = new Set([
   'industrix-engineering', 'aquarium-animals',
   'flash-rocky-mountain', 'steary-spatial-cinema', 'swatch-luxury-chronograph',
   'digitwist-ai-builder', 'dot', 'email-marketing'
-, 'calfin-weather', 'cybr-brutalism', 'aurelia-biocyber', 'hush-futurist-bags', 'quiet-place-sanctuary', 'duolingo-styleguide', 'cross-border', 'subscription-agency', 'dotdna-cyber', 'polkacrypto-future', 'nexora-alex-portfolio', 'kata-ocado-portfolio', 'glitch-cyberwear', 'wellbeing-os', 'prosthetics-hero', 'retro-futurist', 'ozzies-pretzels', 'terrarium-deck-studio', 'foods-gourmet-bowl', 'visionglass-neo-ui', 'o2-moonish-cosmic', 'agentai-grid', 'porsche-caym', 'which-canvas', 'setting-stic', 'luminex-atelier-eab', 'contact-cybernetic', 'health-portal', 'impact-ventures', 'pumpit-grid', 'data-securit', 'laptop-computer', 'monolith-canvas-216', 'image-some', 'wanderful-hero', 'wellness-companion', 'nike-hover', 'helios-investments', 'rayhan-aditya', 'razer-mamba-pro', 'metaverse-cyber-webinar', 'looo-ai-magic', 'orbis-hello', 'organic-odyssey', 'nexacore-results', 'network-hero', 'portal', 'place-saver', 'sleek-futuri', 'this-canvas', 'professional-graphic', 'nugraha-jati', 'websi-atelier', 'travel-journal', 'celestial-renewal', 'ai-workflow-agents', 'f1-racing-hub', 'ai-workflow-hero', 'cyberpunk-reveal', 'clothing-rail-menswear', 'clothing-rail-dress-atelier', 'liquid-glass-cta', 'launchex-about', 'ai-image-generator-ui']);
+, 'calfin-weather', 'cybr-brutalism', 'aurelia-biocyber', 'hush-futurist-bags', 'quiet-place-sanctuary', 'duolingo-styleguide', 'cross-border', 'subscription-agency', 'dotdna-cyber', 'polkacrypto-future', 'nexora-alex-portfolio', 'kata-ocado-portfolio', 'glitch-cyberwear', 'wellbeing-os', 'prosthetics-hero', 'retro-futurist', 'ozzies-pretzels', 'terrarium-deck-studio', 'foods-gourmet-bowl', 'visionglass-neo-ui', 'o2-moonish-cosmic', 'agentai-grid', 'porsche-caym', 'which-canvas', 'setting-stic', 'luminex-atelier-eab', 'contact-cybernetic', 'health-portal', 'impact-ventures', 'pumpit-grid', 'data-securit', 'laptop-computer', 'monolith-canvas-216', 'image-some', 'wanderful-hero', 'wellness-companion', 'nike-hover', 'helios-investments', 'rayhan-aditya', 'razer-mamba-pro', 'metaverse-cyber-webinar', 'looo-ai-magic', 'orbis-hello', 'organic-odyssey', 'nexacore-results', 'network-hero', 'portal', 'place-saver', 'sleek-futuri', 'this-canvas', 'professional-graphic', 'nugraha-jati', 'websi-atelier', 'travel-journal', 'celestial-renewal', 'ai-workflow-agents', 'f1-racing-hub', 'ai-workflow-hero', 'cyberpunk-reveal', 'clothing-rail-menswear', 'clothing-rail-dress-atelier', 'liquid-glass-cta', 'launchex-about', 'ai-image-generator-ui', 'interface-conce', 'reload-creat', 'endas-nfts', 'futuristic-canvas', 'nike-atelier']);
 
 const STATIC_ZIP_LIMIT = 20480;       // 20 KiB (WEB-STATIC-1)
 const CRAFT_ZIP_LIMIT = 1048576;      // 1 MiB (WEB-CRAFT-2)

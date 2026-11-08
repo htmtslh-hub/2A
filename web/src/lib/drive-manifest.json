@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-06T13:39:26.087Z",
+  "updatedAt": "2026-11-08T00:18:39.986Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2162,6 +2162,105 @@
       "sizeBytes": 13096,
       "sha256": "da5137d20debf48b8e0705ee43e41e1e4602c197b99751763dd6b78d282c58a1",
       "updatedAt": "2026-11-06T13:39:26.087Z"
+    },
+    "liquid-glass-cta": {
+      "fileId": "1ad_15WxYcejnJQ_A2NyoCdMmf2-E7Ghh",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1ad_15WxYcejnJQ_A2NyoCdMmf2-E7Ghh",
+      "webViewUrl": "https://drive.google.com/file/d/1ad_15WxYcejnJQ_A2NyoCdMmf2-E7Ghh/view",
+      "sizeBytes": 10595,
+      "sha256": "8727c77ae44c02cd200d307eef68f58e30fbbeb644283e84a1dd09918d797eae",
+      "updatedAt": "2026-11-08T00:14:48.243Z"
+    },
+    "launchex-about": {
+      "fileId": "1HFnTQdfHhQYd_2BT_g6mHWghJ0Mzg9go",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1HFnTQdfHhQYd_2BT_g6mHWghJ0Mzg9go",
+      "webViewUrl": "https://drive.google.com/file/d/1HFnTQdfHhQYd_2BT_g6mHWghJ0Mzg9go/view",
+      "sizeBytes": 183806,
+      "sha256": "3ff5c5fd5aaa15af6179e1325acf8495f30ff079a85e33c19dfe13317d1b25c5",
+      "updatedAt": "2026-11-08T00:14:50.520Z"
+    },
+    "ai-image-generator-ui": {
+      "fileId": "1L73M900tbLM49vebk_dilvqeHz6svqdB",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1L73M900tbLM49vebk_dilvqeHz6svqdB",
+      "webViewUrl": "https://drive.google.com/file/d/1L73M900tbLM49vebk_dilvqeHz6svqdB/view",
+      "sizeBytes": 10578,
+      "sha256": "519141d4ee70cfd1a1fae6196f3eaa88a533769090d59ff45a7ae4615f5bbf5e",
+      "updatedAt": "2026-11-08T00:14:52.590Z"
+    },
+    "interface-conce": {
+      "fileId": "1GUCmH9WeZUniCZ_8SeU-Ox4TGM8Voerh",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1GUCmH9WeZUniCZ_8SeU-Ox4TGM8Voerh",
+      "webViewUrl": "https://drive.google.com/file/d/1GUCmH9WeZUniCZ_8SeU-Ox4TGM8Voerh/view",
+      "sizeBytes": 147070,
+      "sha256": "3e3ccbc3c11f4167496fc4ef9724abfd3f7372b14802856348375ae8759ecef5",
+      "updatedAt": "2026-11-08T00:17:36.430Z"
+    },
+    "reload-creat": {
+      "fileId": "1N9eaJlpcggz4trLatP1cmbYFhU2c-AoR",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1N9eaJlpcggz4trLatP1cmbYFhU2c-AoR",
+      "webViewUrl": "https://drive.google.com/file/d/1N9eaJlpcggz4trLatP1cmbYFhU2c-AoR/view",
+      "sizeBytes": 167301,
+      "sha256": "d97aa6a31432338d32e6312a62b34b64242b9410280c9fe99fbf5c32d1e44f23",
+      "updatedAt": "2026-11-08T00:17:38.584Z"
+    },
+    "endas-nfts": {
+      "fileId": "1Q3KssjQWfc5AyKUzdz7rQcoVsN2kzuMZ",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1Q3KssjQWfc5AyKUzdz7rQcoVsN2kzuMZ",
+      "webViewUrl": "https://drive.google.com/file/d/1Q3KssjQWfc5AyKUzdz7rQcoVsN2kzuMZ/view",
+      "sizeBytes": 43388,
+      "sha256": "f1b0e1aba15ea497429b107b72576db2b1ea7ae8351bf544693755d3a84a69ba",
+      "updatedAt": "2026-11-08T00:17:40.759Z"
+    },
+    "futuristic-canvas": {
+      "fileId": "1VMWaTHKEAA_fgAEHZPyy5MVK-1xhW1i7",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1VMWaTHKEAA_fgAEHZPyy5MVK-1xhW1i7",
+      "webViewUrl": "https://drive.google.com/file/d/1VMWaTHKEAA_fgAEHZPyy5MVK-1xhW1i7/view",
+      "sizeBytes": 62129,
+      "sha256": "a3d190b79d5782a18fc7ace01ad33446734af3a88cc42dafeb3775360a76ef43",
+      "updatedAt": "2026-11-08T00:17:42.935Z"
+    },
+    "nike-atelier": {
+      "fileId": "1i31CUvVjQoqa1eypQ0yOrcqtX_RY6E-N",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1i31CUvVjQoqa1eypQ0yOrcqtX_RY6E-N",
+      "webViewUrl": "https://drive.google.com/file/d/1i31CUvVjQoqa1eypQ0yOrcqtX_RY6E-N/view",
+      "sizeBytes": 84829,
+      "sha256": "b011dbb4b9b61726d9d89cfd9ad75e56bca498e6ecd15425b041597fd514bc9d",
+      "updatedAt": "2026-11-08T00:17:45.154Z"
+    },
+    "saas-value": {
+      "fileId": "1r6AppjExT3NfK5SU2ZkRiFd9_MU1H0Kl",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1r6AppjExT3NfK5SU2ZkRiFd9_MU1H0Kl",
+      "webViewUrl": "https://drive.google.com/file/d/1r6AppjExT3NfK5SU2ZkRiFd9_MU1H0Kl/view",
+      "sizeBytes": 112175,
+      "sha256": "8ddd4ac0aedc7df4c4a417b142c103e46a6ac350d06b6c208c0e8dc65b3f87d2",
+      "updatedAt": "2026-11-08T00:17:47.350Z"
+    },
+    "intelligentx": {
+      "fileId": "1zBjguK1gvbwvuK1cXIBn35AizO19Iqy0",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1zBjguK1gvbwvuK1cXIBn35AizO19Iqy0",
+      "webViewUrl": "https://drive.google.com/file/d/1zBjguK1gvbwvuK1cXIBn35AizO19Iqy0/view",
+      "sizeBytes": 10343,
+      "sha256": "218b04fc89b4c32d89d9ddc8dfdd44b95daaed4af78fd7155e03c92d87ca8121",
+      "updatedAt": "2026-11-08T00:18:37.206Z"
+    },
+    "fun-404-page": {
+      "fileId": "1GGm3OCaBuheM5UEw3A2x7F9oiheQm87J",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1GGm3OCaBuheM5UEw3A2x7F9oiheQm87J",
+      "webViewUrl": "https://drive.google.com/file/d/1GGm3OCaBuheM5UEw3A2x7F9oiheQm87J/view",
+      "sizeBytes": 10106,
+      "sha256": "599cbf801dacfb909dad04123d1f931297a0cea7d2574676224134348459c3a5",
+      "updatedAt": "2026-11-08T00:18:39.986Z"
     }
   }
 }

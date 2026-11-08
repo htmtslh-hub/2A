@@ -631,7 +631,21 @@ export async function runPinterestFetchPipeline(options = {}) {
 
     const fileEntry = entries[i];
     const srcPath = resolve(inboxDir, fileEntry.name);
-    const buf = readFileSync(srcPath);
+    let buf = readFileSync(srcPath);
+    const lowerExt = extname(fileEntry.name).toLowerCase();
+    const isPngTruncated = lowerExt === '.png' && (buf.length < 12 || buf.subarray(buf.length - 8).toString('hex') !== '49454e44ae426082');
+    const isJpgTruncated = (lowerExt === '.jpg' || lowerExt === '.jpeg') && (buf.length < 4 || buf[buf.length - 2] !== 0xff || buf[buf.length - 1] !== 0xd9);
+    if (isPngTruncated || isJpgTruncated) {
+      try {
+        console.log(`[Auto-Repair] Phát hiện tệp ảnh "${fileEntry.name}" bị cụt byte cuối (truncated) -> Đang tái tạo cấu trúc chuẩn để tránh lỗi INVALID_MEDIA (2011)...`);
+        buf = isPngTruncated
+          ? await sharp(buf, { failOn: 'none' }).png().toBuffer()
+          : await sharp(buf, { failOn: 'none' }).jpeg({ quality: 92 }).toBuffer();
+        writeFileSync(srcPath, buf);
+      } catch (repairErr) {
+        console.warn(`[Auto-Repair Warning] Không thể sửa "${fileEntry.name}": ${repairErr.message}`);
+      }
+    }
     const sha256 = createHash('sha256').update(buf).digest('hex');
 
     if (processedImageHashes.has(sha256)) {

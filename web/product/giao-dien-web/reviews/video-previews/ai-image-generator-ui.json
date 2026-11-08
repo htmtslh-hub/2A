@@ -2,15 +2,15 @@
   "id": "t270",
   "slug": "ai-image-generator-ui",
   "browser": "153.0.8010.12",
-  "date": "2026-11-06T23:06:15.757Z",
+  "date": "2026-11-08T00:26:13.184Z",
   "demo": "/demos/ai-image-generator-ui/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "f75534c9e384",
-  "sha256": "f75534c9e384893c86d46d7daee1f753f5cfd0e6d77b2bd8a0f4ead0b43443fa",
-  "demoHtmlSha256": "37fed829fd88aaf0c21744245a93c7d78df5c1af65df5ce0a68ca001aeb7afc0",
-  "demoSha256": "96df53d809cfbc59b59305d9f3700b13f95b7585e490d1fcbeb3ae970946a2ef",
-  "bytes": 283245,
+  "revision": "91dd5536c427",
+  "sha256": "91dd5536c4277245e1821a2a60e5356f7cbb23cdf98e6d4959a56768f0ae88a3",
+  "demoHtmlSha256": "965786c01e5e2239eb6f7e8239bf8f4872533f4febedd122e5feeccdd3cc703d",
+  "demoSha256": "a00d0adff7ee13c4b57d75a12396836416675c8e145f17afe8aa6aa15bbe4e97",
+  "bytes": 263373,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -18,19 +18,9 @@
   "audio": false,
   "actions": [
     {
-      "seconds": 2.496,
-      "action": "click",
-      "selector": "#exploreMagneticBtn"
-    },
-    {
-      "seconds": 4.881,
-      "action": "click",
-      "selector": "#exploreMagneticBtn"
-    },
-    {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 560
+      "target": 323
     }
   ],
   "errors": [],

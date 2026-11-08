@@ -1,0 +1,32 @@
+{
+  "pinId": "local-87db09716d35",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1111404014318388493_Mục_này_có_hình_ảnh_của_Concept_Nike.jpg",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-07\\pin_1111404014318388493_Mục_này_có_hình_ảnh_của_Concept_Nike.jpg",
+  "title": "Nike Atelier",
+  "slug": "nike-atelier",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-sticky-counters",
+    "name": "Sticky Pinned Storytelling + Scroll Scrubbing + Number Counters",
+    "focus": [
+      "sticky-pinned-stage",
+      "scroll-scrub-rotation",
+      "number-counters"
+    ],
+    "description": "Tập trung vào ghim cố định chủ thể ở giữa màn hình theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-07\\nike-atelier.jpg",
+  "imageBytes": 57808,
+  "imageSha256": "87db09716d355c0b7ed9acef9b2303f631f1387b767ce5af4b94d28f51ab0f20",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 720,
+    "height": 900,
+    "aspectRatio": 0.8,
+    "reason": "Rejected geometry (720x900, AR=0.80) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-07T02:00:02.454Z"
+}

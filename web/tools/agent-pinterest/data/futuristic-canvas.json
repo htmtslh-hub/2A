@@ -1,0 +1,32 @@
+{
+  "pinId": "local-324000e85731",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1106830045953518427_Mục_này_có_hình_ảnh_của_Futuristic_W.png",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-07\\pin_1106830045953518427_Mục_này_có_hình_ảnh_của_Futuristic_W.png",
+  "title": "Futuristic Canvas",
+  "slug": "futuristic-canvas",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-splittext-reveal",
+    "name": "Split-Text Staggered Reveal + Scroll Scrubbing",
+    "focus": [
+      "split-text-reveal",
+      "scroll-scrub-stage",
+      "editorial-grid"
+    ],
+    "description": "Tập trung vào nghệ thuật chữ tách ký tự (Split-Text) và hoạt cảnh đồng bộ theo tiến độ cuộn trang."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-07\\futuristic-canvas.png",
+  "imageBytes": 1400223,
+  "imageSha256": "324000e85731e74f504a118b2823b4038660989d6ad5d9a46e0b64550c140dd0",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1200,
+    "height": 2400,
+    "aspectRatio": 0.5,
+    "reason": "Rejected geometry (1200x2400, AR=0.50) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-07T02:00:02.452Z"
+}

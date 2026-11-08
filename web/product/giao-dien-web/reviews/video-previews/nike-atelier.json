@@ -1,0 +1,34 @@
+{
+  "id": "t275",
+  "slug": "nike-atelier",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:21:38.328Z",
+  "demo": "/demos/nike-atelier/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9634d96ac06f",
+  "sha256": "9634d96ac06f5e33534db6c6d82d4d6b46f6254d3056b287aaed0e71525ff399",
+  "demoHtmlSha256": "a20b707928f3cd2768da43c23a9f1b34561002c3d092ae7c5cf2baee0d08a5e1",
+  "demoSha256": "99ea8d9c818064b32580d9cf32c8554d7587e58e741d71e7bb19942c40303394",
+  "bytes": 396237,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 333
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-atelier-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-atelier-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-atelier-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-atelier-return.jpg"
+  ]
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnDasmu — Discover Digital Art and Collect NFTs</title>
+  <meta name="description" content="EnDasmu is a shared liquidity NFT market smart contract used by multiple websites to provide users the best digital art collecting experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #141715;
+      --surface: #1d221f;
+      --surface-2: #252b28;
+      --fg: #f8fafc;
+      --muted: #9ca8a1;
+      --accent: #d8f34e;
+      --accent-text: #d8f34e;
+      --on-accent: #141715;
+      --border: rgba(255, 255, 255, 0.12);
+      --font-display: 'Outfit', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .en-wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .en-header { padding: 24px 0; }
+    .en-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .en-brand { color: var(--fg); text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
+    .en-links { display: flex; gap: 32px; list-style: none; }
+    .en-links a { color: var(--muted); text-decoration: none; font-size: 0.86rem; }
+    .en-links a:hover { color: var(--fg); }
+    .en-btn-outline {
+      padding: 9px 20px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.35);
+      background: transparent; color: var(--fg); font-size: 0.82rem; cursor: pointer;
+    }
+    .en-btn-lime {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 26px; border-radius: 999px; border: none;
+      background: linear-gradient(90deg, #f3dc58 0%, #98e665 100%);
+      color: #141715; font-weight: 700; font-size: 0.86rem; cursor: pointer; text-decoration: none;
+    }
+
+    /* Hero */
+    .en-hero {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px;
+      align-items: center; padding: 36px 0 28px; position: relative;
+    }
+    .en-hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 18px;
+    }
+    .en-hero p {
+      color: var(--muted); font-size: 0.92rem; line-height: 1.65; max-width: 430px; margin-bottom: 28px;
+    }
+    .en-hero-portrait {
+      position: relative; display: flex; justify-content: center;
+    }
+    .en-hero-portrait img {
+      width: 100%; max-width: 440px; height: auto; border-radius: 32px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Stats Ribbon */
+    .en-stats-bar {
+      background: rgba(37, 43, 40, 0.78); backdrop-filter: blur(12px);
+      border: 1px solid var(--border); border-radius: 26px;
+      padding: 28px 36px; margin: 18px 0 64px;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: center;
+    }
+    .en-stat-label { font-size: 0.78rem; color: var(--muted); margin-bottom: 6px; }
+    .en-stat-val { font-family: var(--font-display); font-size: 2rem; font-weight: 700; }
+
+    /* Section 2: Hot Trending On This Week */
+    .en-trending {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 48px 0;
+    }
+    .en-quad-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+    }
+    .en-quad-card {
+      border-radius: 24px; overflow: hidden; background: var(--surface); aspect-ratio: 1 / 1;
+      border: 1px solid var(--border); cursor: pointer;
+    }
+    .en-quad-card img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Section 3: Top List Artist */
+    .en-artists {
+      display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 36px; align-items: center; padding: 56px 0;
+    }
+    .en-artist-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .en-artist-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+      padding: 20px; text-align: center;
+    }
+    .en-artist-card img {
+      width: 100%; height: 150px; object-fit: cover; border-radius: 16px; margin-top: 14px;
+    }
+
+    /* Section 4: Live Liquidity & Bid Calculator (One Live Thing) */
+    .en-calc-panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 26px;
+      padding: 32px; margin: 36px 0; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px;
+    }
+
+    /* Partner Logos & Subscribe */
+    .en-partners {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 24px; padding: 36px 0; opacity: 0.82; font-family: var(--font-display); font-weight: 700;
+    }
+    .en-subscribe { padding: 56px 0; }
+    .en-footer-grid {
+      display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 24px;
+      padding: 48px 0 36px; border-top: 1px solid var(--border); font-size: 0.84rem;
+    }
+    .en-footer-grid ul { list-style: none; display: grid; gap: 10px; margin-top: 12px; color: var(--muted); }
+
+    .en-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(10, 12, 11, 0.82);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .en-modal.is-open { display: flex; }
+    .en-modal-box {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+      max-width: 480px; width: 100%; padding: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .en-hero, .en-stats-bar, .en-trending, .en-artists, .en-calc-panel, .en-footer-grid { grid-template-columns: 1fr; }
+      .en-links { display: none; }
+    }
+    @media (max-width: 560px) {
+      .en-artist-cards { grid-template-columns: 1fr; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="en-header en-wrap">
+    <nav class="en-nav" aria-label="Primary Navigation">
+      <a href="#main-content" class="en-brand">EnDasmu</a>
+      <ul class="en-links">
+        <li><a href="#hot-trending">Collection</a></li>
+        <li><a href="#liquidity-calc">Market Place</a></li>
+        <li><a href="#top-artists">Community</a></li>
+      </ul>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="en-btn-outline">Motion: ON</button>
+        <button type="button" class="en-btn-outline" data-en-modal="open">Connect Wallet</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="en-wrap">
+    <!-- Section 1: Hero & Stats Ribbon -->
+    <section id="hero-showcase" aria-label="Discover Digital Art and Collect NFTs">
+      <div class="en-hero">
+        <div>
+          <h1>Discover<br>Digital Art and<br>Collect NFTs.</h1>
+          <p>EnDasmu is a shared liquidity NFT market smart contract which is used by multiple websites to provide the users the best possible experience.</p>
+          <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;">
+            <button type="button" class="en-btn-lime" data-en-modal="open">Get Started</button>
+            <a href="#hot-trending" style="color:var(--fg);text-decoration:none;font-size:0.88rem;display:inline-flex;align-items:center;gap:8px;">
+              <span>Learn More</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="en-hero-portrait">
+          <img src="assets/hero-creator.webp" alt="Digital art collector portrait illuminated with neon yellow-green halo" width="435" height="445">
+        </div>
+      </div>
+
+      <div class="en-stats-bar">
+        <div>
+          <div class="en-stat-label">Artwork</div>
+          <div class="en-stat-val stat-num" data-counter="27" data-suffix="k+">27k+</div>
+        </div>
+        <div>
+          <div class="en-stat-label">Auction</div>
+          <div class="en-stat-val stat-num" data-counter="25" data-suffix="k+">25k+</div>
+        </div>
+        <div>
+          <div class="en-stat-label">Artist</div>
+          <div class="en-stat-val stat-num" data-counter="12" data-suffix="k+">12k+</div>
+        </div>
+        <div>
+          <div class="en-stat-label">Art <strong style="color:var(--fg);margin-left:8px;">3.4 ETH</strong></div>
+          <div style="display:flex;gap:6px;margin-top:8px;">
+            <span style="width:32px;height:32px;border-radius:50%;background:#d8f34e;display:inline-block;"></span>
+            <span style="width:32px;height:32px;border-radius:50%;background:#38bdf8;display:inline-block;"></span>
+            <span style="width:32px;height:32px;border-radius:50%;background:#f43f5e;display:inline-block;"></span>
+            <span style="width:32px;height:32px;border-radius:50%;background:#a855f7;display:inline-block;"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Hot Trending On This Week -->
+    <section id="hot-trending" class="en-trending" aria-label="Hot Trending On This Week">
+      <div class="en-quad-grid">
+        <div class="en-quad-card" data-en-modal="open"><img src="assets/trend-1.webp" alt="Monochrome botanical portrait NFT" width="158" height="152" loading="lazy"></div>
+        <div class="en-quad-card" data-en-modal="open"><img src="assets/trend-2.webp" alt="Emerald profile sculpture NFT" width="156" height="152" loading="lazy"></div>
+        <div class="en-quad-card" data-en-modal="open"><img src="assets/trend-3.webp" alt="Regal patterned headwear portrait NFT" width="158" height="152" loading="lazy"></div>
+        <div class="en-quad-card" data-en-modal="open"><img src="assets/trend-4.webp" alt="Warm clay bust digital artwork NFT" width="156" height="152" loading="lazy"></div>
+      </div>
+      <div>
+        <span style="color:#8ce95c;font-size:0.8rem;font-weight:600;">Popular Item</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.6vw,3rem);line-height:1.12;margin:10px 0 16px;">Hot Trending<br>On This<br>Week.</h2>
+        <p style="color:var(--muted);font-size:0.9rem;line-height:1.65;margin-bottom:22px;">
+          Various kinds of NFTs that are trending the trend will be reset every week. Don't miss out on the best NFTs every week.
+        </p>
+        <a href="#liquidity-calc" style="color:var(--fg);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:10px;">
+          <span>See all</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 3: Top List Artist -->
+    <section id="top-artists" class="en-artists" aria-label="Top List Artist">
+      <div>
+        <span style="color:#8ce95c;font-size:0.8rem;font-weight:600;">Artist</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.12;margin:10px 0 14px;">Top List<br>Artist.</h2>
+        <p style="color:var(--muted);font-size:0.88rem;line-height:1.6;">We have dozens of artists who contribute to create amazing works.</p>
+      </div>
+      <div class="en-artist-cards">
+        <article class="en-artist-card">
+          <div style="font-weight:700;font-size:1rem;">Johnny Five</div>
+          <div style="font-size:0.74rem;color:var(--muted);">Bizrate Survey, March '22</div>
+          <img src="assets/artist-1.webp" alt="Johnny Five neon magenta-cyan artwork" width="210" height="138" loading="lazy">
+        </article>
+        <article class="en-artist-card">
+          <div style="font-weight:700;font-size:1rem;">Lucinta Luna</div>
+          <div style="font-size:0.74rem;color:var(--muted);">Bizrate Survey, March '22</div>
+          <img src="assets/artist-2.webp" alt="Lucinta Luna classical marble sculpture artwork" width="210" height="138" loading="lazy">
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Interactive Shared Liquidity Calculator (One Live Thing) -->
+    <section id="liquidity-calc" aria-label="Shared Liquidity Smart Contract Simulator">
+      <fieldset class="en-calc-panel">
+        <legend style="padding:0 10px;font-family:var(--font-mono);font-size:0.75rem;color:var(--accent);">LIVE SMART CONTRACT BID &amp; ROYALTY SIMULATOR</legend>
+        <div>
+          <h2 style="font-family:var(--font-display);font-size:1.75rem;margin-bottom:10px;">Estimate Collector Pool Yield</h2>
+          <p style="color:var(--muted);font-size:0.88rem;margin-bottom:18px;">Slide to adjust ETH floor bid across EnDasmu shared liquidity pools.</p>
+          <label for="enEthSlider" style="display:flex;justify-content:space-between;font-size:0.84rem;margin-bottom:8px;">
+            <span>Floor Bid Allocation</span>
+            <strong id="enEthLabel" class="tabular-nums">3.4 ETH</strong>
+          </label>
+          <input id="enEthSlider" type="range" min="1" max="20" step="0.2" value="3.4" style="width:100%;accent-color:var(--accent);">
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-items:center;">
+          <div style="background:var(--surface-2);padding:18px;border-radius:16px;">
+            <div style="font-size:0.74rem;color:var(--muted);">USD Equivalent</div>
+            <output id="enUsdOut" class=" tabular-nums" style="font-family:var(--font-display);font-size:1.65rem;font-weight:700;">$10,540</output>
+          </div>
+          <div style="background:var(--surface-2);padding:18px;border-radius:16px;">
+            <div style="font-size:0.74rem;color:var(--muted);">Creator Royalty (7.5%)</div>
+            <output id="enRoyaltyOut" class="tabular-nums" style="font-family:var(--font-display);font-size:1.65rem;font-weight:700;color:var(--accent);">0.26 ETH</output>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- Section 5: Partners & Newsletter Subscribe -->
+    <section id="nft-subscribe" class="en-subscribe" aria-label="Ecosystem Partners and Newsletter">
+      <div class="en-partners">
+        <span>Quixel MEGASCANS</span>
+        <span>UNREAL ENGINE</span>
+        <span>METAMASK</span>
+        <span>BINANCE</span>
+        <span>oculus</span>
+      </div>
+      <div style="margin-top:42px;max-width:680px;">
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;margin-bottom:24px;">
+          Subscribe to Get Fresh<br>News Update About<br>NFTs.
+        </h2>
+        <button type="button" class="en-btn-lime" data-en-modal="open">Subscribe</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="en-wrap en-footer-grid">
+    <div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:1.15rem;margin-bottom:10px;">EnDasmu</div>
+      <p style="color:var(--muted);font-size:0.8rem;line-height:1.6;">Shared liquidity NFT market smart contract powering next-generation digital art collectors.</p>
+      <p style="color:var(--muted);font-size:0.74rem;margin-top:16px;">Copyright © MetaSpace 2026</p>
+    </div>
+    <div><strong>Explore</strong><ul><li>Art</li><li>Collectibles</li><li>Domain Name</li><li>Utility</li></ul></div>
+    <div><strong>Statistic</strong><ul><li>Ranking</li><li>Activity</li></ul></div>
+    <div><strong>Resource</strong><ul><li>Help Center</li><li>Platform Status</li><li>Partners</li><li>Blog</li></ul></div>
+    <div><strong>Company</strong><ul><li>About Us</li><li>Career</li><li>Support</li></ul></div>
+  </footer>
+
+  <div class="en-modal" id="enModal" role="dialog" aria-modal="true" aria-labelledby="enModalTitle">
+    <div class="en-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h3 id="enModalTitle" style="font-family:var(--font-display);font-size:1.3rem;">Connect Web3 Wallet</h3>
+        <button type="button" id="enModalClose" class="en-btn-outline" style="padding:6px 12px;">Close</button>
+      </div>
+      <p style="color:var(--muted);font-size:0.86rem;margin-bottom:16px;">Select a smart contract wallet provider or subscribe to weekly NFT drop alerts.</p>
+      <form id="enModalForm" style="display:grid;gap:12px;">
+        <input type="email" required placeholder="collector@eth.xyz" style="padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--fg);">
+        <button type="submit" class="en-btn-lime" style="justify-content:center;">Verify &amp; Connect</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var slider = document.getElementById('enEthSlider');
+      var lbl = document.getElementById('enEthLabel');
+      var usd = document.getElementById('enUsdOut');
+      var roy = document.getElementById('enRoyaltyOut');
+      if (slider) {
+        slider.addEventListener('input', function () {
+          var v = parseFloat(slider.value);
+          if (lbl) lbl.textContent = v.toFixed(1) + ' ETH';
+          if (usd) usd.textContent = '$' + Math.round(v * 3100).toLocaleString();
+          if (roy) roy.textContent = (v * 0.075).toFixed(2) + ' ETH';
+        });
+      }
+      var modal = document.getElementById('enModal');
+      var closeBtn = document.getElementById('enModalClose');
+      document.querySelectorAll('[data-en-modal="open"]').forEach(function (el) {
+        el.addEventListener('click', function () { if (modal) modal.classList.add('is-open'); });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+      var form = document.getElementById('enModalForm');
+      if (form) form.addEventListener('submit', function (e) { e.preventDefault(); modal.classList.remove('is-open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

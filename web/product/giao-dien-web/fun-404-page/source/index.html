@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | TinyTrails Children's Adventure Club</title>
+  <meta name="description" content="Oops, something went wrong! Explore TinyTrails children's outdoor programs, trail finder, and interactive adventure guides.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FF8233;
+      --surface: #FDAC55;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.85);
+      --accent: #F16524;
+      --accent-text: #ffffff;
+      --on-accent: #ffffff;
+      --border: rgba(255, 255, 255, 0.28);
+      --font-display: 'Inter', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #FF8233 0%, #FDAC55 100%);
+      color: #ffffff; overflow-x: clip; scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Fullscreen 404 Hero Stage */
+    .tt-hero-screen {
+      position: relative; width: 100%; height: 100vh; overflow: hidden;
+      display: flex; flex-direction: column;
+      background: linear-gradient(180deg, #FF8233 0%, #FDAC55 100%);
+    }
+    .tt-bg-404-layer {
+      position: absolute; inset: 0; pointer-events: none;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0.82;
+      -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
+      mask-image: linear-gradient(to bottom, black 40%, transparent 95%);
+    }
+    .tt-giant-404 {
+      font-size: clamp(200px, 46vw, 760px); font-weight: 900;
+      line-height: 1; letter-spacing: -0.05em; color: #ffffff;
+      white-space: nowrap; transform: scale(1.15, 1.35);
+    }
+    .tt-white-oval {
+      position: absolute; width: clamp(120px, 20vw, 380px); height: 48vh;
+      background: #ffffff; border-radius: 999px;
+    }
+
+    /* Navigation Bar */
+    .tt-nav {
+      position: relative; z-index: 20; display: flex; align-items: center;
+      justify-content: space-between; padding: 20px 44px;
+    }
+    .tt-logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #ffffff; text-decoration: none; font-weight: 700; font-size: 1.25rem;
+    }
+    .tt-dots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; }
+    .tt-dots span { width: 10px; height: 10px; border-radius: 50%; background: #ffffff; display: block; }
+    .tt-pill-nav { display: flex; gap: 6px; list-style: none; }
+    .tt-pill-nav a {
+      padding: 7px 16px; border-radius: 999px; background: #ffffff;
+      color: #F16524; font-size: 0.85rem; font-weight: 600; text-decoration: none;
+    }
+    .tt-menu-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 999px; background: #F16524;
+      color: #ffffff; border: none; font-size: 0.86rem; font-weight: 600; cursor: pointer;
+    }
+
+    /* Center Video with mix-blend-darken */
+    .tt-video-stage {
+      position: absolute; inset: 0; display: flex; align-items: center;
+      justify-content: center; pointer-events: none; margin-top: calc(-6vh - 24px); z-index: 10;
+    }
+    .tt-video-box { width: 62vw; height: 74vh; }
+    .tt-video-box video {
+      width: 100%; height: 100%; object-fit: contain; mix-blend-mode: darken;
+    }
+
+    /* Bottom Content */
+    .tt-bottom-cta {
+      position: relative; z-index: 30; margin-top: auto; padding-bottom: 52px;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .tt-bottom-cta h1 {
+      font-size: clamp(1.25rem, 2.2vw, 1.65rem); font-weight: 600; margin-bottom: 16px;
+    }
+    .tt-home-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px; border-radius: 999px; background: #F16524;
+      color: #ffffff; font-weight: 600; font-size: 0.95rem; text-decoration: none;
+      box-shadow: 0 12px 28px rgba(241, 101, 36, 0.45);
+    }
+
+    /* Slide-in Menu Drawer (role="dialog") */
+    .tt-drawer-backdrop {
+      position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.42);
+      display: none; justify-content: flex-end;
+    }
+    .tt-drawer-backdrop.is-open { display: flex; }
+    .tt-drawer-panel {
+      width: 100%; max-width: 380px; height: 100%;
+      background: linear-gradient(135deg, #FF6B1A 0%, #FF9642 100%);
+      padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .tt-drawer-links { display: grid; gap: 10px; margin: 24px 0; list-style: none; }
+    .tt-drawer-links a {
+      display: block; padding: 14px 20px; border-radius: 16px;
+      background: rgba(255, 255, 255, 0.14); color: #ffffff;
+      font-weight: 600; text-decoration: none;
+    }
+
+    /* Interactive Trail Finder Below Fold (One Live Thing) */
+    .tt-trail-sec {
+      max-width: 1120px; margin: 0 auto; padding: 64px 24px;
+    }
+    .tt-trail-card {
+      background: rgba(255, 255, 255, 0.18); border: 1px solid var(--border);
+      border-radius: 28px; padding: 36px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center;
+    }
+    .tt-age-btn {
+      padding: 9px 18px; border-radius: 999px; border: 1.5px solid #ffffff;
+      background: transparent; color: #ffffff; font-weight: 600; font-size: 0.84rem; cursor: pointer;
+    }
+    .tt-age-btn.is-active { background: #ffffff; color: #F16524; }
+
+    @media (max-width: 900px) {
+      .tt-pill-nav { display: none; }
+      .tt-trail-card { grid-template-columns: 1fr; }
+      .tt-video-box { width: 92vw; height: 68vh; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+      @media (max-width: 900px) { .resp-stack { grid-template-columns: 1fr !important; } }
+    @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <!-- Section 1: Exact Prompt Fullscreen 404 Hero -->
+    <section class="tt-hero-screen" aria-label="404 Page Not Found">
+      <div class="tt-bg-404-layer">
+        <div class="tt-giant-404" id="ttGiant404">404</div>
+        <div class="tt-white-oval"></div>
+      </div>
+
+      <header class="tt-nav">
+        <nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+          <a href="#main-content" class="tt-logo">
+            <span class="tt-dots"><span></span><span></span><span></span><span></span></span>
+            <span>TinyTrails</span>
+          </a>
+          <ul class="tt-pill-nav">
+            <li><a href="#trail-finder">About Us</a></li>
+            <li><a href="#trail-finder">Programs</a></li>
+            <li><a href="#trail-finder">Reviews</a></li>
+            <li><a href="#trail-finder">FAQ</a></li>
+            <li><a href="#trail-finder">Contacts</a></li>
+          </ul>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <button type="button" id="motionToggleBtn" class="tt-age-btn">Motion: ON</button>
+            <button type="button" class="tt-menu-btn" id="ttOpenMenuBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+              </svg>
+              <span>Menu</span>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <figure class="tt-video-stage" style="margin:0;">
+        <div class="tt-video-box">
+          <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260713_234424_b1332b69-2e69-4302-8dbc-40f86846afbd.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <figcaption class="skip-link">TinyTrails 3D animated character looking through a magnifying glass</figcaption>
+      </figure>
+
+      <div class="tt-bottom-cta">
+        <h1>Oops, something went wrong!</h1>
+        <a href="#trail-finder" class="tt-home-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive Kids Trail & Camp Finder (One Live Thing) -->
+    <section id="trail-finder" class="tt-trail-sec" aria-label="Interactive Kids Trail Finder">
+      <article class="tt-trail-card">
+        <header>
+          <small style="font-family:var(--font-mono);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;display:block;">TINYTRAILS OUTDOOR DISCOVERY</small>
+          <h2 style="font-size:2rem;font-weight:800;margin:8px 0 12px;">Find Your Child's Next Trail</h2>
+          <p style="font-size:0.92rem;margin-bottom:18px;opacity:0.92;">Lost on the map? Pick an explorer age group below to match safe nature trails and weekend camp badges.</p>
+          <menu style="display:flex;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:0;">
+            <li><button type="button" class="tt-age-btn is-active" data-trails="18" data-badges="6" data-guides="12">Sprouts (Ages 4–6)</button></li>
+            <li><button type="button" class="tt-age-btn" data-trails="32" data-badges="14" data-guides="19">Pathfinders (Ages 7–9)</button></li>
+            <li><button type="button" class="tt-age-btn" data-trails="45" data-badges="24" data-guides="28">Summit Rangers (Ages 10–12)</button></li>
+          </menu>
+        </header>
+        <dl style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;margin:0;">
+          <div style="background:rgba(255,255,255,0.22);padding:18px;border-radius:18px;">
+            <dt style="font-size:0.72rem;font-weight:600;">SAFE TRAILS</dt>
+            <dd id="ttTrailsOut" class="stat-num" data-counter="18" data-suffix="" style="font-size:2rem;font-weight:900;margin:4px 0 0;">18</dd>
+          </div>
+          <div style="background:rgba(255,255,255,0.22);padding:18px;border-radius:18px;">
+            <dt style="font-size:0.72rem;font-weight:600;">SKILL BADGES</dt>
+            <dd id="ttBadgesOut" class="stat-num" data-counter="6" data-suffix="" style="font-size:2rem;font-weight:900;margin:4px 0 0;">6</dd>
+          </div>
+          <div style="background:#ffffff;color:#F16524;padding:18px;border-radius:18px;">
+            <dt style="font-size:0.72rem;font-weight:700;">CAMP GUIDES</dt>
+            <dd id="ttGuidesOut" class="stat-num" data-counter="12" data-suffix="" style="font-size:2rem;font-weight:900;margin:4px 0 0;">12</dd>
+          </div>
+        </dl>
+      </article>
+    </section>
+  
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+  </main>
+
+  <footer style="padding:24px;text-align:center;font-size:0.8rem;border-top:1px solid var(--border);">
+    <p>© 2026 TinyTrails Children's Adventure Programs — Safe Outdoor Exploration</p>
+  </footer>
+
+  <!-- Slide-in Menu Overlay (role="dialog") -->
+  <div class="tt-drawer-backdrop" id="ttDrawer" role="dialog" aria-modal="true" aria-labelledby="ttDrawerTitle">
+    <div class="tt-drawer-panel">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span id="ttDrawerTitle" class="tt-logo">
+            <span class="tt-dots"><span></span><span></span><span></span><span></span></span>
+            <span>TinyTrails</span>
+          </span>
+          <button type="button" id="ttCloseMenuBtn" style="width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.2);color:#fff;cursor:pointer;">X</button>
+        </div>
+        <ul class="tt-drawer-links">
+          <li><a href="#trail-finder">About Us</a></li>
+          <li><a href="#trail-finder">Programs</a></li>
+          <li><a href="#trail-finder">Reviews</a></li>
+          <li><a href="#trail-finder">FAQ</a></li>
+          <li><a href="#trail-finder">Contacts</a></li>
+        </ul>
+      </div>
+      <a href="#trail-finder" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;border-radius:999px;background:#ffffff;color:#F16524;font-weight:700;text-decoration:none;">
+        <span>Back to Home</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var drawer = document.getElementById('ttDrawer');
+      var openBtn = document.getElementById('ttOpenMenuBtn');
+      var closeBtn = document.getElementById('ttCloseMenuBtn');
+      if (openBtn) openBtn.addEventListener('click', function () { if (drawer) drawer.classList.add('is-open'); });
+      if (closeBtn) closeBtn.addEventListener('click', function () { if (drawer) drawer.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer) drawer.classList.remove('is-open'); });
+
+      var btns = document.querySelectorAll('.tt-age-btn[data-trails]');
+      var tOut = document.getElementById('ttTrailsOut');
+      var bOut = document.getElementById('ttBadgesOut');
+      var gOut = document.getElementById('ttGuidesOut');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (tOut) tOut.textContent = btn.getAttribute('data-trails');
+          if (bOut) bOut.textContent = btn.getAttribute('data-badges');
+          if (gOut) gOut.textContent = btn.getAttribute('data-guides');
+        });
+      });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

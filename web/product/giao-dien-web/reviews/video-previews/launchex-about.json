@@ -2,15 +2,15 @@
   "id": "t269",
   "slug": "launchex-about",
   "browser": "153.0.8010.12",
-  "date": "2026-11-06T23:04:15.952Z",
+  "date": "2026-11-08T00:25:53.579Z",
   "demo": "/demos/launchex-about/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "2ae6c8bc1e71",
-  "sha256": "2ae6c8bc1e713100d5bb0acffb13ef356e6fccedf5599714d4d63bd124ae61f5",
-  "demoHtmlSha256": "99ee6527172ec5865301a8a9833f2db5a25ff95d0898d9ebe636fa98efa8a6ec",
-  "demoSha256": "b1cb3d6314f9e94fab0b23a50b28292379d751b17d8b9aa70383f73dc25ee488",
-  "bytes": 217995,
+  "revision": "e3984aba0a52",
+  "sha256": "e3984aba0a526c40b588b7dfdb63d8b572309419eb3d92e7e1c13969b826eda2",
+  "demoHtmlSha256": "e8adfa708c164538184af66dcc70a2c7a1152ba430c4431b02444b82328ba6de",
+  "demoSha256": "4492b2ffbab625e060e72d653150550e1205eb6430dd487b20199e3a74e63f7d",
+  "bytes": 389031,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -18,19 +18,9 @@
   "audio": false,
   "actions": [
     {
-      "seconds": 2.49,
-      "action": "click",
-      "selector": "#exploreMagneticBtn"
-    },
-    {
-      "seconds": 4.911,
-      "action": "click",
-      "selector": "#exploreMagneticBtn"
-    },
-    {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 560
+      "target": 523
     }
   ],
   "errors": [],

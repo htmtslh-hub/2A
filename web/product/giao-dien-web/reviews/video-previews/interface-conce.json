@@ -1,0 +1,34 @@
+{
+  "id": "t271",
+  "slug": "interface-conce",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:20:19.633Z",
+  "demo": "/demos/interface-conce/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6a9bb7ee9bb8",
+  "sha256": "6a9bb7ee9bb82e28a10ca16b3574a2c88b796afd9c52dc105250d7c66675775b",
+  "demoHtmlSha256": "0d074cba7c20bc4c7b79b550a98b9a92ce31eb90d2ffdb2214f865df95bf55a8",
+  "demoSha256": "31f60a25798ad1c779a1bce745114c3d8abad955287452095473a0e38aa45761",
+  "bytes": 528172,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interface-conce-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interface-conce-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interface-conce-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interface-conce-return.jpg"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "t277",
+  "slug": "fun-404-page",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:24:54.804Z",
+  "demo": "/demos/fun-404-page/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d1599d2372c3",
+  "sha256": "d1599d2372c3fcb54d06d376961c8d5ff1d073e76eb39657f3108c84f0251e8c",
+  "demoHtmlSha256": "6fb15e141db01436d4692aa8067a9697586e8cd5e566d191a1295a9d0087a219",
+  "demoSha256": "dd289d2bdade874a39be7835faa7920b5a3b66714e64320eebb08f41e1e05134",
+  "bytes": 461152,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 734
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fun-404-page-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fun-404-page-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fun-404-page-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fun-404-page-return.jpg"
+  ]
+}

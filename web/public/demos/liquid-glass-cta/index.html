@@ -2,331 +2,373 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Liquid Glass CTA — application/vnd.apple.mpegurl</title>
-  <meta name="description" content="Precision-engineered Liquid Glass CTA web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.">
-  <meta property="og:title" content="Liquid Glass CTA — application/vnd.apple.mpegurl">
-  <meta property="og:description" content="Precision-engineered Liquid Glass CTA web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#06070b">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio — Liquid Glass AI Design &amp; Strategy Call CTA</title>
+  <meta name="description" content="Your next website starts here. Book a free strategy call and see what AI-powered design can do with liquid glassmorphism and HLS streaming.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #06070b;
-      --bg-surface: #10131c;
-      --bg-glass: rgba(16,19,28,0.72);
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #94a3b8;
-      --accent-primary: #a855f7;
-      --accent-secondary: #38bdf8;
-      --border-hairline: rgba(255,255,255,0.14);
+      --bg: #000000;
+      --surface: #0b0b0e;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.62);
+      --accent: #ffffff;
+      --accent-text: #e2e8f0;
+      --on-accent: #000000;
+      --border: rgba(255, 255, 255, 0.14);
       --font-display: 'Instrument Serif', serif;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Barlow', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
-      --radius-card: 24px;
-      --radius-pill: 9999px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); overflow-x: clip; scroll-behavior: smooth; }
-    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 10000; padding: 10px 18px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; font-weight: 700; text-decoration: none; transition: transform 0.2s var(--ease-out-expo); }
-    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--text-primary); outline-offset: 3px; }
-    :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; }
-    .liq29-cursor-ring, .liq29-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; will-change: transform; }
-    .liq29-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out-expo), opacity 0.22s var(--ease-out-expo); }
-    .liq29-cursor-ring.is-hovered { transform: translate3d(-100px,-100px,0) scale(1.65); background: #fff; }
-    .liq29-cursor-dot { width: 6px; height: 6px; background: var(--accent-primary); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .liq29-cursor-ring, .liq29-cursor-dot { display: none; } }
-
-    .liq29-navbar {
-      position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
-      max-width: 1280px; margin: 0 auto; padding: 12px 24px;
-      border-radius: var(--radius-pill); background: var(--bg-glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
     }
-    .liq29-pill-btn { min-height: 44px; padding: 8px 18px; border-radius: var(--radius-pill); background: var(--bg-glass); border: 1px solid var(--border-hairline); color: var(--text-primary); font-size: 12px; font-weight: 700; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
-    .liq29-cta-btn { min-height: 44px; padding: 10px 22px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
-    .liq29-pill-btn:active, .liq29-cta-btn:active { transform: scale(0.97); }
-
-    .liq29-hero {
-      position: relative; min-height: 100vh; padding: clamp(112px, 12vw, 148px) clamp(20px,5vw,72px) clamp(56px, 7vw, 88px);
-      display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
+    .lg-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      padding: 18px 36px; display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);
     }
-    .liq29-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
-    .liq29-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
-    .liq29-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: clamp(24px, 4vw, 44px); align-items: center; }
-    .liq29-h1 { font-family: var(--font-display); font-size: clamp(2.75rem, 6.5vw, 5.75rem); font-weight: 400; line-height: 0.96; letter-spacing: -0.03em; margin: 14px 0 18px; }
-    .liq29-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
-    .liq29-popout-wrap { animation: liq29Float 5.8s ease-in-out infinite; will-change: transform; }
-    @keyframes liq29Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
-
-    .liq29-section { max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(20px,5vw,72px); }
-    .liq29-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
-    .liq29-card { padding: clamp(20px, 3vw, 28px); border-radius: var(--radius-card); background: var(--bg-glass); border: 1px solid var(--border-hairline); backdrop-filter: blur(18px); box-shadow: 0 24px 48px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.12); transition: transform 0.35s var(--ease-out-expo), opacity 0.35s var(--ease-out-expo); }
-    .liq29-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
-    .liq29-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo); }
-    .liq29-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
-
-    .liq29-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
-    .liq29-seamless-overlay.is-open { display: flex; }
-    .liq29-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 32px; pointer-events: auto; }
-    @media (max-width: 640px) { .liq29-navbar { padding: 10px 16px; } }
-    @media (max-width: 768px) { .liq29-hscroll-track { grid-template-columns: 1fr; } }
-    @media (min-width: 960px) { .liq29-hero-grid { grid-template-columns: 1.05fr 0.95fr; } .liq29-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
-    @media (min-width: 1024px) { .liq29-section { padding-inline: 64px; } }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .lg-brand {
+      color: #ffffff; text-decoration: none; font-family: var(--font-display);
+      font-style: italic; font-size: 1.55rem; letter-spacing: -0.01em;
     }
+    .lg-nav-links { display: flex; gap: 28px; list-style: none; }
+    .lg-nav-links a { color: rgba(255,255,255,0.68); text-decoration: none; font-size: 0.86rem; font-weight: 400; }
+    .lg-nav-links a:hover { color: #ffffff; }
+
+    /* Prompt-Exact Liquid Glass Strong Class */
+    .liquid-glass-strong {
+      background: rgba(255, 255, 255, 0.04);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(28px);
+      border: none;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass-strong::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(255, 255, 255, 0.22) 20%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0.22) 80%,
+        rgba(255, 255, 255, 0.55) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* Main CTA + Footer Section */
+    .lg-cta-section {
+      position: relative; min-height: 100vh; padding: 140px 24px 64px;
+      text-align: center; overflow: hidden; display: flex; flex-direction: column; justify-content: center;
+    }
+    .lg-video-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: 0; opacity: 0.88;
+      background: radial-gradient(circle at 50% 45%, #1e293b 0%, #090d16 55%, #000000 100%);
+    }
+    .lg-fade-top {
+      position: absolute; top: 0; left: 0; right: 0; height: 200px; z-index: 1;
+      background: linear-gradient(to bottom, #000000, transparent); pointer-events: none;
+    }
+    .lg-fade-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 200px; z-index: 1;
+      background: linear-gradient(to top, #000000, transparent); pointer-events: none;
+    }
+    .lg-content {
+      position: relative; z-index: 10; max-width: 1120px; width: 100%; margin: 0 auto;
+    }
+    .lg-heading {
+      font-family: var(--font-display); font-style: italic; font-weight: 400;
+      font-size: clamp(3.1rem, 7vw, 5.4rem); line-height: 0.88;
+      letter-spacing: -0.025em; color: #ffffff; max-width: 760px; margin: 0 auto 18px;
+    }
+    .lg-subtext {
+      color: rgba(255, 255, 255, 0.62); font-weight: 300;
+      font-size: clamp(0.92rem, 1.2vw, 1.05rem); max-width: 560px; margin: 0 auto 34px; line-height: 1.6;
+    }
+    .lg-btn-row {
+      display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;
+    }
+    .lg-btn-glass {
+      border-radius: 999px; padding: 13px 26px; font-size: 0.9rem; font-weight: 500;
+      color: #ffffff; display: inline-flex; align-items: center; gap: 8px;
+      cursor: pointer; font-family: var(--font-sans);
+    }
+    .lg-btn-solid {
+      background: #ffffff; color: #000000; border: none; border-radius: 999px;
+      padding: 13px 26px; font-size: 0.9rem; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-family: var(--font-sans);
+    }
+    .lg-footer-bar {
+      margin-top: 120px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .lg-footer-copy { color: rgba(255, 255, 255, 0.42); font-size: 0.78rem; font-weight: 300; }
+    .lg-footer-links { display: flex; gap: 24px; }
+    .lg-footer-links a { color: rgba(255, 255, 255, 0.42); font-size: 0.78rem; font-weight: 300; text-decoration: none; }
+    .lg-footer-links a:hover { color: rgba(255, 255, 255, 0.78); }
+
+    /* Interactive Scope & Pricing Matrix Below Fold (One Live Thing) */
+    .lg-sec { max-width: 1120px; margin: 0 auto; padding: 64px 24px; }
+    .lg-pricing-box {
+      border-radius: 28px; padding: 36px; border: 1px solid var(--border);
+      background: #08080b; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center;
+    }
+    .lg-plan-tab {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: transparent; color: #ffffff; font-family: var(--font-sans); font-size: 0.86rem; cursor: pointer;
+    }
+    .lg-plan-tab.is-active { background: #ffffff; color: #000000; font-weight: 600; }
+
+    .lg-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(0, 0, 0, 0.82);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .lg-modal.is-open { display: flex; }
+    .lg-modal-card {
+      background: #0d0d12; border: 1px solid var(--border); border-radius: 24px;
+      max-width: 480px; width: 100%; padding: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .lg-pricing-box { grid-template-columns: 1fr; }
+      .lg-nav-links { display: none; }
+    }
+    @media (max-width: 560px) {
+      .lg-footer-bar { flex-direction: column; text-align: center; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
   </style>
 </head>
-<body>
+<body data-motion="active">
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
-    <defs>
-      <filter id="liq29LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
-        <feDisplacementMap id="liq29Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-  </svg>
 
-  <header class="liq29-navbar">
-    <strong style="font-size:17px;">✦ Liquid Glass CTA</strong>
-    <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;">
-      <button type="button" id="motionToggleBtn" class="liq29-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="liq29-cta-btn" data-next-preview>Explore Liquid Glass CTA ↗</button>
+  <header class="lg-header">
+    <nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1120px;margin:0 auto;">
+      <a href="#main-content" class="lg-brand">Studio.</a>
+      <ul class="lg-nav-links">
+        <li><a href="#cta-hero">Possibilities</a></li>
+        <li><a href="#pricing-simulator">Pricing</a></li>
+        <li><a href="#architecture-specs">Architecture</a></li>
+      </ul>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="lg-plan-tab">Motion: ON</button>
+        <button type="button" class="lg-btn-solid" style="padding:8px 18px;font-size:0.8rem;" data-lg-modal="open">Book a Call</button>
+      </div>
     </nav>
   </header>
 
   <main id="main-content">
-    <section id="heroStage" class="liq29-hero">
-      <video id="heroBgVideo" class="liq29-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5d68-4780-8832-691ef6fb0725.mp4" autoplay loop muted playsinline preload="auto"></video>
-      <canvas id="ambientSmokeCanvas" class="liq29-smoke-canvas" aria-hidden="true"></canvas>
-      <div class="liq29-hero-grid">
-        <div data-parallax="0.08">
-          <span class="liq29-pill-btn" style="color:var(--accent-primary);display:inline-flex;align-items:center;">Liquid Glass CTA • Interactive Edition</span>
-          <h1 class="liq29-h1" id="oversizedHeadline">application/vnd.apple.mpegurl</h1>
-          <p style="font-size:16px;color:var(--text-secondary);line-height:1.65;max-width:60ch;margin-bottom:24px;">Precision-engineered Liquid Glass CTA web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-          <div style="display:flex;gap:28px;flex-wrap:wrap;font-variant-numeric:tabular-nums;">
-            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;font-family:var(--font-mono);">120FPS</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Motion Pipeline</span></div>
-            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;font-family:var(--font-mono);">10K+</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Active Nodes</span></div>
-            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;font-family:var(--font-mono);">99%</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Visual Fidelity</span></div>
-          </div>
+    <!-- Section 1: Exact Prompt HLS Video Liquid Glass CTA + Footer -->
+    <section id="cta-hero" class="lg-cta-section" aria-label="Your next website starts here">
+      <video id="lgHlsVideo" class="lg-video-bg" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260603_132049_036591b8-6e92-4760-b94c-a7ea6eef315c.mp4" autoplay loop muted playsinline></video>
+      <div class="lg-fade-top"></div>
+      <div class="lg-fade-bottom"></div>
+
+      <div class="lg-content">
+        <h1 class="lg-heading">Your next website starts here.</h1>
+        <p class="lg-subtext">
+          Book a free strategy call. See what AI&#8209;powered design can do. No commitment, no pressure. Just possibilities.
+        </p>
+        <div class="lg-btn-row">
+          <button type="button" class="liquid-glass-strong lg-btn-glass" data-lg-modal="open">
+            <span>Book a Call</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+            </svg>
+          </button>
+          <a href="#pricing-simulator" class="lg-btn-solid">
+            <span>View Pricing</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+            </svg>
+          </a>
         </div>
-        <div id="heroPopoutRig" class="liq29-popout-wrap" style="filter:url(#liq29LiquidFilter);">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.75"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#a855f7" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
+
+        <div class="lg-footer-bar">
+          <p class="lg-footer-copy">&copy; 2026 Studio. All rights reserved.</p>
+          <div class="lg-footer-links">
+            <a href="#privacy" data-lg-modal="open">Privacy</a>
+            <a href="#terms" data-lg-modal="open">Terms</a>
+            <a href="#contact" data-lg-modal="open">Contact</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="pinnedSpecs" class="liq29-section">
-      <div class="liq29-pinned-grid">
-        <article class="liq29-card liq29-reveal" data-spec-index="001">
-          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">001 / LIQUID GLASS CTA</span>
-          <h2 style="font-size:20px;margin:8px 0;">application/vnd.apple.mpegurl</h2>
-          <p style="font-size:13px;color:var(--text-secondary);">Precision-engineered Liquid Glass CTA web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-        </article>
-        <div class="liq29-card" id="scrubCenterStage" style="text-align:center;">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.75"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#a855f7" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
-          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">SCROLL SCRUB ANGLE: 0.0°</p>
+    <!-- Section 2: Interactive AI Design Sprint & Pricing Simulator (One Live Thing) -->
+    <section id="pricing-simulator" class="lg-sec" aria-label="Interactive AI Design Pricing">
+      <div class="lg-pricing-box">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;">TRANSPARENT AI DESIGN RETAINERS</span>
+          <h2 style="font-family:var(--font-display);font-style:italic;font-size:2.6rem;font-weight:400;margin:8px 0 12px;">Estimate Your Launch Velocity</h2>
+          <p style="color:var(--muted);font-size:0.92rem;margin-bottom:20px;">Select a studio engagement model to inspect turnaround time, liquid-glass component count, and conversion SLA.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="lg-plan-tab is-active" data-price="$3,400" data-days="5 Days" data-sections="8 Sections">Landing Page Sprint</button>
+            <button type="button" class="lg-plan-tab" data-price="$6,800" data-days="10 Days" data-sections="18 Sections">Full Product Flagship</button>
+            <button type="button" class="lg-plan-tab" data-price="$9,500" data-days="14 Days" data-sections="32 Sections">Design System + WebGL</button>
+          </div>
         </div>
-        <article class="liq29-card liq29-reveal" data-spec-index="002">
-          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">002 / TELEMETRY</span>
-          <h2 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h2>
-          <p style="font-size:13px;color:var(--text-secondary);">Interactive perspective cards and SVG displacement filters tuned for Liquid Glass CTA.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;">
+          <div class="liquid-glass-strong" style="padding:20px;border-radius:18px;">
+            <div style="font-size:0.72rem;color:var(--muted);">INVESTMENT</div>
+            <div id="lgPriceOut" class="stat-num" data-counter="3400" data-suffix="$" style="font-family:var(--font-display);font-size:2.1rem;margin-top:4px;">$3,400</div>
+          </div>
+          <div class="liquid-glass-strong" style="padding:20px;border-radius:18px;">
+            <div style="font-size:0.72rem;color:var(--muted);">DELIVERY</div>
+            <div id="lgDaysOut" class="tabular-nums" style="font-family:var(--font-display);font-size:2.1rem;margin-top:4px;">5 Days</div>
+          </div>
+          <div class="liquid-glass-strong" style="padding:20px;border-radius:18px;">
+            <div style="font-size:0.72rem;color:var(--muted);">SCOPE</div>
+            <div id="lgSecOut" class="tabular-nums" style="font-family:var(--font-display);font-size:2.1rem;margin-top:4px;">8 Sections</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Liquid Glass Optical Architecture -->
+    <section id="architecture-specs" class="lg-sec" aria-label="Optical Architecture Specifications">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="resp-stack">
+        <article class="liquid-glass-strong" style="padding:26px;border-radius:22px;">
+          <h3 style="font-family:var(--font-display);font-style:italic;font-size:1.6rem;margin-bottom:8px;">Luminosity Blend</h3>
+          <p style="color:var(--muted);font-size:0.88rem;line-height:1.6;">XOR mask-composite specular borders paired with hardware-accelerated backdrop luminosity.</p>
+        </article>
+        <article class="liquid-glass-strong" style="padding:26px;border-radius:22px;">
+          <h3 style="font-family:var(--font-display);font-style:italic;font-size:1.6rem;margin-bottom:8px;">Adaptive HLS Stream</h3>
+          <p style="color:var(--muted);font-size:0.88rem;line-height:1.6;">Zero-buffering Mux HLS playback across Chrome, Firefox, Edge, and native Safari MediaSource.</p>
+        </article>
+        <article class="liquid-glass-strong" style="padding:26px;border-radius:22px;">
+          <h3 style="font-family:var(--font-display);font-style:italic;font-size:1.6rem;margin-bottom:8px;">200px Edge Feathering</h3>
+          <p style="color:var(--muted);font-size:0.88rem;line-height:1.6;">Dual top-and-bottom linear-gradient black vignettes that anchor into dark-mode layouts.</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="liq29-section" style="padding-top:24px;padding-bottom:40px;border-top:1px solid var(--border-hairline);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-    <span style="font-size:13px;color:var(--text-secondary);">© 2026 Liquid Glass CTA. Crafted with ForgeFrame Gold v2.0.</span>
-    <span style="font-size:12px;font-family:var(--font-mono);color:var(--accent-primary);">STATUS: NOMINAL • 60FPS</span>
+  <footer style="padding:28px 24px;text-align:center;color:rgba(255,255,255,0.4);font-size:0.76rem;border-top:1px solid rgba(255,255,255,0.08);">
+    <p>&copy; 2026 Studio — AI-Powered Design &amp; Liquid Glass Engineering.</p>
   </footer>
 
-  <div id="seamlessModal" class="liq29-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
-    <div class="liq29-seamless-box">
+  <div class="lg-modal" id="lgModal" role="dialog" aria-modal="true" aria-labelledby="lgModalTitle">
+    <div class="lg-modal-card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <span class="liq29-pill-btn">Liquid Glass CTA Specification</span>
-        <button type="button" id="closeSeamlessBtn" class="liq29-pill-btn">Close (Esc)</button>
+        <h3 id="lgModalTitle" style="font-family:var(--font-display);font-style:italic;font-size:1.75rem;font-weight:400;">Book a Free Strategy Call</h3>
+        <button type="button" id="lgModalClose" class="lg-plan-tab" style="padding:6px 14px;">Close</button>
       </div>
-      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Liquid Glass CTA</h2>
-      <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:18px;">Precision-engineered Liquid Glass CTA web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-      <div style="margin-bottom:18px;"><svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#a855f7" stop-opacity="0.75"/><stop offset="100%" stop-color="#a855f7" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#a855f7" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg></div>
-      <button type="button" id="confirmSeamlessBtn" class="liq29-cta-btn" style="width:100%;">Return to Live Stage</button>
+      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:16px;">No commitment, no pressure. Choose your preferred discovery slot below.</p>
+      <form id="lgModalForm" style="display:grid;gap:12px;">
+        <input type="text" required placeholder="Your Name" style="padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:#000;color:#fff;">
+        <input type="email" required placeholder="you@company.com" style="padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:#000;color:#fff;">
+        <button type="submit" class="lg-btn-solid" style="justify-content:center;">Confirm Strategy Call</button>
+      </form>
     </div>
   </div>
-  
+
   <script>
     (function () {
+      var video = document.getElementById('lgHlsVideo');
+      var src = 'https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8';
+      if (video) {
+        if (window.Hls && window.Hls.isSupported()) {
+          var hls = new window.Hls();
+          hls.loadSource(src);
+          hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = src;
+        }
+      }
+
+      var tabs = document.querySelectorAll('.lg-plan-tab[data-price]');
+      var pOut = document.getElementById('lgPriceOut');
+      var dOut = document.getElementById('lgDaysOut');
+      var sOut = document.getElementById('lgSecOut');
+      tabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          tabs.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (pOut) pOut.textContent = btn.getAttribute('data-price');
+          if (dOut) dOut.textContent = btn.getAttribute('data-days');
+          if (sOut) sOut.textContent = btn.getAttribute('data-sections');
+        });
+      });
+
+      var modal = document.getElementById('lgModal');
+      var closeBtn = document.getElementById('lgModalClose');
+      document.querySelectorAll('[data-lg-modal="open"]').forEach(function (el) {
+        el.addEventListener('click', function (e) { e.preventDefault(); if (modal) modal.classList.add('is-open'); });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+      var form = document.getElementById('lgModalForm');
+      if (form) form.addEventListener('submit', function (e) { e.preventDefault(); modal.classList.remove('is-open'); });
+    })();
+  
+    (function () {
       var motionPaused = false;
-      var motionBtn = document.getElementById('motionToggleBtn');
-      var heroVid = document.getElementById('heroBgVideo');
-      if (motionBtn) {
-        motionBtn.addEventListener('click', function () {
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
           motionPaused = !motionPaused;
-          document.body.classList.toggle('is-motion-paused', motionPaused);
-          motionBtn.setAttribute('aria-pressed', String(motionPaused));
-          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
-          if (heroVid) {
-            if (motionPaused) heroVid.pause();
-            else heroVid.play().catch(function(){});
-          }
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
         });
       }
-
-      // Live London Clock (if #londonClock exists)
-      var clockEl = document.getElementById('londonClock');
-      function updateLondonClock() {
-        if (!clockEl) return;
-        try {
-          var now = new Date();
-          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
-          clockEl.textContent = t + ' in London';
-        } catch (e) {
-          clockEl.textContent = '14:30 in London';
-        }
-      }
-      updateLondonClock();
-      setInterval(updateLondonClock, 10000);
-
-      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
-      var scrubStage = document.getElementById('scrubCenterStage');
-      var scrubDial = document.getElementById('scrubDialText');
-      var scrubReadout = document.getElementById('scrollScrubReadout');
-      var parallaxEls = document.querySelectorAll('[data-parallax]');
-      var specCards = document.querySelectorAll('[data-spec-index]');
-
-      function onScroll() {
-        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
-        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
-        var deg = (progress * 360).toFixed(1);
-
-        if (!motionPaused) {
-          parallaxEls.forEach(function (el) {
-            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
-            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
-          });
-          if (scrubStage) {
-            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
-          }
-        }
-        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
-        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
-        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
-      }
-      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
-      onScroll();
-
-      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
-      var revealEls = document.querySelectorAll('.liq29-reveal');
-      var counterEls = document.querySelectorAll('[data-counter-target]');
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
       function animateCounter(el) {
-        if (el.getAttribute('data-counted') === 'true') return;
-        el.setAttribute('data-counted', 'true');
-        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
-        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
         var start = performance.now();
-        function tick(now) {
-          var t = Math.min(1, (now - start) / 1000);
-          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
-          if (t < 1) window.requestAnimationFrame(tick);
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
         }
-        window.requestAnimationFrame(tick);
+        window.requestAnimationFrame(stepCounter);
       }
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-        }, { threshold: 0.12 });
-        revealEls.forEach(function (el) { io.observe(el); });
-        var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
-        }, { threshold: 0.2 });
-        counterEls.forEach(function (el) { cio.observe(el); });
-      } else {
-        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-      }
-
-      // Group 3.3: Seamless Fullscreen Modal Transition
-      var modal = document.getElementById('seamlessModal');
-      var modalTitle = document.getElementById('seamlessTitle');
-      var exploreBtn = document.getElementById('exploreMagneticBtn');
-      var closeBtn = document.getElementById('closeSeamlessBtn');
-      var confirmBtn = document.getElementById('confirmSeamlessBtn');
-
-      function openSeamless(titleText) {
-        if (!modal) return;
-        if (titleText && modalTitle) modalTitle.textContent = titleText;
-        modal.classList.add('is-open');
-      }
-      function closeSeamless() {
-        if (!modal) return;
-        modal.classList.remove('is-open');
-      }
-      if (exploreBtn) {
-        exploreBtn.addEventListener('click', function () {
-          if (modal && modal.classList.contains('is-open')) closeSeamless();
-          else openSeamless();
-        });
-      }
-      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
-      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
-      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          openSeamless(el.getAttribute('data-seamless-trigger'));
-        });
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeSeamless();
-      });
-
-      // Group 4.2: Ambient Particle / Smoke Canvas
-      var canvas = document.getElementById('ambientSmokeCanvas');
-      if (canvas && canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-        var w = 0, h = 0;
-        function resize() {
-          w = canvas.width = canvas.offsetWidth || window.innerWidth;
-          h = canvas.height = canvas.offsetHeight || window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize, { passive: true });
-        var pts = [];
-        for (var i = 0; i < 34; i++) {
-          pts.push({
-            x: Math.random() * 1400,
-            y: Math.random() * 900,
-            vx: (Math.random() - 0.5) * 0.4,
-            vy: -Math.random() * 0.45 - 0.1,
-            r: Math.random() * 2.5 + 1,
-            a: Math.random() * 0.4 + 0.12
-          });
-        }
-        function draw() {
-          if (!motionPaused && ctx) {
-            ctx.clearRect(0, 0, w, h);
-            for (var j = 0; j < pts.length; j++) {
-              var p = pts[j];
-              p.x += p.vx; p.y += p.vy;
-              if (p.y < -10) p.y = h + 10;
-              if (p.x < -10) p.x = w + 10;
-              if (p.x > w + 10) p.x = -10;
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
-              ctx.fill();
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
             }
-          }
-          window.requestAnimationFrame(draw);
-        }
-        window.requestAnimationFrame(draw);
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
       }
     })();
+
   </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+{
+  "id": "t274",
+  "slug": "futuristic-canvas",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:21:18.587Z",
+  "demo": "/demos/futuristic-canvas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "cce0f6f09642",
+  "sha256": "cce0f6f09642e9640741d3223488afd9a4a215e66ec2faf4dccda3c70ffad7e1",
+  "demoHtmlSha256": "80e6bd7bffd4de5ee96d6a6023599bdd3415509c5c1372356972cc6a0ef13e73",
+  "demoSha256": "4d8459df11e2b59d4951ab349dd6848cf55fb3bf80cb04423d9fa03cff7c49e4",
+  "bytes": 519343,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 876
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\futuristic-canvas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\futuristic-canvas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\futuristic-canvas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\futuristic-canvas-return.jpg"
+  ]
+}

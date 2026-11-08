@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEONMORPHIC — Marketplace for Creators &amp; Live Crypto Auctions</title>
+  <meta name="description" content="NFTs Marketplace brings together artists, creators and crypto enthusiasts on a single platform to create and explore top NFTs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0414;
+      --surface: #1b0b29;
+      --surface-glass: rgba(45, 22, 62, 0.72);
+      --fg: #ffffff;
+      --muted: #b5a4c4;
+      --accent: #ff1e56;
+      --accent-text: #ff5c8a;
+      --cyan: #00f0ff;
+      --on-accent: #ffffff;
+      --border: rgba(255, 255, 255, 0.22);
+      --font-display: 'Orbitron', sans-serif;
+      --font-sans: 'Space Grotesk', sans-serif;
+      --font-mono: 'Share Tech Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: radial-gradient(circle at 75% 28%, #580b34 0%, #12041d 55%, #07020c 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .nm-shell { max-width: 1220px; margin: 0 auto; padding: 0 24px; }
+    .nm-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 26px 0; gap: 16px;
+    }
+    .nm-brand {
+      text-decoration: none; font-family: var(--font-display); font-weight: 800;
+      font-size: 1.05rem; letter-spacing: 0.06em; color: #ffffff;
+    }
+    .nm-brand span { color: var(--accent); }
+    .nm-links { display: flex; gap: 30px; list-style: none; }
+    .nm-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.84rem; }
+    .nm-btn-neon {
+      padding: 10px 24px; border-radius: 999px; border: 1.5px solid var(--accent);
+      background: rgba(255, 30, 86, 0.14); color: #ffffff; font-weight: 600;
+      font-size: 0.84rem; cursor: pointer; box-shadow: 0 0 20px rgba(255, 30, 86, 0.32);
+    }
+
+    /* Hero */
+    .nm-hero {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 32px;
+      align-items: center; padding: 24px 0 48px; position: relative;
+    }
+    .nm-kicker {
+      font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.24em;
+      text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 6px;
+    }
+    .nm-hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.6rem, 5.4vw, 4.5rem);
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .nm-hero p {
+      color: var(--muted); font-size: 0.92rem; line-height: 1.65; max-width: 440px; margin-bottom: 28px;
+    }
+    .nm-bid-box {
+      margin-top: 36px; display: inline-flex; align-items: center; gap: 14px;
+      background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px);
+      border: 1px solid var(--border); border-radius: 14px; padding: 14px 22px;
+    }
+
+    /* Right Portrait & Floating HUD Pills */
+    .nm-visual-stage { position: relative; display: flex; justify-content: center; }
+    .nm-visual-stage img {
+      width: 100%; max-width: 460px; height: auto; border-radius: 28px;
+      filter: drop-shadow(0 24px 60px rgba(255, 30, 86, 0.35));
+    }
+    .nm-hud-pill {
+      position: absolute; background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 10px; padding: 10px 18px; font-size: 0.78rem; font-weight: 600;
+    }
+    .nm-hud-pill--top { top: 18%; right: 0; }
+    .nm-hud-pill--left { top: 46%; left: 0; }
+    .nm-hud-pill--right { top: 56%; right: 2%; }
+    .nm-timer-row {
+      position: absolute; bottom: 24px; right: 0;
+      display: flex; gap: 10px;
+    }
+    .nm-time-cell {
+      background: rgba(15, 7, 26, 0.78); border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 10px; width: 64px; padding: 10px 6px; text-align: center;
+    }
+    .nm-time-cell strong { display: block; font-family: var(--font-display); font-size: 1.05rem; }
+    .nm-time-cell span { font-size: 0.65rem; color: var(--muted); }
+
+    /* Section 2: Highest Live Bid */
+    .nm-live-tray {
+      background: rgba(68, 40, 74, 0.56); border: 1px solid var(--border);
+      border-radius: 28px; padding: 32px; margin: 20px 0 56px;
+    }
+    .nm-bid-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 22px;
+    }
+    .nm-bid-card {
+      background: rgba(18, 8, 28, 0.85); border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px; padding: 16px; cursor: pointer;
+    }
+    .nm-bid-card img {
+      width: 100%; height: 210px; object-fit: cover; border-radius: 14px; margin-bottom: 12px;
+    }
+
+    /* Section 3: Interactive Live Bidding Console (One Live Thing) */
+    .nm-console {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+      padding: 32px; margin-bottom: 56px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px;
+    }
+
+    .nm-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(7, 2, 12, 0.85);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .nm-modal.is-open { display: flex; }
+    .nm-modal-box {
+      background: var(--surface); border: 1px solid var(--accent); border-radius: 22px;
+      max-width: 480px; width: 100%; padding: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .nm-hero, .nm-bid-grid, .nm-console { grid-template-columns: 1fr; }
+      .nm-links { display: none; }
+      .nm-timer-row { position: static; margin-top: 16px; justify-content: center; }
+    }
+    @media (max-width: 560px) {
+      .nm-hud-pill { position: static; display: inline-block; margin: 4px; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="nm-shell">
+    <nav class="nm-nav" aria-label="Primary Navigation">
+      <a href="#main-content" class="nm-brand"><span>NEON</span>MORPHIC</a>
+      <ul class="nm-links">
+        <li><a href="#main-content">Home</a></li>
+        <li><a href="#highest-live-bid">Explore</a></li>
+        <li><a href="#bidding-console">Create</a></li>
+        <li><a href="#creator-provenance">Contact</a></li>
+        <li><a href="#creator-provenance">Blog</a></li>
+      </ul>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="nm-btn-neon" style="border-color:rgba(255,255,255,0.3);box-shadow:none;">Motion: ON</button>
+        <button type="button" class="nm-btn-neon" data-nm-modal="open">Connect wallet</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="nm-shell">
+    <!-- Section 1: Laser-Visor Cyberpunk Hero -->
+    <section id="cyber-hero" class="nm-hero" aria-label="Marketplace For Creators">
+      <div>
+        <div class="nm-kicker">MARKETPLACE FOR</div>
+        <h1>CREATORS</h1>
+        <p>NFTs Marketplace brings together artists, creators and crypto enthusiasts on a single platform to create and explore top NFTs.</p>
+        <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;">
+          <button type="button" class="nm-btn-neon" data-nm-modal="open">Explore</button>
+          <a href="#highest-live-bid" style="color:#ffffff;text-decoration:none;font-weight:600;font-size:0.88rem;display:inline-flex;align-items:center;gap:8px;">
+            <span>Create NFT</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div style="margin-top:36px;font-size:0.78rem;color:var(--muted);">Today's Highest Bid</div>
+        <div class="nm-bid-box" style="margin-top:10px;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" aria-hidden="true">
+            <polygon points="12 2 19 12 12 16 5 12 12 2"/><polygon points="12 18 19 13 12 22 5 13 12 18"/>
+          </svg>
+          <div>
+            <div style="font-size:0.68rem;color:var(--muted);">Current Bid</div>
+            <div class="stat-num" id="nmCurrentBidText" style="font-family:var(--font-mono);font-size:0.95rem;font-weight:700;">15.50 ETH = 23932.31 USD</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nm-visual-stage">
+        <img src="assets/hero-cyber.webp" alt="Cyberpunk creator with glowing red laser visor and silver braids" width="620" height="840">
+        <div class="nm-hud-pill nm-hud-pill--top">100% Authenticity</div>
+        <div class="nm-hud-pill nm-hud-pill--left"><span class="stat-num" data-counter="50000" data-suffix="+">50000+</span> Creators</div>
+        <div class="nm-hud-pill nm-hud-pill--right"><span class="stat-num" data-counter="5" data-suffix="k+">5k+</span> NFTs Stored</div>
+        <div class="nm-timer-row" aria-label="Auction Countdown">
+          <div class="nm-time-cell"><strong class="tabular-nums">12</strong><span>Days</span></div>
+          <div class="nm-time-cell"><strong class="tabular-nums">03</strong><span>Hours</span></div>
+          <div class="nm-time-cell"><strong class="tabular-nums">11</strong><span>Minutes</span></div>
+          <div class="nm-time-cell"><strong id="nmSecTick" class="tabular-nums">43</strong><span>Seconds</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Highest Live Bid Showcase -->
+    <section id="highest-live-bid" class="nm-live-tray" aria-label="Highest Live Bid">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h2 style="font-family:var(--font-sans);font-size:1.25rem;font-weight:700;">Highest Live Bid</h2>
+        <a href="#bidding-console" style="color:var(--muted);font-size:0.82rem;text-decoration:none;">See All</a>
+      </div>
+      <div class="nm-bid-grid">
+        <article class="nm-bid-card" data-nm-modal="open">
+          <img src="assets/bid-1.webp" alt="Barcode Neuro-Android NFT artwork" width="194" height="176" loading="lazy">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong>Neuro-Glyph #409</strong>
+            <span class="tabular-nums" style="color:var(--cyan);font-family:var(--font-mono);">8.40 ETH</span>
+          </div>
+        </article>
+        <article class="nm-bid-card" data-nm-modal="open">
+          <img src="assets/bid-2.webp" alt="Vortex Singularity Visor NFT artwork" width="194" height="176" loading="lazy">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong>Singularity Visor #112</strong>
+            <span class="tabular-nums" style="color:var(--cyan);font-family:var(--font-mono);">15.50 ETH</span>
+          </div>
+        </article>
+        <article class="nm-bid-card" data-nm-modal="open">
+          <img src="assets/bid-3.webp" alt="Bio-Symbiote Obsidian NFT artwork" width="194" height="176" loading="lazy">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong>Obsidian Symbiote #88</strong>
+            <span class="tabular-nums" style="color:var(--cyan);font-family:var(--font-mono);">11.20 ETH</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive Live Bidding Console (One Live Thing) -->
+    <section id="bidding-console" class="nm-console" aria-label="Interactive Live Bidding Console">
+      <div>
+        <span style="font-family:var(--font-mono);color:var(--accent-text);font-size:0.78rem;">LIVE ON-CHAIN AUCTION TERMINAL</span>
+        <h2 style="font-family:var(--font-display);font-size:1.65rem;margin:8px 0 12px;">Simulate Instant ETH Bid Increment</h2>
+        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:18px;">Select a bid increment step to calculate USD conversion and creator royalty distribution.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button type="button" class="nm-btn-neon" data-bid-step="16.00">+0.50 ETH (16.00 ETH)</button>
+          <button type="button" class="nm-btn-neon" data-bid-step="18.00">+2.50 ETH (18.00 ETH)</button>
+          <button type="button" class="nm-btn-neon" data-bid-step="22.50">Buyout (22.50 ETH)</button>
+        </div>
+      </div>
+      <div style="background:rgba(0,0,0,0.35);padding:22px;border-radius:16px;border:1px solid var(--border);">
+        <div style="font-size:0.76rem;color:var(--muted);">ACTIVE BID PROJECTION</div>
+        <div id="nmSimBidOut" class="tabular-nums" style="font-family:var(--font-display);font-size:1.75rem;margin:6px 0;color:var(--cyan);">15.50 ETH</div>
+        <div id="nmSimUsdOut" class="tabular-nums" style="font-family:var(--font-mono);font-size:0.9rem;color:var(--muted);">= $23,932.31 USD (100% Authenticity Verified)</div>
+        <meter value="0.82" min="0" max="1" style="width:100%;height:12px;margin-top:14px;"></meter>
+      </div>
+    </section>
+
+    <!-- Section 4: Smart Contract Provenance -->
+    <section id="creator-provenance" style="padding-bottom:64px;" aria-label="Smart Contract Provenance">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+        <div>
+          <h2 style="font-family:var(--font-display);font-size:1.3rem;">Zero-Gas Lazy Minting for Verified Creators</h2>
+          <p style="color:var(--muted);font-size:0.86rem;margin-top:4px;">Deploy ERC-721A &amp; ERC-1155 collections with instant IPFS pinning.</p>
+        </div>
+        <button type="button" class="nm-btn-neon" data-nm-modal="open">Launch Creator Studio</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nm-shell" style="padding:24px;border-top:1px solid var(--border);text-align:center;font-family:var(--font-mono);font-size:0.76rem;color:var(--muted);">
+    <p>© 2026 NEONMORPHIC NFT MARKETPLACE · 50,000+ CREATORS · 100% ON-CHAIN AUTHENTICITY</p>
+  </footer>
+
+  <div class="nm-modal" id="nmModal" role="dialog" aria-modal="true" aria-labelledby="nmModalTitle">
+    <div class="nm-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h3 id="nmModalTitle" style="font-family:var(--font-display);font-size:1.2rem;">Place Live Auction Bid</h3>
+        <button type="button" id="nmModalClose" class="nm-btn-neon" style="padding:6px 14px;">Close</button>
+      </div>
+      <p style="color:var(--muted);font-size:0.86rem;margin-bottom:16px;">Enter your ETH bid for Singularity Visor #112 (Minimum: 15.60 ETH).</p>
+      <form id="nmModalForm" style="display:grid;gap:12px;">
+        <input type="number" step="0.1" min="15.6" value="16.0" required style="padding:11px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:#fff;">
+        <button type="submit" class="nm-btn-neon">Confirm On-Chain Bid</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var bidBtns = document.querySelectorAll('[data-bid-step]');
+      var simEth = document.getElementById('nmSimBidOut');
+      var simUsd = document.getElementById('nmSimUsdOut');
+      var heroBid = document.getElementById('nmCurrentBidText');
+      bidBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var eth = parseFloat(btn.getAttribute('data-bid-step'));
+          var usd = (eth * 1544.02).toFixed(2);
+          if (simEth) simEth.textContent = eth.toFixed(2) + ' ETH';
+          if (simUsd) simUsd.textContent = '= $' + usd + ' USD (100% Authenticity Verified)';
+          if (heroBid) heroBid.textContent = eth.toFixed(2) + ' ETH = ' + usd + ' USD';
+        });
+      });
+
+      var modal = document.getElementById('nmModal');
+      var closeBtn = document.getElementById('nmModalClose');
+      document.querySelectorAll('[data-nm-modal="open"]').forEach(function (el) {
+        el.addEventListener('click', function () { if (modal) modal.classList.add('is-open'); });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+      var form = document.getElementById('nmModalForm');
+      if (form) form.addEventListener('submit', function (e) { e.preventDefault(); modal.classList.remove('is-open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellar Amenities — Orbital Space Architecture &amp; Strategic Advisory</title>
+  <meta name="description" content="Enable strategic advantage through space architecture. Orbital habitats, cupola observatories, and commercial viability assessments for off-world infrastructure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050911;
+      --surface: #0d1522;
+      --surface-2: #152236;
+      --fg: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-text: #7dd3fc;
+      --on-accent: #04101c;
+      --warm: #f97316;
+      --border: rgba(148, 163, 184, 0.22);
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .sa-shell { max-width: 1360px; margin: 0 auto; padding: 0 24px; }
+    .sa-topbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      background: rgba(5, 9, 17, 0.82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .sa-nav {
+      max-width: 1360px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .sa-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--fg); text-decoration: none; font-family: var(--font-display);
+      font-weight: 600; font-size: 0.92rem; letter-spacing: 0.04em;
+    }
+    .sa-brand-sub {
+      font-family: var(--font-mono); font-size: 0.66rem; color: var(--muted);
+      line-height: 1.15; text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .sa-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .sa-links a {
+      color: var(--muted); text-decoration: none; font-family: var(--font-mono);
+      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .sa-links a:hover { color: var(--fg); }
+    .sa-hud-coords {
+      display: flex; align-items: center; gap: 14px;
+      font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-text);
+    }
+    .sa-btn-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: #ffffff; color: #050911; font-family: var(--font-mono);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; text-decoration: none;
+    }
+    .sa-btn-ghost {
+      padding: 7px 13px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(15, 23, 36, 0.85); color: var(--fg);
+      font-family: var(--font-mono); font-size: 0.7rem; cursor: pointer;
+    }
+
+    /* Frame 1: Spacecraft Viewport Hero */
+    .sa-viewport-stage {
+      padding-top: 86px; padding-bottom: 40px;
+    }
+    .sa-viewport-frame {
+      position: relative; border-radius: 44px; overflow: hidden;
+      border: 2px solid rgba(125, 211, 252, 0.28);
+      box-shadow: inset 0 0 80px rgba(5, 9, 17, 0.92), 0 30px 80px rgba(0, 0, 0, 0.7);
+      min-height: 620px; display: flex; align-items: center; justify-content: center;
+      background: #08111d;
+    }
+    .sa-viewport-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; filter: saturate(1.08) contrast(1.04);
+      transform: scale(1.02);
+      transition: transform 0.8s var(--ease-out);
+    }
+    .sa-viewport-frame:hover .sa-viewport-bg { transform: scale(1.05); }
+    .sa-viewport-vignette {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 82% 76% at 50% 50%, rgba(5,9,17,0.12) 40%, rgba(5,9,17,0.88) 100%);
+      pointer-events: none;
+    }
+    .sa-hud-rail {
+      position: absolute; top: 32px; bottom: 32px; width: 22px;
+      border-top: 1px solid rgba(255,255,255,0.35);
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+      pointer-events: none; z-index: 2;
+    }
+    .sa-hud-rail--left { left: 28px; border-left: 1px solid rgba(255,255,255,0.35); }
+    .sa-hud-rail--right { right: 28px; border-right: 1px solid rgba(255,255,255,0.35); }
+    .sa-hero-center {
+      position: relative; z-index: 3; text-align: center; max-width: 760px; padding: 32px 24px;
+    }
+    .sa-eyebrow {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.72rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-text);
+      margin-bottom: 16px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(5, 9, 17, 0.65); border: 1px solid rgba(125, 211, 252, 0.3);
+    }
+    .sa-hero-center h1 {
+      font-family: var(--font-display); font-weight: 500;
+      font-size: clamp(2.2rem, 4.6vw, 4.1rem); line-height: 1.06;
+      letter-spacing: -0.025em; color: #ffffff;
+      text-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
+      margin-bottom: 20px;
+    }
+    .sa-hero-center p {
+      font-size: clamp(0.95rem, 1.3vw, 1.12rem); color: rgba(248, 250, 252, 0.88);
+      max-width: 560px; margin: 0 auto 28px; line-height: 1.6;
+    }
+    .sa-hud-footer {
+      position: absolute; left: 42px; right: 42px; bottom: 24px; z-index: 3;
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.14em;
+      color: rgba(248, 250, 252, 0.78); text-transform: uppercase;
+    }
+
+    /* Frame 2: Hexagonal Cupola Observatory */
+    .sa-cupola-sec { padding: 56px 0; }
+    .sa-cupola-card {
+      position: relative; border-radius: 36px; overflow: hidden;
+      border: 1px solid var(--border); background: #070d17;
+      min-height: 560px; display: grid; grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+    }
+    .sa-cupola-media {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0.92;
+    }
+    .sa-cupola-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(5,9,17,0.88) 0%, rgba(5,9,17,0.28) 50%, rgba(5,9,17,0.78) 100%);
+    }
+    .sa-cupola-left, .sa-cupola-right {
+      position: relative; z-index: 2; padding: 48px;
+    }
+    .sa-cupola-left h2 {
+      font-family: var(--font-display); font-weight: 500;
+      font-size: clamp(2rem, 3.8vw, 3.4rem); line-height: 1.08;
+      letter-spacing: -0.02em; margin-bottom: 18px;
+    }
+    .sa-cupola-right {
+      display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 18px;
+    }
+    .sa-biome-tabs {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end;
+    }
+    .sa-biome-btn {
+      padding: 8px 14px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(13, 21, 34, 0.82); color: var(--muted);
+      font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 0.1em; cursor: pointer;
+    }
+    .sa-biome-btn[aria-selected="true"] {
+      background: var(--accent); color: var(--on-accent); border-color: var(--accent); font-weight: 600;
+    }
+    .sa-biome-readout {
+      background: rgba(5, 9, 17, 0.84); border: 1px solid var(--border);
+      border-radius: 20px; padding: 20px 24px; max-width: 360px; text-align: left;
+    }
+
+    /* Frame 3: Commercial Viability Assessment (6 Frosted Pentagon Petals) */
+    .sa-viability-sec { padding: 56px 0; }
+    .sa-viability-stage {
+      position: relative; border-radius: 36px; overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: linear-gradient(180deg, #101c2e 0%, #3e556e 100%);
+      padding: 64px 36px; text-align: center;
+    }
+    .sa-viability-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0.42; mix-blend-mode: screen; pointer-events: none;
+    }
+    .sa-petal-ring {
+      position: relative; z-index: 2; max-width: 1040px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: center;
+    }
+    .sa-petal-card {
+      background: rgba(226, 232, 240, 0.16);
+      backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255, 255, 255, 0.42);
+      padding: 28px 22px;
+      clip-path: polygon(18% 0%, 82% 0%, 100% 38%, 76% 100%, 24% 100%, 0% 38%);
+      min-height: 195px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      cursor: pointer;
+    }
+    .sa-petal-card:hover { transform: translateY(-5px) scale(1.02); background: rgba(255, 255, 255, 0.24); }
+    .sa-petal-center {
+      grid-column: 1 / -1; max-width: 480px; margin: 12px auto;
+      padding: 18px;
+    }
+    .sa-petal-center h2 {
+      font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 500; margin: 8px 0 12px;
+    }
+    .sa-petal-center p {
+      font-family: var(--font-mono); font-size: 0.78rem; color: rgba(248, 250, 252, 0.86);
+      line-height: 1.65; margin-bottom: 20px;
+    }
+
+    /* Interactive Orbital Viability Simulator */
+    .sa-sim-sec { padding: 48px 0; }
+    .sa-sim-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 28px; padding: 36px;
+    }
+    .sa-slider-row { margin-bottom: 18px; }
+    .sa-slider-row label {
+      display: flex; justify-content: space-between; font-family: var(--font-mono);
+      font-size: 0.76rem; color: var(--muted); margin-bottom: 8px;
+    }
+    .sa-slider-row input[type="range"] {
+      width: 100%; accent-color: var(--accent); cursor: pointer;
+    }
+    .sa-dl-matrix {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+    }
+    .sa-dl-item {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 18px; padding: 20px;
+    }
+    .sa-dl-item dt {
+      font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;
+    }
+    .sa-dl-item dd {
+      font-family: var(--font-display); font-size: 1.85rem; font-weight: 700;
+      color: var(--fg); font-variant-numeric: tabular-nums;
+    }
+
+    /* Modal */
+    .sa-modal-backdrop {
+      position: fixed; inset: 0; z-index: 200; background: rgba(5, 9, 17, 0.82);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .sa-modal-backdrop.is-open { display: flex; }
+    .sa-modal-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 24px; max-width: 520px; width: 100%; padding: 32px;
+    }
+
+    @media (max-width: 960px) {
+      .sa-cupola-card, .sa-sim-grid, .sa-petal-ring { grid-template-columns: 1fr; }
+      .sa-links { display: none; }
+      .sa-cupola-right { align-items: flex-start; text-align: left; }
+    }
+    @media (max-width: 560px) {
+      .sa-viewport-frame { min-height: 480px; border-radius: 24px; }
+      .sa-dl-matrix { grid-template-columns: 1fr; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="sa-topbar">
+    <nav class="sa-nav" aria-label="Primary Navigation">
+      <a href="#viewport-hero" class="sa-brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <polygon points="12 2 15 8 21 9 17 14 18 20 12 17 6 20 7 14 3 9 9 8 12 2"/>
+        </svg>
+        <span>Stellar Amenities</span>
+        <span class="sa-brand-sub">WE ARE<br>SPACE ARCHITECTS</span>
+      </a>
+      <ul class="sa-links">
+        <li><a href="#viewport-hero">Industries</a></li>
+        <li><a href="#cupola-observatory">Insights</a></li>
+        <li><a href="#viability-assessment">Manifesto</a></li>
+        <li><a href="#orbital-simulator">Viability Lab</a></li>
+      </ul>
+      <div class="sa-hud-coords">
+        <span>X 485.56 / Y 125.78</span>
+        <button type="button" id="motionToggleBtn" class="sa-btn-ghost">Motion: ON</button>
+        <button type="button" class="sa-btn-pill" data-open-modal="briefing">Contact Us</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="sa-shell">
+    <!-- Section 1: Spacecraft Viewport Hero -->
+    <section id="viewport-hero" class="sa-viewport-stage" aria-label="Space Architecture Viewport">
+      <div class="sa-viewport-frame">
+        <img src="assets/hero-valley.webp" alt="Alien coral-tree biosphere valley viewed through orbital spacecraft viewport with geodesic habitat domes" width="1000" height="486" class="sa-viewport-bg">
+        <div class="sa-viewport-vignette"></div>
+        <div class="sa-hud-rail sa-hud-rail--left"></div>
+        <div class="sa-hud-rail sa-hud-rail--right"></div>
+        <div class="sa-hero-center">
+          <span class="sa-eyebrow">STRATEGIC ADVISORY IN SPACE ARCHITECTURE</span>
+          <h1>Enable Strategic Advantage through Space Architecture</h1>
+          <p>Stellar Amenities is a top strategic advisory firm engineering pressurized habitats, orbital cupola observatories, and commercial off-world infrastructure.</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="#cupola-observatory" class="sa-btn-pill">
+              <span>Start Your Journey</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+            <button type="button" class="sa-btn-ghost" data-open-modal="briefing">Request Mission Dossier</button>
+          </div>
+        </div>
+        <div class="sa-hud-footer">
+          <span>SCROLL TO EXPERIENCE</span>
+          <span>TELEMETRY LOCK: ORBITAL SECTOR 01</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Hexagonal Cupola Observatory -->
+    <section id="cupola-observatory" class="sa-cupola-sec" aria-label="Hexagonal Cupola Observatory">
+      <article class="sa-cupola-card">
+        <img src="assets/cupola-window.webp" alt="Six-panel hexagonal spacecraft cupola window overlooking ringed planet and biosphere river" width="1000" height="486" class="sa-cupola-media" loading="lazy">
+        <div class="sa-cupola-overlay"></div>
+        <div class="sa-cupola-left">
+          <span class="sa-eyebrow">01 · CUPOLA OBSERVATORY SYSTEM</span>
+          <h2>Space Design<br>at Your Advantage</h2>
+          <p style="color:rgba(248,250,252,0.84);max-width:420px;line-height:1.65;margin-bottom:24px;">
+            Stellar Amenities is a top strategic advisory firm in space architecture, pairing multi-layered fused-silica cupola geometry with autonomous radiation shielding.
+          </p>
+          <button type="button" class="sa-btn-pill" data-open-modal="briefing">
+            <span>Start Your Journey</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="sa-cupola-right">
+          <div class="sa-biome-tabs" role="tablist" aria-label="Orbital Window Sector">
+            <button type="button" role="tab" class="sa-biome-btn" aria-selected="true" data-sector="who" data-title="Who We Are — Orbital Advisory" data-desc="Cross-disciplinary aerospace architects, life-support thermodynamicists, and orbital economists." data-alt="485.56 km">Who We Are</button>
+            <button type="button" role="tab" class="sa-biome-btn" aria-selected="false" data-sector="ringed" data-title="Ringed Planet Cupola Array" data-desc="Six-pane aluminum-lithium pressure frame rated for 100,000 micrometeoroid impact cycles." data-alt="612.40 km">Cupola Array</button>
+            <button type="button" role="tab" class="sa-biome-btn" aria-selected="false" data-sector="biosphere" data-title="Closed-Loop Biosphere Domes" data-desc="Hydroponic coral-flora atmospheric scrubbers achieving 98.7% oxygen recovery in low gravity." data-alt="125.78 km">Biosphere</button>
+          </div>
+          <aside class="sa-biome-readout" aria-live="polite">
+            <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);margin-bottom:6px;" id="saSectorAlt">ALTITUDE VECTOR: 485.56 km</div>
+            <h3 style="font-family:var(--font-display);font-size:1.2rem;margin-bottom:8px;" id="saSectorTitle">Who We Are — Orbital Advisory</h3>
+            <p style="font-size:0.86rem;color:var(--muted);line-height:1.55;" id="saSectorDesc">Cross-disciplinary aerospace architects, life-support thermodynamicists, and orbital economists.</p>
+          </aside>
+        </div>
+      </article>
+    </section>
+
+    <!-- Section 3: Commercial Viability Assessment (6 Frosted Pentagon Petals) -->
+    <section id="viability-assessment" class="sa-viability-sec" aria-label="Commercial Viability Assessment">
+      <div class="sa-viability-stage">
+        <img src="assets/viability-petals.webp" alt="Six frosted glass polygonal modules arranged radially around Commercial Viability Assessment" width="1000" height="486" class="sa-viability-bg" loading="lazy">
+        <div class="sa-petal-ring">
+          <article class="sa-petal-card" data-open-modal="briefing">
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);">MODULE 01</span>
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin:6px 0;">Payload Mass Optimization</h3>
+            <p style="font-size:0.78rem;color:rgba(248,250,252,0.82);">Composite inflatable shells cutting launch mass by 42%.</p>
+          </article>
+          <article class="sa-petal-card" data-open-modal="briefing">
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);">MODULE 02</span>
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin:6px 0;">Orbital Unit Economics</h3>
+            <p style="font-size:0.78rem;color:rgba(248,250,252,0.82);">Multi-tenant research &amp; tourism yield modeling.</p>
+          </article>
+          <article class="sa-petal-card" data-open-modal="briefing">
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);">MODULE 03</span>
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin:6px 0;">ECLSS Redundancy</h3>
+            <p style="font-size:0.78rem;color:rgba(248,250,252,0.82);">Closed-loop water &amp; bioregenerative air revitalization.</p>
+          </article>
+
+          <div class="sa-petal-center">
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-text);">01</span>
+            <h2>Commercial Viability Assessment</h2>
+            <p>We evaluate architecture concepts against commercial metrics to identify value creation opportunities and address market gaps.</p>
+            <button type="button" class="sa-btn-pill" data-open-modal="briefing">
+              <span>Contact Us</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <article class="sa-petal-card" data-open-modal="briefing">
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);">MODULE 04</span>
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin:6px 0;">Microgravity Ergonomics</h3>
+            <p style="font-size:0.78rem;color:rgba(248,250,252,0.82);">Circadian lighting &amp; acoustic dampening envelopes.</p>
+          </article>
+          <article class="sa-petal-card" data-open-modal="briefing">
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);">MODULE 05</span>
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin:6px 0;">Docking &amp; Berthing</h3>
+            <p style="font-size:0.78rem;color:rgba(248,250,252,0.82);">IDSS-compliant universal pressure nodes.</p>
+          </article>
+          <article class="sa-petal-card" data-open-modal="briefing">
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-text);">MODULE 06</span>
+            <h3 style="font-family:var(--font-display);font-size:1.05rem;margin:6px 0;">In-Situ Resource Utilization</h3>
+            <p style="font-size:0.78rem;color:rgba(248,250,252,0.82);">Regolith sintered radiation shielding shells.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Interactive Orbital Viability Simulator (One Live Thing) -->
+    <section id="orbital-simulator" class="sa-sim-sec" aria-label="Interactive Orbital Viability Simulator">
+      <div class="sa-sim-grid">
+        <div>
+          <span class="sa-eyebrow">LIVE MISSION TELEMETRY &amp; ROI CALCULATOR</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:14px;">Configure Habitat Parameters</h2>
+          <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;margin-bottom:24px;">Adjust pressurized volume and crew capacity to simulate launch payload mass, solar array output, and 5-year commercial IRR.</p>
+          <div class="sa-slider-row">
+            <label for="saCrewRange"><span>CREW &amp; RESEARCH CAPACITY</span><strong id="saCrewVal" class="tabular-nums">12 Astronauts</strong></label>
+            <input id="saCrewRange" type="range" min="4" max="36" step="2" value="12">
+          </div>
+          <div class="sa-slider-row">
+            <label for="saModulesRange"><span>PRESSURIZED CUPOLA MODULES</span><strong id="saModVal" class="tabular-nums">6 Modules</strong></label>
+            <input id="saModulesRange" type="range" min="2" max="12" step="1" value="6">
+          </div>
+        </div>
+        <dl class="sa-dl-matrix">
+          <div class="sa-dl-item">
+            <dt>Pressurized Volume</dt>
+            <dd id="saVolOut" class="stat-num" data-counter="840" data-suffix=" m³">840 m³</dd>
+          </div>
+          <div class="sa-dl-item">
+            <dt>ECLSS Closure Rate</dt>
+            <dd id="saEclssOut" class="stat-num" data-counter="98" data-suffix=".4%">98.4%</dd>
+          </div>
+          <div class="sa-dl-item">
+            <dt>Projected 5-Yr IRR</dt>
+            <dd id="saIrrOut" class="stat-num" data-counter="34" data-suffix=".2%">34.2%</dd>
+          </div>
+          <div class="sa-dl-item">
+            <dt>Orbital Altitude</dt>
+            <dd class="stat-num" data-counter="485" data-suffix=" km">485 km</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Section 5: Architectural Manifesto & Sitemap -->
+    <section id="mission-manifesto" style="padding:36px 0 64px;" aria-label="Mission Manifesto">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;">
+        <div>
+          <h2 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:6px;">Ready to Architect Off-World Infrastructure?</h2>
+          <p style="color:var(--muted);font-size:0.9rem;">Schedule a confidential technical review with Stellar Amenities Space Architects.</p>
+        </div>
+        <button type="button" class="sa-btn-pill" data-open-modal="briefing">Schedule Strategic Assessment</button>
+      </div>
+    </section>
+  </main>
+
+  <footer style="border-top:1px solid var(--border);padding:28px 24px;text-align:center;font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);">
+    <p>© 2026 Stellar Amenities — Space Architecture Advisory. Coordinates X 485.56 / Y 125.78.</p>
+  </footer>
+
+  <div class="sa-modal-backdrop" id="saModal" role="dialog" aria-modal="true" aria-labelledby="saModalTitle">
+    <div class="sa-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <h3 id="saModalTitle" style="font-family:var(--font-display);font-size:1.3rem;">Mission Viability Briefing</h3>
+        <button type="button" id="saModalClose" class="sa-btn-ghost">Close</button>
+      </div>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;margin-bottom:16px;">Submit your orbital mission parameters to receive a custom Commercial Viability Assessment dossier.</p>
+      <form id="saModalForm" style="display:grid;gap:12px;">
+        <label style="font-size:0.78rem;color:var(--muted);">Organization / Agency
+          <input type="text" required placeholder="Orbital Dynamics Corp" style="width:100%;margin-top:4px;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--fg);">
+        </label>
+        <label style="font-size:0.78rem;color:var(--muted);">Target Regime
+          <select style="width:100%;margin-top:4px;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--fg);">
+            <option>Low Earth Orbit (400–600 km)</option>
+            <option>Cislunar NRHO Gateway</option>
+            <option>Lunar South Pole Surface Dome</option>
+          </select>
+        </label>
+        <button type="submit" class="sa-btn-pill" style="justify-content:center;margin-top:6px;">Transmit Briefing Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // Sector tabs
+      var tabs = document.querySelectorAll('.sa-biome-btn');
+      var titleEl = document.getElementById('saSectorTitle');
+      var descEl = document.getElementById('saSectorDesc');
+      var altEl = document.getElementById('saSectorAlt');
+      tabs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          tabs.forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+          btn.setAttribute('aria-selected', 'true');
+          if (titleEl) titleEl.textContent = btn.getAttribute('data-title');
+          if (descEl) descEl.textContent = btn.getAttribute('data-desc');
+          if (altEl) altEl.textContent = 'ALTITUDE VECTOR: ' + btn.getAttribute('data-alt');
+        });
+      });
+
+      // Orbital Simulator
+      var crewInput = document.getElementById('saCrewRange');
+      var modInput = document.getElementById('saModulesRange');
+      function updateSim() {
+        var c = parseInt(crewInput ? crewInput.value : '12', 10);
+        var m = parseInt(modInput ? modInput.value : '6', 10);
+        var crewLabel = document.getElementById('saCrewVal');
+        var modLabel = document.getElementById('saModVal');
+        var volOut = document.getElementById('saVolOut');
+        var irrOut = document.getElementById('saIrrOut');
+        if (crewLabel) crewLabel.textContent = c + ' Astronauts';
+        if (modLabel) modLabel.textContent = m + ' Modules';
+        if (volOut) volOut.textContent = (m * 140) + ' m³';
+        if (irrOut) irrOut.textContent = (22 + m * 1.6 + c * 0.22).toFixed(1) + '%';
+      }
+      if (crewInput) crewInput.addEventListener('input', updateSim);
+      if (modInput) modInput.addEventListener('input', updateSim);
+
+      // Modal
+      var modal = document.getElementById('saModal');
+      var closeBtn = document.getElementById('saModalClose');
+      document.querySelectorAll('[data-open-modal]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (modal) modal.classList.add('is-open');
+        });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal) modal.classList.remove('is-open');
+      });
+      var form = document.getElementById('saModalForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          modal.classList.remove('is-open');
+        });
+      }
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

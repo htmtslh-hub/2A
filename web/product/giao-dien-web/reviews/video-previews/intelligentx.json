@@ -1,0 +1,34 @@
+{
+  "id": "t276",
+  "slug": "intelligentx",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:24:35.045Z",
+  "demo": "/demos/intelligentx/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0f2a1fc2b111",
+  "sha256": "0f2a1fc2b11119f8bf8e089bfd61c8ad6e5ac1f32954c805727e92a8f549e5b2",
+  "demoHtmlSha256": "140103a538520de6a02704b717b5c842da592f44e090467f0a60901c0af8b664",
+  "demoSha256": "10a8016bdee27f2ab887253d6ef2682126dab8b00f5e66e35af8b36ac075a657",
+  "bytes": 1012562,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1008
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\intelligentx-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\intelligentx-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\intelligentx-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\intelligentx-return.jpg"
+  ]
+}

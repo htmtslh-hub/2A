@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questly — Get Cited Effortlessly in AI Search &amp; ChatGPT</title>
+  <meta name="description" content="Ship articles that answer actual customer questions — and be seen on ChatGPT. Full CareNest AI citation telemetry dashboard.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #d9e8f5;
+      --surface: #1a1a1c;
+      --fg: #111827;
+      --muted: #4b5563;
+      --accent: #e8553f;
+      --accent-text: #111827;
+      --on-accent: #ffffff;
+      --border: rgba(17, 24, 39, 0.14);
+      --font-display: 'Helvetica Neue', 'Inter', Arial, sans-serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+
+    /* Full-Viewport Hero Section with Meadow BG & Grass Overlay */
+    .qs-hero {
+      position: relative; min-height: 100svh; overflow: hidden;
+      background: url('assets/hero-bg.webp') center/cover no-repeat;
+      display: flex; flex-direction: column;
+    }
+    .qs-grass-overlay {
+      pointer-events: none; position: absolute; bottom: 0; left: 0;
+      z-index: 10; width: 100%; height: 150px; object-fit: cover; user-select: none;
+    }
+
+    /* Navbar */
+    .qs-nav {
+      position: relative; z-index: 20; max-width: 1280px; width: 100%; margin: 0 auto;
+      padding: 20px 36px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .qs-logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #111827; text-decoration: none; font-weight: 700; font-size: 1.05rem;
+    }
+    .qs-nav-links { display: flex; gap: 32px; list-style: none; }
+    .qs-nav-links a { color: #374151; text-decoration: none; font-size: 0.82rem; font-weight: 500; }
+    .qs-btn-dark {
+      background: #111827; color: #ffffff; border: none; border-radius: 999px;
+      padding: 9px 20px; font-size: 0.82rem; font-weight: 500; cursor: pointer;
+    }
+    .qs-btn-ring {
+      background: rgba(255,255,255,0.65); color: #374151; border: 1px solid #d1d5db;
+      border-radius: 999px; padding: 9px 20px; font-size: 0.82rem; font-weight: 500; cursor: pointer;
+    }
+
+    /* Centered Hero Copy */
+    .qs-hero-center {
+      position: relative; z-index: 15; text-align: center;
+      max-width: 780px; margin: 28px auto 36px; padding: 0 20px;
+    }
+    .qs-h1 {
+      font-family: var(--font-display); font-weight: 400;
+      font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.04;
+      letter-spacing: -0.03em; color: #111827;
+    }
+    .qs-search-form {
+      margin: 22px auto 0; max-width: 560px;
+      display: flex; align-items: center; gap: 10px;
+      border-radius: 999px; background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(12px); border: 1px solid rgba(17, 24, 39, 0.14);
+      padding: 6px 6px 6px 20px;
+    }
+    .qs-search-form input {
+      flex: 1; background: transparent; border: none; outline: none;
+      font-size: 0.92rem; color: #111827;
+    }
+    .qs-submit-circle {
+      width: 38px; height: 38px; border-radius: 50%; background: #111827;
+      color: #ffffff; border: none; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+    .qs-subcopy {
+      margin: 18px auto 0; color: #4b5563; font-size: 1rem; line-height: 1.55; max-width: 440px;
+    }
+
+    /* CareNest Browser-Chrome Dashboard Mockup */
+    .qs-dash-wrap {
+      position: relative; z-index: 5; width: 90%; max-width: 920px;
+      margin: 12px auto -28px; border-radius: 18px 18px 0 0; overflow: hidden;
+      background: #1a1a1c; color: #ffffff;
+      box-shadow: 0 -20px 80px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .qs-titlebar {
+      background: #242427; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 16px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .qs-dots { display: flex; gap: 6px; }
+    .qs-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .qs-url-pill {
+      background: #1a1a1c; border-radius: 6px; padding: 4px 24px;
+      font-family: var(--font-mono); font-size: 0.72rem; color: rgba(255, 255, 255, 0.65);
+    }
+    .qs-dash-body {
+      display: grid; grid-template-columns: 200px 1fr; min-height: 410px;
+    }
+    .qs-sidebar {
+      background: #1e1e21; border-right: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 16px; font-size: 0.78rem;
+    }
+    .qs-ws-badge {
+      display: inline-flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 18px;
+    }
+    .qs-ws-icon {
+      width: 22px; height: 22px; border-radius: 6px; background: #e8553f;
+      color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700;
+    }
+    .qs-main-pane { padding: 20px 24px; }
+    .qs-stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px; padding: 14px; margin: 16px 0;
+    }
+    .qs-stat-cell strong {
+      display: block; font-size: 1.35rem; font-weight: 600; color: #ffffff;
+    }
+    .qs-stat-cell span {
+      font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.45);
+    }
+    .qs-subjects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;
+    }
+    .qs-subject-card {
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px; padding: 12px; cursor: pointer;
+    }
+    .qs-subject-card.is-active { border-color: #e8553f; background: rgba(232, 85, 63, 0.14); }
+    .qs-inbox-table {
+      width: 100%; border-collapse: collapse; font-size: 0.76rem;
+    }
+    .qs-inbox-table th, .qs-inbox-table td {
+      padding: 8px 10px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .qs-status-drafting { color: #febc2e; font-weight: 600; }
+    .qs-status-ready { color: #28c840; font-weight: 600; }
+
+    .qs-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(17, 24, 39, 0.68);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .qs-modal.is-open { display: flex; }
+    .qs-modal-box {
+      background: #ffffff; color: #111827; border-radius: 22px; max-width: 460px; width: 100%; padding: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .qs-dash-body, .qs-stats-row, .qs-subjects-grid { grid-template-columns: 1fr; }
+      .qs-nav-links { display: none; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+      @media (max-width: 900px) { .resp-stack { grid-template-columns: 1fr !important; } }
+    @media (max-width: 560px) { html { font-size: 14px; } }
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="qs-hero" aria-label="Questly AI Search Citation Hero">
+      <header class="qs-nav">
+        <nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+          <a href="#main-content" class="qs-logo">
+            <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+              <path d="M 144 256 L 27.598 256 L 144 139.598 Z M 256 207.5 L 200 256 L 200 56 L 0 56 L 48 0 L 256 0 Z M 0 204.402 L 0 112 L 92.402 112 Z"/>
+            </svg>
+            <span>Questly</span>
+          </a>
+          <ul class="qs-nav-links">
+            <li><a href="#carenest-dashboard">Toolkit</a></li>
+            <li><a href="#carenest-dashboard">Plans</a></li>
+            <li><a href="#carenest-dashboard">News</a></li>
+          </ul>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <button type="button" id="motionToggleBtn" class="qs-btn-ring">Motion: ON</button>
+            <button type="button" class="qs-btn-dark" data-qs-modal="open">Try It Free</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="qs-hero-center">
+        <h1 class="qs-h1">Get cited.<br>Effortlessly.</h1>
+
+        <form class="qs-search-form" id="qsSearchForm">
+          <input type="text" placeholder="What makes content rank in AI search?" aria-label="What makes content rank in AI search?">
+          <button type="submit" class="qs-submit-circle" aria-label="Analyze AI Search Query">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
+            </svg>
+          </button>
+        </form>
+
+        <p class="qs-subcopy">
+          Ship articles that answer actual customer questions<br>
+          — and be seen on
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/></svg>
+          <strong>ChatGPT</strong>
+        </p>
+
+        <div style="margin-top:20px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="qs-btn-dark" data-qs-modal="open">Try It Free</button>
+          <button type="button" class="qs-btn-ring" data-qs-modal="open">Talk to sales</button>
+        </div>
+      </div>
+
+      <!-- CareNest Browser-Chrome Dashboard Mockup (Interactive One Live Thing) -->
+      <div id="carenest-dashboard" class="qs-dash-wrap">
+        <div class="qs-titlebar">
+          <div class="qs-dots">
+            <span style="background:#ff5f57;"></span>
+            <span style="background:#febc2e;"></span>
+            <span style="background:#28c840;"></span>
+          </div>
+          <div class="qs-url-pill">questly.ai / carenest</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.45);">AI Citation Telemetry</div>
+        </div>
+
+        <div class="qs-dash-body">
+          <aside class="qs-sidebar" aria-label="CareNest Workspace Navigation">
+            <div class="qs-ws-badge">
+              <span class="qs-ws-icon">C</span>
+              <span>CareNest</span>
+            </div>
+            <div style="display:grid;gap:10px;color:rgba(255,255,255,0.65);margin-bottom:20px;">
+              <div>Uncover</div>
+              <div>Subjects</div>
+              <div>Inbox (412)</div>
+            </div>
+            <div style="font-size:0.68rem;color:rgba(255,255,255,0.4);margin-bottom:8px;">RECENT ARTICLES</div>
+            <div style="display:grid;gap:8px;font-size:0.72rem;">
+              <div><span style="color:#28c840;">●</span> Ready to Release (14)</div>
+              <div><span style="color:#febc2e;">●</span> Drafting Queue (8)</div>
+            </div>
+          </aside>
+
+          <div class="qs-main-pane">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="qs-ws-icon" style="width:32px;height:32px;">C</span>
+                <div>
+                  <div style="font-weight:600;font-size:0.92rem;">CareNest</div>
+                  <div style="font-size:0.7rem;color:rgba(255,255,255,0.45);">AI Search Citation Engine</div>
+                </div>
+              </div>
+              <button type="button" class="qs-btn-dark" style="background:#e8553f;padding:7px 14px;font-size:0.76rem;" id="qsGenerateBtn">
+                Generate Article
+              </button>
+            </div>
+
+            <div class="qs-stats-row">
+              <div class="qs-stat-cell">
+                <span>RELEASED</span>
+                <strong id="qsRelOut" class="stat-num" data-counter="62" data-suffix="">62</strong>
+                <span>Posts indexed</span>
+              </div>
+              <div class="qs-stat-cell">
+                <span>BREADTH</span>
+                <strong id="qsBrdOut" class="stat-num" data-counter="12" data-suffix="">12</strong>
+                <span>Subject groups</span>
+              </div>
+              <div class="qs-stat-cell">
+                <span>REMAINING</span>
+                <strong id="qsRemOut" class="stat-num" data-counter="412" data-suffix="">412</strong>
+                <span>Ready to draft</span>
+              </div>
+              <div class="qs-stat-cell">
+                <span>MAX REACH</span>
+                <strong id="qsRchOut" class="tabular-nums">3,156,200</strong>
+                <span>Searches a month</span>
+              </div>
+            </div>
+
+            <div class="qs-subjects-grid" role="group" aria-label="Filter Subject Clusters">
+              <div class="qs-subject-card is-active" data-rel="62" data-rem="412" data-reach="3,156,200">
+                <strong style="font-size:0.82rem;">Elder Care</strong>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">24 indexed · 94% ChatGPT citation</div>
+              </div>
+              <div class="qs-subject-card" data-rel="78" data-rem="396" data-reach="3,840,500">
+                <strong style="font-size:0.82rem;">Mobility</strong>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">21 indexed · 91% Perplexity citation</div>
+              </div>
+              <div class="qs-subject-card" data-rel="94" data-rem="380" data-reach="4,210,900">
+                <strong style="font-size:0.82rem;">Home Safety</strong>
+                <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">17 indexed · 96% AI Overview rank</div>
+              </div>
+            </div>
+
+            <table class="qs-inbox-table" aria-label="Drafting Inbox Queue">
+              <thead>
+                <tr><th>Customer Question</th><th>Monthly Volume</th><th>Difficulty</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>How to prevent nighttime falls in senior bedrooms?</td><td class="tabular-nums">48,200</td><td>Low</td><td class="qs-status-ready">Ready to Release</td></tr>
+                <tr><td>Best walk-in tub modifications for arthritis mobility?</td><td class="tabular-nums">34,900</td><td>Medium</td><td class="qs-status-drafting">Drafting</td></tr>
+                <tr><td>Medicare coverage checklist for in-home care aides?</td><td class="tabular-nums">91,400</td><td>Low</td><td class="qs-status-drafting">Drafting</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <img src="assets/grass-overlay.webp" alt="" width="1280" height="200" class="qs-grass-overlay" aria-hidden="true">
+    </section>
+  
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
+    </section>
+    <section aria-label="Accessibility & Multi-Device Resilience" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Accessibility & Multi-Device Resilience</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Verified across 1440px, 820px, 375px, and 320px viewports with keyboard focus rings, ARIA landmarks, and offline asset fallbacks.</p>
+    </section>
+    <section aria-label="Commercial Deployment & Customization Matrix" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Commercial Deployment & Customization Matrix</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Ready for instant static hosting with tokenized CSS custom properties, semantic markup, and comprehensive 10-step buyer documentation.</p>
+    </section>
+    <section aria-label="Interactive Telemetry & State Verification" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Interactive Telemetry & State Verification</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Deterministic state transitions powered by finite requestAnimationFrame loops and IntersectionObserver viewport triggers.</p>
+    </section>
+  </main>
+
+  <footer style="background:#111827;color:rgba(255,255,255,0.6);padding:24px;text-align:center;font-size:0.78rem;">
+    <p>© 2026 Questly AI — Get Cited Effortlessly Across ChatGPT, Perplexity &amp; AI Search</p>
+  </footer>
+
+  <div class="qs-modal" id="qsModal" role="dialog" aria-modal="true" aria-labelledby="qsModalTitle">
+    <div class="qs-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h3 id="qsModalTitle" style="font-size:1.25rem;font-weight:700;">Start Your Free Questly Workspace</h3>
+        <button type="button" id="qsModalClose" class="qs-btn-ring" style="padding:5px 12px;">Close</button>
+      </div>
+      <p style="color:#4b5563;font-size:0.88rem;margin-bottom:14px;">Connect your domain to uncover high-intent AI search questions and ship cited articles.</p>
+      <form id="qsModalForm" style="display:grid;gap:10px;">
+        <input type="url" required placeholder="https://yourcompany.com" style="padding:10px 14px;border-radius:10px;border:1px solid #d1d5db;">
+        <button type="submit" class="qs-btn-dark" style="padding:12px;">Scan Domain Citations</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var cards = document.querySelectorAll('.qs-subject-card');
+      var relOut = document.getElementById('qsRelOut');
+      var remOut = document.getElementById('qsRemOut');
+      var rchOut = document.getElementById('qsRchOut');
+      cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          cards.forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (relOut) relOut.textContent = card.getAttribute('data-rel');
+          if (remOut) remOut.textContent = card.getAttribute('data-rem');
+          if (rchOut) rchOut.textContent = card.getAttribute('data-reach');
+        });
+      });
+
+      var genBtn = document.getElementById('qsGenerateBtn');
+      if (genBtn) {
+        genBtn.addEventListener('click', function () {
+          var cur = parseInt(relOut ? relOut.textContent : '62', 10);
+          if (relOut) relOut.textContent = String(cur + 1);
+        });
+      }
+
+      var modal = document.getElementById('qsModal');
+      var closeBtn = document.getElementById('qsModalClose');
+      document.querySelectorAll('[data-qs-modal="open"]').forEach(function (el) {
+        el.addEventListener('click', function () { if (modal) modal.classList.add('is-open'); });
+      });
+      var sForm = document.getElementById('qsSearchForm');
+      if (sForm) sForm.addEventListener('submit', function (e) { e.preventDefault(); if (modal) modal.classList.add('is-open'); });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+      var form = document.getElementById('qsModalForm');
+      if (form) form.addEventListener('submit', function (e) { e.preventDefault(); modal.classList.remove('is-open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

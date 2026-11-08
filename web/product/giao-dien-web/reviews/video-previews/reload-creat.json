@@ -1,0 +1,34 @@
+{
+  "id": "t272",
+  "slug": "reload-creat",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:20:39.261Z",
+  "demo": "/demos/reload-creat/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6257c8cc3b05",
+  "sha256": "6257c8cc3b05f252e6a77781b7cb419a570655a53a136b5d4d960ba31b32d720",
+  "demoHtmlSha256": "d2b57d83ae906ebf19a1576fa047a39634fffb9802a53dde2152ada8ffc27433",
+  "demoSha256": "0a03e7f5f866108a5b9db2f5eaac542e2d197808f52441c0c5fdfffead288733",
+  "bytes": 589404,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reload-creat-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reload-creat-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reload-creat-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reload-creat-return.jpg"
+  ]
+}

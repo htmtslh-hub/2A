@@ -46,6 +46,201 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t278: {
+    slug: 'saas-value',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Questly AI Search Citation",
+        desc: "Nền tảng tối ưu hóa trích dẫn AI Search & ChatGPT: bầu trời đồng cỏ thực tế với lớp cỏ tiền cảnh đè lên bảng điều khiển CareNest tối màu, kết hợp bộ tính toán hiển thị trích dẫn AI tương tác trực tiếp.",
+        tags: ["AI Search SEO", "CareNest Dashboard", "Foreground Grass Depth"]
+      },
+      en: {
+        name: "Questly AI Search Citation",
+        desc: "AI search citation & ChatGPT visibility hero featuring a scenic meadow backdrop, dark CareNest dashboard frame overlapped by a foreground grass layer, and an interactive citation calculator.",
+        tags: ["AI Search SEO", "CareNest Dashboard", "Foreground Grass Depth"]
+      },
+      zh: {
+        name: "Questly AI 搜索引用平台",
+        desc: "Questly AI 搜索与 ChatGPT 引用优化平台：自然草地天空背景、前景草丛图层覆盖 CareNest 暗色仪表盘，内置交互式 AI 引用率计算器。",
+        tags: ["AI 搜索优化", "暗色仪表盘", "前景景深"]
+      }
+    }
+  },
+
+  t277: {
+    slug: 'fun-404-page',
+    cat: 'entertainment',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "TinyTrails 404 Adventure",
+        desc: "Trang 404 toàn màn hình rực rỡ trên nền cam #F16524: chữ 404 khổng lồ phía sau khung video nhân vật 3D cầm kính lúp, thanh điều hướng viên nang trắng, ngăn kéo menu trượt và bộ lọc đường mòn khám phá cho trẻ em.",
+        tags: ["404 Experience", "3D Video Stage", "Kids Trail Finder"]
+      },
+      en: {
+        name: "TinyTrails 404 Adventure",
+        desc: "Vibrant fullscreen #F16524 orange 404 experience with oversized background numerals, a centered 3D magnifying-glass character video, pill navbar with slide-in drawer, and an interactive kids trail finder.",
+        tags: ["404 Experience", "3D Video Stage", "Kids Trail Finder"]
+      },
+      zh: {
+        name: "TinyTrails 趣味 404 探险页",
+        desc: "充满活力的 #F16524 橙色全屏 404 体验：超大背景数字、中央 3D 放大镜角色循环视频、白色胶囊导航栏、滑出式菜单抽屉与儿童步道探索器。",
+        tags: ["趣味 404", "3D 视频舞台", "儿童户外探索"]
+      }
+    }
+  },
+
+  t276: {
+    slug: 'intelligentx',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "IntelligentX Enterprise AI",
+        desc: "Nền tảng tự động hóa doanh nghiệp AI với video 3D toàn màn hình, hiệu ứng chữ lấp lánh ánh bạc (shimmering gradient text), viền sáng xoay tròn quanh nút CTA và bộ tính toán ROI quy trình tự hành.",
+        tags: ["Enterprise AI", "Shimmer Text & Conic CTA", "ROI Simulator"]
+      },
+      en: {
+        name: "IntelligentX Enterprise AI",
+        desc: "Autonomous enterprise operations hero featuring a full-viewport 3D ambient video, animated silver-shimmer gradient headline, rotating conic-gradient CTA border, and a live workflow ROI simulator.",
+        tags: ["Enterprise AI", "Shimmer Text & Conic CTA", "ROI Simulator"]
+      },
+      zh: {
+        name: "IntelligentX 企业级智能引擎",
+        desc: "IntelligentX 企业级 AI 自动化平台：全屏 3D 视频背景、动态流光渐变标题、旋转锥形光晕按钮以及实时工作流 ROI 模拟器。",
+        tags: ["企业级 AI", "流光排版", "ROI 模拟器"]
+      }
+    }
+  },
+
+  t275: {
+    slug: 'nike-atelier',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "O2 Moonish × Nike Cosmic",
+        desc: "Showroom thời trang tương lai O2® Moonish × Nike Set 23: bệ trưng bày phát sáng xanh ngọc và đỏ hồng, thẻ thông số kính mờ bất đối xứng và bộ tùy biến màu sắc Cosmic Runner trực tiếp.",
+        tags: ["Futuristic Footwear", "Dual Neon Studio", "Colorway Customizer"]
+      },
+      en: {
+        name: "O2 Moonish × Nike Cosmic",
+        desc: "O2® Moonish × Nike Set 23 futuristic footwear showroom with dual cyan-and-magenta neon studio lighting, asymmetric glassmorphic spec cards, and a live colorway customizer.",
+        tags: ["Futuristic Footwear", "Dual Neon Studio", "Colorway Customizer"]
+      },
+      zh: {
+        name: "O2 Moonish × Nike 未来鞋履展厅",
+        desc: "O2® Moonish × Nike Set 23 未来主义概念鞋履展厅：青色与品红双色霓虹光效、非对称毛玻璃参数卡片以及实时配色定制器。",
+        tags: ["未来概念鞋履", "双色霓虹灯效", "实时配色定制"]
+      }
+    }
+  },
+
+  t274: {
+    slug: 'futuristic-canvas',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Neonmorphic Creator Studio",
+        desc: "Sàn giao dịch nghệ thuật số NEONMORPHIC: bố cục Bento tối màu với viền neon cyan-tím phát sáng, khung kính 3D đa lớp và công cụ ước tính tiền bản quyền sáng tạo theo thời gian thực.",
+        tags: ["Neonmorphic Bento", "3D Glass Layers", "Royalty Estimator"]
+      },
+      en: {
+        name: "Neonmorphic Creator Studio",
+        desc: "NEONMORPHIC digital art marketplace featuring a dark glassmorphic bento grid with glowing cyan-violet neon borders, layered 3D visual cards, and a live creator royalty estimator.",
+        tags: ["Neonmorphic Bento", "3D Glass Layers", "Royalty Estimator"]
+      },
+      zh: {
+        name: "Neonmorphic 霓虹拟态创作者市场",
+        desc: "NEONMORPHIC 数字艺术与创作者市场：带青紫霓虹发光边框的暗色毛玻璃 Bento 网格、多层 3D 视觉卡片及实时版税收益估算器。",
+        tags: ["霓虹拟态", "Bento 网格", "版税计算器"]
+      }
+    }
+  },
+
+  t273: {
+    slug: 'endas-nfts',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "EnDasmu NFT Collectibles",
+        desc: "Sàn sưu tầm nghệ thuật số EnDasmu: bộ sưu tập thẻ nhân vật 3D xếp lớp nghiêng góc nghệ thuật, dải thống kê đấu giá kính mờ và mô phỏng đặt giá thầu ETH trực tiếp.",
+        tags: ["NFT Collectibles", "Tilted 3D Deck", "Live Bid Simulator"]
+      },
+      en: {
+        name: "EnDasmu NFT Collectibles",
+        desc: "EnDasmu digital collectibles marketplace featuring a tilted 3D character art deck, frosted glassmorphic auction telemetry ribbon, and an interactive ETH bid simulator.",
+        tags: ["NFT Collectibles", "Tilted 3D Deck", "Live Bid Simulator"]
+      },
+      zh: {
+        name: "EnDasmu 数字藏品交易平台",
+        desc: "EnDasmu 3D 数字艺术藏品平台：倾斜叠放的 3D 角色卡片组、毛玻璃拍卖数据统计条以及交互式 ETH 实时竞价模拟器。",
+        tags: ["NFT 数字藏品", "3D 倾斜卡组", "实时竞价模拟"]
+      }
+    }
+  },
+
+  t272: {
+    slug: 'reload-creat',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Reload Creative Case Study",
+        desc: "Hồ sơ năng lực agency thương hiệu Reload Creative: lưới editorial sáng màu kết hợp khối nhấn cam rực rỡ #FF5319, bảng phân tích chiến lược nhận diện và bộ cấu hình phạm vi dự án tương tác.",
+        tags: ["Branding Agency", "Swiss Editorial Grid", "Scope Configurator"]
+      },
+      en: {
+        name: "Reload Creative Case Study",
+        desc: "Reload Creative branding agency showcase combining a crisp daylight Swiss editorial grid with vibrant #FF5319 orange accent blocks and an interactive project scope configurator.",
+        tags: ["Branding Agency", "Swiss Editorial Grid", "Scope Configurator"]
+      },
+      zh: {
+        name: "Reload Creative 品牌设计机构案例",
+        desc: "Reload Creative 品牌与视觉识别案例展示：明亮瑞士网格排版搭配鲜艳 #FF5319 橙色强调色块，内置交互式项目范围配置器。",
+        tags: ["品牌设计机构", "瑞士网格排版", "项目配置器"]
+      }
+    }
+  },
+
+  t271: {
+    slug: 'interface-conce',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Stellar Amenities Orbital",
+        desc: "Kiến trúc trạm không gian Stellar Amenities: khung nhìn vòm kính phi thuyền nhìn ra hành tinh phát sáng, HUD điều khiển sinh thái quỹ đạo và bộ chọn phân khu cư trú tương tác.",
+        tags: ["Space Architecture", "Orbital Viewport HUD", "Habitat Selector"]
+      },
+      en: {
+        name: "Stellar Amenities Orbital",
+        desc: "Stellar Amenities orbital architecture portal featuring a panoramic spacecraft observation dome, precision telemetry HUD overlays, and an interactive habitat deck selector.",
+        tags: ["Space Architecture", "Orbital Viewport HUD", "Habitat Selector"]
+      },
+      zh: {
+        name: "Stellar Amenities 轨道空间建筑",
+        desc: "Stellar Amenities 太空建筑与轨道栖息地门户：全景飞船观测穹顶、精密遥测 HUD 叠加层与交互式居住舱段选择器。",
+        tags: ["太空建筑", "轨道观测 HUD", "舱段选择器"]
+      }
+    }
+  },
+
   t270: {
     slug: 'ai-image-generator-ui',
     cat: 'commerce',
@@ -53,19 +248,19 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "AI Image Generator UI",
-        desc: "Giao diện web AI Image Generator UI với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
-        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+        name: "AuraGen AI Image Studio",
+        desc: "Phòng lab tạo ảnh AI thế hệ mới: kiểu chữ serif nghiêng kết hợp bảng điều khiển prompt kính mờ đa chế độ (Generate Image, Edit Image, Upscale) trên nền video 3D chuyển động mượt mà.",
+        tags: ["AI Image Studio", "Glassmorphic Prompt Box", "Serif & Sans Contrast"]
       },
       en: {
-        name: "AI Image Generator UI",
-        desc: "Bespoke AI Image Generator UI web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
-        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+        name: "AuraGen AI Image Studio",
+        desc: "Next-gen AI visual synthesis studio combining Instrument Serif italic typography with a multi-mode glassmorphic prompt workbench over a fullscreen looping 3D background video.",
+        tags: ["AI Image Studio", "Glassmorphic Prompt Box", "Serif & Sans Contrast"]
       },
       zh: {
-        name: "AI Image Generator UI",
-        desc: "单文件自包含 AI Image Generator UI 网页模板，配备 3D 悬浮视觉与三组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
+        name: "AuraGen AI 视觉生成工作室",
+        desc: "新一代 AI 图像生成工作台：优雅斜体衬线标题搭配多模式毛玻璃提示词控制台与全屏循环 3D 视频背景。",
+        tags: ["AI 图像生成", "毛玻璃提示词框", "衬线混排"]
       }
     }
   },
@@ -77,19 +272,19 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "LaunchEx About",
-        desc: "Giao diện web LaunchEx About với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
-        tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
+        name: "Launchex.Hub Founders",
+        desc: "Trang giới thiệu nhà sáng lập quỹ đầu tư Launchex.Hub: kiểu chữ công nghiệp TT Firs Neue kết hợp lưới 3 thẻ thống kê cắt góc đa giác (clip-path chamfer) và bộ lọc danh mục kỳ lân Đông Âu.",
+        tags: ["Venture Capital", "Chamfered Clip-Path Cards", "Cohort Explorer"]
       },
       en: {
-        name: "LaunchEx About",
-        desc: "Bespoke LaunchEx About web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
-        tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
+        name: "Launchex.Hub Founders",
+        desc: "Launchex.Hub venture accelerator showcase featuring geometric industrial typography, three polygonal clip-path chamfered stat cards, and an interactive regional cohort explorer.",
+        tags: ["Venture Capital", "Chamfered Clip-Path Cards", "Cohort Explorer"]
       },
       zh: {
-        name: "LaunchEx About",
-        desc: "单文件自包含 LaunchEx About 网页模板，配备 3D 悬浮视觉与三组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
+        name: "Launchex.Hub 创投孵化器关于页",
+        desc: "Launchex.Hub 创投平台创始人介绍页：硬朗工业风排版搭配三张多边形切角统计卡片及交互式区域孵化项目浏览器。",
+        tags: ["创投孵化器", "切角几何卡片", "项目浏览器"]
       }
     }
   },
@@ -102,19 +297,19 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Liquid Glass CTA",
-        desc: "Giao diện web Liquid Glass CTA với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
-        tags: ["CTA", '3D Pop-Out & Motion', 'Hallmark UI']
+        name: "Liquid Glass Video CTA",
+        desc: "Khối kêu gọi hành động Liquid Glass: nút bấm khúc xạ thủy tinh lỏng SVG feDisplacementMap đa lớp trên nền video 3D, đi kèm phòng thử nghiệm độ khúc xạ kính theo thời gian thực.",
+        tags: ["Liquid Glass SVG", "Optical Refraction CTA", "Token Playground"]
       },
       en: {
-        name: "Liquid Glass CTA",
-        desc: "Bespoke Liquid Glass CTA web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
-        tags: ["CTA", '3D Pop-Out & Motion', 'Hallmark UI']
+        name: "Liquid Glass Video CTA",
+        desc: "Tactile Liquid Glass call-to-action hero featuring multi-layered SVG feDisplacementMap optical refraction buttons over a 3D video backdrop with a live refraction playground.",
+        tags: ["Liquid Glass SVG", "Optical Refraction CTA", "Token Playground"]
       },
       zh: {
-        name: "Liquid Glass CTA",
-        desc: "单文件自包含 Liquid Glass CTA 网页模板，配备 3D 悬浮视觉与三组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
+        name: "Liquid Glass 液态玻璃视频 CTA",
+        desc: "液态玻璃质感行动召唤组件：基于 SVG 置换滤镜的光学折射按钮搭配全屏 3D 视频背景与实时折射参数实验室。",
+        tags: ["液态玻璃滤镜", "光学折射按钮", "实时参数实验室"]
       }
     }
   },

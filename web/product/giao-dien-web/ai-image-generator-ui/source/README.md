@@ -1,6 +1,6 @@
 # AI Image Generator UI — Website Template (`v1.0.0`)
 
-Welcome to the **AI Image Generator UI** commercial website template, engineered to the **Forge Zone Web UI Standard v2.0 (ForgeScore 100/100)**.
+Welcome to the **AI Image Generator UI** (`ai-image-generator-ui` / `t270`) commercial website template, engineered to the **Forge Zone Web UI Standard v2.0 (ForgeScore 100/100)**.
 
 ## Quick Start
 1. Open `index.html` directly in any modern browser (Chrome, Edge, Firefox, Safari, Cốc Cốc) or serve the folder with any static server (`npx serve .`).
@@ -9,5 +9,5 @@ Welcome to the **AI Image Generator UI** commercial website template, engineered
 
 ## Architecture Highlights
 - **3-Layer CSS Design Tokens**: Edit `:root` variables in `index.html` to rebrand colors, surfaces, and fluid `clamp()` typography.
-- **Hardware-Accelerated Motion**: Smooth `cubic-bezier(0.22, 1, 0.36, 1)` transitions, `IntersectionObserver` scroll reveals, and an in-session `Motion: ON/PAUSED` toggle.
+- **Hardware-Accelerated Motion**: Smooth `cubic-bezier(0.22, 1, 0.36, 1)` transitions, `IntersectionObserver` scroll reveals, finite `requestAnimationFrame` counters, and an in-session `Motion: ON/PAUSED` toggle.
 - **Accessibility & Craft Floor**: Semantic landmarks (`<header>`, `<nav>`, `<main>`, `<footer>`), `.skip-link`, `tabular-nums`, and responsive breakpoints from `320px` to `1440px+`.

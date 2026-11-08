@@ -1,0 +1,34 @@
+{
+  "id": "t273",
+  "slug": "endas-nfts",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-08T00:20:58.936Z",
+  "demo": "/demos/endas-nfts/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3fb0cf85c3f4",
+  "sha256": "3fb0cf85c3f4e6f8f85dd6842f708b31bdf99ccaac7da727146ec8b54bc58b24",
+  "demoHtmlSha256": "7a70d5a24ff43a388be29663ba47ce886b094dc6b77046c40088cba23c97cf5e",
+  "demoSha256": "1d02ed49af08a90291405031a6f327827a43de4eb7c0ae534a9d9b11eb8db1ee",
+  "bytes": 309051,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\endas-nfts-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\endas-nfts-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\endas-nfts-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\endas-nfts-return.jpg"
+  ]
+}

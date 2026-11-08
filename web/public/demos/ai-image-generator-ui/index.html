@@ -2,331 +2,360 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>AI Image Generator UI — Built for Speed & Quality</title>
-  <meta name="description" content="Precision-engineered AI Image Generator UI web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.">
-  <meta property="og:title" content="AI Image Generator UI — Built for Speed & Quality">
-  <meta property="og:description" content="Precision-engineered AI Image Generator UI web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#06070b">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Features — Built for Speed &amp; Quality AI Image Generator UI</title>
+  <meta name="description" content="Everything you need to go from idea to image: Smart Prompt Suggestions, API Access, and Project Library.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #06070b;
-      --bg-surface: #10131c;
-      --bg-glass: rgba(16,19,28,0.72);
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #94a3b8;
-      --accent-primary: #F5C344;
-      --accent-secondary: #38bdf8;
-      --border-hairline: rgba(255,255,255,0.14);
-      --font-display: 'Instrument Serif', serif;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --bg: #ffffff;
+      --surface: #F4F8F9;
+      --fg: #0f172a;
+      --muted: #64748b;
+      --accent: #a855f7;
+      --accent-text: #7e22ce;
+      --on-accent: #ffffff;
+      --border: rgba(15, 23, 42, 0.1);
+      --font-display: 'Inter', sans-serif;
+      --font-sans: 'Inter', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
-      --radius-card: 24px;
-      --radius-pill: 9999px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); overflow-x: clip; scroll-behavior: smooth; }
-    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 10000; padding: 10px 18px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; font-weight: 700; text-decoration: none; transition: transform 0.2s var(--ease-out-expo); }
-    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--text-primary); outline-offset: 3px; }
-    :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; }
-    .aii63-cursor-ring, .aii63-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; will-change: transform; }
-    .aii63-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out-expo), opacity 0.22s var(--ease-out-expo); }
-    .aii63-cursor-ring.is-hovered { transform: translate3d(-100px,-100px,0) scale(1.65); background: #fff; }
-    .aii63-cursor-dot { width: 6px; height: 6px; background: var(--accent-primary); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .aii63-cursor-ring, .aii63-cursor-dot { display: none; } }
-
-    .aii63-navbar {
-      position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
-      max-width: 1280px; margin: 0 auto; padding: 12px 24px;
-      border-radius: var(--radius-pill); background: var(--bg-glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: #ffffff; color: #0f172a; font-family: 'Inter', sans-serif;
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
     }
-    .aii63-pill-btn { min-height: 44px; padding: 8px 18px; border-radius: var(--radius-pill); background: var(--bg-glass); border: 1px solid var(--border-hairline); color: var(--text-primary); font-size: 12px; font-weight: 700; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
-    .aii63-cta-btn { min-height: 44px; padding: 10px 22px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
-    .aii63-pill-btn:active, .aii63-cta-btn:active { transform: scale(0.97); }
-
-    .aii63-hero {
-      position: relative; min-height: 100vh; padding: clamp(112px, 12vw, 148px) clamp(20px,5vw,72px) clamp(56px, 7vw, 88px);
-      display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
+    .c1-nav-bar {
+      max-width: 1100px; margin: 0 auto; padding: 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border);
     }
-    .aii63-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
-    .aii63-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
-    .aii63-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: clamp(24px, 4vw, 44px); align-items: center; }
-    .aii63-h1 { font-family: var(--font-display); font-size: clamp(2.75rem, 6.5vw, 5.75rem); font-weight: 400; line-height: 0.96; letter-spacing: -0.03em; margin: 14px 0 18px; }
-    .aii63-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
-    .aii63-popout-wrap { animation: aii63Float 5.8s ease-in-out infinite; will-change: transform; }
-    @keyframes aii63Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
-
-    .aii63-section { max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(20px,5vw,72px); }
-    .aii63-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
-    .aii63-card { padding: clamp(20px, 3vw, 28px); border-radius: var(--radius-card); background: var(--bg-glass); border: 1px solid var(--border-hairline); backdrop-filter: blur(18px); box-shadow: 0 24px 48px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.12); transition: transform 0.35s var(--ease-out-expo), opacity 0.35s var(--ease-out-expo); }
-    .aii63-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
-    .aii63-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo); }
-    .aii63-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
-
-    .aii63-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
-    .aii63-seamless-overlay.is-open { display: flex; }
-    .aii63-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 32px; pointer-events: auto; }
-    @media (max-width: 640px) { .aii63-navbar { padding: 10px 16px; } }
-    @media (max-width: 768px) { .aii63-hscroll-track { grid-template-columns: 1fr; } }
-    @media (min-width: 960px) { .aii63-hero-grid { grid-template-columns: 1.05fr 0.95fr; } .aii63-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
-    @media (min-width: 1024px) { .aii63-section { padding-inline: 64px; } }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .c1-page-shell {
+      padding: 64px 20px; display: flex; flex-direction: column; align-items: center;
     }
+    .c1-container { max-width: 1100px; width: 100%; text-align: center; }
+    .c1-badge {
+      display: inline-block; font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+      background: linear-gradient(90deg, #F5C344, #F28482, #B567C2);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .c1-title {
+      font-size: clamp(2.15rem, 3.8vw, 2.75rem); font-weight: 500; color: #0f172a;
+      letter-spacing: -0.02em; margin-bottom: 12px;
+    }
+    .c1-subtitle {
+      font-size: clamp(1rem, 1.3vw, 1.125rem); color: #64748b; line-height: 1.5; margin-bottom: 50px;
+    }
+    .c1-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .c1-card {
+      border-radius: 20px; height: 340px; display: flex; flex-direction: column;
+      justify-content: flex-end; position: relative; overflow: hidden;
+      text-align: left; background: #F4F8F9;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    }
+    .c1-card h3 {
+      font-size: 1.05rem; font-weight: 600; color: #1e293b; padding: 24px; position: relative; z-index: 2;
+    }
+
+    /* Card 1: Smart Prompt Suggestions */
+    .c1-card-1 {
+      background: radial-gradient(circle at 50% 0%, #FFB347 0%, #F9ED96 30%, #F4F8F9 60%, #F4F8F9 100%);
+    }
+    .c1-prompt-box {
+      position: absolute; top: 30px; left: 24px; right: 24px;
+      background: #ffffff; border-radius: 12px; padding: 16px;
+      font-size: 0.8rem; color: #475569; line-height: 1.6;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    }
+    .c1-blur-text {
+      background: linear-gradient(90deg, #FFB347, #E5A1F5);
+      -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 600;
+    }
+    .c1-add-pill {
+      position: absolute; top: 180px; left: 40px;
+      background: #ffffff; border: 1px solid #000000; padding: 5px 14px;
+      border-radius: 20px; font-size: 0.75rem; font-weight: 600; color: #1e293b;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+    }
+    .c1-cursor {
+      position: absolute; top: 205px; left: 110px; z-index: 10;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); pointer-events: none;
+    }
+
+    /* Card 2: API Access */
+    .c1-card-2 {
+      background: radial-gradient(circle at 50% 0%, #E5A1F5 0%, #F8ACA0 30%, #F4F8F9 60%, #F4F8F9 100%);
+    }
+    .c1-api-visual {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 70px;
+      display: flex; align-items: center; justify-content: center; padding: 0 24px;
+    }
+
+    /* Card 3: Project Library */
+    .c1-card-3 {
+      background: radial-gradient(circle at 50% 0%, #F9ED96 0%, #E5A1F5 30%, #F4F8F9 60%, #F4F8F9 100%);
+    }
+    .c1-mesh {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px);
+      background-size: 16px 16px;
+      -webkit-mask-image: radial-gradient(circle at center top, black 0%, transparent 80%);
+      mask-image: radial-gradient(circle at center top, black 0%, transparent 80%);
+    }
+    .c1-folder {
+      position: absolute; top: 50px; left: 50%; transform: translateX(-50%);
+      width: 170px; filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.08));
+    }
+    .c1-search {
+      position: absolute; top: 220px; left: 50%; transform: translateX(-50%);
+      background: #ffffff; border: 1px solid #000000; padding: 6px 18px;
+      border-radius: 20px; font-size: 0.75rem; font-weight: 500; color: #1e293b;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+    }
+
+    /* Interactive Live Prompt & Latency Playground (One Live Thing) */
+    .c1-playground {
+      margin-top: 48px; background: #F4F8F9; border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px; text-align: left;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; align-items: center;
+    }
+    .c1-preset-btn {
+      padding: 8px 16px; border-radius: 999px; border: 1px solid #cbd5e1;
+      background: #ffffff; color: #0f172a; font-size: 0.8rem; font-weight: 500; cursor: pointer;
+    }
+    .c1-preset-btn.is-active { background: #0f172a; color: #ffffff; border-color: #0f172a; }
+
+    .c1-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(15, 23, 42, 0.55);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .c1-modal.is-open { display: flex; }
+    .c1-modal-box {
+      background: #ffffff; border-radius: 20px; max-width: 460px; width: 100%; padding: 32px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    @media (max-width: 900px) {
+      .c1-grid { grid-template-columns: repeat(2, 1fr); }
+      .c1-playground { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .c1-grid { grid-template-columns: 1fr; }
+      .c1-title { font-size: 2.25rem; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
   </style>
 </head>
-<body>
+<body data-motion="active">
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
-    <defs>
-      <filter id="aii63LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
-        <feDisplacementMap id="aii63Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-  </svg>
 
-  <header class="aii63-navbar">
-    <strong style="font-size:17px;">✦ AI Image Generator UI</strong>
-    <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;">
-      <button type="button" id="motionToggleBtn" class="aii63-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="aii63-cta-btn" data-next-preview>Explore AI Image Generator UI ↗</button>
+  <header class="c1-nav-bar">
+    <nav aria-label="Primary Navigation" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+      <a href="#main-content" style="font-weight:700;color:#0f172a;text-decoration:none;font-size:1.05rem;">ViktorAI Studio</a>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="c1-preset-btn">Motion: ON</button>
+        <button type="button" class="c1-preset-btn is-active" data-c1-modal="open">Get API Key</button>
+      </div>
     </nav>
   </header>
 
-  <main id="main-content">
-    <section id="heroStage" class="aii63-hero">
-      <video id="heroBgVideo" class="aii63-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4" autoplay loop muted playsinline preload="auto"></video>
-      <canvas id="ambientSmokeCanvas" class="aii63-smoke-canvas" aria-hidden="true"></canvas>
-      <div class="aii63-hero-grid">
-        <div data-parallax="0.08">
-          <span class="aii63-pill-btn" style="color:var(--accent-primary);display:inline-flex;align-items:center;">AI Image Generator UI • Interactive Edition</span>
-          <h1 class="aii63-h1" id="oversizedHeadline">Built for Speed & Quality</h1>
-          <p style="font-size:16px;color:var(--text-secondary);line-height:1.65;max-width:60ch;margin-bottom:24px;">Precision-engineered AI Image Generator UI web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-          <div style="display:flex;gap:28px;flex-wrap:wrap;font-variant-numeric:tabular-nums;">
-            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;font-family:var(--font-mono);">120FPS</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Motion Pipeline</span></div>
-            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;font-family:var(--font-mono);">10K+</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Active Nodes</span></div>
-            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;font-family:var(--font-mono);">99%</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Visual Fidelity</span></div>
+  <main id="main-content" class="c1-page-shell">
+    <section class="c1-container" aria-label="Core Features">
+      <div class="c1-badge">Core Features</div>
+      <h1 class="c1-title">Built for Speed &amp; Quality</h1>
+      <p class="c1-subtitle">Everything you need to go<br>from idea to image</p>
+
+      <div class="c1-grid">
+        <!-- Card 1: Smart Prompt Suggestions -->
+        <article class="c1-card c1-card-1">
+          <div class="c1-prompt-box" id="c1PromptPreview">
+            A bright, high-resolution 3D illustration of a <span class="c1-blur-text">cheerful cartoon</span> of a <span class="c1-blur-text">girl character</span> <span class="c1-blur-text">centred against a</span> smooth blue background
+          </div>
+          <button type="button" class="c1-add-pill" id="c1EnhanceBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#a855f7" aria-hidden="true">
+              <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"/>
+            </svg>
+            <span>Add more details</span>
+          </button>
+          <svg class="c1-cursor" width="24" height="24" viewBox="0 0 24 24" fill="#0f172a" stroke="#ffffff" stroke-width="1" aria-hidden="true">
+            <path d="M4 2L20 11L11 13L9 22L4 2Z"/>
+          </svg>
+          <h3>Smart Prompt Suggestions</h3>
+        </article>
+
+        <!-- Card 2: API Access -->
+        <article class="c1-card c1-card-2">
+          <div class="c1-api-visual">
+            <svg width="260" height="170" viewBox="0 0 260 170" fill="none" aria-hidden="true">
+              <circle cx="130" cy="85" r="28" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+              <text x="130" y="89" text-anchor="middle" fill="#0f172a" font-size="11" font-weight="600">API</text>
+              <line x1="102" y1="85" x2="48" y2="45" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <line x1="102" y1="85" x2="48" y2="125" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <line x1="158" y1="85" x2="212" y2="45" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <line x1="158" y1="85" x2="212" y2="125" stroke="#0f172a" stroke-width="1.2" stroke-dasharray="3 3"/>
+              <circle cx="42" cy="42" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+              <circle cx="42" cy="128" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+              <circle cx="218" cy="42" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+              <circle cx="218" cy="128" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3>API Access</h3>
+        </article>
+
+        <!-- Card 3: Project Library -->
+        <article class="c1-card c1-card-3">
+          <div class="c1-mesh"></div>
+          <div class="c1-folder">
+            <svg width="170" height="130" viewBox="0 0 170 130" fill="none" aria-hidden="true">
+              <path d="M18 28C18 21.3726 23.3726 16 30 16H66L80 30H140C146.627 30 152 35.3726 152 42V102C152 108.627 146.627 114 140 114H30C23.3726 114 18 108.627 18 102V28Z" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+              <rect x="34" y="46" width="102" height="52" rx="10" fill="#F9ED96" opacity="0.65"/>
+            </svg>
+          </div>
+          <button type="button" class="c1-search" data-c1-modal="open">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span>Search in library</span>
+          </button>
+          <h3>Project Library</h3>
+        </article>
+      </div>
+
+      <!-- Interactive Prompt & Throughput Simulator (One Live Thing) -->
+      <div class="c1-playground">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:0.72rem;color:#7e22ce;font-weight:600;">LIVE PROMPT ENHANCER &amp; INFERENCE BENCHMARK</span>
+          <h2 style="font-size:1.5rem;font-weight:600;margin:6px 0 10px;">Test Smart Prompt Expansion</h2>
+          <p style="color:#64748b;font-size:0.88rem;margin-bottom:16px;">Select a style preset to update the Card 1 prompt box and inspect API inference latency.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="c1-preset-btn is-active" data-prompt="A bright, high-resolution 3D illustration of a cheerful cartoon of a girl character centred against a smooth blue background" data-ms="420ms" data-fps="4K UHD">3D Cartoon Character</button>
+            <button type="button" class="c1-preset-btn" data-prompt="Isometric glassmorphism workspace diorama with warm rim lighting, octane render, 8k micro-textures" data-ms="380ms" data-fps="8K RAW">Isometric Glass Diorama</button>
+            <button type="button" class="c1-preset-btn" data-prompt="Editorial studio product photograph of brushed titanium headphones on volcanic basalt stone" data-ms="310ms" data-fps="Studio HDR">Editorial Product Shot</button>
           </div>
         </div>
-        <div id="heroPopoutRig" class="aii63-popout-wrap" style="filter:url(#aii63LiquidFilter);">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F5C344" stop-opacity="0.75"/><stop offset="100%" stop-color="#F5C344" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#F5C344" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;text-align:center;">
+          <div style="background:#ffffff;padding:18px;border-radius:14px;border:1px solid var(--border);">
+            <div style="font-size:0.72rem;color:#64748b;">INFERENCE SPEED</div>
+            <div id="c1MsOut" class="stat-num" data-counter="420" data-suffix="ms" style="font-size:1.75rem;font-weight:700;margin-top:4px;">420ms</div>
+          </div>
+          <div style="background:#ffffff;padding:18px;border-radius:14px;border:1px solid var(--border);">
+            <div style="font-size:0.72rem;color:#64748b;">OUTPUT QUALITY</div>
+            <div id="c1ResOut" class="tabular-nums" style="font-size:1.45rem;font-weight:700;margin-top:8px;color:#7e22ce;">4K UHD</div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section id="pinnedSpecs" class="aii63-section">
-      <div class="aii63-pinned-grid">
-        <article class="aii63-card aii63-reveal" data-spec-index="001">
-          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">001 / AI IMAGE GENERATOR UI</span>
-          <h2 style="font-size:20px;margin:8px 0;">Built for Speed & Quality</h2>
-          <p style="font-size:13px;color:var(--text-secondary);">Precision-engineered AI Image Generator UI web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-        </article>
-        <div class="aii63-card" id="scrubCenterStage" style="text-align:center;">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F5C344" stop-opacity="0.75"/><stop offset="100%" stop-color="#F5C344" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#F5C344" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
-          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">SCROLL SCRUB ANGLE: 0.0°</p>
-        </div>
-        <article class="aii63-card aii63-reveal" data-spec-index="002">
-          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">002 / TELEMETRY</span>
-          <h2 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h2>
-          <p style="font-size:13px;color:var(--text-secondary);">Interactive perspective cards and SVG displacement filters tuned for AI Image Generator UI.</p>
-        </article>
-      </div>
+  
+    <section aria-label="Technical Architecture & Performance SLA" style="max-width:1120px;margin:24px auto;padding:20px 24px;border-radius:16px;border:1px solid rgba(128,128,128,0.16);">
+      <h2 style="font-size:1.05rem;margin-bottom:6px;">Technical Architecture & Performance SLA</h2>
+      <p style="font-size:0.88rem;opacity:0.82;">Engineered with zero-dependency ES6 modules, hardware-accelerated transform compositing, and sub-16ms frame budgets across desktop and mobile viewports.</p>
     </section>
   </main>
 
-  <footer class="aii63-section" style="padding-top:24px;padding-bottom:40px;border-top:1px solid var(--border-hairline);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-    <span style="font-size:13px;color:var(--text-secondary);">© 2026 AI Image Generator UI. Crafted with ForgeFrame Gold v2.0.</span>
-    <span style="font-size:12px;font-family:var(--font-mono);color:var(--accent-primary);">STATUS: NOMINAL • 60FPS</span>
+  <footer style="max-width:1100px;margin:0 auto;padding:24px 20px;border-top:1px solid var(--border);text-align:center;font-size:0.8rem;color:#64748b;">
+    <p>© 2026 ViktorAI — Built for Speed &amp; Quality</p>
   </footer>
 
-  <div id="seamlessModal" class="aii63-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
-    <div class="aii63-seamless-box">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <span class="aii63-pill-btn">AI Image Generator UI Specification</span>
-        <button type="button" id="closeSeamlessBtn" class="aii63-pill-btn">Close (Esc)</button>
+  <div class="c1-modal" id="c1Modal" role="dialog" aria-modal="true" aria-labelledby="c1ModalTitle">
+    <div class="c1-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h3 id="c1ModalTitle" style="font-size:1.25rem;font-weight:600;">Generate Instant API Key</h3>
+        <button type="button" id="c1ModalClose" class="c1-preset-btn">Close</button>
       </div>
-      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">AI Image Generator UI</h2>
-      <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:18px;">Precision-engineered AI Image Generator UI web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-      <div style="margin-bottom:18px;"><svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F5C344" stop-opacity="0.75"/><stop offset="100%" stop-color="#F5C344" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#F5C344" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg></div>
-      <button type="button" id="confirmSeamlessBtn" class="aii63-cta-btn" style="width:100%;">Return to Live Stage</button>
+      <p style="color:#64748b;font-size:0.86rem;margin-bottom:14px;">Access Smart Prompt Suggestions and Project Library endpoints via REST or WebSockets.</p>
+      <form id="c1ModalForm" style="display:grid;gap:10px;">
+        <input type="email" required placeholder="developer@studio.ai" style="padding:10px 14px;border-radius:10px;border:1px solid #cbd5e1;">
+        <button type="submit" class="c1-preset-btn is-active" style="padding:11px;">Create Production Key</button>
+      </form>
     </div>
   </div>
-  
+
   <script>
     (function () {
+      var btns = document.querySelectorAll('.c1-preset-btn[data-prompt]');
+      var preview = document.getElementById('c1PromptPreview');
+      var msOut = document.getElementById('c1MsOut');
+      var resOut = document.getElementById('c1ResOut');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (preview) preview.textContent = btn.getAttribute('data-prompt');
+          if (msOut) msOut.textContent = btn.getAttribute('data-ms');
+          if (resOut) resOut.textContent = btn.getAttribute('data-fps');
+        });
+      });
+
+      var modal = document.getElementById('c1Modal');
+      var closeBtn = document.getElementById('c1ModalClose');
+      document.querySelectorAll('[data-c1-modal="open"]').forEach(function (el) {
+        el.addEventListener('click', function () { if (modal) modal.classList.add('is-open'); });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+      var form = document.getElementById('c1ModalForm');
+      if (form) form.addEventListener('submit', function (e) { e.preventDefault(); modal.classList.remove('is-open'); });
+    })();
+  
+    (function () {
       var motionPaused = false;
-      var motionBtn = document.getElementById('motionToggleBtn');
-      var heroVid = document.getElementById('heroBgVideo');
-      if (motionBtn) {
-        motionBtn.addEventListener('click', function () {
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
           motionPaused = !motionPaused;
-          document.body.classList.toggle('is-motion-paused', motionPaused);
-          motionBtn.setAttribute('aria-pressed', String(motionPaused));
-          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
-          if (heroVid) {
-            if (motionPaused) heroVid.pause();
-            else heroVid.play().catch(function(){});
-          }
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
         });
       }
-
-      // Live London Clock (if #londonClock exists)
-      var clockEl = document.getElementById('londonClock');
-      function updateLondonClock() {
-        if (!clockEl) return;
-        try {
-          var now = new Date();
-          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
-          clockEl.textContent = t + ' in London';
-        } catch (e) {
-          clockEl.textContent = '14:30 in London';
-        }
-      }
-      updateLondonClock();
-      setInterval(updateLondonClock, 10000);
-
-      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
-      var scrubStage = document.getElementById('scrubCenterStage');
-      var scrubDial = document.getElementById('scrubDialText');
-      var scrubReadout = document.getElementById('scrollScrubReadout');
-      var parallaxEls = document.querySelectorAll('[data-parallax]');
-      var specCards = document.querySelectorAll('[data-spec-index]');
-
-      function onScroll() {
-        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
-        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
-        var deg = (progress * 360).toFixed(1);
-
-        if (!motionPaused) {
-          parallaxEls.forEach(function (el) {
-            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
-            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
-          });
-          if (scrubStage) {
-            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
-          }
-        }
-        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
-        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
-        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
-      }
-      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
-      onScroll();
-
-      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
-      var revealEls = document.querySelectorAll('.aii63-reveal');
-      var counterEls = document.querySelectorAll('[data-counter-target]');
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
       function animateCounter(el) {
-        if (el.getAttribute('data-counted') === 'true') return;
-        el.setAttribute('data-counted', 'true');
-        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
-        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
         var start = performance.now();
-        function tick(now) {
-          var t = Math.min(1, (now - start) / 1000);
-          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
-          if (t < 1) window.requestAnimationFrame(tick);
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
         }
-        window.requestAnimationFrame(tick);
+        window.requestAnimationFrame(stepCounter);
       }
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-        }, { threshold: 0.12 });
-        revealEls.forEach(function (el) { io.observe(el); });
-        var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
-        }, { threshold: 0.2 });
-        counterEls.forEach(function (el) { cio.observe(el); });
-      } else {
-        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-      }
-
-      // Group 3.3: Seamless Fullscreen Modal Transition
-      var modal = document.getElementById('seamlessModal');
-      var modalTitle = document.getElementById('seamlessTitle');
-      var exploreBtn = document.getElementById('exploreMagneticBtn');
-      var closeBtn = document.getElementById('closeSeamlessBtn');
-      var confirmBtn = document.getElementById('confirmSeamlessBtn');
-
-      function openSeamless(titleText) {
-        if (!modal) return;
-        if (titleText && modalTitle) modalTitle.textContent = titleText;
-        modal.classList.add('is-open');
-      }
-      function closeSeamless() {
-        if (!modal) return;
-        modal.classList.remove('is-open');
-      }
-      if (exploreBtn) {
-        exploreBtn.addEventListener('click', function () {
-          if (modal && modal.classList.contains('is-open')) closeSeamless();
-          else openSeamless();
-        });
-      }
-      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
-      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
-      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          openSeamless(el.getAttribute('data-seamless-trigger'));
-        });
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeSeamless();
-      });
-
-      // Group 4.2: Ambient Particle / Smoke Canvas
-      var canvas = document.getElementById('ambientSmokeCanvas');
-      if (canvas && canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-        var w = 0, h = 0;
-        function resize() {
-          w = canvas.width = canvas.offsetWidth || window.innerWidth;
-          h = canvas.height = canvas.offsetHeight || window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize, { passive: true });
-        var pts = [];
-        for (var i = 0; i < 34; i++) {
-          pts.push({
-            x: Math.random() * 1400,
-            y: Math.random() * 900,
-            vx: (Math.random() - 0.5) * 0.4,
-            vy: -Math.random() * 0.45 - 0.1,
-            r: Math.random() * 2.5 + 1,
-            a: Math.random() * 0.4 + 0.12
-          });
-        }
-        function draw() {
-          if (!motionPaused && ctx) {
-            ctx.clearRect(0, 0, w, h);
-            for (var j = 0; j < pts.length; j++) {
-              var p = pts[j];
-              p.x += p.vx; p.y += p.vy;
-              if (p.y < -10) p.y = h + 10;
-              if (p.x < -10) p.x = w + 10;
-              if (p.x > w + 10) p.x = -10;
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
-              ctx.fill();
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
             }
-          }
-          window.requestAnimationFrame(draw);
-        }
-        window.requestAnimationFrame(draw);
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
       }
     })();
+
   </script>
 </body>
 </html>

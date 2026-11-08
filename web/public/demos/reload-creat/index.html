@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reload — Creative Branding Agency &amp; Visual Culture Systems</title>
+  <meta name="description" content="Reload designs make brand systems that redefine modern visual culture. Strategic branding, visual identity, creative direction, and art direction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f1ec;
+      --surface: #ffffff;
+      --crimson-dark: #250405;
+      --crimson-mid: #5a0b0d;
+      --fg: #3b0809;
+      --muted: #8c7b78;
+      --accent: #d91b1b;
+      --accent-text: #b91c1c;
+      --on-accent: #ffffff;
+      --border: rgba(59, 8, 9, 0.14);
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: #1c0304;
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .rc-outer-frame {
+      max-width: 1280px; margin: 28px auto; background: var(--bg);
+      border-radius: 32px; overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.65);
+    }
+    /* Crimson Hero Block */
+    .rc-hero {
+      position: relative; background: radial-gradient(circle at 52% 38%, #8f1111 0%, #2b0405 68%, #160203 100%);
+      color: #ffffff; padding: 26px 36px 36px; min-height: 590px;
+      display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
+    }
+    .rc-hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; opacity: 0.86; mix-blend-mode: lighten; pointer-events: none;
+    }
+    .rc-nav {
+      position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .rc-logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #ffffff; text-decoration: none; font-family: var(--font-display);
+      font-weight: 800; font-size: 1.15rem;
+    }
+    .rc-nav-links { display: flex; gap: 28px; list-style: none; }
+    .rc-nav-links a {
+      color: rgba(255,255,255,0.82); text-decoration: none;
+      font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+    }
+    .rc-hero-grid {
+      position: relative; z-index: 3; display: grid; grid-template-columns: 1fr 1.2fr;
+      align-items: center; gap: 28px; margin: 48px 0;
+    }
+    .rc-source-tag {
+      font-family: var(--font-display); font-size: 1.35rem; font-weight: 700;
+      line-height: 1.1; text-transform: uppercase; max-width: 190px;
+    }
+    .rc-hero-right { text-align: right; }
+    .rc-hero-right h1 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5.2vw, 4.6rem);
+      font-weight: 700; line-height: 0.96; letter-spacing: -0.03em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .rc-hero-bottom {
+      position: relative; z-index: 3; display: flex; align-items: flex-end;
+      justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .rc-stat-pair { display: flex; gap: 14px; }
+    .rc-white-card {
+      background: #ffffff; color: #250405; border-radius: 18px; padding: 18px 20px; width: 160px;
+    }
+    .rc-glass-card {
+      background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.22); color: #ffffff;
+      border-radius: 18px; padding: 18px 20px; width: 175px;
+    }
+    .rc-pill-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; max-width: 360px; }
+    .rc-pill-tag {
+      padding: 6px 13px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.35);
+      font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; color: #ffffff;
+    }
+
+    /* Section 2: Reload Designs Make Brand Systems */
+    .rc-sec { padding: 64px 42px; }
+    .rc-statement-head {
+      display: grid; grid-template-columns: 80px 1fr 120px; gap: 20px; align-items: start; margin-bottom: 42px;
+    }
+    .rc-statement-title {
+      font-family: var(--font-sans); font-size: clamp(1.85rem, 3.6vw, 3.1rem);
+      font-weight: 600; line-height: 1.08; letter-spacing: -0.025em; text-transform: uppercase;
+    }
+    .rc-statement-title .muted { color: #a89f9a; }
+    .rc-inline-pill {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 68px; height: 34px; border-radius: 999px; background: var(--accent);
+      color: #ffffff; vertical-align: middle; margin: 0 6px;
+    }
+    .rc-projects-row {
+      display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: end;
+    }
+    .rc-portrait-trio {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .rc-portrait-card {
+      border-radius: 20px; overflow: hidden; background: #250405; aspect-ratio: 4 / 4.6;
+      position: relative; cursor: pointer;
+    }
+    .rc-portrait-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.45s var(--ease-out);
+    }
+    .rc-portrait-card:hover img { transform: scale(1.05); }
+
+    /* Section 3: Everything Your Brand Needs To Grow (4-Card Bento) */
+    .rc-bento-sec { padding: 36px 42px 64px; text-align: center; }
+    .rc-bento-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      align-items: stretch; margin-top: 40px; text-align: left;
+    }
+    .rc-bento-card {
+      position: relative; border-radius: 22px; overflow: hidden;
+      background: #2b0506; color: #ffffff; min-height: 340px; padding: 22px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .rc-bento-card--tall { transform: translateY(-18px); min-height: 376px; }
+    .rc-bento-card img {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85;
+    }
+    .rc-bento-card-content { position: relative; z-index: 2; margin-top: auto; }
+
+    /* Section 4: Interactive Brand Sprint Configurator (One Live Thing) */
+    .rc-calc-sec { padding: 42px; background: #ebe6de; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .rc-calc-box {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center;
+    }
+    .rc-tier-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .rc-tier-btn {
+      padding: 10px 18px; border-radius: 999px; border: 1px solid var(--fg);
+      background: transparent; color: var(--fg); font-weight: 600; font-size: 0.84rem; cursor: pointer;
+    }
+    .rc-tier-btn.is-active { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+
+    /* Section 5: We Turn Ideas Into Visual Statements */
+    .rc-bottom-sec { padding: 64px 42px; }
+    .rc-cta-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 999px; border: 1px solid var(--fg);
+      background: transparent; color: var(--fg); font-family: var(--font-mono);
+      font-size: 0.78rem; font-weight: 600; text-transform: uppercase; cursor: pointer;
+    }
+
+    .rc-modal {
+      position: fixed; inset: 0; z-index: 200; background: rgba(22, 2, 3, 0.78);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .rc-modal.is-open { display: flex; }
+    .rc-modal-card {
+      background: var(--bg); color: var(--fg); border-radius: 24px; max-width: 500px; width: 100%; padding: 32px;
+    }
+
+    @media (max-width: 960px) {
+      .rc-hero-grid, .rc-projects-row, .rc-bento-grid, .rc-calc-box, .rc-statement-head { grid-template-columns: 1fr; }
+      .rc-hero-right { text-align: left; }
+      .rc-bento-card--tall { transform: none; }
+    }
+    @media (max-width: 560px) {
+      .rc-portrait-trio { grid-template-columns: 1fr; }
+      .rc-sec, .rc-bento-sec, .rc-bottom-sec { padding: 36px 20px; }
+    }
+  
+    ::selection { background: var(--accent, #7c5cff); color: var(--on-accent, #ffffff); }
+    :focus-visible { outline: 2px solid var(--accent-text, #38bdf8); outline-offset: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 999; padding: 10px 16px; background: var(--accent, #111827); color: var(--on-accent, #ffffff); text-decoration: none; border-radius: 8px; }
+    .skip-link:focus-visible { left: 12px; }
+    [data-counter], [data-counter-target], .stat-num, .metric-val, .metric-number, .tabular-nums { font-variant-numeric: tabular-nums; }
+    button, a { transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+    button:active, a:active { transform: scale(0.97) translateY(1px); }
+    body[data-motion="paused"] *, body[data-motion="paused"] *::before, body[data-motion="paused"] *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+  
+  </style>
+</head>
+<body data-motion="active">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="rc-outer-frame">
+    <header class="rc-hero">
+      <img src="assets/hero-portrait.webp" alt="Reload Creative Branding Agency studio director in dark crimson lighting" width="1280" height="646" class="rc-hero-img">
+      <nav class="rc-nav" aria-label="Primary Navigation">
+        <a href="#main-content" class="rc-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h10a6 6 0 0 1 0 12H9l7 4h-5l-7-4V4z"/></svg>
+          <span>RELOAD</span>
+        </a>
+        <ul class="rc-nav-links">
+          <li><a href="#visual-culture">Home</a></li>
+          <li><a href="#brand-growth">Services</a></li>
+          <li><a href="#sprint-estimator">Cases</a></li>
+        </ul>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button type="button" id="motionToggleBtn" class="rc-pill-tag" style="background:rgba(0,0,0,0.45);cursor:pointer;">Motion: ON</button>
+          <button type="button" class="rc-pill-tag" style="background:#ffffff;color:#250405;font-weight:600;cursor:pointer;" data-rc-modal="open">Start Project</button>
+        </div>
+      </nav>
+
+      <div class="rc-hero-grid">
+        <div>
+          <p class="rc-source-tag">SOURCE<br>OF BOLD<br>IDEAS/</p>
+          <p style="font-size:0.76rem;color:rgba(255,255,255,0.72);margin-top:8px;max-width:190px;">Where brands are reborn and boundaries are erased.</p>
+        </div>
+        <div class="rc-hero-right">
+          <h1>CREATIVE<br>BRANDING<br>AGENCY</h1>
+          <p style="font-size:0.84rem;color:rgba(255,255,255,0.82);max-width:320px;margin-left:auto;line-height:1.5;">
+            We craft bold identities that stand out. From strategy to visual DNA — we help brands redefine, not just refresh.
+          </p>
+        </div>
+      </div>
+
+      <div class="rc-hero-bottom">
+        <div class="rc-stat-pair">
+          <div class="rc-white-card">
+            <div style="font-size:0.68rem;color:#7c726d;margin-bottom:16px;">Brands that lead forward</div>
+            <div class="stat-num" data-counter="85" data-suffix="%" style="font-family:var(--font-display);font-size:2.2rem;font-weight:800;">85%</div>
+            <div style="font-size:0.68rem;color:#7c726d;">Win beyond the market</div>
+          </div>
+          <div class="rc-glass-card">
+            <div style="font-weight:600;font-size:0.86rem;margin-bottom:28px;">Reload<br>your brand</div>
+            <div style="font-size:0.68rem;color:rgba(255,255,255,0.75);">We craft bold brands with strategies built to grow and lead globally.</div>
+          </div>
+        </div>
+        <div class="rc-pill-tags">
+          <span class="rc-pill-tag">BRANDING</span>
+          <span class="rc-pill-tag">DIGITAL CAMPAIGNS</span>
+          <span class="rc-pill-tag">CONTENT</span>
+          <span class="rc-pill-tag">CREATIVE STRATEGY</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Section 1: Reload Designs Make Brand Systems -->
+      <section id="visual-culture" class="rc-sec" aria-label="Visual Culture Statement">
+        <div class="rc-statement-head">
+          <div style="color:var(--accent);">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="rc-statement-title">
+              RELOAD DESIGNS MAKE<br>
+              BRAND SYSTEMS <span class="rc-inline-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5" opacity="0.6"/></svg></span> THAT<br>
+              <span class="muted">REDEFINE MODERN</span><br>
+              VISUAL CULTURE
+            </h2>
+            <p style="font-size:0.84rem;color:var(--muted);max-width:410px;margin-top:16px;line-height:1.55;">
+              Reload builds brands that cut through noise, challenge clichés, and actually sell. We combine identity, strategy, and story — all in one.
+            </p>
+          </div>
+          <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);text-align:right;text-transform:uppercase;">
+            SHAPE<br>THE FUTURE
+          </div>
+        </div>
+
+        <div class="rc-projects-row">
+          <div>
+            <a href="#brand-growth" style="color:var(--fg);font-weight:700;font-size:0.95rem;text-transform:uppercase;line-height:1.35;text-decoration:underline;">
+              OUR<br>LATEST<br>PROJECTS
+            </a>
+          </div>
+          <div class="rc-portrait-trio">
+            <figure class="rc-portrait-card" data-rc-modal="open">
+              <img src="assets/project-1.webp" alt="Editorial eyewear minimalism campaign" width="381" height="457" loading="lazy">
+            </figure>
+            <figure class="rc-portrait-card" data-rc-modal="open">
+              <img src="assets/project-2.webp" alt="Venetian blinds dramatic crimson light identity" width="382" height="457" loading="lazy">
+            </figure>
+            <figure class="rc-portrait-card" data-rc-modal="open">
+              <img src="assets/project-3.webp" alt="Red studio chiaroscuro fashion art direction" width="382" height="457" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Everything Your Brand Needs To Grow -->
+      <section id="brand-growth" class="rc-bento-sec" aria-label="Brand Capabilities Bento">
+        <h2 class="rc-statement-title" style="max-width:680px;margin:0 auto;">
+          EVERYTHING <span class="muted">YOUR<br>BRAND</span> NEEDS TO GROW
+        </h2>
+        <p style="font-size:0.84rem;color:var(--muted);max-width:460px;margin:14px auto 0;line-height:1.55;">
+          Reload offers strategic branding, visual identity, and creative direction — built to cut through noise and deliver results.
+        </p>
+
+        <div class="rc-bento-grid">
+          <article class="rc-bento-card" style="background:linear-gradient(160deg,#2a0506 0%,#7a1515 100%);">
+            <span class="rc-pill-tag" style="align-self:flex-start;">BRAND CORE</span>
+            <div class="rc-bento-card-content">
+              <h3 style="font-size:1.35rem;font-weight:600;margin-bottom:6px;">Branding<br>strategy</h3>
+              <p style="font-size:0.75rem;color:rgba(255,255,255,0.76);">Clarifying who you are, what you stand for, and how you win.</p>
+            </div>
+          </article>
+
+          <article class="rc-bento-card rc-bento-card--tall">
+            <img src="assets/bento-pokali.webp" alt="POKALI crimson cosmetic jar visual system" width="616" height="718" loading="lazy">
+            <span class="rc-pill-tag" style="position:relative;z-index:2;align-self:flex-start;">VISUAL SYSTEM</span>
+            <div class="rc-bento-card-content">
+              <h3 style="font-size:1.35rem;font-weight:600;margin-bottom:6px;">Visual<br>identity</h3>
+              <p style="font-size:0.75rem;color:rgba(255,255,255,0.82);">Turning strategy into bold, distinctive brand visuals.</p>
+            </div>
+          </article>
+
+          <article class="rc-bento-card">
+            <img src="assets/bento-silhouette.webp" alt="Warm amber studio silhouettes creative direction" width="540" height="650" loading="lazy">
+            <span class="rc-pill-tag" style="position:relative;z-index:2;align-self:flex-start;">BRAND NARRATIVE</span>
+            <div class="rc-bento-card-content">
+              <h3 style="font-size:1.35rem;font-weight:600;margin-bottom:6px;">Creative<br>Direction</h3>
+              <p style="font-size:0.75rem;color:rgba(255,255,255,0.82);">Setting the tone, mood, and message across every channel.</p>
+            </div>
+          </article>
+
+          <article class="rc-bento-card" style="background:linear-gradient(160deg,#3d0809 0%,#a81818 100%);">
+            <span class="rc-pill-tag" style="align-self:flex-start;">CREATIVE LOOK</span>
+            <div class="rc-bento-card-content">
+              <h3 style="font-size:1.35rem;font-weight:600;margin-bottom:6px;">Art<br>Direction</h3>
+              <p style="font-size:0.75rem;color:rgba(255,255,255,0.78);">High-impact campaign photography and tactile 3D objects.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 3: Interactive Brand Sprint Estimator (One Live Thing) -->
+      <section id="sprint-estimator" class="rc-calc-sec" aria-label="Interactive Brand Sprint Estimator">
+        <div class="rc-calc-box">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;">LIVE BRAND SYSTEM CONFIGURATOR</span>
+            <h2 style="font-family:var(--font-display);font-size:2rem;margin:8px 0 12px;">Select Your Rebrand Architecture</h2>
+            <p style="font-size:0.88rem;color:var(--muted);">Toggle the creative modules below to calculate turnaround weeks and deliverable count.</p>
+            <div class="rc-tier-btns" role="group" aria-label="Brand Sprint Modules">
+              <button type="button" class="rc-tier-btn is-active" data-sprint="identity" data-weeks="6" data-deliverables="18" data-lift="85">Visual Identity Core</button>
+              <button type="button" class="rc-tier-btn" data-sprint="campaign" data-weeks="8" data-deliverables="26" data-lift="92">Global Campaign System</button>
+              <button type="button" class="rc-tier-btn" data-sprint="full" data-weeks="12" data-deliverables="42" data-lift="97">Full 360° Brand DNA</button>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;background:#ffffff;padding:24px;border-radius:20px;border:1px solid var(--border);">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);">SPRINT TIMELINE</div>
+              <div id="rcWeeksOut" class="stat-num" data-counter="6" data-suffix=" wks" style="font-family:var(--font-display);font-size:1.9rem;font-weight:800;">6 wks</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);">DELIVERABLES</div>
+              <div id="rcDelivOut" class="stat-num" data-counter="18" data-suffix=" assets" style="font-family:var(--font-display);font-size:1.9rem;font-weight:800;">18 assets</div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);">RECALL LIFT</div>
+              <div id="rcLiftOut" class="stat-num" data-counter="85" data-suffix="%" style="font-family:var(--font-display);font-size:1.9rem;font-weight:800;color:var(--accent);">85%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: We Turn Ideas Into Visual Statements -->
+      <section id="visual-statements" class="rc-bottom-sec" aria-label="Visual Statements Showcase">
+        <div style="text-align:center;margin-bottom:36px;">
+          <h2 class="rc-statement-title">
+            WE TURN IDEAS<br>
+            INTO VISUAL <span class="rc-inline-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> STATEMENTS<br>
+            <span class="muted">FROM VISION TO DELIVERY —</span><br>
+            IMPACT THAT LASTS
+          </h2>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-top:24px;border-top:1px solid var(--border);">
+          <p style="font-size:0.82rem;color:var(--muted);max-width:340px;">We design visual worlds that resonate. From brand core to final detail — we build presence that commands cultural authority.</p>
+          <button type="button" class="rc-cta-pill" data-rc-modal="open">
+            <span>EXPLORE NOW</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer style="padding:24px 42px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:0.74rem;color:var(--muted);">
+      <span>© 2026 RELOAD CREATIVE BRANDING AGENCY</span>
+      <span>STRATEGY · VISUAL IDENTITY · ART DIRECTION</span>
+    </footer>
+  </div>
+
+  <div class="rc-modal" id="rcModal" role="dialog" aria-modal="true" aria-labelledby="rcModalTitle">
+    <div class="rc-modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h3 id="rcModalTitle" style="font-family:var(--font-display);font-size:1.35rem;">Book a Brand DNA Discovery Call</h3>
+        <button type="button" id="rcModalClose" class="rc-tier-btn" style="padding:6px 12px;">Close</button>
+      </div>
+      <p style="font-size:0.88rem;color:var(--muted);margin-bottom:16px;">Share your brand stage and target launch window with Reload's creative directors.</p>
+      <form id="rcModalForm" style="display:grid;gap:12px;">
+        <input type="text" required placeholder="Brand or Company Name" style="padding:11px 14px;border-radius:10px;border:1px solid var(--border);">
+        <input type="email" required placeholder="founder@brand.com" style="padding:11px 14px;border-radius:10px;border:1px solid var(--border);">
+        <button type="submit" class="rc-tier-btn is-active" style="padding:12px;">Request Creative Proposal</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btns = document.querySelectorAll('.rc-tier-btn[data-sprint]');
+      var wOut = document.getElementById('rcWeeksOut');
+      var dOut = document.getElementById('rcDelivOut');
+      var lOut = document.getElementById('rcLiftOut');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (wOut) wOut.textContent = btn.getAttribute('data-weeks') + ' wks';
+          if (dOut) dOut.textContent = btn.getAttribute('data-deliverables') + ' assets';
+          if (lOut) lOut.textContent = btn.getAttribute('data-lift') + '%';
+        });
+      });
+
+      var modal = document.getElementById('rcModal');
+      var closeBtn = document.getElementById('rcModalClose');
+      document.querySelectorAll('[data-rc-modal="open"]').forEach(function (el) {
+        el.addEventListener('click', function () { if (modal) modal.classList.add('is-open'); });
+      });
+      if (closeBtn) closeBtn.addEventListener('click', function () { modal.classList.remove('is-open'); });
+      window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+      var form = document.getElementById('rcModalForm');
+      if (form) form.addEventListener('submit', function (e) { e.preventDefault(); modal.classList.remove('is-open'); });
+    })();
+  
+    (function () {
+      var motionPaused = false;
+      var motionToggle = document.getElementById('motionToggleBtn');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.setAttribute('data-motion', motionPaused ? 'paused' : 'active');
+          motionToggle.textContent = motionPaused ? 'Motion: Paused' : 'Motion: ON';
+        });
+      }
+      var counters = document.querySelectorAll('[data-counter], [data-counter-target]');
+      function animateCounter(el) {
+        var raw = el.getAttribute('data-counter') || el.getAttribute('data-counter-target') || '0';
+        var target = parseFloat(raw);
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var suffix = el.getAttribute('data-suffix') || el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function stepCounter(now) {
+          var prog = Math.min(1, (now - start) / 900);
+          var ease = 1 - Math.pow(1 - prog, 3);
+          var val = (target * ease).toFixed(decimals);
+          el.textContent = val + suffix;
+          if (prog < 1) window.requestAnimationFrame(stepCounter);
+        }
+        window.requestAnimationFrame(stepCounter);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(animateCounter);
+      }
+    })();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "id": "t309",
+  "slug": "wild-pil",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T23:48:54.693Z",
+  "demo": "/demos/wild-pil/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d085ad7a887b",
+  "sha256": "d085ad7a887b960ddb6cd53d0b65db2084dad9315ad3cbb59e419f69a9dde562",
+  "demoHtmlSha256": "a5b986df6931ec14f6d6a0f342eced070f0d1d1a842317152b5fa767dd06458a",
+  "demoSha256": "61a5d33d7b25e1e27a33e8de0a762e241396df8a83b9e3462d496a22ee83ed40",
+  "bytes": 802156,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.595,
+      "action": "click",
+      "selector": "#letsGetWildBtn"
+    },
+    {
+      "seconds": 4.969,
+      "action": "click",
+      "selector": "#speakerBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1440
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wild-pil-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wild-pil-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wild-pil-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wild-pil-return.jpg"
+  ]
+}

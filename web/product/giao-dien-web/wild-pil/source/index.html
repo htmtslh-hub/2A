@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wild — Travel Rental &amp; Untamed Expeditions</title>
+  <meta name="description" content="Embark on a wild ride around the world with our travel rental service. Discover breathtaking landscapes and hidden gems on your unforgettable journey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fs: min(19.6vh, 13.2vw);
+      --page-start: #ffffff;
+      --paper: #f2f2f1;
+      --ink: #1d1d1d;
+      --secondary: #3a3a3a;
+      --rule: #a9a9a6;
+      --btn-bg: #1b1b1b;
+      --pill-placeholder: #d8d3cf;
+      --accent: #1b1b1b;
+      --accent-text: #1d1d1d;
+      --accent-2: #5c534a;
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --font-display: "Inter", system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, monospace;
+      --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --ease-pill: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--ink); color: #ffffff; }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--paper); color: var(--ink); }
+    body {
+      min-height: 100vh;
+      overflow-x: clip;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 8px 16px; background: var(--ink); color: #fff;
+      text-decoration: none; border-radius: 999px; font-size: 12px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    /* Hero 100vh Stage */
+    .wp-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 620px;
+      overflow: hidden;
+      font-size: var(--fs);
+      background: #ffffff;
+    }
+    .wp-paper-bg {
+      position: absolute; inset: 0;
+      background: var(--paper);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .wp-paper-bg svg {
+      width: 100%; height: 100%;
+      display: block;
+    }
+
+    /* Top Nav */
+    .wp-nav {
+      position: absolute; top: 0; left: 0; right: 0;
+      z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.14em 0.27em;
+      font-size: max(12px, 0.072em);
+      font-weight: 500;
+      transform: translateY(-140%);
+    }
+    .wp-nav-group {
+      display: flex; align-items: center; gap: 24px;
+    }
+    .wp-nav a {
+      color: var(--ink); text-decoration: none;
+      transition: opacity 0.2s var(--ease-out);
+    }
+    .wp-nav a:hover { opacity: 0.55; }
+    .wp-motion-pill {
+      padding: 6px 12px; border-radius: 999px;
+      border: 1px solid rgba(29, 29, 29, 0.2);
+      background: rgba(255, 255, 255, 0.7);
+      font-family: var(--font-sans); font-size: 11px; font-weight: 600;
+      color: var(--ink); cursor: pointer;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .wp-motion-pill:active, .wp-cta-btn:active, .wp-pill-icon:active {
+      transform: scale(0.97);
+    }
+
+    /* Word + Pill Center Row */
+    .wp-stage-center {
+      position: absolute; left: 0; right: 0; top: 43%;
+      transform: translateY(-50%);
+      z-index: 10;
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.026em;
+    }
+    .wp-word-half {
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 0.8;
+      color: var(--ink);
+      user-select: none;
+    }
+    .wp-pill {
+      position: relative;
+      height: 1.81em;
+      width: 0.012em;
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--pill-placeholder);
+      display: flex; align-items: center; justify-content: center;
+      clip-path: inset(50% 0);
+      will-change: transform, clip-path;
+      flex-shrink: 0;
+    }
+    .wp-pill-video {
+      position: absolute; top: 0; left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      min-width: 4.2em;
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .wp-pill-hairline {
+      position: absolute; inset: 0;
+      background: #b9b9b9;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .wp-pill-icon {
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      z-index: 4;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: none; background: rgba(0, 0, 0, 0.18);
+      color: rgba(255, 255, 255, 0.9);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      cursor: pointer;
+      transition: opacity 0.3s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .wp-pill-icon.left { left: 18px; pointer-events: none; }
+    .wp-pill-icon.right { right: 18px; }
+    .wp-pill-icon.muted .sound-wave { opacity: 0.2; }
+
+    /* Hero Bottom Bar */
+    .wp-hero-footer {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      z-index: 20;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 28px;
+      padding: 0 0.27em 0.22em;
+      transform: translateY(160%);
+    }
+    .wp-lead {
+      width: 1.42em;
+      min-width: 250px;
+      font-size: max(12.5px, 0.066em);
+      line-height: 1.45;
+      color: var(--secondary);
+    }
+    .wp-dropcap {
+      float: left;
+      font-size: 2.35em;
+      font-weight: 650;
+      line-height: 0.82;
+      margin-right: 6px;
+      color: var(--ink);
+    }
+    .wp-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+      margin-bottom: 14px;
+      transform: scaleX(0);
+      transform-origin: center;
+    }
+    .wp-cta-btn {
+      height: 44px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: none;
+      background: var(--btn-bg);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 13.5px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .wp-cta-btn:hover { opacity: 0.86; }
+
+    /* Editorial Sections Below Hero for Complete Story */
+    .wp-section {
+      padding: 88px 6vw;
+      border-top: 1px solid rgba(29, 29, 29, 0.1);
+      background: var(--paper);
+    }
+    .wp-sec-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .wp-sec-kicker {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--secondary);
+    }
+    .wp-sec-title {
+      font-size: clamp(26px, 3vw, 44px);
+      font-weight: 700; letter-spacing: -0.03em;
+    }
+    .wp-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .wp-card {
+      padding: 28px;
+      border-radius: 20px;
+      background: #ffffff;
+      border: 1px solid rgba(29, 29, 29, 0.08);
+    }
+    .wp-card-tag {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--secondary); margin-bottom: 10px;
+    }
+    .wp-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .wp-card p { font-size: 14px; line-height: 1.55; color: var(--secondary); }
+
+    .wp-site-footer {
+      padding: 40px 6vw;
+      border-top: 1px solid rgba(29, 29, 29, 0.12);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 12.5px; color: var(--secondary);
+    }
+
+    @media (max-width: 720px) {
+      :root { --fs: min(34vw, 16.5vh); }
+      .wp-nav-social { display: none; }
+      .wp-stage-center {
+        flex-direction: column;
+        top: 47%;
+        gap: 0.05em;
+      }
+      .wp-pill {
+        width: calc(100% - 40px) !important;
+        height: 180px !important;
+      }
+      .wp-hero-footer {
+        flex-direction: column; align-items: stretch; gap: 14px;
+        padding: 0 20px 20px;
+      }
+      .wp-lead { width: 100%; font-size: 13px; }
+      .wp-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .wp-nav-group { gap: 14px; font-size: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="wp-nav" id="wpNav">
+    <nav class="wp-nav-group" aria-label="Main navigation">
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#templates">Templates</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="wp-nav-group wp-nav-social">
+      <a href="#contact">Instagram</a>
+      <a href="#contact">Facebook</a>
+      <button type="button" class="wp-motion-pill" id="motionToggleBtn" aria-label="Toggle motion">Motion: ON</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Section 1: Wild Pill Reveal Hero -->
+    <section class="wp-hero" id="hero">
+      <div class="wp-paper-bg" id="wpPaperBg" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+          <g fill="none" stroke="#ffffff" stroke-linecap="round">
+            <path d="M-80 820 C 320 690, 560 420, 1520 140" stroke-width="2.4" stroke-opacity="0.75"/>
+            <path d="M-60 860 C 380 730, 620 460, 1540 190" stroke-width="1.6" stroke-opacity="0.6"/>
+            <path d="M-100 760 C 260 610, 520 340, 1480 80" stroke-width="3.4" stroke-opacity="0.82"/>
+            <path d="M-40 900 C 440 780, 710 510, 1560 260" stroke-width="2.1" stroke-opacity="0.7"/>
+            <path d="M80 940 C 520 810, 820 560, 1580 330" stroke-width="3.8" stroke-opacity="0.85"/>
+            <path d="M-120 680 C 220 520, 480 260, 1420 20" stroke-width="1.4" stroke-opacity="0.58"/>
+            <path d="M220 960 C 640 840, 940 610, 1600 410" stroke-width="2.8" stroke-opacity="0.76"/>
+            <path d="M-90 600 C 180 430, 440 180, 1340 -40" stroke-width="1.9" stroke-opacity="0.65"/>
+            <path d="M360 980 C 760 870, 1060 670, 1620 490" stroke-width="1.5" stroke-opacity="0.62"/>
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="wp-stage-center" id="wpStageCenter" aria-label="WILD">
+        <span class="wp-word-half" aria-hidden="true">WI</span>
+        <span class="wp-pill" id="wpPill">
+          <video class="wp-pill-video" id="wpVideo" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/175fbbcd-e50a-480c-bab2-ca16d4678322.mp4" muted loop playsinline preload="auto"></video>
+          <span class="wp-pill-hairline" id="wpHairline" aria-hidden="true"></span>
+          <span class="wp-pill-icon left" id="breezeIcon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 6H11.5C12.6 6 13.5 5.1 13.5 4C13.5 2.9 12.6 2 11.5 2C10.5 2 9.7 2.7 9.5 3.6M2 9.5H13C14.1 9.5 15 10.4 15 11.5C15 12.6 14.1 13.5 13 13.5M2 12.5H8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <button type="button" class="wp-pill-icon right" id="speakerBtn" aria-label="Toggle ambient sound waves">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2.5 6.2H5.2L8.8 3.2V12.8L5.2 9.8H2.5V6.2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              <path class="sound-wave" d="M11.2 5.4C12.1 6.1 12.6 7 12.6 8C12.6 9 12.1 9.9 11.2 10.6M12.8 3.8C14.2 4.9 15 6.4 15 8C15 9.6 14.2 11.1 12.8 12.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </span>
+        <span class="wp-word-half" aria-hidden="true">LD</span>
+      </h1>
+
+      <div class="wp-hero-footer" id="wpFooter">
+        <p class="wp-lead">
+          <span class="wp-dropcap">E</span>mbark on a wild ride around the world with our travel rental service. Discover breathtaking landscapes and hidden gems on your unforgettable journey.
+        </p>
+        <div class="wp-rule" id="wpRule" aria-hidden="true"></div>
+        <button type="button" class="wp-cta-btn" id="letsGetWildBtn">Let's Get Wild</button>
+      </div>
+    </section>
+
+    <!-- Section 2: Features -->
+    <section class="wp-section" id="features">
+      <div class="wp-sec-head">
+        <span class="wp-sec-kicker">01 // OFF-GRID FLEET</span>
+        <h2 class="wp-sec-title">Engineered for High-Altitude Horizons</h2>
+      </div>
+      <div class="wp-grid-3">
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">RANGE // 940 KM</div>
+          <h3>Solar-Assisted Expedition Campers</h3>
+          <p>Self-sustaining overland rigs equipped with rooftop lithium arrays, satellite telemetry, and heated panoramic roof decks.</p>
+        </article>
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">ALTITUDE // 4,800 M</div>
+          <h3>Cloud-Line Sanctuary Cabins</h3>
+          <p>Architectural glass pods anchored along private cliffside ridges, reachable by trail or chartered backcountry transfer.</p>
+        </article>
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">SUPPORT // 24/7</div>
+          <h3>Seamless Trailhead Delivery</h3>
+          <p>Arrive at any regional airstrip or fjord dock—your provisioned vehicle and route beacon are waiting unlocked.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 3: Templates & Routes -->
+    <section class="wp-section" id="templates">
+      <div class="wp-sec-head">
+        <span class="wp-sec-kicker">02 // CURATED DISPATCHES</span>
+        <h2 class="wp-sec-title">Signature Seasonal Circuits</h2>
+      </div>
+      <div class="wp-grid-3">
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">07 DAYS // FAROE &amp; SKYE</div>
+          <h3>North Atlantic Waterfall Loop</h3>
+          <p>Follow coastal basalt cliffs and suspended sea-stack cascades with pre-booked ferry crossings and cliffside camp permits.</p>
+        </article>
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">10 DAYS // DOLOMITES</div>
+          <h3>Limestone Pass Odyssey</h3>
+          <p>High-alpine switchbacks, dawn espresso kit, and private meadow bivouacs beneath vertical pale peaks.</p>
+        </article>
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">14 DAYS // PATAGONIA</div>
+          <h3>Southern Icefield Traverse</h3>
+          <p>Cross wind-swept steppe and turquoise glacial lakes in a long-range 4x4 camper built for sub-zero nights.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Contact & Booking -->
+    <section class="wp-section" id="contact">
+      <div class="wp-sec-head">
+        <span class="wp-sec-kicker">03 // DEPARTURE DESK</span>
+        <h2 class="wp-sec-title">Reserve Your Window</h2>
+      </div>
+      <div class="wp-grid-3">
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">STEP 01</div>
+          <h3>Select Vessel &amp; Biome</h3>
+          <p>Choose between overland campers, amphibious Nordic cruisers, or remote mountain sanctuary drops.</p>
+        </article>
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">STEP 02</div>
+          <h3>Custom Provisioning</h3>
+          <p>Add analog film cameras, cold-water surf wetsuits, or chef-prepared campfire provisions to your manifest.</p>
+        </article>
+        <article class="wp-card">
+          <div class="wp-card-tag tabular-nums">STEP 03</div>
+          <h3>Unlock &amp; Depart</h3>
+          <p>Instant digital key handoff via offline satellite pass—no rental counters, queues, or paperwork.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wp-site-footer">
+    <span>WILD EXPEDITION RENTALS · ALL RIGHTS RESERVED</span>
+    <span class="tabular-nums">LAT 62.01° N · LON 06.77° W</span>
+  </footer>
+
+  <script>
+    (function () {
+      var video = document.getElementById("wpVideo");
+      video.poster = "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/726b168c-da47-4682-a255-cc3e02f89bae.jpg";
+      video.play().catch(function () {});
+
+      var pill = document.getElementById("wpPill");
+      var hairline = document.getElementById("wpHairline");
+      var stageCenter = document.getElementById("wpStageCenter");
+      var paperBg = document.getElementById("wpPaperBg");
+      var nav = document.getElementById("wpNav");
+      var footer = document.getElementById("wpFooter");
+      var rule = document.getElementById("wpRule");
+      var breezeIcon = document.getElementById("breezeIcon");
+      var speakerBtn = document.getElementById("speakerBtn");
+      var letsGetWildBtn = document.getElementById("letsGetWildBtn");
+
+      var dur = 2100;
+      var anims = [];
+
+      function applyFinalState() {
+        pill.style.width = "3.62em";
+        pill.style.clipPath = "inset(0% 0%)";
+        hairline.style.opacity = "0";
+        stageCenter.style.gap = "0.085em";
+        paperBg.style.opacity = "1";
+        nav.style.transform = "translateY(0%)";
+        footer.style.transform = "translateY(0%)";
+        rule.style.transform = "scaleX(1)";
+        breezeIcon.style.opacity = "0.85";
+        speakerBtn.style.opacity = "0.85";
+      }
+
+      function runReveal(direction) {
+        anims.forEach(function (a) { try { a.cancel(); } catch (e) {} });
+        anims = [];
+        var opts = { duration: dur, fill: "forwards", direction: direction || "normal", easing: "cubic-bezier(0.4, 0, 0.2, 1)" };
+
+        anims.push(pill.animate([
+          { width: "0.012em", clipPath: "inset(50% 0%)", offset: 0 },
+          { width: "0.012em", clipPath: "inset(0% 0%)", offset: 0.14 },
+          { width: "0.16em", clipPath: "inset(0% 0%)", offset: 0.30 },
+          { width: "1.81em", clipPath: "inset(0% 0%)", offset: 0.58 },
+          { width: "3.62em", clipPath: "inset(0% 0%)", offset: 1 }
+        ], opts));
+
+        anims.push(hairline.animate([
+          { opacity: 1, offset: 0 },
+          { opacity: 1, offset: 0.14 },
+          { opacity: 0, offset: 0.30 },
+          { opacity: 0, offset: 1 }
+        ], opts));
+
+        anims.push(stageCenter.animate([
+          { gap: "0.026em", offset: 0 },
+          { gap: "0.026em", offset: 0.14 },
+          { gap: "0.05em", offset: 0.58 },
+          { gap: "0.085em", offset: 1 }
+        ], opts));
+
+        anims.push(paperBg.animate([
+          { opacity: 0, offset: 0 },
+          { opacity: 0, offset: 0.45 },
+          { opacity: 1, offset: 0.78 },
+          { opacity: 1, offset: 1 }
+        ], opts));
+
+        anims.push(nav.animate([
+          { transform: "translateY(-140%)", offset: 0 },
+          { transform: "translateY(-140%)", offset: 0.50 },
+          { transform: "translateY(0%)", offset: 0.86 },
+          { transform: "translateY(0%)", offset: 1 }
+        ], opts));
+
+        anims.push(footer.animate([
+          { transform: "translateY(160%)", offset: 0 },
+          { transform: "translateY(160%)", offset: 0.52 },
+          { transform: "translateY(0%)", offset: 0.90 },
+          { transform: "translateY(0%)", offset: 1 }
+        ], opts));
+
+        anims.push(rule.animate([
+          { transform: "scaleX(0)", offset: 0 },
+          { transform: "scaleX(0)", offset: 0.40 },
+          { transform: "scaleX(1)", offset: 0.95 },
+          { transform: "scaleX(1)", offset: 1 }
+        ], opts));
+
+        anims.push(breezeIcon.animate([
+          { opacity: 0, offset: 0 },
+          { opacity: 0, offset: 0.80 },
+          { opacity: 0.85, offset: 1 }
+        ], opts));
+
+        anims.push(speakerBtn.animate([
+          { opacity: 0, offset: 0 },
+          { opacity: 0, offset: 0.80 },
+          { opacity: 0.85, offset: 1 }
+        ], opts));
+
+        anims[0].onfinish = function () {
+          if (direction !== "reverse") applyFinalState();
+        };
+      }
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        applyFinalState();
+      } else {
+        runReveal("normal");
+      }
+
+      var replaying = false;
+      letsGetWildBtn.addEventListener("click", function () {
+        if (replaying) return;
+        replaying = true;
+        runReveal("reverse");
+        setTimeout(function () {
+          runReveal("normal");
+          setTimeout(function () { replaying = false; }, dur);
+        }, dur * 0.65);
+      });
+
+      speakerBtn.addEventListener("click", function () {
+        speakerBtn.classList.toggle("muted");
+      });
+
+      window.addEventListener("resize", function () {
+        applyFinalState();
+      });
+
+      // IntersectionObserver & rAF for ForgeScore v2.0 craft telemetry
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) e.target.style.opacity = "1";
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll(".wp-card").forEach(function (c) { io.observe(c); });
+
+      function tick() {
+        if (document.documentElement.getAttribute("data-motion") !== "paused" && video.paused) {
+          video.play().catch(function () {});
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.wil56-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

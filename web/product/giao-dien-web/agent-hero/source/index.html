@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NOVA AGENT — Thinking Machines for On-Chain AI</title>
+  <meta name="description" content="NOVA AGENT is the home for autonomous on-chain AI agents: smart-contract generation, reentrancy auditing, blockchain telemetry, and Web3 execution.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #efece6;
+      --paper: #efece6;
+      --paper-glass: rgba(239, 236, 230, 0.86);
+      --text: #141414;
+      --dim: rgba(20, 20, 20, 0.5);
+      --faint: rgba(20, 20, 20, 0.18);
+      --grid: rgba(20, 20, 20, 0.09);
+      --accent: #ff5a5f;
+      --accent-text: #c83238;
+      --accent-2: #ff8a3d;
+      --accent-3: #ff3d8b;
+      --accent-amber: #ffb347;
+      --col: 17%;
+      --font-sans: "Schibsted Grotesk", system-ui, -apple-system, sans-serif;
+      --font-display: "Schibsted Grotesk", system-ui, -apple-system, sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+      --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+      --ease-slide: cubic-bezier(0.65, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #ffffff; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html { scroll-behavior: smooth; overflow-x: clip; background: var(--bg); color: var(--text); }
+    body {
+      min-height: 100vh;
+      overflow-x: clip;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 999;
+      padding: 8px 14px; background: var(--text); color: var(--bg);
+      font-family: var(--font-mono); font-size: 11px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(112px); }
+
+    /* Fixed 3D Robot Canvas */
+    #robotCanvas {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      display: block;
+    }
+
+    /* Fixed Architectural Vertical Guides */
+    .na-guides {
+      position: fixed; inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .na-guide {
+      position: absolute; top: 0; bottom: 0;
+      width: 1px; background: var(--grid);
+    }
+    .na-guide.g1 { left: 17%; }
+    .na-guide.g2 { left: 50%; }
+    .na-guide.g3 { left: 83%; }
+
+    /* Fixed Top Bar + Nav Header */
+    .na-chrome {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 30;
+      transition: transform 0.5s cubic-bezier(0.6, 0, 0.2, 1);
+    }
+    .na-chrome.scrolled {
+      transform: translateY(-30px);
+    }
+    .na-topbar {
+      height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      border-bottom: 1px solid var(--grid);
+      background: var(--paper-glass);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .na-topbar b { font-weight: 500; margin-right: 6px; color: var(--accent-text); }
+    .na-topbar-close {
+      position: absolute; right: 18px; top: 50%;
+      transform: translateY(-50%);
+      background: none; border: none; color: var(--text);
+      font-family: var(--font-mono); font-size: 14px;
+      cursor: pointer; padding: 2px 6px;
+    }
+    .na-nav {
+      height: 52px;
+      display: grid;
+      grid-template-columns: 17% 1fr 12% 17%;
+      align-items: center;
+      background: var(--paper-glass);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--grid);
+    }
+    .na-logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding-left: 20px;
+      text-decoration: none; color: var(--text);
+      font-size: 18px; font-weight: 500; letter-spacing: -0.02em;
+    }
+    .na-menu {
+      display: flex; align-items: center; justify-content: center; gap: 24px;
+      font-family: var(--font-mono); font-size: 11px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .na-menu a {
+      color: var(--text); text-decoration: none;
+      transition: opacity 0.2s var(--ease-out);
+    }
+    .na-menu a:hover { opacity: 0.55; }
+    .na-pad-cell {
+      height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      border-left: 1px solid var(--grid);
+      border-right: 1px solid var(--grid);
+      font-family: var(--font-mono); font-size: 11px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--text); text-decoration: none;
+    }
+    .na-nav-actions {
+      display: flex; align-items: center; justify-content: flex-end; gap: 8px;
+      padding-right: 20px;
+    }
+    .na-launch-btn, .na-motion-btn {
+      position: relative;
+      height: 30px; padding: 0 12px;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent;
+      border: 1px solid rgba(20, 20, 20, 0.24);
+      font-family: var(--font-mono); font-size: 10.5px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--text); cursor: pointer;
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    .na-launch-btn::before {
+      content: ""; position: absolute; inset: -1px;
+      border: 1.5px solid transparent;
+      background: linear-gradient(135deg, #ffb347, #ff5a5f, #ff3d8b) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      clip-path: polygon(0 0, 68% 0, 0 100%);
+      pointer-events: none;
+    }
+    .na-launch-btn:active, .na-motion-btn:active, .na-arrow-btn:active, .na-rail-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Fixed Right Rail */
+    .na-rail {
+      position: fixed; right: 22px; top: 50%;
+      transform: translateY(-50%);
+      height: 270px;
+      z-index: 25;
+      display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between;
+      font-family: var(--font-mono); font-size: 10.5px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .na-rail-track {
+      position: relative;
+      height: 210px;
+      display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
+      padding-right: 4px;
+    }
+    .na-rail-dot {
+      width: 3px; height: 3px; border-radius: 50%;
+      background: rgba(20, 20, 20, 0.28);
+    }
+    .na-rail-indicator {
+      position: absolute; right: 14px; top: 0;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 8px;
+      background: var(--paper-glass);
+      border: 1px solid var(--grid);
+      white-space: nowrap;
+      transition: transform 0.7s var(--ease-slide);
+    }
+    .na-rail-Quick {
+      display: flex; flex-direction: column; gap: 4px; align-items: flex-end;
+    }
+    .na-rail-btn {
+      background: none; border: none;
+      font-family: var(--font-mono); font-size: 10px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--dim); cursor: pointer; padding: 2px 4px;
+      transition: color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .na-rail-btn.active, .na-rail-btn:hover { color: var(--text); font-weight: 500; }
+
+    /* Sections */
+    main { position: relative; z-index: 10; }
+    .na-section {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+    }
+    .rv {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+    }
+    .rv.in-view { opacity: 1; transform: translateY(0); }
+    .rv.d1 { transition-delay: 0.1s; }
+    .rv.d2 { transition-delay: 0.2s; }
+    .rv.d3 { transition-delay: 0.3s; }
+    .rv.d4 { transition-delay: 0.4s; }
+
+    /* Section 1: Intro */
+    .na-prompt-wrap {
+      position: absolute; left: 17%; top: 26%; width: 24.4%;
+    }
+    .na-quote-tab {
+      width: 42px; height: 42px;
+      border: 1px solid var(--text); border-bottom: none;
+      display: flex; align-items: center; justify-content: center;
+      font-family: Georgia, serif; font-size: 28px; font-weight: 700;
+      line-height: 1; padding-top: 8px;
+      background: var(--paper-glass);
+    }
+    .na-prompt-box {
+      position: relative;
+      min-height: 82px;
+      padding: 14px 16px;
+      border: 1px solid var(--text);
+      background: var(--paper-glass);
+      font-family: var(--font-mono); font-size: 11px;
+      line-height: 1.45; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .na-caret {
+      display: inline-block; width: 6px; height: 11px;
+      background: var(--text); vertical-align: -1px; margin-left: 2px;
+      animation: caretBlink 0.9s steps(2, start) infinite;
+    }
+    @keyframes caretBlink { to { opacity: 0; } }
+    .na-corner {
+      position: absolute; width: 7px; height: 7px;
+      border-color: var(--text); border-style: solid;
+      pointer-events: none;
+    }
+    .na-corner.tl { top: -4px; left: -4px; border-width: 1px 0 0 1px; }
+    .na-corner.tr { top: -4px; right: -4px; border-width: 1px 1px 0 0; }
+    .na-corner.bl { bottom: -4px; left: -4px; border-width: 0 0 1px 1px; }
+    .na-corner.br { bottom: -4px; right: -4px; border-width: 0 1px 1px 0; }
+    .na-next-prompt {
+      margin-top: 8px;
+      font-family: var(--font-mono); font-size: 10.5px;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      color: rgba(20, 20, 20, 0.25);
+    }
+
+    .na-intro-rule {
+      position: absolute; left: 41.4%; right: 17%; top: calc(26% + 42px);
+      height: 1px; background: var(--grid);
+    }
+    .na-feature-list {
+      position: absolute; right: 17%; top: calc(26% + 42px); width: 23%;
+      list-style: none;
+      font-family: var(--font-mono); font-size: 10.5px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .na-feature-list li {
+      position: relative;
+      height: 24px;
+      display: flex; align-items: center;
+      padding-left: 22%;
+      border-bottom: 1px solid var(--grid);
+    }
+    .na-feature-list li::before {
+      content: ""; position: absolute; left: 14%; top: 50%;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--text); transform: translateY(-50%);
+    }
+    .na-feature-list li.dim { color: var(--dim); }
+
+    .na-hero-headline {
+      position: absolute; left: 4%; bottom: 8%;
+    }
+    .na-kicker {
+      font-family: var(--font-mono); font-size: 12px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 10px;
+      display: inline-block;
+      background: var(--paper-glass); padding: 2px 6px;
+    }
+    .na-title {
+      font-size: clamp(42px, 5.25vw, 92px);
+      font-weight: 400; line-height: 1.02; letter-spacing: -0.03em;
+      display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+    }
+    .na-title-box {
+      display: inline-block;
+      padding: 4px 18px 8px;
+      background: var(--paper-glass);
+      position: relative;
+    }
+    .na-title-box.b1 {
+      border: 2px solid #ff5a5f;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+    }
+    .na-title-box.b2 {
+      border: 2px solid #ff8a3d;
+    }
+    .na-subline {
+      position: absolute; left: calc(62% + 18px); bottom: 4.2%;
+      max-width: 240px;
+      font-size: 14.5px; line-height: 1.4;
+      background: var(--paper-glass); padding: 4px 8px;
+    }
+    .na-bottom-rule {
+      position: absolute; left: 50%; right: 0; bottom: 14%;
+      height: 1px; background: var(--grid);
+    }
+    .na-scroll-link {
+      position: absolute; right: 4%; bottom: 4.2%;
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono); font-size: 11px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--text); text-decoration: none;
+      padding: 6px 10px; border: 1px solid var(--grid);
+      background: var(--paper-glass);
+    }
+    .na-scroll-arrow {
+      display: inline-block;
+      animation: arrowBob 2s ease-in-out infinite;
+    }
+    @keyframes arrowBob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
+    }
+
+    /* Section 2: Product */
+    .na-product-strip-wrap {
+      position: absolute; left: 17%; right: 0; top: 14%;
+      overflow: hidden;
+      height: 76px;
+      border-top: 1px solid var(--grid);
+      border-bottom: 1px solid var(--grid);
+      background: rgba(239, 236, 230, 0.72);
+    }
+    .na-product-strip {
+      display: flex; height: 100%;
+      transition: transform 0.9s var(--ease-slide);
+      will-change: transform;
+    }
+    .na-tab {
+      flex: 0 0 33%;
+      height: 100%;
+      display: flex; align-items: center;
+      border-right: 1px solid var(--grid);
+      background: transparent; border-top: none; border-bottom: none; border-left: none;
+      font-family: var(--font-sans); font-size: clamp(16px, 1.5vw, 22px);
+      color: rgba(20, 20, 20, 0.2);
+      cursor: pointer; text-align: left;
+      position: relative;
+      transition: color 0.35s var(--ease-out), opacity 0.35s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .na-tab.active {
+      color: var(--text);
+      outline: 1px solid var(--text);
+      outline-offset: -1px;
+      background: var(--paper-glass);
+    }
+    .na-tab-num {
+      width: 68px; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      border-right: 1px solid var(--grid);
+      font-family: var(--font-mono); font-size: 11px;
+    }
+    .na-tab-label { padding: 0 18px; font-weight: 500; }
+
+    .na-product-headline {
+      position: absolute; left: 4%; bottom: 10%;
+    }
+    .na-gateway-dots {
+      font-family: var(--font-mono); font-size: 16px; letter-spacing: 0.2em;
+      margin-bottom: 8px;
+    }
+    .na-gateway-title {
+      font-size: clamp(30px, 3.05vw, 54px);
+      font-weight: 400; line-height: 1.1; letter-spacing: -0.025em;
+    }
+    .na-gateway-box {
+      display: inline-block;
+      padding: 4px 16px;
+      border: 1px solid var(--text);
+      border-radius: 10px;
+      background: var(--paper-glass);
+      margin-bottom: 6px;
+    }
+    .na-product-spec-card {
+      position: absolute; right: 17%; bottom: 10%; width: 26%;
+      padding: 18px;
+      border: 1px solid var(--grid);
+      background: var(--paper-glass);
+      font-family: var(--font-mono); font-size: 11px; line-height: 1.6;
+    }
+    .na-product-spec-card h3 {
+      font-size: 12px; font-weight: 500; margin-bottom: 6px; color: var(--accent-text);
+    }
+
+    /* Section 3: Reviews */
+    .na-rev-header {
+      position: absolute; left: 17%; right: 17%; top: 13%;
+      height: 60px;
+      border-top: 1px solid var(--grid);
+      border-bottom: 1px solid var(--grid);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 16px;
+      background: var(--paper-glass);
+      font-family: var(--font-mono); font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .na-rev-meta {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .na-avatar {
+      width: 44px; height: 44px;
+      border: 1px solid var(--text);
+      display: flex; align-items: center; justify-content: center;
+      background: #e3ded4;
+    }
+    .na-quote-block {
+      position: absolute; left: 17%; top: 28%; width: 28%;
+      background: var(--paper-glass);
+      padding: 16px;
+      transition: opacity 0.45s var(--ease-out), transform 0.45s var(--ease-out);
+    }
+    .na-quote-block.swapping {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    .na-quote-text {
+      font-size: clamp(20px, 2.2vw, 38px);
+      line-height: 1.19; letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .na-try-link {
+      display: inline-block;
+      padding-left: 12px;
+      border-left: 1px solid var(--text);
+      font-family: var(--font-mono); font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--text); text-decoration: none;
+    }
+    .na-ghost-quote {
+      position: absolute; left: 83%; right: 2%; top: 28%;
+      font-size: clamp(16px, 1.5vw, 24px);
+      line-height: 1.25;
+      color: rgba(20, 20, 20, 0.14);
+      padding-left: 14px;
+      pointer-events: none;
+    }
+    .na-rev-arrows {
+      position: absolute; left: 17%; bottom: 12%;
+      display: flex; gap: 10px;
+    }
+    .na-arrow-btn {
+      width: 44px; height: 44px;
+      border: 1px solid var(--text);
+      background: var(--paper-glass);
+      font-family: var(--font-mono); font-size: 16px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .na-arrow-btn:hover { background: var(--text); color: var(--bg); }
+
+    /* Section 4 & 5: On-Chain Telemetry & Token Architecture */
+    .na-grid-section {
+      position: relative;
+      padding: 96px 17%;
+      border-top: 1px solid var(--grid);
+      background: rgba(239, 236, 230, 0.82);
+    }
+    .na-sec-kicker {
+      font-family: var(--font-mono); font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--accent-text); margin-bottom: 12px;
+    }
+    .na-sec-title {
+      font-size: clamp(26px, 2.6vw, 42px);
+      font-weight: 400; letter-spacing: -0.02em; margin-bottom: 32px;
+    }
+    .na-cards-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .na-card {
+      padding: 24px;
+      border: 1px solid var(--grid);
+      background: var(--paper);
+    }
+    .na-card-num {
+      font-family: var(--font-mono); font-size: 28px; font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .na-card-label {
+      font-family: var(--font-mono); font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--dim);
+      margin-bottom: 10px;
+    }
+    .na-card p { font-size: 14px; line-height: 1.5; color: var(--dim); }
+
+    .na-footer {
+      height: 26vh;
+      border-top: 1px solid var(--grid);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 17%;
+      background: var(--paper-glass);
+      font-family: var(--font-mono); font-size: 11px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      position: relative; z-index: 10;
+    }
+
+    @media (max-width: 900px) {
+      .na-guide.g1, .na-guide.g3, .na-menu, .na-pad-cell, .na-rail, .na-feature-list, .na-ghost-quote {
+        display: none;
+      }
+      .na-nav { grid-template-columns: 1fr auto; }
+      .na-prompt-wrap { left: 16px; right: 16px; width: auto; top: 18%; }
+      .na-hero-headline { left: 16px; bottom: 12%; }
+      .na-subline { left: 16px; bottom: 3%; }
+      .na-product-strip-wrap { left: 0; }
+      .na-tab { flex: 0 0 78%; }
+      .na-product-spec-card { display: none; }
+      .na-rev-header { left: 16px; right: 16px; }
+      .na-quote-block { left: 16px; right: 16px; width: auto; }
+      .na-grid-section { padding: 64px 16px; }
+      .na-cards-grid { grid-template-columns: 1fr; }
+      .na-footer { padding: 0 16px; }
+    }
+    @media (max-width: 560px) {
+      .na-topbar { font-size: 9.5px; padding: 0 28px 0 10px; }
+      .na-title { font-size: 38px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <canvas id="robotCanvas" aria-hidden="true"></canvas>
+
+  <div class="na-guides" aria-hidden="true">
+    <div class="na-guide g1"></div>
+    <div class="na-guide g2"></div>
+    <div class="na-guide g3"></div>
+  </div>
+
+  <header class="na-chrome" id="naChrome">
+    <div class="na-topbar" id="naTopbar">
+      <span><b>New:</b> Nova Agent V1 Is Here - The Home for On-chain AI Agents ↗</span>
+      <button type="button" class="na-topbar-close" id="closeTopbarBtn" aria-label="Dismiss announcement">×</button>
+    </div>
+    <nav class="na-nav" aria-label="Primary navigation">
+      <a href="#intro" class="na-logo">
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="novaGrad" x1="0" y1="0" x2="27" y2="27" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#ffb347"/>
+              <stop offset="50%" stop-color="#ff5a5f"/>
+              <stop offset="100%" stop-color="#ff3d8b"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="23" height="23" rx="6" stroke="url(#novaGrad)" stroke-width="2.2" stroke-dasharray="62 12"/>
+          <circle cx="10" cy="13.5" r="1.8" fill="#141414"/>
+          <circle cx="17" cy="13.5" r="1.8" fill="#141414"/>
+        </svg>
+        <span>NOVA AGENT</span>
+      </a>
+      <div class="na-menu">
+        <a href="#product">Solutions▾</a>
+        <a href="#telemetry">Pricing</a>
+        <a href="#architecture">Learn▾</a>
+        <a href="#telemetry">$NOVA▾</a>
+        <a href="#reviews">Community▾</a>
+        <a href="#reviews">Contact us</a>
+      </div>
+      <a href="#product" class="na-pad-cell">Nova Pad ↗</a>
+      <div class="na-nav-actions">
+        <button type="button" class="na-launch-btn" id="launchNovaBtn">•• LAUNCH NOVA</button>
+        <button type="button" class="na-motion-btn" id="motionToggleBtn" aria-label="Toggle motion">Motion: ON</button>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="na-rail" aria-label="Section progress rail">
+    <div class="na-rail-track">
+      <span class="na-rail-dot"></span><span class="na-rail-dot"></span><span class="na-rail-dot"></span>
+      <span class="na-rail-dot"></span><span class="na-rail-dot"></span><span class="na-rail-dot"></span>
+      <span class="na-rail-dot"></span><span class="na-rail-dot"></span><span class="na-rail-dot"></span>
+      <span class="na-rail-dot"></span><span class="na-rail-dot"></span><span class="na-rail-dot"></span>
+      <span class="na-rail-dot"></span><span class="na-rail-dot"></span>
+      <div class="na-rail-indicator" id="railIndicator">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+          <circle cx="5" cy="5" r="4" stroke="#141414" stroke-width="1.2"/>
+          <line x1="5" y1="5" x2="8" y2="2" stroke="#ff5a5f" stroke-width="1.2"/>
+        </svg>
+        <span id="railLabelText">INTRO</span>
+      </div>
+    </div>
+    <div class="na-rail-Quick">
+      <button type="button" class="na-rail-btn active" id="railIntroBtn" data-jump="#intro">01 INTRO</button>
+      <button type="button" class="na-rail-btn" id="railProductBtn" data-jump="#product">02 PRODUCT</button>
+      <button type="button" class="na-rail-btn" id="railReviewsBtn" data-jump="#reviews">03 REVIEWS</button>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Section 1: Intro -->
+    <section class="na-section" id="intro" data-rail="INTRO" data-rail-pos="0">
+      <div class="na-prompt-wrap rv d1">
+        <div class="na-quote-tab" aria-hidden="true">“</div>
+        <div class="na-prompt-box" aria-live="polite">
+          <span class="na-corner tl"></span><span class="na-corner tr"></span>
+          <span class="na-corner bl"></span><span class="na-corner br"></span>
+          <span id="typedPrompt">CREATE A SMART CONTRACT FOR A TOKEN NAMED NOVA ON ETHEREUM.</span><span class="na-caret" aria-hidden="true"></span>
+        </div>
+        <div class="na-next-prompt" id="nextPromptPreview">NEXT: EXPLAIN WHAT A SMART CONTRACT DOES IN SIMPLE TERMS.</div>
+      </div>
+
+      <div class="na-intro-rule" aria-hidden="true"></div>
+      <ul class="na-feature-list rv d2">
+        <li>DEVELOPMENT</li>
+        <li>MARKET ANALYSIS</li>
+        <li>AI TRADING</li>
+        <li class="dim">AND MUCH MORE</li>
+      </ul>
+
+      <div class="na-hero-headline rv d3">
+        <div class="na-kicker">HARNESS THE POWER OF</div>
+        <h1 class="na-title">
+          <span class="na-title-box b1">Thinking</span>
+          <span class="na-title-box b2">Machines</span>
+        </h1>
+      </div>
+
+      <p class="na-subline rv d4">Your personal expert in all crypto &amp; blockchain related topics.</p>
+      <div class="na-bottom-rule" aria-hidden="true"></div>
+      <a href="#product" class="na-scroll-link">
+        <span>SCROLL</span>
+        <span class="na-scroll-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- Section 2: Product -->
+    <section class="na-section" id="product" data-rail="PRODUCT" data-rail-pos="68">
+      <div class="na-product-strip-wrap rv d1">
+        <div class="na-product-strip" id="productStrip">
+          <button type="button" class="na-tab active" data-idx="0"><span class="na-tab-num tabular-nums">01</span><span class="na-tab-label">AI Chatbot</span></button>
+          <button type="button" class="na-tab" data-idx="1"><span class="na-tab-num tabular-nums">02</span><span class="na-tab-label">NFT Generator</span></button>
+          <button type="button" class="na-tab" data-idx="2"><span class="na-tab-num tabular-nums">03</span><span class="na-tab-label">Smart-contract generator</span></button>
+          <button type="button" class="na-tab" data-idx="3"><span class="na-tab-num tabular-nums">04</span><span class="na-tab-label">Blockchain &amp; market analytics</span></button>
+          <button type="button" class="na-tab" data-idx="4"><span class="na-tab-num tabular-nums">05</span><span class="na-tab-label">AI Trading assistant</span></button>
+          <button type="button" class="na-tab" data-idx="5"><span class="na-tab-num tabular-nums">06</span><span class="na-tab-label">Code auditor</span></button>
+          <button type="button" class="na-tab" data-idx="6"><span class="na-tab-num tabular-nums">07</span><span class="na-tab-label">Chart &amp; technical analysis</span></button>
+          <button type="button" class="na-tab" data-idx="7"><span class="na-tab-num tabular-nums">08</span><span class="na-tab-label">Crypto news AI</span></button>
+          <button type="button" class="na-tab" data-idx="8"><span class="na-tab-num tabular-nums">09</span><span class="na-tab-label">Smart-contract auditor</span></button>
+          <button type="button" class="na-tab" data-idx="9"><span class="na-tab-num tabular-nums">10</span><span class="na-tab-label">AI Chatbot</span></button>
+        </div>
+      </div>
+
+      <div class="na-product-headline rv d2">
+        <div class="na-gateway-dots" aria-hidden="true">··</div>
+        <h2 class="na-gateway-title">
+          <span class="na-gateway-box">Your Gateway</span><br>
+          <span>To Web3 AI</span>
+        </h2>
+      </div>
+
+      <div class="na-product-spec-card rv d3" id="productSpecCard">
+        <h3 id="specModuleTitle">MODULE 01 // AI CHATBOT</h3>
+        <p id="specModuleDesc">Real-time conversational execution layer connected directly to EVM &amp; Solana RPC nodes with zero-latency state indexing.</p>
+      </div>
+    </section>
+
+    <!-- Section 3: Reviews -->
+    <section class="na-section" id="reviews" data-rail="REVIEWS" data-rail-pos="136">
+      <div class="na-rev-header rv d1">
+        <div>TSTMNL <span class="tabular-nums" id="revNum">[01]</span></div>
+        <div class="na-rev-meta">
+          <div class="na-avatar" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="2" y="4" width="28" height="24" stroke="#141414" stroke-width="1"/>
+              <line x1="2" y1="12" x2="30" y2="12" stroke="#141414" stroke-width="0.8" stroke-opacity="0.35"/>
+              <line x1="2" y1="20" x2="30" y2="20" stroke="#141414" stroke-width="0.8" stroke-opacity="0.35"/>
+              <circle cx="16" cy="13" r="4.2" fill="#141414"/>
+              <path d="M9 27C9 22.5 12 20 16 20C20 20 23 22.5 23 27" fill="#141414"/>
+            </svg>
+          </div>
+          <span>•</span>
+          <strong id="revAuthor">Ilan Brooks</strong>
+        </div>
+        <div style="color: var(--dim)" id="revRole">Founder of Halden Capital</div>
+      </div>
+
+      <div class="na-quote-block rv d2" id="quoteBlock">
+        <blockquote class="na-quote-text" id="revQuote">“Smart contract auditing has always been a bottleneck for our startups, Nova Agent solves this problem in seconds.”</blockquote>
+        <a href="#intro" class="na-try-link" id="trySelfLink">Try for yourself (Click Here)</a>
+      </div>
+
+      <div class="na-ghost-quote" id="ghostQuote" aria-hidden="true">
+        “Nova Agent is a vital asset for Web3 investors, simplifying the research process effortlessly.”
+      </div>
+
+      <div class="na-rev-arrows rv d3">
+        <button type="button" class="na-arrow-btn" id="prevRevBtn" aria-label="Previous review">←</button>
+        <button type="button" class="na-arrow-btn" id="nextRevBtn" aria-label="Next review">→</button>
+      </div>
+    </section>
+
+    <!-- Section 4: Architecture -->
+    <section class="na-grid-section" id="architecture">
+      <div class="na-sec-kicker">04 // DETERMINISTIC VERIFICATION</div>
+      <h2 class="na-sec-title">Built for Zero-Trust On-Chain Execution</h2>
+      <div class="na-cards-grid">
+        <article class="na-card">
+          <div class="na-card-num tabular-nums">0.18s</div>
+          <div class="na-card-label">STATIC &amp; SYMBOLIC AUDIT</div>
+          <p>Automated AST traversal detects reentrancy, unchecked external calls, and flash-loan vectors prior to mainnet deployment.</p>
+        </article>
+        <article class="na-card">
+          <div class="na-card-num tabular-nums">14+</div>
+          <div class="na-card-label">INDEXED L1 / L2 CHAINS</div>
+          <p>Unified mempool and liquidity telemetry across Ethereum, Arbitrum, Base, Optimism, and high-throughput modular rollups.</p>
+        </article>
+        <article class="na-card">
+          <div class="na-card-num tabular-nums">99.94%</div>
+          <div class="na-card-label">BYTECODE DETERMINISM</div>
+          <p>Every generated Solidity contract ships with reproducible compiler settings and automated Foundry invariant test suites.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 5: Telemetry & $NOVA Utility -->
+    <section class="na-grid-section" id="telemetry">
+      <div class="na-sec-kicker">05 // $NOVA PROTOCOL TELEMETRY</div>
+      <h2 class="na-sec-title">Live Agent Compute &amp; Staking Tiers</h2>
+      <div class="na-cards-grid">
+        <article class="na-card">
+          <div class="na-card-num tabular-nums">TIER 01 // EXPLORER</div>
+          <div class="na-card-label">0 $NOVA STAKED</div>
+          <p>Access conversational Web3 research, token sentiment snapshots, and standard ERC-20 / ERC-721 contract templates.</p>
+        </article>
+        <article class="na-card">
+          <div class="na-card-num tabular-nums">TIER 02 // ARCHITECT</div>
+          <div class="na-card-label">2,500 $NOVA STAKED</div>
+          <p>Full multi-file smart-contract auditing, real-time DEX orderflow alerts, and custom autonomous trading webhooks.</p>
+        </article>
+        <article class="na-card">
+          <div class="na-card-num tabular-nums">TIER 03 // SYNDICATE</div>
+          <div class="na-card-label">10,000 $NOVA STAKED</div>
+          <p>Dedicated private inference nodes, sub-block simulation API, and governance voting weight in the Nova Pad treasury.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="na-footer">
+    <span>NOVA AGENT · 2026</span>
+    <span class="tabular-nums">V1.04 // ON-CHAIN THINKING MACHINES</span>
+  </footer>
+
+  <!-- Non-module UI controller (Typing, Tabs, Reviews, Scroll Rail) -->
+  <script>
+    (function () {
+      var prompts = [
+        "CREATE A SMART CONTRACT FOR A TOKEN NAMED NOVA ON ETHEREUM.",
+        "EXPLAIN WHAT A SMART CONTRACT DOES IN SIMPLE TERMS.",
+        "AUDIT THIS CONTRACT FOR REENTRANCY VULNERABILITIES.",
+        "WHAT IS THE MARKET SENTIMENT ON BTC TODAY?"
+      ];
+      var typedEl = document.getElementById("typedPrompt");
+      var nextEl = document.getElementById("nextPromptPreview");
+      var pIdx = 0;
+      var charIdx = prompts[0].length;
+      var deleting = false;
+      var waitUntil = performance.now() + 2200;
+
+      function stepTyping(now) {
+        if (document.documentElement.getAttribute("data-motion") === "paused") {
+          requestAnimationFrame(stepTyping);
+          return;
+        }
+        if (now < waitUntil) {
+          requestAnimationFrame(stepTyping);
+          return;
+        }
+        var current = prompts[pIdx];
+        if (!deleting) {
+          charIdx++;
+          typedEl.textContent = current.slice(0, charIdx);
+          if (charIdx >= current.length) {
+            deleting = true;
+            waitUntil = now + 2600;
+          } else {
+            waitUntil = now + 38;
+          }
+        } else {
+          charIdx = Math.max(0, charIdx - 2);
+          typedEl.textContent = current.slice(0, charIdx);
+          if (charIdx === 0) {
+            deleting = false;
+            pIdx = (pIdx + 1) % prompts.length;
+            nextEl.textContent = "NEXT: " + prompts[(pIdx + 1) % prompts.length];
+            waitUntil = now + 250;
+          } else {
+            waitUntil = now + 14;
+          }
+        }
+        requestAnimationFrame(stepTyping);
+      }
+      requestAnimationFrame(stepTyping);
+
+      // Topbar dismiss & scroll hide
+      var chrome = document.getElementById("naChrome");
+      var topbarDismissed = false;
+      document.getElementById("closeTopbarBtn").addEventListener("click", function () {
+        topbarDismissed = true;
+        chrome.classList.add("scrolled");
+      });
+      window.addEventListener("scroll", function () {
+        if (topbarDismissed) return;
+        if (window.scrollY > 40) chrome.classList.add("scrolled");
+        else chrome.classList.remove("scrolled");
+      }, { passive: true });
+
+      // Product tab carousel
+      var strip = document.getElementById("productStrip");
+      var tabs = Array.prototype.slice.call(document.querySelectorAll(".na-tab"));
+      var specTitle = document.getElementById("specModuleTitle");
+      var specDesc = document.getElementById("specModuleDesc");
+      var specs = [
+        ["MODULE 01 // AI CHATBOT", "Real-time conversational execution layer connected directly to EVM & Solana RPC nodes."],
+        ["MODULE 02 // NFT GENERATOR", "Procedural metadata and ERC-721A batch minter with IPFS pinning and royalty enforcement."],
+        ["MODULE 03 // SMART-CONTRACT GENERATOR", "Compile production-ready Solidity contracts from natural-language specifications in seconds."],
+        ["MODULE 04 // BLOCKCHAIN & MARKET ANALYTICS", "Cross-chain whale wallet tracking, liquidity depth heatmaps, and token velocity metrics."],
+        ["MODULE 05 // AI TRADING ASSISTANT", "Automated DEX route optimization, MEV-protected swaps, and volatility stop-loss triggers."],
+        ["MODULE 06 // CODE AUDITOR", "Line-by-line vulnerability detection for reentrancy, overflow, and access-control flaws."],
+        ["MODULE 07 // CHART & TECHNICAL ANALYSIS", "Multi-timeframe orderblock recognition and automated divergence signaling."],
+        ["MODULE 08 // CRYPTO NEWS AI", "Sub-second sentiment aggregation across governance forums, GitHub commits, and social feeds."],
+        ["MODULE 09 // SMART-CONTRACT AUDITOR", "Formal verification reports with gas-optimization diffs and exploit proof-of-concepts."],
+        ["MODULE 10 // AI CHATBOT", "Always-on Web3 co-pilot with custom RPC endpoints and hardware-wallet signing previews."]
+      ];
+      var activeTab = 0;
+      function setTab(idx) {
+        activeTab = idx % tabs.length;
+        tabs.forEach(function (t, i) {
+          t.classList.toggle("active", i === activeTab);
+          t.style.opacity = i < activeTab ? "0.1" : (i === activeTab ? "1" : "0.35");
+        });
+        var shiftPct = Math.min(activeTab, 7) * 33;
+        strip.style.transform = "translate3d(-" + shiftPct + "%, 0, 0)";
+        specTitle.textContent = specs[activeTab][0];
+        specDesc.textContent = specs[activeTab][1];
+      }
+      tabs.forEach(function (btn, i) {
+        btn.addEventListener("click", function () { setTab(i); });
+      });
+      setInterval(function () {
+        if (document.documentElement.getAttribute("data-motion") === "paused") return;
+        setTab((activeTab + 1) % 8);
+      }, 2400);
+
+      // Reviews switcher
+      var reviews = [
+        {
+          num: "[01]",
+          author: "Ilan Brooks",
+          role: "Founder of Halden Capital",
+          quote: "“Smart contract auditing has always been a bottleneck for our startups, Nova Agent solves this problem in seconds.”"
+        },
+        {
+          num: "[02]",
+          author: "Rhea Okafor",
+          role: "Co-founder of Tessel Network",
+          quote: "“Nova Agent is a vital asset for Web3 investors, simplifying the research process effortlessly.”"
+        },
+        {
+          num: "[03]",
+          author: "Mara Elling",
+          role: "CTO at Northline Labs",
+          quote: "“The fastest way we have found to go from an idea to a deployable token contract.”"
+        }
+      ];
+      var revIdx = 0;
+      var quoteBlock = document.getElementById("quoteBlock");
+      var revNum = document.getElementById("revNum");
+      var revAuthor = document.getElementById("revAuthor");
+      var revRole = document.getElementById("revRole");
+      var revQuote = document.getElementById("revQuote");
+      var ghostQuote = document.getElementById("ghostQuote");
+
+      function updateReview(nextIdx) {
+        quoteBlock.classList.add("swapping");
+        setTimeout(function () {
+          revIdx = (nextIdx + reviews.length) % reviews.length;
+          var r = reviews[revIdx];
+          var g = reviews[(revIdx + 1) % reviews.length];
+          revNum.textContent = r.num;
+          revAuthor.textContent = r.author;
+          revRole.textContent = r.role;
+          revQuote.textContent = r.quote;
+          ghostQuote.textContent = g.quote;
+          quoteBlock.classList.remove("swapping");
+        }, 280);
+      }
+      document.getElementById("prevRevBtn").addEventListener("click", function () { updateReview(revIdx - 1); });
+      document.getElementById("nextRevBtn").addEventListener("click", function () { updateReview(revIdx + 1); });
+
+      // Right rail navigation & IntersectionObserver
+      var railIndicator = document.getElementById("railIndicator");
+      var railLabelText = document.getElementById("railLabelText");
+      var railBtns = Array.prototype.slice.call(document.querySelectorAll(".na-rail-btn"));
+
+      railBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var targetSel = btn.getAttribute("data-jump");
+          var targetEl = document.querySelector(targetSel);
+          if (targetEl) targetEl.scrollIntoView({ behavior: "smooth" });
+          railBtns.forEach(function (b) { b.classList.toggle("active", b === btn); });
+          if (targetSel === "#product") window.__novaTargetScrollP = 1.0;
+          else if (targetSel === "#reviews") window.__novaTargetScrollP = 1.85;
+          else window.__novaTargetScrollP = 0;
+        });
+      });
+
+      document.getElementById("launchNovaBtn").addEventListener("click", function () {
+        document.getElementById("product").scrollIntoView({ behavior: "smooth" });
+      });
+
+      var rvObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add("in-view");
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll(".rv").forEach(function (el) { rvObserver.observe(el); });
+
+      var secObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var label = entry.target.getAttribute("data-rail");
+            var pos = entry.target.getAttribute("data-rail-pos");
+            if (label && pos !== null) {
+              railLabelText.textContent = label;
+              railIndicator.style.transform = "translate3d(0, " + pos + "px, 0)";
+            }
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll(".na-section").forEach(function (sec) { secObserver.observe(sec); });
+    })();
+  </script>
+
+  <!-- Three.js 0.160.0 3D Ceramic Robot Module -->
+  <script type="module">
+    import * as THREE from 'three';
+    import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+    const canvas = document.getElementById('robotCanvas');
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    } catch (e) {
+      renderer = null;
+    }
+
+    if (renderer) {
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.05;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      const scene = new THREE.Scene();
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+      scene.environmentIntensity = 0.9;
+
+      const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 100);
+
+      // Lights
+      const hemi = new THREE.HemisphereLight(0xfff6ee, 0xd9d2c8, 0.7);
+      scene.add(hemi);
+
+      const keyLight = new THREE.DirectionalLight(0xfff3e6, 1.7);
+      keyLight.position.set(-3, 5, 4);
+      keyLight.castShadow = true;
+      keyLight.shadow.mapSize.set(1024, 1024);
+      keyLight.shadow.radius = 6;
+      keyLight.shadow.bias = -0.0005;
+      scene.add(keyLight);
+
+      const rimLight = new THREE.DirectionalLight(0xfff0e6, 1.2);
+      rimLight.position.set(4, 2, -4);
+      scene.add(rimLight);
+
+      const fillLight = new THREE.PointLight(0xff9a6a, 2.2, 6);
+      fillLight.position.set(-3.2, 1.2, 0.6);
+      scene.add(fillLight);
+
+      // Conic gradient ring texture (512px)
+      const ringCanvas = document.createElement('canvas');
+      ringCanvas.width = 512;
+      ringCanvas.height = 512;
+      const rCtx = ringCanvas.getContext('2d');
+      const conic = rCtx.createConicGradient((200 * Math.PI) / 180, 256, 256);
+      conic.addColorStop(0, '#ffb347');
+      conic.addColorStop(0.18, '#ff8a3d');
+      conic.addColorStop(0.34, '#ff5a5f');
+      conic.addColorStop(0.5, '#ff3d8b');
+      conic.addColorStop(0.66, '#ff5a5f');
+      conic.addColorStop(0.82, '#ff8a3d');
+      conic.addColorStop(1, '#ffb347');
+      rCtx.fillStyle = conic;
+      rCtx.fillRect(0, 0, 512, 512);
+      const ringTex = new THREE.CanvasTexture(ringCanvas);
+      ringTex.colorSpace = THREE.SRGBColorSpace;
+
+      // Face screen canvas (512px)
+      const faceCanvas = document.createElement('canvas');
+      faceCanvas.width = 512;
+      faceCanvas.height = 512;
+      const fCtx = faceCanvas.getContext('2d');
+      const faceTex = new THREE.CanvasTexture(faceCanvas);
+      faceTex.colorSpace = THREE.SRGBColorSpace;
+
+      // Materials
+      const matShell = new THREE.MeshPhysicalMaterial({ color: 0xeeebe6, roughness: 0.38, clearcoat: 0.45, clearcoatRoughness: 0.3 });
+      const matShellLight = new THREE.MeshPhysicalMaterial({ color: 0xf8f6f2, roughness: 0.34, clearcoat: 0.45, clearcoatRoughness: 0.3 });
+      const matJoint = new THREE.MeshStandardMaterial({ color: 0x1b1b1f, roughness: 0.55, metalness: 0.3 });
+      const matDeepDark = new THREE.MeshStandardMaterial({ color: 0x0f0f12, roughness: 0.7 });
+      const matPedestal = new THREE.MeshStandardMaterial({ color: 0x2a2928, roughness: 0.9 });
+      const matRing = new THREE.MeshPhysicalMaterial({
+        map: ringTex,
+        emissiveMap: ringTex,
+        emissive: new THREE.Color(0xffffff),
+        emissiveIntensity: 0.22,
+        roughness: 0.5,
+        clearcoat: 0.35
+      });
+      const matScreen = new THREE.MeshPhysicalMaterial({
+        color: 0x050507,
+        roughness: 0.15,
+        clearcoat: 1.0,
+        emissiveMap: faceTex,
+        emissive: new THREE.Color(0xffffff),
+        emissiveIntensity: 1.6
+      });
+
+      const robot = new THREE.Group();
+      scene.add(robot);
+
+      // Head group pivoting at y = 0.78
+      const headPivot = new THREE.Group();
+      headPivot.position.set(0, 0.78, 0);
+      robot.add(headPivot);
+
+      const headCenter = new THREE.Group();
+      headCenter.position.set(0, 0.78, 0);
+      headPivot.add(headCenter);
+
+      const skull = new THREE.Mesh(new RoundedBoxGeometry(1.5, 1.42, 1.3, 5, 0.2), matShell);
+      skull.castShadow = true;
+      skull.receiveShadow = true;
+      headCenter.add(skull);
+
+      const backBlock = new THREE.Mesh(new RoundedBoxGeometry(1.28, 1.14, 0.9, 4, 0.12), matJoint);
+      backBlock.position.set(0, 0, -0.26);
+      headCenter.add(backBlock);
+
+      // Face ring around screen
+      const faceRing = new THREE.Mesh(new RoundedBoxGeometry(1.46, 1.38, 0.14, 4, 0.22), matRing);
+      faceRing.position.set(0, 0, 0.6);
+      headCenter.add(faceRing);
+
+      const bezel = new THREE.Mesh(new RoundedBoxGeometry(1.16, 1.08, 0.12, 4, 0.16), matShellLight);
+      bezel.position.set(0, 0, 0.63);
+      headCenter.add(bezel);
+
+      const screenMesh = new THREE.Mesh(new RoundedBoxGeometry(0.96, 0.88, 0.08, 4, 0.12), matScreen);
+      screenMesh.position.set(0, 0, 0.67);
+      headCenter.add(screenMesh);
+
+      // Ears
+      const earGeo = new THREE.CylinderGeometry(0.22, 0.22, 0.18, 24);
+      earGeo.rotateZ(Math.PI / 2);
+      const leftEar = new THREE.Mesh(earGeo, matShellLight);
+      leftEar.position.set(-0.8, 0, 0);
+      const rightEar = new THREE.Mesh(earGeo, matShellLight);
+      rightEar.position.set(0.8, 0, 0);
+      headCenter.add(leftEar, rightEar);
+
+      // Neck & Torso
+      const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.26, 0.36, 20), matJoint);
+      neck.position.set(0, 0.72, 0);
+      robot.add(neck);
+
+      const torso = new THREE.Mesh(new RoundedBoxGeometry(1.22, 1.12, 0.92, 5, 0.24), matShell);
+      torso.position.set(0, 0.08, 0);
+      torso.castShadow = true;
+      torso.receiveShadow = true;
+      robot.add(torso);
+
+      // 3 Chest LEDs
+      const ledColors = [0xff8a3d, 0xff5a5f, 0xff3d8b];
+      ledColors.forEach((col, idx) => {
+        const led = new THREE.Mesh(
+          new THREE.SphereGeometry(0.032, 12, 12),
+          new THREE.MeshBasicMaterial({ color: col })
+        );
+        led.position.set(-0.22 + idx * 0.11, 0.36, 0.47);
+        robot.add(led);
+      });
+
+      const pelvis = new THREE.Mesh(new RoundedBoxGeometry(0.92, 0.28, 0.72, 4, 0.1), matJoint);
+      pelvis.position.set(0, -0.56, 0);
+      robot.add(pelvis);
+
+      // Arms
+      function buildArm(side) {
+        const armGroup = new THREE.Group();
+        armGroup.position.set(side * 0.74, 0.42, 0);
+        armGroup.rotation.z = side * 0.16;
+
+        const shoulder = new THREE.Mesh(new THREE.SphereGeometry(0.16, 16, 16), matJoint);
+        armGroup.add(shoulder);
+
+        const upperArm = new THREE.Mesh(new RoundedBoxGeometry(0.28, 0.52, 0.28, 4, 0.09), matShell);
+        upperArm.position.set(0, -0.28, 0);
+        upperArm.castShadow = true;
+        armGroup.add(upperArm);
+
+        const forearmGroup = new THREE.Group();
+        forearmGroup.position.set(0, -0.56, 0);
+        forearmGroup.rotation.x = -0.35;
+        armGroup.add(forearmGroup);
+
+        const elbow = new THREE.Mesh(new THREE.SphereGeometry(0.13, 16, 16), matJoint);
+        forearmGroup.add(elbow);
+
+        const hand = new THREE.Mesh(new RoundedBoxGeometry(0.3, 0.48, 0.3, 4, 0.1), matShellLight);
+        hand.position.set(0, -0.26, 0);
+        hand.castShadow = true;
+        forearmGroup.add(hand);
+
+        robot.add(armGroup);
+        return { armGroup, forearmGroup };
+      }
+      const leftArm = buildArm(-1);
+      const rightArm = buildArm(1);
+
+      // Legs
+      function buildLeg(side) {
+        const legGroup = new THREE.Group();
+        legGroup.position.set(side * 0.32, -0.7, 0);
+
+        const hip = new THREE.Mesh(new THREE.SphereGeometry(0.16, 16, 16), matJoint);
+        legGroup.add(hip);
+
+        const thigh = new THREE.Mesh(new RoundedBoxGeometry(0.36, 0.56, 0.38, 4, 0.1), matShell);
+        thigh.position.set(0, -0.32, 0);
+        thigh.castShadow = true;
+        legGroup.add(thigh);
+
+        const foot = new THREE.Mesh(new RoundedBoxGeometry(0.4, 0.22, 0.54, 4, 0.08), matShellLight);
+        foot.position.set(0, -0.64, 0.06);
+        foot.castShadow = true;
+        foot.receiveShadow = true;
+        legGroup.add(foot);
+
+        robot.add(legGroup);
+      }
+      buildLeg(-1);
+      buildLeg(1);
+
+      // Pedestal
+      const pedestal = new THREE.Mesh(new THREE.BoxGeometry(1.7, 1.6, 1.7), matPedestal);
+      pedestal.position.set(0, -2.22, 0);
+      pedestal.receiveShadow = true;
+      scene.add(pedestal);
+
+      // Face draw state
+      let quoteMode = false;
+      let nextBlink = 2.8;
+      let blinkStart = -1;
+
+      function drawFace(t) {
+        fCtx.fillStyle = '#050507';
+        fCtx.fillRect(0, 0, 512, 512);
+        fCtx.save();
+        fCtx.fillStyle = '#ffffff';
+        fCtx.shadowColor = '#ffffff';
+        fCtx.shadowBlur = 18;
+
+        if (quoteMode) {
+          fCtx.font = '900 340px Georgia, serif';
+          fCtx.textAlign = 'center';
+          fCtx.textBaseline = 'middle';
+          fCtx.fillText('“', 256, 295);
+        } else {
+          let sy = 1;
+          if (t > nextBlink) {
+            blinkStart = t;
+            nextBlink = t + 2.5 + Math.random() * 2.5;
+          }
+          if (blinkStart > 0 && t - blinkStart < 0.18) {
+            const p = (t - blinkStart) / 0.18;
+            sy = Math.max(0.1, Math.abs(1 - p * 2));
+          }
+          fCtx.beginPath();
+          fCtx.ellipse(196, 262, 30, 38 * sy, 0, 0, Math.PI * 2);
+          fCtx.fill();
+          fCtx.beginPath();
+          fCtx.ellipse(316, 252, 30, 38 * sy, 0, 0, Math.PI * 2);
+          fCtx.fill();
+        }
+        fCtx.restore();
+        faceTex.needsUpdate = true;
+      }
+
+      let scrollP = 0;
+      let ptrX = 0, ptrY = 0;
+      let targetPtrX = 0, targetPtrY = 0;
+
+      window.addEventListener('pointermove', (e) => {
+        targetPtrX = (e.clientX / window.innerWidth) * 2 - 1;
+        targetPtrY = (e.clientY / window.innerHeight) * 2 - 1;
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      function easeInOutCubic(x) {
+        return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+      }
+
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = clock.getElapsedTime();
+        const paused = document.documentElement.getAttribute('data-motion') === 'paused';
+
+        const rawP = typeof window.__novaTargetScrollP === 'number'
+          ? window.__novaTargetScrollP
+          : Math.min(2, Math.max(0, window.scrollY / Math.max(1, window.innerHeight)));
+        if (window.scrollY > 10) window.__novaTargetScrollP = undefined;
+
+        scrollP += (rawP - scrollP) * 0.08;
+        ptrX += (targetPtrX - ptrX) * 0.06;
+        ptrY += (targetPtrY - ptrY) * 0.06;
+
+        const blend = easeInOutCubic(Math.min(1, scrollP));
+        const mobileScale = window.innerWidth < 900 ? 1.25 : 1.0;
+
+        const camZ = (11.6 + (6.9 - 11.6) * blend) * mobileScale;
+        const camY = 1.1 + (1.95 - 1.1) * blend;
+        const lookY = 0.55 + (1.72 - 0.55) * blend;
+
+        camera.position.set(ptrX * 0.25, camY - ptrY * 0.1, camZ);
+        camera.lookAt(0, lookY, 0);
+
+        const bodyYaw = -0.42 + (-0.2 - -0.42) * blend + ptrX * 0.12;
+        const headYaw = -0.6 + (-0.06 - -0.6) * blend + ptrX * 0.45;
+        const headPitch = 0.16 + (0.04 - 0.16) * blend + ptrY * 0.18;
+        const headRoll = 0.22 * (1 - blend);
+
+        robot.rotation.y = bodyYaw;
+        robot.position.y = paused ? 0 : Math.sin(t * 1.4) * 0.02;
+
+        headPivot.rotation.y = headYaw;
+        headPivot.rotation.x = headPitch + (paused ? 0 : Math.sin(t * 0.9) * 0.02);
+        headPivot.rotation.z = headRoll + (paused ? 0 : Math.sin(t * 0.7) * 0.02);
+
+        if (!paused) {
+          leftArm.armGroup.rotation.x = Math.sin(t * 1.4 - 1) * 0.05;
+          rightArm.armGroup.rotation.x = Math.sin(t * 1.4 + 1) * 0.05;
+        }
+
+        quoteMode = scrollP > 1.45;
+        drawFace(t);
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.age83-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

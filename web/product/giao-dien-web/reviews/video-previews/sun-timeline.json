@@ -1,0 +1,44 @@
+{
+  "id": "t311",
+  "slug": "sun-timeline",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T23:51:24.071Z",
+  "demo": "/demos/sun-timeline/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4e174da45a82",
+  "sha256": "4e174da45a82812b005435ab938e98e7c9aff92e6b6a79d29e067b368b0fccf5",
+  "demoHtmlSha256": "d22b32b0e77f4a05b4bb5acf34e32e1e08be832511b4e818bf36bd4816ac87d8",
+  "demoSha256": "1af8a10141687cf05a818b7c14a6efefb6eecb33e237bbbf601239474cab6192",
+  "bytes": 309517,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.972,
+      "action": "click",
+      "selector": "[data-stage=\"6\"]"
+    },
+    {
+      "seconds": 6.269,
+      "action": "click",
+      "selector": "[data-stage=\"8\"]"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sun-timeline-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sun-timeline-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sun-timeline-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sun-timeline-return.jpg"
+  ]
+}

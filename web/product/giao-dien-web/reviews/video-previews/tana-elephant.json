@@ -1,0 +1,44 @@
+{
+  "id": "t310",
+  "slug": "tana-elephant",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T23:49:16.127Z",
+  "demo": "/demos/tana-elephant/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "e547a752e66c",
+  "sha256": "e547a752e66cc4aabb068aaac6263b1669ec3c004715ccbba08b931d97d4141b",
+  "demoHtmlSha256": "067bed98de0798342a2fb704c8e8938710c432bc06152a4ddbf1e1a8ce91cbdc",
+  "demoSha256": "fc9d653b1ff8eb91cfd4a891010710e284b49e4fe8d25f552ae236564cd7a66e",
+  "bytes": 669993,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.585,
+      "action": "click",
+      "selector": "#seeMapBtn"
+    },
+    {
+      "seconds": 4.969,
+      "action": "click",
+      "selector": "#menuToggleBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tana-elephant-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tana-elephant-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tana-elephant-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tana-elephant-return.jpg"
+  ]
+}

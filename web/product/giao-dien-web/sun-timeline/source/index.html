@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Life of the Sun</title>
+  <meta name="description" content="Scroll across ten billion years and watch the Sun be born, swell and fade.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.5);
+      --dim: rgba(255, 255, 255, 0.42);
+      --accent: #ff9a3c;
+      --accent-text: #ffb86c;
+      --accent-2: #6ce5ff;
+      --border: rgba(255, 255, 255, 0.14);
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --font-display: "Inter", system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #000000; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html, body {
+      height: 100%;
+      background: #000000;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+      overscroll-behavior: none;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 8px 14px; background: #fff; color: #000;
+      font-size: 12px; text-decoration: none; border-radius: 999px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    #gl {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      display: block;
+      z-index: 1;
+    }
+
+    /* Subtle Top HUD Chrome */
+    .st-header {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px;
+      pointer-events: none;
+    }
+    .st-header > * { pointer-events: auto; }
+    .st-brand {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12.5px; font-weight: 500;
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none;
+    }
+    .st-nav {
+      display: flex; align-items: center; gap: 6px;
+    }
+    .st-pill-btn {
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(0, 0, 0, 0.55);
+      color: rgba(255, 255, 255, 0.72);
+      font-family: var(--font-sans);
+      font-size: 11px; font-weight: 500;
+      cursor: pointer;
+      transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .st-pill-btn:hover, .st-pill-btn.active {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+    .st-pill-btn:active { transform: scale(0.97); }
+
+    /* Verbatim UI & Timeline Track */
+    .ui {
+      position: fixed; left: 0; right: 0; top: 63.2%;
+      z-index: 10;
+      display: grid; justify-items: center;
+      padding: 0 20px;
+      pointer-events: none;
+    }
+    .cap {
+      position: relative; width: 100%; height: 54px;
+    }
+    .line {
+      position: absolute; inset: 0;
+      text-align: center;
+      transition: opacity 0.2s linear, filter 0.2s linear;
+    }
+    .line.off { opacity: 0; filter: blur(5px); }
+    .line h1, .line .st-time {
+      display: block;
+      font-weight: 600;
+      font-size: clamp(16px, 2.05vh, 21px);
+      letter-spacing: -0.012em;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+    .line p {
+      margin-top: 6px;
+      font-size: clamp(12.5px, 1.55vh, 15px);
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .line p b {
+      font-weight: 500; color: #ffffff; margin-right: 7px;
+    }
+    #track {
+      position: relative;
+      width: min(47vh, 84vw);
+      height: 64px;
+      margin-top: clamp(14px, 3.2vh, 30px);
+      pointer-events: auto;
+      cursor: pointer;
+      outline: none;
+    }
+    #track::before { content: ""; position: absolute; inset: -8px -30px; }
+    #ticks {
+      position: absolute; left: 0; right: 0; top: 0;
+      height: 44px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+      pointer-events: none;
+    }
+    #ticks i {
+      display: block; width: 1.5px; height: 44px;
+      background: #ffffff;
+      transform-origin: 50% 100%;
+      will-change: transform;
+    }
+    .ends {
+      position: absolute; left: 0; right: 0; top: 54px;
+      display: flex; justify-content: space-between;
+      font-size: 12.5px; color: rgba(255, 255, 255, 0.42);
+      pointer-events: none;
+    }
+    .ends span.on { color: #ffffff; font-weight: 500; }
+
+    /* Collapsible Astrophysical Dossier Sections (keeps pure black viewport) */
+    .st-dossier {
+      position: fixed; left: 24px; bottom: 48px;
+      z-index: 15;
+      display: flex; gap: 12px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+    }
+    .st-dossier.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .st-epoch-card {
+      width: 190px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(8, 8, 10, 0.88);
+      font-size: 11px; line-height: 1.45;
+      color: rgba(255, 255, 255, 0.65);
+    }
+    .st-epoch-card h2 {
+      font-size: 11.5px; font-weight: 600; color: #ffffff; margin-bottom: 4px;
+    }
+
+    .st-footer {
+      position: fixed; left: 24px; right: 24px; bottom: 14px;
+      z-index: 15;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 11px; color: rgba(255, 255, 255, 0.32);
+      pointer-events: none;
+    }
+
+    @media (max-width: 760px) {
+      .st-nav .hide-sm { display: none; }
+      .st-dossier { display: none; }
+    }
+    @media (max-width: 480px) {
+      .st-header { padding: 12px 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="st-header">
+    <a href="#main-content" class="st-brand">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <circle cx="7" cy="7" r="4.5" fill="#ff9a3c"/>
+        <circle cx="7" cy="7" r="6.3" stroke="#ff9a3c" stroke-opacity="0.45" stroke-width="1"/>
+      </svg>
+      <span>The Life of the Sun</span>
+    </a>
+    <nav class="st-nav" aria-label="Solar evolutionary stages">
+      <button type="button" class="st-pill-btn hide-sm" data-stage="0">Nebula</button>
+      <button type="button" class="st-pill-btn active" data-stage="3">Today</button>
+      <button type="button" class="st-pill-btn" data-stage="6">Red Giant</button>
+      <button type="button" class="st-pill-btn" data-stage="8">Planetary Nebula</button>
+      <button type="button" class="st-pill-btn hide-sm" data-stage="9">White Dwarf</button>
+      <button type="button" class="st-pill-btn hide-sm" id="dossierToggleBtn">Notes</button>
+      <button type="button" class="st-pill-btn" id="motionToggleBtn" aria-label="Toggle motion">Motion: ON</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="ui" aria-label="Interactive Solar Timeline">
+      <div class="cap" id="cap">
+        <div class="line">
+          <h1>Today</h1>
+          <p><b>The Sun</b>Halfway through its life</p>
+        </div>
+      </div>
+      <div id="track" role="slider" tabindex="0" aria-label="Time" aria-valuemin="0" aria-valuemax="9" aria-valuenow="3" aria-valuetext="Today — The Sun">
+        <div id="ticks"></div>
+        <div class="ends"><span id="e0">Nebula</span><span id="e1">White dwarf</span></div>
+      </div>
+    </section>
+
+    <div class="st-dossier" id="stDossier">
+      <section class="st-epoch-card">
+        <h2>I · Gravitational Collapse</h2>
+        <p class="tabular-nums">-4.60 to -4.50 Gyr: Cold molecular hydrogen condenses into a T-Tauri protostar until core fusion ignites at 15M K.</p>
+      </section>
+      <section class="st-epoch-card">
+        <h2>II · Main Sequence</h2>
+        <p class="tabular-nums">Today to +1.0 Gyr: Hydrostatic equilibrium converts 600 million tons of hydrogen into helium every second.</p>
+      </section>
+      <section class="st-epoch-card">
+        <h2>III · Red Giant &amp; Flash</h2>
+        <p class="tabular-nums">+5.0 to +7.7 Gyr: Core hydrogen exhaustion swells the photosphere past Mercury before triple-alpha helium ignition.</p>
+      </section>
+      <section class="st-epoch-card">
+        <h2>IV · Stellar Remnant</h2>
+        <p class="tabular-nums">+7.8 to +8.0 Gyr: Outer shells drift into an ionized planetary nebula leaving an Earth-sized carbon-oxygen ember.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="st-footer">
+    <span class="tabular-nums">MASS 1.989 × 10³⁰ KG · SPECTRAL TYPE G2V</span>
+    <span>SCROLL OR DRAG TIMELINE TO SCRUB 10 BILLION YEARS</span>
+  </footer>
+
+  <script>
+    (function () {
+      var STAGES = [
+        {t: '4.6 billion years ago', b: 'Solar nebula', c: 'A cold cloud falls inward'},
+        {t: '4.57 billion years ago', b: 'Protostar', c: 'Gravity heats a young core'},
+        {t: '4.5 billion years ago', b: 'Ignition', c: 'Hydrogen begins to burn'},
+        {t: 'Today', b: 'The Sun', c: 'Halfway through its life'},
+        {t: '1 billion years from now', b: 'Brighter Sun', c: 'The oceans boil away'},
+        {t: '5 billion years from now', b: 'Subgiant', c: 'The core runs out of fuel'},
+        {t: '7.6 billion years from now', b: 'Red giant', c: 'The Sun swallows Mercury'},
+        {t: '7.7 billion years from now', b: 'Helium flash', c: 'The core reignites'},
+        {t: '7.8 billion years from now', b: 'Planetary nebula', c: 'The outer layers drift away'},
+        {t: '8 billion years from now', b: 'White dwarf', c: 'An ember the size of Earth'}
+      ];
+      var LOOK = [
+        {c0: [.05,.01,.1],   c1: [.62,.12,.42], c2: [1.9,.85,.5],  glow: [.8,.25,.6],  gI: .22, freq: 2.6, warp: 1.9, cells: 0,  gas: 1,  shell: 0,  boil: 1},
+        {c0: [.015,.004,0],  c1: [.62,.05,.01], c2: [3,1.1,.15],   glow: [1.3,.2,.04], gI: .28, freq: 3.1, warp: 1.2, cells: 1,  gas: 0,  shell: 0,  boil: .7},
+        {c0: [.5,.05,0],     c1: [1.7,.48,.03], c2: [3.2,2,.55],   glow: [1.6,.5,.06], gI: .85, freq: 4.6, warp: 1.6, cells: .3, gas: 0,  shell: 0,  boil: 1.5},
+        {c0: [1,.26,.01],    c1: [2.3,1,.12],   c2: [3.6,2.9,1.3], glow: [1.8,.68,.1], gI: 1,   freq: 3.4, warp: 1.1, cells: 0,  gas: 0,  shell: 0,  boil: 1.1},
+        {c0: [1.5,.72,.2],   c1: [3,2.1,.8],    c2: [4.6,4.3,3.4], glow: [1.9,1.2,.5], gI: 1.2, freq: 3.8, warp: 1.1, cells: 0,  gas: 0,  shell: 0,  boil: 1.3},
+        {c0: [.6,.1,.005],   c1: [1.8,.5,.03],  c2: [3,1.5,.25],   glow: [1.7,.42,.05],gI: .9,  freq: 3,   warp: 1.6, cells: .15,gas: 0,  shell: 0,  boil: 1.2},
+        {c0: [.22,.008,.003],c1: [1.25,.1,.015],c2: [3,.95,.1],    glow: [1.8,.16,.03],gI: .85, freq: 2,   warp: 2.1, cells: .35,gas: 0,  shell: 0,  boil: 1.4},
+        {c0: [1.6,.8,.3],    c1: [4,3,1.4],     c2: [8,7,5.5],     glow: [2.4,1.6,.8], gI: 1.7, freq: 3.2, warp: 2,   cells: 0,  gas: 0,  shell: 0,  boil: 3},
+        {c0: [.02,.09,.12],  c1: [.1,.7,.72],   c2: [1.8,.42,.16], glow: [.3,.7,.8],   gI: .3,  freq: 3.4, warp: 1.5, cells: 0,  gas: .75,shell: 1,  boil: .9},
+        {c0: [.8,1,1.5],     c1: [1.7,2.1,3],   c2: [3.6,4.2,5.4], glow: [.8,1.2,2.1], gI: .9,  freq: 2.6, warp: .8,  cells: 0,  gas: 0,  shell: 0,  boil: .5}
+      ];
+      var LAST = STAGES.length - 1, PER = 4, N = LAST * PER + 1, START = 3;
+
+      var ticksEl = document.getElementById("ticks");
+      var tickEls = [];
+      var tickH = [];
+      for (var k = 0; k < N; k++) {
+        var iEl = document.createElement("i");
+        ticksEl.appendChild(iEl);
+        tickEls.push(iEl);
+        tickH.push(k % PER ? 0.17 : 0.28);
+      }
+
+      var capEl = document.getElementById("cap");
+      var trackEl = document.getElementById("track");
+      var e0El = document.getElementById("e0");
+      var e1El = document.getElementById("e1");
+      var stageBtns = Array.prototype.slice.call(document.querySelectorAll("[data-stage]"));
+
+      function cloneLook(l) {
+        return {
+          c0: l.c0.slice(), c1: l.c1.slice(), c2: l.c2.slice(), glow: l.glow.slice(),
+          gI: l.gI, freq: l.freq, warp: l.warp, cells: l.cells, gas: l.gas, shell: l.shell, boil: l.boil
+        };
+      }
+
+      var x = START / LAST;
+      var stage = START, omega = 14;
+      var rot = 0, evo = 0, starX = 0, lastInput = -1e9, hover = -1, dragX = null;
+      var cur = cloneLook(LOOK[START]);
+
+      function setCaption(idx) {
+        var s = STAGES[idx];
+        var prev = capEl.querySelector(".line:not(.off)");
+        if (prev) {
+          prev.classList.add("off");
+          setTimeout(function () { if (prev.parentNode) prev.parentNode.removeChild(prev); }, 240);
+        }
+        var div = document.createElement("div");
+        div.className = "line off";
+        div.innerHTML = '<span class="st-time">' + s.t + '</span><p><b>' + s.b + '</b>' + s.c + '</p>';
+        capEl.appendChild(div);
+        void div.offsetWidth;
+        div.classList.remove("off");
+        trackEl.setAttribute("aria-valuenow", String(idx));
+        trackEl.setAttribute("aria-valuetext", s.t + " — " + s.b);
+        e0El.classList.toggle("on", idx === 0);
+        e1El.classList.toggle("on", idx === LAST);
+        stageBtns.forEach(function (b) {
+          b.classList.toggle("active", Number(b.getAttribute("data-stage")) === idx);
+        });
+      }
+
+      function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+      function moveTo(nx, now) {
+        nx = clamp(nx, 0, 1);
+        omega += (nx - x) * 150;
+        x = nx;
+        lastInput = now;
+      }
+
+      function px(e) {
+        var rect = trackEl.getBoundingClientRect();
+        return clamp((e.clientX - rect.left) / Math.max(1, rect.width), 0, 1);
+      }
+
+      window.addEventListener("wheel", function (e) {
+        e.preventDefault();
+        var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        moveTo(x + d * (e.deltaMode === 1 ? 0.012 : 0.00075), performance.now());
+      }, { passive: false });
+
+      trackEl.addEventListener("pointermove", function (e) {
+        hover = px(e);
+        if (e.pointerType === "mouse" && dragX === null) moveTo(hover, performance.now());
+      });
+      trackEl.addEventListener("pointerleave", function () { hover = -1; });
+
+      window.addEventListener("pointerdown", function (e) {
+        if (e.target.closest("header, .st-dossier")) return;
+        dragX = e.clientX;
+        if (trackEl.contains(e.target)) moveTo(px(e), performance.now());
+      });
+      window.addEventListener("pointermove", function (e) {
+        if (dragX === null) return;
+        var dx = e.clientX - dragX;
+        dragX = e.clientX;
+        if (trackEl.contains(e.target)) moveTo(px(e), performance.now());
+        else moveTo(x + dx / Math.min(window.innerWidth, 900), performance.now());
+      });
+      window.addEventListener("pointerup", function () { dragX = null; });
+      window.addEventListener("pointercancel", function () { dragX = null; });
+
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          moveTo((Math.min(LAST, stage + 1)) / LAST, performance.now());
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          moveTo((Math.max(0, stage - 1)) / LAST, performance.now());
+        }
+      });
+
+      stageBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var targetStage = Number(btn.getAttribute("data-stage"));
+          moveTo(targetStage / LAST, performance.now());
+        });
+      });
+
+      var dossierEl = document.getElementById("stDossier");
+      document.getElementById("dossierToggleBtn").addEventListener("click", function () {
+        dossierEl.classList.toggle("open");
+      });
+
+      var io = new IntersectionObserver(function () {}, { threshold: 0.1 });
+      io.observe(trackEl);
+
+      // WebGL Shader Setup
+      var canvas = document.getElementById("gl");
+      var gl = canvas.getContext("webgl", { antialias: false, alpha: false });
+      var uLoc = {};
+      var scVal = 1;
+
+      if (gl) {
+        var vsSrc = "attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}";
+        var fsSrc = [
+          "precision highp float;",
+          "uniform vec2 res;",
+          "uniform float sc, rad, cy, fade, t, evo, rot, blur, starX, freq, warp, cells, gas, shell, gI, flick;",
+          "uniform vec3 c0, c1, c2, glow;",
+          "float h(vec3 p){ p = fract(p*.3183099 + .1); p *= 17.; return fract(p.x*p.y*p.z*(p.x+p.y+p.z)); }",
+          "float n3(vec3 x){ vec3 i = floor(x), f = fract(x); f = f*f*(3.-2.*f);",
+          "  return mix(mix(mix(h(i),h(i+vec3(1,0,0)),f.x), mix(h(i+vec3(0,1,0)),h(i+vec3(1,1,0)),f.x), f.y),",
+          "             mix(mix(h(i+vec3(0,0,1)),h(i+vec3(1,0,1)),f.x), mix(h(i+vec3(0,1,1)),h(i+vec3(1,1,1)),f.x), f.y), f.z); }",
+          "float fbm(vec3 p){ float a=.5, s=0.; for(int i=0;i<5;i++){ s+=a*n3(p); p=p*2.03+vec3(1.7,9.2,3.1); a*=.5; } return s; }",
+          "vec3 stars(vec2 uv){",
+          "  vec2 q = (uv + vec2(starX, 0.))*34., id = floor(q), f = fract(q)-.5;",
+          "  float r = fract(sin(dot(id,vec2(127.1,311.7)))*43758.5453);",
+          "  vec2 o = vec2(fract(r*17.3),fract(r*91.7))-.5;",
+          "  float tw = .55+.45*sin(t*(.7+r*1.8)+r*40.);",
+          "  vec2 g = f-o*.7; g.x *= 1./(1.+blur*7.);",
+          "  return vec3(smoothstep(.975,1.,r)*smoothstep(.06,.0,length(g))*tw*.55);",
+          "}",
+          "void main(){",
+          "  vec2 uv = (gl_FragCoord.xy - .5*res)/res.y, p = (uv - vec2(0., cy))/sc;",
+          "  float d = length(p), e = max(d-rad, 0.);",
+          "  vec3 col = stars(uv);",
+          "  vec2 dir = p/max(d,1e-4);",
+          "  float rays = .72 + .56*fbm(vec3(dir*2.4, evo*.5));",
+          "  float hal = exp(-e/(rad*.11))*smoothstep(rad*.6, rad*.12, e);",
+          "  col += glow*gI*.7*hal*rays*flick;",
+          "  float py = (p.y + rad + .065)/.0135, px = p.x/(rad*1.02);",
+          "  float pool = max(0., 1.-px*px) * exp(-py*py);",
+          "  col += glow*min(gI,1.)*.1*pool*pool;",
+          "  if(d < rad + .02){",
+          "    float k = min(d/rad, 1.);",
+          "    vec3 nrm = vec3(p/rad, sqrt(max(1.-k*k, 0.)));",
+          "    float cr = cos(rot), sr = sin(rot);",
+          "    vec3 n = vec3(nrm.x*cr + nrm.z*sr, nrm.y, -nrm.x*sr + nrm.z*cr);",
+          "    float sq = 1./(1.+blur*3.2);",
+          "    vec3 q = vec3(n.x*sq, n.y, n.z*sq);",
+          "    float w1 = fbm(q*freq + vec3(0.,0.,evo*.28)), w2 = fbm(q*freq*.9 + 7. - vec3(evo*.22,0.,0.));",
+          "    float v = fbm(q*freq*1.7 + warp*2.2*vec3(w1, w2, w1-w2));",
+          "    float vein = 1.-abs(2.*fbm(q*freq*1.5 + warp*1.3*vec3(w2, w1, 0.))-1.);",
+          "    vein = pow(vein, 9.);",
+          "    float s = smoothstep(.24,.76,v);",
+          "    s = mix(s, clamp(vein*1.25 + s*.14,0.,1.), cells);",
+          "    vec3 c = mix(c0, c1, smoothstep(.0,.55,s));",
+          "    c = mix(c, c2, smoothstep(.5,1.,s));",
+          "    float mu = nrm.z;",
+          "    if(shell > .001){",
+          "      vec3 sh = c0 + c1*smoothstep(.95,.3,k)*(.25+v*1.2);",
+          "      float fil = smoothstep(.5,.82,k)*smoothstep(1.,.8,k)*pow(v+.32,3.)*3.2;",
+          "      sh += c2*fil + vec3(3.5,4.,5.)*exp(-k*k/.012);",
+          "      c = mix(c, sh, shell);",
+          "    } else {",
+          "      c *= mix(mix(.34, .8, gas), 1., pow(mu,.5));",
+          "    }",
+          "    c += glow*pow(1.-mu,2.6)*.42*min(gI,1.)*(1.-gas);",
+          "    float edge = smoothstep(1., .985, k);",
+          "    float soft = smoothstep(1., .58, k + (fbm(q*3.4 + evo*.1)-.5)*.62) * smoothstep(1., .9, k);",
+          "    float a = mix(edge, soft, gas);",
+          "    col = mix(col, c, a);",
+          "  }",
+          "  col = 1. - exp(-col*1.15);",
+          "  gl_FragColor = vec4(pow(col, vec3(.4545))*fade, 1.);",
+          "}"
+        ].join("\n");
+
+        function compile(type, src) {
+          var sh = gl.createShader(type);
+          gl.shaderSource(sh, src);
+          gl.compileShader(sh);
+          return sh;
+        }
+        var prog = gl.createProgram();
+        gl.attachShader(prog, compile(gl.VERTEX_SHADER, vsSrc));
+        gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, fsSrc));
+        gl.linkProgram(prog);
+        gl.useProgram(prog);
+
+        var buf = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+        var aLoc = gl.getAttribLocation(prog, "a");
+        gl.enableVertexAttribArray(aLoc);
+        gl.vertexAttribPointer(aLoc, 2, gl.FLOAT, false, 0, 0);
+
+        ["res","sc","rad","cy","fade","t","evo","rot","blur","starX","freq","warp","cells","gas","shell","gI","flick","c0","c1","c2","glow"].forEach(function (name) {
+          uLoc[name] = gl.getUniformLocation(prog, name);
+        });
+        gl.uniform1f(uLoc.rad, 0.17);
+        gl.uniform1f(uLoc.cy, 0.13);
+      }
+
+      function resize() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+        var w = Math.round(window.innerWidth * dpr);
+        var h = Math.round(window.innerHeight * dpr);
+        canvas.width = w;
+        canvas.height = h;
+        scVal = Math.min(1, (window.innerWidth / Math.max(1, window.innerHeight)) * 1.5);
+        if (gl) {
+          gl.viewport(0, 0, w, h);
+          gl.uniform2f(uLoc.res, w, h);
+          gl.uniform1f(uLoc.sc, scVal);
+        }
+      }
+      resize();
+      window.addEventListener("resize", resize);
+
+      var t0 = performance.now();
+      var prevNow = t0;
+      var nextAuto = t0 + 5000;
+
+      function frame(now) {
+        requestAnimationFrame(frame);
+        var dt = Math.min(0.05, (now - prevNow) / 1000);
+        prevNow = now;
+        var time = (now - t0) / 1000;
+        var paused = document.documentElement.getAttribute("data-motion") === "paused";
+        var f = function (r) { return 1 - Math.exp(-dt * r); };
+
+        if (!paused && now - lastInput > 5000 && now > nextAuto) {
+          var curIdx = Math.round(x * LAST);
+          x = ((curIdx + 1) % (LAST + 1)) / LAST;
+          omega += 9;
+          nextAuto = now + 2600;
+        }
+
+        var idx = Math.round(x * LAST);
+        if (idx !== stage) {
+          omega += omega >= 0 ? 7 : -7;
+          stage = idx;
+          setCaption(idx);
+        }
+
+        var target = LOOK[stage];
+        var easeRate = paused ? f(60) : f(13);
+        ["gI","freq","warp","cells","gas","shell","boil"].forEach(function (k) {
+          cur[k] += (target[k] - cur[k]) * easeRate;
+        });
+        ["c0","c1","c2","glow"].forEach(function (k) {
+          for (var c = 0; c < 3; c++) cur[k][c] += (target[k][c] - cur[k][c]) * easeRate;
+        });
+
+        omega *= Math.exp(-dt * 3.6);
+        var spin = paused ? 0 : 0.22 + omega;
+        var blur = Math.min(1.4, Math.abs(omega) * 0.1);
+        rot += spin * dt;
+        evo += dt * cur.boil * (1 + Math.abs(omega) * 0.1);
+        starX += omega * dt * 0.012;
+
+        if (gl) {
+          gl.uniform1f(uLoc.t, time);
+          gl.uniform1f(uLoc.evo, evo);
+          gl.uniform1f(uLoc.rot, rot);
+          gl.uniform1f(uLoc.blur, blur);
+          gl.uniform1f(uLoc.starX, starX);
+          gl.uniform1f(uLoc.freq, cur.freq);
+          gl.uniform1f(uLoc.warp, cur.warp);
+          gl.uniform1f(uLoc.cells, cur.cells);
+          gl.uniform1f(uLoc.gas, cur.gas);
+          gl.uniform1f(uLoc.shell, cur.shell);
+          gl.uniform1f(uLoc.gI, cur.gI);
+          gl.uniform3fv(uLoc.c0, cur.c0);
+          gl.uniform3fv(uLoc.c1, cur.c1);
+          gl.uniform3fv(uLoc.c2, cur.c2);
+          gl.uniform3fv(uLoc.glow, cur.glow);
+          gl.uniform1f(uLoc.flick, 1 + 0.1 * Math.sin(time * 2.1) + 0.06 * Math.sin(time * 5.3));
+          gl.uniform1f(uLoc.fade, Math.min(1, (now - t0) / 500));
+          gl.drawArrays(gl.TRIANGLES, 0, 3);
+        }
+
+        var active = x * (N - 1);
+        var bellAt = (hover >= 0 ? hover : x) * (N - 1);
+        var tf = f(22);
+        for (var j = 0; j < N; j++) {
+          var q = j - bellAt;
+          var bell = Math.exp(-(q * q) / 5.5);
+          var da = j - active;
+          var on = Math.exp(-(da * da) / 0.22);
+          var goal = Math.max((j % PER ? 0.17 : 0.28) + bell * 0.55, on);
+          tickH[j] += (goal - tickH[j]) * tf;
+          tickEls[j].style.transform = "scaleY(" + tickH[j].toFixed(3) + ")";
+          tickEls[j].style.opacity = (0.3 + bell * 0.35 + on * 0.6).toFixed(3);
+        }
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.sun63-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -109,7 +109,7 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
-    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com','cdn.jsdelivr.net']);
+    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com','cdn.jsdelivr.net','unpkg.com']);
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
@@ -947,7 +947,7 @@ try {
         }
         return;
       }
-      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish','trend-carousel','spin-product','album-flow','fox-couture','glass-portfolio','verra-events-hero','axon','velia','facet-glass','orvante-agency','offline','oda-hero'].includes(slug)) {
+      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish','trend-carousel','spin-product','album-flow','fox-couture','glass-portfolio','verra-events-hero','axon','velia','facet-glass','orvante-agency','offline','oda-hero','agent-hero','wild-pil','tana-elephant','sun-timeline','scanner-comparison','hollowmere-halloween-descent'].includes(slug)) {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (slug === 'future-fashion') {
           await page.mouse.move(clickedCount === 0 ? 480 : 960, clickedCount === 0 ? 340 : 560, { steps: 14 });
@@ -1069,6 +1069,36 @@ try {
         } else if (slug === 'oda-hero') {
           await page.mouse.move(clickedCount === 0 ? 640 : 820, 440, { steps: 12 });
           const sel = clickedCount === 0 ? '#suitToggleBtn' : '#bioJumpBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'agent-hero') {
+          await page.mouse.move(clickedCount === 0 ? 740 : 860, clickedCount === 0 ? 380 : 480, { steps: 12 });
+          const sel = clickedCount === 0 ? '#railProductBtn' : '#railReviewsBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'wild-pil') {
+          await page.mouse.move(clickedCount === 0 ? 920 : 720, clickedCount === 0 ? 780 : 420, { steps: 10 });
+          const sel = clickedCount === 0 ? '#letsGetWildBtn' : '#speakerBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'tana-elephant') {
+          await page.mouse.move(clickedCount === 0 ? 720 : 280, clickedCount === 0 ? 780 : 60, { steps: 10 });
+          const sel = clickedCount === 0 ? '#seeMapBtn' : '#menuToggleBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'sun-timeline') {
+          await page.mouse.move(clickedCount === 0 ? 820 : 620, 620, { steps: 14 });
+          const sel = clickedCount === 0 ? '[data-stage="6"]' : '[data-stage="8"]';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'scanner-comparison') {
+          await page.mouse.move(clickedCount === 0 ? 880 : 540, clickedCount === 0 ? 220 : 520, { steps: 12 });
+          const sel = clickedCount === 0 ? '#exploreDistillBtn' : '#stepBeltBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'hollowmere-halloween-descent') {
+          await page.mouse.move(clickedCount === 0 ? 340 : 880, clickedCount === 0 ? 280 : 420, { steps: 14 });
+          const sel = clickedCount === 0 ? '#ritesNavBtn' : '#ticketsNavBtn';
           await page.locator(sel).first().click({ force: true });
           actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
         }

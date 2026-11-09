@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-09T10:20:00.857Z",
+  "updatedAt": "2026-11-09T23:50:31.644Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2423,6 +2423,24 @@
       "sizeBytes": 12868,
       "sha256": "c2af5c4634cd748b94817915f8aa5eed8e14677e482fc22507d82f8405533081",
       "updatedAt": "2026-11-09T10:20:00.856Z"
+    },
+    "scanner-comparison": {
+      "fileId": "1D_yQ27fVgftPAPPARftUjXA6B_9ce-ng",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1D_yQ27fVgftPAPPARftUjXA6B_9ce-ng",
+      "webViewUrl": "https://drive.google.com/file/d/1D_yQ27fVgftPAPPARftUjXA6B_9ce-ng/view",
+      "sizeBytes": 16529,
+      "sha256": "2989f625fa0a62fc7cc2044d1852e0d22e3902383439042521b6bf4ac270a04f",
+      "updatedAt": "2026-11-09T23:46:34.091Z"
+    },
+    "sun-timeline": {
+      "fileId": "13RYZ6JzU5ahwuTRapt68ODbq2UZKj3-9",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=13RYZ6JzU5ahwuTRapt68ODbq2UZKj3-9",
+      "webViewUrl": "https://drive.google.com/file/d/13RYZ6JzU5ahwuTRapt68ODbq2UZKj3-9/view",
+      "sizeBytes": 15092,
+      "sha256": "ffa7e51786602fcff835e1ef9dd303e564929102d8dce9615246b4e2cf420218",
+      "updatedAt": "2026-11-09T23:50:31.643Z"
     }
   }
 }

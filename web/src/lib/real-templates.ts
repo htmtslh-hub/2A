@@ -46,6 +46,152 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t313: {
+    slug: 'hollowmere-halloween-descent',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Hollowmere Halloween Descent",
+        desc: "Giao diện web Hollowmere Halloween Descent với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Halloween", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Hollowmere Halloween Descent",
+        desc: "Bespoke Hollowmere Halloween Descent web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Halloween", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Hollowmere Halloween Descent",
+        desc: "单文件自包含 Hollowmere Halloween Descent 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t312: {
+    slug: 'scanner-comparison',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Scanner Comparison",
+        desc: "Giao diện web Scanner Comparison với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Scanner Comparison",
+        desc: "Bespoke Scanner Comparison web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Scanner Comparison",
+        desc: "单文件自包含 Scanner Comparison 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t311: {
+    slug: 'sun-timeline',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Sun Timeline",
+        desc: "Giao diện web Sun Timeline với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Sun Timeline",
+        desc: "Bespoke Sun Timeline web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Sun Timeline",
+        desc: "单文件自包含 Sun Timeline 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t310: {
+    slug: 'tana-elephant',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Tana Elephant",
+        desc: "Giao diện web Tana Elephant với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Tana Elephant",
+        desc: "Bespoke Tana Elephant web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Tana Elephant",
+        desc: "单文件自包含 Tana Elephant 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t309: {
+    slug: 'wild-pil',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Wild Pil",
+        desc: "Giao diện web Wild Pil với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Wild Pil",
+        desc: "Bespoke Wild Pil web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Wild Pil",
+        desc: "单文件自包含 Wild Pil 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t308: {
+    slug: 'agent-hero',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Agent Hero",
+        desc: "Giao diện web Agent Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Agent Hero",
+        desc: "Bespoke Agent Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Agent Hero",
+        desc: "单文件自包含 Agent Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t307: {
     slug: 'oda-hero',
     cat: 'commerce',

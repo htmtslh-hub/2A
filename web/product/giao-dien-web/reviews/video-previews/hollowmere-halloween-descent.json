@@ -1,0 +1,44 @@
+{
+  "id": "t313",
+  "slug": "hollowmere-halloween-descent",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T23:52:05.349Z",
+  "demo": "/demos/hollowmere-halloween-descent/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "29c718ca4e2a",
+  "sha256": "29c718ca4e2aa1cfa546473463dcbad9f6747da0ae994e5e9a14a4a7e52753eb",
+  "demoHtmlSha256": "a4d7fcc304d4174c76a32dd034e293d2daa7ca6063cff98121a2795aa1593a72",
+  "demoSha256": "0b40c4825dd5a6e65a6249c0fdda39e9bb6b46bbbe3e0e08ff0b333adf61ac0e",
+  "bytes": 1196464,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.916,
+      "action": "click",
+      "selector": "#ritesNavBtn"
+    },
+    {
+      "seconds": 5.274,
+      "action": "click",
+      "selector": "#ticketsNavBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hollowmere-halloween-descent-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hollowmere-halloween-descent-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hollowmere-halloween-descent-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hollowmere-halloween-descent-return.jpg"
+  ]
+}

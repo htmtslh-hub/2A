@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Distill — Built for people. Read by machines.</title>
+  <meta name="description" content="Distill detects AI agents at the edge and serves them a clean, token-light version of every page, without changing a pixel of what people see.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EEF0F2;
+      --ink: #0F1115;
+      --body: #2A2E35;
+      --muted: #8B9098;
+      --code: #7A7F88;
+      --comment: #B3B8BF;
+      --hot: #FF5A1F;
+      --hot-soft: #FFE1D3;
+      --accent: #FF5A1F;
+      --accent-text: #D9430F;
+      --accent-2: #0F1115;
+      --cw: 46vw;
+      --ch: 52vh;
+      --gap: 4.75vw;
+      --top: 40.2vh;
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --font-serif: "Newsreader", Georgia, serif;
+      --font-display: "Newsreader", Georgia, serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+      --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --dunes: url("https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/0e201fcd-ffc0-46a0-bd06-faa07bf0e84b.webp");
+      --foundry: url("https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/e80ba08d-d7b6-4b27-b0cd-8d0ad09c788c.webp");
+      --mineral: url("https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/2bebad68-8177-446a-9550-d64074166364.webp");
+      --mesa: url("https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/62b0d7c1-3eb7-44bd-9b19-57b975fb250f.webp");
+      --fire: url("https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/156ff74d-ee37-4443-8f3a-11ae2095ed4c.webp");
+      --saltflat: url("https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/7b6ad638-89ec-4dec-be74-d36fbff3ea53.webp");
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--hot); color: #ffffff; }
+    :focus-visible { outline: 2px solid var(--hot); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html, body {
+      height: 100%;
+      overflow-x: clip;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 8px 16px; background: var(--ink); color: #fff;
+      text-decoration: none; border-radius: 999px; font-size: 12px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    .sc-stage {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 700px;
+      overflow: hidden;
+    }
+
+    /* Nav (56px tall) */
+    .sc-nav {
+      height: 56px;
+      padding: 0 20px;
+      display: flex; align-items: center; gap: 56px;
+      position: relative; z-index: 30;
+    }
+    .sc-logo {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--ink); text-decoration: none;
+      font-size: 23px; font-weight: 600; letter-spacing: -0.035em;
+    }
+    .sc-links {
+      display: flex; align-items: center; gap: 38px;
+      font-size: 13px; font-weight: 500; color: var(--body);
+    }
+    .sc-links a {
+      color: var(--body); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .sc-nav-right {
+      margin-left: auto;
+      display: flex; align-items: center; gap: 14px;
+      font-size: 12.5px; font-weight: 500;
+    }
+    .sc-link-plain { color: var(--body); text-decoration: none; }
+    .sc-pill-outline {
+      height: 32px; padding: 0 17px;
+      border-radius: 999px;
+      border: 1px solid #C4C9CF;
+      background: rgba(255, 255, 255, 0.35);
+      color: var(--ink);
+      display: inline-flex; align-items: center;
+      text-decoration: none; cursor: pointer;
+      font-family: var(--font-sans); font-size: 12px; font-weight: 500;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .sc-pill-hot {
+      height: 32px; padding: 0 17px;
+      border-radius: 999px; border: none;
+      background: var(--hot); color: #ffffff;
+      display: inline-flex; align-items: center;
+      text-decoration: none; cursor: pointer;
+      font-family: var(--font-sans); font-size: 12.5px; font-weight: 500;
+      transition: transform 0.35s var(--ease-out);
+    }
+    .sc-pill-hot:hover, .sc-explore-btn:hover { transform: translateY(-2px); }
+    .sc-pill-hot:active, .sc-pill-outline:active, .sc-explore-btn:active { transform: scale(0.97); }
+
+    /* Hero Copy Grid */
+    .sc-hero-copy {
+      display: grid;
+      grid-template-columns: 1fr 34vw;
+      gap: 4vw;
+      padding: 24px 8.9vw 0;
+      position: relative; z-index: 20;
+    }
+    .sc-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11.5px; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--body);
+    }
+    .sc-h1 {
+      margin-top: 12px;
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 3vw, 58px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+    .sc-h1 em { font-style: italic; }
+    .sc-lead {
+      font-size: clamp(14px, 1.05vw, 19px);
+      line-height: 1.55;
+      color: var(--body);
+      max-width: 34vw;
+    }
+    .sc-cta-row {
+      margin-top: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .sc-explore-btn {
+      height: 40px; padding: 0 22px;
+      border-radius: 999px; border: none;
+      background: var(--hot); color: #ffffff;
+      font-family: var(--font-sans); font-size: 13px; font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.35s var(--ease-out);
+    }
+
+    /* Counter Badge above Scanner */
+    .badge {
+      position: absolute;
+      left: 50%; top: calc(var(--top) - 58px);
+      transform: translateX(-50%);
+      z-index: 25;
+      display: flex; flex-direction: column; align-items: center; gap: 7px;
+      pointer-events: none;
+    }
+    .badge-label {
+      font-size: 11.5px; color: var(--muted);
+    }
+    .badge-pill {
+      height: 26px; border-radius: 999px;
+      overflow: hidden;
+      display: inline-flex; align-items: center;
+      box-shadow: 0 0 18px rgba(255, 90, 31, 0.35);
+      font-family: var(--font-mono); font-size: 12.5px; font-weight: 500;
+    }
+    .badge-num {
+      height: 100%; display: inline-flex; align-items: center; justify-content: flex-end;
+      background: var(--hot); color: #ffffff;
+      padding: 0 11px 0 13px;
+      min-width: 8.2ch;
+    }
+    .badge-pct {
+      height: 100%; display: inline-flex; align-items: center;
+      background: var(--hot-soft); color: #D9430F;
+      font-size: 11px;
+      padding: 0 12px 0 10px;
+    }
+
+    /* Scanner Line */
+    .scan {
+      position: absolute;
+      left: 50%; top: calc(var(--top) - 14px);
+      width: 0; height: calc(var(--ch) + 40px);
+      z-index: 22;
+      pointer-events: none;
+    }
+    .scan i {
+      position: absolute; left: -2px; top: 0; bottom: 0;
+      width: 4px; border-radius: 4px;
+      background: linear-gradient(180deg, #ff7a3c 0%, #FF5A1F 12%, #FF5A1F 88%, #ff7a3c 100%);
+      box-shadow: 0 0 10px 2px rgba(255, 90, 31, 0.85), 0 0 34px 10px rgba(255, 90, 31, 0.38);
+    }
+    .scan b {
+      position: absolute; left: 0; top: 4%; height: 92%;
+      width: 42px;
+      background: linear-gradient(90deg, rgba(255, 110, 50, 0.55), transparent);
+      filter: blur(6px);
+    }
+
+    /* Conveyor Belt */
+    .belt {
+      position: absolute;
+      left: 0; right: 0;
+      top: calc(var(--top) - 70px);
+      height: calc(var(--ch) + 140px);
+      cursor: grab;
+      touch-action: pan-y;
+      user-select: none;
+      z-index: 10;
+    }
+    .belt.dragging { cursor: grabbing; }
+    .codes {
+      position: absolute; inset: 0;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24vw);
+      mask-image: linear-gradient(90deg, transparent 0, #000 24vw);
+      pointer-events: none;
+    }
+    .cards {
+      position: absolute; inset: 0;
+      pointer-events: none;
+    }
+    canvas.fx {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    /* Card & Code Shells */
+    .k-card, .code-block {
+      position: absolute;
+      top: 70px; left: 0;
+      width: var(--cw); height: var(--ch);
+      will-change: transform, clip-path;
+    }
+    .code-block {
+      container-type: inline-size;
+      white-space: pre;
+      overflow: hidden;
+      font-family: var(--font-mono);
+    }
+    .code-html {
+      position: absolute; left: 0; top: 0;
+      font-size: 1.56cqw; line-height: 1.39;
+      color: var(--code);
+    }
+    .code-meta {
+      position: absolute; left: 54%; top: 0;
+      font-size: 1.56cqw; line-height: 1.39;
+      color: var(--comment);
+    }
+
+    .k-card {
+      border-radius: 1.6vw;
+      overflow: hidden;
+      color: #ffffff;
+      container-type: inline-size;
+      box-shadow: 0 18px 40px rgba(15, 17, 21, 0.12);
+    }
+    .k-nav {
+      position: absolute; left: 4.4cqw; right: 4.4cqw; top: 4cqw;
+      z-index: 4;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .k-logo {
+      display: inline-flex; align-items: center; gap: 1.3cqw;
+      font-size: 3.4cqw; font-weight: 500; letter-spacing: -0.03em;
+    }
+    .k-logo svg { width: 4.2cqw; height: 3.2cqw; }
+    .k-menu {
+      display: flex; align-items: center; gap: 3.2cqw;
+      font-size: 1.32cqw; font-weight: 500; letter-spacing: 0.14em;
+      opacity: 0.88;
+    }
+    .k-menu .pill {
+      padding: 0.6cqw 1.5cqw;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+    }
+
+    /* Card 1: Home */
+    .k-card.c-home {
+      background: linear-gradient(180deg, rgba(20,10,4,0.28) 0%, transparent 35%, rgba(20,10,4,0.62) 100%), var(--dunes) center / cover no-repeat;
+    }
+    .c-home-bottom {
+      position: absolute; left: 4.4cqw; right: 4.4cqw; bottom: 5cqw;
+      display: flex; align-items: flex-end; justify-content: space-between;
+    }
+    .c-home-stats { display: flex; align-items: flex-end; gap: 4cqw; }
+    .c-stat-num { font-size: 8.2cqw; font-weight: 300; line-height: 0.9; letter-spacing: -0.04em; }
+    .c-stat-lbl { font-size: 1.8cqw; opacity: 0.85; margin-top: 0.6cqw; }
+
+    /* Card 2: Price */
+    .k-card.c-price {
+      color: #2A1406;
+      background: radial-gradient(120% 90% at 20% 110%, #FF6A1F 0%, #FF9A4A 35%, #F7C79A 62%, #EFD9C4 100%);
+    }
+    .c-price-big {
+      position: absolute; left: 4.4cqw; top: 34%;
+      font-size: 11.5cqw; font-weight: 300; letter-spacing: -0.05em; line-height: 1;
+    }
+    .c-price-sub {
+      position: absolute; left: 4.4cqw; top: 62%;
+      font-family: var(--font-mono); font-size: 1.6cqw; opacity: 0.75;
+    }
+    .c-price-list {
+      position: absolute; right: 4.4cqw; top: 34%; width: 36cqw;
+      font-size: 1.9cqw;
+    }
+    .c-price-row {
+      display: flex; justify-content: space-between;
+      padding: 1.2cqw 0;
+      border-top: 1px solid rgba(42, 20, 6, 0.25);
+    }
+
+    /* Card 3: Case Study */
+    .k-card.c-case {
+      background: linear-gradient(180deg, rgba(25,14,8,0.25), rgba(25,14,8,0.68)), var(--mineral) center / cover no-repeat;
+    }
+    .c-case-kicker {
+      position: absolute; left: 4.4cqw; top: 20%;
+      font-family: var(--font-mono); font-size: 1.4cqw; letter-spacing: 0.08em;
+    }
+    .c-case-title {
+      position: absolute; left: 4.4cqw; top: 27%; width: 64cqw;
+      font-family: var(--font-serif); font-size: 4.4cqw; line-height: 1.1;
+    }
+    .c-case-stats {
+      position: absolute; left: 4.4cqw; right: 4.4cqw; bottom: 5cqw;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 3cqw;
+    }
+    .c-case-col { border-top: 1px solid rgba(255,255,255,0.35); padding-top: 1.2cqw; }
+
+    /* Card 4: Vision */
+    .k-card.c-vision { background: #1B1311; }
+    .c-vision-row {
+      position: absolute; left: 4.4cqw; right: 4.4cqw; top: 23%; height: 48%;
+      display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 2cqw;
+    }
+    .c-tile { border-radius: 1.2cqw; background-size: cover; background-position: center; }
+    .c-tile.t1 { background-image: var(--foundry); }
+    .c-tile.t2 { background-image: var(--mesa); }
+    .c-vision-quote {
+      font-family: var(--font-serif); font-size: 3.2cqw; line-height: 1.18;
+      display: flex; align-items: center;
+    }
+
+    /* Card 5: Alloy */
+    .k-card.c-alloy {
+      background: linear-gradient(90deg, rgba(20,12,8,0.2), rgba(20,12,8,0.75)), var(--fire) center / cover no-repeat;
+    }
+    .c-alloy-title {
+      position: absolute; left: 4.4cqw; bottom: 6cqw;
+      font-family: var(--font-serif); font-size: 6.8cqw; line-height: 0.98;
+    }
+    .c-alloy-specs {
+      position: absolute; right: 4.4cqw; bottom: 6cqw; width: 32cqw;
+      font-size: 1.8cqw;
+    }
+
+    /* Card 6: Journal */
+    .k-card.c-journal { background: #E9ECF1; color: #121A2A; }
+    .c-journal-title {
+      position: absolute; left: 4.4cqw; top: 20%;
+      font-family: var(--font-serif); font-size: 4.8cqw; line-height: 1.05;
+    }
+    .c-journal-posts {
+      position: absolute; left: 4.4cqw; right: 4.4cqw; bottom: 5cqw;
+      display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2.2cqw;
+    }
+    .c-post-thumb {
+      aspect-ratio: 16 / 9; border-radius: 1cqw;
+      background-size: cover; background-position: center;
+      margin-bottom: 0.8cqw;
+    }
+
+    .sc-footer {
+      position: absolute; left: 20px; right: 20px; bottom: 10px;
+      z-index: 25;
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: var(--font-mono); font-size: 11px; color: var(--muted);
+      pointer-events: none;
+    }
+
+    @media (max-width: 767px) {
+      :root {
+        --cw: 84vw;
+        --ch: 54vw;
+        --gap: 7vw;
+        --top: 54svh;
+      }
+      .sc-links, .sc-link-plain, .sc-hide-mobile { display: none; }
+      .sc-hero-copy { grid-template-columns: 1fr; gap: 14px; padding: 18px 20px 0; }
+      .sc-lead { max-width: none; }
+    }
+    @media (max-width: 480px) {
+      .sc-h1 { font-size: 32px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="sc-stage">
+    <header class="sc-nav">
+      <a href="#main-content" class="sc-logo">
+        <svg width="19" height="23" viewBox="0 0 19 23" fill="none" aria-hidden="true">
+          <path d="M9.5 1C9.5 1 18 10.2 18 15.2C18 19.6 14.2 22 9.5 22C4.8 22 1 19.6 1 15.2C1 10.2 9.5 1 9.5 1Z" fill="currentColor"/>
+          <path d="M5.5 14.5C5.5 17.2 7.2 18.8 9.5 19.2" stroke="#EEF0F2" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <span>Distill</span>
+      </a>
+      <nav class="sc-links" aria-label="Primary navigation">
+        <a href="#beltSection">Product ▾</a>
+        <a href="#beltSection">Use cases ▾</a>
+        <a href="#beltSection">Resources ▾</a>
+        <a href="#beltSection">Pricing</a>
+      </nav>
+      <div class="sc-nav-right">
+        <a href="#beltSection" class="sc-link-plain">Sign in</a>
+        <button type="button" class="sc-pill-outline sc-hide-mobile" id="stepBeltBtn">Nudge Belt →</button>
+        <button type="button" class="sc-pill-hot" id="bookDemoBtn">Book a demo</button>
+        <button type="button" class="sc-pill-outline" id="motionToggleBtn" aria-label="Toggle motion">Motion: ON</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="sc-hero-copy" aria-label="Hero introduction">
+        <div>
+          <div class="sc-eyebrow">AI READABILITY</div>
+          <h1 class="sc-h1">
+            Built for people.<br>
+            <em>Read by machines.</em>
+          </h1>
+        </div>
+        <div>
+          <p class="sc-lead">
+            Distill detects AI agents at the edge and serves them a clean, token&#8209;light version of every page, without changing a pixel of what people see.
+          </p>
+          <div class="sc-cta-row">
+            <button type="button" class="sc-explore-btn" id="exploreDistillBtn">Explore Distill</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="badge" aria-live="polite">
+        <span class="badge-label">Token reduction</span>
+        <div class="badge-pill">
+          <span class="badge-num tabular-nums" id="tokenCount">−48,193</span>
+          <span class="badge-pct tabular-nums" id="tokenPct">91% less</span>
+        </div>
+      </div>
+
+      <div class="scan" aria-hidden="true">
+        <i></i>
+        <b></b>
+      </div>
+
+      <section class="belt" id="beltSection" aria-label="Live scanner comparison conveyor belt">
+        <div class="codes" id="codesLayer"></div>
+        <div class="cards" id="cardsLayer">
+          <!-- Card 1: Home -->
+          <article class="k-card c-home" data-idx="0">
+            <div class="k-nav">
+              <span class="k-logo"><svg viewBox="0 0 54 42" fill="none" aria-hidden="true"><path d="M4 38L20 8L36 38M22 38L36 12L50 38" stroke="currentColor" stroke-width="3.2"/></svg>Kessler</span>
+              <div class="k-menu"><span class="pill">PRODUCTS</span><span>IMPACT</span><span>ABOUT</span></div>
+            </div>
+            <div class="c-home-bottom">
+              <div class="c-home-stats">
+                <div><div class="c-stat-num tabular-nums">200x</div><div class="c-stat-lbl">stronger</div></div>
+                <div><div class="c-stat-num tabular-nums">87%</div><div class="c-stat-lbl">lower emissions</div></div>
+              </div>
+              <div style="font-size:2.1cqw;max-width:24cqw">Advanced materials for a stronger tomorrow.</div>
+            </div>
+          </article>
+
+          <!-- Card 2: Price -->
+          <article class="k-card c-price" data-idx="1">
+            <div class="k-nav">
+              <span class="k-logo"><svg viewBox="0 0 54 42" fill="none" aria-hidden="true"><path d="M4 38L20 8L36 38M22 38L36 12L50 38" stroke="currentColor" stroke-width="3.2"/></svg>Kessler</span>
+              <div class="k-menu"><span>PRODUCTS</span><span class="pill">PRICING</span><span>CONTACT</span></div>
+            </div>
+            <div class="c-price-big tabular-nums">$2,400</div>
+            <div class="c-price-sub">PER MONTH · INDUSTRIAL</div>
+            <div class="c-price-list">
+              <div class="c-price-row"><span>Pilot</span><span class="tabular-nums">$299</span></div>
+              <div class="c-price-row"><span>Industrial</span><span class="tabular-nums">$2,400</span></div>
+              <div class="c-price-row"><span>Foundry</span><span>Custom</span></div>
+            </div>
+          </article>
+
+          <!-- Card 3: Case Study -->
+          <article class="k-card c-case" data-idx="2">
+            <div class="k-nav">
+              <span class="k-logo"><svg viewBox="0 0 54 42" fill="none" aria-hidden="true"><path d="M4 38L20 8L36 38M22 38L36 12L50 38" stroke="currentColor" stroke-width="3.2"/></svg>Kessler</span>
+              <div class="k-menu"><span>PRODUCTS</span><span class="pill">IMPACT</span><span>ABOUT</span></div>
+            </div>
+            <div class="c-case-kicker">CASE STUDY · ATLAS RAIL</div>
+            <h2 class="c-case-title">How Atlas Rail cut track weight by a third in eighteen months</h2>
+            <div class="c-case-stats">
+              <div class="c-case-col"><div class="c-stat-num tabular-nums" style="font-size:5.6cqw">34%</div><div class="c-stat-lbl">lighter track</div></div>
+              <div class="c-case-col"><div class="c-stat-num tabular-nums" style="font-size:5.6cqw">3.4x</div><div class="c-stat-lbl">service life</div></div>
+              <div class="c-case-col"><div class="c-stat-num tabular-nums" style="font-size:5.6cqw">0</div><div class="c-stat-lbl">unplanned closures</div></div>
+            </div>
+          </article>
+
+          <!-- Card 4: Vision -->
+          <article class="k-card c-vision" data-idx="3">
+            <div class="k-nav">
+              <span class="k-logo"><svg viewBox="0 0 54 42" fill="none" aria-hidden="true"><path d="M4 38L20 8L36 38M22 38L36 12L50 38" stroke="currentColor" stroke-width="3.2"/></svg>Kessler</span>
+              <div class="k-menu"><span>PRODUCTS</span><span class="pill">VISION</span><span>ABOUT</span></div>
+            </div>
+            <div class="c-vision-row">
+              <div class="c-tile t1"></div>
+              <div class="c-tile t2"></div>
+              <div class="c-vision-quote">“The Kessler vision: <em>materials that outlast the people who made them.</em>”</div>
+            </div>
+          </article>
+
+          <!-- Card 5: Alloy -->
+          <article class="k-card c-alloy" data-idx="4">
+            <div class="k-nav">
+              <span class="k-logo"><svg viewBox="0 0 54 42" fill="none" aria-hidden="true"><path d="M4 38L20 8L36 38M22 38L36 12L50 38" stroke="currentColor" stroke-width="3.2"/></svg>Kessler</span>
+              <div class="k-menu"><span class="pill">PRODUCTS</span><span>IMPACT</span><span>ABOUT</span></div>
+            </div>
+            <h2 class="c-alloy-title">The carbon&#8209;negative<br><em>alloy.</em></h2>
+            <div class="c-alloy-specs">
+              <div class="c-price-row" style="border-color:rgba(255,255,255,0.25)"><span>Product</span><span>K-Alloy 7</span></div>
+              <div class="c-price-row" style="border-color:rgba(255,255,255,0.25)"><span>Tensile</span><span class="tabular-nums">1,940 MPa</span></div>
+              <div class="c-price-row" style="border-color:rgba(255,255,255,0.25)"><span>Datasheet</span><span>PDF ↗</span></div>
+            </div>
+          </article>
+
+          <!-- Card 6: Journal -->
+          <article class="k-card c-journal" data-idx="5">
+            <div class="k-nav">
+              <span class="k-logo"><svg viewBox="0 0 54 42" fill="none" aria-hidden="true"><path d="M4 38L20 8L36 38M22 38L36 12L50 38" stroke="currentColor" stroke-width="3.2"/></svg>Kessler</span>
+              <div class="k-menu"><span>PRODUCTS</span><span class="pill">JOURNAL</span><span>ABOUT</span></div>
+            </div>
+            <h2 class="c-journal-title">Journal<br><em style="color:#46618E;font-size:0.78em">field notes from the flats</em></h2>
+            <div class="c-journal-posts">
+              <div><div class="c-post-thumb" style="background-image:var(--saltflat)"></div><div style="font-size:1.5cqw;font-weight:600">Mining nothing but light</div></div>
+              <div><div class="c-post-thumb" style="background-image:var(--mesa)"></div><div style="font-size:1.5cqw;font-weight:600">Atacama, year one</div></div>
+              <div><div class="c-post-thumb" style="background-image:var(--dunes)"></div><div style="font-size:1.5cqw;font-weight:600">Why we melt sand at noon</div></div>
+            </div>
+          </article>
+        </div>
+        <canvas class="fx" id="fxCanvas" aria-hidden="true"></canvas>
+      </section>
+    </main>
+
+    <footer class="sc-footer">
+      <span>DISTILL EDGE COMPILER · TOKEN REDUCTION ENGINE</span>
+      <span class="tabular-nums">DRAG BELT LEFT OR RIGHT TO INSPECT SOURCE</span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var CODE_DATA = [
+        {
+          orig: 70411, dist: 6140, saved: 64271, pct: "91% less", url: "kessler.co/",
+          html: "<" + "h1>Kessler — Advanced materials</h1>\n<p>\n  Advanced materials for a stronger\n  tomorrow. Ceramic-matrix alloys made\n  with desert sand and solar heat.\n</p>\n<h2>At a glance</h2>\n<ul>\n  <li>Strength: 200x steel by weight</li>\n  <li>Emissions: 87% lower</li>\n  <li>Plants: Nevada, Atacama, Oman</li>\n  <li>Founded: 2019</li>\n</ul>\n<h2>Products</h2>\n<ul>\n  <li>K-Alloy 7 — structural</li>\n  <li>Basalt fibre — tensile</li>\n  <li>Ceramic matrix — thermal</li>\n</ul>\n<a href=\"/demo\">Book a demo</a>"
+        },
+        {
+          orig: 41208, dist: 4960, saved: 36248, pct: "88% less", url: "kessler.co/pricing",
+          html: "<" + "h1>Kessler — Pricing</h1>\n<p>\n  Three plans for every scale of\n  production. Start small, scale to\n  full foundry output.\n</p>\n<h2>Pilot — $299 / mo</h2>\n<ul>\n  <li>Sample batches: 4 / mo</li>\n  <li>Alloy grades: 2</li>\n  <li>Support: email</li>\n</ul>\n<h2>Industrial — $2,400 / mo</h2>\n<ul>\n  <li>Tonnage: up to 40 t / mo</li>\n  <li>Alloy grades: all</li>\n  <li>Certification: ISO 9001</li>\n</ul>"
+        },
+        {
+          orig: 98432, dist: 6300, saved: 92132, pct: "94% less", url: "kessler.co/cases/atlas-rail",
+          html: "<" + "h1>Case study: Atlas Rail</h1>\n<p>\n  How Atlas Rail cut track weight by\n  a third in eighteen months.\n</p>\n<h2>The challenge</h2>\n<p>\n  1,200 km of desert line, rails\n  warping above 50 °C every summer.\n</p>\n<h2>The result</h2>\n<ul>\n  <li>34% lighter track sections</li>\n  <li>3.4x longer service life</li>\n  <li>0 unplanned closures in 2025</li>\n</ul>"
+        },
+        {
+          orig: 55870, dist: 8215, saved: 47655, pct: "85% less", url: "kessler.co/vision",
+          html: "<article>\n<" + "h1>The Kessler vision</h1>\n<p>\n  Materials that outlast the people\n  who made them.\n</p>\n<p>\n  We build where the sun is\n  strongest and the sand is free:\n  three plants, one closed loop.\n</p>\n<h2>Principles</h2>\n<ol>\n  <li>Heat from the sun, not gas</li>\n  <li>Sand in, scrap back in</li>\n  <li>Publish every number</li>\n</ol>\n</article>"
+        },
+        {
+          orig: 63904, dist: 5512, saved: 58392, pct: "91% less", url: "kessler.co/products/k-alloy-7",
+          html: "<" + "h1>K-Alloy 7</h1>\n<p>The carbon-negative alloy.</p>\n<h2>Specification</h2>\n<ul>\n  <li>Tensile strength: 1,940 MPa</li>\n  <li>Density: 2.9 g/cm³</li>\n  <li>Max service temp: 1,150 °C</li>\n  <li>CO₂: −0.4 kg per kg made</li>\n</ul>\n<h2>Uses</h2>\n<p>Rail, bridges, turbine housings</p>\n<a href=\"/k-alloy-7.pdf\">Datasheet</a>"
+        },
+        {
+          orig: 47316, dist: 7602, saved: 39714, pct: "84% less", url: "kessler.co/journal",
+          html: "<" + "h1>Kessler Journal</h1>\n<p>Field notes from the flats.</p>\n<article>\n  <h2>Mining nothing but light</h2>\n  <time>2026-03-14</time>\n</article>\n<article>\n  <h2>Atacama, year one</h2>\n  <time>2026-02-02</time>\n</article>\n<article>\n  <h2>Why we melt sand at noon</h2>\n  <time>2026-01-09</time>\n</article>"
+        }
+      ];
+
+      var codesLayer = document.getElementById("codesLayer");
+      var cardEls = Array.prototype.slice.call(document.querySelectorAll(".k-card"));
+      var codeEls = [];
+
+      CODE_DATA.forEach(function (d) {
+        var wrap = document.createElement("div");
+        wrap.className = "code-block";
+        var hDiv = document.createElement("div");
+        hDiv.className = "code-html";
+        hDiv.textContent = d.html;
+        var mDiv = document.createElement("div");
+        mDiv.className = "code-meta";
+        mDiv.textContent = "<!-- distilled: " + d.dist.toLocaleString("en-US") + " tokens -->\n<!-- original: " + d.orig.toLocaleString("en-US") + " tokens -->\n<!-- " + d.url + " -->";
+        wrap.appendChild(hDiv);
+        wrap.appendChild(mDiv);
+        codesLayer.appendChild(wrap);
+        codeEls.push(wrap);
+      });
+
+      var belt = document.getElementById("beltSection");
+      var fxCanvas = document.getElementById("fxCanvas");
+      var ctx = fxCanvas.getContext("2d");
+      var tokenCountEl = document.getElementById("tokenCount");
+      var tokenPctEl = document.getElementById("tokenPct");
+
+      var cw = 640, ch = 400, gap = 64, Lx = 720, dpr = 1;
+      var off = 0, vel = -100, hover = 0, dragging = false, dragLastX = 0, dragLastT = 0;
+      var shownTokens = 48193, activeCrossingIdx = 0;
+      var sparks = [];
+      var PALETTE = ["#FF4A12", "#FF5A1F", "#FF6B2C", "#FF8A3D", "#FFB06A", "#FFD9B5", "#FFF3E6"];
+
+      function measure() {
+        var rect = cardEls[0].getBoundingClientRect();
+        cw = rect.width || window.innerWidth * 0.46;
+        ch = rect.height || window.innerHeight * 0.52;
+        gap = window.innerWidth * (window.innerWidth <= 767 ? 0.07 : 0.0475);
+        Lx = window.innerWidth / 2;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        fxCanvas.width = Math.round(belt.clientWidth * dpr);
+        fxCanvas.height = Math.round(belt.clientHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      measure();
+      off = Lx - 0.62 * cw;
+      window.addEventListener("resize", measure);
+
+      belt.addEventListener("pointerenter", function () { hover = 1; });
+      belt.addEventListener("pointerleave", function () { hover = 0; });
+      belt.addEventListener("pointerdown", function (e) {
+        dragging = true;
+        belt.classList.add("dragging");
+        dragLastX = e.clientX;
+        dragLastT = performance.now();
+        try { belt.setPointerCapture(e.pointerId); } catch (err) {}
+      });
+      belt.addEventListener("pointermove", function (e) {
+        if (!dragging) return;
+        var now = performance.now();
+        var dx = e.clientX - dragLastX;
+        var dtMs = Math.max(8, now - dragLastT);
+        off += dx;
+        vel = (dx / dtMs) * 1000 * 0.8 + vel * 0.2;
+        dragLastX = e.clientX;
+        dragLastT = now;
+      });
+      function endDrag() {
+        dragging = false;
+        belt.classList.remove("dragging");
+      }
+      belt.addEventListener("pointerup", endDrag);
+      belt.addEventListener("pointercancel", endDrag);
+
+      document.getElementById("exploreDistillBtn").addEventListener("click", function () {
+        vel = -window.innerWidth * 0.36;
+      });
+      document.getElementById("stepBeltBtn").addEventListener("click", function () {
+        vel = window.innerWidth * 0.32;
+      });
+      document.getElementById("bookDemoBtn").addEventListener("click", function () {
+        vel = -window.innerWidth * 0.28;
+      });
+
+      var io = new IntersectionObserver(function () {}, { threshold: 0.1 });
+      io.observe(belt);
+
+      function hash3(a, b, c) {
+        var h = (a * 374761393 + b * 668265263 + c * 2147483647) | 0;
+        h = Math.imul(h ^ (h >>> 13), 1274126177);
+        return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+      }
+
+      function mod(n, m) { return ((n % m) + m) % m; }
+
+      var prevTime = performance.now();
+      function tick(now) {
+        requestAnimationFrame(tick);
+        var dt = Math.min(0.05, (now - prevTime) / 1000);
+        prevTime = now;
+        var t = now / 1000;
+        var paused = document.documentElement.getAttribute("data-motion") === "paused";
+
+        var autoSpeed = paused ? 0 : -0.075 * window.innerWidth;
+        var targetSpeed = autoSpeed * (1 - 0.65 * hover);
+        if (!dragging) {
+          vel += (targetSpeed - vel) * (1 - Math.exp(-2.2 * dt));
+          off += vel * dt;
+        }
+
+        var span = cw + gap;
+        var period = span * 6;
+        ctx.clearRect(0, 0, belt.clientWidth, belt.clientHeight);
+
+        for (var i = 0; i < 6; i++) {
+          var x = mod(off + i * span + span, period) - span;
+          var cut = Math.max(0, Math.min(cw, Lx - x));
+          var card = cardEls[i];
+          var code = codeEls[i];
+
+          card.style.transform = "translate3d(" + x.toFixed(1) + "px, 0, 0)";
+          if (cut > 0) {
+            card.style.clipPath = "inset(0 0 0 " + cut.toFixed(1) + "px)";
+          } else {
+            card.style.clipPath = "none";
+          }
+
+          code.style.transform = "translate3d(" + x.toFixed(1) + "px, 0, 0)";
+          if (cut <= 0) {
+            code.style.visibility = "hidden";
+          } else {
+            code.style.visibility = "visible";
+            code.style.clipPath = "inset(0 " + (cw - cut).toFixed(1) + "px 0 0)";
+          }
+
+          // Crossing card dissolve & token counter
+          if (cut > 0 && cut < cw) {
+            if (activeCrossingIdx !== i) {
+              activeCrossingIdx = i;
+              tokenPctEl.textContent = CODE_DATA[i].pct;
+            }
+            var prog = cut / cw;
+            var targetTok = Math.round(CODE_DATA[i].saved * prog);
+            shownTokens += (targetTok - shownTokens) * Math.min(1, dt * 14);
+            tokenCountEl.textContent = "−" + Math.round(shownTokens).toLocaleString("en-US");
+
+            // 1. Haze
+            var hazeW = Math.min(150, x + cw - Lx);
+            if (hazeW > 0) {
+              var grad = ctx.createLinearGradient(Lx, 0, Lx + 150, 0);
+              grad.addColorStop(0, "rgba(255, 96, 40, 0.42)");
+              grad.addColorStop(1, "rgba(255, 96, 40, 0)");
+              ctx.fillStyle = grad;
+              ctx.fillRect(Lx, 70, hazeW, ch);
+            }
+
+            // 2. Dithered surface particles (6px step for smooth 60fps)
+            var R = 0.26 * cw;
+            var stepPx = 6;
+            var startGx = Math.max(0, Math.floor(cut / stepPx));
+            var endGx = Math.min(Math.floor(cw / stepPx), Math.ceil((cut + R) / stepPx));
+            var rows = Math.floor(ch / stepPx);
+            var tBucket = paused ? 1 : Math.floor(t * 9) + 97;
+
+            for (var gx = startGx; gx < endGx; gx++) {
+              var sx = x + gx * stepPx;
+              var d = sx - Lx;
+              if (d < 0 || d > R) continue;
+              var prob = Math.pow(1 - d / R, 1.7);
+              for (var row = -2; row <= rows + 2; row += 2) {
+                var h1 = hash3(gx, row, i);
+                var threshold = (row >= 0 && row <= rows) ? prob * 0.85 : prob * 0.14;
+                if (h1 >= threshold) continue;
+                if (!paused && hash3(gx, row, tBucket) < 0.22) continue;
+                var h2 = hash3(row, gx, i + 31);
+                var colIdx = d < 12 ? 4 + Math.floor(h2 * 3) : Math.floor(h2 * h2 * 7);
+                ctx.fillStyle = PALETTE[Math.min(6, colIdx)];
+                var sz = 1.4 + h2 * 2.1;
+                ctx.fillRect(sx + (h1 - 0.5) * 1.6, 70 + row * stepPx + (h2 - 0.5) * 1.6, sz, sz);
+              }
+            }
+
+            // 3. Free sparks
+            if (!paused && Math.random() < 0.85) {
+              sparks.push({
+                x: Lx + Math.random() * 26,
+                y: 64 + Math.random() * (ch + 12),
+                vx: -30 + Math.random() * 70 + vel * 0.4,
+                vy: (Math.random() - 0.5) * 50,
+                sz: 1.2 + Math.random() * 2.2,
+                col: PALETTE[Math.floor(Math.random() * PALETTE.length)],
+                life: 0.4 + Math.random() * 0.7
+              });
+            }
+          }
+        }
+
+        for (var s = sparks.length - 1; s >= 0; s--) {
+          var sp = sparks[s];
+          sp.life -= dt;
+          if (sp.life <= 0) {
+            sparks.splice(s, 1);
+            continue;
+          }
+          sp.x += sp.vx * dt;
+          sp.y += sp.vy * dt;
+          ctx.globalAlpha = Math.min(1, sp.life * 2.2);
+          ctx.fillStyle = sp.col;
+          ctx.fillRect(sp.x, sp.y, sp.sz, sp.sz);
+        }
+        ctx.globalAlpha = 1;
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.sca93-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

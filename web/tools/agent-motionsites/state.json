@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-09",
+  "lastRunDate": "2026-11-10",
   "todayCopiedCount": 6,
   "processedSlugs": [
     "404-planet",
@@ -11,6 +11,7 @@
     "aerox-studio",
     "aethera",
     "aetheris-voyage",
+    "agent-hero",
     "ai-image-generator-ui",
     "ai-workflow-agents",
     "ai-workflow-hero",
@@ -109,6 +110,7 @@
     "health-portal",
     "helios-investments",
     "hello-illustrator-folio",
+    "hollowmere-halloween-descent",
     "impact-ventures",
     "industrix-engineering",
     "innovation",
@@ -222,6 +224,7 @@
     "rome-explorer",
     "saas-software",
     "saas-value",
+    "scanner-comparison",
     "securify",
     "sellix",
     "semaan",
@@ -242,8 +245,10 @@
     "stellar-ai",
     "strata-ai",
     "subscription-agency",
+    "sun-timeline",
     "swatch-luxury-chronograph",
     "synapsex",
+    "tana-elephant",
     "targo",
     "taskly",
     "tech-forward",
@@ -284,6 +289,7 @@
     "wellbeing-os",
     "wellness-balance",
     "wellness-companion",
+    "wild-pil",
     "work-ribbon",
     "yellow-beast"
   ],
@@ -455,7 +461,13 @@
     "facet-glass-hero",
     "orvante-agency",
     "offline-footer",
-    "oda-nobunaga-hero"
+    "oda-nobunaga-hero",
+    "nova-agent-hero",
+    "wild-pill-hero",
+    "tana-elephant-sections",
+    "lifeline-sun-hero",
+    "distill-comparison",
+    "hollowmere-halloween"
   ],
   "history": [
     {
@@ -1005,6 +1017,42 @@
         "offline": "premium",
         "oda-hero": "premium"
       }
+    },
+    {
+      "date": "2026-11-10",
+      "built": [
+        "agent-hero",
+        "wild-pil",
+        "tana-elephant"
+      ],
+      "catalogIds": [
+        "t308",
+        "t309",
+        "t310"
+      ],
+      "tiers": {
+        "agent-hero": "free",
+        "wild-pil": "premium",
+        "tana-elephant": "premium"
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "built": [
+        "sun-timeline",
+        "scanner-comparison",
+        "hollowmere-halloween-descent"
+      ],
+      "catalogIds": [
+        "t311",
+        "t312",
+        "t313"
+      ],
+      "tiers": {
+        "sun-timeline": "free",
+        "scanner-comparison": "premium",
+        "hollowmere-halloween-descent": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -1110,15 +1158,21 @@
     "3209ca970c346016be1296632d075411c7bbc11b5d0f621d2a35806f6d5cc2a2",
     "bb2a325b7dcac1d3e8caede06fa9a7fff46788ccf03020aaeab72ae336bc1e5c",
     "61f6449b955ce81543c6de684d4a79613985cb0d4fb03f0f509a467d1b0586aa",
-    "dbce32b070c06b037b0bd4fd537426a7146df86122bcf86b559143e42b1fbb44"
+    "dbce32b070c06b037b0bd4fd537426a7146df86122bcf86b559143e42b1fbb44",
+    "9bfe9fa98068f7ff11c02e6739d155bb53ea657a83fa297d570947a29fea9f11",
+    "3230f0355e63e6a9e04782e4a01b5c5da90f4edee75b072fffe1dd32fcfa3058",
+    "27cb5cc37a944d9d367e7e880045ee9c761e525e83c8c1106260b64c404ae622",
+    "4aed6fe39d802c2b5f9acba4fdab416810a73941ae33ecc4894a65aaa2af61fa",
+    "8527c8ca9482b4df5463dff1f232ebd8f4b0fdb85fe072081215917007971b7f",
+    "66da65381f4ce60226b7631ce88b79d282704c90811634a4e5169f8b0af0716d"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "axon",
-    "velia",
-    "facet-glass",
-    "orvante-agency",
-    "offline",
-    "oda-hero"
+    "agent-hero",
+    "wild-pil",
+    "tana-elephant",
+    "sun-timeline",
+    "scanner-comparison",
+    "hollowmere-halloween-descent"
   ]
 }

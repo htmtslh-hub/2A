@@ -1,0 +1,44 @@
+{
+  "id": "t312",
+  "slug": "scanner-comparison",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T23:51:44.980Z",
+  "demo": "/demos/scanner-comparison/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "494d20826de8",
+  "sha256": "494d20826de87f5b241731d9532d7d0ba19462bb2e5ae927966e4b9d4c268f6a",
+  "demoHtmlSha256": "5c1b72250a2c81da8ee4ef248386ca02cb32783c5e5974a6b3101caeb8382b98",
+  "demoSha256": "4e6c71036e98fb2b337fa427046173c75a05f505da3626dc8cc83caffe58fea5",
+  "bytes": 606991,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.63,
+      "action": "click",
+      "selector": "#exploreDistillBtn"
+    },
+    {
+      "seconds": 5.008,
+      "action": "click",
+      "selector": "#stepBeltBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\scanner-comparison-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\scanner-comparison-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\scanner-comparison-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\scanner-comparison-return.jpg"
+  ]
+}

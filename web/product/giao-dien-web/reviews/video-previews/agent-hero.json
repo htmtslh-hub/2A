@@ -1,0 +1,44 @@
+{
+  "id": "t308",
+  "slug": "agent-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T23:48:34.017Z",
+  "demo": "/demos/agent-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a56d731f8632",
+  "sha256": "a56d731f8632cf50ccb7ac659d1a0c532937bbfd77edac2ed5a24ae000b7da25",
+  "demoHtmlSha256": "dd6bca023df347b48c3c5a9e712c146d9b44a0ceae3c8b74ed5fdcbe14bd94d8",
+  "demoSha256": "c25d58e4f2fced1e47319f835ff7a1151d85d2d2830e658e1eca13e833648f54",
+  "bytes": 561655,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 4.183,
+      "action": "click",
+      "selector": "#railProductBtn"
+    },
+    {
+      "seconds": 7.489,
+      "action": "click",
+      "selector": "#railReviewsBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\agent-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\agent-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\agent-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\agent-hero-return.jpg"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-08T22:46:07.725Z",
+  "updatedAt": "2026-11-09T10:20:00.857Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2369,6 +2369,60 @@
       "sizeBytes": 880650,
       "sha256": "380aa047e7b36d73df38ac03d8d650e8460e2dbfacdaf00a26645a7cac62a2c3",
       "updatedAt": "2026-11-08T22:46:07.725Z"
+    },
+    "velia": {
+      "fileId": "19TVw4JbkFpU9GjxTUn72MmO8mSfRBjgW",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=19TVw4JbkFpU9GjxTUn72MmO8mSfRBjgW",
+      "webViewUrl": "https://drive.google.com/file/d/19TVw4JbkFpU9GjxTUn72MmO8mSfRBjgW/view",
+      "sizeBytes": 19280,
+      "sha256": "0233c984dc1c4462e260a9e694c14a1b51805404bc1984579e9daa56e7978322",
+      "updatedAt": "2026-11-09T10:11:25.283Z"
+    },
+    "facet-glass": {
+      "fileId": "1IG5g6iWYiwVnGYuwZV__lJOg2EZuEFrU",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1IG5g6iWYiwVnGYuwZV__lJOg2EZuEFrU",
+      "webViewUrl": "https://drive.google.com/file/d/1IG5g6iWYiwVnGYuwZV__lJOg2EZuEFrU/view",
+      "sizeBytes": 13318,
+      "sha256": "f0c25cbba1df9f20dfa5dc4533e6352f145fe138bc36961069aed7c47fb0da8e",
+      "updatedAt": "2026-11-09T10:11:27.334Z"
+    },
+    "orvante-agency": {
+      "fileId": "1yniDrVGiNGaCSeCbhaYcrTeQl-Qqq06R",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1yniDrVGiNGaCSeCbhaYcrTeQl-Qqq06R",
+      "webViewUrl": "https://drive.google.com/file/d/1yniDrVGiNGaCSeCbhaYcrTeQl-Qqq06R/view",
+      "sizeBytes": 14603,
+      "sha256": "1c67bb8ef75aab10aac55b98ab23194d078abef6211360854376f40e352fe320",
+      "updatedAt": "2026-11-09T10:18:01.947Z"
+    },
+    "offline": {
+      "fileId": "1SJpOmFkCZKwW6THMlMbJUC9WIl3fVO3z",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1SJpOmFkCZKwW6THMlMbJUC9WIl3fVO3z",
+      "webViewUrl": "https://drive.google.com/file/d/1SJpOmFkCZKwW6THMlMbJUC9WIl3fVO3z/view",
+      "sizeBytes": 12906,
+      "sha256": "355569d0924a220c196ba28c74040c1379b4acbbbc9fd1ecb31265d7f4d3cd68",
+      "updatedAt": "2026-11-09T10:18:03.939Z"
+    },
+    "oda-hero": {
+      "fileId": "13aRq9KEy_Nzj2EXeMzQpn5pvSap-gN_p",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=13aRq9KEy_Nzj2EXeMzQpn5pvSap-gN_p",
+      "webViewUrl": "https://drive.google.com/file/d/13aRq9KEy_Nzj2EXeMzQpn5pvSap-gN_p/view",
+      "sizeBytes": 13868,
+      "sha256": "801f79cd66e0ceac70a8315fd9faf94da19d0257d46442887c85e022b3552eff",
+      "updatedAt": "2026-11-09T10:18:06.025Z"
+    },
+    "axon": {
+      "fileId": "1KxFmQ3l1seb5iqPCRfD2h08S_csoaABj",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1KxFmQ3l1seb5iqPCRfD2h08S_csoaABj",
+      "webViewUrl": "https://drive.google.com/file/d/1KxFmQ3l1seb5iqPCRfD2h08S_csoaABj/view",
+      "sizeBytes": 12868,
+      "sha256": "c2af5c4634cd748b94817915f8aa5eed8e14677e482fc22507d82f8405533081",
+      "updatedAt": "2026-11-09T10:20:00.856Z"
     }
   }
 }

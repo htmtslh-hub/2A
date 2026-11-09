@@ -1,0 +1,44 @@
+{
+  "id": "t302",
+  "slug": "axon",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T10:14:29.578Z",
+  "demo": "/demos/axon/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "29235eab9197",
+  "sha256": "29235eab91971e5c2223b8fe944af2f43b03535e0df4412b42f141341ce6b8f6",
+  "demoHtmlSha256": "c6e1a21e22a66edf2feb0415b6bf10d80f983643750a079f3ccd47150c59ff51",
+  "demoSha256": "84dc404c5b7def1e4826a142021a042baf4fab14bec4a9be5ec4c21e8fcaf285",
+  "bytes": 8002414,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.168,
+      "action": "click",
+      "selector": ".ax-tag[data-filter=\"fluids\"]"
+    },
+    {
+      "seconds": 5.342,
+      "action": "click",
+      "selector": ".ax-tag[data-filter=\"all\"]"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axon-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axon-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axon-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\axon-return.jpg"
+  ]
+}

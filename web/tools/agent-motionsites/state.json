@@ -30,6 +30,7 @@
     "atrium-mtl",
     "auralis",
     "axion-about",
+    "axon",
     "backbest-800",
     "bag-slots",
     "bame-esports",
@@ -77,6 +78,7 @@
     "ember-arcade",
     "endas-nfts",
     "f1-racing-hub",
+    "facet-glass",
     "feathers-atlas",
     "fennec",
     "film-studio",
@@ -181,10 +183,13 @@
     "nugraha-jati",
     "nuvem-canvas",
     "oceanpulse",
+    "oda-hero",
+    "offline",
     "orbis-hello",
     "orbis-nft",
     "orbit-academy",
     "organic-odyssey",
+    "orvante-agency",
     "outfit-drop",
     "particle-brain",
     "pinehaven",
@@ -258,6 +263,7 @@
     "vaultra",
     "vaultshield",
     "vectrus-energy",
+    "velia",
     "velora",
     "verdant",
     "verra-events-hero",
@@ -443,7 +449,13 @@
     "album-flow",
     "fox-couture",
     "glass-portfolio",
-    "verra-events-hero"
+    "verra-events-hero",
+    "axon",
+    "velia",
+    "facet-glass-hero",
+    "orvante-agency",
+    "offline-footer",
+    "oda-nobunaga-hero"
   ],
   "history": [
     {
@@ -957,6 +969,42 @@
         "glass-portfolio": "premium",
         "verra-events-hero": "premium"
       }
+    },
+    {
+      "date": "2026-11-09",
+      "built": [
+        "axon",
+        "velia",
+        "facet-glass"
+      ],
+      "catalogIds": [
+        "t302",
+        "t303",
+        "t304"
+      ],
+      "tiers": {
+        "axon": "free",
+        "velia": "premium",
+        "facet-glass": "premium"
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "built": [
+        "orvante-agency",
+        "offline",
+        "oda-hero"
+      ],
+      "catalogIds": [
+        "t305",
+        "t306",
+        "t307"
+      ],
+      "tiers": {
+        "orvante-agency": "free",
+        "offline": "premium",
+        "oda-hero": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -1056,15 +1104,21 @@
     "e96cc5fe2b4f5e42d8b0da22eb2ca3e121b51ae934b15250e233df5de15d9f41",
     "adb3d71066a20438286c573e7d3e8d8eb368fa99121850f4834d517748814e0b",
     "0d8593016ea67addee0fbb637a6ad26a2ff910f606283a27bb1932fba1281d07",
-    "23c460afc7a34036e2b1fc86634b5f7dfb256381bb832c0e4e0585222fcd44ba"
+    "23c460afc7a34036e2b1fc86634b5f7dfb256381bb832c0e4e0585222fcd44ba",
+    "0dae5a31ee079a6af1d91f3b55df3e50e3ba313b23016f6411c785a66a6c4055",
+    "1138115bf53289b553b93a52f659ed783c96570c2f2ba198a3dcdf7a2dfae5c4",
+    "3209ca970c346016be1296632d075411c7bbc11b5d0f621d2a35806f6d5cc2a2",
+    "bb2a325b7dcac1d3e8caede06fa9a7fff46788ccf03020aaeab72ae336bc1e5c",
+    "61f6449b955ce81543c6de684d4a79613985cb0d4fb03f0f509a467d1b0586aa",
+    "dbce32b070c06b037b0bd4fd537426a7146df86122bcf86b559143e42b1fbb44"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "trend-carousel",
-    "spin-product",
-    "album-flow",
-    "fox-couture",
-    "glass-portfolio",
-    "verra-events-hero"
+    "axon",
+    "velia",
+    "facet-glass",
+    "orvante-agency",
+    "offline",
+    "oda-hero"
   ]
 }

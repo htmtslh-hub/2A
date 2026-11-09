@@ -46,6 +46,152 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t307: {
+    slug: 'oda-hero',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Oda Hero",
+        desc: "Giao diện web Oda Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["History", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Oda Hero",
+        desc: "Bespoke Oda Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["History", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Oda Hero",
+        desc: "单文件自包含 Oda Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t306: {
+    slug: 'offline',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Offline",
+        desc: "Giao diện web Offline với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Footer", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Offline",
+        desc: "Bespoke Offline web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Footer", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Offline",
+        desc: "单文件自包含 Offline 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t305: {
+    slug: 'orvante-agency',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Orvante Agency",
+        desc: "Giao diện web Orvante Agency với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Orvante Agency",
+        desc: "Bespoke Orvante Agency web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Orvante Agency",
+        desc: "单文件自包含 Orvante Agency 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t304: {
+    slug: 'facet-glass',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Facet Glass",
+        desc: "Giao diện web Facet Glass với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Facet Glass",
+        desc: "Bespoke Facet Glass web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Facet Glass",
+        desc: "单文件自包含 Facet Glass 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t303: {
+    slug: 'velia',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Velia",
+        desc: "Giao diện web Velia với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Editorial", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Velia",
+        desc: "Bespoke Velia web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Editorial", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Velia",
+        desc: "单文件自包含 Velia 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t302: {
+    slug: 'axon',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "AXON",
+        desc: "Giao diện web AXON với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "AXON",
+        desc: "Bespoke AXON web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "AXON",
+        desc: "单文件自包含 AXON 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t301: {
     slug: 'verra-events-hero',
     cat: 'commerce',

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Facet — Designed in glass.</title>
+  <meta name="description" content="Facet real-time material studio featuring thick smoked-glass WebGL shards, iridescent clearcoat refraction, and interactive shatter-to-paper view.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #050507;
+      --surface: #121216;
+      --surface-elevated: #17171b;
+      --fg: #f4f4f6;
+      --muted: rgba(255, 255, 255, 0.58);
+      --accent: #36d67e;
+      --accent-text: #b9abff;
+      --accent-strong: #25b867;
+      --on-accent: #050507;
+      --border: rgba(255, 255, 255, 0.14);
+      --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.3, 1.4, 0.4, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: #4a78ff; color: #ffffff; }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 10px 18px; background: var(--accent); color: var(--on-accent);
+      font-weight: 600; text-decoration: none; border-radius: 999px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); outline: 2px solid #ffffff; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    canvas#gl {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      z-index: 1; display: block;
+    }
+
+    /* Interactive HTML overlay aligned with the glass slab */
+    .fg-overlay {
+      position: fixed;
+      left: 5.5%; right: 5.5%;
+      top: 8.5%; bottom: 8.5%;
+      z-index: 10;
+      display: flex; flex-direction: column;
+      pointer-events: none;
+      transition: opacity 0.35s var(--ease-out), transform 0.5s var(--ease-out);
+    }
+    .fg-overlay.shattered {
+      opacity: 0; pointer-events: none; transform: scale(1.04);
+    }
+
+    .fg-nav {
+      height: 10.8%;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 28px;
+      pointer-events: auto;
+    }
+    .fg-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 600; font-size: clamp(14px, 1.05vw, 17px);
+      color: #ffffff; text-decoration: none;
+    }
+    .fg-mark {
+      width: 14px; height: 14px; border-radius: 3px;
+      background: linear-gradient(135deg, #ffffff, #8e8ea0);
+      display: inline-block;
+    }
+    .fg-links {
+      display: flex; align-items: center; gap: 24px;
+      font-size: clamp(12px, 0.9vw, 14px);
+    }
+    .fg-links a {
+      color: rgba(255, 255, 255, 0.6); text-decoration: none;
+      transition: color 0.2s var(--ease-out);
+    }
+    .fg-links a:hover { color: #ffffff; }
+    .fg-nav-r {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .fg-signin, #motionToggleBtn {
+      padding: 7px 14px; border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.88);
+      font: 500 12px/1 var(--font-sans);
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    }
+    .fg-signin:hover, #motionToggleBtn:hover {
+      background: rgba(255, 255, 255, 0.14); color: #ffffff;
+    }
+    .fg-signin:active, #motionToggleBtn:active { transform: scale(0.96); }
+
+    .fg-panel {
+      flex: 1; margin-top: 14px;
+      position: relative;
+      padding: 4.5% 4.8%;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .fg-eyebrow {
+      font-size: clamp(10px, 0.72vw, 12px);
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.42);
+    }
+    .fg-hero-copy {
+      my: auto; max-width: 680px;
+    }
+    .fg-hero-copy h1 {
+      font-weight: 500;
+      font-size: clamp(44px, 6.6vw, 112px);
+      line-height: 0.97; letter-spacing: -0.045em;
+      background: linear-gradient(180deg, #dcdce0 0%, #bdbdc3 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .fg-sub {
+      margin-top: 22px; max-width: 440px;
+      font-size: clamp(13px, 1.02vw, 16px); line-height: 1.5;
+      color: rgba(255, 255, 255, 0.58);
+    }
+    .fg-actions {
+      margin-top: 28px; display: flex; align-items: center; gap: 22px;
+      pointer-events: auto;
+    }
+    .fg-open-btn {
+      height: 40px; padding: 0 22px; border-radius: 6px; border: 0;
+      background: #e8e8ec; color: #09090c;
+      font: 500 13.5px/1 var(--font-sans); cursor: pointer;
+      transition: background-color 0.22s var(--ease-out), transform 0.18s var(--ease-out);
+    }
+    .fg-open-btn:hover { background: #36d67e; transform: translateY(-1px); }
+    .fg-open-btn:active { transform: scale(0.96); }
+
+    .fg-paper-btn {
+      background: transparent; border: 0;
+      color: rgba(255, 255, 255, 0.88);
+      font: 500 13.5px/1 var(--font-sans); cursor: pointer;
+      padding: 8px 4px;
+      transition: color 0.2s ease, transform 0.18s ease;
+    }
+    .fg-paper-btn:hover {
+      color: #ffffff; text-decoration: underline;
+    }
+    .fg-paper-btn:active { transform: scale(0.96); }
+
+    .fg-foot-row {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: clamp(10px, 0.72vw, 12px);
+      color: rgba(255, 255, 255, 0.36);
+    }
+
+    /* Second View: Five Terms Definitions + Back Sliver */
+    .fg-terms-view {
+      position: fixed; inset: 0; z-index: 15;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.4s var(--ease-out);
+    }
+    .fg-terms-view.active {
+      opacity: 1; pointer-events: auto;
+    }
+    #backSliverBtn {
+      position: absolute;
+      left: 14.7%; top: 18.5%;
+      padding: 14px 26px; border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: linear-gradient(135deg, rgba(34, 34, 42, 0.9), rgba(18, 18, 24, 0.92));
+      color: #ffffff;
+      font: 500 clamp(12px, 0.85vw, 15px)/1 var(--font-sans);
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      transform: perspective(600px) rotateY(-9deg) rotateX(4deg);
+      transition: color 0.2s ease, border-color 0.2s ease, transform 0.25s var(--ease-out);
+    }
+    #backSliverBtn:hover {
+      color: #b9abff; border-color: #b9abff;
+      transform: perspective(600px) rotateY(-4deg) rotateX(2deg) scale(1.04);
+    }
+    #backSliverBtn:active { transform: scale(0.96); }
+
+    .fg-terms-col {
+      position: absolute;
+      left: 32.4%; width: min(560px, 58vw); top: 24%;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .fg-terms-col h2 {
+      font-size: clamp(22px, 1.8vw, 30px);
+      font-weight: 600; letter-spacing: -0.022em; color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .fg-term-item {
+      font-size: clamp(12.5px, 0.88vw, 15px);
+      line-height: 1.68; color: rgba(255, 255, 255, 0.62);
+    }
+    .fg-term-item b { color: #ffffff; font-weight: 600; }
+
+    @media (max-width: 860px) {
+      .fg-overlay { left: 16px; right: 16px; top: 16px; bottom: 16px; }
+      .fg-links { display: none; }
+      .fg-terms-col { left: 24px; right: 24px; width: auto; top: 26%; }
+      #backSliverBtn { left: 24px; top: 12%; }
+    }
+    @media (max-width: 540px) {
+      .fg-panel { padding: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <div class="fg-overlay" id="fgOverlay">
+    <header class="fg-nav">
+      <a class="fg-brand" href="#main-content">
+        <svg class="fg-mark" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 1L14.5 5.2V10.8L8 15L1.5 10.8V5.2L8 1Z" stroke="#ffffff" stroke-width="1.3" fill="rgba(255,255,255,0.18)" />
+          <path d="M8 1V15M1.5 5.2L14.5 10.8" stroke="rgba(255,255,255,0.55)" stroke-width="1" />
+        </svg>
+        <span>Facet</span>
+      </a>
+      <nav class="fg-links" aria-label="Studio navigation">
+        <a href="#main-content">Studio</a>
+        <a href="#main-content">Materials</a>
+        <a href="#main-content">Pricing</a>
+      </nav>
+      <div class="fg-nav-r">
+        <button type="button" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+        <button type="button" class="fg-signin" id="signInBtn">Sign in</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="fg-panel">
+      <div class="fg-eyebrow">REAL-TIME MATERIAL STUDIO</div>
+
+      <section class="fg-hero-copy" aria-label="Designed in glass">
+        <h1>Designed<br>in glass.</h1>
+        <p class="fg-sub">
+          Author dispersion, transmission, and refraction in the browser. Live<br>
+          previews, real materials.
+        </p>
+        <div class="fg-actions">
+          <button type="button" class="fg-open-btn" id="openStudioBtn">Open studio</button>
+          <button type="button" class="fg-paper-btn" id="readPaperBtn">Read paper →</button>
+        </div>
+      </section>
+
+      <footer class="fg-foot-row tabular-nums">
+        <span>© Facet Lab</span>
+        <span>KHR_materials_dispersion</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- SHATTERED SECOND VIEW: FIVE TERMS -->
+  <section class="fg-terms-view" id="fgTermsView" aria-label="Real-time glass in five terms">
+    <button type="button" id="backSliverBtn">← Back</button>
+    <div class="fg-terms-col">
+      <h2>Real-time glass, in five terms.</h2>
+      <article class="fg-term-item">
+        <b>Iridescence —</b> Thin-film interference across nanometer-scale coatings shifts specular reflections from emerald to violet as the viewing angle changes.
+      </article>
+      <article class="fg-term-item">
+        <b>Index of refraction —</b> The ratio of light velocity in vacuum to the medium bends rays entering and exiting each beveled shard face.
+      </article>
+      <article class="fg-term-item">
+        <b>Dispersion —</b> Wavelength-dependent refraction separates white studio light into spectral chromatic rims along high-curvature edges.
+      </article>
+      <article class="fg-term-item">
+        <b>Transmission —</b> Physically based attenuation and background sampling preserve underlying typography while tinting transmitted light.
+      </article>
+      <article class="fg-term-item">
+        <b>Roughness —</b> Microfacet distribution scatters highlights across frosted smoked-glass faces while keeping clearcoat rims razor-sharp.
+      </article>
+    </div>
+  </section>
+
+  <script type="module">
+    import * as THREE from "three";
+    import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+    var canvas = document.getElementById("gl");
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: "high-performance" });
+    var DPR = Math.min(window.devicePixelRatio || 1, 2);
+    renderer.setPixelRatio(DPR);
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.1;
+
+    var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x050507);
+
+    var pmrem = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    scene.environmentIntensity = 0.55;
+
+    var keyLight = new THREE.DirectionalLight(0xdce6ff, 2.2);
+    keyLight.position.set(-400, 500, 700);
+    scene.add(keyLight);
+
+    var rimLight = new THREE.PointLight(0x9a82ff, 1.8, 1600);
+    rimLight.position.set(0, 0, 320);
+    scene.add(rimLight);
+
+    var fov = 30;
+    var camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 10, 5000);
+    function updateCameraDist() {
+      var dist = (window.innerHeight * 0.5) / Math.tan(THREE.MathUtils.degToRad(fov * 0.5));
+      camera.position.set(0, 0, dist);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    }
+    updateCameraDist();
+
+    var rootGroup = new THREE.Group();
+    scene.add(rootGroup);
+
+    var glassMat = new THREE.MeshPhysicalMaterial({
+      color: 0x17171b,
+      roughness: 0.34,
+      metalness: 0.08,
+      clearcoat: 0.78,
+      clearcoatRoughness: 0.12,
+      iridescence: 0.65,
+      iridescenceIOR: 1.3,
+      iridescenceThicknessRange: [250, 650],
+      envMapIntensity: 1.35
+    });
+
+    function makeRoundedPolyShape(pts, radius) {
+      var shape = new THREE.Shape();
+      var n = pts.length;
+      for (var i = 0; i < n; i++) {
+        var prev = pts[(i - 1 + n) % n];
+        var curr = pts[i];
+        var next = pts[(i + 1) % n];
+        var v1 = new THREE.Vector2(prev[0] - curr[0], prev[1] - curr[1]).normalize();
+        var v2 = new THREE.Vector2(next[0] - curr[0], next[1] - curr[1]).normalize();
+        var p1 = new THREE.Vector2(curr[0], curr[1]).addScaledVector(v1, radius);
+        var p2 = new THREE.Vector2(curr[0], curr[1]).addScaledVector(v2, radius);
+        if (i === 0) shape.moveTo(p1.x, p1.y);
+        else shape.lineTo(p1.x, p1.y);
+        shape.quadraticCurveTo(curr[0], curr[1], p2.x, p2.y);
+      }
+      shape.closePath();
+      return shape;
+    }
+
+    var shards = [];
+    function buildShards() {
+      while (rootGroup.children.length) {
+        var old = rootGroup.children[0];
+        if (old.geometry) old.geometry.dispose();
+        rootGroup.remove(old);
+      }
+      shards = [];
+
+      var W = window.innerWidth * 0.89;
+      var H = window.innerHeight * 0.83;
+      var S = W / 1730;
+      var navH = H * 0.108;
+      var gap = 14 * S;
+      var panelH = H - navH - gap;
+      var topY = H * 0.5;
+      var panelTop = topY - navH - gap;
+      var panelBot = -H * 0.5;
+      var leftX = -W * 0.5;
+      var rightX = W * 0.5;
+
+      function mapPt(nx, ny) {
+        return [leftX + nx * W, panelTop - ny * panelH];
+      }
+
+      var navPts = [
+        [leftX, topY],
+        [rightX, topY],
+        [rightX, topY - navH],
+        [leftX, topY - navH]
+      ];
+
+      var TL = mapPt(0, 0), TR = mapPt(1, 0), BR = mapPt(1, 1), BL = mapPt(0, 1);
+      var tAB = mapPt(0.22, 0), tBC = mapPt(0.515, 0), tCE = mapPt(0.84, 0);
+      var bAD = mapPt(0.34, 1), bDE = mapPt(0.865, 1);
+      var J0 = mapPt(0.385, 0.72), J1 = mapPt(0.48, 0.62), J2 = mapPt(0.716, 0.49);
+
+      var cellPolys = [
+        navPts,
+        [TL, tAB, J0, bAD, BL],
+        [tAB, tBC, J1, J0],
+        [tBC, tCE, J2, J1],
+        [J0, J1, J2, bDE, bAD],
+        [tCE, TR, BR, bDE, J2]
+      ];
+
+      cellPolys.forEach(function (poly, idx) {
+        var cx = 0, cy = 0;
+        poly.forEach(function (p) { cx += p[0]; cy += p[1]; });
+        cx /= poly.length; cy /= poly.length;
+
+        var localPoly = poly.map(function (p) {
+          var dx = p[0] - cx, dy = p[1] - cy;
+          var len = Math.hypot(dx, dy) || 1;
+          var inset = 6 * S;
+          return [dx - (dx / len) * inset, dy - (dy / len) * inset];
+        });
+
+        var shape = makeRoundedPolyShape(localPoly, 14 * S);
+        var geom = new THREE.ExtrudeGeometry(shape, {
+          depth: 13 * S,
+          bevelEnabled: true,
+          bevelThickness: 2.6 * S,
+          bevelSize: 2.6 * S,
+          bevelSegments: 3
+        });
+
+        var mat = glassMat.clone();
+        var mesh = new THREE.Mesh(geom, mat);
+        mesh.position.set(cx, cy, 0);
+        mesh.userData = {
+          idx: idx,
+          baseX: cx,
+          baseY: cy,
+          lift: 0,
+          vx: (cx / (W * 0.5)) * 420 * S + (Math.random() - 0.5) * 140,
+          vy: (cy / (H * 0.5)) * 320 * S - 180 * S,
+          vz: (480 + Math.random() * 280) * S,
+          rx: (Math.random() - 0.5) * 3.2,
+          ry: (Math.random() - 0.5) * 3.2
+        };
+        rootGroup.add(mesh);
+        shards.push(mesh);
+      });
+    }
+    buildShards();
+
+    window.addEventListener("resize", function () {
+      renderer.setSize(window.innerWidth, window.innerHeight, false);
+      updateCameraDist();
+      buildShards();
+    }, { passive: true });
+
+    var pointer = new THREE.Vector2(0, 0);
+    var raycaster = new THREE.Raycaster();
+    var hoveredIdx = -1;
+
+    window.addEventListener("pointermove", function (e) {
+      pointer.x = (e.clientX / window.innerWidth) * 2 - 1;
+      pointer.y = -(e.clientY / window.innerHeight) * 2 + 1;
+      rimLight.position.set(pointer.x * window.innerWidth * 0.4, pointer.y * window.innerHeight * 0.4, 280);
+    }, { passive: true });
+
+    var shattered = false;
+    var shatterProg = 0;
+    var fgOverlay = document.getElementById("fgOverlay");
+    var fgTermsView = document.getElementById("fgTermsView");
+
+    function triggerShatter() {
+      shattered = true;
+      fgOverlay.classList.add("shattered");
+      setTimeout(function () {
+        if (shattered) fgTermsView.classList.add("active");
+      }, 280);
+    }
+
+    function triggerReassemble() {
+      shattered = false;
+      fgTermsView.classList.remove("active");
+      setTimeout(function () {
+        if (!shattered) fgOverlay.classList.remove("shattered");
+      }, 220);
+    }
+
+    document.getElementById("readPaperBtn").addEventListener("click", triggerShatter);
+    document.getElementById("openStudioBtn").addEventListener("click", triggerShatter);
+    document.getElementById("backSliverBtn").addEventListener("click", triggerReassemble);
+
+    function tick(now) {
+      var t = now * 0.001;
+      var targetShatter = shattered ? 1 : 0;
+      shatterProg += (targetShatter - shatterProg) * 0.08;
+
+      var targetRotY = THREE.MathUtils.degToRad(pointer.x * 7.0 - 1.2);
+      var targetRotX = THREE.MathUtils.degToRad(-pointer.y * 5.5 + 0.8);
+      rootGroup.rotation.y += (targetRotY - rootGroup.rotation.y) * 0.1;
+      rootGroup.rotation.x += (targetRotX - rootGroup.rotation.x) * 0.1;
+
+      raycaster.setFromCamera(pointer, camera);
+      var hits = raycaster.intersectObjects(shards, false);
+      hoveredIdx = (!shattered && hits.length > 0) ? hits[0].object.userData.idx : -1;
+
+      var easeShatter = shatterProg * shatterProg;
+      shards.forEach(function (m, i) {
+        var u = m.userData;
+        var isHover = i === hoveredIdx;
+        var targetLift = isHover ? (i === 0 ? 28 : 46) : 0;
+        u.lift += (targetLift - u.lift) * 0.16;
+
+        var breatheX = Math.sin(t * 0.6 + i * 1.3) * 3.5;
+        var breatheY = Math.cos(t * 0.5 + i * 1.7) * 3.5;
+
+        m.position.x = u.baseX + breatheX + u.vx * easeShatter;
+        m.position.y = u.baseY + breatheY + u.vy * easeShatter - 260 * easeShatter * easeShatter;
+        m.position.z = u.lift + u.vz * easeShatter;
+
+        m.rotation.x = (isHover ? -pointer.y * 0.16 : 0) + u.rx * easeShatter;
+        m.rotation.y = (isHover ?  pointer.x * 0.16 : 0) + u.ry * easeShatter;
+        m.material.envMapIntensity = isHover ? 1.9 : 1.35;
+      });
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+      });
+    }, { threshold: 0.1 });
+    io.observe(document.getElementById("main-content"));
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.fac48-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

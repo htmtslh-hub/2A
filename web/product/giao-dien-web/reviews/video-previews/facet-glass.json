@@ -1,0 +1,44 @@
+{
+  "id": "t304",
+  "slug": "facet-glass",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T10:15:16.199Z",
+  "demo": "/demos/facet-glass/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8b23da9fbe3d",
+  "sha256": "8b23da9fbe3d8c85e17e7f7174e5973e9a53ab1027cb5d85c0a3a502e0866269",
+  "demoHtmlSha256": "be807df639c13c72384b0152e0e36a37519fe81d89af0b70259d42fb3b516282",
+  "demoSha256": "fa73a9493402bfdba91cecfec00a9bdda7dc3a3b3ae4dfcbf5457f7b9e084185",
+  "bytes": 699644,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 7.146,
+      "action": "click",
+      "selector": "#readPaperBtn"
+    },
+    {
+      "seconds": 11.435,
+      "action": "click",
+      "selector": "#backSliverBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\facet-glass-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\facet-glass-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\facet-glass-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\facet-glass-return.jpg"
+  ]
+}

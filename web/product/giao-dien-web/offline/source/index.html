@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>offline — Everything you need to know before you finally log off</title>
+  <meta name="description" content="Interactive cinematic footer experience with a day-to-night CRT hillside scene and power-button wordmark transition." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-scene: #0c1118;
+      --surface-glass: rgba(14, 19, 28, 0.42);
+      --text-white: #FFFFFF;
+      --text-body: rgba(255, 255, 255, 0.75);
+      --text-muted: rgba(255, 255, 255, 0.50);
+      --text-subtle: rgba(255, 255, 255, 0.40);
+      --accent: #FFF6D6;
+      --accent-text: #FFFFFF;
+      --border-soft: rgba(255, 255, 255, 0.16);
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: var(--bg-scene);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: #FFF6D6;
+      color: #0c1118;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 1000;
+      background: #ffffff;
+      color: #0c1118;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+
+    .skip-link:focus {
+      transform: translateY(116px);
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    button:active, a:active {
+      transform: scale(0.96);
+    }
+
+    .of-stage {
+      position: relative;
+      width: 100%;
+      min-height: 100svh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #0c1118;
+    }
+
+    .of-video,
+    .of-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      pointer-events: none;
+    }
+
+    .of-canvas {
+      z-index: 2;
+    }
+
+    .of-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(8, 12, 18, 0.56) 0%, rgba(8, 12, 18, 0.22) 44%, rgba(8, 12, 18, 0.14) 100%);
+    }
+
+    /* Top Utility Header */
+    .of-topbar {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px clamp(24px, 6.6vw, 96px) 0;
+    }
+
+    .of-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(12, 17, 24, 0.48);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 12px;
+      color: var(--text-body);
+    }
+
+    .of-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7ef29a;
+      box-shadow: 0 0 10px #7ef29a;
+      transition: background-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    }
+
+    .of-stage.is-offline .of-status-dot {
+      background: #FFF6D6;
+      box-shadow: 0 0 12px #FFF6D6;
+    }
+
+    .of-motion-btn {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(12, 17, 24, 0.48);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    /* Main Footer Grid at Top of Scene */
+    .of-main {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      padding: clamp(24px, 4.5vw, 56px) clamp(24px, 6.6vw, 96px) 0;
+    }
+
+    .of-footer-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1.55fr) repeat(3, minmax(130px, 0.72fr));
+      gap: clamp(28px, 5vw, 72px);
+      align-items: start;
+    }
+
+    .of-brand-col {
+      max-width: 340px;
+    }
+
+    .of-h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(3.3rem, 5.1vw, 4.75rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+
+    .of-wordmark-btn {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      font: inherit;
+      display: inline-flex;
+      align-items: baseline;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    .of-power-glyph {
+      width: 0.56em;
+      height: 0.69em;
+      margin-right: 0.02em;
+      transform: translateY(0.06em);
+      overflow: visible;
+      transition: filter 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+    }
+
+    .of-power-glyph path {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.78);
+      stroke-width: 5.5;
+      stroke-linecap: round;
+      transition: stroke 0.35s var(--ease-out);
+    }
+
+    .of-wordmark-btn:hover .of-power-glyph {
+      transform: translateY(0.06em) scale(1.05);
+    }
+
+    .of-wordmark-btn.is-lit .of-power-glyph {
+      filter:
+        drop-shadow(0 0 6px rgba(255, 255, 255, 0.95))
+        drop-shadow(0 0 18px rgba(255, 244, 214, 0.85))
+        drop-shadow(0 0 36px rgba(255, 224, 150, 0.55));
+    }
+
+    .of-wordmark-btn.is-lit .of-power-glyph path {
+      stroke: #FFFFFF;
+    }
+
+    .of-tagline {
+      font-size: 16px;
+      line-height: 1.48;
+      letter-spacing: -0.01em;
+      color: var(--text-body);
+      margin-bottom: 24px;
+    }
+
+    .of-copy {
+      font-size: 13.5px;
+      line-height: 1.4;
+      color: var(--text-subtle);
+    }
+
+    .of-nav-col h2 {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .of-nav-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .of-nav-link {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+      display: inline-block;
+    }
+
+    .of-nav-link:hover {
+      opacity: 0.72;
+      transform: translateX(2px);
+    }
+
+    /* Bottom Interactive Prompt Pill */
+    .of-bottom-bar {
+      position: relative;
+      z-index: 5;
+      padding: 20px clamp(24px, 6.6vw, 96px) 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .of-hint-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(12, 17, 24, 0.52);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 13px;
+      color: var(--text-body);
+    }
+
+    .of-quick-toggle {
+      appearance: none;
+      border: 1px solid rgba(255, 246, 214, 0.35);
+      background: rgba(255, 246, 214, 0.12);
+      color: #FFF6D6;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+    }
+
+    .of-quick-toggle:hover {
+      background: rgba(255, 246, 214, 0.24);
+    }
+
+    .of-coords {
+      font-size: 12px;
+      color: var(--text-subtle);
+    }
+
+    @media (max-width: 900px) {
+      .of-footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .of-brand-col {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .of-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .of-topbar,
+      .of-main,
+      .of-bottom-bar {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @keyframes starPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="of-stage" id="sceneStage">
+    <video
+      class="of-video"
+      id="sceneVid"
+      muted
+      playsinline
+      preload="auto"
+      crossorigin="anonymous"
+    ></video>
+    <div class="of-scrim" aria-hidden="true"></div>
+    <canvas class="of-canvas" id="fxCanvas" aria-hidden="true"></canvas>
+
+    <header class="of-topbar">
+      <div class="of-status-pill">
+        <span class="of-status-dot" aria-hidden="true"></span>
+        <span id="sceneStateText">CRT Hillside · Online (Daylight)</span>
+      </div>
+      <button type="button" class="of-motion-btn" id="motionToggleBtn" aria-label="Toggle motion">
+        Motion: ON
+      </button>
+    </header>
+
+    <main id="main-content" class="of-main">
+      <footer class="of-footer-grid" aria-label="Offline site footer">
+        <section class="of-brand-col" aria-label="Brand power control">
+          <h1 class="of-h1">
+            <button
+              type="button"
+              class="of-wordmark-btn"
+              id="powerBtn"
+              aria-pressed="false"
+              aria-label="Toggle offline mode"
+            >
+              <svg class="of-power-glyph" id="powerGlyph" viewBox="0 0 50 62" aria-hidden="true">
+                <path d="M14.2 22.6 A19 19 0 1 0 35.8 22.6" />
+                <path d="M25 6.5 V33" />
+              </svg>
+              <span>ffline</span>
+            </button>
+          </h1>
+          <p class="of-tagline">
+            Everything you need to know before you finally log off.
+          </p>
+          <p class="of-copy tabular-nums">
+            © 2026 OFFLINE, Inc. All rights reserved.
+          </p>
+        </section>
+
+        <section class="of-nav-col" aria-label="Platform navigation">
+          <h2>Platform</h2>
+          <nav aria-label="Platform links">
+            <ul class="of-nav-list">
+              <li><a href="#main-content" class="of-nav-link">Manifesto</a></li>
+              <li><a href="#main-content" class="of-nav-link">How it works</a></li>
+              <li><a href="#main-content" class="of-nav-link">Pricing</a></li>
+              <li><a href="#main-content" class="of-nav-link">FAQ</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="of-nav-col" aria-label="About navigation">
+          <h2>About</h2>
+          <nav aria-label="About links">
+            <ul class="of-nav-list">
+              <li><a href="#main-content" class="of-nav-link">About</a></li>
+              <li><a href="#main-content" class="of-nav-link">Careers</a></li>
+              <li><a href="#main-content" class="of-nav-link">Privacy Policy</a></li>
+              <li><a href="#main-content" class="of-nav-link">Cookie Policy</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="of-nav-col" aria-label="Social Media navigation">
+          <h2>Social Media</h2>
+          <nav aria-label="Social Media links">
+            <ul class="of-nav-list">
+              <li><a href="#main-content" class="of-nav-link">LinkedIn</a></li>
+              <li><a href="#main-content" class="of-nav-link">Instagram</a></li>
+              <li><a href="#main-content" class="of-nav-link">TikTok</a></li>
+            </ul>
+          </nav>
+        </section>
+      </footer>
+    </main>
+
+    <section class="of-bottom-bar" aria-label="Interactive power controls">
+      <article class="of-hint-card">
+        <span>Click the power-<strong>o</strong> in <em>offline</em> to power down the CRT &amp; transition to starlight.</span>
+        <button type="button" class="of-quick-toggle" id="quickPowerBtn">Power Off CRT</button>
+      </article>
+      <div class="of-coords tabular-nums" id="timeReadout">TC 00:02.30 · SMPTE BARS</div>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      var VID_1080 = "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/abdab52e-bb1b-477d-ae7c-26c5f8915433.mp4";
+      var VID_720 = "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/15017aa7-135b-471f-a8a1-42a208bc61b2.mp4";
+      var POSTER_URL = "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/af6deff1-d678-4dc6-ae24-2880b16cdb20.jpg";
+
+      var vid = document.getElementById("sceneVid");
+      var stage = document.getElementById("sceneStage");
+      var powerBtn = document.getElementById("powerBtn");
+      var powerGlyph = document.getElementById("powerGlyph");
+      var quickPowerBtn = document.getElementById("quickPowerBtn");
+      var stateText = document.getElementById("sceneStateText");
+      var timeReadout = document.getElementById("timeReadout");
+      var canvas = document.getElementById("fxCanvas");
+      var ctx = canvas.getContext("2d");
+
+      vid.poster = POSTER_URL;
+      vid.src = window.innerWidth <= 900 ? VID_720 : VID_1080;
+
+      // State machine: "booting" (0 -> 2.3s), "online" (paused @ 2.3s), "shutting-down" (2.3 -> 5.0s), "offline" (paused @ 5.0s), "turning-on" (0.6 -> 2.3s)
+      var mode = "booting";
+      var stopTarget = 2.3;
+      var flyStart = 0;
+      var flyDuration = 680;
+      var flyActive = false;
+      var dotTriggeredThisCycle = false;
+
+      var stars = [
+        [0.08, 0.14, 1.3, 0.2], [0.16, 0.08, 1.0, 1.1], [0.24, 0.22, 1.4, 2.0],
+        [0.33, 0.11, 1.1, 0.7], [0.42, 0.18, 1.5, 1.8], [0.51, 0.09, 1.2, 2.6],
+        [0.62, 0.15, 1.6, 0.4], [0.71, 0.24, 1.1, 1.5], [0.79, 0.12, 1.4, 2.9],
+        [0.88, 0.19, 1.3, 0.9], [0.93, 0.09, 1.0, 2.2], [0.46, 0.29, 1.2, 1.3]
+      ];
+
+      function resizeCanvas() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(window.innerWidth * dpr);
+        canvas.height = Math.floor(window.innerHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      // Convert 1920x1080 video pixel coordinate to viewport coordinate under object-fit: cover
+      function videoToScreen(vx, vy) {
+        var vw = window.innerWidth;
+        var vh = window.innerHeight;
+        var scale = Math.max(vw / 1920, vh / 1080);
+        var ox = (vw - 1920 * scale) * 0.5;
+        var oy = (vh - 1080 * scale) * 0.5;
+        return { x: ox + vx * scale, y: oy + vy * scale, scale: scale };
+      }
+
+      vid.addEventListener("loadedmetadata", function () {
+        vid.currentTime = 0;
+        var p = vid.play();
+        if (p && typeof p.catch === "function") {
+          p.catch(function () {
+            vid.currentTime = 2.3;
+            mode = "online";
+          });
+        }
+      });
+
+      function togglePower() {
+        if (mode === "online" || mode === "booting" || mode === "turning-on") {
+          // Transition to offline (2.3s -> 5.0s)
+          mode = "shutting-down";
+          stopTarget = 5.0;
+          dotTriggeredThisCycle = false;
+          powerBtn.setAttribute("aria-pressed", "true");
+          stage.classList.add("is-offline");
+          stateText.textContent = "CRT Hillside · Shutting Down…";
+          quickPowerBtn.textContent = "Power On CRT";
+          try {
+            if (vid.currentTime < 2.25 || vid.currentTime > 4.9) vid.currentTime = 2.3;
+            var p = vid.play();
+            if (p && p.catch) p.catch(function () {});
+          } catch (e) {}
+          // Fallback if video is blocked or slow: trigger flying dot after 1.1s
+          setTimeout(function () {
+            if (!dotTriggeredThisCycle && mode === "shutting-down") {
+              dotTriggeredThisCycle = true;
+              flyActive = true;
+              flyStart = performance.now();
+            }
+          }, 1100);
+        } else {
+          // Turn back on (0.6s -> 2.3s)
+          mode = "turning-on";
+          stopTarget = 2.3;
+          flyActive = false;
+          powerBtn.classList.remove("is-lit");
+          powerBtn.setAttribute("aria-pressed", "false");
+          stage.classList.remove("is-offline");
+          stateText.textContent = "CRT Hillside · Online (Daylight)";
+          quickPowerBtn.textContent = "Power Off CRT";
+          try {
+            vid.currentTime = 0.6;
+            var p2 = vid.play();
+            if (p2 && p2.catch) p2.catch(function () {});
+          } catch (e) {}
+        }
+      }
+
+      powerBtn.addEventListener("click", togglePower);
+      quickPowerBtn.addEventListener("click", togglePower);
+
+      function renderOverlay(now) {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        ctx.clearRect(0, 0, w, h);
+
+        var vt = vid.currentTime || 2.3;
+        timeReadout.textContent = "TC 00:0" + vt.toFixed(2) + " · " + (stage.classList.contains("is-offline") ? "STARLIGHT OFF" : "SMPTE BARS");
+
+        // Stop video at target cue point
+        if ((mode === "booting" || mode === "turning-on") && vt >= 2.3) {
+          vid.pause();
+          vid.currentTime = 2.3;
+          mode = "online";
+          stateText.textContent = "CRT Hillside · Online (Daylight)";
+        } else if (mode === "shutting-down") {
+          if (vt >= 4.68 && !dotTriggeredThisCycle) {
+            dotTriggeredThisCycle = true;
+            flyActive = true;
+            flyStart = now;
+          }
+          if (vt >= 4.98) {
+            vid.pause();
+            mode = "offline";
+            stateText.textContent = "CRT Hillside · Logged Off (Night Sky)";
+          }
+        }
+
+        // 1. CRT Scanline Sweep when CRT is on (t between 1.05s and 3.85s)
+        var crtOn = (vt >= 1.05 && vt <= 3.85) && !stage.classList.contains("is-offline");
+        if (crtOn) {
+          var tl = videoToScreen(806, 505);
+          var br = videoToScreen(1077, 724);
+          var cw = br.x - tl.x;
+          var ch = br.y - tl.y;
+          ctx.save();
+          ctx.beginPath();
+          ctx.roundRect(tl.x, tl.y, cw, ch, 12 * tl.scale);
+          ctx.clip();
+
+          var sweepY = tl.y + ((now * 0.09) % ch);
+          var grad = ctx.createLinearGradient(0, sweepY - 18, 0, sweepY + 18);
+          grad.addColorStop(0, "rgba(255, 255, 255, 0)");
+          grad.addColorStop(0.5, "rgba(255, 255, 255, 0.22)");
+          grad.addColorStop(1, "rgba(255, 255, 255, 0)");
+          ctx.fillStyle = grad;
+          ctx.fillRect(tl.x, sweepY - 18, cw, 36);
+          ctx.restore();
+        }
+
+        // 2. Night Sky Twinkling Star Glints when offline or dusk (vt > 3.2s or is-offline)
+        var nightAlpha = stage.classList.contains("is-offline") ? 0.9 : Math.max(0, Math.min(1, (vt - 3.1) / 1.2));
+        if (nightAlpha > 0.02) {
+          stars.forEach(function (s) {
+            var sx = s[0] * w;
+            var sy = s[1] * h;
+            var r = s[2] * 2.4;
+            var twinkle = 0.45 + 0.55 * Math.sin(now * 0.003 + s[3] * 3.14);
+            var a = nightAlpha * twinkle;
+            ctx.save();
+            ctx.translate(sx, sy);
+            ctx.strokeStyle = "rgba(255, 246, 214, " + a.toFixed(3) + ")";
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.moveTo(-r * 2.2, 0);
+            ctx.lineTo(r * 2.2, 0);
+            ctx.moveTo(0, -r * 2.2);
+            ctx.lineTo(0, r * 2.2);
+            ctx.stroke();
+            ctx.restore();
+          });
+        }
+
+        // 3. Flying Light Dot from CRT Center (945, 594) into Power-O Glyph
+        if (flyActive) {
+          var u = Math.min(1, (now - flyStart) / flyDuration);
+          var ease = 1 - Math.pow(1 - u, 3);
+          var startPt = videoToScreen(945, 594);
+          var glyphRect = powerGlyph.getBoundingClientRect();
+          var endPt = {
+            x: glyphRect.left + glyphRect.width * 0.5,
+            y: glyphRect.top + glyphRect.height * 0.55
+          };
+          var ctrlPt = {
+            x: (startPt.x + endPt.x) * 0.5 - 90,
+            y: Math.min(startPt.y, endPt.y) - 110
+          };
+
+          var inv = 1 - ease;
+          var px = inv * inv * startPt.x + 2 * inv * ease * ctrlPt.x + ease * ease * endPt.x;
+          var py = inv * inv * startPt.y + 2 * inv * ease * ctrlPt.y + ease * ease * endPt.y;
+
+          var radGrad = ctx.createRadialGradient(px, py, 1, px, py, 26);
+          radGrad.addColorStop(0, "rgba(255, 255, 255, 1)");
+          radGrad.addColorStop(0.35, "rgba(255, 246, 214, 0.85)");
+          radGrad.addColorStop(1, "rgba(255, 246, 214, 0)");
+          ctx.fillStyle = radGrad;
+          ctx.beginPath();
+          ctx.arc(px, py, 26, 0, Math.PI * 2);
+          ctx.fill();
+
+          if (u >= 0.92) {
+            powerBtn.classList.add("is-lit");
+          }
+          if (u >= 1) {
+            flyActive = false;
+            mode = "offline";
+            stateText.textContent = "CRT Hillside · Logged Off (Night Sky)";
+          }
+        }
+
+        requestAnimationFrame(renderOverlay);
+      }
+      requestAnimationFrame(renderOverlay);
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) stage.classList.add("is-visible");
+        });
+      }, { threshold: 0.1 });
+      io.observe(stage);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.off31-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

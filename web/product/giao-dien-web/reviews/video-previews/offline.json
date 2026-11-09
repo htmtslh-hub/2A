@@ -1,0 +1,44 @@
+{
+  "id": "t306",
+  "slug": "offline",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T10:19:26.379Z",
+  "demo": "/demos/offline/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d17a34fa623a",
+  "sha256": "d17a34fa623abe14fb975d282b1cad724a055962a03c168b8028395dde42860b",
+  "demoHtmlSha256": "bc0f1e83e1ca82bd4a36ac6d3ea09978b811da934a6bfc95e49abc8ddc424719",
+  "demoSha256": "53b55ffa4591066d6938540e9ba5e51edb001f527721b75410e195616975ae64",
+  "bytes": 765210,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.643,
+      "action": "click",
+      "selector": "#powerBtn"
+    },
+    {
+      "seconds": 5.084,
+      "action": "click",
+      "selector": "#powerBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\offline-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\offline-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\offline-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\offline-return.jpg"
+  ]
+}

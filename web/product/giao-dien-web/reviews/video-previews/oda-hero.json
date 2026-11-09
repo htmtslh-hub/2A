@@ -1,0 +1,44 @@
+{
+  "id": "t307",
+  "slug": "oda-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T10:19:47.669Z",
+  "demo": "/demos/oda-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9a29bf2da9da",
+  "sha256": "9a29bf2da9da5a9889671c85594bfb8094189178b6437624844ae84c3255cb8f",
+  "demoHtmlSha256": "277610908c4be7cb3aaf623561a601e4605d1b5c49e19dd578a4613af854024d",
+  "demoSha256": "09e4eded53a4c1f36660b49ab581c12f8ca1189fee6afae7a53ee2612f2d5467",
+  "bytes": 643408,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.669,
+      "action": "click",
+      "selector": "#suitToggleBtn"
+    },
+    {
+      "seconds": 5.021,
+      "action": "click",
+      "selector": "#bioJumpBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oda-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oda-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oda-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oda-hero-return.jpg"
+  ]
+}

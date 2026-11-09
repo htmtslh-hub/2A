@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oda Nobunaga — Unifiers of Japan Interactive Armour Exhibition</title>
+  <meta name="description" content="Scroll-assembled Sengoku samurai armour exhibition celebrating Oda Nobunaga, the Demon Daimyo and first Great Unifier of Japan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,100..900&family=Mochiy+Pop+One&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red-primary: #E40038;
+      --cream-bg: #FAF3E9;
+      --ink-brown: #201408;
+      --ink-muted: rgba(32, 20, 8, 0.72);
+      --cream-rule: rgba(250, 243, 233, 0.38);
+      --brown-rule: rgba(32, 20, 8, 0.28);
+      --accent: #E40038;
+      --accent-text: #FAF3E9;
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-jp: 'Mochiy Pop One', sans-serif;
+      --font-sans: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--red-primary);
+      color: var(--cream-bg);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--red-primary);
+      color: var(--cream-bg);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--ink-brown);
+      color: var(--cream-bg);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--cream-bg);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 1000;
+      background: var(--ink-brown);
+      color: var(--cream-bg);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+
+    .skip-link:focus {
+      transform: translateY(116px);
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    button:active, a:active {
+      transform: scale(0.96);
+    }
+
+    /* ==================== SECTION 1: SIGNAL-RED HERO ==================== */
+    .oda-hero-sec {
+      position: relative;
+      background: var(--red-primary);
+      color: var(--cream-bg);
+      min-height: 155vh;
+      overflow: hidden;
+      padding-bottom: 48px;
+    }
+
+    /* Vertical Frame Lines */
+    .oda-rail-left,
+    .oda-rail-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 56px;
+      z-index: 8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .oda-rail-left {
+      left: 0;
+      border-right: 1px solid var(--cream-rule);
+    }
+
+    .oda-rail-right {
+      right: 0;
+      border-left: 1px solid var(--cream-rule);
+    }
+
+    .oda-rail-text {
+      writing-mode: vertical-rl;
+      font-family: var(--font-sans);
+      font-variation-settings: "wdth" 80, "wght" 500;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cream-bg);
+      white-space: nowrap;
+    }
+
+    .oda-rail-left .oda-rail-text {
+      transform: rotate(180deg);
+    }
+
+    /* Top Navigation Bar */
+    .oda-header {
+      position: relative;
+      z-index: 10;
+      margin: 0 56px;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--cream-rule);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .oda-nav-btn {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--cream-bg);
+      font-family: var(--font-sans);
+      font-variation-settings: "wdth" 78, "wght" 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .oda-header-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .oda-suit-btn,
+    .oda-motion-btn {
+      appearance: none;
+      border: 1px solid var(--cream-bg);
+      background: rgba(32, 20, 8, 0.22);
+      color: var(--cream-bg);
+      font-family: var(--font-sans);
+      font-variation-settings: "wdth" 82, "wght" 700;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.25s var(--ease-out), color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+    }
+
+    .oda-suit-btn:hover,
+    .oda-suit-btn.is-active {
+      background: var(--cream-bg);
+      color: var(--red-primary);
+    }
+
+    /* Hero Stage */
+    .oda-stage-wrap {
+      position: relative;
+      margin: 0 56px;
+      min-height: 1120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 28px;
+    }
+
+    .oda-kanji {
+      position: relative;
+      z-index: 2;
+      font-family: var(--font-jp);
+      font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--cream-bg);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    /* Giant Stretched ODA NOBUNAGA Typography */
+    .oda-h1-svg-wrap {
+      position: relative;
+      z-index: 1;
+      width: calc(100% - 48px);
+      max-width: 1320px;
+      margin: 0 auto;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .oda-h1-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      overflow: visible;
+    }
+
+    .oda-h1-svg text {
+      font-family: var(--font-display);
+      fill: var(--cream-bg);
+      text-transform: uppercase;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Central Samurai Character & 5 Scroll-Assembled Armour Layers */
+    .oda-character-box {
+      position: relative;
+      z-index: 4;
+      width: clamp(340px, 68vw, 960px);
+      aspect-ratio: 1 / 1;
+      margin-top: -42%;
+      pointer-events: none;
+    }
+
+    .oda-layer {
+      position: absolute;
+      display: block;
+      object-fit: contain;
+      will-change: transform;
+      transition: transform 0.55s var(--ease-out);
+    }
+
+    .oda-layer-base {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .oda-layer-flaps {
+      left: 26.172%;
+      top: 37.598%;
+      width: 47.412%;
+      height: 22.607%;
+      z-index: 2;
+    }
+
+    .oda-layer-chest {
+      left: 31.299%;
+      top: 55.713%;
+      width: 37.549%;
+      height: 44.287%;
+      z-index: 3;
+    }
+
+    .oda-layer-mask {
+      left: 38.672%;
+      top: 37.598%;
+      width: 22.803%;
+      height: 21.924%;
+      z-index: 4;
+    }
+
+    .oda-layer-helmet {
+      left: 27.734%;
+      top: 4.932%;
+      width: 44.531%;
+      height: 32.666%;
+      z-index: 5;
+    }
+
+    .oda-layer-horns {
+      left: 29.834%;
+      top: 5.127%;
+      width: 40.332%;
+      height: 26.172%;
+      z-index: 6;
+    }
+
+    /* Armour Layer Status HUD */
+    .oda-armour-hud {
+      position: relative;
+      z-index: 7;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+      padding: 0 20px;
+    }
+
+    .oda-hud-chip {
+      appearance: none;
+      border: 1px solid var(--cream-rule);
+      background: rgba(32, 20, 8, 0.25);
+      color: var(--cream-bg);
+      font-family: var(--font-sans);
+      font-variation-settings: "wdth" 78, "wght" 600;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
+    }
+
+    .oda-hud-chip.is-locked {
+      background: var(--cream-bg);
+      color: var(--red-primary);
+    }
+
+    /* Falling Petals Canvas */
+    .oda-petals-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 6;
+      pointer-events: none;
+    }
+
+    /* ==================== SECTION 2: CREAM BIODATA & INTRODUCTION ==================== */
+    .oda-cream-sec {
+      position: relative;
+      background: var(--cream-bg);
+      color: var(--ink-brown);
+      padding: 0 56px 96px;
+    }
+
+    .oda-cream-rail-left,
+    .oda-cream-rail-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 56px;
+      pointer-events: none;
+    }
+
+    .oda-cream-rail-left {
+      left: 0;
+      border-right: 1px solid var(--brown-rule);
+    }
+
+    .oda-cream-rail-right {
+      right: 0;
+      border-left: 1px solid var(--brown-rule);
+    }
+
+    /* Biodata Row */
+    .oda-bio-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      border-bottom: 1px solid var(--brown-rule);
+    }
+
+    .oda-crest-box {
+      border-right: 1px solid var(--brown-rule);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .oda-crest-img {
+      width: 156px;
+      height: 156px;
+      object-fit: contain;
+      transition: transform 0.6s var(--ease-out);
+    }
+
+    .oda-crest-box:hover .oda-crest-img {
+      transform: rotate(18deg) scale(1.04);
+    }
+
+    .oda-crest-caption {
+      font-family: var(--font-sans);
+      font-variation-settings: "wdth" 75, "wght" 600;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-brown);
+    }
+
+    .oda-stats-matrix {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .oda-stat-cell {
+      padding: 28px 28px;
+      border-right: 1px solid var(--brown-rule);
+      border-bottom: 1px solid var(--brown-rule);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .oda-stat-cell:nth-child(3n) {
+      border-right: 0;
+    }
+
+    .oda-stat-cell:nth-child(n+4) {
+      border-bottom: 0;
+    }
+
+    .oda-stat-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.3vw, 2.15rem);
+      line-height: 1;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: var(--ink-brown);
+    }
+
+    .oda-stat-desc {
+      font-size: 13.5px;
+      line-height: 1.42;
+      color: var(--ink-muted);
+    }
+
+    /* Framed Introduction Card */
+    .oda-intro-outer {
+      max-width: 1120px;
+      margin: 72px auto 0;
+      padding: 0 24px;
+    }
+
+    .oda-intro-card {
+      position: relative;
+      border: 1.5px solid var(--ink-brown);
+      padding: clamp(36px, 6vw, 76px) clamp(24px, 6vw, 84px);
+      text-align: center;
+      background: var(--cream-bg);
+    }
+
+    .oda-corner-ring {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 1.5px solid var(--ink-brown);
+      border-radius: 50%;
+      background: var(--cream-bg);
+    }
+    .oda-corner-ring.tl { top: -12px; left: -12px; }
+    .oda-corner-ring.tr { top: -12px; right: -12px; }
+    .oda-corner-ring.bl { bottom: -12px; left: -12px; }
+    .oda-corner-ring.br { bottom: -12px; right: -12px; }
+
+    .oda-intro-tag {
+      font-family: var(--font-sans);
+      font-variation-settings: "wdth" 75, "wght" 600;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-brown);
+    }
+
+    .oda-fan-icon {
+      width: 120px;
+      height: 76px;
+      object-fit: contain;
+      margin: 20px auto 24px;
+      display: block;
+    }
+
+    .oda-intro-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.85rem);
+      line-height: 1.08;
+      text-transform: uppercase;
+      color: var(--ink-brown);
+      max-width: 900px;
+      margin: 0 auto 28px;
+    }
+
+    .oda-intro-copy {
+      font-size: clamp(1rem, 1.35vw, 1.2rem);
+      line-height: 1.55;
+      color: var(--ink-brown);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .oda-footer {
+      max-width: 1120px;
+      margin: 56px auto 0;
+      padding: 24px 24px 0;
+      border-top: 1px solid var(--brown-rule);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .oda-footer a {
+      color: var(--ink-brown);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1024px) {
+      .oda-bio-grid {
+        grid-template-columns: 1fr;
+      }
+      .oda-crest-box {
+        border-right: 0;
+        border-bottom: 1px solid var(--brown-rule);
+      }
+      .oda-stats-matrix {
+        grid-template-columns: 1fr 1fr;
+      }
+      .oda-character-box {
+        margin-top: -24%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .oda-rail-left,
+      .oda-rail-right,
+      .oda-cream-rail-left,
+      .oda-cream-rail-right {
+        display: none;
+      }
+      .oda-header,
+      .oda-stage-wrap,
+      .oda-cream-sec {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .oda-stats-matrix {
+        grid-template-columns: 1fr;
+      }
+      .oda-stat-cell {
+        border-right: 0;
+        border-bottom: 1px solid var(--brown-rule);
+      }
+      .oda-character-box {
+        margin-top: -10%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @keyframes petalFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <section class="oda-hero-sec" id="heroSection" aria-label="Oda Nobunaga Armour Assembly">
+    <aside class="oda-rail-left" aria-hidden="true">
+      <span class="oda-rail-text">UNIFIERS OF JAPAN</span>
+    </aside>
+    <aside class="oda-rail-right" aria-hidden="true">
+      <span class="oda-rail-text">SENGOKU SERIES</span>
+    </aside>
+
+    <header class="oda-header">
+      <div>
+        <button type="button" class="oda-nav-btn" id="menuNavBtn">MENU</button>
+      </div>
+      <nav aria-label="Primary navigation">
+        <button type="button" class="oda-nav-btn" id="bioJumpBtn">ABOUT</button>
+      </nav>
+      <div class="oda-header-right">
+        <button type="button" class="oda-suit-btn" id="suitToggleBtn">SUIT UP: AUTO</button>
+        <button type="button" class="oda-motion-btn" id="motionToggleBtn" aria-label="Toggle motion">Motion: ON</button>
+      </div>
+    </header>
+
+    <div class="oda-stage-wrap">
+      <p class="oda-kanji" lang="ja">織田信長</p>
+
+      <h1 class="sr-only">ODA NOBUNAGA — First Great Unifier of Japan</h1>
+      <div class="oda-h1-svg-wrap" aria-hidden="true">
+        <svg class="oda-h1-svg" viewBox="0 0 1200 620" aria-hidden="true">
+          <text x="600" y="290" text-anchor="middle" font-size="330" textLength="1160" lengthAdjust="spacingAndGlyphs">ODA</text>
+          <text x="600" y="590" text-anchor="middle" font-size="290" textLength="1160" lengthAdjust="spacingAndGlyphs">NOBUNAGA</text>
+        </svg>
+      </div>
+
+      <div class="oda-character-box" id="characterStage">
+        <img class="oda-layer oda-layer-base" data-img="baseLord" alt="Oda Nobunaga in ceremonial kimono" />
+        <img class="oda-layer oda-layer-flaps" id="layerFlaps" data-img="flaps" alt="Sode shoulder armour flaps" />
+        <img class="oda-layer oda-layer-chest" id="layerChest" data-img="chest" alt="Do cuirass and kusazuri tassets" />
+        <img class="oda-layer oda-layer-mask" id="layerMask" data-img="mask" alt="Menpo battle mask" />
+        <img class="oda-layer oda-layer-helmet" id="layerHelmet" data-img="helmet" alt="Kabuto samurai helmet" />
+        <img class="oda-layer oda-layer-horns" id="layerHorns" data-img="horns" alt="Kuwagata golden helmet crest" />
+      </div>
+
+      <div class="oda-armour-hud" role="group" aria-label="Armour assembly pieces">
+        <button type="button" class="oda-hud-chip" data-piece="mask">01 · Menpo Mask</button>
+        <button type="button" class="oda-hud-chip" data-piece="helmet">02 · Kabuto Helmet</button>
+        <button type="button" class="oda-hud-chip" data-piece="flaps">03 · Sode Flaps</button>
+        <button type="button" class="oda-hud-chip" data-piece="horns">04 · Kuwagata Crest</button>
+        <button type="button" class="oda-hud-chip" data-piece="chest">05 · Do Cuirass</button>
+      </div>
+    </div>
+
+    <canvas class="oda-petals-canvas" id="petalsCanvas" aria-hidden="true"></canvas>
+  </section>
+
+  <main id="main-content" class="oda-cream-sec">
+    <div class="oda-cream-rail-left" aria-hidden="true"></div>
+    <div class="oda-cream-rail-right" aria-hidden="true"></div>
+
+    <section class="oda-bio-grid" id="biodataSection" aria-label="Oda Clan Biodata">
+      <div class="oda-crest-box">
+        <img class="oda-crest-img" data-img="clanCrest" alt="Oda Mokko five-petalled quince emblem" />
+        <span class="oda-crest-caption">[ CREST OF THE ODA CLAN ]</span>
+      </div>
+
+      <div class="oda-stats-matrix">
+        <article class="oda-stat-cell">
+          <h2 class="oda-stat-title">ODA CLAN LEADER</h2>
+          <p class="oda-stat-desc">Head of the Oda clan, rising from Owari Province to challenge the entire samurai order.</p>
+        </article>
+        <article class="oda-stat-cell">
+          <h2 class="oda-stat-title tabular-nums">1/3 OF JAPAN</h2>
+          <p class="oda-stat-desc">Conquered and unified before his betrayal at Honnō-ji in Kyoto.</p>
+        </article>
+        <article class="oda-stat-cell">
+          <h2 class="oda-stat-title tabular-nums">1534 — 1582</h2>
+          <p class="oda-stat-desc">Lived during the Sengoku Period, transforming a fractured feudal realm.</p>
+        </article>
+        <article class="oda-stat-cell">
+          <h2 class="oda-stat-title tabular-nums">22 YRS IN POWER</h2>
+          <p class="oda-stat-desc">From the Battle of Okehazama (1560) to theHonnō-ji Incident (1582).</p>
+        </article>
+        <article class="oda-stat-cell">
+          <h2 class="oda-stat-title">AZUCHI CASTLE</h2>
+          <p class="oda-stat-desc">Built a monumental lakeside fortress symbolizing a new era of centralized rule.</p>
+        </article>
+        <article class="oda-stat-cell">
+          <h2 class="oda-stat-title">MILITARY INNOVATION</h2>
+          <p class="oda-stat-desc">Pioneered rotating volley matchlock firearm tactics at the Battle of Nagashino.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="oda-intro-outer" aria-label="Historical introduction">
+      <article class="oda-intro-card">
+        <span class="oda-corner-ring tl" aria-hidden="true"></span>
+        <span class="oda-corner-ring tr" aria-hidden="true"></span>
+        <span class="oda-corner-ring bl" aria-hidden="true"></span>
+        <span class="oda-corner-ring br" aria-hidden="true"></span>
+
+        <p class="oda-intro-tag">[ INTRODUCTION ]</p>
+        <img class="oda-fan-icon" data-img="fanIcon" alt="Japanese folding fan with pine motif" />
+
+        <h2 class="oda-intro-headline">
+          UNIFIER OF WARRING STATES.<br />
+          MASTER OF MODERN WARFARE.<br />
+          PATRON OF NEW CULTURE.<br />
+          BREAKER OF OLD TRADITIONS.<br />
+          ARCHITECT OF UNIFICATION.
+        </h2>
+
+        <p class="oda-intro-copy">
+          Oda Nobunaga was a bold and ruthless daimyo who reshaped Japan through military innovation, bold strategy, and an unyielding drive to unify a divided nation.
+        </p>
+      </article>
+    </section>
+
+    <footer class="oda-footer">
+      <span>SENGOKU ARCHIVE · FIRST GREAT UNIFIER</span>
+      <a href="#heroSection">RETURN TO ARMOUR STAGE ↑</a>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var IMAGES = {
+        baseLord: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/5b4e0901-a420-4d48-a2f8-0983ac5e1811.webp",
+        flaps: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/df3f02d3-42b8-4d75-a592-363d4f9e97b3.webp",
+        chest: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/f1d71bb6-a9c7-4956-ad93-7de36b6bdee3.webp",
+        mask: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/fe02860a-fb96-4451-b0cb-55156e3573d2.webp",
+        helmet: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/7229bca2-f88f-43c1-914b-37bf5e6321c3.webp",
+        horns: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/e71cba83-443b-4d04-9959-f64286de1604.webp",
+        clanCrest: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/857c3bc4-0da2-4095-8d2c-64274974833b.webp",
+        fanIcon: "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/425a6870-25c3-4155-a076-e2146f3587db.webp"
+      };
+
+      document.querySelectorAll("img[data-img]").forEach(function (img) {
+        var key = img.getAttribute("data-img");
+        if (IMAGES[key]) img.src = IMAGES[key];
+      });
+
+      var layerEls = {
+        mask: document.getElementById("layerMask"),
+        helmet: document.getElementById("layerHelmet"),
+        flaps: document.getElementById("layerFlaps"),
+        horns: document.getElementById("layerHorns"),
+        chest: document.getElementById("layerChest")
+      };
+
+      // Initial exploded offsets in % of each element's own box + timeline window [start, end]
+      var pieceSpecs = {
+        mask:   { ox: -135, oy:  52, start: 0.00, end: 0.35 },
+        helmet: { ox:  -78, oy: -42, start: 0.12, end: 0.50 },
+        flaps:  { ox:   72, oy: -38, start: 0.25, end: 0.65 },
+        horns:  { ox:   88, oy:  46, start: 0.40, end: 0.80 },
+        chest:  { ox:  -75, oy:  48, start: 0.55, end: 0.95 }
+      };
+
+      var forcedSuitState = null; // null = scroll-driven, 1 = assembled, 0 = exploded
+      var suitBtn = document.getElementById("suitToggleBtn");
+      var chips = document.querySelectorAll(".oda-hud-chip");
+
+      function easeOutCubic(x) {
+        return 1 - Math.pow(1 - x, 3);
+      }
+
+      function applyArmourProgress(p) {
+        Object.keys(pieceSpecs).forEach(function (k) {
+          var spec = pieceSpecs[k];
+          var el = layerEls[k];
+          if (!el) return;
+          var local = (p - spec.start) / (spec.end - spec.start);
+          var clamped = Math.max(0, Math.min(1, local));
+          var e = easeOutCubic(clamped);
+          var tx = spec.ox * (1 - e);
+          var ty = spec.oy * (1 - e);
+          var rot = (1 - e) * (spec.ox > 0 ? 8 : -8);
+          el.style.transform = "translate3d(" + tx.toFixed(2) + "%, " + ty.toFixed(2) + "%, 0) rotate(" + rot.toFixed(2) + "deg)";
+        });
+
+        chips.forEach(function (chip) {
+          var k = chip.getAttribute("data-piece");
+          var spec = pieceSpecs[k];
+          if (spec && p >= spec.end - 0.05) chip.classList.add("is-locked");
+          else chip.classList.remove("is-locked");
+        });
+      }
+
+      function onScrollUpdate() {
+        if (forcedSuitState !== null) {
+          applyArmourProgress(forcedSuitState);
+          return;
+        }
+        var hero = document.getElementById("heroSection");
+        var rect = hero.getBoundingClientRect();
+        var maxScroll = Math.max(260, hero.offsetHeight - window.innerHeight * 0.65);
+        var scrolled = Math.max(0, -rect.top);
+        var p = Math.max(0, Math.min(1, scrolled / maxScroll));
+        applyArmourProgress(p);
+      }
+
+      window.addEventListener("scroll", onScrollUpdate, { passive: true });
+      onScrollUpdate();
+
+      suitBtn.addEventListener("click", function () {
+        if (forcedSuitState === 1) {
+          forcedSuitState = 0;
+          suitBtn.textContent = "SUIT UP: EXPLODED";
+          suitBtn.classList.remove("is-active");
+        } else {
+          forcedSuitState = 1;
+          suitBtn.textContent = "SUIT UP: LOCKED";
+          suitBtn.classList.add("is-active");
+        }
+        onScrollUpdate();
+      });
+
+      chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+          var k = chip.getAttribute("data-piece");
+          var spec = pieceSpecs[k];
+          if (spec) {
+            forcedSuitState = spec.end;
+            suitBtn.textContent = "SUIT UP: STEP";
+            onScrollUpdate();
+          }
+        });
+      });
+
+      document.getElementById("bioJumpBtn").addEventListener("click", function () {
+        document.getElementById("biodataSection").scrollIntoView({ behavior: "smooth" });
+      });
+
+      // Falling Red Cherry Blossom Petals Canvas
+      var canvas = document.getElementById("petalsCanvas");
+      var ctx = canvas.getContext("2d");
+      var petals = [];
+      for (var i = 0; i < 34; i++) {
+        petals.push({
+          x: Math.random(),
+          y: Math.random(),
+          r: 4 + Math.random() * 7,
+          vx: -0.00035 - Math.random() * 0.00045,
+          vy: 0.00065 + Math.random() * 0.0008,
+          ang: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.04
+        });
+      }
+
+      function resizePetals() {
+        var hero = document.getElementById("heroSection");
+        canvas.width = hero.clientWidth;
+        canvas.height = hero.clientHeight;
+      }
+      window.addEventListener("resize", resizePetals);
+      resizePetals();
+
+      function renderPetals() {
+        var w = canvas.width;
+        var h = canvas.height;
+        ctx.clearRect(0, 0, w, h);
+
+        var paused = document.documentElement.getAttribute("data-motion") === "paused";
+        petals.forEach(function (pt) {
+          if (!paused) {
+            pt.x += pt.vx;
+            pt.y += pt.vy;
+            pt.ang += pt.spin;
+            if (pt.y > 1.04) { pt.y = -0.04; pt.x = Math.random(); }
+            if (pt.x < -0.04) { pt.x = 1.04; }
+          }
+          var px = pt.x * w;
+          var py = pt.y * h;
+          ctx.save();
+          ctx.translate(px, py);
+          ctx.rotate(pt.ang);
+          ctx.fillStyle = "rgba(165, 0, 32, 0.72)";
+          ctx.beginPath();
+          ctx.ellipse(0, 0, pt.r, pt.r * 0.56, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+
+        requestAnimationFrame(renderPetals);
+      }
+      requestAnimationFrame(renderPetals);
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) onScrollUpdate();
+        });
+      }, { threshold: 0.1 });
+      io.observe(document.getElementById("biodataSection"));
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.oda77-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

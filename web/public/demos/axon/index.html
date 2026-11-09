@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AXON..</title>
+  <meta name="description" content="AXON is a motion research studio: an open logbook of real-time rendering studies in particles, fluids and signed surfaces.">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #000000;
+      --surface: #0a0a0a;
+      --surface-elevated: #141414;
+      --accent: #aa88ff;
+      --accent-text: #c2a8ff;
+      --accent-strong: #8f63ff;
+      --on-accent: #000000;
+      --text: #dddddd;
+      --fg: #dddddd;
+      --muted: #8a8a8a;
+      --chip: #1c1c1c;
+      --line: #2a2a2a;
+      --font-display: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+      --font-sans: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+      --font-mono: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-spring: cubic-bezier(0.3, 1.4, 0.4, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: #000000;
+      color: var(--text);
+      font-family: var(--font-mono);
+      font-size: clamp(12px, 0.85vw, 13px);
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 1000;
+      padding: 10px 16px; background: var(--accent); color: #000000;
+      font-weight: 700; text-decoration: none; border-radius: 4px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); outline: 2px solid #ffffff; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    canvas#bg {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      z-index: 0; display: block;
+    }
+
+    .ui {
+      position: fixed; inset: 0; z-index: 1;
+      pointer-events: none;
+    }
+    .ui a, .ui button, .ui .list {
+      pointer-events: auto;
+    }
+
+    /* Brand top-left */
+    .brand {
+      position: absolute; top: 24px; left: 24px;
+      display: flex; align-items: center; gap: 14px;
+      mix-blend-mode: plus-lighter;
+    }
+    .brand svg { width: 40px; height: 40px; flex-shrink: 0; }
+    .brand-title {
+      font-size: 20px; font-weight: 400; color: #ffffff; line-height: 1.05;
+    }
+    .brand-sub {
+      font-size: 11px; color: var(--muted); margin-top: 2px;
+    }
+
+    /* Counter + Motion Toggle top-right */
+    .top-right-hud {
+      position: absolute; top: 24px; right: 24px;
+      display: flex; align-items: center; gap: 10px;
+      pointer-events: auto;
+    }
+    .counter {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #0a0a0a; color: #ffffff;
+      font-size: 14px; display: grid; place-items: center;
+    }
+    #motionToggleBtn {
+      height: 34px; padding: 0 11px; border-radius: 4px;
+      border: 1px solid var(--line); background: #0a0a0a;
+      color: var(--text); font: inherit; font-size: 11px;
+      cursor: pointer;
+      transition: border-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.15s ease;
+    }
+    #motionToggleBtn:hover { border-color: var(--accent); color: var(--accent); }
+    #motionToggleBtn:active { transform: scale(0.96); }
+
+    /* Tag chips */
+    .tags {
+      position: absolute; top: 120px; left: 24px; width: 320px;
+      display: flex; flex-wrap: wrap; gap: 6px;
+      mix-blend-mode: plus-lighter;
+    }
+    .ax-tag {
+      background: var(--chip); color: #cfcfcf;
+      border: 1px solid transparent;
+      padding: 5px 9px; font: inherit; font-size: 11px;
+      cursor: pointer;
+      transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.15s ease;
+    }
+    .ax-tag:hover { border-color: var(--line); color: #ffffff; }
+    .ax-tag:active { transform: scale(0.95); }
+    .ax-tag.active {
+      background: #e6e6e6; color: #000000;
+    }
+
+    /* Left scrollable video card list */
+    .list {
+      position: absolute; top: 250px; left: 24px; bottom: 0; width: 320px;
+      overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none;
+      padding-bottom: 36px;
+    }
+    .list::-webkit-scrollbar { display: none; }
+    .card {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+    }
+    .card.dimmed { opacity: 0.28; }
+    .thumb {
+      height: 160px; border-radius: 2px;
+      background: #0a0a0a; overflow: hidden; position: relative;
+    }
+    .thumb video {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .meta {
+      display: flex; justify-content: space-between; gap: 16px;
+      margin-top: 10px; font-size: 12px;
+    }
+    .meta-l { color: #ffffff; white-space: pre-line; }
+    .meta-r { color: var(--muted); text-align: right; white-space: pre-line; }
+
+    /* Right text column */
+    .about {
+      position: absolute; right: 90px; top: 50%;
+      transform: translateY(-50%); width: 380px;
+      mix-blend-mode: plus-lighter;
+      pointer-events: auto;
+    }
+    .about-block + .about-block { margin-top: 2.2em; }
+    .about h2 {
+      font-size: 13px; font-weight: 400; color: var(--accent);
+      margin-bottom: 1em;
+    }
+    .about p {
+      text-align: justify; margin-bottom: 1em; color: var(--text);
+    }
+    .about ul {
+      list-style: inside; color: var(--text);
+      display: grid; grid-template-columns: 1fr 1fr; row-gap: 4px;
+    }
+    .about a {
+      display: block; color: var(--text); text-decoration: underline;
+      margin: 4px 0;
+      transition: opacity 0.3s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .about a:hover { opacity: 0.7; }
+    .about a:active { transform: scale(0.98); }
+
+    .ax-foot {
+      position: fixed; bottom: 12px; right: 24px; z-index: 2;
+      font-size: 11px; color: var(--muted);
+      mix-blend-mode: plus-lighter; pointer-events: none;
+    }
+
+    @media (max-width: 1100px) {
+      .about { right: 24px; width: 320px; }
+    }
+    @media (max-width: 760px) {
+      .list, .tags { display: none; }
+      .about {
+        top: auto; left: 24px; right: 24px; bottom: 24px;
+        width: auto; transform: none;
+      }
+      .about p { text-align: left; }
+      .ax-foot { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div class="ui">
+    <header class="brand">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" stroke="#ffffff" stroke-width="1.6"/>
+        <polygon fill="#ffffff" points="20,6 22.8,15.2 30,10 24.8,17.2 34,20 24.8,22.8 30,30 22.8,24.8 20,34 17.2,24.8 10,30 15.2,22.8 6,20 15.2,17.2 10,10 17.2,15.2"/>
+      </svg>
+      <div>
+        <h1 class="brand-title">AXON</h1>
+        <div class="brand-sub">Motion research</div>
+      </div>
+    </header>
+
+    <div class="top-right-hud">
+      <button type="button" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+      <div class="counter tabular-nums" id="axCounter">07</div>
+    </div>
+
+    <nav class="tags" aria-label="Research category filters">
+      <button type="button" class="ax-tag active" data-filter="all">All</button>
+      <button type="button" class="ax-tag" data-filter="light">Light</button>
+      <button type="button" class="ax-tag" data-filter="physics">Physics</button>
+      <button type="button" class="ax-tag" data-filter="fluids">Fluids</button>
+      <button type="button" class="ax-tag" data-filter="grid">Grid</button>
+      <button type="button" class="ax-tag" data-filter="audio">Audio</button>
+      <button type="button" class="ax-tag" data-filter="volumes">Volumes</button>
+      <button type="button" class="ax-tag" data-filter="particles">Particles</button>
+      <button type="button" class="ax-tag" data-filter="capture">Capture</button>
+      <button type="button" class="ax-tag" data-filter="render">Render</button>
+    </nav>
+
+    <main id="main-content">
+      <section class="list" aria-label="Real-time rendering studies">
+        <article class="card" data-tags="all light grid volumes">
+          <div class="thumb">
+            <video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/oraciteslArea.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="meta">
+            <div class="meta-l">Lattices
+/ zone</div>
+            <div class="meta-r">Ambient light
+/ study</div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="all light render physics">
+          <div class="thumb">
+            <video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/facet-glass-hero.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="meta">
+            <div class="meta-l">Prism
+/ shell</div>
+            <div class="meta-r">Dispersion hero
+/ render</div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="all fluids particles audio">
+          <div class="thumb">
+            <video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/stellarmind-hero.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="meta">
+            <div class="meta-l">Nebular
+/ loop</div>
+            <div class="meta-r">Procedural hero
+/ sequence</div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="all physics capture particles">
+          <div class="thumb">
+            <video src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/thedropthroughArea.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="meta">
+            <div class="meta-l">Fall
+/ forward</div>
+            <div class="meta-r">Dolly track
+/ study</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="about" aria-label="AXON studio notes">
+        <article class="about-block">
+          <h2>[info]</h2>
+          <p>Studies are published as they are built and may not run on every device.</p>
+        </article>
+
+        <article class="about-block">
+          <h2>[aims]</h2>
+          <p>An open logbook of real-time rendering research: surfaces, fluids, fields, and the little tools we build to shape them.</p>
+          <p>It is here to keep the work in view and to give each new project a place to grow.</p>
+        </article>
+
+        <article class="about-block">
+          <h2>[exploring]</h2>
+          <ul>
+            <li>Signed surfaces</li>
+            <li>Cursor turbulence</li>
+            <li>Compute passes</li>
+            <li>Type in 3D space</li>
+          </ul>
+        </article>
+
+        <article class="about-block">
+          <h2>[connect]</h2>
+          <a href="#main-content" id="axIndexLink">Index -&gt; AXON</a>
+          <a href="mailto:hello@axonlab.dev">Mail -&gt; hello@axonlab.dev</a>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="ax-foot tabular-nums">
+    <span>AXON LAB · GPU PARTICLE &amp; FLUID SIMULATION</span>
+  </footer>
+
+  <script type="module">
+    import * as THREE from "three";
+
+    var tagBtns = Array.prototype.slice.call(document.querySelectorAll(".ax-tag"));
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
+    var counterEl = document.getElementById("axCounter");
+    var impulseBoost = 0;
+
+    tagBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var f = btn.getAttribute("data-filter") || "all";
+        tagBtns.forEach(function (b) { b.classList.toggle("active", b === btn); });
+        var visible = 0;
+        cards.forEach(function (c) {
+          var tags = (c.getAttribute("data-tags") || "").split(" ");
+          var match = f === "all" || tags.indexOf(f) !== -1;
+          c.classList.toggle("dimmed", !match);
+          if (match) visible++;
+        });
+        if (counterEl) counterEl.textContent = f === "all" ? "07" : "0" + visible;
+        impulseBoost = 1.0;
+      });
+    });
+
+    var canvas = document.getElementById("bg");
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, powerPreference: "high-performance" });
+    var DPR = Math.min(window.devicePixelRatio || 1, 2);
+    renderer.setPixelRatio(DPR);
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    renderer.setClearColor(0x000000, 1);
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 1000);
+    var baseCam = new THREE.Vector3(-1.17, 0, 6);
+    camera.position.copy(baseCam);
+    camera.lookAt(0, 0, 0);
+
+    var group = new THREE.Group();
+    group.position.set(0.343, 0.16, -1.0);
+    group.rotation.set(
+      THREE.MathUtils.degToRad(-28.4),
+      THREE.MathUtils.degToRad(390),
+      THREE.MathUtils.degToRad(4.92)
+    );
+    group.scale.set(5, 5, 6);
+    scene.add(group);
+
+    var COUNT = window.innerWidth < 760 ? 18000 : 65536;
+    var positions = new Float32Array(COUNT * 3);
+    var origins = new Float32Array(COUNT * 3);
+    var velocities = new Float32Array(COUNT * 3);
+    var randoms = new Float32Array(COUNT * 4);
+
+    for (var i = 0; i < COUNT; i++) {
+      var u = Math.random() * Math.PI * 2;
+      var v = Math.random() * Math.PI * 2;
+      var lobe = 1.0 + 0.28 * Math.sin(u * 2.0) + 0.14 * Math.cos(u * 3.0);
+      var R = 0.36 * lobe;
+      var r = (0.11 + 0.05 * Math.sin(u)) * Math.pow(Math.random(), 0.45);
+      var ox = (R + r * Math.cos(v)) * Math.cos(u);
+      var oy = (R + r * Math.cos(v)) * Math.sin(u) * 0.86;
+      var oz = r * Math.sin(v) + 0.08 * Math.sin(u * 2.0);
+
+      origins[i * 3]     = ox;
+      origins[i * 3 + 1] = oy;
+      origins[i * 3 + 2] = oz;
+
+      positions[i * 3]     = ox + (Math.random() - 0.5) * 0.22;
+      positions[i * 3 + 1] = oy + (Math.random() - 0.5) * 0.22;
+      positions[i * 3 + 2] = oz + (Math.random() - 0.5) * 0.22;
+
+      randoms[i * 4]     = Math.random();
+      randoms[i * 4 + 1] = Math.random();
+      randoms[i * 4 + 2] = Math.random();
+      randoms[i * 4 + 3] = Math.random();
+    }
+
+    var geom = new THREE.BufferGeometry();
+    var posAttr = new THREE.BufferAttribute(positions, 3);
+    posAttr.setUsage(THREE.DynamicDrawUsage);
+    geom.setAttribute("position", posAttr);
+    geom.setAttribute("aRandom", new THREE.BufferAttribute(randoms, 4));
+
+    var VS = [
+      "attribute vec4 aRandom;",
+      "uniform float uTime;",
+      "uniform float uDpr;",
+      "varying vec4 vRand;",
+      "varying float vScale;",
+      "void main(){",
+      "  vRand = aRandom;",
+      "  vec3 p = position * mix(1.0, 1.42, pow(aRandom.y, 120.0));",
+      "  vec4 mv = modelViewMatrix * vec4(p, 1.0);",
+      "  float dist = length(mv.xyz);",
+      "  vScale = smoothstep(2.5, 14.0, dist) * mix(0.55, 1.0, aRandom.z);",
+      "  gl_PointSize = clamp(0.045 * uDpr * 2.1 * vScale * (1000.0 / max(dist, 1.0)), 1.2, 9.0);",
+      "  gl_Position = projectionMatrix * mv;",
+      "}"
+    ].join("\n");
+
+    var FS = [
+      "precision highp float;",
+      "uniform float uTime;",
+      "varying vec4 vRand;",
+      "varying float vScale;",
+      "void main(){",
+      "  if(vScale < 0.08) discard;",
+      "  vec2 uv = gl_PointCoord - 0.5;",
+      "  float d2 = dot(uv, uv);",
+      "  if(d2 > 0.25) discard;",
+      "  float soft = smoothstep(0.25, 0.02, d2);",
+      "  vec3 grey = vec3(mix(0.14, 0.42, vRand.x));",
+      "  vec3 lav  = vec3(0.68, 0.52, 1.0);",
+      "  vec3 col  = mix(grey, lav, pow(vRand.z, 24.0));",
+      "  float spk = 0.65 + (0.4 + sin(uTime * 4.0 + vRand.y * 20.0)) * pow(vRand.z, 6.0) * 1.8;",
+      "  gl_FragColor = vec4(col * spk * soft, soft * 0.85);",
+      "}"
+    ].join("\n");
+
+    var mat = new THREE.ShaderMaterial({
+      vertexShader: VS,
+      fragmentShader: FS,
+      uniforms: {
+        uTime: { value: 0 },
+        uDpr:  { value: DPR }
+      },
+      transparent: true,
+      depthTest: true,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending
+    });
+
+    var cloud = new THREE.Points(geom, mat);
+    group.add(cloud);
+
+    var mx = 0, my = 0, pmx = 0, pmy = 0, vx = 0, vy = 0;
+    function onMove(cx, cy) {
+      var nx = (cx / window.innerWidth) * 2 - 1;
+      var ny = (cy / window.innerHeight) * 2 - 1;
+      vx = (nx - mx) * 1.8;
+      vy = -(ny - my) * 1.8;
+      mx = nx;
+      my = ny;
+    }
+    window.addEventListener("pointermove", function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+    window.addEventListener("touchmove", function (e) {
+      if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    window.addEventListener("resize", function () {
+      renderer.setSize(window.innerWidth, window.innerHeight, false);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    }, { passive: true });
+
+    function tick(now) {
+      var t = now * 0.001;
+      mat.uniforms.uTime.value = t;
+
+      var targetX = baseCam.x + mx * -1.0;
+      var targetY = baseCam.y + my * 2.0;
+      camera.position.x += (targetX - camera.position.x) * 0.05;
+      camera.position.y += (targetY - camera.position.y) * 0.05;
+      camera.lookAt(0, 0, 0);
+
+      if (document.documentElement.getAttribute("data-motion") !== "paused") {
+        group.rotation.y = THREE.MathUtils.degToRad(390) + Math.sin(t * 0.35) * 0.12;
+        var stirX = mx * 0.32;
+        var stirY = -my * 0.32;
+        var hasStir = Math.abs(vx) + Math.abs(vy) + impulseBoost > 0.002;
+
+        for (var i = 0; i < COUNT; i++) {
+          var i3 = i * 3;
+          var px = positions[i3];
+          var py = positions[i3 + 1];
+          var pz = positions[i3 + 2];
+
+          var ox = origins[i3];
+          var oy = origins[i3 + 1];
+          var oz = origins[i3 + 2];
+
+          var cx = Math.sin(py * 4.5 + t * 0.8) * 0.0012;
+          var cy = Math.cos(pz * 4.5 + t * 0.7) * 0.0012;
+          var cz = Math.sin(px * 4.5 - t * 0.6) * 0.0012;
+
+          if (hasStir) {
+            var dx = px - stirX;
+            var dy = py - stirY;
+            var d2 = dx * dx + dy * dy + pz * pz;
+            if (d2 < 0.16) {
+              var f = (0.16 - d2) * 0.085;
+              velocities[i3]     += (vx + dx * 1.5) * f;
+              velocities[i3 + 1] += (vy + dy * 1.5) * f;
+              velocities[i3 + 2] += (Math.sin(i) * impulseBoost) * 0.015;
+            }
+          }
+
+          velocities[i3]     = (velocities[i3]     + (ox - px) * 0.045 + cx) * 0.90;
+          velocities[i3 + 1] = (velocities[i3 + 1] + (oy - py) * 0.045 + cy) * 0.90;
+          velocities[i3 + 2] = (velocities[i3 + 2] + (oz - pz) * 0.045 + cz) * 0.90;
+
+          positions[i3]     = px + velocities[i3];
+          positions[i3 + 1] = py + velocities[i3 + 1];
+          positions[i3 + 2] = pz + velocities[i3 + 2];
+        }
+        posAttr.needsUpdate = true;
+      }
+
+      vx *= 0.88;
+      vy *= 0.88;
+      impulseBoost *= 0.9;
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) entry.target.classList.add("is-visible");
+      });
+    }, { threshold: 0.1 });
+    cards.forEach(function (c) { io.observe(c); });
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.axo52-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

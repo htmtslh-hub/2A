@@ -1,0 +1,44 @@
+{
+  "id": "t303",
+  "slug": "velia",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T10:14:50.111Z",
+  "demo": "/demos/velia/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2f1ce461462e",
+  "sha256": "2f1ce461462ea553f08460005116444ef2673810bf9013e57790c415d11362e4",
+  "demoHtmlSha256": "0f3ae629fb6615f5df8a5c180c51c8ce846a081fa43c24d81d3834a665dfb98f",
+  "demoSha256": "7fe12cf0a5971720bab51c62484e61a86bedc9d4b4f94fcc6e821f0682b1bc90",
+  "bytes": 904930,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.727,
+      "action": "click",
+      "selector": "#exploreBtn"
+    },
+    {
+      "seconds": 5.038,
+      "action": "click",
+      "selector": "#benefitsBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velia-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velia-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velia-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velia-return.jpg"
+  ]
+}

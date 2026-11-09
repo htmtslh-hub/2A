@@ -947,7 +947,7 @@ try {
         }
         return;
       }
-      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish','trend-carousel','spin-product','album-flow','fox-couture','glass-portfolio','verra-events-hero'].includes(slug)) {
+      if (['future-fashion','card-stack','work-ribbon','main-character','outfit-drop','bag-slots','design-collage','pink-rider','virtual-fitting','crystal-koi','moss-island','robot-jellyfish','trend-carousel','spin-product','album-flow','fox-couture','glass-portfolio','verra-events-hero','axon','velia','facet-glass','orvante-agency','offline','oda-hero'].includes(slug)) {
         const clickedCount = actions.filter(a => a.action === 'click').length;
         if (slug === 'future-fashion') {
           await page.mouse.move(clickedCount === 0 ? 480 : 960, clickedCount === 0 ? 340 : 560, { steps: 14 });
@@ -1039,6 +1039,36 @@ try {
         } else if (slug === 'verra-events-hero') {
           await page.mouse.move(clickedCount === 0 ? 640 : 840, 460, { steps: 12 });
           const sel = clickedCount === 0 ? '#startBtn' : '#connectBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'axon') {
+          await page.mouse.move(clickedCount === 0 ? 620 : 880, clickedCount === 0 ? 360 : 520, { steps: 14 });
+          const sel = clickedCount === 0 ? '.ax-tag[data-filter="fluids"]' : '.ax-tag[data-filter="all"]';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'velia') {
+          await page.mouse.move(clickedCount === 0 ? 540 : 760, 420, { steps: 10 });
+          const sel = clickedCount === 0 ? '#exploreBtn' : '#benefitsBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'facet-glass') {
+          await page.mouse.move(clickedCount === 0 ? 520 : 280, clickedCount === 0 ? 480 : 240, { steps: 14 });
+          const sel = clickedCount === 0 ? '#readPaperBtn' : '#backSliverBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'orvante-agency') {
+          await page.mouse.move(clickedCount === 0 ? 640 : 820, 420, { steps: 10 });
+          const sel = clickedCount === 0 ? '#bookCallHero' : '#worksNavBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'offline') {
+          await page.mouse.move(clickedCount === 0 ? 320 : 620, 260, { steps: 12 });
+          const sel = '#powerBtn';
+          await page.locator(sel).first().click({ force: true });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
+        } else if (slug === 'oda-hero') {
+          await page.mouse.move(clickedCount === 0 ? 640 : 820, 440, { steps: 12 });
+          const sel = clickedCount === 0 ? '#suitToggleBtn' : '#bioJumpBtn';
           await page.locator(sel).first().click({ force: true });
           actions.push({ seconds: (Date.now() - start) / 1000, action: 'click', selector: sel });
         }

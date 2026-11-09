@@ -1,0 +1,44 @@
+{
+  "id": "t305",
+  "slug": "orvante-agency",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-09T10:19:04.200Z",
+  "demo": "/demos/orvante-agency/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "ea4b8a9e51f4",
+  "sha256": "ea4b8a9e51f40b33d86b8f3652bd7ebed71d56e7a98176d87f2cd4ca5159576d",
+  "demoHtmlSha256": "62244e6bb8fee1fee41350337fba442e4df8adaf7a85778e66f341bc9dd6e663",
+  "demoSha256": "ac4005ba24bd082dde688fcae8b0c5a59c4cecbd54a21cc3add88ade8a0a2d81",
+  "bytes": 573697,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.609,
+      "action": "click",
+      "selector": "#bookCallHero"
+    },
+    {
+      "seconds": 4.988,
+      "action": "click",
+      "selector": "#worksNavBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orvante-agency-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orvante-agency-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orvante-agency-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orvante-agency-return.jpg"
+  ]
+}

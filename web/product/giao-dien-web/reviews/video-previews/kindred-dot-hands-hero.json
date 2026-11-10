@@ -1,0 +1,44 @@
+{
+  "id": "t315",
+  "slug": "kindred-dot-hands-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-10T08:59:19.088Z",
+  "demo": "/demos/kindred-dot-hands-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a551b962a33b",
+  "sha256": "a551b962a33b4aa8f9f37f931c8f80a7fdbac172a4bcb11eadd3a81fa4f95a3b",
+  "demoHtmlSha256": "bdf62fcd358c89c309e6aa6f8eb999cbf61f9be87e99088ee53669f6c0166809",
+  "demoSha256": "66f863d29102d689f8e752d69e275ec7b44372aad57c6531cccb1987b12a0282",
+  "bytes": 1205695,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.565,
+      "action": "click",
+      "selector": "#pulseSpectrumBtn"
+    },
+    {
+      "seconds": 4.965,
+      "action": "click",
+      "selector": "#pulseSpectrumBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 609
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kindred-dot-hands-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kindred-dot-hands-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kindred-dot-hands-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kindred-dot-hands-hero-return.jpg"
+  ]
+}

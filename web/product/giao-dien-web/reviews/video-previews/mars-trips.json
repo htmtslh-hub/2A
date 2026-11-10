@@ -1,0 +1,44 @@
+{
+  "id": "t319",
+  "slug": "mars-trips",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-10T09:10:39.054Z",
+  "demo": "/demos/mars-trips/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "82156ed5f201",
+  "sha256": "82156ed5f201fd3c4a39ad9ec6bf390a1acdd84f93f2fe64cc69736923b651ce",
+  "demoHtmlSha256": "fa39b045115288d76e341fed31a385690146e3b971b6326c0098fe23ac2bf8ee",
+  "demoSha256": "60fcddd01caa55417910b782e4b4d74ab1a3e96f74c6764dc4a83dfa8cd447d0",
+  "bytes": 784186,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.213,
+      "action": "click",
+      "selector": "#nextStepBtn"
+    },
+    {
+      "seconds": 5.454,
+      "action": "click",
+      "selector": "#nextStepBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mars-trips-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mars-trips-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mars-trips-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mars-trips-return.jpg"
+  ]
+}

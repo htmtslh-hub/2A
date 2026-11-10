@@ -46,6 +46,152 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t319: {
+    slug: 'mars-trips',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Mars Trips",
+        desc: "Giao diện web Mars Trips với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Mars Trips",
+        desc: "Bespoke Mars Trips web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Mars Trips",
+        desc: "单文件自包含 Mars Trips 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t318: {
+    slug: 'pirate-ship',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Pirate Ship",
+        desc: "Giao diện web Pirate Ship với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Pirate Ship",
+        desc: "Bespoke Pirate Ship web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Pirate Ship",
+        desc: "单文件自包含 Pirate Ship 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t317: {
+    slug: 'phoenix-ignis',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Phoenix ignis",
+        desc: "Giao diện web Phoenix ignis với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Phoenix ignis",
+        desc: "Bespoke Phoenix ignis web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["3D", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Phoenix ignis",
+        desc: "单文件自包含 Phoenix ignis 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t316: {
+    slug: 'bookshop',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Bookshop",
+        desc: "Giao diện web Bookshop với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Bookshop",
+        desc: "Bespoke Bookshop web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Bookshop",
+        desc: "单文件自包含 Bookshop 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t315: {
+    slug: 'kindred-dot-hands-hero',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Kindred Dot Hands Hero",
+        desc: "Giao diện web Kindred Dot Hands Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["Community", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Kindred Dot Hands Hero",
+        desc: "Bespoke Kindred Dot Hands Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["Community", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Kindred Dot Hands Hero",
+        desc: "单文件自包含 Kindred Dot Hands Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t314: {
+    slug: 'halden-ai-teammate-hero',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Halden AI Teammate Hero",
+        desc: "Giao diện web Halden AI Teammate Hero với đầy đủ 3 nhóm hiệu ứng chuyển động (Scroll Parallax/Scrub, Split-Text & Seamless Modal, Ambient Particle Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Halden AI Teammate Hero",
+        desc: "Bespoke Halden AI Teammate Hero web experience featuring 3 interactive motion groups (Scroll Scrubbing, Split-Text & Seamless Modal, and Ambient Smoke).",
+        tags: ["AI", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Halden AI Teammate Hero",
+        desc: "单文件自包含 Halden AI Teammate Hero 网页模板，配备 3D 悬浮视觉与三组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t313: {
     slug: 'hollowmere-halloween-descent',
     cat: 'commerce',

@@ -1,0 +1,44 @@
+{
+  "id": "t316",
+  "slug": "bookshop",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-10T09:00:01.097Z",
+  "demo": "/demos/bookshop/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f47fa82d0038",
+  "sha256": "f47fa82d0038c3551e915cfe7fc2f77328b773c3a3743fab3c15a8152dc94c82",
+  "demoHtmlSha256": "4c61d50996e79c41916987e1fac5aa8b4c52cc5206f3298249ba42a2f97fce88",
+  "demoSha256": "d3fae36a83ae0a4906dafe78803285211874bc705216332ecf8cde887d329c94",
+  "bytes": 1413137,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.985,
+      "action": "click",
+      "selector": "#waveRippleBtn"
+    },
+    {
+      "seconds": 6.46,
+      "action": "click",
+      "selector": "#waveRippleBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 586
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bookshop-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bookshop-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bookshop-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bookshop-return.jpg"
+  ]
+}

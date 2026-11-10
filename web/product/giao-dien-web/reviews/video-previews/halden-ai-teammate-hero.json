@@ -1,0 +1,44 @@
+{
+  "id": "t314",
+  "slug": "halden-ai-teammate-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-10T09:12:06.283Z",
+  "demo": "/demos/halden-ai-teammate-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0d76a75102d1",
+  "sha256": "0d76a75102d1dd3c24b3247706996e2a928453204653e871e30ae7a729acc4de",
+  "demoHtmlSha256": "c6889c87ea51bdf6ed92184689da7cffb696a7383fb3a5f2a120d7dd7a5a2bef",
+  "demoSha256": "aef070a9033de5ef3f9904d3174dbb028a330453b2066a6d9ebf576f39312bbf",
+  "bytes": 485165,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 4.5,
+      "action": "click",
+      "selector": "#dockNextBtn"
+    },
+    {
+      "seconds": 7.959,
+      "action": "click",
+      "selector": "#dockNextBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-ai-teammate-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-ai-teammate-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-ai-teammate-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-ai-teammate-hero-return.jpg"
+  ]
+}

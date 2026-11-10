@@ -109,7 +109,7 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
-    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com','cdn.jsdelivr.net','unpkg.com']);
+    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','pub-86dc5b5484314368ac5436a674b0d919.r2.dev','images.higgs.ai','cdn.21st.dev','images.unsplash.com','images.pexels.com','res.cloudinary.com','cdn.jsdelivr.net','unpkg.com','www.gstatic.com']);
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }

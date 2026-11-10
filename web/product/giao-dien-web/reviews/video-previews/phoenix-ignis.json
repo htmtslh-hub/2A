@@ -1,0 +1,44 @@
+{
+  "id": "t317",
+  "slug": "phoenix-ignis",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-10T09:04:20.224Z",
+  "demo": "/demos/phoenix-ignis/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1258402680df",
+  "sha256": "1258402680df3e18f4b512adaf892e32d78f3ea2fa51cd8f264390162305bdc7",
+  "demoHtmlSha256": "690439e5346b8699a359df3fe0265de7c9613ef47700e9ab445de5eae1ca9cef",
+  "demoSha256": "28f7e8e9ed1398471d1fd22d0d8404806f36c2a95138c20511815c4163391e82",
+  "bytes": 882674,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.928,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"switch-pill active\" data-creature=\"kraken\" data-next-preview=\"true\">\n          <span class=\"switch-dot\" aria-hidden=\"true\"></span>Kraken\n        </butt"
+    },
+    {
+      "seconds": 5.231,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"switch-pill active\" data-creature=\"kraken\" data-next-preview=\"true\">\n          <span class=\"switch-dot\" aria-hidden=\"true\"></span>Kraken\n        </butt"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\phoenix-ignis-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\phoenix-ignis-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\phoenix-ignis-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\phoenix-ignis-return.jpg"
+  ]
+}

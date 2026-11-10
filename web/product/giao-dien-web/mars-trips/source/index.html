@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Redline — Book Your Seat to Mars</title>
+  <meta name="description" content="Redline interplanetary spaceflights to Tharsis, Olympus Mons, Valles Marineris, Gale Crater, and Jezero Delta. Experience the orbital approach and canyon landing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --red: #e8283c;
+      --deep: #2a0d04;
+      --bg: #2a0d04;
+      --surface: #3b1405;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.74);
+      --accent: #e8283c;
+      --accent-text: #ff6b7a;
+      --accent-2: #d0591f;
+      --on-accent: #ffffff;
+      --font-display: "Montserrat", system-ui, sans-serif;
+      --font-sans: "Montserrat", system-ui, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--red); color: #ffffff; }
+    :focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: var(--deep);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    button:active { transform: scale(0.97); }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 200;
+      padding: 8px 16px; background: var(--red); color: #fff;
+      font-size: 12px; font-weight: 600; border-radius: 4px;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    .hero {
+      position: fixed; inset: 0;
+      overflow: hidden;
+      background: radial-gradient(58% 72% at 50% 47%, #d0591f 0%, #a23f12 32%, #6b2409 62%, #3b1405 100%);
+    }
+    .hero > * { position: absolute; }
+
+    #word0 {
+      left: 50%; top: 50%;
+      font-weight: 900;
+      font-size: min(27vw, 50vh);
+      line-height: 0.8;
+      letter-spacing: -0.035em;
+      white-space: nowrap;
+      z-index: 2;
+      will-change: transform, clip-path, opacity;
+    }
+    #eyebrow {
+      left: 50%; top: 50%;
+      z-index: 3;
+      font-weight: 300;
+      font-size: clamp(14px, 1.45vw, 23px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      will-change: transform, opacity;
+    }
+    #gl {
+      inset: 0; width: 100%; height: 100%;
+      z-index: 4;
+      cursor: grab;
+      touch-action: none;
+    }
+    #gl.drag { cursor: grabbing; }
+    #dust {
+      inset: 0; width: 100%; height: 100%;
+      z-index: 5;
+      pointer-events: none;
+    }
+    #flare {
+      z-index: 1;
+      width: 44vmin; height: 44vmin;
+      margin: -22vmin;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(closest-side, rgba(255,236,205,0.95), rgba(255,176,96,0.42) 26%, rgba(255,140,60,0.1) 58%, transparent);
+    }
+
+    #pin {
+      z-index: 6; left: 0; top: 0;
+      display: flex; align-items: center; gap: 9px;
+      font-weight: 600; font-size: 11px;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      pointer-events: none; white-space: nowrap;
+    }
+    #pin i {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #fff; position: relative;
+      box-shadow: 0 0 0 4px rgba(232, 40, 60, 0.75);
+    }
+    #pin i::after {
+      content: ""; position: absolute; inset: -13px;
+      border-radius: 50%; border: 1px solid #fff;
+      animation: pulse 2s ease-out infinite;
+    }
+    @keyframes pulse {
+      from { transform: scale(0.4); opacity: 1; }
+      to { transform: scale(1.4); opacity: 0; }
+    }
+
+    #word1 {
+      left: 50%; top: 0;
+      z-index: 6;
+      font-weight: 800;
+      font-size: min(9.4vw, 19vh);
+      letter-spacing: -0.02em; line-height: 1;
+      color: rgba(255, 255, 255, 0.74);
+      pointer-events: none; white-space: nowrap;
+    }
+
+    #sites {
+      right: 6.2%; top: 50%;
+      z-index: 7;
+      list-style: none;
+      display: grid;
+      gap: clamp(30px, 6.6vh, 62px);
+      transform: translateY(-50%);
+    }
+    #sites::before {
+      content: ""; position: absolute; right: 5px; top: 6px; bottom: 6px;
+      width: 1px; background: rgba(255, 255, 255, 0.5);
+    }
+    #sites li {
+      position: relative;
+      text-align: right;
+      padding-right: 30px;
+      cursor: pointer;
+      font-weight: 500; font-size: 11.5px;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+    }
+    #sites li::after {
+      content: ""; position: absolute; right: 1px; top: 50%;
+      width: 9px; height: 9px; margin-top: -5px;
+      border-radius: 50%; background: #fff;
+      transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+    }
+    #sites li.on { transform: scale(1.08); transform-origin: right center; font-weight: 700; }
+    #sites li.on::after {
+      transform: scale(1.5);
+      box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.28);
+    }
+
+    #card {
+      right: calc(6.2% + 196px); top: 0;
+      z-index: 7;
+      width: clamp(170px, 15.5vw, 250px);
+      aspect-ratio: 1.42;
+      background-repeat: no-repeat;
+      border-radius: 3px;
+      box-shadow: 0 22px 44px rgba(20, 4, 0, 0.45);
+      overflow: visible;
+    }
+    #card a {
+      position: absolute; left: -26px; bottom: 18%;
+      background: var(--red);
+      font-weight: 600; font-size: 10.5px;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 9px 15px; border-radius: 2px;
+      box-shadow: 0 8px 18px rgba(120, 10, 20, 0.45);
+    }
+
+    #region {
+      left: 50%; top: 50%;
+      z-index: 7;
+      transform: translate(-50%, -50%);
+      font-weight: 500;
+      font-size: clamp(26px, 3.4vw, 54px);
+      letter-spacing: 0.04em;
+      pointer-events: none;
+    }
+
+    #land, #fore {
+      inset: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #land {
+      z-index: 8;
+      background-position: 50% 60%;
+      will-change: transform, opacity;
+    }
+    #dest {
+      left: 0; right: 0; top: 0;
+      z-index: 9;
+      text-align: center;
+      pointer-events: none;
+    }
+    #dest small {
+      display: block;
+      font-weight: 300;
+      font-size: min(5.2vw, 11vh);
+      line-height: 1; letter-spacing: 0.04em;
+      text-transform: uppercase; opacity: 0.92;
+    }
+    #dest b {
+      display: block; margin-top: 0.04em;
+      font-weight: 900;
+      font-size: min(9.2vw, 19vh);
+      line-height: 1; letter-spacing: -0.03em;
+      text-transform: uppercase; white-space: nowrap;
+      color: #fff4e6;
+    }
+    #fore {
+      z-index: 10;
+      background-position: 50% 100%;
+      will-change: transform, opacity;
+    }
+    #fog {
+      inset: 0; z-index: 11;
+      pointer-events: none;
+      background: radial-gradient(70% 64% at 50% 46%, #fbe6cd 0%, #f6d3ae 52%, #b36a37 100%);
+    }
+
+    #scrim {
+      left: 0; right: 0; top: 0; height: 150px;
+      z-index: 13; pointer-events: none;
+      background: linear-gradient(rgba(44, 14, 3, 0.62), rgba(44, 14, 3, 0));
+    }
+    #bar {
+      left: 50%; bottom: 7.5vh;
+      z-index: 12;
+      width: min(86vw, 920px);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 68px;
+      background: #fff; color: #2b1a12;
+      border-radius: 3px;
+      box-shadow: 0 24px 60px rgba(30, 6, 0, 0.5);
+    }
+    #bar div { padding: 15px 22px; border-right: 1px solid #eadfd6; }
+    #bar label {
+      display: block;
+      font-weight: 500; font-size: 10px;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      color: #9a877b;
+    }
+    #bar input {
+      width: 100%; margin-top: 5px; border: 0; outline: 0;
+      font: 600 15px Montserrat, sans-serif;
+      color: #2b1a12; background: none;
+    }
+    #bar button {
+      background: var(--red); color: #fff;
+      border-radius: 0 3px 3px 0; font-size: 22px;
+      transition: background-color 0.25s var(--ease-out);
+    }
+    #bar button:hover { background: #c41426; }
+
+    /* Top Chrome */
+    .mrs-header {
+      position: fixed; left: 0; right: 0; top: 0;
+      z-index: 20;
+      display: flex; align-items: center;
+      padding: clamp(18px, 3.2vh, 30px) clamp(20px, 2.6vw, 42px);
+      font-size: 11.5px; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      pointer-events: none;
+    }
+    .mrs-header > * { pointer-events: auto; }
+    .logo {
+      display: flex; align-items: center; gap: 12px;
+      margin-right: auto;
+      font-weight: 800; font-size: 19px;
+      letter-spacing: -0.01em; text-transform: none;
+    }
+    .logo svg { width: 34px; height: 30px; }
+    .mrs-nav {
+      display: flex; align-items: center; gap: clamp(14px, 2.2vw, 30px);
+    }
+    .mrs-nav a { opacity: 0.92; transition: opacity 0.2s var(--ease-out); }
+    .mrs-nav a:hover { opacity: 1; }
+    .mrs-pill-btn {
+      padding: 8px 14px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-size: 10.5px; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      transition: background-color 0.25s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .mrs-pill-btn:hover { background: rgba(255, 255, 255, 0.3); }
+    .ico {
+      width: 42px; height: 42px;
+      margin-left: 12px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      transition: background-color 0.25s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .ico:hover { background: rgba(255, 255, 255, 0.34); }
+    .ico svg, .srch svg {
+      width: 16px; height: 16px;
+      fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round;
+    }
+
+    #rail {
+      position: fixed;
+      left: clamp(20px, 2.6vw, 42px); top: 50%;
+      z-index: 20;
+      display: grid; gap: 15px;
+      transform: translateY(-50%);
+    }
+    #rail button {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45);
+      transition: background-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+    }
+    #rail button.on { background: #fff; transform: scale(1.35); }
+    #hint {
+      position: fixed;
+      left: 50%; bottom: 4.4vh;
+      transform: translateX(-50%);
+      z-index: 20;
+      font-weight: 400; font-size: 11px;
+      letter-spacing: 0.17em; text-transform: uppercase;
+      opacity: 0.8; white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .mrs-footer {
+      position: fixed; right: clamp(20px, 2.6vw, 42px); bottom: 14px;
+      z-index: 20;
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.62);
+      pointer-events: none;
+    }
+
+    /* Hidden Semantic Telemetry Archive for Screen Readers & Spec Completeness */
+    .sr-manifest {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap;
+    }
+
+    @media (max-width: 760px) {
+      .mrs-nav a { display: none; }
+      #word0 { font-size: 29vw; }
+      #eyebrow { font-size: 12px; }
+      #word1 { font-size: 15vw; }
+      #sites { right: 18px; top: auto; bottom: 11vh; transform: none; gap: 22px; }
+      #card { right: auto; left: 18px; top: auto !important; bottom: 11vh; width: 42vw; }
+      #card a { left: 8px; bottom: 8px; }
+      #dest b { font-size: 11vw; }
+      #dest small { font-size: 7vw; }
+      #bar { grid-template-columns: 1fr 1fr; width: calc(100% - 32px); bottom: 4vh; }
+      #bar div:nth-child(2) { border-right: 0; }
+      #bar div { padding: 11px 14px; border-bottom: 1px solid #eadfd6; }
+      #bar button { height: 46px; border-radius: 0 0 3px 0; }
+      #hint, #rail { display: none; }
+      #fore { background-size: 210% auto; }
+    }
+    @media (max-width: 480px) {
+      .logo { font-size: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="mrs-header">
+    <a class="logo" href="#main-content" id="home">
+      <svg viewBox="0 0 34 30" fill="none" stroke="#fff" stroke-linecap="round" aria-hidden="true">
+        <path stroke-width="3.2" d="M3 27C5 13 15 4 31 3"/>
+        <path stroke-width="2" d="M11 27c1.5-8 8-14 18-15"/>
+        <circle cx="30" cy="20" r="3.5" fill="#fff" stroke="none"/>
+      </svg>
+      <span>Redline</span>
+    </a>
+
+    <nav class="mrs-nav" aria-label="Primary navigation">
+      <a href="#main-content" id="navTharsis">Tharsis</a>
+      <a href="#main-content" id="navLanding">Canyon</a>
+      <button type="button" class="mrs-pill-btn" id="nextStepBtn" data-next-preview="true">Next Stage →</button>
+      <button type="button" class="mrs-pill-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+      <span class="srch" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      </span>
+      <button type="button" class="ico" id="menuStepBtn" aria-label="Advance flight step">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14M7 12h10M5 16h14"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content" class="hero">
+    <h1 id="word0">MARS</h1>
+    <div id="eyebrow">Book your seat to</div>
+    <div id="flare" aria-hidden="true"></div>
+    <canvas id="gl" aria-label="Interactive 3D Mars globe"></canvas>
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <div id="pin"><i></i><span>Tharsis</span></div>
+    <div id="word1" aria-hidden="true">THARSIS</div>
+    <ul id="sites" aria-label="Mars landing sites"></ul>
+    <div id="card"><a href="#main-content" id="explore">Explore</a></div>
+    <div id="region" aria-hidden="true">THARSIS</div>
+    <div id="land" role="img" aria-label="Mars canyon background landscape"></div>
+    <div id="dest"><small>Tharsis</small><b id="destName">Olympus Mons</b></div>
+    <div id="fore" aria-hidden="true"></div>
+    <div id="fog" aria-hidden="true"></div>
+    <div id="scrim" aria-hidden="true"></div>
+
+    <form id="bar" onsubmit="return false" aria-label="Interplanetary seat booking form">
+      <div><label for="d1">Depart Earth</label><input id="d1" class="tabular-nums" value="12 Mar 2041"></div>
+      <div><label for="d2">Return</label><input id="d2" class="tabular-nums" value="30 Sep 2042"></div>
+      <div><label for="d3">Passengers</label><input id="d3" class="tabular-nums" value="2 adults"></div>
+      <button type="submit" id="searchSeatsBtn" aria-label="Search seats">→</button>
+    </form>
+
+    <!-- Semantic Mission Architecture Sections -->
+    <section class="sr-manifest" aria-label="Step 1 Orbital Approach">
+      <article><h2>Orbital Injection — MARS</h2><p>Low-Mars capture burn above the Tharsis volcanic plateau.</p></article>
+      <article><h2>Territory Survey — THARSIS</h2><p>Olympus Mons, Valles Marineris, Gale Crater, and Jezero Delta landing corridors.</p></article>
+      <article><h2>Atmospheric Entry — Canyon Landing</h2><p>Supersonic retro-propulsion touchdown between red sandstone spires.</p></article>
+      <article><h2>Flight Telemetry &amp; Life Support</h2><p>Closed-loop radiation shielding and pressurized Starliner suites.</p></article>
+    </section>
+  </main>
+
+  <div id="rail" role="group" aria-label="Flight stage selector">
+    <button type="button" class="on" aria-label="Mars"></button>
+    <button type="button" aria-label="Tharsis"></button>
+    <button type="button" aria-label="Destination"></button>
+  </div>
+  <div id="hint">Drag to spin · click the planet to land</div>
+
+  <footer class="mrs-footer tabular-nums">
+    <span>REDLINE SPACEFLIGHT · SOL 0412 · 2041</span>
+  </footer>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    const MAP_URL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261031_030432_a1948696-c1d5-4468-845e-7d1291f80943.png&w=2688&q=92";
+    const LAND_URL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261031_030420_da39d0cf-af67-4e33-a487-6469549cfbff.png&w=2400&q=88";
+    const FORE_URL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261031_030420_fe406b69-3e6f-4b7c-a17e-ef09db0d270b.png&w=2400&q=88";
+    const CARDS_URL = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261031_030420_e222aa05-c121-4f31-a466-0321badc0e28.png&w=1400&q=85";
+
+    const landEl = document.getElementById('land');
+    const foreEl = document.getElementById('fore');
+    const cardEl = document.getElementById('card');
+    landEl.style.backgroundImage = 'url("' + LAND_URL + '")';
+    foreEl.style.backgroundImage = 'url("' + FORE_URL + '")';
+    cardEl.style.backgroundImage = 'url("' + CARDS_URL + '")';
+
+    const SHEET = { w: 2336, h: 1744 };
+    const SITES = [
+      { name: 'Olympus Mons', u: 0.121, v: 0.31, box: [0, 0, 1150, 810] },
+      { name: 'Valles Marineris', u: 0.45, v: 0.56, box: [1186, 0, 1150, 810] },
+      { name: 'Gale Crater', u: 0.85, v: 0.75, box: [0, 900, 1150, 810] },
+      { name: 'Jezero Delta', u: 0.61, v: 0.35, box: [1186, 900, 1150, 810] }
+    ];
+    const THARSIS = { u: 0.15, v: 0.41 };
+
+    function uvToDir(u, v) {
+      const ph = Math.PI * 2 * u;
+      const th = Math.PI * v;
+      return new THREE.Vector3(
+        -Math.cos(ph) * Math.sin(th),
+        Math.cos(th),
+        Math.sin(ph) * Math.sin(th)
+      ).normalize();
+    }
+    function faceYaw(d) { return Math.atan2(-d.x, d.z); }
+    function faceLat(d) { return Math.asin(Math.max(-1, Math.min(1, d.y))); }
+
+    const sitesUl = document.getElementById('sites');
+    const destNameEl = document.getElementById('destName');
+    const regionEl = document.getElementById('region');
+    let activeSiteIdx = 0;
+
+    SITES.forEach((s, i) => {
+      const li = document.createElement('li');
+      li.dataset.i = String(i);
+      li.textContent = s.name;
+      if (i === 0) li.classList.add('on');
+      li.addEventListener('pointerenter', () => pick(i));
+      li.addEventListener('click', () => { pick(i); go(2); });
+      sitesUl.appendChild(li);
+    });
+
+    function pick(i) {
+      activeSiteIdx = i;
+      const s = SITES[i];
+      const items = sitesUl.querySelectorAll('li');
+      items.forEach((li, idx) => li.classList.toggle('on', idx === i));
+      const [x, y, w, h] = s.box;
+      cardEl.style.backgroundSize = ((SHEET.w / w) * 100).toFixed(2) + '% ' + ((SHEET.h / h) * 100).toFixed(2) + '%';
+      cardEl.style.backgroundPosition = ((x / (SHEET.w - w)) * 100).toFixed(2) + '% ' + ((y / (SHEET.h - h)) * 100).toFixed(2) + '%';
+      const liEl = items[i];
+      if (liEl && window.innerWidth > 760) {
+        const rect = liEl.getBoundingClientRect();
+        const ch = cardEl.offsetHeight || 160;
+        cardEl.style.top = Math.round(rect.top + rect.height / 2 - ch / 2) + 'px';
+      }
+      destNameEl.textContent = s.name;
+      regionEl.textContent = s.name.toUpperCase();
+    }
+    setTimeout(() => pick(0), 60);
+
+    // State machine: st in 0..2
+    let st = 0, fromSt = 0, toSt = 0, t0 = performance.now(), dur = 1;
+    function clamp(v, a = 0, b = 1) { return Math.max(a, Math.min(b, v)); }
+    function seg(p, a, b) { return clamp((p - a) / (b - a), 0, 1); }
+    function io(k) { return k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; }
+    function out(k) { return 1 - Math.pow(1 - k, 3); }
+    function mix(a, b, k) { return a + (b - a) * k; }
+
+    function go(n) {
+      const target = clamp(n, 0, 2);
+      if (target === toSt) return;
+      fromSt = st;
+      toSt = target;
+      t0 = performance.now();
+      const d01 = 1300, d12 = 2500;
+      const minS = Math.min(fromSt, toSt), maxS = Math.max(fromSt, toSt);
+      let total = 0;
+      if (minS < 1) total += (Math.min(1, maxS) - minS) * d01;
+      if (maxS > 1) total += (maxS - Math.max(1, minS)) * d12;
+      dur = Math.max(200, total);
+    }
+
+    const railBtns = document.querySelectorAll('#rail button');
+    railBtns.forEach((btn, idx) => btn.addEventListener('click', () => go(idx)));
+    document.getElementById('explore').addEventListener('click', (e) => { e.preventDefault(); go(2); });
+    document.getElementById('home').addEventListener('click', (e) => { e.preventDefault(); go(0); });
+    document.getElementById('navTharsis').addEventListener('click', (e) => { e.preventDefault(); go(1); });
+    document.getElementById('navLanding').addEventListener('click', (e) => { e.preventDefault(); go(2); });
+    document.getElementById('nextStepBtn').addEventListener('click', () => {
+      go((toSt + 1) % 3);
+    });
+    document.getElementById('menuStepBtn').addEventListener('click', () => {
+      go((toSt + 1) % 3);
+    });
+    document.getElementById('searchSeatsBtn').addEventListener('click', () => {
+      go(0);
+    });
+
+    let wheelLock = 0;
+    window.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) < 8) return;
+      const now = performance.now();
+      if (now < wheelLock) return;
+      wheelLock = now + 1400;
+      go(toSt + (e.deltaY > 0 ? 1 : -1));
+    }, { passive: true });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') go(toSt - 1);
+    });
+
+    // 2D Dust Motes Canvas
+    const dustCanvas = document.getElementById('dust');
+    const dctx = dustCanvas.getContext('2d');
+    const sprite = document.createElement('canvas');
+    sprite.width = sprite.height = 64;
+    const sctx = sprite.getContext('2d');
+    const rg = sctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    rg.addColorStop(0, 'rgba(255,214,170,0.95)');
+    rg.addColorStop(0.4, 'rgba(255,180,120,0.42)');
+    rg.addColorStop(1, 'rgba(255,180,120,0)');
+    sctx.fillStyle = rg;
+    sctx.fillRect(0, 0, 64, 64);
+
+    let seed = 42;
+    function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+    const motes = Array.from({ length: 34 }, () => {
+      const r0 = rnd();
+      return { x: rnd(), y: rnd(), r: 3 + r0 * r0 * 34, s: 0.004 + rnd() * 0.012, p: rnd() * 6.28 };
+    });
+
+    // Seamless Mars Map Texture Canvas (starts with rich procedural Mars rust surface, then upgrades when Higgsfield map loads)
+    const mapCanvas = document.createElement('canvas');
+    mapCanvas.width = 1024;
+    mapCanvas.height = 512;
+    const mctx = mapCanvas.getContext('2d');
+    const baseGrad = mctx.createLinearGradient(0, 0, 0, 512);
+    baseGrad.addColorStop(0, '#e9dfd2');
+    baseGrad.addColorStop(0.08, '#c86a3c');
+    baseGrad.addColorStop(0.5, '#b54d24');
+    baseGrad.addColorStop(0.92, '#9e3e18');
+    baseGrad.addColorStop(1, '#e9dfd2');
+    mctx.fillStyle = baseGrad;
+    mctx.fillRect(0, 0, 1024, 512);
+    for (let i = 0; i < 160; i++) {
+      mctx.fillStyle = i % 2 === 0 ? 'rgba(90, 28, 10, 0.24)' : 'rgba(235, 145, 92, 0.22)';
+      mctx.beginPath();
+      mctx.ellipse(rnd() * 1024, 40 + rnd() * 432, 16 + rnd() * 90, 8 + rnd() * 45, 0, 0, Math.PI * 2);
+      mctx.fill();
+    }
+
+    const glCanvas = document.getElementById('gl');
+    let renderer = null;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas: glCanvas, alpha: true, antialias: true });
+    } catch (e) {
+      renderer = null;
+    }
+
+    const mapTex = new THREE.CanvasTexture(mapCanvas);
+    mapTex.colorSpace = THREE.NoColorSpace;
+    mapTex.wrapS = THREE.RepeatWrapping;
+
+    const mapImg = new Image();
+    mapImg.crossOrigin = 'anonymous';
+    mapImg.onload = () => {
+      const W = 2688, H = 1344;
+      mapCanvas.width = W;
+      mapCanvas.height = H;
+      mctx.drawImage(mapImg, 0, 0, W, H);
+      const fw = Math.round(W * 0.07);
+      const tmp = document.createElement('canvas');
+      tmp.width = fw; tmp.height = H;
+      const tctx = tmp.getContext('2d');
+      tctx.drawImage(mapImg, 0, 0, fw, mapImg.height, 0, 0, fw, H);
+      tctx.globalCompositeOperation = 'destination-in';
+      const hg = tctx.createLinearGradient(0, 0, fw, 0);
+      hg.addColorStop(0, 'rgba(0,0,0,0)');
+      hg.addColorStop(1, 'rgba(0,0,0,1)');
+      tctx.fillStyle = hg;
+      tctx.fillRect(0, 0, fw, H);
+      mctx.drawImage(tmp, W - fw, 0);
+      mapTex.needsUpdate = true;
+    };
+    mapImg.src = MAP_URL;
+
+    let W = window.innerWidth, H = window.innerHeight;
+    let camera, scene, planet, tilt, spin, matSphere, matAtmo;
+
+    if (renderer) {
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(W, H);
+      scene = new THREE.Scene();
+      camera = new THREE.OrthographicCamera(-W / 2, W / 2, H / 2, -H / 2, -2e5, 2e5);
+
+      planet = new THREE.Group();
+      tilt = new THREE.Group();
+      spin = new THREE.Group();
+      planet.add(tilt);
+      tilt.add(spin);
+      scene.add(planet);
+
+      const sunVec = new THREE.Vector3(0.62, 0.5, 0.6).normalize();
+      matSphere = new THREE.ShaderMaterial({
+        uniforms: {
+          map: { value: mapTex },
+          texel: { value: new THREE.Vector2(1 / 2688, 1 / 1344) },
+          sun: { value: sunVec },
+          hiDir: { value: uvToDir(THARSIS.u, THARSIS.v) },
+          hi: { value: 0 },
+          hiR: { value: 0.62 },
+          ready: { value: 1 }
+        },
+        vertexShader: `
+          varying vec2 vUv; varying vec3 vObj; varying vec3 vN;
+          void main(){
+            vUv = uv;
+            vObj = normalize(position);
+            vN = normalize(mat3(modelMatrix) * normal);
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.);
+          }
+        `,
+        fragmentShader: `
+          uniform sampler2D map; uniform vec2 texel; uniform vec3 sun, hiDir; uniform float hi, hiR, ready;
+          varying vec2 vUv; varying vec3 vObj; varying vec3 vN;
+          float luma(vec2 u){ return dot(texture2D(map, u).rgb, vec3(.3,.6,.1)); }
+          void main(){
+            vec3 col = texture2D(map, vUv).rgb;
+            col = pow(col, vec3(2.6)) * vec3(1.18,.74,.56);
+            vec3 n = normalize(vN);
+            vec3 t = normalize(cross(vec3(0.,1.,0.), n)), b = cross(n, t);
+            float dx = luma(vUv + vec2(texel.x*2.,0.)) - luma(vUv - vec2(texel.x*2.,0.));
+            float dy = luma(vUv + vec2(0.,texel.y*2.)) - luma(vUv - vec2(0.,texel.y*2.));
+            n = normalize(n - (t*dx + b*dy) * 1.9);
+            float diff = max(dot(n, sun), 0.);
+            vec3 lit = col * (vec3(1.5,1.32,1.18) * pow(diff, .85) + vec3(.2,.09,.06));
+            float d = acos(clamp(dot(normalize(vObj), hiDir), -1., 1.)) + (luma(vUv) - .45) * .22;
+            float m = smoothstep(hiR, hiR - .03, d), edge = smoothstep(.03, .0, abs(d - hiR + .01));
+            lit = mix(lit, mix(lit, vec3(.62,.012,.07) * (.25 + diff * 1.05) * (.5 + luma(vUv) * 1.1), .9), m * hi) + vec3(1.,.42,.4) * edge * hi * .22;
+            float fres = pow(1. - max(vN.z, 0.), 3.2);
+            lit += vec3(1.,.5,.26) * fres * (.05 + diff * .5);
+            lit = lit / (lit * .3 + 1.) * 1.3;
+            gl_FragColor = vec4(pow(lit, vec3(1./2.2)), 1.) * ready;
+          }
+        `
+      });
+
+      const sphereMesh = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 96), matSphere);
+      spin.add(sphereMesh);
+
+      matAtmo = new THREE.ShaderMaterial({
+        uniforms: { sun: { value: sunVec }, ready: { value: 1 } },
+        side: THREE.BackSide,
+        blending: THREE.AdditiveBlending,
+        transparent: true,
+        depthWrite: false,
+        vertexShader: `
+          varying vec3 vN;
+          void main(){
+            vN = normalize(mat3(modelMatrix)*normal);
+            gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.);
+          }
+        `,
+        fragmentShader: `
+          uniform vec3 sun; uniform float ready; varying vec3 vN;
+          void main(){
+            float z = clamp(-vN.z, 0., 1.), a = smoothstep(.0, .55, z);
+            float s = .55 + .6 * max(dot(-vN * vec3(1.,1.,0.), normalize(sun * vec3(1.,1.,0.))), 0.);
+            a = pow(a, 2.6) * s * .7;
+            gl_FragColor = vec4(vec3(1.,.64,.36), a * ready);
+          }
+        `
+      });
+      planet.add(new THREE.Mesh(new THREE.SphereGeometry(1.14, 64, 48), matAtmo));
+    }
+
+    function resizeAll() {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      dustCanvas.width = Math.round(W * dpr);
+      dustCanvas.height = Math.round(H * dpr);
+      dctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (renderer && camera) {
+        renderer.setSize(W, H);
+        camera.left = -W / 2; camera.right = W / 2;
+        camera.top = H / 2; camera.bottom = -H / 2;
+        camera.updateProjectionMatrix();
+      }
+      pick(activeSiteIdx);
+    }
+    resizeAll();
+    window.addEventListener('resize', resizeAll);
+
+    // Drag & Pointer Interaction
+    let yaw = faceYaw(uvToDir(0.4, 0.5));
+    let pitch = 0.16;
+    let vy = 0;
+    let dragging = false, downX = 0, downY = 0, lastX = 0, lastY = 0, moved = 0, lastDragTime = -10;
+    let mouseX = 0, mouseY = 0;
+
+    window.addEventListener('pointermove', (e) => {
+      mouseX = e.clientX / W - 0.5;
+      mouseY = e.clientY / H - 0.5;
+      if (!dragging) return;
+      const dx = e.clientX - lastX;
+      const dy = e.clientY - lastY;
+      lastX = e.clientX; lastY = e.clientY;
+      moved += Math.hypot(dx, dy);
+      const R0 = (H > W * 1.05) ? W * 0.36 : Math.min(H * 0.3, W * 0.19);
+      const k = 1.1 / Math.max(80, R0);
+      yaw += dx * k;
+      pitch = clamp(pitch + dy * k, -1, 1);
+      vy = dx * k * 0.35;
+      lastDragTime = performance.now() * 0.001;
+    }, { passive: true });
+
+    glCanvas.addEventListener('pointerdown', (e) => {
+      if (st > 1.02) return;
+      dragging = true;
+      glCanvas.classList.add('drag');
+      downX = lastX = e.clientX;
+      downY = lastY = e.clientY;
+      moved = 0;
+    });
+
+    window.addEventListener('pointerup', (e) => {
+      if (!dragging) return;
+      dragging = false;
+      glCanvas.classList.remove('drag');
+      if (moved < 6 && toSt < 2) {
+        go(toSt + 1);
+      }
+    });
+
+    const word0El = document.getElementById('word0');
+    const eyebrowEl = document.getElementById('eyebrow');
+    const flareEl = document.getElementById('flare');
+    const hintEl = document.getElementById('hint');
+    const pinEl = document.getElementById('pin');
+    const word1El = document.getElementById('word1');
+    const fogEl = document.getElementById('fog');
+    const destEl = document.getElementById('dest');
+    const destSmallEl = destEl.querySelector('small');
+    const barEl = document.getElementById('bar');
+    const scrimEl = document.getElementById('scrim');
+
+    const startTime = performance.now();
+    let prevNow = startTime;
+
+    function render(now) {
+      requestAnimationFrame(render);
+      const dt = Math.min(0.05, Math.max(0.001, (now - prevNow) * 0.001));
+      prevNow = now;
+      const paused = document.documentElement.getAttribute('data-motion') === 'paused';
+      const t = paused ? 1.8 : (now - startTime) * 0.001;
+      const age = Math.max(1.8, (now - startTime) * 0.001);
+
+      st = mix(fromSt, toSt, io(seg(now, t0, t0 + dur)));
+      const a = clamp(st, 0, 1);
+      const b = clamp(st - 1, 0, 1);
+
+      const portrait = H > W * 1.05;
+      const R0 = portrait ? W * 0.36 : Math.min(H * 0.3, W * 0.19);
+      const grow = out(seg(age, 0, 1.5));
+      const iw = out(seg(age, 0.75, 1.7));
+      const bz = io(seg(b, 0, 0.62));
+
+      const px = portrait ? 0.5 * W : mix(0.5 * W, 0.36 * W, a);
+      const py = portrait ? mix(0.4 * H, 0.33 * H, a) : 0.5 * H;
+      const R = R0 * mix(0.03, 1, grow) * (1 + a * 0.04) * Math.exp(bz * 2.5);
+      const cx = mix(px, 0.5 * W, bz);
+      const cy = mix(py, 0.5 * H, bz);
+
+      // Rotation & target steering
+      const fRate = (r) => 1 - Math.exp(-dt * r);
+      const site = SITES[activeSiteIdx];
+      const targetPt = b > 0.02 ? site : THARSIS;
+      const targetDir = uvToDir(targetPt.u, targetPt.v);
+
+      if (st < 0.02 && !dragging && (t - lastDragTime > 1.5)) {
+        if (!paused) yaw += dt * 0.12;
+        yaw += vy;
+        vy *= Math.exp(-dt * 4);
+        pitch = mix(pitch, 0.16, fRate(1.2));
+      } else if (st >= 0.02) {
+        const goalYaw = faceYaw(targetDir);
+        let dYaw = ((goalYaw - yaw + Math.PI) % (Math.PI * 2)) - Math.PI;
+        if (dYaw < -Math.PI) dYaw += Math.PI * 2;
+        yaw += dYaw * fRate(3.6);
+        pitch = mix(pitch, faceLat(targetDir), fRate(3.6));
+      }
+
+      if (renderer && planet && matSphere) {
+        planet.position.set(cx - W / 2, H / 2 - cy, 0);
+        planet.scale.setScalar(R);
+        tilt.rotation.x = pitch;
+        spin.rotation.y = yaw;
+        matSphere.uniforms.hiDir.value.copy(targetDir);
+        matSphere.uniforms.hiR.value = b > 0.02 ? mix(0.62, 0.3, seg(b, 0, 0.1)) : 0.62;
+        matSphere.uniforms.hi.value = clamp(seg(a, 0.15, 0.6) + (b > 0 ? 1 : 0), 0, 1);
+        renderer.render(scene, camera);
+      }
+
+      // DOM Choreography
+      const I = (1 - iw) * 50;
+      word0El.style.clipPath = 'inset(-10% ' + I.toFixed(1) + '% -10% ' + I.toFixed(1) + '%)';
+      word0El.style.opacity = String(1 - seg(a, 0.1, 0.5));
+      word0El.style.transform = 'translate(calc(-50% + ' + (portrait ? 0 : -a * 0.08 * W).toFixed(1) + 'px), calc(-50% + ' + (mouseY * -6).toFixed(1) + 'px))';
+
+      eyebrowEl.style.opacity = String(iw * (1 - seg(a, 0.05, 0.35)));
+      eyebrowEl.style.transform = 'translate(-50%, ' + (-R * 1.12 - 26).toFixed(1) + 'px)';
+
+      flareEl.style.left = (cx + R * 0.74).toFixed(1) + 'px';
+      flareEl.style.top = (cy - R * 0.62).toFixed(1) + 'px';
+      flareEl.style.opacity = String(grow * (0.88 + 0.12 * Math.sin(t * 1.3)) * (1 - seg(bz, 0, 0.35)));
+
+      hintEl.style.opacity = String(iw * 0.8 * (1 - seg(a, 0, 0.25)));
+
+      // Project Tharsis pin
+      const thDir = uvToDir(THARSIS.u, THARSIS.v).clone();
+      thDir.applyAxisAngle(new THREE.Vector3(0, 1, 0), yaw);
+      thDir.applyAxisAngle(new THREE.Vector3(1, 0, 0), pitch);
+      pinEl.style.transform = 'translate3d(' + (cx + thDir.x * R - 6).toFixed(1) + 'px, ' + (cy - thDir.y * R - 8).toFixed(1) + 'px, 0)';
+      pinEl.style.opacity = String(seg(thDir.z, 0.22, 0.42) * (1 - seg(a, 0, 0.3)));
+
+      const ka = seg(a, 0.45, 1);
+      word1El.style.opacity = String(ka * (1 - seg(b, 0.02, 0.16)));
+      word1El.style.transform = 'translate(calc(-50% + ' + (portrait ? 0 : 0.02 * W + (1 - out(ka)) * 40).toFixed(1) + 'px), ' + (portrait ? 0.46 * H : 0.56 * H).toFixed(1) + 'px)';
+
+      const scOp = seg(a, 0.55, 1) * (1 - seg(b, 0, 0.14));
+      sitesUl.style.opacity = String(scOp);
+      sitesUl.style.pointerEvents = scOp > 0.6 ? 'auto' : 'none';
+      cardEl.style.opacity = String(scOp);
+      cardEl.style.pointerEvents = scOp > 0.6 ? 'auto' : 'none';
+      cardEl.style.transform = 'translateX(' + ((1 - out(seg(a, 0.6, 1))) * 26).toFixed(1) + 'px)';
+
+      glCanvas.style.pointerEvents = st < 1.02 ? 'auto' : 'none';
+      regionEl.style.opacity = String(seg(b, 0.14, 0.26) * (1 - seg(b, 0.42, 0.52)));
+
+      const fi = seg(b, 0.36, 0.54), fo = seg(b, 0.62, 0.96);
+      fogEl.style.opacity = String(fi * (1 - fo));
+
+      const showLand = b > 0.5;
+      const lk = out(seg(b, 0.5, 1));
+      const fk = out(seg(b, 0.58, 1));
+      const dk = out(seg(b, 0.66, 0.98));
+      const drift = 1 + 0.02 * Math.sin(t * 0.18);
+
+      landEl.style.opacity = showLand ? '1' : '0';
+      foreEl.style.opacity = showLand ? '1' : '0';
+      destEl.style.opacity = showLand ? '1' : '0';
+
+      if (showLand) {
+        landEl.style.transform = 'translate(' + (mouseX * -14).toFixed(1) + 'px, ' + mix(0.2 * H, mouseY * -8, lk).toFixed(1) + 'px) scale(' + (mix(1.3, 1.05, lk) * drift).toFixed(3) + ')';
+        foreEl.style.transform = 'translate(' + (mouseX * -46).toFixed(1) + 'px, ' + mix(0.42 * H, 0, fk).toFixed(1) + 'px) scale(1.06)';
+        destEl.style.transform = 'translate(' + (mouseX * -26).toFixed(1) + 'px, ' + mix(0.62 * H, (portrait ? 0.3 : 0.27) * H, dk).toFixed(1) + 'px)';
+        destSmallEl.style.opacity = String(seg(b, 0.8, 1) * 0.92);
+      }
+
+      const bk = seg(b, 0.86, 1);
+      barEl.style.opacity = String(bk);
+      barEl.style.pointerEvents = bk > 0.6 ? 'auto' : 'none';
+      barEl.style.transform = 'translate(-50%, ' + ((1 - out(bk)) * 34).toFixed(1) + 'px)';
+
+      scrimEl.style.opacity = String(seg(b, 0.6, 0.9));
+
+      const activeRail = Math.round(st);
+      railBtns.forEach((rb, idx) => rb.classList.toggle('on', idx === activeRail));
+
+      // Draw Dust Motes
+      dctx.clearRect(0, 0, W, H);
+      const landMul = showLand ? 0.7 : 1.0;
+      for (let i = 0; i < motes.length; i++) {
+        const m = motes[i];
+        const mx = (((m.x + t * m.s + 2) % 1.1) - 0.05) * W;
+        const my = (m.y + Math.sin(t * 0.3 + m.p) * 0.02) * H;
+        const s = Math.sin(t * 0.7 + m.p);
+        dctx.globalAlpha = (0.3 + 0.35 * s * s) * landMul;
+        dctx.drawImage(sprite, mx - m.r, my - m.r, m.r * 2, m.r * 2);
+      }
+    }
+    requestAnimationFrame(render);
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.mar96-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

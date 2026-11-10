@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Folio — Independent Press &amp; Reading Room</title>
+  <meta name="description" content="Folio is a small-batch bookshop and reading room—pairing new fiction, essays, and design monographs with notes from the people who made them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --bg-warm: #f3f0e8;
+      --surface: #f3f0e8;
+      --ink: #171614;
+      --ink-muted: #666159;
+      --ink-faint: #9a948a;
+      --rule: rgba(23, 22, 20, 0.1);
+      --btn-bg: #171614;
+      --btn-fg: #faf9f5;
+      --accent: #8c2d19;
+      --accent-text: #7a2412;
+      --accent-2: #b88746;
+      --on-accent: #faf9f5;
+      --font-display: "Libre Caslon Display", Georgia, serif;
+      --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--ink); color: var(--bg); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 100;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--ink); color: var(--bg);
+      font-size: 13px; font-weight: 500; text-decoration: none;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    /* Hero Stage */
+    .flb-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 680px;
+      overflow: hidden;
+      background: radial-gradient(ellipse 90% 70% at 50% 28%, #fcfbf8 0%, #faf9f5 58%, #f2efe6 100%);
+    }
+    #book-stage {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      display: block;
+    }
+
+    /* Top Bar */
+    .flb-header {
+      position: relative;
+      z-index: 10;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px clamp(24px, 4.5vw, 56px);
+    }
+    .flb-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--ink); text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 24px; letter-spacing: -0.02em;
+    }
+    .flb-nav-links {
+      display: flex; align-items: center; gap: 36px; list-style: none;
+    }
+    .flb-nav-links a {
+      color: var(--ink-muted); text-decoration: none;
+      font-size: 14px; font-weight: 500;
+      transition: color 0.2s var(--ease-out);
+    }
+    .flb-nav-links a:hover { color: var(--ink); }
+    .flb-nav-actions {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .flb-pill-outline {
+      padding: 9px 16px; border-radius: 999px;
+      border: 1px solid var(--rule);
+      background: rgba(250, 249, 245, 0.8);
+      color: var(--ink);
+      font-family: inherit; font-size: 12.5px; font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+    }
+    .flb-pill-dark {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 999px;
+      border: 1px solid var(--ink);
+      background: var(--btn-bg); color: var(--btn-fg);
+      font-family: inherit; font-size: 13px; font-weight: 500;
+      text-decoration: none; cursor: pointer;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .flb-pill-dark:hover { transform: translateY(-1px); opacity: 0.92; }
+    .flb-pill-dark:active, .flb-pill-outline:active { transform: scale(0.97); }
+
+    /* Editorial Copy Overlay */
+    .flb-copy {
+      position: relative;
+      z-index: 8;
+      max-width: 780px;
+      margin: clamp(18px, 4.2vh, 52px) auto 0;
+      padding: 0 24px;
+      text-align: center;
+      pointer-events: none;
+    }
+    .flb-copy a, .flb-copy button { pointer-events: auto; }
+    .flb-eyebrow {
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+    .flb-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 5.6vw, 4.85rem);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+    .flb-sub {
+      font-size: clamp(1rem, 1.2vw, 1.125rem);
+      font-weight: 400;
+      line-height: 1.62;
+      color: var(--ink-muted);
+      max-width: 540px;
+      margin: 0 auto 26px;
+    }
+    .flb-cta-row {
+      display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;
+    }
+    .flb-cta-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 999px;
+      background: var(--btn-bg); color: var(--btn-fg);
+      font-family: inherit; font-size: 15px; font-weight: 500;
+      border: none; cursor: pointer;
+      box-shadow: 0 10px 24px -8px rgba(23, 22, 20, 0.32);
+      transition: transform 0.22s var(--ease-out);
+    }
+    .flb-cta-primary:hover { transform: translateY(-2px); }
+
+    /* Below-the-Fold Curated Monographs & Reading Room */
+    .flb-section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 88px clamp(24px, 4.5vw, 56px);
+      border-top: 1px solid var(--rule);
+    }
+    .flb-sec-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .flb-sec-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.4vw, 3rem);
+      font-weight: 400; letter-spacing: -0.02em;
+    }
+    .flb-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .flb-card {
+      padding: 28px;
+      border-radius: 20px;
+      background: var(--bg-warm);
+      border: 1px solid var(--rule);
+    }
+    .flb-card-meta {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent-text);
+      margin-bottom: 10px;
+    }
+    .flb-card h3 {
+      font-family: var(--font-display);
+      font-size: 26px; font-weight: 400; margin-bottom: 8px;
+    }
+    .flb-card p {
+      font-size: 14px; line-height: 1.6; color: var(--ink-muted);
+    }
+
+    .flb-footer {
+      border-top: 1px solid var(--rule);
+      padding: 36px clamp(24px, 4.5vw, 56px);
+      max-width: 1240px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+      font-size: 13px; color: var(--ink-muted);
+    }
+
+    @media (max-width: 900px) {
+      .flb-nav-links { display: none; }
+      .flb-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .flb-header { padding: 18px 16px; }
+      .flb-h1 { font-size: 2.35rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="flb-hero" aria-label="Folio Rising 3D Bookshop Hero">
+      <canvas id="book-stage" aria-hidden="true"></canvas>
+
+      <header class="flb-header">
+        <a href="#main-content" class="flb-brand">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M3.5 4.5C6.5 3.5 9.5 4.2 11 5.6C12.5 4.2 15.5 3.5 18.5 4.5V17.5C15.5 16.5 12.5 17.2 11 18.6C9.5 17.2 6.5 16.5 3.5 17.5V4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M11 5.6V18.6" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span>Folio</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <ul class="flb-nav-links">
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#essays">Essays</a></li>
+            <li><a href="#press">Press</a></li>
+            <li><a href="#shops">Shops</a></li>
+          </ul>
+        </nav>
+
+        <div class="flb-nav-actions">
+          <button type="button" class="flb-pill-outline" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+          <a href="#press" class="flb-pill-dark">Submit a manuscript</a>
+        </div>
+      </header>
+
+      <div class="flb-copy">
+        <div class="flb-eyebrow tabular-nums">Independent Press · Est. 2019</div>
+        <h1 class="flb-h1">Books worth keeping on the table.</h1>
+        <p class="flb-sub">
+          Folio is a small-batch bookshop and reading room—pairing new fiction, essays, and design monographs with notes from the people who made them.
+        </p>
+        <div class="flb-cta-row">
+          <button type="button" class="flb-cta-primary" id="browseStackBtn">
+            <span>Browse the stack</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="flb-pill-outline" id="waveRippleBtn" data-next-preview="true">
+            Trigger Shelf Wave
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="flb-section" id="catalog" aria-label="Current Folio Monograph Editions">
+      <div class="flb-sec-head">
+        <div>
+          <div class="flb-eyebrow">AUTUMN / WINTER TABLE</div>
+          <h2 class="flb-sec-title">Small-Batch Printings &amp; Reading Room Notes</h2>
+        </div>
+        <span class="tabular-nums" style="font-size:13px;color:var(--ink-muted);">32 TITLES IN STOCK · SEWN HARDBACK</span>
+      </div>
+      <div class="flb-grid-3" id="essays">
+        <article class="flb-card">
+          <div class="flb-card-meta tabular-nums">EDITION 014 · 800 COPIES</div>
+          <h3>Forms of Quiet Architecture</h3>
+          <p>Field photographs and measured timber drawings from twelve coastal chapels and Nordic reading pavilions.</p>
+        </article>
+        <article class="flb-card" id="press">
+          <div class="flb-card-meta tabular-nums">EDITION 015 · 1,200 COPIES</div>
+          <h3>On Type &amp; Paper Grain</h3>
+          <p>Collected essays on lead typesetting, cotton rag stocks, and the tactile geometry of twentieth-century pocket editions.</p>
+        </article>
+        <article class="flb-card" id="shops">
+          <div class="flb-card-meta tabular-nums">EDITION 016 · 650 COPIES</div>
+          <h3>Letters from the Sound</h3>
+          <p>A literary correspondence across three island winters, bound in raw linen with tipped-in botanical plates.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="flb-footer">
+    <span>© 2026 Folio Independent Press &amp; Bookshop. Printed on Munken Lynx.</span>
+    <span class="tabular-nums">COPENHAGEN · ZÜRICH · KYOTO</span>
+  </footer>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    const SHEET_A = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261031_105917_a881845b-3b47-4d75-be0f-4c0056c29ff9.png&w=2048&q=85";
+    const SHEET_B = "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261031_105926_70827da4-54ab-41bf-a64f-6034c7df09e9.png&w=2048&q=85";
+    const canvas = document.getElementById('book-stage');
+
+    const SPINE_PALETTE = [
+      0x1f3a52, 0xb84a2c, 0x2c5545, 0xc8963e,
+      0x6b2d3c, 0x232629, 0x3b5978, 0x8f5b3c,
+      0x475c46, 0xa8382b, 0x2d4059, 0x7a5c43,
+      0x1d2d27, 0xb5654d, 0x4b3f52, 0x9c7a44
+    ];
+
+    let renderer = null;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    } catch (err) {
+      renderer = null;
+    }
+
+    if (renderer) {
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.04;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(28, window.innerWidth / window.innerHeight, 0.1, 100);
+      camera.position.set(0, 1.35, 16.5);
+      camera.lookAt(0, -1.65, -0.5);
+
+      scene.add(new THREE.HemisphereLight(0xfffcf5, 0xd8cfc0, 1.35));
+
+      const keyLight = new THREE.DirectionalLight(0xfff7ea, 1.55);
+      keyLight.position.set(-6, 11, 9);
+      keyLight.castShadow = true;
+      keyLight.shadow.mapSize.set(1024, 1024);
+      keyLight.shadow.camera.near = 2;
+      keyLight.shadow.camera.far = 30;
+      const d = 12;
+      keyLight.shadow.camera.left = -d;
+      keyLight.shadow.camera.right = d;
+      keyLight.shadow.camera.top = d;
+      keyLight.shadow.camera.bottom = -d;
+      keyLight.shadow.bias = -0.0005;
+      scene.add(keyLight);
+
+      const rimLight = new THREE.DirectionalLight(0xeef2ff, 0.55);
+      rimLight.position.set(7, 5, -4);
+      scene.add(rimLight);
+
+      // Page-edge ruled scanline texture
+      const pageEdgeCanvas = document.createElement('canvas');
+      pageEdgeCanvas.width = 64;
+      pageEdgeCanvas.height = 64;
+      const pCtx = pageEdgeCanvas.getContext('2d');
+      pCtx.fillStyle = '#f3ead8';
+      pCtx.fillRect(0, 0, 64, 64);
+      pCtx.fillStyle = '#dfd4be';
+      for (let y = 0; y < 64; y += 3) {
+        pCtx.fillRect(0, y, 64, 1);
+      }
+      const pageEdgeTex = new THREE.CanvasTexture(pageEdgeCanvas);
+      pageEdgeTex.colorSpace = THREE.SRGBColorSpace;
+      const matPages = new THREE.MeshStandardMaterial({ map: pageEdgeTex, roughness: 0.78 });
+
+      // Procedural fallback cover textures (immediately visible before sprite sheets finish loading)
+      const coverTextures = [];
+      for (let i = 0; i < 16; i++) {
+        const cCan = document.createElement('canvas');
+        cCan.width = 256;
+        cCan.height = 360;
+        const cCtx = cCan.getContext('2d');
+        const hex = '#' + SPINE_PALETTE[i].toString(16).padStart(6, '0');
+        cCtx.fillStyle = hex;
+        cCtx.fillRect(0, 0, 256, 360);
+        cCtx.strokeStyle = 'rgba(250, 249, 245, 0.45)';
+        cCtx.lineWidth = 3;
+        cCtx.strokeRect(18, 18, 220, 324);
+        cCtx.fillStyle = '#faf9f5';
+        cCtx.font = '24px Georgia, serif';
+        cCtx.fillText('FOLIO ED. ' + String(i + 1).padStart(2, '0'), 34, 72);
+        const tex = new THREE.CanvasTexture(cCan);
+        tex.colorSpace = THREE.SRGBColorSpace;
+        coverTextures.push(tex);
+      }
+
+      function sliceSheetIntoCovers(url, offsetIdx) {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          const cols = 4, rows = 2;
+          const cellW = img.width / cols;
+          const cellH = img.height / rows;
+          const padX = cellW * 0.035;
+          const padY = cellH * 0.035;
+          for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+              const idx = offsetIdx + r * cols + c;
+              if (idx >= coverTextures.length) continue;
+              const sub = document.createElement('canvas');
+              sub.width = 384;
+              sub.height = 512;
+              const sCtx = sub.getContext('2d');
+              sCtx.drawImage(
+                img,
+                c * cellW + padX, r * cellH + padY,
+                cellW - padX * 2, cellH - padY * 2,
+                0, 0, 384, 512
+              );
+              coverTextures[idx].image = sub;
+              coverTextures[idx].needsUpdate = true;
+            }
+          }
+        };
+        img.src = url;
+      }
+      sliceSheetIntoCovers(SHEET_A, 0);
+      sliceSheetIntoCovers(SHEET_B, 8);
+
+      const books = [];
+      const rows = 4, cols = 8;
+      const colSpacing = 1.92;
+      const rowYBase = [-2.55, -3.10, -3.72, -4.38];
+      const rowZBase = [-2.20, -0.75, 0.70, 2.15];
+
+      const W = 1.48, H = 2.08, D = 0.28, boardT = 0.032, inset = 0.04;
+      const coverGeo = new THREE.BoxGeometry(W, H, boardT);
+      const spineGeo = new THREE.BoxGeometry(boardT, H, D);
+      const blockGeo = new THREE.BoxGeometry(W - inset, H - inset * 1.4, D - boardT * 2);
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const idx = (r * cols + c) % 16;
+          const group = new THREE.Group();
+
+          const matFront = new THREE.MeshStandardMaterial({
+            map: coverTextures[idx],
+            roughness: 0.42,
+            metalness: 0.04
+          });
+          const matSpine = new THREE.MeshStandardMaterial({
+            color: SPINE_PALETTE[idx],
+            roughness: 0.52,
+            metalness: 0.05
+          });
+
+          const front = new THREE.Mesh(coverGeo, matFront);
+          front.position.z = D / 2 - boardT / 2;
+          front.castShadow = true;
+          front.receiveShadow = true;
+
+          const back = new THREE.Mesh(coverGeo, matSpine);
+          back.position.z = -D / 2 + boardT / 2;
+          back.castShadow = true;
+
+          const spine = new THREE.Mesh(spineGeo, matSpine);
+          spine.position.x = -W / 2 + boardT / 2;
+          spine.castShadow = true;
+
+          const pages = new THREE.Mesh(blockGeo, matPages);
+          pages.position.x = inset / 2;
+
+          group.add(front, back, spine, pages);
+
+          const rowStagger = (r % 2 === 0 ? -0.42 : 0.42);
+          const xBase = (c - (cols - 1) / 2) * colSpacing + rowStagger + ((c * 7 + r * 3) % 5 - 2) * 0.05;
+          const yTarget = rowYBase[r] + Math.sin(c * 0.65 + r) * 0.14;
+          const zBase = rowZBase[r] + ((c + r) % 3 - 1) * 0.06;
+
+          const rotY = ((c * 13 + r * 7) % 11 - 5) * 0.068;
+          const rotX = -0.18 + ((c * 5 + r * 3) % 7 - 3) * 0.032;
+          const rotZ = ((c * 9 + r * 11) % 9 - 4) * 0.055;
+
+          const normalizedX = (xBase + 7.5) / 15;
+          const delay = 0.06 + normalizedX * 0.55 + r * 0.09;
+
+          group.position.set(xBase, yTarget - 6.8, zBase);
+          scene.add(group);
+
+          books.push({
+            group,
+            xBase,
+            yTarget,
+            zBase,
+            yCurrent: yTarget - 6.8,
+            yVel: 0,
+            rotX,
+            rotY,
+            rotZ,
+            delay,
+            phase: c * 0.7 + r * 1.3
+          });
+        }
+      }
+
+      let waveStartOffset = 0;
+      let pointerWorldX = 999, pointerWorldY = 999;
+
+      window.addEventListener('pointermove', (e) => {
+        const nx = (e.clientX / window.innerWidth) * 2 - 1;
+        const ny = -(e.clientY / window.innerHeight) * 2 + 1;
+        pointerWorldX = nx * 8.2;
+        pointerWorldY = ny * 4.5 - 2.2;
+      }, { passive: true });
+
+      function triggerWave() {
+        waveStartOffset = performance.now() * 0.001;
+        books.forEach((b) => {
+          b.yCurrent = b.yTarget - 4.2;
+          b.yVel = 2.5;
+        });
+      }
+
+      document.getElementById('waveRippleBtn').addEventListener('click', triggerWave);
+      document.getElementById('browseStackBtn').addEventListener('click', () => {
+        document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      let lastT = performance.now() * 0.001;
+      function animate(nowMs) {
+        requestAnimationFrame(animate);
+        const now = nowMs * 0.001;
+        const dt = Math.min(0.033, Math.max(0.001, now - lastT));
+        lastT = now;
+        const paused = document.documentElement.getAttribute('data-motion') === 'paused';
+        const elapsed = now - waveStartOffset;
+
+        for (let i = 0; i < books.length; i++) {
+          const b = books[i];
+          if (elapsed < b.delay) continue;
+
+          const dx = b.xBase - pointerWorldX;
+          const dy = b.yTarget - pointerWorldY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const hoverLift = dist < 2.35 ? (1 - dist / 2.35) * 0.74 : 0;
+
+          const idleBob = paused ? 0 : Math.sin(now * 1.15 + b.phase) * 0.065;
+          const goalY = b.yTarget + hoverLift + idleBob;
+
+          const k = 72, damping = 11.5;
+          const force = (goalY - b.yCurrent) * k - b.yVel * damping;
+          b.yVel += force * dt;
+          b.yCurrent += b.yVel * dt;
+
+          const riseProgress = Math.max(0, Math.min(1, 1 - (b.yTarget - b.yCurrent) / 6.8));
+          b.group.position.set(b.xBase, b.yCurrent, b.zBase);
+          b.group.rotation.set(
+            b.rotX + (1 - riseProgress) * 0.45 + hoverLift * 0.14,
+            b.rotY + (paused ? 0 : Math.cos(now * 0.85 + b.phase) * 0.035),
+            b.rotZ * riseProgress
+          );
+        }
+
+        renderer.render(scene, camera);
+      }
+      requestAnimationFrame(animate);
+    }
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.boo17-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

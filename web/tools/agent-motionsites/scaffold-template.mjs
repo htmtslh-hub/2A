@@ -5,9 +5,14 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '../../../');
 
-export function getNextCatalogId() {
+export function getNextCatalogId(slug = '') {
   const catalogPath = resolve(root, 'web/src/lib/real-templates.ts');
   const content = readFileSync(catalogPath, 'utf8');
+  if (slug) {
+    const existingRe = new RegExp(`(t\\d+):\\s*\\{[^{}]*?["']?slug["']?:\\s*["']${slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`);
+    const existingMatch = content.match(existingRe);
+    if (existingMatch) return existingMatch[1];
+  }
   const matches = [...content.matchAll(/t(\d+):/g)].map(m => parseInt(m[1], 10));
   const maxId = Math.max(...matches);
   return `t${maxId + 1}`;
@@ -170,7 +175,7 @@ export function scaffoldTemplate(slug, options = {}) {
 
   const data = JSON.parse(readFileSync(dataPath, 'utf8'));
   const accessTier = options.tier || data.assignedTier || 'premium';
-  const catalogId = getNextCatalogId();
+  const catalogId = getNextCatalogId(slug);
   console.log(`Scaffolding template: ${data.title} (${slug}) with Catalog ID: ${catalogId} [tier=${accessTier}]`);
 
   const productDir = resolve(root, `web/product/giao-dien-web/${slug}`);

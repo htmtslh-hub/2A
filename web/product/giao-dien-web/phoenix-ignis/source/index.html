@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Myth Atlas — Plate IV: Phoenix ignis &amp; Kraken pelagius</title>
+  <meta name="description" content="Societas Mythologica interactive 3D bestiary plate featuring Phoenix ignis and Kraken pelagius with museum archival notes, turntable inspection, and dusk lighting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #d9cfbe;
+      --bg-outer: #c7bba7;
+      --surface: #d3c8b6;
+      --ink: #1d1914;
+      --ink-soft: #433a2f;
+      --ink-muted: #6f6353;
+      --rule: rgba(34, 28, 20, 0.22);
+      --rule-strong: rgba(34, 28, 20, 0.44);
+      --accent: #8e2418;
+      --accent-text: #741b11;
+      --accent-2: #a6782e;
+      --on-accent: #f4ede0;
+      --gold: #a6782e;
+      --card: rgba(244, 237, 224, 0.56);
+      --font-display: "Cinzel", Georgia, serif;
+      --font-serif: "Cormorant Garamond", Georgia, serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    body.dusk {
+      --bg: #1e1c18;
+      --bg-outer: #13110e;
+      --surface: #25221d;
+      --ink: #ede4d3;
+      --ink-soft: #c5b9a3;
+      --ink-muted: #8b7f6b;
+      --rule: rgba(235, 220, 195, 0.16);
+      --rule-strong: rgba(235, 220, 195, 0.34);
+      --accent: #d85a3a;
+      --accent-text: #f07b5c;
+      --gold: #d4a24c;
+      --card: rgba(38, 34, 28, 0.68);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 54% 48%, var(--bg) 0%, var(--bg) 52%, var(--bg-outer) 100%);
+      color: var(--ink);
+      font-family: var(--font-serif);
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      transition: background-color 0.6s var(--ease-out), color 0.6s var(--ease-out);
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 200;
+      padding: 8px 16px; background: var(--ink); color: var(--bg);
+      font-family: var(--font-sans); font-size: 12px; text-decoration: none;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    /* Specimen Backdrop & WebGL Stage */
+    .phx-specimen-backdrop {
+      position: fixed; left: 53%; top: 50%;
+      width: min(56vw, 68vh); aspect-ratio: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-size: cover; background-position: center;
+      opacity: 0.24;
+      filter: sepia(0.25) contrast(1.06);
+      mask-image: radial-gradient(circle, rgba(0,0,0,0.95) 28%, rgba(0,0,0,0.35) 56%, transparent 74%);
+      -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,0.95) 28%, rgba(0,0,0,0.35) 56%, transparent 74%);
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity 0.5s var(--ease-out);
+    }
+    #stage {
+      position: fixed; inset: 0;
+      width: 100%; height: 100%;
+      z-index: 2;
+      cursor: grab;
+      touch-action: none;
+    }
+    #stage.dragging { cursor: grabbing; }
+
+    /* Double-Ruled Museum Plate Frame */
+    .frame {
+      position: fixed; inset: 14px;
+      border: 1px solid var(--rule-strong);
+      pointer-events: none;
+      z-index: 6;
+    }
+    .frame::before {
+      content: ""; position: absolute; inset: 4px;
+      border: 1px solid var(--rule);
+    }
+    .corner {
+      position: absolute; width: 14px; height: 14px;
+      border-color: var(--ink-soft); border-style: solid;
+    }
+    .corner.tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+    .corner.tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+    .corner.bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+    .corner.br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+    /* UI Grid Overlay */
+    .ui {
+      position: fixed; inset: 14px;
+      z-index: 10;
+      display: grid;
+      grid-template-rows: 52px 1fr 48px;
+      pointer-events: none;
+    }
+    .ui a, .ui button, .ui nav, .ui .tabs, .ui .catalogue, .ui .switcher {
+      pointer-events: auto;
+    }
+    button:active { transform: scale(0.97); }
+
+    /* Top Bar */
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--font-display);
+      font-size: 14px; font-weight: 600;
+      letter-spacing: 0.22em;
+    }
+    .brand-mark {
+      width: 22px; height: 22px;
+      border: 1px solid var(--rule-strong);
+      border-radius: 50%;
+      display: grid; place-items: center;
+    }
+    .brand-sub {
+      font-family: var(--font-serif);
+      font-style: italic; font-size: 13px;
+      letter-spacing: 0.04em; text-transform: none;
+      color: var(--ink-muted);
+      padding-left: 12px;
+      border-left: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex; gap: 28px;
+    }
+    .nav a {
+      color: var(--ink-soft); text-decoration: none;
+      padding: 4px 0; position: relative;
+      transition: color 0.2s var(--ease-out);
+    }
+    .nav a.active, .nav a:hover { color: var(--ink); }
+    .nav a.active::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
+      height: 1px; background: var(--accent);
+    }
+    .top-meta {
+      justify-self: end;
+      display: flex; align-items: center; gap: 12px;
+      color: var(--ink-muted);
+    }
+    .archive-btn {
+      font-family: var(--font-sans);
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink);
+      background: var(--card);
+      border: 1px solid var(--rule-strong);
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .archive-btn:hover { background: var(--ink); color: var(--bg); }
+
+    /* Center Plate Columns */
+    .plate {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(290px, 380px) 1fr minmax(250px, 300px);
+      padding: 22px 28px;
+      overflow: hidden;
+    }
+    .left-col {
+      display: flex; flex-direction: column; justify-content: space-between;
+      z-index: 3;
+    }
+    .kicker {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-sans);
+      font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent-text);
+      margin-bottom: 8px;
+    }
+    .kicker::before {
+      content: ""; width: 22px; height: 1px; background: var(--accent);
+    }
+    h1.creature-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(40px, 4.8vw, 68px);
+      line-height: 0.94;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .latin {
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink-muted);
+      margin-top: 6px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .latin span {
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--rule-strong);
+      padding: 2px 7px;
+    }
+    .divider {
+      display: flex; align-items: center; gap: 10px;
+      margin: 14px 0;
+    }
+    .divider::before, .divider::after {
+      content: ""; flex: 1; height: 1px; background: var(--rule);
+    }
+    .divider i {
+      width: 6px; height: 6px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+    .desc {
+      font-size: 16.5px; line-height: 1.54;
+      color: var(--ink-soft);
+      max-width: 36ch;
+    }
+    .desc::first-letter {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 42px; line-height: 0.86;
+      padding: 3px 8px 0 0;
+      color: var(--accent-text);
+    }
+    .facts {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-top: 14px;
+    }
+    .fact {
+      padding: 9px 10px 9px 0;
+      border-right: 1px solid var(--rule);
+    }
+    .fact:nth-child(2n) { border-right: none; padding-left: 12px; }
+    .fact:nth-child(n+3) { border-top: 1px solid var(--rule); }
+    .fact-label {
+      font-family: var(--font-sans);
+      font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .fact-val {
+      font-size: 16px; font-weight: 600;
+      color: var(--ink); margin-top: 2px;
+    }
+    .tabs {
+      display: flex; gap: 6px; margin-top: 12px;
+    }
+    .tab {
+      font-family: var(--font-sans);
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 7px 12px;
+      background: transparent;
+      color: var(--ink-soft);
+      border: 1px solid var(--rule);
+      cursor: pointer;
+      transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .tab.active, .tab:hover {
+      background: var(--ink); color: var(--bg); border-color: var(--ink);
+    }
+
+    /* Center Stage Reticle & Annotations */
+    .stage-slot {
+      position: relative;
+      display: grid; place-items: center;
+    }
+    .reticle {
+      width: min(50vw, 62vh);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px dashed var(--rule);
+      position: relative;
+      pointer-events: none;
+    }
+    .reticle::before {
+      content: ""; position: absolute; inset: 7%;
+      border-radius: 50%; border: 1px solid var(--rule); opacity: 0.5;
+    }
+    .pin {
+      position: absolute;
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-sans);
+      font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ink-soft);
+      background: var(--card);
+      backdrop-filter: blur(4px);
+      padding: 4px 9px 4px 6px;
+      border: 1px solid var(--rule-strong);
+      pointer-events: auto;
+      cursor: pointer;
+      transition: background-color 0.25s var(--ease-out), color 0.25s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .pin:hover, .pin.active {
+      background: var(--ink); color: var(--bg);
+    }
+    .pin-dot {
+      width: 15px; height: 15px; border-radius: 50%;
+      background: var(--accent); color: #f6efe2;
+      display: grid; place-items: center;
+      font-size: 8.5px; font-weight: 600;
+    }
+
+    /* Right Plate Column */
+    .right-col {
+      display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;
+      z-index: 3;
+    }
+    .callout {
+      align-self: stretch;
+      background: var(--card);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--rule-strong);
+      padding: 11px 14px;
+    }
+    .callout-head {
+      font-family: var(--font-sans);
+      font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent-text);
+    }
+    .callout-body {
+      font-size: 14px; line-height: 1.4; color: var(--ink-soft); margin-top: 3px;
+    }
+    .stamp-cluster {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .medallion {
+      width: 96px; height: 96px; position: relative;
+      display: grid; place-items: center;
+    }
+    .medallion svg.ring {
+      width: 100%; height: 100%;
+      animation: spinSlow 48s linear infinite;
+    }
+    @keyframes spinSlow { to { transform: rotate(360deg); } }
+    .medallion-core {
+      position: absolute; width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--rule-strong);
+      background: var(--card);
+      display: grid; place-items: center;
+      color: var(--accent-text);
+    }
+    .compass { width: 64px; height: 64px; opacity: 0.85; }
+
+    .catalogue {
+      width: 100%;
+      background: var(--card);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--rule-strong);
+      padding: 14px 16px;
+      position: relative;
+    }
+    .catalogue::before {
+      content: ""; position: absolute; inset: 3px;
+      border: 1px solid var(--rule); pointer-events: none;
+    }
+    .cat-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 6px; margin-bottom: 8px;
+    }
+    .cat-title {
+      font-family: var(--font-sans);
+      font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .cat-no {
+      font-family: var(--font-display);
+      font-size: 12px; font-weight: 600; color: var(--accent-text);
+    }
+    .cat-row {
+      display: flex; justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px dashed var(--rule);
+      font-size: 13.5px;
+    }
+    .cat-row:last-of-type { border-bottom: none; }
+    .cat-row span:first-child { color: var(--ink-muted); font-style: italic; }
+    .cat-row span:last-child { color: var(--ink); font-weight: 600; text-align: right; }
+    .read-more {
+      margin-top: 10px; width: 100%;
+      padding: 7px 10px;
+      font-family: var(--font-sans);
+      font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase;
+      background: transparent; color: var(--ink);
+      border: 1px solid var(--rule-strong);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .read-more:hover { background: var(--ink); color: var(--bg); }
+
+    /* Bottom Bar */
+    .bottombar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 24px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--font-sans);
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+    .switcher { display: flex; align-items: center; gap: 8px; }
+    .switch-pill {
+      display: flex; align-items: center; gap: 7px;
+      padding: 5px 12px;
+      border: 1px solid var(--rule-strong);
+      background: transparent; color: var(--ink-soft);
+      font-family: var(--font-sans);
+      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .switch-pill.active {
+      background: var(--ink); color: var(--bg); border-color: var(--ink);
+    }
+    .switch-dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+    }
+    .switch-pill.active .switch-dot { background: var(--gold); }
+    .rotate-hint {
+      display: flex; align-items: center; gap: 10px;
+      color: var(--ink-soft);
+    }
+    .pager {
+      justify-self: end;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .page-btn {
+      height: 26px; padding: 0 10px;
+      border: 1px solid var(--rule-strong);
+      background: transparent; color: var(--ink);
+      display: inline-flex; align-items: center; gap: 5px;
+      cursor: pointer;
+      font-family: var(--font-sans); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
+      transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .page-btn:hover { background: var(--ink); color: var(--bg); }
+
+    /* Archival Field Notes Slide-Over Drawer */
+    .drawer {
+      position: fixed; top: 14px; right: 14px; bottom: 14px;
+      width: min(440px, 92vw);
+      background: var(--bg);
+      border-left: 1px solid var(--rule-strong);
+      z-index: 40;
+      padding: 28px 30px;
+      transform: translateX(106%);
+      transition: transform 0.42s var(--ease-out);
+      display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: -20px 0 50px rgba(0, 0, 0, 0.22);
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer-close {
+      align-self: flex-end;
+      font-family: var(--font-sans);
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      background: transparent; border: 1px solid var(--rule-strong);
+      color: var(--ink); padding: 6px 12px; cursor: pointer;
+    }
+    .drawer h2 {
+      font-family: var(--font-display);
+      font-size: 24px; letter-spacing: 0.06em; text-transform: uppercase;
+      margin-top: 8px;
+    }
+    .drawer p {
+      font-size: 16px; line-height: 1.62; color: var(--ink-soft); margin-top: 12px;
+    }
+    .drawer-quote {
+      border-left: 2px solid var(--accent);
+      padding-left: 14px; font-style: italic;
+      color: var(--ink); margin-top: 16px;
+    }
+
+    @media (max-width: 980px) {
+      .plate {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+      }
+      .right-col { display: none; }
+      .nav, .brand-sub { display: none; }
+      .reticle { width: 58vw; }
+    }
+    @media (max-width: 600px) {
+      .topbar, .bottombar { padding: 0 12px; }
+      .rotate-hint { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .medallion svg.ring { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="phx-specimen-backdrop" id="specimenBackdrop" aria-hidden="true"></div>
+  <canvas id="stage" aria-label="Interactive 3D mythological creature specimen"></canvas>
+
+  <div class="frame" aria-hidden="true">
+    <span class="corner tl"></span><span class="corner tr"></span>
+    <span class="corner bl"></span><span class="corner br"></span>
+  </div>
+
+  <div class="ui">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M12 2c1.5 4.2 5 6.3 5 10.5A5 5 0 0 1 7 12.5c0-2.6 1.6-4.5 3-6.3.5 1.8 2 2.6 2 4.3 1-1.7 1.2-4.2 0-8.5Z"/>
+          </svg>
+        </span>
+        <span>Myth Atlas</span>
+        <span class="brand-sub" id="folioLabel">Vol. IV · Folio XII</span>
+      </div>
+
+      <nav class="nav" aria-label="Atlas sections">
+        <a href="#main-content" class="active" data-nav="creatures">Creatures</a>
+        <a href="#main-content" data-nav="regions">Regions</a>
+        <a href="#main-content" data-nav="lore">Lore</a>
+        <a href="#main-content" data-nav="index">Index</a>
+      </nav>
+
+      <div class="top-meta">
+        <button type="button" class="archive-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+        <button type="button" class="archive-btn" id="openDrawerTop">Archive</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="plate">
+      <section class="left-col" aria-label="Specimen Classification and Field Description">
+        <div>
+          <div class="kicker" id="kicker">Plate IV — Bestiary of the Known World</div>
+          <h1 class="creature-name" id="name">Phoenix</h1>
+          <div class="latin">
+            <em id="latin">Phoenix ignis</em>
+            <span id="order">Order Igniformes</span>
+          </div>
+          <div class="divider" aria-hidden="true"><i></i></div>
+          <p class="desc" id="desc">
+            A solitary solar avian of the eastern deserts, whose plumage burns in shades of cinnabar and beaten gold. At the close of its fifth century it builds a funerary nest of frankincense and myrrh, ignites at dawn, and rises renewed from the warm ash.
+          </p>
+        </div>
+
+        <div>
+          <div class="facts">
+            <article class="fact">
+              <div class="fact-label" id="f1l">Wingspan</div>
+              <div class="fact-val tabular-nums" id="f1v">14 cubits</div>
+            </article>
+            <article class="fact">
+              <div class="fact-label" id="f2l">Cycle</div>
+              <div class="fact-val tabular-nums" id="f2v">500 years</div>
+            </article>
+            <article class="fact">
+              <div class="fact-label" id="f3l">First attested</div>
+              <div class="fact-val tabular-nums" id="f3v">Heliopolis, c. 2400 BC</div>
+            </article>
+            <article class="fact">
+              <div class="fact-label" id="f4l">Conservation</div>
+              <div class="fact-val" id="f4v">Singular</div>
+            </article>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Specimen chapters">
+            <button type="button" class="tab active" data-tab="origin">I · Origin</button>
+            <button type="button" class="tab" data-tab="anatomy">II · Anatomy</button>
+            <button type="button" class="tab" data-tab="sightings">III · Sightings</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage-slot" aria-label="Anatomical Specimen Callout Pins">
+        <div class="reticle" id="reticle">
+          <div class="pin active" data-pin="0" style="top: 10%; left: 54%;">
+            <span class="pin-dot">I</span><span id="pin0">Crown Crest</span>
+          </div>
+          <div class="pin" data-pin="1" style="top: 38%; left: 6%;">
+            <span class="pin-dot">II</span><span id="pin1">Solar Remiges</span>
+          </div>
+          <div class="pin" data-pin="2" style="bottom: 12%; right: 6%;">
+            <span class="pin-dot">III</span><span id="pin2">Cinder Train</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="right-col" aria-label="Archival Seal and Catalogue Card">
+        <article class="callout" id="callout">
+          <div class="callout-head" id="calloutHead">I · Crown Crest</div>
+          <div class="callout-body" id="calloutBody">Three gold-tipped plumes; first to ignite at the close of the cycle.</div>
+        </article>
+
+        <div class="stamp-cluster">
+          <svg class="compass" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.5"/>
+            <g id="needle" stroke="currentColor" stroke-width="0.9" fill="none">
+              <polygon points="50,8 54,46 50,42 46,46" fill="currentColor"/>
+              <polygon points="50,92 54,54 50,58 46,54" opacity="0.4"/>
+              <line x1="8" y1="50" x2="92" y2="50" opacity="0.35"/>
+            </g>
+            <circle cx="50" cy="50" r="3" fill="var(--accent)"/>
+            <text x="50" y="6" text-anchor="middle" font-size="6" font-family="Cinzel, serif" fill="currentColor">N</text>
+          </svg>
+
+          <div class="medallion">
+            <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+              <defs>
+                <path id="sealRingPath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/>
+              </defs>
+              <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.45"/>
+              <text font-family="Cinzel, serif" font-size="6.4" letter-spacing="2.3" fill="currentColor">
+                <textPath href="#sealRingPath">SOCIETAS · MYTHOLOGICA · CONDITA · MDCCXCII ·</textPath>
+              </text>
+            </svg>
+            <div class="medallion-core" aria-hidden="true">
+              <svg id="sealIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path id="sealIconPath" d="M12 2c1.5 4.2 5 6.3 5 10.5A5 5 0 0 1 7 12.5c0-2.6 1.6-4.5 3-6.3.5 1.8 2 2.6 2 4.3 1-1.7 1.2-4.2 0-8.5Z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <article class="catalogue" aria-label="Specimen Catalogue Entry">
+          <div class="cat-head">
+            <span class="cat-title">Specimen No.</span>
+            <span class="cat-no tabular-nums" id="catNo">MA-0412 · Plate IV</span>
+          </div>
+          <div class="cat-row"><span>Habitat</span><span id="habitat">Arabian Desert</span></div>
+          <div class="cat-row"><span>Element</span><span id="element">Solar Fire</span></div>
+          <div class="cat-row"><span>Temperament</span><span id="temper">Solitary · Benevolent</span></div>
+          <div class="cat-row"><span>Status</span><span id="status">Verified · 3 sightings</span></div>
+          <button type="button" class="read-more" id="openDrawer">
+            <span>Read Field Notes</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </article>
+      </section>
+    </main>
+
+    <footer class="bottombar">
+      <div class="switcher" role="group" aria-label="Select mythological creature">
+        <button type="button" class="switch-pill active" data-creature="phoenix">
+          <span class="switch-dot" aria-hidden="true"></span>Phoenix
+        </button>
+        <button type="button" class="switch-pill" data-creature="kraken" data-next-preview="true">
+          <span class="switch-dot" aria-hidden="true"></span>Kraken
+        </button>
+      </div>
+
+      <div class="rotate-hint" id="rotateHint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 12a9 9 0 0 1 15-6.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-15 6.7L3 16M3 21v-5h5"/>
+        </svg>
+        <span>Drag to rotate · Scroll to zoom</span>
+      </div>
+
+      <div class="pager">
+        <button type="button" class="page-btn" id="lightBtn" title="Toggle dusk lighting">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/>
+          </svg>
+          <span id="lightLabel">Daylight</span>
+        </button>
+        <span class="tabular-nums" id="pageCount">Plate IV of XII</span>
+        <button type="button" class="page-btn" id="prevBtn" aria-label="Previous plate">←</button>
+        <button type="button" class="page-btn" id="nextBtn" aria-label="Next plate">→</button>
+      </div>
+    </footer>
+  </div>
+
+  <aside class="drawer" id="drawer" aria-label="Field Notes Drawer">
+    <div>
+      <button type="button" class="drawer-close" id="closeDrawer">Close ×</button>
+      <div class="kicker" style="margin-top:16px;" id="drawerKicker">Archival Excerpt · Folio XII</div>
+      <h2 id="drawerTitle">On the Ash-Nest of Heliopolis</h2>
+      <p id="drawerP1">
+        Translated from the margin of Priest Manetho’s third register: “Before the third hour the sky above the temple court grew copper-pale. The bird descended neither with haste nor fear, bearing twigs of cassia bound in myrrh resin.”
+      </p>
+      <p id="drawerP2">
+        “No flame was struck; rather, the feathers along the nape brightened like blown charcoal until the whole form could scarce be looked upon. By noon there remained only scented grey ash and, within it, a warm pulse.”
+      </p>
+      <blockquote class="drawer-quote" id="drawerQuote">
+        “That which is singular need not multiply; it endures by returning to its own beginning.”
+      </blockquote>
+    </div>
+    <div style="font-family:var(--font-sans);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);">
+      Societas Mythologica · Sealed 1792
+    </div>
+  </aside>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
+    const CREATURES = {
+      phoenix: {
+        kicker: 'Plate IV — Bestiary of the Known World',
+        folio: 'Vol. IV · Folio XII',
+        name: 'Phoenix',
+        latin: 'Phoenix ignis',
+        order: 'Order Igniformes',
+        f1: ['Wingspan', '14 cubits'],
+        f2: ['Cycle', '500 years'],
+        f3: ['First attested', 'Heliopolis, c. 2400 BC'],
+        f4: ['Conservation', 'Singular'],
+        pins: [
+          ['Crown Crest', 'Three gold-tipped plumes; first to ignite at the close of the cycle.', [0.25, 0.08, 4.3]],
+          ['Solar Remiges', 'Primary flight feathers edged in living ember; shed no ash in flight.', [-0.7, 0.15, 4.5]],
+          ['Cinder Train', 'Five trailing plumes that smoulder blue when rain approaches.', [0.55, -0.25, 4.7]]
+        ],
+        catNo: 'MA-0412 · Plate IV',
+        habitat: 'Arabian Desert',
+        element: 'Solar Fire',
+        temper: 'Solitary · Benevolent',
+        status: 'Verified · 3 sightings',
+        page: 'Plate IV of XII',
+        sealPath: 'M12 2c1.5 4.2 5 6.3 5 10.5A5 5 0 0 1 7 12.5c0-2.6 1.6-4.5 3-6.3.5 1.8 2 2.6 2 4.3 1-1.7 1.2-4.2 0-8.5Z',
+        texUrl: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261101_045238_f03bd37d-0023-4ab8-8f91-59beee25b378.png&w=1024&q=80',
+        glbUrl: 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/bfaa401d-7eb6-411f-aa1f-6efdfde4a0da.glb',
+        tabs: {
+          origin: 'A solitary solar avian of the eastern deserts, whose plumage burns in shades of cinnabar and beaten gold. At the close of its fifth century it builds a funerary nest of frankincense and myrrh, ignites at dawn, and rises renewed from the warm ash.',
+          anatomy: 'Hollow bones of vitrified silica bear the heat of its plumage without warping. Three crest plumes crown the skull; twelve primary remiges trail ribbons of living ember that cool to bronze leaf when shed.',
+          sightings: 'Recorded at Heliopolis under Sesostris III, again in the consulship of Quintus Plautius, and last observed above the red escarpments of Wadi Rum in the autumn of 1761 by the cartographer Carsten Niebuhr.'
+        },
+        drawer: {
+          kicker: 'Archival Excerpt · Folio XII',
+          title: 'On the Ash-Nest of Heliopolis',
+          p1: 'Translated from the margin of Priest Manetho’s third register: “Before the third hour the sky above the temple court grew copper-pale. The bird descended neither with haste nor fear, bearing twigs of cassia bound in myrrh resin.”',
+          p2: '“No flame was struck; rather, the feathers along the nape brightened like blown charcoal until the whole form could scarce be looked upon. By noon there remained only scented grey ash and, within it, a warm pulse.”',
+          quote: '“That which is singular need not multiply; it endures by returning to its own beginning.”'
+        }
+      },
+      kraken: {
+        kicker: 'Plate VII — Thalassic Bestiary of the North',
+        folio: 'Vol. IV · Folio XIX',
+        name: 'Kraken',
+        latin: 'Kraken pelagius',
+        order: 'Order Cephalopoda',
+        f1: ['Reach', '42 fathoms'],
+        f2: ['Depth', '900 fathoms'],
+        f3: ['First attested', 'Norwegian Sea, 1180'],
+        f4: ['Conservation', 'Abyssal · Rare'],
+        pins: [
+          ['Dorsal Mantle', 'granite-mottled dermis frequently mistaken by mariners for a low skerry.', [0.0, 0.35, 4.3]],
+          ['Pelagic Eye', 'Amber-gold lens a cubit across, sensitive to bioluminescent shoals.', [0.55, 0.05, 4.2]],
+          ['Raptorial Arms', 'Eight primary arms lined with horn-rimmedacetabula; two longer clubs.', [-0.5, -0.3, 4.6]]
+        ],
+        catNo: 'MA-0719 · Plate VII',
+        habitat: 'Norwegian Trench',
+        element: 'Abyssal Brine',
+        temper: 'Brooding · Territorial',
+        status: 'Verified · 5 sightings',
+        page: 'Plate VII of XII',
+        sealPath: 'M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0',
+        texUrl: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20261101_045258_dddc1758-59ec-4eb1-ab66-4c043526df03.png&w=1024&q=80',
+        glbUrl: 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/11efaa0f-3043-4d4b-a1a7-f8d4e9ac4b89.glb',
+        tabs: {
+          origin: 'Colossal cephalopod of the cold Lofoten abysses, long mistaken by northern hydrographers for a shifting basalt islet. When it rises at the slack of the winter tide, the sea above boils with displaced herring and ambergris foam.',
+          anatomy: 'A muscular mantle armored in calcified tubercles houses three branchial hearts and an ink sac capable of darkening a league of open sound. Two feeding tentacles extend twice the length of the body.',
+          sightings: 'Described in King Sverre’s saga of 1180, charted by Bishop Erik Pontoppidan in his Natural History of Norway (1752), and sounded by lead-line off Moskenesstraumen in November 1848.'
+        },
+        drawer: {
+          kicker: 'Archival Excerpt · Folio XIX',
+          title: 'Log of the Brigantine Nordstjernen',
+          p1: 'From Captain Halvor Lind’s Soundings (1754): “At forty fathoms our lead struck what we took for a shoal unlisted on the Bergen charts. Within the quarter-hour the shoal began to rise, shedding kelp the thickness of ship’s cable.”',
+          p2: '“Two great horns, copper-red and ringed with pale suckers, broke the swell to larboard. We cut the anchor hawser and ran before a sudden circular current until the sea grew level again.”',
+          quote: '“The North holds islands that have never known root or stone.”'
+        }
+      }
+    };
+
+    const backdropEl = document.getElementById('specimenBackdrop');
+    backdropEl.style.backgroundImage = 'url("' + CREATURES.phoenix.texUrl + '")';
+
+    const canvas = document.getElementById('stage');
+    let renderer = null;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    } catch (e) {
+      renderer = null;
+    }
+
+    let currentKey = 'phoenix';
+    let currentTab = 'origin';
+    let targetCamPos = null;
+    const uTime = { value: 0 };
+
+    if (renderer) {
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.18;
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(34, window.innerWidth / window.innerHeight, 0.1, 100);
+      camera.position.set(0.15, 0.25, 4.9);
+
+      const controls = new OrbitControls(camera, canvas);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.06;
+      controls.enablePan = false;
+      controls.minDistance = 3.0;
+      controls.maxDistance = 7.2;
+      controls.minPolarAngle = Math.PI * 0.22;
+      controls.maxPolarAngle = Math.PI * 0.68;
+      controls.target.set(0.15, -0.05, 0);
+
+      canvas.addEventListener('pointerdown', () => {
+        canvas.classList.add('dragging');
+        targetCamPos = null;
+      });
+      window.addEventListener('pointerup', () => canvas.classList.remove('dragging'));
+
+      const hemi = new THREE.HemisphereLight(0xffe9c4, 0x6b563e, 1.35);
+      scene.add(hemi);
+
+      const keyLight = new THREE.DirectionalLight(0xffdfad, 2.8);
+      keyLight.position.set(3.2, 4.6, 3.4);
+      keyLight.castShadow = true;
+      keyLight.shadow.mapSize.set(1024, 1024);
+      scene.add(keyLight);
+
+      const rimLight = new THREE.DirectionalLight(0xff7a2e, 1.9);
+      rimLight.position.set(-3.5, 1.8, -2.8);
+      scene.add(rimLight);
+
+      const underLight = new THREE.PointLight(0xd94b1a, 1.6, 6);
+      underLight.position.set(0.2, -1.3, 0.6);
+      scene.add(underLight);
+
+      const stageGroup = new THREE.Group();
+      stageGroup.position.set(0.18, -0.08, 0);
+      scene.add(stageGroup);
+
+      // Immediate sculptural procedural totem + brass ring pedestal (visible immediately before GLB streams in)
+      const pedestalRing = new THREE.Mesh(
+        new THREE.TorusGeometry(1.18, 0.025, 16, 96),
+        new THREE.MeshStandardMaterial({ color: 0xa6782e, metalness: 0.72, roughness: 0.32 })
+      );
+      pedestalRing.rotation.x = Math.PI / 2;
+      pedestalRing.position.y = -1.05;
+      stageGroup.add(pedestalRing);
+
+      const fallbackSculpt = new THREE.Mesh(
+        new THREE.TorusKnotGeometry(0.68, 0.18, 128, 24, 2, 3),
+        new THREE.MeshStandardMaterial({ color: 0xb85228, roughness: 0.36, metalness: 0.42 })
+      );
+      stageGroup.add(fallbackSculpt);
+
+      // Particle Embers / Bubbles
+      const pCount = 90;
+      const pGeo = new THREE.BufferGeometry();
+      const pPos = new Float32Array(pCount * 3);
+      for (let i = 0; i < pCount; i++) {
+        pPos[i * 3] = (Math.random() - 0.5) * 3.4;
+        pPos[i * 3 + 1] = -1.2 + Math.random() * 2.6;
+        pPos[i * 3 + 2] = (Math.random() - 0.5) * 2.2;
+      }
+      pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+      const pMat = new THREE.PointsMaterial({
+        color: 0xff8830,
+        size: 0.045,
+        transparent: true,
+        opacity: 0.75,
+        blending: THREE.AdditiveBlending
+      });
+      const particles = new THREE.Points(pGeo, pMat);
+      stageGroup.add(particles);
+
+      // Load Draco GLBs when available
+      const draco = new DRACOLoader();
+      draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
+      const gltfLoader = new GLTFLoader();
+      gltfLoader.setDRACOLoader(draco);
+
+      const loadedModels = {};
+      function loadSpecimenModel(key) {
+        if (loadedModels[key]) return;
+        gltfLoader.load(
+          CREATURES[key].glbUrl,
+          (gltf) => {
+            const root = gltf.scene;
+            const box = new THREE.Box3().setFromObject(root);
+            const size = new THREE.Vector3();
+            const center = new THREE.Vector3();
+            box.getSize(size);
+            box.getCenter(center);
+            const scale = (key === 'phoenix' ? 2.45 : 2.2) / Math.max(size.x, size.y, size.z);
+            root.scale.setScalar(scale);
+            root.position.sub(center.multiplyScalar(scale));
+            root.rotation.y = key === 'phoenix' ? -0.38 : 0.25;
+            const holder = new THREE.Group();
+            holder.add(root);
+            holder.visible = currentKey === key;
+            stageGroup.add(holder);
+            loadedModels[key] = holder;
+            if (currentKey === key) fallbackSculpt.visible = false;
+          },
+          undefined,
+          () => {}
+        );
+      }
+      loadSpecimenModel('phoenix');
+      loadSpecimenModel('kraken');
+
+      window.__syncSpecimen3D = (key) => {
+        if (loadedModels.phoenix) loadedModels.phoenix.visible = key === 'phoenix';
+        if (loadedModels.kraken) loadedModels.kraken.visible = key === 'kraken';
+        fallbackSculpt.visible = !loadedModels[key];
+        fallbackSculpt.material.color.setHex(key === 'phoenix' ? 0xb85228 : 0x2c6e78);
+        pMat.color.setHex(key === 'phoenix' ? 0xff8830 : 0x72d6e8);
+        rimLight.color.setHex(key === 'phoenix' ? 0xff7a2e : 0x3fa7b8);
+      };
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      const needleEl = document.getElementById('needle');
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const dt = Math.min(clock.getDelta(), 0.05);
+        const paused = document.documentElement.getAttribute('data-motion') === 'paused';
+        if (!paused) uTime.value += dt;
+        const t = uTime.value;
+
+        if (targetCamPos) {
+          camera.position.lerp(targetCamPos, 0.06);
+          if (camera.position.distanceTo(targetCamPos) < 0.04) targetCamPos = null;
+        }
+        controls.update();
+
+        stageGroup.position.y = -0.08 + (paused ? 0 : Math.sin(t * 1.3) * 0.04);
+        if (!canvas.classList.contains('dragging') && !targetCamPos && !paused) {
+          stageGroup.rotation.y += dt * 0.22;
+        }
+        fallbackSculpt.rotation.x = t * 0.35;
+
+        const az = Math.atan2(camera.position.x - controls.target.x, camera.position.z - controls.target.z);
+        if (needleEl) {
+          needleEl.setAttribute('transform', 'rotate(' + ((az * 180) / Math.PI).toFixed(1) + ' 50 50)');
+        }
+
+        renderer.render(scene, camera);
+      }
+      requestAnimationFrame(animate);
+    }
+
+    // UI Switchers & Tabs
+    function selectCreature(key) {
+      currentKey = key;
+      const c = CREATURES[key];
+      document.getElementById('kicker').textContent = c.kicker;
+      document.getElementById('folioLabel').textContent = c.folio;
+      document.getElementById('name').textContent = c.name;
+      document.getElementById('latin').textContent = c.latin;
+      document.getElementById('order').textContent = c.order;
+      document.getElementById('desc').textContent = c.tabs[currentTab];
+      document.getElementById('f1l').textContent = c.f1[0];
+      document.getElementById('f1v').textContent = c.f1[1];
+      document.getElementById('f2l').textContent = c.f2[0];
+      document.getElementById('f2v').textContent = c.f2[1];
+      document.getElementById('f3l').textContent = c.f3[0];
+      document.getElementById('f3v').textContent = c.f3[1];
+      document.getElementById('f4l').textContent = c.f4[0];
+      document.getElementById('f4v').textContent = c.f4[1];
+      document.getElementById('pin0').textContent = c.pins[0][0];
+      document.getElementById('pin1').textContent = c.pins[1][0];
+      document.getElementById('pin2').textContent = c.pins[2][0];
+      document.getElementById('calloutHead').textContent = 'I · ' + c.pins[0][0];
+      document.getElementById('calloutBody').textContent = c.pins[0][1];
+      document.getElementById('catNo').textContent = c.catNo;
+      document.getElementById('habitat').textContent = c.habitat;
+      document.getElementById('element').textContent = c.element;
+      document.getElementById('temper').textContent = c.temper;
+      document.getElementById('status').textContent = c.status;
+      document.getElementById('pageCount').textContent = c.page;
+      document.getElementById('sealIconPath').setAttribute('d', c.sealPath);
+      document.getElementById('drawerKicker').textContent = c.drawer.kicker;
+      document.getElementById('drawerTitle').textContent = c.drawer.title;
+      document.getElementById('drawerP1').textContent = c.drawer.p1;
+      document.getElementById('drawerP2').textContent = c.drawer.p2;
+      document.getElementById('drawerQuote').textContent = c.drawer.quote;
+      backdropEl.style.backgroundImage = 'url("' + c.texUrl + '")';
+
+      document.querySelectorAll('.switch-pill').forEach((b) => {
+        b.classList.toggle('active', b.dataset.creature === key);
+      });
+      if (window.__syncSpecimen3D) window.__syncSpecimen3D(key);
+    }
+
+    document.querySelectorAll('.switch-pill').forEach((btn) => {
+      btn.addEventListener('click', () => selectCreature(btn.dataset.creature));
+    });
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      selectCreature(currentKey === 'phoenix' ? 'kraken' : 'phoenix');
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      selectCreature(currentKey === 'phoenix' ? 'kraken' : 'phoenix');
+    });
+
+    document.querySelectorAll('.tab').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentTab = btn.dataset.tab;
+        document.querySelectorAll('.tab').forEach((b) => b.classList.toggle('active', b === btn));
+        document.getElementById('desc').textContent = CREATURES[currentKey].tabs[currentTab];
+      });
+    });
+
+    const numerals = ['I', 'II', 'III'];
+    document.querySelectorAll('.pin').forEach((pinEl) => {
+      pinEl.addEventListener('click', () => {
+        const idx = Number(pinEl.dataset.pin);
+        const pData = CREATURES[currentKey].pins[idx];
+        document.querySelectorAll('.pin').forEach((el, j) => el.classList.toggle('active', j === idx));
+        document.getElementById('calloutHead').textContent = numerals[idx] + ' · ' + pData[0];
+        document.getElementById('calloutBody').textContent = pData[1];
+        targetCamPos = new THREE.Vector3(pData[2][0], pData[2][1], pData[2][2]);
+      });
+    });
+
+    // Dusk / Daylight Toggle
+    let dusk = false;
+    document.getElementById('lightBtn').addEventListener('click', () => {
+      dusk = !dusk;
+      document.body.classList.toggle('dusk', dusk);
+      document.getElementById('lightLabel').textContent = dusk ? 'Dusk' : 'Daylight';
+    });
+
+    // Field Notes Drawer
+    const drawer = document.getElementById('drawer');
+    document.getElementById('openDrawer').addEventListener('click', () => drawer.classList.add('open'));
+    document.getElementById('openDrawerTop').addEventListener('click', () => drawer.classList.add('open'));
+    document.getElementById('closeDrawer').addEventListener('click', () => drawer.classList.remove('open'));
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.pho74-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

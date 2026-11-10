@@ -1,0 +1,44 @@
+{
+  "id": "t318",
+  "slug": "pirate-ship",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-10T09:10:00.103Z",
+  "demo": "/demos/pirate-ship/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "01b103afce3f",
+  "sha256": "01b103afce3fb3fde3665b5f171d7e60fbed1196343a03c759a1bc93a1d31c97",
+  "demoHtmlSha256": "221763a4e2736d8ec0313f26f0668114414b765037461ee9c848cfa685fa6f04",
+  "demoSha256": "23e4c16385f149310c7d4ec37b0b0e70804b6291ddaf0623a5b3daa994015da7",
+  "bytes": 744818,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.564,
+      "action": "click",
+      "selector": "#wheelBtn"
+    },
+    {
+      "seconds": 5.217,
+      "action": "click",
+      "selector": "#wheelBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 625
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pirate-ship-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pirate-ship-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pirate-ship-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pirate-ship-return.jpg"
+  ]
+}

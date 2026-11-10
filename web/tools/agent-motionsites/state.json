@@ -40,6 +40,7 @@
     "bishop-tentwenty",
     "bloodhound-outlands-tracker",
     "bloom-ai",
+    "bookshop",
     "break-code",
     "camper",
     "card-stack",
@@ -105,6 +106,7 @@
     "gridwork-co",
     "guardnet-benefits",
     "halden",
+    "halden-ai-teammate-hero",
     "halo-use-case",
     "haul",
     "health-portal",
@@ -123,6 +125,7 @@
     "japan-sunrise-tours",
     "japan-trails",
     "keystead",
+    "kindred-dot-hands-hero",
     "kinetiq",
     "koru-tech-footer",
     "kresna-footer",
@@ -147,6 +150,7 @@
     "maldives-escape",
     "manganresto",
     "manufacturing-grid",
+    "mars-trips",
     "max-reed-portfolio",
     "meadowbell",
     "melli",
@@ -194,8 +198,10 @@
     "orvante-agency",
     "outfit-drop",
     "particle-brain",
+    "phoenix-ignis",
     "pinehaven",
     "pink-rider",
+    "pirate-ship",
     "place-saver",
     "playing-market-audio",
     "portal",
@@ -467,7 +473,13 @@
     "tana-elephant-sections",
     "lifeline-sun-hero",
     "distill-comparison",
-    "hollowmere-halloween"
+    "hollowmere-halloween",
+    "halden-port-hero",
+    "kindred-dots-hero",
+    "folio-books-hero",
+    "phoenix-ignis",
+    "saltwake-pirate-hero",
+    "redline-mars-hero"
   ],
   "history": [
     {
@@ -1055,8 +1067,8 @@
       }
     }
   ],
-  "todayFreeCount": 2,
-  "todayPremiumCount": 4,
+  "todayFreeCount": 1,
+  "todayPremiumCount": 2,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -1164,15 +1176,21 @@
     "27cb5cc37a944d9d367e7e880045ee9c761e525e83c8c1106260b64c404ae622",
     "4aed6fe39d802c2b5f9acba4fdab416810a73941ae33ecc4894a65aaa2af61fa",
     "8527c8ca9482b4df5463dff1f232ebd8f4b0fdb85fe072081215917007971b7f",
-    "66da65381f4ce60226b7631ce88b79d282704c90811634a4e5169f8b0af0716d"
+    "66da65381f4ce60226b7631ce88b79d282704c90811634a4e5169f8b0af0716d",
+    "fe7399c8d81a0c642d0cceeb16a64cbe22d4544db0d08b89c1be60bdd9fb32ad",
+    "b17f80b6aa802d5cc54482aec80333f48234a3844c760875dda56ee7884b641c",
+    "155a8402ac23db6925bfe9f5952fe96c401c03c5143bbe42e1a13dc3bcbadceb",
+    "d0ff39c38fbe0fd16e57400d04d4c6f1a3e94d1bc561e9bf5b61b8971886816b",
+    "537db515a3c688d16fcc871a4cfbe6118992f59cf70ded3eef7dac9e34975de8",
+    "7dc650a038a6686ba7bcea237809dfbdcc17734545afe77b937c51847f0d4ec7"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "agent-hero",
-    "wild-pil",
-    "tana-elephant",
-    "sun-timeline",
-    "scanner-comparison",
-    "hollowmere-halloween-descent"
+    "halden-ai-teammate-hero",
+    "kindred-dot-hands-hero",
+    "bookshop",
+    "phoenix-ignis",
+    "pirate-ship",
+    "mars-trips"
   ]
 }

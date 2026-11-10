@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-09T23:50:31.644Z",
+  "updatedAt": "2026-11-10T09:08:49.789Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2441,6 +2441,60 @@
       "sizeBytes": 15092,
       "sha256": "ffa7e51786602fcff835e1ef9dd303e564929102d8dce9615246b4e2cf420218",
       "updatedAt": "2026-11-09T23:50:31.643Z"
+    },
+    "halden-ai-teammate-hero": {
+      "fileId": "1stbo1Enh7KvdoGiY7cLeKaZZ4Csmv8K0",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1stbo1Enh7KvdoGiY7cLeKaZZ4Csmv8K0",
+      "webViewUrl": "https://drive.google.com/file/d/1stbo1Enh7KvdoGiY7cLeKaZZ4Csmv8K0/view",
+      "sizeBytes": 15485,
+      "sha256": "9ceeebaf9fc45720b64d945fb710f08c8ca63a1492ada4fd9556e75100b06b20",
+      "updatedAt": "2026-11-10T09:08:38.347Z"
+    },
+    "kindred-dot-hands-hero": {
+      "fileId": "17PTqLmyTaA6tdfI9SFrbd-vsdLiN72YO",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=17PTqLmyTaA6tdfI9SFrbd-vsdLiN72YO",
+      "webViewUrl": "https://drive.google.com/file/d/17PTqLmyTaA6tdfI9SFrbd-vsdLiN72YO/view",
+      "sizeBytes": 13806,
+      "sha256": "ee8d9e4a843b94b716cf91d55634d5209b40c9f40cf33a0f2d6bb42124d8929f",
+      "updatedAt": "2026-11-10T09:08:40.622Z"
+    },
+    "bookshop": {
+      "fileId": "1gCOmcprQRIfWhB6VMHZy_6p2EZSvh3bM",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1gCOmcprQRIfWhB6VMHZy_6p2EZSvh3bM",
+      "webViewUrl": "https://drive.google.com/file/d/1gCOmcprQRIfWhB6VMHZy_6p2EZSvh3bM/view",
+      "sizeBytes": 13823,
+      "sha256": "d786a45e0aa3bb9550be751ef9d7b88ad0099e551c9c2749f2b828c1a9baae84",
+      "updatedAt": "2026-11-10T09:08:42.666Z"
+    },
+    "phoenix-ignis": {
+      "fileId": "1wQAuWWno3-UoVbr4podfr1gv_Sbrmubp",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1wQAuWWno3-UoVbr4podfr1gv_Sbrmubp",
+      "webViewUrl": "https://drive.google.com/file/d/1wQAuWWno3-UoVbr4podfr1gv_Sbrmubp/view",
+      "sizeBytes": 19093,
+      "sha256": "ea43609451ff633fd68581595e7b3de1460945c02d24993edaa5c58d5a15575b",
+      "updatedAt": "2026-11-10T09:08:45.075Z"
+    },
+    "pirate-ship": {
+      "fileId": "1AfZ1rSiF6bZbWXUdkEuD_M0FQ_MGSzgN",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1AfZ1rSiF6bZbWXUdkEuD_M0FQ_MGSzgN",
+      "webViewUrl": "https://drive.google.com/file/d/1AfZ1rSiF6bZbWXUdkEuD_M0FQ_MGSzgN/view",
+      "sizeBytes": 15148,
+      "sha256": "69e3501324dd276b5be07c233856e825a60fd0d8d4fe7a4e01b0b06535f28cf5",
+      "updatedAt": "2026-11-10T09:08:47.479Z"
+    },
+    "mars-trips": {
+      "fileId": "1qz6psyu-L2gvnyH_XsT77XRP0UfNjML0",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1qz6psyu-L2gvnyH_XsT77XRP0UfNjML0",
+      "webViewUrl": "https://drive.google.com/file/d/1qz6psyu-L2gvnyH_XsT77XRP0UfNjML0/view",
+      "sizeBytes": 18147,
+      "sha256": "47f3dfbf798fbbc0875b8dd2632739e3f6baa2b4b2fafa6c71f6e86c3ca104d7",
+      "updatedAt": "2026-11-10T09:08:49.788Z"
     }
   }
 }

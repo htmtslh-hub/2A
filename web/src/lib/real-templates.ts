@@ -46,6 +46,152 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t325: {
+    slug: 'curved-reel',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Norro. — Curved Cinema Showreel',
+        desc: 'Showreel điện ảnh Bắc Âu sử dụng WebGL2 uốn cong dải phim 16:9 trên mặt trụ lõm, tiêu đề Anton cuộn dọc, màn mở Case Study trượt từ đỉnh trang, danh mục nghiêng vô tận và chuyển đổi Sáng/Tối đồng bộ shader.',
+        tags: ['WebGL2 Shader', 'Film Studio', 'Curved Showreel']
+      },
+      en: {
+        name: 'Norro. — Curved Cinema Showreel',
+        desc: 'Nordic film studio showreel powered by a custom WebGL2 concave-cylinder fragment shader, rolling Anton display titles, top-down clip-path case studies, skewed infinite project index, and shader-synced theme toggle.',
+        tags: ['WebGL2 Shader', 'Film Studio', 'Curved Showreel']
+      },
+      zh: {
+        name: 'Norro. — 弧幕电影作品展映',
+        desc: '北欧电影工作室展映模板，搭载自定义 WebGL2 凹面柱体着色器、滚动巨幅标题、下拉式案例画廊、无限倾斜索引与明暗着色器切换。',
+        tags: ['WebGL2 着色器', '影视工作室', '弧幕展映']
+      }
+    }
+  },
+
+  t324: {
+    slug: 'building-atlas',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Plinth — Shared Interiors',
+        desc: 'Tập bản đồ biên tập kiến trúc gồm 35 công trình với dải băng thẻ sách 3D trôi theo cuộn trang, kệ sách đứng 3D lật bìa khi rê chuột, bộ lọc tìm kiếm trực tiếp và hiệu ứng sách bay xoay 360° mở trang đọc.',
+        tags: ['Architecture Atlas', '3D Book Flight', 'Editorial']
+      },
+      en: {
+        name: 'Plinth — Shared Interiors',
+        desc: 'Dark editorial architectural atlas featuring a depth-of-field 3D paper book-card ribbon, interactive upright 3D bookshelf spines, rotating search placeholder, and full-turn 3D spinning book flight into reading view.',
+        tags: ['Architecture Atlas', '3D Book Flight', 'Editorial']
+      },
+      zh: {
+        name: 'Plinth — 建筑空间图鉴',
+        desc: '暗调建筑编辑图鉴，配备景深 3D 纸质书卡飘带、悬停展开的立体书脊书架、实时搜索过滤与 360° 旋转飞入阅读视图动画。',
+        tags: ['建筑图鉴', '3D 书籍动效', '编辑设计']
+      }
+    }
+  },
+
+  t323: {
+    slug: 'pixel-garden',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Dune Play · Grovekit',
+        desc: 'Sân chơi thực vật sa mạc fat-pixel tương tác trực tiếp: vật lý gió lò xo tắt dần, bão rụng lá tích tụ trên cát, chế độ X-Ray khung xương nhánh, âm thanh gió Web Audio và mọc tán lá trở lại.',
+        tags: ['Interactive Canvas', 'Pixel Physics', 'Design Toy']
+      },
+      en: {
+        name: 'Dune Play · Grovekit',
+        desc: 'Interactive fat-pixel desert botanical playground with damped spring wind physics, storm foliage shedding onto sand mounds, X-Ray branch skeleton view, Web Audio wind synthesis, and canopy regrowth.',
+        tags: ['Interactive Canvas', 'Pixel Physics', 'Design Toy']
+      },
+      zh: {
+        name: 'Dune Play · 像素沙丘植物园',
+        desc: '交互式像素沙漠植物游乐场，内置阻尼弹簧风力物理、风暴落叶沙堆、X 光枝干透视、Web Audio 风声合成与树冠再生动画。',
+        tags: ['交互画布', '像素物理', '创意组件']
+      }
+    }
+  },
+
+  t322: {
+    slug: 'venture-fund',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Hale Moor — Frontier Venture Fund',
+        desc: 'Trang quỹ đầu tư công nghệ mũi nhọn dẫn dắt theo cuộn trang với cầu hạt 3D ánh sắc cầu vồng biến hình thành khối tinh thể đa diện, chuyển nền pastel mượt, danh mục 15 thương vụ và vòng xoay 12 đối tác.',
+        tags: ['Venture Capital', '3D Particle Morph', 'Scroll Craft']
+      },
+      en: {
+        name: 'Hale Moor — Frontier Venture Fund',
+        desc: 'Scroll-driven frontier venture fund showcase morphing a 2,400-point iridescent particle sphere into a faceted crystal over cross-fading pastel stages, paired with a 4-column track record and partner wheel.',
+        tags: ['Venture Capital', '3D Particle Morph', 'Scroll Craft']
+      },
+      zh: {
+        name: 'Hale Moor — 前沿创投基金',
+        desc: '滚动驱动的前沿风险投资网站，融合虹彩 3D 粒子球与多面体水晶变形、柔和渐变舞台、15 家被投组合筛选及合伙人转盘。',
+        tags: ['风险投资', '3D 粒子变形', '滚动叙事']
+      }
+    }
+  },
+
+  t321: {
+    slug: 'halftone-faq',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Solace — AI Co-Pilot & FAQ',
+        desc: 'Giao diện AI Co-Pilot tông nâu hổ phách ấm với trường hạt halftone 2D chuyển động dạng sóng âm thanh, bảng phân loại ưu tiên Linear/Slack/Figma, hộp kính mờ FAQ mượt và chân trang đồng bộ.',
+        tags: ['AI Co-Pilot', 'Halftone Canvas', 'Warm Glass UI']
+      },
+      en: {
+        name: 'Solace — AI Co-Pilot & FAQ',
+        desc: 'Warm obsidian-and-amber AI workspace co-pilot featuring a live ragged-top halftone audio-meter dot canvas, interactive priority triage queue, smooth CSS grid-row glass FAQ accordion, and warm glass footer.',
+        tags: ['AI Co-Pilot', 'Halftone Canvas', 'Warm Glass UI']
+      },
+      zh: {
+        name: 'Solace — AI 协作助手与问答',
+        desc: '暖黑琥珀色调 AI 协作助手页面，搭载实时半调圆点频谱画布、多源优先级队列演示、毛玻璃平滑折叠问答与玻璃底栏。',
+        tags: ['AI 助手', '半调画布', '毛玻璃界面']
+      }
+    }
+  },
+
+  t320: {
+    slug: 'halo-prism',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Halo — The P3 Palette Kit',
+        desc: 'Bộ công cụ bảng màu dải rộng Display-P3 với lăng kính thủy tinh tán sắc ánh sáng thời gian thực theo phương trình Cauchy, thanh sao chép lệnh Tokens/CSS/Figma/API và trình kiểm tra thang màu OKLCH.',
+        tags: ['Display-P3', 'Prism Raytracing', 'Design System']
+      },
+      en: {
+        name: 'Halo — The P3 Palette Kit',
+        desc: 'Wide-gamut Display-P3 palette toolkit featuring real-time Cauchy optical dispersion through a beveled glass prism, interactive Tokens/CSS/Figma/API command switcher, and live perceptual OKLCH swatch inspector.',
+        tags: ['Display-P3', 'Prism Raytracing', 'Design System']
+      },
+      zh: {
+        name: 'Halo — Display-P3 广色域调色板',
+        desc: '广色域色彩系统着陆页，内置实时柯西光学棱镜色散渲染、Tokens/CSS/Figma/API 命令切换栏与 OKLCH 感知色阶检视器。',
+        tags: ['广色域 P3', '光学棱镜', '设计系统']
+      }
+    }
+  },
+
   t319: {
     slug: 'mars-trips',
     cat: 'commerce',

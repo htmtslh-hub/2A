@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-10",
+  "lastRunDate": "2026-11-11",
   "todayCopiedCount": 6,
   "processedSlugs": [
     "404-planet",
@@ -42,6 +42,7 @@
     "bloom-ai",
     "bookshop",
     "break-code",
+    "building-atlas",
     "camper",
     "card-stack",
     "cast-and-render",
@@ -58,6 +59,7 @@
     "crimson-folio",
     "cross-border",
     "crystal-koi",
+    "curved-reel",
     "cyber-ronin",
     "cyberpunk-reveal",
     "datacore-booking",
@@ -107,6 +109,8 @@
     "guardnet-benefits",
     "halden",
     "halden-ai-teammate-hero",
+    "halftone-faq",
+    "halo-prism",
     "halo-use-case",
     "haul",
     "health-portal",
@@ -202,6 +206,7 @@
     "pinehaven",
     "pink-rider",
     "pirate-ship",
+    "pixel-garden",
     "place-saver",
     "playing-market-audio",
     "portal",
@@ -276,6 +281,7 @@
     "vectrus-energy",
     "velia",
     "velora",
+    "venture-fund",
     "verdant",
     "verra-events-hero",
     "vertex-shops",
@@ -479,7 +485,13 @@
     "folio-books-hero",
     "phoenix-ignis",
     "saltwake-pirate-hero",
-    "redline-mars-hero"
+    "redline-mars-hero",
+    "halo-prism",
+    "solace-faq",
+    "venture-fund",
+    "pixel-garden",
+    "building-atlas",
+    "curved-reel"
   ],
   "history": [
     {
@@ -1067,8 +1079,8 @@
       }
     }
   ],
-  "todayFreeCount": 1,
-  "todayPremiumCount": 2,
+  "todayFreeCount": 2,
+  "todayPremiumCount": 4,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -1182,15 +1194,21 @@
     "155a8402ac23db6925bfe9f5952fe96c401c03c5143bbe42e1a13dc3bcbadceb",
     "d0ff39c38fbe0fd16e57400d04d4c6f1a3e94d1bc561e9bf5b61b8971886816b",
     "537db515a3c688d16fcc871a4cfbe6118992f59cf70ded3eef7dac9e34975de8",
-    "7dc650a038a6686ba7bcea237809dfbdcc17734545afe77b937c51847f0d4ec7"
+    "7dc650a038a6686ba7bcea237809dfbdcc17734545afe77b937c51847f0d4ec7",
+    "98843322292d0eb885a5e52593adc83c74d9857a1c1289ef3fd167c3ddca8d89",
+    "fbad06844c4203490b41e515222e2f8bf42ebf0ad684f306abb6b05d1a7580ff",
+    "d845e699a88ab33c563c20468756bbdfde4b5ff837c853fa55d14db3f6626023",
+    "b792a815ecb26d6b7a36b4a92eb26eb78a5e140eac9c7ddf97bd29c70607d974",
+    "74ea48e089ead9fe84516cbb81e9255ec94994dfc19f6ed5566fa8d9ebab2c1f",
+    "99c85aea22ef117f50c84b33a10a69d62fb88a32311e481a6b893e0328a769ff"
   ],
   "todayCreatedCount": 6,
   "todayBuilt": [
-    "halden-ai-teammate-hero",
-    "kindred-dot-hands-hero",
-    "bookshop",
-    "phoenix-ignis",
-    "pirate-ship",
-    "mars-trips"
+    "halo-prism",
+    "halftone-faq",
+    "venture-fund",
+    "pixel-garden",
+    "building-atlas",
+    "curved-reel"
   ]
 }

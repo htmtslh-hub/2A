@@ -1,0 +1,44 @@
+{
+  "id": "t323",
+  "slug": "pixel-garden",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-11T00:45:10.042Z",
+  "demo": "/demos/pixel-garden/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0558d5938abe",
+  "sha256": "0558d5938abe856b450d1c69a45f3acfa2986cb0158ea50ae2ac4406b3b8113d",
+  "demoHtmlSha256": "673a21ea4157ac48b438483b1d96648fcc29ac9c6ef111e8160f4bc7985d9354",
+  "demoSha256": "d8334f5ae8ec914a7e50069698e0ea91f5b84c3e7077fd7ffce3050dc940d3e8",
+  "bytes": 2137644,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.544,
+      "action": "click",
+      "selector": "#dnpStormCycleBtn"
+    },
+    {
+      "seconds": 4.88,
+      "action": "click",
+      "selector": "#dnpStormCycleBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 718
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pixel-garden-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pixel-garden-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pixel-garden-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pixel-garden-return.jpg"
+  ]
+}

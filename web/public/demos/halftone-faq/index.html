@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" data-motion="on">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Solace — AI Co-Pilot &amp; Priority Intelligence</title>
+  <meta name="description" content="Questions, answered. Solace is your AI co-pilot for the work that matters: priorities, follow-ups and answers across every tool your team already uses.">
+  <meta name="theme-color" content="#050302">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --u: min(calc(100svw / 1600), calc(100svh / 940));
+      --bg: #050302;
+      --surface: #140b06;
+      --cream: #fbefe2;
+      --mid: #d9c3ad;
+      --muted: #a68c74;
+      --line: rgba(255, 214, 170, 0.14);
+      --line-strong: rgba(255, 190, 120, 0.28);
+      --glass: rgba(34, 18, 8, 0.78);
+      --accent: #f89640;
+      --accent-text: #ffbe78;
+      --accent-2: #e26a18;
+      --on-accent: #180b04;
+      --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+      --font-display: "Geist", system-ui, -apple-system, sans-serif;
+      --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+      --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: rgba(248, 150, 64, 0.32); color: #fbefe2; }
+    :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; border-radius: 4px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    html, body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    a { color: inherit; text-decoration: none; }
+    button {
+      font: inherit; color: inherit; background: none; border: 0; cursor: pointer; text-align: left;
+      transition: transform 0.18s var(--ease-out), opacity 0.2s var(--ease-out), background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+    }
+    button:active { transform: scale(0.97); }
+    ul { list-style: none; }
+
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 200;
+      padding: 10px 16px; border-radius: 999px;
+      background: var(--cream); color: var(--on-accent);
+      font-size: 13px; font-weight: 600;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translateY(116px); }
+
+    /* Top Bar */
+    .slc-header {
+      position: sticky; top: 0; z-index: 40;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 14px clamp(20px, 4vw, 56px);
+      background: rgba(5, 3, 2, 0.84);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .slc-brand-top {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 18px; font-weight: 500; letter-spacing: -0.02em;
+    }
+    .slc-mark-sm {
+      width: 28px; height: 28px; border-radius: 4px;
+      background: var(--cream); display: grid; place-items: center;
+    }
+    .slc-mark-sm svg { width: 58%; height: 58%; fill: #1b0d05; }
+    .slc-nav { display: flex; align-items: center; gap: 24px; }
+    .slc-nav a { font-size: 14px; color: var(--mid); transition: color 0.2s var(--ease-out); }
+    .slc-nav a:hover { color: var(--cream); }
+    .slc-actions { display: flex; align-items: center; gap: 10px; }
+    .slc-btn {
+      padding: 8px 14px; border-radius: 6px;
+      border: 1px solid var(--line);
+      background: rgba(34, 18, 8, 0.7);
+      font-size: 13px; font-weight: 500; color: var(--cream);
+      display: inline-flex; align-items: center; gap: 7px;
+    }
+    .slc-btn:hover { border-color: var(--line-strong); background: rgba(56, 28, 12, 0.85); }
+    .slc-btn-primary {
+      background: var(--cream); color: var(--on-accent); border-color: var(--cream); font-weight: 600;
+    }
+    .slc-btn-primary:hover { background: #fff6ec; }
+
+    /* Hero + Triage Workspace (+20% Creative Expansion) */
+    .slc-hero {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 48px) clamp(36px, 5vw, 60px);
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(28px, 4vw, 56px);
+      align-items: center;
+    }
+    .slc-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent-text);
+      padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(248, 150, 64, 0.08);
+      margin-bottom: 18px;
+    }
+    .slc-badge-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+      animation: slcPulse 2.2s ease-in-out infinite;
+    }
+    @keyframes slcPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.55; }
+    }
+    .slc-h1 {
+      font-size: clamp(36px, 4.6vw, 60px);
+      font-weight: 600;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .slc-lead {
+      font-size: clamp(16px, 1.35vw, 18px);
+      line-height: 1.6;
+      color: var(--mid);
+      max-width: 48ch;
+      margin-bottom: 26px;
+    }
+    .slc-hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Interactive Priority Triage Card */
+    .slc-triage-panel {
+      background: linear-gradient(180deg, rgba(38, 20, 9, 0.88), rgba(20, 10, 5, 0.92));
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+    }
+    .slc-triage-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+      padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 14px;
+    }
+    .slc-filter-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .slc-chip {
+      padding: 5px 10px; border-radius: 5px;
+      font-size: 12px; font-family: var(--font-mono); color: var(--mid);
+      border: 1px solid transparent;
+    }
+    .slc-chip[aria-pressed="true"] {
+      background: rgba(248, 150, 64, 0.16);
+      border-color: var(--line-strong);
+      color: var(--cream);
+    }
+    .slc-thread-list { display: grid; gap: 10px; }
+    .slc-thread {
+      padding: 12px 14px; border-radius: 7px;
+      background: rgba(255, 214, 170, 0.03);
+      border: 1px solid rgba(255, 214, 170, 0.09);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .slc-thread-tool {
+      font-family: var(--font-mono); font-size: 11px; color: var(--accent-text);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .slc-thread-title { font-size: 14px; font-weight: 500; margin-top: 3px; }
+    .slc-thread-score {
+      font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+      padding: 4px 8px; border-radius: 4px;
+      background: rgba(226, 106, 24, 0.22); color: var(--cream);
+      white-space: nowrap;
+    }
+
+    /* Telemetry Strip */
+    .slc-metrics {
+      max-width: 1160px; margin: 0 auto;
+      padding: 12px clamp(20px, 4vw, 48px) clamp(40px, 5vw, 68px);
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+    }
+    .slc-metric-card {
+      padding: 22px 24px;
+      border-radius: 8px;
+      background: rgba(28, 15, 7, 0.66);
+      border: 1px solid var(--line);
+    }
+    .slc-metric-num { font-size: clamp(28px, 3vw, 38px); font-weight: 600; letter-spacing: -0.02em; color: var(--cream); }
+    .slc-metric-lbl { font-size: 14px; color: var(--mid); margin-top: 6px; line-height: 1.5; }
+
+    /* Signature Halftone Dot FAQ + Footer Stage (Verbatim Core) */
+    .slc-wrap {
+      position: relative;
+      min-height: 100svh;
+      overflow: hidden;
+      background: #050302;
+    }
+    #dots {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .slc-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100svh;
+      padding: calc(64 * var(--u)) calc(28 * var(--u)) calc(28 * var(--u));
+    }
+    .slc-faq-h2 {
+      font-size: calc(40 * var(--u));
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .slc-faq {
+      width: calc(688 * var(--u));
+      margin-top: calc(22 * var(--u));
+      margin-bottom: calc(56 * var(--u));
+      padding: calc(4 * var(--u)) calc(21 * var(--u));
+      background: var(--glass);
+      border: 1px solid rgba(255, 190, 120, 0.14);
+      border-radius: calc(6 * var(--u));
+      backdrop-filter: blur(10px);
+      box-shadow: 0 calc(20 * var(--u)) calc(60 * var(--u)) rgba(0, 0, 0, 0.45);
+    }
+    .slc-q { border-bottom: 1px solid var(--line); }
+    .slc-q:last-child { border-bottom: 0; }
+    .slc-q button {
+      display: flex; align-items: center; justify-content: space-between; gap: calc(20 * var(--u));
+      width: 100%; padding: calc(17 * var(--u)) 0;
+      font-size: calc(17 * var(--u)); font-weight: 500; letter-spacing: -0.005em;
+    }
+    .slc-q svg {
+      flex: none; width: calc(14 * var(--u)); height: calc(14 * var(--u));
+      fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+      transition: transform 0.35s var(--ease-out);
+    }
+    .slc-q[data-open] svg { transform: rotate(180deg); }
+    .slc-a {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.4s var(--ease-out);
+    }
+    .slc-q[data-open] .slc-a { grid-template-rows: 1fr; }
+    .slc-a > div { overflow: hidden; }
+    .slc-a p {
+      padding: 0 calc(20 * var(--u)) calc(20 * var(--u)) 0;
+      font-size: calc(15 * var(--u));
+      line-height: 1.6;
+      color: var(--mid);
+    }
+
+    .slc-footer {
+      width: 100%;
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: calc(40 * var(--u));
+      padding: calc(46 * var(--u)) calc(64 * var(--u)) calc(44 * var(--u));
+      background: linear-gradient(180deg, rgba(40, 20, 8, 0.86), rgba(84, 40, 14, 0.84));
+      border: 1px solid rgba(255, 190, 120, 0.12);
+      border-radius: calc(6 * var(--u));
+      backdrop-filter: blur(12px);
+    }
+    .slc-brand {
+      display: flex; align-items: center; gap: calc(14 * var(--u));
+      font-size: calc(25 * var(--u)); font-weight: 500; letter-spacing: -0.02em;
+    }
+    .slc-mark {
+      display: grid; place-items: center;
+      width: calc(38 * var(--u)); height: calc(38 * var(--u));
+      background: var(--cream); border-radius: calc(2 * var(--u));
+    }
+    .slc-mark svg { width: 56%; height: 56%; fill: #1b0d05; }
+    .slc-tag {
+      margin-top: calc(20 * var(--u));
+      max-width: calc(440 * var(--u));
+      font-size: calc(15 * var(--u));
+      line-height: 1.6;
+      color: #f0dcc6;
+    }
+    .slc-social { display: flex; gap: calc(16 * var(--u)); margin-top: calc(26 * var(--u)); }
+    .slc-social a {
+      display: grid; place-items: center;
+      width: calc(26 * var(--u)); height: calc(26 * var(--u));
+      opacity: 0.9; transition: opacity 0.2s var(--ease-out);
+    }
+    .slc-social a:hover { opacity: 0.6; }
+    .slc-social svg {
+      width: 100%; height: 100%; fill: none; stroke: currentColor;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .slc-copy { margin-top: calc(34 * var(--u)); font-size: calc(14 * var(--u)); color: #ecd8c2; }
+    .slc-links {
+      display: grid;
+      grid-template-columns: repeat(3, calc(196 * var(--u)));
+      gap: calc(8 * var(--u));
+    }
+    .slc-links h3 { font-size: calc(15 * var(--u)); font-weight: 600; margin-bottom: calc(16 * var(--u)); }
+    .slc-links li { margin-bottom: calc(11 * var(--u)); font-size: calc(14.5 * var(--u)); color: #ead5be; }
+    .slc-links a { transition: color 0.2s var(--ease-out); }
+    .slc-links a:hover { color: #ffffff; }
+
+    .js-ready .slc-reveal {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+    .js-ready .slc-reveal.is-in { opacity: 1; transform: none; }
+
+    @media (max-width: 960px) {
+      .slc-hero { grid-template-columns: 1fr; }
+      .slc-metrics { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      :root { --u: 1px; }
+      .slc-nav { display: none; }
+      .slc-content { padding: 48px 16px 16px; }
+      .slc-faq-h2 { font-size: 32px; }
+      .slc-faq { width: 100%; margin-top: 20px; }
+      .slc-footer { grid-template-columns: 1fr; padding: 32px 24px; margin-top: 48px; }
+      .slc-links { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+    }
+    @media (max-width: 480px) {
+      .slc-actions .slc-btn-primary { display: none; }
+      .slc-links { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <header class="slc-header">
+    <a class="slc-brand-top" href="#mainContent" aria-label="Solace home">
+      <span class="slc-mark-sm">
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="6" cy="6" r="3"></circle>
+          <circle cx="14" cy="6" r="3"></circle>
+          <circle cx="6" cy="14" r="3"></circle>
+          <circle cx="14" cy="14" r="3"></circle>
+        </svg>
+      </span>
+      <span>Solace</span>
+    </a>
+    <nav class="slc-nav" aria-label="Primary">
+      <a href="#priorities">Priorities</a>
+      <a href="#telemetry">Security</a>
+      <a href="#faqSection">FAQ</a>
+    </nav>
+    <div class="slc-actions">
+      <button type="button" class="slc-btn" id="slcPulseBtn" data-next-preview="true" aria-label="Pulse halftone field and cycle priority">
+        <span>Cycle Priority</span>
+      </button>
+      <button type="button" class="slc-btn" id="motionToggleBtn" aria-pressed="false">Motion: ON</button>
+      <a class="slc-btn slc-btn-primary" href="#faqSection">Start 14-day trial</a>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="slc-hero" id="priorities" aria-labelledby="slcHeroHeading">
+      <div>
+        <div class="slc-badge"><span class="slc-badge-dot" aria-hidden="true"></span>AI Co-Pilot · Unified Signal</div>
+        <h1 class="slc-h1" id="slcHeroHeading">The one thing that cannot wait, surfaced automatically.</h1>
+        <p class="slc-lead">Solace connects Outlook, Gmail, Slack, Zoom, Figma and Linear into one calm command layer—weighing deadlines, stakeholders and recurring threads so nothing slips between apps.</p>
+        <div class="slc-hero-ctas">
+          <a class="slc-btn slc-btn-primary" href="#faqSection">Explore 14-day free trial</a>
+          <a class="slc-btn" href="#faqSection">Read FAQ ↓</a>
+        </div>
+      </div>
+
+      <div class="slc-triage-panel tabular-nums" aria-label="Live priority triage queue">
+        <div class="slc-triage-top">
+          <span style="font-size:13px;font-weight:500;color:var(--cream);">Ranked Today · Morning Brief</span>
+          <div class="slc-filter-row" role="group" aria-label="Filter connected tool">
+            <button type="button" class="slc-chip" data-tool="all" aria-pressed="true">All</button>
+            <button type="button" class="slc-chip" data-tool="Linear" aria-pressed="false">Linear</button>
+            <button type="button" class="slc-chip" data-tool="Slack" aria-pressed="false">Slack</button>
+            <button type="button" class="slc-chip" data-tool="Figma" aria-pressed="false">Figma</button>
+          </div>
+        </div>
+        <div class="slc-thread-list" id="slcThreadList">
+          <article class="slc-thread" data-item-tool="Linear">
+            <div>
+              <div class="slc-thread-tool">Linear · Blocker</div>
+              <div class="slc-thread-title">SOC2 key rotation sign-off before 16:00 UTC</div>
+            </div>
+            <span class="slc-thread-score">P98</span>
+          </article>
+          <article class="slc-thread" data-item-tool="Slack">
+            <div>
+              <div class="slc-thread-tool">Slack · #exec-ship</div>
+              <div class="slc-thread-title">VP Product asked twice on Q4 enterprise rollout</div>
+            </div>
+            <span class="slc-thread-score">P94</span>
+          </article>
+          <article class="slc-thread" data-item-tool="Figma">
+            <div>
+              <div class="slc-thread-tool">Figma · Design Review</div>
+              <div class="slc-thread-title">Copilot side-sheet tokens awaiting final approval</div>
+            </div>
+            <span class="slc-thread-score">P89</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slc-metrics slc-reveal tabular-nums" id="telemetry" aria-label="Workspace telemetry">
+      <article class="slc-metric-card">
+        <div class="slc-metric-num">6 Tools</div>
+        <p class="slc-metric-lbl">Native bi-directional context across Outlook, Gmail, Slack, Zoom, Figma and Linear.</p>
+      </article>
+      <article class="slc-metric-card">
+        <div class="slc-metric-num">0 Training</div>
+        <p class="slc-metric-lbl">Encrypted in transit and at rest. Workspace threads never train external foundation models.</p>
+      </article>
+      <article class="slc-metric-card">
+        <div class="slc-metric-num">14 Days</div>
+        <p class="slc-metric-lbl">Full-feature team trial switched on from day one with instant history export or deletion.</p>
+      </article>
+    </section>
+
+    <section class="slc-wrap" id="faqSection" aria-labelledby="slcFaqHeading">
+      <canvas id="dots" aria-hidden="true"></canvas>
+      <div class="slc-content">
+        <h2 class="slc-faq-h2" id="slcFaqHeading">Questions, answered</h2>
+        <div class="slc-faq" id="faq">
+          <div class="slc-q" data-open>
+            <button type="button" aria-expanded="true">
+              <span>Which tools does Solace connect to?</span>
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg>
+            </button>
+            <div class="slc-a"><div><p>Solace works with Outlook, Gmail, Slack, Zoom, Figma and Linear, and pulls them into one place so nothing slips between apps.</p></div></div>
+          </div>
+          <div class="slc-q">
+            <button type="button" aria-expanded="false">
+              <span>How does Solace decide what is a priority?</span>
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg>
+            </button>
+            <div class="slc-a"><div><p>It weighs deadlines, who is asking and how often a thread comes back, then ranks your day so the one thing that can’t wait sits at the top.</p></div></div>
+          </div>
+          <div class="slc-q">
+            <button type="button" aria-expanded="false">
+              <span>Is my data and chat history secure?</span>
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg>
+            </button>
+            <div class="slc-a"><div><p>Everything is encrypted in transit and at rest, nothing is used to train models, and you can export or delete your history at any time.</p></div></div>
+          </div>
+          <div class="slc-q">
+            <button type="button" aria-expanded="false">
+              <span>Can I try Solace before I pay?</span>
+              <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4"></path></svg>
+            </button>
+            <div class="slc-a"><div><p>Yes. Every workspace starts with a 14-day trial with every feature switched on, and no card needed.</p></div></div>
+          </div>
+        </div>
+
+        <footer class="slc-footer">
+          <div>
+            <a class="slc-brand" href="#mainContent" aria-label="Solace">
+              <span class="slc-mark">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="14" cy="6" r="3"></circle>
+                  <circle cx="6" cy="14" r="3"></circle>
+                  <circle cx="14" cy="14" r="3"></circle>
+                </svg>
+              </span>
+              <span>Solace</span>
+            </a>
+            <p class="slc-tag">Your AI co-pilot for the work that matters: priorities, follow-ups and answers across every tool your team already uses.</p>
+            <nav class="slc-social" aria-label="Social">
+              <a href="#faqSection" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v6M8 7.5v.01M12 16v-3.5a2 2 0 0 1 4 0V16M12 10v6"></path></svg></a>
+              <a href="#faqSection" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"></path></svg></a>
+              <a href="#faqSection" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17 7v.01"></path></svg></a>
+              <a href="#faqSection" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="4"></rect><path d="M10 9.5v5l4.5-2.5Z"></path></svg></a>
+            </nav>
+            <p class="slc-copy">© Solace 2026 · All rights reserved</p>
+          </div>
+          <div class="slc-links">
+            <div><h3>Product</h3><ul><li><a href="#priorities">Overview</a></li><li><a href="#priorities">Copilot Chat</a></li><li><a href="#priorities">Priorities</a></li><li><a href="#telemetry">Integrations</a></li><li><a href="#faqSection">Pricing</a></li><li><a href="#telemetry">Security</a></li><li><a href="#faqSection">Changelog</a></li></ul></div>
+            <div><h3>Resources</h3><ul><li><a href="#faqSection">Docs</a></li><li><a href="#faqSection">Guides</a></li><li><a href="#faqSection">API Reference</a></li><li><a href="#faqSection">Help Center</a></li><li><a href="#telemetry">Status</a></li></ul></div>
+            <div><h3>Company</h3><ul><li><a href="#priorities">About</a></li><li><a href="#priorities">Customers</a></li><li><a href="#faqSection">Careers</a></li><li><a href="#faqSection">Contact</a></li><li><a href="#telemetry">Privacy</a></li><li><a href="#telemetry">Terms</a></li></ul></div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.documentElement.classList.add('js-ready');
+    (function () {
+      var htmlEl = document.documentElement;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var motionPaused = false;
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          htmlEl.setAttribute('data-motion', motionPaused ? 'paused' : 'on');
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      /* Accordion: one answer open at a time */
+      var qs = Array.prototype.slice.call(document.querySelectorAll('.slc-q'));
+      function openFaqIndex(idx) {
+        qs.forEach(function (o, i) {
+          var btn = o.querySelector('button');
+          if (i === idx) {
+            o.setAttribute('data-open', '');
+            if (btn) btn.setAttribute('aria-expanded', 'true');
+          } else {
+            o.removeAttribute('data-open');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      qs.forEach(function (q) {
+        var btn = q.querySelector('button');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          var isOpen = q.hasAttribute('data-open');
+          qs.forEach(function (o) {
+            o.removeAttribute('data-open');
+            var b = o.querySelector('button');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            q.setAttribute('data-open', '');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      /* Tool Filter in Triage Queue */
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.slc-chip'));
+      var threads = Array.prototype.slice.call(document.querySelectorAll('.slc-thread'));
+      function filterTool(tool) {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.getAttribute('data-tool') === tool)); });
+        threads.forEach(function (th) {
+          var match = tool === 'all' || th.getAttribute('data-item-tool') === tool;
+          th.style.display = match ? 'flex' : 'none';
+        });
+      }
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () { filterTool(c.getAttribute('data-tool') || 'all'); });
+      });
+
+      /* Preview / Interactive Cycler */
+      var pulseBtn = document.getElementById('slcPulseBtn');
+      var cycleStep = 0;
+      var toolOrder = ['all', 'Linear', 'Slack', 'Figma'];
+      var pulseBoost = 0;
+      if (pulseBtn) {
+        pulseBtn.addEventListener('click', function () {
+          cycleStep = (cycleStep + 1) % 4;
+          filterTool(toolOrder[cycleStep]);
+          openFaqIndex(cycleStep % qs.length);
+          pulseBoost = 1.0;
+        });
+      }
+
+      /* Scroll Reveal */
+      var reveals = document.querySelectorAll('.slc-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.14 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-in'); });
+      }
+
+      /* Halftone Dot Audio-Meter Field (Verbatim Physics + Pulse Boost) */
+      var cv = document.getElementById('dots');
+      if (!cv) return;
+      var ctx = cv.getContext('2d');
+      var W = 0, H = 0, dpr = 1, step = 18, cols = 0, rows = 0, seed = [];
+      var mx = -9999, my = -9999, tmx = -9999, tmy = -9999;
+
+      function hash(i, j) {
+        var h = Math.sin(i * 127.1 + j * 311.7) * 43758.5453;
+        return h - Math.floor(h);
+      }
+      function size() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = Math.max(320, cv.clientWidth || window.innerWidth);
+        H = Math.max(540, cv.clientHeight || window.innerHeight);
+        cv.width = Math.round(W * dpr);
+        cv.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        step = Math.max(14, Math.min(W / 1600, H / 940) * 20.5);
+        cols = Math.ceil(W / step) + 1;
+        rows = Math.ceil(H / step) + 1;
+        seed = [];
+        for (var j = 0; j < rows; j++) {
+          for (var i = 0; i < cols; i++) {
+            seed.push([hash(i, j), hash(i + 71, j + 13), hash(i + 9, j + 97)]);
+          }
+        }
+      }
+      window.addEventListener('resize', size, { passive: true });
+      size();
+
+      window.addEventListener('pointermove', function (e) {
+        var r = cv.getBoundingClientRect();
+        tmx = e.clientX - r.left;
+        tmy = e.clientY - r.top;
+      }, { passive: true });
+      document.addEventListener('pointerleave', function () { tmx = -9999; tmy = -9999; });
+
+      var C0 = [226, 106, 24], C1 = [248, 150, 64], C2 = [255, 214, 170];
+      function mix(a, b, t) {
+        return [
+          Math.round(a[0] + (b[0] - a[0]) * t),
+          Math.round(a[1] + (b[1] - a[1]) * t),
+          Math.round(a[2] + (b[2] - a[2]) * t)
+        ];
+      }
+
+      function draw(t) {
+        ctx.clearRect(0, 0, W, H);
+        mx += (tmx - mx) * 0.12;
+        my += (tmy - my) * 0.12;
+        pulseBoost *= 0.94;
+        var top = H * 0.1, full = H * 0.36, R = step * 0.37;
+        for (var j = 0; j < rows; j++) {
+          var y = j * step + step * 0.5;
+          if (y < top - step * 2) continue;
+          var v = Math.min(1, Math.max(0, (y - top) / (full - top)));
+          var col = v < 0.55
+            ? mix(C0, C1, v / 0.55)
+            : mix(C1, C2, ((v - 0.55) / 0.45) * 0.85 + Math.max(0, (y - H * 0.9) / (H * 0.1)) * 0.15);
+          ctx.fillStyle = 'rgb(' + col[0] + ',' + col[1] + ',' + col[2] + ')';
+          for (var i = 0; i < cols; i++) {
+            var x = i * step + step * 0.5;
+            var sRow = seed[j * cols + i];
+            var a = sRow[0], b = sRow[1], c = sRow[2];
+            var wave = motionPaused
+              ? 0.7
+              : 0.5 + 0.5 * Math.sin(t * (1.6 + b * 2.6) + a * 6.283 + Math.sin(t * 0.7 + i * 0.21 + j * 0.13) * 1.4);
+            var keep = Math.min(1, v * 1.6 + 0.12) - a * 0.6;
+            if (keep <= 0 && c > 0.08) continue;
+            var s = (0.42 + 0.58 * Math.pow(wave, 1.3)) * Math.min(1, 0.5 + v * 0.6) * (keep > 0 ? 1 : 0.8);
+            var dx = x - mx, dy = y - my, d2 = dx * dx + dy * dy;
+            var hov = Math.exp(-d2 / (step * step * 22));
+            s = Math.min(1.05, s + hov * 0.7 + pulseBoost * 0.22);
+            var r = R * s;
+            if (r < 0.6) continue;
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, 6.2832);
+            ctx.fill();
+          }
+        }
+      }
+      function loop(ms) {
+        draw(ms / 1000);
+        requestAnimationFrame(loop);
+      }
+      requestAnimationFrame(loop);
+    })();
+  </script>
+</body>
+</html>

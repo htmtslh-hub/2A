@@ -1,0 +1,44 @@
+{
+  "id": "t322",
+  "slug": "venture-fund",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-11T00:44:48.060Z",
+  "demo": "/demos/venture-fund/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3bf75f2e6c9e",
+  "sha256": "3bf75f2e6c9e4ab1e9ef54b1619ea0db084f9c42827a85360a1dcf2f381e8b39",
+  "demoHtmlSha256": "643a343e474902538aac9894c6fbd4574e99dd6e6999000b1615b480101098b3",
+  "demoSha256": "e53e4f57de7383b70c891831b57c01849528cc9e019d451d1ef29c1d75ee06f8",
+  "bytes": 755361,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.489,
+      "action": "click",
+      "selector": "#hmrStageJumpBtn"
+    },
+    {
+      "seconds": 4.855,
+      "action": "click",
+      "selector": "#hmrStageJumpBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\venture-fund-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\venture-fund-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\venture-fund-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\venture-fund-return.jpg"
+  ]
+}

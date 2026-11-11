@@ -3,8 +3,18 @@
  * for MotionSites Daily Agent (digitwist-ai-builder, dot, email-marketing, transform-data, and v2.0 multi-variant compiler).
  */
 
+import { buildBatch20261111Part1 } from './batch-2026-11-11-1.mjs';
+import { buildBatch20261111Part2 } from './batch-2026-11-11-2.mjs';
+import { buildBatch20261111Part3 } from './batch-2026-11-11-3.mjs';
+
 export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotionRuntime) {
   const slug = String(spec.slug || '').toLowerCase();
+
+  const batch20261111 =
+    buildBatch20261111Part1(slug) ||
+    buildBatch20261111Part2(slug) ||
+    buildBatch20261111Part3(slug);
+  if (batch20261111) return batch20261111;
 
   // ============================================================================
   // NEWLY UPDATED MOTIONSITES PROMPT (2026-11-10 BATCH 2 #1): HALDEN AI TEAMMATE HERO

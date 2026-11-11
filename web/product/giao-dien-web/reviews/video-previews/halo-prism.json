@@ -1,0 +1,44 @@
+{
+  "id": "t320",
+  "slug": "halo-prism",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-11T00:44:08.904Z",
+  "demo": "/demos/halo-prism/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3cf2731734a1",
+  "sha256": "3cf2731734a1286e04b9ad80f3999ae35e7e94d205774cc3b443df81ccf15fe6",
+  "demoHtmlSha256": "1aa02d378534a1544db9df3b18f9711e120213317e81d7f4c79281fcedf804b1",
+  "demoSha256": "5fde518eaf77546e3c5c394cd4f1b56e6e74312ec04e6cd4ea29e33d421461f3",
+  "bytes": 421187,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.288,
+      "action": "click",
+      "selector": "#hlpBeamPresetBtn"
+    },
+    {
+      "seconds": 5.623,
+      "action": "click",
+      "selector": "#hlpBeamPresetBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1464
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halo-prism-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halo-prism-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halo-prism-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halo-prism-return.jpg"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "t321",
+  "slug": "halftone-faq",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-11T00:44:28.348Z",
+  "demo": "/demos/halftone-faq/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6daad62fbef9",
+  "sha256": "6daad62fbef9b9a5ae44182dc0c94c6ff0ebb873f49134aa1038acea04b57589",
+  "demoHtmlSha256": "311aec02f15f227b738192b0bc6b9e2892043804b81caa8c19858e8bcb46a098",
+  "demoSha256": "5f2c5a2e11a5a6db386fc98ec10c0b70a20f45ddf33d90314a7bd82e4ddf5ad4",
+  "bytes": 1644638,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.515,
+      "action": "click",
+      "selector": "#slcPulseBtn"
+    },
+    {
+      "seconds": 4.85,
+      "action": "click",
+      "selector": "#slcPulseBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 954
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halftone-faq-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halftone-faq-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halftone-faq-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halftone-faq-return.jpg"
+  ]
+}

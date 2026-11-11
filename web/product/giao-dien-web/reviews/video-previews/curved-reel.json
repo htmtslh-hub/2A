@@ -1,0 +1,44 @@
+{
+  "id": "t325",
+  "slug": "curved-reel",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-11T00:45:52.939Z",
+  "demo": "/demos/curved-reel/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9250c8bc74e8",
+  "sha256": "9250c8bc74e8654f47b688792b6a2801cde56f9f188867325e6c33fff20b6af7",
+  "demoHtmlSha256": "99257fb6c3cbe245bcfef431344627b9dda5d97622aa1c55eb64dda1409e4f98",
+  "demoSha256": "d067f30d7028596fd9a27332a07d756de58213dfb7f1fc6c6aa3a060bb61fa45",
+  "bytes": 761969,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 3.272,
+      "action": "click",
+      "selector": "#bNext"
+    },
+    {
+      "seconds": 5.72,
+      "action": "click",
+      "selector": "#bNext"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\curved-reel-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\curved-reel-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\curved-reel-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\curved-reel-return.jpg"
+  ]
+}

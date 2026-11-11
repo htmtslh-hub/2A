@@ -1,0 +1,44 @@
+{
+  "id": "t324",
+  "slug": "building-atlas",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-11T00:45:29.610Z",
+  "demo": "/demos/building-atlas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0d471f07f473",
+  "sha256": "0d471f07f47307c604872dd44dfc89b736fb91e79770746abb7f56e89f509419",
+  "demoHtmlSha256": "35f3e1f3576ee02c90716fff40c3010eaa28634e44a2d580ea8280b8a6f4649f",
+  "demoSha256": "0f489dfc44349b9e84731551b848cbfbce54afb3057123fe8b18d33d9730b299",
+  "bytes": 607087,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 2.554,
+      "action": "click",
+      "selector": "#plnTourBtn"
+    },
+    {
+      "seconds": 4.854,
+      "action": "click",
+      "selector": "#plnBackBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1414
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\building-atlas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\building-atlas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\building-atlas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\building-atlas-return.jpg"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-10T09:08:49.789Z",
+  "updatedAt": "2026-11-11T00:46:32.606Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -2495,6 +2495,96 @@
       "sizeBytes": 18147,
       "sha256": "47f3dfbf798fbbc0875b8dd2632739e3f6baa2b4b2fafa6c71f6e86c3ca104d7",
       "updatedAt": "2026-11-10T09:08:49.788Z"
+    },
+    "halftone-faq": {
+      "fileId": "1Yv10UDJjSzttabNI3hLztWP_Rx2E9c8f",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1Yv10UDJjSzttabNI3hLztWP_Rx2E9c8f",
+      "webViewUrl": "https://drive.google.com/file/d/1Yv10UDJjSzttabNI3hLztWP_Rx2E9c8f/view",
+      "sizeBytes": 12875,
+      "sha256": "46eccabe9dc3f9f95f7e51bc6745a033ad2668267ed7e6fa3ae7e848c79e15bf",
+      "updatedAt": "2026-11-11T00:46:30.688Z"
+    },
+    "tana-elephant": {
+      "fileId": "1cvKUCpFuCFu8knqlvw3OGEMy6xrJDPub",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1cvKUCpFuCFu8knqlvw3OGEMy6xrJDPub",
+      "webViewUrl": "https://drive.google.com/file/d/1cvKUCpFuCFu8knqlvw3OGEMy6xrJDPub/view",
+      "sizeBytes": 14067,
+      "sha256": "a321a9aac9f91157795c538e7b097aee37978f6d032b7e6d4fbcf9f44add16c1",
+      "updatedAt": "2026-11-11T00:46:30.735Z"
+    },
+    "building-atlas": {
+      "fileId": "1AjfJU-mWP7VZl3Y7fpOEdTXKZ2VkEtPH",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1AjfJU-mWP7VZl3Y7fpOEdTXKZ2VkEtPH",
+      "webViewUrl": "https://drive.google.com/file/d/1AjfJU-mWP7VZl3Y7fpOEdTXKZ2VkEtPH/view",
+      "sizeBytes": 25658,
+      "sha256": "4088551c2fc483890b362cb5e335b1e837f1a2cde147bf30bc2fa001b642d078",
+      "updatedAt": "2026-11-11T00:46:30.790Z"
+    },
+    "venture-fund": {
+      "fileId": "1_ko1kB7jzQtSofPpKu9ajjQFFm6vrZku",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1_ko1kB7jzQtSofPpKu9ajjQFFm6vrZku",
+      "webViewUrl": "https://drive.google.com/file/d/1_ko1kB7jzQtSofPpKu9ajjQFFm6vrZku/view",
+      "sizeBytes": 18111,
+      "sha256": "a0e1ae5b40715d3ec4a32181650c58200daee4e4f2d206e2a858fdc31561b007",
+      "updatedAt": "2026-11-11T00:46:30.822Z"
+    },
+    "hollowmere-halloween-descent": {
+      "fileId": "1mRVr5YgO1Rw2y36dXgjd2XKZSl4ywmHQ",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1mRVr5YgO1Rw2y36dXgjd2XKZSl4ywmHQ",
+      "webViewUrl": "https://drive.google.com/file/d/1mRVr5YgO1Rw2y36dXgjd2XKZSl4ywmHQ/view",
+      "sizeBytes": 15352,
+      "sha256": "1036e4fc13b52860681316355d6bc965c1fea7aaa6c22048a26448c65ada2272",
+      "updatedAt": "2026-11-11T00:46:30.886Z"
+    },
+    "pixel-garden": {
+      "fileId": "1lxnNYqEQROLhil4IN5-y_W7ZBX3tHzPZ",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1lxnNYqEQROLhil4IN5-y_W7ZBX3tHzPZ",
+      "webViewUrl": "https://drive.google.com/file/d/1lxnNYqEQROLhil4IN5-y_W7ZBX3tHzPZ/view",
+      "sizeBytes": 20069,
+      "sha256": "4d6bee616562fc791192eabf73941e51f653880be54f9d53cb9955f83c4de002",
+      "updatedAt": "2026-11-11T00:46:30.922Z"
+    },
+    "curved-reel": {
+      "fileId": "1bfZrMSV-Unf1gKVqkBc3sC8DJDrRgkGj",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1bfZrMSV-Unf1gKVqkBc3sC8DJDrRgkGj",
+      "webViewUrl": "https://drive.google.com/file/d/1bfZrMSV-Unf1gKVqkBc3sC8DJDrRgkGj/view",
+      "sizeBytes": 22340,
+      "sha256": "4acae1c6f1af952e4a0f4d9c1dfc8a7bcc5954d24d081c920b2ce7534578cf09",
+      "updatedAt": "2026-11-11T00:46:30.943Z"
+    },
+    "halo-prism": {
+      "fileId": "1YoUBNiPoukyuVz7PBmPy0dESlOA26FAd",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1YoUBNiPoukyuVz7PBmPy0dESlOA26FAd",
+      "webViewUrl": "https://drive.google.com/file/d/1YoUBNiPoukyuVz7PBmPy0dESlOA26FAd/view",
+      "sizeBytes": 17088,
+      "sha256": "a617dcd0dc0f2eb7fc4fabc238441be060c4ece7b63712be32f9b21a3e57f71c",
+      "updatedAt": "2026-11-11T00:46:31.008Z"
+    },
+    "wild-pil": {
+      "fileId": "11jAuE1mKsWdO-xjMupbhbp_IlpZpx2YM",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=11jAuE1mKsWdO-xjMupbhbp_IlpZpx2YM",
+      "webViewUrl": "https://drive.google.com/file/d/11jAuE1mKsWdO-xjMupbhbp_IlpZpx2YM/view",
+      "sizeBytes": 13098,
+      "sha256": "83682800b7c53eb377ad385284a854b97c5cd96a98058a0d4fab9fc09cfc9278",
+      "updatedAt": "2026-11-11T00:46:32.577Z"
+    },
+    "agent-hero": {
+      "fileId": "1gSQ62f9jT8Unrg9vujZKxL9etClKRUA5",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1gSQ62f9jT8Unrg9vujZKxL9etClKRUA5",
+      "webViewUrl": "https://drive.google.com/file/d/1gSQ62f9jT8Unrg9vujZKxL9etClKRUA5/view",
+      "sizeBytes": 20071,
+      "sha256": "818f43fb23bf8de2f65c154bb0c33baa7185cba5e936e070ba7330a608eb263a",
+      "updatedAt": "2026-11-11T00:46:32.606Z"
     }
   }
 }
